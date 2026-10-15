@@ -1,6 +1,40 @@
 import { defineSchema, defineTable } from "convex/server";
 import { v } from "convex/values";
 export default defineSchema({
+  researchWorker: defineTable({
+    name: v.string(),
+    owner: v.string(),
+    expires: v.number(),
+  }).index("by_name", ["name"]),
+  researchJobs: defineTable({
+    actor: v.union(v.literal("operator"), v.literal("test")),
+    cardId: v.string(),
+    desired: v.boolean(),
+    status: v.union(
+      v.literal("queued"),
+      v.literal("running"),
+      v.literal("pausing"),
+      v.literal("paused"),
+      v.literal("awaiting-inspection"),
+      v.literal("failed"),
+    ),
+    execution: v.string(),
+    owner: v.string(),
+    attempts: v.number(),
+    createdAt: v.string(),
+    updatedAt: v.string(),
+    startedAt: v.union(v.string(), v.null()),
+    failure: v.union(v.string(), v.null()),
+    steps: v.array(
+      v.object({
+        name: v.string(),
+        report: v.string(),
+        archiveId: v.id("_storage"),
+        sha256: v.string(),
+        completedAt: v.string(),
+      }),
+    ),
+  }).index("by_actor_card", ["actor", "cardId"]),
   demoPreferences: defineTable({
     actor: v.union(v.literal("operator"), v.literal("test")),
     cardId: v.string(),

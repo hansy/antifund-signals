@@ -10,6 +10,7 @@
 
 import type * as demo from "../demo.js";
 import type * as notes from "../notes.js";
+import type * as research from "../research.js";
 import type * as security from "../security.js";
 
 import type {
@@ -21,6 +22,7 @@ import type {
 declare const fullApi: ApiFromModules<{
   demo: typeof demo;
   notes: typeof notes;
+  research: typeof research;
   security: typeof security;
 }>;
 

@@ -99,14 +99,47 @@ export async function stages(request: Request, settings: DemoSettings) {
         ? "test"
         : "operator";
     const saved = await client.query(api.demo.feedback, { secret, actor });
+    const research = await client.query(api.research.list, { secret, actor });
     return reply(
       lifecycleViewSchema.parse({
         ...snapshot,
-        opportunities: snapshot.opportunities.map((o) => ({
-          ...o,
-          verdict:
-            saved.preferences.find((p) => p.cardId === o.id)?.verdict ?? null,
-        })),
+        opportunities: snapshot.opportunities.map((o) => {
+          const job = research.jobs.find((j) => j.cardId === o.id);
+          return {
+            ...o,
+            researchEnabled: research.enabled,
+            stage: job ? "researching" : o.stage,
+            currentResearchId: job?.id ?? null,
+            research: job
+              ? {
+                  id: job.id,
+                  opportunityId: o.id,
+                  baseRevisionId: o.acceptedRevisionId,
+                  trigger: "interested",
+                  actor,
+                  requestIds: [],
+                  inputHash: null,
+                  outputHash: null,
+                  scope: job.completedSteps,
+                  inputNotes: [],
+                  status: job.status,
+                  cancelRequested: false,
+                  ownerId: null,
+                  draftRevisionId: null,
+                  failureIds: [],
+                  reviewId: null,
+                  requestedAt: job.createdAt,
+                  startedAt: job.startedAt,
+                  finishedAt: null,
+                }
+              : null,
+            failures: job?.failure
+              ? [{ id: job.id, reason: job.failure, at: job.updatedAt }]
+              : [],
+            verdict:
+              saved.preferences.find((p) => p.cardId === o.id)?.verdict ?? null,
+          };
+        }),
       }),
     );
   } catch (e) {

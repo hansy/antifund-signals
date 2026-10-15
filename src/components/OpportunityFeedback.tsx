@@ -601,7 +601,7 @@ export function OpportunityFeedback({ id }: { id: string }) {
             >
               {actor === "test"
                 ? "Test mode: decisions are saved separately and research will not run."
-                : "Save your preference. Research is disabled in this demo."}
+                : "Mark interesting to queue research. Clear interest to pause; mark it again to resume."}
             </p>
           </div>,
           document.body,

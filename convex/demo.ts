@@ -2,6 +2,7 @@ import { mutation, query } from "./_generated/server";
 import { v, ConvexError } from "convex/values";
 import { requireSecret } from "./security";
 import { preferenceCommandSchema } from "../src/lib/demo-feedback";
+import { interestChanged } from "./research";
 import corpus from "../data/corpus.json";
 const actor = v.union(v.literal("operator"), v.literal("test"));
 function checkCard(id: string) {
@@ -69,6 +70,7 @@ export const prefer = mutation({
       .unique();
     if ((row?.version ?? 0) !== c.expectedVersion)
       throw new ConvexError("Preference changed. Refresh and try again.");
+    await interestChanged(ctx, c.actor, c.cardId, c.verdict === "interested");
     const data = {
       actor: c.actor,
       cardId: c.cardId,

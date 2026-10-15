@@ -146,7 +146,8 @@ function CollectionInfo({ corpus }: { corpus: Corpus }) {
       <div className="info-popover">
         <p>{corpus.meta.coverageNote}</p>
         <p>
-          Demo feedback is shared. Interest saves a preference; research is off.
+          Demo feedback is shared. Mark interest to queue research; clear it to
+          pause.
         </p>
         <p>Updated {formatDate(corpus.meta.collectedAt)}.</p>
       </div>
