@@ -2903,7 +2903,7 @@
       "whyItMatters": "On-demand generation could reduce scenario preparation effort and help test autonomous vehicles under requested safety-critical conditions before deployment.",
       "statusQuo": "Safety-critical and diverse scenarios are manually created in simulation, which the source describes as a significant and time-consuming challenge.",
       "results": "The authors report that their model consistently outperforms baselines in accurately generating links for requested scenarios. They also render predicted scenarios in simulation to demonstrate their effectiveness as autonomous vehicle testing environments. Quantitative results are not reported on this page.",
-      "limitations": "Not reported.",
+      "limitations": "Trained and evaluated on ROAD, not RobotCycle. Some simulated near-collision thresholds require manual adjustment. No measured saving in test-authoring time or reduction in real crashes.",
       "topics": [
         "Simulation",
         "Autonomy"
@@ -3031,7 +3031,7 @@
       "whyItMatters": "The source identifies potential uses in finding safety-critical scenarios, informing cyclist-friendly road design and evaluating odometry robustness under dynamic cyclist movements.",
       "statusQuo": "Not reported",
       "results": "The source reports a dataset and publicly available tools, vision-derived heatmaps showing cyclist attention patterns, and analysis correlating traffic interactions and perceived or actual risk with infrastructure and traffic volumes. Quantitative performance or safety improvements are not reported.",
-      "limitations": "Not reported",
+      "limitations": "A dataset and analysis toolkit, not a demonstrated connection to GraphSCENE or evidence of reduced crashes.",
       "topics": [
         "Sensing",
         "Autonomy"
@@ -3258,7 +3258,7 @@
         },
         {
           "sourceId": "oxford-robotcycle-2025-source",
-          "quote": "Panagiotaki, E., Thuremella, D., Baghabrah, J., Sze, S., Fu, L. F. T., Hardin, B., Reinmund, T., Flatscher, T., Marques, D., Prahacs, C., Kunze, L., & De Martini, D. (2025).",
+          "quote": "Panagiotaki, E., Thuremella, D., Baghabrah, J., Sze, S., Fu, L., Hardin, B., Reinmund, T., Flatscher, T., Marques, D., Prahacs, C., Kunze, L., & De Martini, D. (2025).",
           "locator": "Cite this record, APA Style"
         }
       ]
@@ -4529,13 +4529,13 @@
       "title": "Cyclist safety tests",
       "summary": "Turn real cyclist encounters into repeatable tests for vehicle safety systems.",
       "topic": "Simulation",
-      "problem": "Manually creating diverse, safety-critical traffic simulations is time-consuming. RobotCycle supplies observations of cyclist interactions that could inform those tests.",
-      "statusQuo": "GraphSCENE describes manual scenario creation as the current alternative. RobotCycle already provides datasets and tools for risk analysis, visualization, calibration and annotation.",
-      "gap": "Hypothesis: linking observed cyclist interactions to configurable simulations could reduce scenario preparation effort. Neither excerpt demonstrates this connection or a missing commercial offering.",
-      "opportunity": "Software that converts recorded cyclist encounters into configurable simulations for testing a vehicle’s response.",
+      "problem": "Engineers need to test how cars respond when a cyclist turns, crosses or rides nearby. Building varied virtual encounters takes work. Oxford’s RobotCycle records real cycling interactions; GraphSCENE generates traffic simulations, but was tested on a different dataset.",
+      "statusQuo": "Engineers build tests manually or use existing recording-to-simulation tools such as dSPACE Traffic Virtualizer.",
+      "gap": "Cyclist encounters that expose additional vehicle failures or take less work to reproduce than with existing tools.",
+      "opportunity": "Software that turns recorded cyclist encounters into repeatable virtual tests of a vehicle’s braking and driving systems.",
       "evidence": "Reported: RobotCycle supplies multimodal cycling data and tools for traffic and risk analysis, with attention heatmaps and infrastructure relationships. No safety improvement is measured. Reported: GraphSCENE generates requested traffic relationships and renders scenarios in simulation. The source reports better link prediction than baselines, not reduced crashes.",
-      "counterpoint": "Accurate graph links do not establish realistic road behavior or detection of useful failures.",
-      "nextQuestion": "Demonstrate additional reproducible vehicle failures on held-out encounters beyond the existing scenario suite.",
+      "counterpoint": "Existing tools already generate traffic tests. GraphSCENE uses the ROAD vehicle dataset, not RobotCycle, and its authors still manually adjust some simulation thresholds.",
+      "nextQuestion": "Using the same cyclist encounters, does this approach reveal additional repeatable failures or cut preparation time compared with the team’s current tools?",
       "projectIds": [
         "oxford-robotcycle-2025",
         "oxford-graphscene-2025"
@@ -4546,8 +4546,8 @@
       ],
       "confidence": "Early signal",
       "brief": {
-        "whatItIs": "Software that converts recorded cyclist encounters into configurable simulations for testing a vehicle’s response.",
-        "problem": "Manually creating diverse, safety-critical traffic simulations is time-consuming. RobotCycle supplies observations of cyclist interactions that could inform those tests.",
+        "whatItIs": "Software that turns recorded cyclist encounters into repeatable virtual tests of a vehicle’s braking and driving systems.",
+        "problem": "Engineers need to test how cars respond when a cyclist turns, crosses or rides nearby. Building varied virtual encounters takes work. Oxford’s RobotCycle records real cycling interactions; GraphSCENE generates traffic simulations, but was tested on a different dataset.",
         "breakthroughs": [
           {
             "text": "Reported: RobotCycle supplies multimodal cycling data and tools for traffic and risk analysis, with attention heatmaps and infrastructure relationships. No safety improvement is measured.",
@@ -4562,17 +4562,8 @@
             ]
           }
         ],
-        "marketOpportunity": "Hypothesis: sell scenario libraries and test-authoring software for difficult cyclist encounters. Euro NCAP already evaluates vehicle responses to cyclists; these simulations would support engineering tests and cannot replace formal vehicle assessment.",
+        "marketOpportunity": "A cyclist-focused test library could plug into existing vehicle simulators, helping engineers reproduce difficult encounters and check new software. Its value would come from finding failures or saving test-building work that current tools miss. Neither benefit has yet been demonstrated for the combined approach.",
         "buyer": "Vehicle manufacturers, driver-assistance suppliers and autonomous-driving validation teams.",
-        "marketSize": {
-          "value": "$20.31B",
-          "market": "Automotive testing, inspection and certification",
-          "year": 2025,
-          "context": "Global estimate for the broader testing industry. Cyclist simulation is a smaller, unmeasured segment.",
-          "sourceUrls": [
-            "https://www.mordorintelligence.com/industry-reports/testing-inspection-and-certification-market-for-automotive-industry"
-          ]
-        },
         "applications": [
           "Testing emergency braking around cyclists",
           "Replaying dangerous junction and turning scenarios",
@@ -4586,24 +4577,44 @@
         "marketStatus": "researched",
         "marketEvidence": [
           {
-            "title": "Euro NCAP CUPRA Leon assessment",
-            "url": "https://www.euroncap.com/assessments/cupra/leon/1122/",
-            "excerpt": "The system performed well in tests of its reaction to cyclists.",
-            "accessedAt": "2026-10-08"
+            "title": "GraphSCENE, arXiv v3: training data",
+            "url": "https://arxiv.org/pdf/2410.13514v3",
+            "excerpt": "For this work, we used the ROAD dataset",
+            "accessedAt": "2026-10-15",
+            "page": 5
           },
           {
-            "title": "Mordor Intelligence · automotive testing",
-            "url": "https://www.mordorintelligence.com/industry-reports/testing-inspection-and-certification-market-for-automotive-industry",
-            "excerpt": "The automotive testing, inspection, and certification market size was valued at USD 20.31 billion in 2025",
-            "accessedAt": "2026-10-08T18:09:38.335657Z"
+            "title": "GraphSCENE, arXiv v3: remaining manual work",
+            "url": "https://arxiv.org/pdf/2410.13514v3",
+            "excerpt": "To improve distinction, we manually\nadjust these thresholds in simulation.",
+            "accessedAt": "2026-10-15",
+            "page": 7
+          },
+          {
+            "title": "Euro NCAP announces 2026 protocol changes",
+            "url": "https://www.euroncap.com/press-media/euro-ncap-announces-2026-protocol-changes-to-tackle-modern-driving-risks/",
+            "excerpt": "including urban situations where vehicles routinely encounter powered two wheelers, cyclists and pedestrians.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "dSPACE Traffic Virtualizer; undated, retrieved 15 October 2026",
+            "url": "https://www.dspace.com/en/pub/home/products/sw/traffic-virtualizer.cfm",
+            "excerpt": "It automatically processes vehicle trajectories and object-list data.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "CARLA official project site; undated page retrieved 15 October 2026",
+            "url": "https://carla.org/",
+            "excerpt": "Open-source simulator for autonomous driving research.",
+            "accessedAt": "2026-10-15"
           }
         ],
         "risks": [
-          "Accurate graph links do not establish faithful cyclist behavior or useful vehicle failure detection. RobotCycle's excerpt does not establish compatibility with GraphSCENE's ontology, and its existing tools may already satisfy some analysis needs.",
-          "Testing tools already exist; customers need useful failure discovery, not merely more scenarios."
+          "Existing tools already generate traffic tests. GraphSCENE uses the ROAD vehicle dataset, not RobotCycle, and its authors still manually adjust some simulation thresholds.",
+          "Separate purchasing demand, data rights, integration costs and a reachable market remain unproven. These engineering tests do not replace formal vehicle assessments."
         ],
         "nextQuestions": [
-          "Demonstrate additional reproducible vehicle failures on held-out encounters beyond the existing scenario suite."
+          "Using the same cyclist encounters, does this approach reveal additional repeatable failures or cut preparation time compared with the team’s current tools?"
         ]
       }
     },

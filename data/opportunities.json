@@ -2490,8 +2490,8 @@
     {
       "schemaVersion": 1,
       "id": "cycling-scenario-tests",
-      "revision": 1,
-      "acceptedRevisionId": "cycling-scenario-tests:rubric-v2-20261015",
+      "revision": 2,
+      "acceptedRevisionId": "cycling-scenario-tests:evidence-review-v2-20261015",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -2499,19 +2499,19 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T02:31:21.257Z",
-      "updatedAt": "2026-10-15T21:24:18.427Z",
+      "updatedAt": "2026-10-15T22:56:57.238Z",
       "verdict": null,
       "stage": "first-impressions",
-      "qualificationError": null,
+      "qualificationError": "Evidence reviewed; a useful supplementary test library is plausible, but integration, paid demand and venture scale remain unproven.",
       "accepted": {
-        "id": "cycling-scenario-tests:rubric-v2-20261015",
+        "id": "cycling-scenario-tests:evidence-review-v2-20261015",
         "opportunityId": "cycling-scenario-tests",
-        "parentRevisionId": "cycling-scenario-tests:migration-v1",
-        "createdAt": "2026-10-15T21:24:18.427Z",
-        "producerId": "rubric-reassessment-v2",
-        "origin": "saved-data-synthesis",
-        "changeReason": "Reassessed adjacent uses and functional alternatives. Original evidence review statuses preserved; no new market qualification.",
-        "contentHash": "b14a2b6c43af84266fcaa06d0b9437e8ab53e5657c5df993ae13e99c4e5ed58e",
+        "parentRevisionId": "cycling-scenario-tests:rubric-v2-20261015",
+        "createdAt": "2026-10-15T22:56:57.238Z",
+        "producerId": "codex-evidence-inspector",
+        "origin": "inspection-correction",
+        "changeReason": "Inspect original datasets, simulation paper and existing tools. Separate a potential cyclist-specific supplement from a demonstrated integration; remove broad automotive market and unverified pricing.",
+        "contentHash": "832b2dfb89bc66d62bf3298c481ac53bd96b89b361ef4c04bb8b471742af207f",
         "title": "Cyclist safety tests",
         "classifications": [
           "Simulation"
@@ -2545,7 +2545,7 @@
           ],
           "economics": [],
           "timing": [],
-          "keyQuestion": "Demonstrate additional reproducible vehicle failures on held-out encounters beyond the existing scenario suite."
+          "keyQuestion": "Using the same cyclist encounters, does this approach reveal additional repeatable failures or cut preparation time compared with the team’s current tools?"
         },
         "projects": [
           {
@@ -2584,13 +2584,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "No validated RobotCycle-to-GraphSCENE integration, paid customer demand, authoring-time advantage or reduced real-world harm."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:56:57.238Z",
+              "reason": "Retained as an unproven product, buyer or application hypothesis, not proof of demand."
             },
             "kind": "hypothesis",
             "testQuestion": "Can engineers reproduce observed cyclist encounters through this connection faster than manual authoring, while preserving the interactions that trigger vehicle failures?"
@@ -2608,70 +2608,80 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "No validated RobotCycle-to-GraphSCENE integration, paid customer demand, authoring-time advantage or reduced real-world harm."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:56:57.238Z",
+              "reason": "Retained as an unproven product, buyer or application hypothesis, not proof of demand."
             },
             "kind": "hypothesis",
             "testQuestion": "Can engineers reproduce observed cyclist encounters through this connection faster than manual authoring, while preserving the interactions that trigger vehicle failures?"
           },
           {
             "id": "cycling-scenario-tests:what",
-            "text": "Software that converts recorded cyclist encounters into configurable simulations for testing a vehicle’s response.",
+            "text": "Software that turns recorded cyclist encounters into repeatable virtual tests of a vehicle’s braking and driving systems.",
             "evidenceIds": [],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "No validated RobotCycle-to-GraphSCENE integration, paid customer demand, authoring-time advantage or reduced real-world harm."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:56:57.238Z",
+              "reason": "Retained as an unproven product, buyer or application hypothesis, not proof of demand."
             },
             "kind": "hypothesis",
             "testQuestion": "Can engineers reproduce observed cyclist encounters through this connection faster than manual authoring, while preserving the interactions that trigger vehicle failures?"
           },
           {
             "id": "cycling-scenario-tests:problem",
-            "text": "Manually creating diverse, safety-critical traffic simulations is time-consuming. RobotCycle supplies observations of cyclist interactions that could inform those tests.",
-            "evidenceIds": [],
+            "text": "Engineers need to test how cars respond when a cyclist turns, crosses or rides nearby. Building varied virtual encounters takes work. Oxford’s RobotCycle records real cycling interactions; GraphSCENE generates traffic simulations, but was tested on a different dataset.",
+            "evidenceIds": [
+              "cycling-scenario-tests:oxford-graphscene-2025:source-2",
+              "cycling-scenario-tests:oxford-robotcycle-2025:source-3",
+              "cycling-scenario-tests:review-road"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "No validated RobotCycle-to-GraphSCENE integration, paid customer demand, authoring-time advantage or reduced real-world harm."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:56:57.238Z",
+              "reason": "Original source context and distinct dataset identities inspected."
             },
-            "kind": "hypothesis",
-            "testQuestion": "Can engineers reproduce observed cyclist encounters through this connection faster than manual authoring, while preserving the interactions that trigger vehicle failures?"
+            "kind": "inference",
+            "reasoning": "Original sources establish preparation work and separate datasets, not quantified cyclist-specific labour cost."
           },
           {
             "id": "cycling-scenario-tests:opportunity",
-            "text": "Hypothesis: sell scenario libraries and test-authoring software for difficult cyclist encounters. Euro NCAP already evaluates vehicle responses to cyclists; these simulations would support engineering tests and cannot replace formal vehicle assessment.",
-            "evidenceIds": [],
+            "text": "A cyclist-focused test library could plug into existing vehicle simulators, helping engineers reproduce difficult encounters and check new software. Its value would come from finding failures or saving test-building work that current tools miss. Neither benefit has yet been demonstrated for the combined approach.",
+            "evidenceIds": [
+              "cycling-scenario-tests:review-road",
+              "cycling-scenario-tests:review-adjustments",
+              "cycling-scenario-tests:review-ncap",
+              "cycling-scenario-tests:review-dspace",
+              "cycling-scenario-tests:review-carla"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "No validated RobotCycle-to-GraphSCENE integration, paid customer demand, authoring-time advantage or reduced real-world harm."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:56:57.238Z",
+              "reason": "Retained as an unproven product, buyer or application hypothesis, not proof of demand."
             },
             "kind": "hypothesis",
-            "testQuestion": "Can engineers reproduce observed cyclist encounters through this connection faster than manual authoring, while preserving the interactions that trigger vehicle failures?"
+            "testQuestion": "Using the same cyclist encounters, does this approach reveal additional repeatable failures or cut preparation time compared with the team’s current tools?"
           },
           {
             "id": "cycling-scenario-tests:customer-0",
@@ -2680,13 +2690,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "No validated RobotCycle-to-GraphSCENE integration, paid customer demand, authoring-time advantage or reduced real-world harm."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:56:57.238Z",
+              "reason": "Retained as an unproven product, buyer or application hypothesis, not proof of demand."
             },
             "kind": "hypothesis",
             "testQuestion": "Can engineers reproduce observed cyclist encounters through this connection faster than manual authoring, while preserving the interactions that trigger vehicle failures?"
@@ -2698,13 +2708,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "No validated RobotCycle-to-GraphSCENE integration, paid customer demand, authoring-time advantage or reduced real-world harm."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:56:57.238Z",
+              "reason": "Retained as an unproven product, buyer or application hypothesis, not proof of demand."
             },
             "kind": "hypothesis",
             "testQuestion": "Can engineers reproduce observed cyclist encounters through this connection faster than manual authoring, while preserving the interactions that trigger vehicle failures?"
@@ -2716,13 +2726,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "No validated RobotCycle-to-GraphSCENE integration, paid customer demand, authoring-time advantage or reduced real-world harm."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:56:57.238Z",
+              "reason": "Retained as an unproven product, buyer or application hypothesis, not proof of demand."
             },
             "kind": "hypothesis",
             "testQuestion": "Can engineers reproduce observed cyclist encounters through this connection faster than manual authoring, while preserving the interactions that trigger vehicle failures?"
@@ -2734,13 +2744,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "No validated RobotCycle-to-GraphSCENE integration, paid customer demand, authoring-time advantage or reduced real-world harm."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:56:57.238Z",
+              "reason": "Retained as an unproven product, buyer or application hypothesis, not proof of demand."
             },
             "kind": "hypothesis",
             "testQuestion": "Can engineers reproduce observed cyclist encounters through this connection faster than manual authoring, while preserving the interactions that trigger vehicle failures?"
@@ -2752,13 +2762,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "No validated RobotCycle-to-GraphSCENE integration, paid customer demand, authoring-time advantage or reduced real-world harm."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:56:57.238Z",
+              "reason": "Retained as an unproven product, buyer or application hypothesis, not proof of demand."
             },
             "kind": "hypothesis",
             "testQuestion": "Can engineers reproduce observed cyclist encounters through this connection faster than manual authoring, while preserving the interactions that trigger vehicle failures?"
@@ -2770,408 +2780,478 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "No validated RobotCycle-to-GraphSCENE integration, paid customer demand, authoring-time advantage or reduced real-world harm."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:56:57.238Z",
+              "reason": "Retained as an unproven product, buyer or application hypothesis, not proof of demand."
             },
             "kind": "hypothesis",
             "testQuestion": "Can engineers reproduce observed cyclist encounters through this connection faster than manual authoring, while preserving the interactions that trigger vehicle failures?"
           },
           {
             "id": "cycling-scenario-tests:v2-comparison",
-            "text": "Supplement formal assessment and simulation software; different workflow from certification. No claim of replacing regulated testing.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "dSPACE already converts road recordings into simulation scenarios, and CARLA provides an open-source simulator. A cyclist-specific library could supplement these tools with useful encounters and repeatable tests. RobotCycle and GraphSCENE are separate research outputs; connecting them remains a hypothesis.",
+            "kind": "inference",
+            "evidenceIds": [
+              "cycling-scenario-tests:review-dspace",
+              "cycling-scenario-tests:review-carla",
+              "cycling-scenario-tests:review-road"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No validated RobotCycle-to-GraphSCENE integration, paid customer demand, authoring-time advantage or reduced real-world harm."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:56:57.238Z",
+              "reason": "Original source context and distinct dataset identities inspected."
             },
-            "testQuestion": "Can engineers reproduce observed cyclist encounters through this connection faster than manual authoring, while preserving the interactions that trigger vehicle failures?"
+            "reasoning": "Existing products overlap in scenario generation. A focused library could complement them, but missing cyclist coverage and superior results are not established."
           }
         ],
         "evidence": [
           {
             "id": "cycling-scenario-tests:oxford-robotcycle-2025:source-0",
             "sourceUrl": "https://ora.ox.ac.uk/objects/uuid%3Af033cdf9-f2dc-4773-a450-2f81be4f6a8b",
-            "finalUrl": null,
+            "finalUrl": "https://ora.ox.ac.uk/objects/uuid%3Af033cdf9-f2dc-4773-a450-2f81be4f6a8b",
             "title": "The Oxford RobotCycle Project: a multimodal urban cycling dataset for assessing the safety of vulnerable road users",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2025-05-01",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08T06:48:04.276Z",
+            "retrievedAt": "2026-10-15",
             "excerpt": "2025-05-01",
             "pdfPage": null,
             "locator": "Bibliographic Details, Publication date",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:56:57.238Z",
               "failureIds": []
             }
           },
           {
             "id": "cycling-scenario-tests:oxford-robotcycle-2025:source-1",
             "sourceUrl": "https://ora.ox.ac.uk/objects/uuid%3Af033cdf9-f2dc-4773-a450-2f81be4f6a8b",
-            "finalUrl": null,
+            "finalUrl": "https://ora.ox.ac.uk/objects/uuid%3Af033cdf9-f2dc-4773-a450-2f81be4f6a8b",
             "title": "The Oxford RobotCycle Project: a multimodal urban cycling dataset for assessing the safety of vulnerable road users",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2025-05-01",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08T06:48:04.276Z",
+            "retrievedAt": "2026-10-15",
             "excerpt": "University of Oxford",
             "pdfPage": null,
             "locator": "Authors, Panagiotaki, E, Institution",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:56:57.238Z",
               "failureIds": []
             }
           },
           {
             "id": "cycling-scenario-tests:oxford-robotcycle-2025:source-2",
             "sourceUrl": "https://ora.ox.ac.uk/objects/uuid%3Af033cdf9-f2dc-4773-a450-2f81be4f6a8b",
-            "finalUrl": null,
+            "finalUrl": "https://ora.ox.ac.uk/objects/uuid%3Af033cdf9-f2dc-4773-a450-2f81be4f6a8b",
             "title": "The Oxford RobotCycle Project: a multimodal urban cycling dataset for assessing the safety of vulnerable road users",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2025-05-01",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08T06:48:04.276Z",
+            "retrievedAt": "2026-10-15",
             "excerpt": "The Oxford RobotCycle Project is a novel initiative aiming to understand how road and traffic infrastructure influence road users’ behavior, affecting cyclists’ journeys and safety.",
             "pdfPage": null,
             "locator": "Abstract",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:56:57.238Z",
               "failureIds": []
             }
           },
           {
             "id": "cycling-scenario-tests:oxford-robotcycle-2025:source-3",
             "sourceUrl": "https://ora.ox.ac.uk/objects/uuid%3Af033cdf9-f2dc-4773-a450-2f81be4f6a8b",
-            "finalUrl": null,
+            "finalUrl": "https://ora.ox.ac.uk/objects/uuid%3Af033cdf9-f2dc-4773-a450-2f81be4f6a8b",
             "title": "The Oxford RobotCycle Project: a multimodal urban cycling dataset for assessing the safety of vulnerable road users",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2025-05-01",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08T06:48:04.276Z",
+            "retrievedAt": "2026-10-15",
             "excerpt": "The dataset consists of range, visual, and inertial sensors, mounted on a backpack, and eye gaze tracking glasses, coupled with an analysis of road infrastructure and interactions with other road users.",
             "pdfPage": null,
             "locator": "Abstract",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:56:57.238Z",
               "failureIds": []
             }
           },
           {
             "id": "cycling-scenario-tests:oxford-robotcycle-2025:source-4",
             "sourceUrl": "https://ora.ox.ac.uk/objects/uuid%3Af033cdf9-f2dc-4773-a450-2f81be4f6a8b",
-            "finalUrl": null,
+            "finalUrl": "https://ora.ox.ac.uk/objects/uuid%3Af033cdf9-f2dc-4773-a450-2f81be4f6a8b",
             "title": "The Oxford RobotCycle Project: a multimodal urban cycling dataset for assessing the safety of vulnerable road users",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2025-05-01",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08T06:48:04.276Z",
+            "retrievedAt": "2026-10-15",
             "excerpt": "Enhanced by annotated maps, reconstructed 3-D point clouds, and a detailed ontology capturing static and dynamic agents and their relations, the dataset provides a comprehensive framework for analyzing and understanding traffic dynamics.",
             "pdfPage": null,
             "locator": "Abstract",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:56:57.238Z",
               "failureIds": []
             }
           },
           {
             "id": "cycling-scenario-tests:oxford-robotcycle-2025:source-5",
             "sourceUrl": "https://ora.ox.ac.uk/objects/uuid%3Af033cdf9-f2dc-4773-a450-2f81be4f6a8b",
-            "finalUrl": null,
+            "finalUrl": "https://ora.ox.ac.uk/objects/uuid%3Af033cdf9-f2dc-4773-a450-2f81be4f6a8b",
             "title": "The Oxford RobotCycle Project: a multimodal urban cycling dataset for assessing the safety of vulnerable road users",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2025-05-01",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08T06:48:04.276Z",
+            "retrievedAt": "2026-10-15",
             "excerpt": "Heatmaps derived from the cyclists’ vision reveal attention patterns and focal points during various traffic scenarios. We also analyze traffic interactions and risk, either perceived or actual, and correlate them with road infrastructure and traffic volumes.",
             "pdfPage": null,
             "locator": "Abstract",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:56:57.238Z",
               "failureIds": []
             }
           },
           {
             "id": "cycling-scenario-tests:oxford-robotcycle-2025:source-6",
             "sourceUrl": "https://ora.ox.ac.uk/objects/uuid%3Af033cdf9-f2dc-4773-a450-2f81be4f6a8b",
-            "finalUrl": null,
+            "finalUrl": "https://ora.ox.ac.uk/objects/uuid%3Af033cdf9-f2dc-4773-a450-2f81be4f6a8b",
             "title": "The Oxford RobotCycle Project: a multimodal urban cycling dataset for assessing the safety of vulnerable road users",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2025-05-01",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08T06:48:04.276Z",
+            "retrievedAt": "2026-10-15",
             "excerpt": "To complement the dataset, we also provide a complete set of tools for risk and traffic analysis, visualization, automatic calibration, and data annotation. The dataset can also be used to evaluate the robustness of odometry estimation methods, due to the highly dynamic cyclist movements.",
             "pdfPage": null,
             "locator": "Abstract",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:56:57.238Z",
               "failureIds": []
             }
           },
           {
             "id": "cycling-scenario-tests:oxford-robotcycle-2025:source-7",
             "sourceUrl": "https://ora.ox.ac.uk/objects/uuid%3Af033cdf9-f2dc-4773-a450-2f81be4f6a8b",
-            "finalUrl": null,
+            "finalUrl": "https://ora.ox.ac.uk/objects/uuid%3Af033cdf9-f2dc-4773-a450-2f81be4f6a8b",
             "title": "The Oxford RobotCycle Project: a multimodal urban cycling dataset for assessing the safety of vulnerable road users",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2025-05-01",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08T06:48:04.276Z",
+            "retrievedAt": "2026-10-15",
             "excerpt": "Combining multimodal data with traffic and risk analysis, the Oxford RobotCycle Project facilitates identifying safety-critical scenarios to derive actionable insights for safer, cyclist-friendly road design.",
             "pdfPage": null,
             "locator": "Abstract",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:56:57.238Z",
               "failureIds": []
             }
           },
           {
             "id": "cycling-scenario-tests:oxford-robotcycle-2025:source-8",
             "sourceUrl": "https://ora.ox.ac.uk/objects/uuid%3Af033cdf9-f2dc-4773-a450-2f81be4f6a8b",
-            "finalUrl": null,
+            "finalUrl": "https://ora.ox.ac.uk/objects/uuid%3Af033cdf9-f2dc-4773-a450-2f81be4f6a8b",
             "title": "The Oxford RobotCycle Project: a multimodal urban cycling dataset for assessing the safety of vulnerable road users",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2025-05-01",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08T06:48:04.276Z",
+            "retrievedAt": "2026-10-15",
             "excerpt": "The dataset and tools are made available at https://ori-mrg.github.io/robotcycle-dataset/",
             "pdfPage": null,
             "locator": "Abstract",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:56:57.238Z",
               "failureIds": []
             }
           },
           {
             "id": "cycling-scenario-tests:oxford-robotcycle-2025:source-9",
             "sourceUrl": "https://ora.ox.ac.uk/objects/uuid%3Af033cdf9-f2dc-4773-a450-2f81be4f6a8b",
-            "finalUrl": null,
+            "finalUrl": "https://ora.ox.ac.uk/objects/uuid%3Af033cdf9-f2dc-4773-a450-2f81be4f6a8b",
             "title": "The Oxford RobotCycle Project: a multimodal urban cycling dataset for assessing the safety of vulnerable road users",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2025-05-01",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08T06:48:04.276Z",
-            "excerpt": "Panagiotaki, E., Thuremella, D., Baghabrah, J., Sze, S., Fu, L. F. T., Hardin, B., Reinmund, T., Flatscher, T., Marques, D., Prahacs, C., Kunze, L., & De Martini, D. (2025).",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Panagiotaki, E., Thuremella, D., Baghabrah, J., Sze, S., Fu, L., Hardin, B., Reinmund, T., Flatscher, T., Marques, D., Prahacs, C., Kunze, L., & De Martini, D. (2025).",
             "pdfPage": null,
             "locator": "Cite this record, APA Style",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:56:57.238Z",
               "failureIds": []
             }
           },
           {
             "id": "cycling-scenario-tests:oxford-graphscene-2025:source-0",
             "sourceUrl": "https://ora.ox.ac.uk/objects/uuid%3Ad44b5997-6809-4237-8d05-dc78e0238588",
-            "finalUrl": null,
+            "finalUrl": "https://ora.ox.ac.uk/objects/uuid%3Ad44b5997-6809-4237-8d05-dc78e0238588",
             "title": "GraphSCENE: on-demand critical scenario generation for autonomous vehicles in simulation - ORA - Oxford University Research Archive",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2025-11-27",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08T06:47:33.709Z",
+            "retrievedAt": "2026-10-15",
             "excerpt": "Panagiotaki, E., Pramatarov, G., Kunze, L., & De Martini, D. (2025). GraphSCENE: on-demand critical scenario generation for autonomous vehicles in simulation. IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2025), 13801–13808.",
             "pdfPage": null,
             "locator": "Cite this record — APA Style",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:56:57.238Z",
               "failureIds": []
             }
           },
           {
             "id": "cycling-scenario-tests:oxford-graphscene-2025:source-1",
             "sourceUrl": "https://ora.ox.ac.uk/objects/uuid%3Ad44b5997-6809-4237-8d05-dc78e0238588",
-            "finalUrl": null,
+            "finalUrl": "https://ora.ox.ac.uk/objects/uuid%3Ad44b5997-6809-4237-8d05-dc78e0238588",
             "title": "GraphSCENE: on-demand critical scenario generation for autonomous vehicles in simulation - ORA - Oxford University Research Archive",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2025-11-27",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08T06:47:33.709Z",
+            "retrievedAt": "2026-10-15",
             "excerpt": "2025-11-27",
             "pdfPage": null,
             "locator": "Bibliographic Details — Publication date",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:56:57.238Z",
               "failureIds": []
             }
           },
           {
             "id": "cycling-scenario-tests:oxford-graphscene-2025:source-2",
             "sourceUrl": "https://ora.ox.ac.uk/objects/uuid%3Ad44b5997-6809-4237-8d05-dc78e0238588",
-            "finalUrl": null,
+            "finalUrl": "https://ora.ox.ac.uk/objects/uuid%3Ad44b5997-6809-4237-8d05-dc78e0238588",
             "title": "GraphSCENE: on-demand critical scenario generation for autonomous vehicles in simulation - ORA - Oxford University Research Archive",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2025-11-27",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08T06:47:33.709Z",
+            "retrievedAt": "2026-10-15",
             "excerpt": "Testing and validating Autonomous Vehicle (AV) performance in safety-critical and diverse scenarios is crucial before real-world deployment. However, manually creating such scenarios in simulation remains a significant and time-consuming challenge.",
             "pdfPage": null,
             "locator": "Abstract",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:56:57.238Z",
               "failureIds": []
             }
           },
           {
             "id": "cycling-scenario-tests:oxford-graphscene-2025:source-3",
             "sourceUrl": "https://ora.ox.ac.uk/objects/uuid%3Ad44b5997-6809-4237-8d05-dc78e0238588",
-            "finalUrl": null,
+            "finalUrl": "https://ora.ox.ac.uk/objects/uuid%3Ad44b5997-6809-4237-8d05-dc78e0238588",
             "title": "GraphSCENE: on-demand critical scenario generation for autonomous vehicles in simulation - ORA - Oxford University Research Archive",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2025-11-27",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08T06:47:33.709Z",
+            "retrievedAt": "2026-10-15",
             "excerpt": "This work introduces a novel method that generates dynamic temporal scene graphs corresponding to diverse traffic scenarios, on-demand, tailored to user-defined preferences, such as AV actions, sets of dynamic agents, and criticality levels. A temporal Graph Neural Network (GNN) model learns to predict relationships between ego-vehicle, agents, and static structures, guided by real-world spatiotemporal interaction patterns and constrained by an ontology that restricts predictions to semantically valid links.",
             "pdfPage": null,
             "locator": "Abstract",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:56:57.238Z",
               "failureIds": []
             }
           },
           {
             "id": "cycling-scenario-tests:oxford-graphscene-2025:source-4",
             "sourceUrl": "https://ora.ox.ac.uk/objects/uuid%3Ad44b5997-6809-4237-8d05-dc78e0238588",
-            "finalUrl": null,
+            "finalUrl": "https://ora.ox.ac.uk/objects/uuid%3Ad44b5997-6809-4237-8d05-dc78e0238588",
             "title": "GraphSCENE: on-demand critical scenario generation for autonomous vehicles in simulation - ORA - Oxford University Research Archive",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2025-11-27",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08T06:47:33.709Z",
+            "retrievedAt": "2026-10-15",
             "excerpt": "Our model consistently outperforms the baselines in accurately generating links corresponding to the requested scenarios. We render the predicted scenarios in simulation to further demonstrate their effectiveness as testing environments for AV agents.",
             "pdfPage": null,
             "locator": "Abstract",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:56:57.238Z",
               "failureIds": []
             }
           },
           {
-            "id": "cycling-scenario-tests:market-source-0",
-            "sourceUrl": "https://www.euroncap.com/assessments/cupra/leon/1122/",
-            "finalUrl": null,
-            "title": "Euro NCAP CUPRA Leon assessment",
-            "publisher": null,
-            "sourceRole": "secondary",
-            "independence": "unknown",
-            "publishedAt": null,
+            "id": "cycling-scenario-tests:review-road",
+            "sourceUrl": "https://arxiv.org/pdf/2410.13514v3",
+            "finalUrl": "https://arxiv.org/pdf/2410.13514v3",
+            "title": "GraphSCENE, arXiv v3: training data",
+            "publisher": "GraphSCENE authors",
+            "sourceRole": "primary",
+            "independence": "project-originated",
+            "publishedAt": "2025-09-26",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08",
-            "excerpt": "The system performed well in tests of its reaction to cyclists.",
-            "pdfPage": null,
-            "locator": null,
-            "relevance": "broader-context",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "For this work, we used the ROAD dataset",
+            "pdfPage": 5,
+            "locator": "Physical PDF page 5; arXiv v3 September 26, 2025",
+            "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:56:57.238Z",
               "failureIds": []
             }
           },
           {
-            "id": "cycling-scenario-tests:market-source-1",
-            "sourceUrl": "https://www.mordorintelligence.com/industry-reports/testing-inspection-and-certification-market-for-automotive-industry",
-            "finalUrl": null,
-            "title": "Mordor Intelligence · automotive testing",
-            "publisher": null,
-            "sourceRole": "secondary",
-            "independence": "unknown",
-            "publishedAt": null,
+            "id": "cycling-scenario-tests:review-adjustments",
+            "sourceUrl": "https://arxiv.org/pdf/2410.13514v3",
+            "finalUrl": "https://arxiv.org/pdf/2410.13514v3",
+            "title": "GraphSCENE, arXiv v3: remaining manual work",
+            "publisher": "GraphSCENE authors",
+            "sourceRole": "primary",
+            "independence": "project-originated",
+            "publishedAt": "2025-09-26",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08T18:09:38.335657Z",
-            "excerpt": "The automotive testing, inspection, and certification market size was valued at USD 20.31 billion in 2025",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "To improve distinction, we manually\nadjust these thresholds in simulation.",
+            "pdfPage": 7,
+            "locator": "Physical PDF page 7; arXiv v3 September 26, 2025",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:56:57.238Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "cycling-scenario-tests:review-ncap",
+            "sourceUrl": "https://www.euroncap.com/press-media/euro-ncap-announces-2026-protocol-changes-to-tackle-modern-driving-risks/",
+            "finalUrl": "https://www.euroncap.com/press-media/euro-ncap-announces-2026-protocol-changes-to-tackle-modern-driving-risks/",
+            "title": "Euro NCAP announces 2026 protocol changes",
+            "publisher": "Euro NCAP",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2025-11-26",
+            "observationPeriod": "2026 rating programme announced November 26, 2025",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "including urban situations where vehicles routinely encounter powered two wheelers, cyclists and pedestrians.",
             "pdfPage": null,
-            "locator": null,
+            "locator": "Original HTML; surrounding context inspected",
             "relevance": "broader-context",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:56:57.238Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "cycling-scenario-tests:review-dspace",
+            "sourceUrl": "https://www.dspace.com/en/pub/home/products/sw/traffic-virtualizer.cfm",
+            "finalUrl": "https://www.dspace.com/en/pub/home/products/sw/traffic-virtualizer.cfm",
+            "title": "dSPACE Traffic Virtualizer; undated, retrieved 15 October 2026",
+            "publisher": "dSPACE",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": null,
+            "retrievedAt": "2026-10-15",
+            "excerpt": "It automatically processes vehicle trajectories and object-list data.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding context inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:56:57.238Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "cycling-scenario-tests:review-carla",
+            "sourceUrl": "https://carla.org/",
+            "finalUrl": "https://carla.org/",
+            "title": "CARLA official project site; undated page retrieved 15 October 2026",
+            "publisher": "CARLA",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": null,
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Open-source simulator for autonomous driving research.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding context inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:56:57.238Z",
               "failureIds": []
             }
           }
@@ -3179,134 +3259,64 @@
         "assessment": {
           "rubricVersion": "venture-screen-v2",
           "priority": "medium",
-          "priorityReason": "Engineering test generation can complement formal vehicle assessments. The original connection between recorded encounters and scenario software still needs validation.",
+          "priorityReason": "A focused cyclist-test library could supplement existing simulators. It needs a matched test of failure discovery or preparation effort before a commercial case.",
           "confidence": {
-            "level": "low",
-            "reason": "Low; sources support separate components, not the combined product."
+            "level": "moderate",
+            "reason": "Original project and supplier sources verify separate capabilities and overlapping tools. Integration, added value and repeat payment remain unproven."
           },
           "dimensions": {
             "problem": {
-              "status": "plausible",
-              "reason": "Diverse traffic tests require preparation; the saved work provides distinct observations and scenario tools.",
+              "status": "supported",
+              "reason": "Scenario preparation is described as time-consuming; no representative cyclist-specific hours or cost.",
               "claimIds": [
-                "cycling-scenario-tests:project-oxford-robotcycle-2025",
-                "cycling-scenario-tests:project-oxford-graphscene-2025",
-                "cycling-scenario-tests:what",
-                "cycling-scenario-tests:problem",
-                "cycling-scenario-tests:opportunity",
-                "cycling-scenario-tests:customer-0",
-                "cycling-scenario-tests:customer-1",
-                "cycling-scenario-tests:customer-2",
-                "cycling-scenario-tests:application-0",
-                "cycling-scenario-tests:application-1",
-                "cycling-scenario-tests:application-2"
+                "cycling-scenario-tests:problem"
               ]
             },
             "customerPayment": {
               "status": "plausible",
-              "reason": "Vehicle-development and simulation teams are plausible customers; paid scenario demand is not established here.",
+              "reason": "Vehicle-development teams use simulation, but no paid demand for this cyclist library is established.",
               "claimIds": [
-                "cycling-scenario-tests:project-oxford-robotcycle-2025",
-                "cycling-scenario-tests:project-oxford-graphscene-2025",
-                "cycling-scenario-tests:what",
-                "cycling-scenario-tests:problem",
-                "cycling-scenario-tests:opportunity",
-                "cycling-scenario-tests:customer-0",
-                "cycling-scenario-tests:customer-1",
-                "cycling-scenario-tests:customer-2",
-                "cycling-scenario-tests:application-0",
-                "cycling-scenario-tests:application-1",
-                "cycling-scenario-tests:application-2"
+                "cycling-scenario-tests:opportunity"
               ]
             },
             "productValue": {
               "status": "plausible",
-              "reason": "Recorded encounters could inform configurable tests, but compatibility and faithful cyclist behavior are unproven.",
+              "reason": "Useful repeatable cyclist encounters could reduce work or expose failures; combined implementation unproven.",
               "claimIds": [
-                "cycling-scenario-tests:project-oxford-robotcycle-2025",
-                "cycling-scenario-tests:project-oxford-graphscene-2025",
-                "cycling-scenario-tests:what",
-                "cycling-scenario-tests:problem",
-                "cycling-scenario-tests:opportunity",
-                "cycling-scenario-tests:customer-0",
-                "cycling-scenario-tests:customer-1",
-                "cycling-scenario-tests:customer-2",
-                "cycling-scenario-tests:application-0",
-                "cycling-scenario-tests:application-1",
-                "cycling-scenario-tests:application-2"
+                "cycling-scenario-tests:opportunity"
               ]
             },
             "commercialGap": {
               "status": "plausible",
-              "reason": "Could supplement existing simulator libraries and formal assessment by finding engineering failures outside fixed test cases.",
+              "reason": "Potential focused supplement to existing recording-to-simulation products, not proof those products lack cyclist coverage.",
               "claimIds": [
-                "cycling-scenario-tests:project-oxford-robotcycle-2025",
-                "cycling-scenario-tests:project-oxford-graphscene-2025",
-                "cycling-scenario-tests:what",
-                "cycling-scenario-tests:problem",
-                "cycling-scenario-tests:opportunity",
-                "cycling-scenario-tests:customer-0",
-                "cycling-scenario-tests:customer-1",
-                "cycling-scenario-tests:customer-2",
-                "cycling-scenario-tests:application-0",
-                "cycling-scenario-tests:application-1",
-                "cycling-scenario-tests:application-2"
+                "cycling-scenario-tests:v2-comparison"
               ]
             },
             "ventureScale": {
-              "status": "plausible",
-              "reason": "Reusable scenario coverage and updates across vehicle programs offer a path; rights, budgets and reachable customers remain missing.",
+              "status": "missing",
+              "reason": "Customer count, annual budget, recurring demand and attainable revenue remain unknown. Broad automotive testing revenue is not this market.",
               "claimIds": [
-                "cycling-scenario-tests:project-oxford-robotcycle-2025",
-                "cycling-scenario-tests:project-oxford-graphscene-2025",
-                "cycling-scenario-tests:what",
-                "cycling-scenario-tests:problem",
-                "cycling-scenario-tests:opportunity",
-                "cycling-scenario-tests:customer-0",
-                "cycling-scenario-tests:customer-1",
-                "cycling-scenario-tests:customer-2",
-                "cycling-scenario-tests:application-0",
-                "cycling-scenario-tests:application-1",
-                "cycling-scenario-tests:application-2"
+                "cycling-scenario-tests:opportunity"
               ]
             },
             "businessCapital": {
               "status": "missing",
-              "reason": "Data rights, curation, simulator integration and validation costs are unknown.",
+              "reason": "Data licensing, curation, integration costs and repeatable delivery margins remain unknown.",
               "claimIds": [
-                "cycling-scenario-tests:project-oxford-robotcycle-2025",
-                "cycling-scenario-tests:project-oxford-graphscene-2025",
-                "cycling-scenario-tests:what",
-                "cycling-scenario-tests:problem",
-                "cycling-scenario-tests:opportunity",
-                "cycling-scenario-tests:customer-0",
-                "cycling-scenario-tests:customer-1",
-                "cycling-scenario-tests:customer-2",
-                "cycling-scenario-tests:application-0",
-                "cycling-scenario-tests:application-1",
-                "cycling-scenario-tests:application-2"
+                "cycling-scenario-tests:opportunity"
               ]
             },
             "timing": {
-              "status": "missing",
-              "reason": "Existing assessment activity does not establish new demand or acceleration for these scenarios.",
+              "status": "plausible",
+              "reason": "Euro NCAP announced expanded 2026 urban scenarios including cyclists; this is a rating change, not a mandate to buy this software.",
               "claimIds": [
-                "cycling-scenario-tests:project-oxford-robotcycle-2025",
-                "cycling-scenario-tests:project-oxford-graphscene-2025",
-                "cycling-scenario-tests:what",
-                "cycling-scenario-tests:problem",
-                "cycling-scenario-tests:opportunity",
-                "cycling-scenario-tests:customer-0",
-                "cycling-scenario-tests:customer-1",
-                "cycling-scenario-tests:customer-2",
-                "cycling-scenario-tests:application-0",
-                "cycling-scenario-tests:application-1",
-                "cycling-scenario-tests:application-2"
+                "cycling-scenario-tests:opportunity"
               ]
             }
           },
-          "strongestObjection": "Accurate graph links do not establish realistic road behavior or detection of useful failures.",
-          "decisiveQuestion": "Demonstrate additional reproducible vehicle failures on held-out encounters beyond the existing scenario suite."
+          "strongestObjection": "Existing tools already generate traffic tests. GraphSCENE uses the ROAD vehicle dataset, not RobotCycle, and its authors still manually adjust some simulation thresholds.",
+          "decisiveQuestion": "Using the same cyclist encounters, does this approach reveal additional repeatable failures or cut preparation time compared with the team’s current tools?"
         },
         "migrationGaps": []
       },
