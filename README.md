@@ -1,14 +1,27 @@
 # Investment signals
 
-A proof of concept for finding investment opportunities in university research and student projects. The goal is to surface a clear problem, potential customers, and a credible path to a venture-scale business—not just an interesting invention.
+A proof of concept for finding investment opportunities in university research and student projects. The goal is to surface clear problems, potential customers, and credible paths to venture-scale businesses.
 
-## How it works
+## Focus
 
-Public research pages, papers, capstone showcases, design competitions, and hackathon galleries were collected and processed locally. The work included text extraction, duplicate detection, classification, grouping related problems, and synthesizing opportunity hypotheses. Selected claims received further source research and evidence checks. Collection and commercial validation remain incomplete.
+[Anti Fund’s thesis](https://antifund.com/manifesto) emphasizes robotics, automation, defense, energy, and manufacturing.
 
-This demo contains eight selected opportunities, with supporting projects and source links. Reported results, interpretations, and open questions remain distinct. A signal is a lead for further investigation, not a validated investment recommendation.
+I looked for opportunities in those areas, along with the AI, computing, sensing, and infrastructure that enable them.
 
-Visitors can mark interest and save, edit, or delete notes. Voice recordings are transcribed into an editable draft before saving. **Feedback is shared in this no-login demo. Don't enter confidential information.** Interest queues research on the configured Agent37 worker. Clearing interest pauses the active task; marking it again resumes from completed steps. The archived research pipeline and monitor are not included.
+## Methodology
+
+1. **Built the first five leads.** A curated starting set of 26 projects from ten schools, dated 2021–2026, supported five opportunity briefs.
+2. **Expanded collection.** Broad discovery reached 50 school-associated collections, then focused on 2025–2026 showcases at Georgia Tech, Berkeley, Waterloo, MIT, and Stanford. Sources included research pages, papers, capstones, design competitions, and hackathon galleries.
+3. **Saved the source material.** Across both collections, we downloaded 4,976 unique URLs: 4,766 HTML/page/API responses and 210 PDFs.
+4. **Processed the focused corpus.** Its 4,175 sources yielded 6,669 records. All received initial analysis through 6,584 source packets, producing 6,187 candidate interpretations in 628 thematic groups.
+5. **Tried deeper review too early.** The old pipeline completed deeper judgments for 235 of 628 groups and 117 problem-size research results before it was stopped. Individual project evaluation and source checks consumed time without reliably producing strong opportunities.
+6. **Tested cheap opportunity synthesis.** I selected six areas spanning 18 of the 628 groups. Those groups held 299 candidate records; We read a bounded sample of 48, checked supporting passages, and drafted three opportunity hypotheses using saved data only. This was a small experiment, not a ranking of the whole corpus.
+7. **Brought opportunities into the demo.** The collection combines curated briefs and hypotheses drawn from the corpus, with supporting projects and source links. It grows as further opportunities are identified and reviewed. These are leads for investigation, not validated investment cases.
+
+## Using the demo
+
+- Browse opportunities, open one to see its supporting research, and mark it as interesting to queue deeper research
+- Add notes by typing or recording your voice; notes used to help tune opportunity synthesis
 
 ## Technology
 
@@ -48,13 +61,10 @@ The published dataset lives in `data/`. Raw downloads, private research checkpoi
 
 ## Hosted research
 
-The existing Agent37 Codex instance runs `scripts/agent37-worker.ts` (bundled for Node). Convex owns the queue and leases; Agent37 owns the model execution. Research has three saved steps: problem/customer, market/alternatives, and investment case. Each step has a ten-minute limit. Up to twelve attempts per signal prevent unbounded retries. Test-mode preferences never run research.
+`scripts/agent37-worker.ts` runs on the existing Agent37 instance using subscription-authenticated Codex. Convex owns job state and leases. One research task runs at a time, with three saved steps, a ten-minute limit per step, and at most twelve attempts per signal. Test-mode preferences never start research. Originals, excerpts, and reports stay in private evidence storage.
 
-The worker retains originals, excerpts and reports in an evidence archive in private Convex storage. Completion means **awaiting evidence review**, not Exploring: it never replaces published signal content automatically. Missing sources and uncertain market claims remain explicit gaps.
+Enable `RESEARCH_ENABLED=true` and set a separate `RESEARCH_WORKER_SECRET` in Convex and the root-owned worker config. The worker config also requires the production Convex URL, Agent37 API key, and instance ID. Credentials are not exposed to the Codex process.
 
-Configure `RESEARCH_ENABLED=true` and a separate random `RESEARCH_WORKER_SECRET` in Convex. The root-owned worker config contains the production Convex URL, worker secret, Agent37 API key and instance ID. These credentials are not exposed to the Codex process. The worker uses Agent37's supported response/cancel API and reattaches to the same response after a disconnect. An uncertain dispatch stops the worker for reconciliation rather than repeating a model call.
+The worker starts automatically after an ordinary Agent37 restart. Process locks and Convex leases prevent duplicate workers; completed steps survive pauses and restarts. An interrupted call whose outcome cannot be confirmed stays blocked for inspection rather than being repeated. Template image updates require reinstalling the worker.
 
-The hosted launcher uses a process lock; a Convex lease also rejects duplicate workers. Completed steps survive pause/restart. After a confirmed container restart, interested jobs resume at the first unfinished step; paused jobs stay paused. A supervisor restart within the same container first confirms cancellation of its previous response. Completed steps are never repeated. If the previous call cannot be accounted for, the worker stays stopped for inspection. The Agent37 boot hook automatically starts the worker after an ordinary box restart or stop/start. It retries startup for four minutes while the services become available. The hook holds a restricted startup token; Convex keeps the Agent37 key and invokes only the fixed root-owned launcher. Template image updates still require reinstalling the worker because Agent37 resets files outside `/home/node`. Completed attempt directories are sealed for private inspection. This is a shared demo on one operator-owned agent instance, not a multi-tenant sandbox; do not supply confidential notes.
-
-
-Startup uses `scripts/agent37-post-restart.sh` from Agent37’s `post-restart.sh` hook and `scripts/agent37-ensure-started.sh` at `/root/signals-worker/ensure-started.sh`. Install the launcher as root, mode 0700. The hook’s node-owned, mode-0600 curl config at `/home/node/.agent37/signals-boot.curl` contains the Convex site URL `/research-worker/start` and a bearer `RESEARCH_BOOT_SECRET`. Configure the matching secret, `AGENT37_API_KEY`, and `AGENT37_INSTANCE_ID` in Convex. The endpoint accepts no commands or job inputs, rate-limits startup requests, and returns success only after the worker has acquired its lease. Startup never changes interest or restarts completed research. An ambiguous interrupted model call remains blocked for inspection rather than being duplicated.
+Startup uses `scripts/agent37-post-restart.sh` and the root-owned `scripts/agent37-ensure-started.sh` launcher. The boot hook holds a restricted token for Convex’s `/research-worker/start` endpoint. Configure matching `RESEARCH_BOOT_SECRET`, `AGENT37_API_KEY`, and `AGENT37_INSTANCE_ID` in Convex; keep the launcher mode 0700 and the hook’s curl config mode 0600. This is a shared proof of concept on one operator-owned instance, not a multi-tenant research service.
