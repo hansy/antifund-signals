@@ -4701,13 +4701,13 @@
       "title": "Safer inspection robots",
       "summary": "Check where inspection robots can walk safely before sending them into a site.",
       "topic": "Locomotion",
-      "problem": "An inspection robot that slips, falls or gets stuck can interrupt a mission and require a person to recover it in a hazardous area.",
-      "statusQuo": "The excerpts describe proprioceptive fallback in ANYmal's hiking controller and classic model-based control combined with learning in DTC as alternative approaches to difficult terrain.",
-      "gap": "Hypothesis: teams need a repeatable way to compare obstacle skills and fallback behavior under terrain changes. The excerpts do not establish demand for a standalone testing product.",
-      "opportunity": "A terrain testing service that measures where a legged inspection robot can walk safely, when it should stop, and how it recovers.",
+      "problem": "A robot that works on a clean floor may struggle when a slope is also covered in debris. Operators still need to test their own routes: Equinor describes doing this at its Northern Lights facility, even with a robot already tested by its supplier.",
+      "statusQuo": "Manufacturers test their controllers, operators test local routes, and public facilities provide reusable test methods.",
+      "gap": "Consistent route comparisons and repeat checks across robots, if they reduce work or reveal risks missed by current testing.",
+      "opportunity": "Tests that show how inspection robots handle a site’s surfaces, obstacles and recovery after a fall.",
       "evidence": "Reported: Robot Parkour shows a failed leap on a low-friction platform. Reported: ANYmal’s hiking controller can fall back to internal sensing; DTC combines learned and model-based control to negotiate difficult terrain. These studies do not compare the same hazards.",
-      "counterpoint": "Operators may rely on vendor assurances, and standardized tests may poorly predict real sites.",
-      "nextQuestion": "Ask whether a repeatable test changes deployment decisions and compare measured field failures against its predictions.",
+      "counterpoint": "Testing a route can show when to avoid it; it does not make every surface traversable. Paid repeat demand and a delivery model beyond bespoke site visits remain unproven.",
+      "nextQuestion": "On the same site, does independent testing change a deployment decision or reduce testing work enough to earn repeat payment?",
       "projectIds": [
         "robot-parkour",
         "anymal-hike",
@@ -4720,8 +4720,8 @@
       ],
       "confidence": "Mixed evidence",
       "brief": {
-        "whatItIs": "A terrain testing service that measures where a legged inspection robot can walk safely, when it should stop, and how it recovers.",
-        "problem": "An inspection robot that slips, falls or gets stuck can interrupt a mission and require a person to recover it in a hazardous area.",
+        "whatItIs": "Tests that show how inspection robots handle a site’s surfaces, obstacles and recovery after a fall.",
+        "problem": "A robot that works on a clean floor may struggle when a slope is also covered in debris. Operators still need to test their own routes: Equinor describes doing this at its Northern Lights facility, even with a robot already tested by its supplier.",
         "breakthroughs": [
           {
             "text": "Reported: Robot Parkour shows a failed leap on a low-friction platform.",
@@ -4737,18 +4737,8 @@
             ]
           }
         ],
-        "marketOpportunity": "Hypothesis: sell independent acceptance tests and recurring checks as controllers change. ANYbotics already markets autonomous industrial inspections; whether operators will buy separate terrain assurance needs customer interviews.",
+        "marketOpportunity": "Independent route checks could help operators compare robots and decide when changed conditions or software require retesting. Reusable tests and reports could make this less dependent on specialist visits. The commercial test is whether they improve deployment decisions enough for customers to pay beyond their existing testing.",
         "buyer": "Legged robot manufacturers and industrial operators evaluating inspection fleets.",
-        "marketSize": {
-          "value": "$2.5–5.6B",
-          "market": "Inspection robots",
-          "year": 2025,
-          "context": "Published estimates differ in coverage. Both cover the broader robot market; the opportunity for navigation software is unmeasured.",
-          "sourceUrls": [
-            "https://www.thebusinessresearchcompany.com/report/inspection-robots-global-market-report",
-            "https://www.fortunebusinessinsights.com/inspection-robots-market-105440"
-          ]
-        },
         "applications": [
           "Inspection routes over uneven or slippery ground",
           "Testing recovery from failed steps",
@@ -4762,30 +4752,37 @@
         "marketStatus": "researched",
         "marketEvidence": [
           {
-            "title": "ANYbotics industrial inspection solutions",
-            "url": "https://www.anybotics.com/",
-            "excerpt": "Our ANYmal robotic solutions automate industrial inspections.",
-            "accessedAt": "2026-10-08"
+            "title": "Boston Dynamics: Spot Instructions for Use, version 5.1.5",
+            "url": "https://d3cjkvgbik1jtv.cloudfront.net/translations/spot-5_1/spot-user-manual-en.pdf",
+            "excerpt": "It is your responsibility to evaluate the robot’s performance in the environment where it is deployed",
+            "accessedAt": "2026-10-15",
+            "page": 27
           },
           {
-            "title": "The Business Research Company · inspection robots",
-            "url": "https://www.thebusinessresearchcompany.com/report/inspection-robots-global-market-report",
-            "excerpt": "Inspection Robots market size has reached to $2.47 billion in 2025",
-            "accessedAt": "2026-10-08T18:09:38.335654Z"
+            "title": "Equinor: How to train your robot",
+            "url": "https://www.equinor.com/magazine/svein-ivar-the-robot-trainer",
+            "excerpt": "Testing is carried out in close collaboration between the robot team and the operations team at Northern Lights.",
+            "accessedAt": "2026-10-15"
           },
           {
-            "title": "Fortune Business Insights · inspection robots",
-            "url": "https://www.fortunebusinessinsights.com/inspection-robots-market-105440",
-            "excerpt": "The global inspection robots market size was valued at USD 5.62 billion in 2025.",
-            "accessedAt": "2026-10-08T18:09:38.335655Z"
+            "title": "Boston Dynamics: Starting on the Right Foot with Reinforcement Learning",
+            "url": "https://bostondynamics.com/blog/starting-on-the-right-foot-with-reinforcement-learning/",
+            "excerpt": "These robots operate 24/7 for a cumulative runtime of over 2,000 hours a week",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "NIST: Robotics Test Facility",
+            "url": "https://www.nist.gov/laboratories/tools-instruments/robotics-test-facility",
+            "excerpt": "Collaborative programs may be arranged on a cost reimbursable basis.",
+            "accessedAt": "2026-10-15"
           }
         ],
         "risks": [
-          "The systems were not compared on the same obstacle. Proprioception or hybrid control cannot be assumed to solve the reported leap failure, which may also depend on physical traction limits.",
-          "A test service cannot certify general safety from a small set of terrain trials; manufacturers may already test sufficiently in-house."
+          "Testing a route can show when to avoid it; it does not make every surface traversable. Paid repeat demand and a delivery model beyond bespoke site visits remain unproven.",
+          "The research controllers were not compared on the same slippery obstacle; no general safety guarantee follows."
         ],
         "nextQuestions": [
-          "Ask whether a repeatable test changes deployment decisions and compare measured field failures against its predictions."
+          "On the same site, does independent testing change a deployment decision or reduce testing work enough to earn repeat payment?"
         ]
       }
     },

@@ -1925,8 +1925,8 @@
     {
       "schemaVersion": 1,
       "id": "terrain-fallback-tests",
-      "revision": 1,
-      "acceptedRevisionId": "terrain-fallback-tests:rubric-v2-20261015",
+      "revision": 2,
+      "acceptedRevisionId": "terrain-fallback-tests:evidence-review-v2-20261015",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -1934,19 +1934,19 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T02:31:21.257Z",
-      "updatedAt": "2026-10-15T21:24:18.427Z",
+      "updatedAt": "2026-10-15T22:38:38.921Z",
       "verdict": null,
       "stage": "first-impressions",
-      "qualificationError": null,
+      "qualificationError": "Evidence reviewed; incremental value, separate payment and a scalable business remain unproven.",
       "accepted": {
-        "id": "terrain-fallback-tests:rubric-v2-20261015",
+        "id": "terrain-fallback-tests:evidence-review-v2-20261015",
         "opportunityId": "terrain-fallback-tests",
-        "parentRevisionId": "terrain-fallback-tests:migration-v1",
-        "createdAt": "2026-10-15T21:24:18.427Z",
-        "producerId": "rubric-reassessment-v2",
-        "origin": "saved-data-synthesis",
-        "changeReason": "Reassessed adjacent uses and functional alternatives. Original evidence review statuses preserved; no new market qualification.",
-        "contentHash": "f5ea41ef9f75a1d5701d2172e82836b9ca3e08ae3f921b46de8b7f35638697f3",
+        "parentRevisionId": "terrain-fallback-tests:rubric-v2-20261015",
+        "createdAt": "2026-10-15T22:38:38.921Z",
+        "producerId": "codex-evidence-inspector",
+        "origin": "inspection-correction",
+        "changeReason": "Inspect operator route testing, manufacturer guidance and existing test methods. Separate complementary test-service potential from controller capability; remove broad robot-market proxies and unsupported supplier passages.",
+        "contentHash": "da1b6d66d8c4ab2b44daf8e89b6b115ff0437356ec546667c7e27a24e35a04d8",
         "title": "Safer inspection robots",
         "classifications": [
           "Locomotion"
@@ -1980,7 +1980,7 @@
           ],
           "economics": [],
           "timing": [],
-          "keyQuestion": "Ask whether a repeatable test changes deployment decisions and compare measured field failures against its predictions."
+          "keyQuestion": "On the same site, does independent testing change a deployment decision or reduce testing work enough to earn repeat payment?"
         },
         "projects": [
           {
@@ -2018,13 +2018,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Different controllers and terrains have not been compared under matched conditions. Outside-testing demand, repeat fees and general safety are not established."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:38:38.921Z",
+              "reason": "Retained as an unproven product, customer or application hypothesis; not evidence of payment or general safety."
             },
             "kind": "hypothesis",
             "testQuestion": "On identical low-friction obstacles, which failures can fallback or hybrid control prevent, and which require avoiding the maneuver entirely?"
@@ -2038,13 +2038,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Different controllers and terrains have not been compared under matched conditions. Outside-testing demand, repeat fees and general safety are not established."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:38:38.921Z",
+              "reason": "Retained as an unproven product, customer or application hypothesis; not evidence of payment or general safety."
             },
             "kind": "hypothesis",
             "testQuestion": "On identical low-friction obstacles, which failures can fallback or hybrid control prevent, and which require avoiding the maneuver entirely?"
@@ -2058,70 +2058,78 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Different controllers and terrains have not been compared under matched conditions. Outside-testing demand, repeat fees and general safety are not established."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:38:38.921Z",
+              "reason": "Retained as an unproven product, customer or application hypothesis; not evidence of payment or general safety."
             },
             "kind": "hypothesis",
             "testQuestion": "On identical low-friction obstacles, which failures can fallback or hybrid control prevent, and which require avoiding the maneuver entirely?"
           },
           {
             "id": "terrain-fallback-tests:what",
-            "text": "A terrain testing service that measures where a legged inspection robot can walk safely, when it should stop, and how it recovers.",
+            "text": "Tests that show how inspection robots handle a site’s surfaces, obstacles and recovery after a fall.",
             "evidenceIds": [],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Different controllers and terrains have not been compared under matched conditions. Outside-testing demand, repeat fees and general safety are not established."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:38:38.921Z",
+              "reason": "Retained as an unproven product, customer or application hypothesis; not evidence of payment or general safety."
             },
             "kind": "hypothesis",
             "testQuestion": "On identical low-friction obstacles, which failures can fallback or hybrid control prevent, and which require avoiding the maneuver entirely?"
           },
           {
             "id": "terrain-fallback-tests:problem",
-            "text": "An inspection robot that slips, falls or gets stuck can interrupt a mission and require a person to recover it in a hazardous area.",
-            "evidenceIds": [],
+            "text": "A robot that works on a clean floor may struggle when a slope is also covered in debris. Operators still need to test their own routes: Equinor describes doing this at its Northern Lights facility, even with a robot already tested by its supplier.",
+            "evidenceIds": [
+              "terrain-fallback-tests:review-manual",
+              "terrain-fallback-tests:review-operator"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Different controllers and terrains have not been compared under matched conditions. Outside-testing demand, repeat fees and general safety are not established."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:38:38.921Z",
+              "reason": "Primary source context inspected; narrowed to reported testing and operating requirements."
             },
-            "kind": "hypothesis",
-            "testQuestion": "On identical low-friction obstacles, which failures can fallback or hybrid control prevent, and which require avoiding the maneuver entirely?"
+            "kind": "inference",
+            "reasoning": "A specific operator account and manufacturer environmental guidance establish local assessment work, not fleet-wide failure rates or third-party demand."
           },
           {
             "id": "terrain-fallback-tests:opportunity",
-            "text": "Hypothesis: sell independent acceptance tests and recurring checks as controllers change. ANYbotics already markets autonomous industrial inspections; whether operators will buy separate terrain assurance needs customer interviews.",
-            "evidenceIds": [],
+            "text": "Independent route checks could help operators compare robots and decide when changed conditions or software require retesting. Reusable tests and reports could make this less dependent on specialist visits. The commercial test is whether they improve deployment decisions enough for customers to pay beyond their existing testing.",
+            "evidenceIds": [
+              "terrain-fallback-tests:review-manual",
+              "terrain-fallback-tests:review-operator",
+              "terrain-fallback-tests:review-manufacturer-tests",
+              "terrain-fallback-tests:review-public-tests"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Different controllers and terrains have not been compared under matched conditions. Outside-testing demand, repeat fees and general safety are not established."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:38:38.921Z",
+              "reason": "Retained as an unproven product, customer or application hypothesis; not evidence of payment or general safety."
             },
             "kind": "hypothesis",
-            "testQuestion": "On identical low-friction obstacles, which failures can fallback or hybrid control prevent, and which require avoiding the maneuver entirely?"
+            "testQuestion": "On the same site, does independent testing change a deployment decision or reduce testing work enough to earn repeat payment?"
           },
           {
             "id": "terrain-fallback-tests:customer-0",
@@ -2130,13 +2138,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Different controllers and terrains have not been compared under matched conditions. Outside-testing demand, repeat fees and general safety are not established."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:38:38.921Z",
+              "reason": "Retained as an unproven product, customer or application hypothesis; not evidence of payment or general safety."
             },
             "kind": "hypothesis",
             "testQuestion": "On identical low-friction obstacles, which failures can fallback or hybrid control prevent, and which require avoiding the maneuver entirely?"
@@ -2148,13 +2156,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Different controllers and terrains have not been compared under matched conditions. Outside-testing demand, repeat fees and general safety are not established."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:38:38.921Z",
+              "reason": "Retained as an unproven product, customer or application hypothesis; not evidence of payment or general safety."
             },
             "kind": "hypothesis",
             "testQuestion": "On identical low-friction obstacles, which failures can fallback or hybrid control prevent, and which require avoiding the maneuver entirely?"
@@ -2166,13 +2174,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Different controllers and terrains have not been compared under matched conditions. Outside-testing demand, repeat fees and general safety are not established."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:38:38.921Z",
+              "reason": "Retained as an unproven product, customer or application hypothesis; not evidence of payment or general safety."
             },
             "kind": "hypothesis",
             "testQuestion": "On identical low-friction obstacles, which failures can fallback or hybrid control prevent, and which require avoiding the maneuver entirely?"
@@ -2184,13 +2192,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Different controllers and terrains have not been compared under matched conditions. Outside-testing demand, repeat fees and general safety are not established."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:38:38.921Z",
+              "reason": "Retained as an unproven product, customer or application hypothesis; not evidence of payment or general safety."
             },
             "kind": "hypothesis",
             "testQuestion": "On identical low-friction obstacles, which failures can fallback or hybrid control prevent, and which require avoiding the maneuver entirely?"
@@ -2202,13 +2210,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Different controllers and terrains have not been compared under matched conditions. Outside-testing demand, repeat fees and general safety are not established."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:38:38.921Z",
+              "reason": "Retained as an unproven product, customer or application hypothesis; not evidence of payment or general safety."
             },
             "kind": "hypothesis",
             "testQuestion": "On identical low-friction obstacles, which failures can fallback or hybrid control prevent, and which require avoiding the maneuver entirely?"
@@ -2220,166 +2228,193 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Different controllers and terrains have not been compared under matched conditions. Outside-testing demand, repeat fees and general safety are not established."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:38:38.921Z",
+              "reason": "Retained as an unproven product, customer or application hypothesis; not evidence of payment or general safety."
             },
             "kind": "hypothesis",
             "testQuestion": "On identical low-friction obstacles, which failures can fallback or hybrid control prevent, and which require avoiding the maneuver entirely?"
           },
           {
             "id": "terrain-fallback-tests:v2-comparison",
-            "text": "Supplement vendor acceptance tests and robot-control development; differs from selling an inspection robot.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "Manufacturers test robot software across many conditions; operators such as Equinor also test specific routes. An independent service could supplement both with consistent comparisons across robots and repeat checks after changes. Public NIST methods provide reusable test designs. Additional value over these options remains unproven.",
+            "kind": "inference",
+            "evidenceIds": [
+              "terrain-fallback-tests:review-manual",
+              "terrain-fallback-tests:review-operator",
+              "terrain-fallback-tests:review-manufacturer-tests",
+              "terrain-fallback-tests:review-public-tests"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "Different controllers and terrains have not been compared under matched conditions. Outside-testing demand, repeat fees and general safety are not established."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:38:38.921Z",
+              "reason": "Primary source context inspected; narrowed to reported testing and operating requirements."
             },
-            "testQuestion": "On identical low-friction obstacles, which failures can fallback or hybrid control prevent, and which require avoiding the maneuver entirely?"
+            "reasoning": "Manufacturer robustness tests, operator route checks and public test methods address overlapping but different jobs. Cross-robot comparison is a proposed complementary role, not an established missing capability."
           }
         ],
         "evidence": [
           {
             "id": "terrain-fallback-tests:robot-parkour:source-0",
             "sourceUrl": "https://robot-parkour.github.io/",
-            "finalUrl": null,
+            "finalUrl": "https://robot-parkour.github.io/",
             "title": "Robot Parkour Learning",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2023",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08",
+            "retrievedAt": "2026-10-15",
             "excerpt": "The robot fails to leap on a low-friction platform.",
             "pdfPage": null,
             "locator": "Failure Cases; CoRL 2023; CMU author link",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:38:38.921Z",
               "failureIds": []
             }
           },
           {
             "id": "terrain-fallback-tests:anymal-hike:source-0",
             "sourceUrl": "https://ethz.ch/en/news-and-events/eth-news/news/2022/01/wie-roboter-wandern-lernen.html",
-            "finalUrl": null,
+            "finalUrl": "https://ethz.ch/en/news-and-events/eth-news/news/2022/01/wie-roboter-wandern-lernen.html",
             "title": "Learning robust perceptive locomotion for quadrupedal robots in the wild",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2022-01-19",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08",
+            "retrievedAt": "2026-10-15",
             "excerpt": "ANYmal then plays it safe and relies on its proprioception.",
             "pdfPage": null,
             "locator": "Use under extreme conditions; 19 January 2022; Reference",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:38:38.921Z",
               "failureIds": []
             }
           },
           {
             "id": "terrain-fallback-tests:dtc:source-0",
             "sourceUrl": "https://ethz.ch/en/news-and-events/eth-news/news/2024/03/anymal-can-do-parkour-and-walk-across-rubble.html",
-            "finalUrl": null,
+            "finalUrl": "https://ethz.ch/en/news-and-events/eth-news/news/2024/03/anymal-can-do-parkour-and-walk-across-rubble.html",
             "title": "DTC: Deep Tracking Control",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2024-03-13",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08",
+            "retrievedAt": "2026-10-15",
             "excerpt": "Through the combination with classic model-based control, the robot can negotiate difficult terrain.",
             "pdfPage": null,
             "locator": "Walk across rubble; DTC Reference 2024",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:38:38.921Z",
               "failureIds": []
             }
           },
           {
-            "id": "terrain-fallback-tests:market-source-0",
-            "sourceUrl": "https://www.anybotics.com/",
-            "finalUrl": null,
-            "title": "ANYbotics industrial inspection solutions",
-            "publisher": null,
-            "sourceRole": "secondary",
-            "independence": "unknown",
-            "publishedAt": null,
+            "id": "terrain-fallback-tests:review-manual",
+            "sourceUrl": "https://d3cjkvgbik1jtv.cloudfront.net/translations/spot-5_1/spot-user-manual-en.pdf",
+            "finalUrl": "https://d3cjkvgbik1jtv.cloudfront.net/translations/spot-5_1/spot-user-manual-en.pdf",
+            "title": "Boston Dynamics: Spot Instructions for Use, version 5.1.5",
+            "publisher": "Boston Dynamics",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2026-04",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08",
-            "excerpt": "Our ANYmal robotic solutions automate industrial inspections.",
-            "pdfPage": null,
-            "locator": null,
-            "relevance": "broader-context",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "It is your responsibility to evaluate the robot’s performance in the environment where it is deployed",
+            "pdfPage": 27,
+            "locator": "Physical PDF page 27; fall recovery context on page 129",
+            "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:38:38.921Z",
               "failureIds": []
             }
           },
           {
-            "id": "terrain-fallback-tests:market-source-1",
-            "sourceUrl": "https://www.thebusinessresearchcompany.com/report/inspection-robots-global-market-report",
-            "finalUrl": null,
-            "title": "The Business Research Company · inspection robots",
-            "publisher": null,
-            "sourceRole": "secondary",
-            "independence": "unknown",
-            "publishedAt": null,
-            "observationPeriod": null,
-            "retrievedAt": "2026-10-08T18:09:38.335654Z",
-            "excerpt": "Inspection Robots market size has reached to $2.47 billion in 2025",
+            "id": "terrain-fallback-tests:review-operator",
+            "sourceUrl": "https://www.equinor.com/magazine/svein-ivar-the-robot-trainer",
+            "finalUrl": "https://www.equinor.com/magazine/svein-ivar-the-robot-trainer",
+            "title": "Equinor: How to train your robot",
+            "publisher": "Equinor",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2026-01-13",
+            "observationPeriod": "Northern Lights, Norway; operator account January 2026",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Testing is carried out in close collaboration between the robot team and the operations team at Northern Lights.",
             "pdfPage": null,
-            "locator": null,
-            "relevance": "broader-context",
+            "locator": "Original HTML; surrounding context inspected",
+            "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:38:38.921Z",
               "failureIds": []
             }
           },
           {
-            "id": "terrain-fallback-tests:market-source-2",
-            "sourceUrl": "https://www.fortunebusinessinsights.com/inspection-robots-market-105440",
-            "finalUrl": null,
-            "title": "Fortune Business Insights · inspection robots",
-            "publisher": null,
-            "sourceRole": "secondary",
-            "independence": "unknown",
-            "publishedAt": null,
-            "observationPeriod": null,
-            "retrievedAt": "2026-10-08T18:09:38.335655Z",
-            "excerpt": "The global inspection robots market size was valued at USD 5.62 billion in 2025.",
+            "id": "terrain-fallback-tests:review-manufacturer-tests",
+            "sourceUrl": "https://bostondynamics.com/blog/starting-on-the-right-foot-with-reinforcement-learning/",
+            "finalUrl": "https://bostondynamics.com/blog/starting-on-the-right-foot-with-reinforcement-learning/",
+            "title": "Boston Dynamics: Starting on the Right Foot with Reinforcement Learning",
+            "publisher": "Boston Dynamics",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2024-03-19",
+            "observationPeriod": "March 2024 supplier account; fleet denominator and observation window unspecified",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "These robots operate 24/7 for a cumulative runtime of over 2,000 hours a week",
             "pdfPage": null,
-            "locator": null,
+            "locator": "Original HTML; surrounding context inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:38:38.921Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "terrain-fallback-tests:review-public-tests",
+            "sourceUrl": "https://www.nist.gov/laboratories/tools-instruments/robotics-test-facility",
+            "finalUrl": "https://www.nist.gov/laboratories/tools-instruments/robotics-test-facility",
+            "title": "NIST: Robotics Test Facility",
+            "publisher": "NIST",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2024-06-24",
+            "observationPeriod": null,
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Collaborative programs may be arranged on a cost reimbursable basis.",
+            "pdfPage": null,
+            "locator": "Original HTML; June 24, 2024 is page update date",
             "relevance": "broader-context",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:38:38.921Z",
               "failureIds": []
             }
           }
@@ -2387,141 +2422,64 @@
         "assessment": {
           "rubricVersion": "venture-screen-v2",
           "priority": "medium",
-          "priorityReason": "A robot vendor’s working product does not remove a possible independent acceptance-testing role. The gap is who needs separate assurance and will pay for it.",
+          "priorityReason": "Local route testing is documented. Reusable independent checks could complement manufacturer and operator work, but extra value and a scalable paid service still need testing.",
           "confidence": {
-            "level": "low",
-            "reason": "Low; there is a testable role but no proven buying need."
+            "level": "moderate",
+            "reason": "Original operator and manufacturer sources support the need for local checks; payment, failure costs and repeat demand remain unknown."
           },
           "dimensions": {
             "problem": {
-              "status": "plausible",
-              "reason": "Falls and recovery can interrupt inspection; saved examples show different terrain/control constraints without representative failure frequency.",
+              "status": "supported",
+              "reason": "Manufacturer guidance and a Norwegian operator document local route assessment; no representative failure frequency or cost.",
               "claimIds": [
-                "terrain-fallback-tests:project-robot-parkour",
-                "terrain-fallback-tests:project-anymal-hike",
-                "terrain-fallback-tests:project-dtc",
-                "terrain-fallback-tests:what",
-                "terrain-fallback-tests:problem",
-                "terrain-fallback-tests:opportunity",
-                "terrain-fallback-tests:customer-0",
-                "terrain-fallback-tests:customer-1",
-                "terrain-fallback-tests:customer-2",
-                "terrain-fallback-tests:application-0",
-                "terrain-fallback-tests:application-1",
-                "terrain-fallback-tests:application-2"
+                "terrain-fallback-tests:problem"
               ]
             },
             "customerPayment": {
               "status": "plausible",
-              "reason": "Operators, integrators or robot makers may commission tests; a separate budget is unestablished.",
+              "reason": "Operators and manufacturers perform testing, but separate outside-testing budgets and paid contracts are unestablished.",
               "claimIds": [
-                "terrain-fallback-tests:project-robot-parkour",
-                "terrain-fallback-tests:project-anymal-hike",
-                "terrain-fallback-tests:project-dtc",
-                "terrain-fallback-tests:what",
-                "terrain-fallback-tests:problem",
-                "terrain-fallback-tests:opportunity",
-                "terrain-fallback-tests:customer-0",
-                "terrain-fallback-tests:customer-1",
-                "terrain-fallback-tests:customer-2",
-                "terrain-fallback-tests:application-0",
-                "terrain-fallback-tests:application-1",
-                "terrain-fallback-tests:application-2"
+                "terrain-fallback-tests:opportunity"
               ]
             },
             "productValue": {
               "status": "plausible",
-              "reason": "Repeatable terrain and safe-stop tests could expose limits before missions. Different controller results were not measured on the same obstacle.",
+              "reason": "Repeatable terrain and recovery tests could improve deployment decisions; no measured advantage over existing checks.",
               "claimIds": [
-                "terrain-fallback-tests:project-robot-parkour",
-                "terrain-fallback-tests:project-anymal-hike",
-                "terrain-fallback-tests:project-dtc",
-                "terrain-fallback-tests:what",
-                "terrain-fallback-tests:problem",
-                "terrain-fallback-tests:opportunity",
-                "terrain-fallback-tests:customer-0",
-                "terrain-fallback-tests:customer-1",
-                "terrain-fallback-tests:customer-2",
-                "terrain-fallback-tests:application-0",
-                "terrain-fallback-tests:application-1",
-                "terrain-fallback-tests:application-2"
+                "terrain-fallback-tests:opportunity"
               ]
             },
             "commercialGap": {
               "status": "plausible",
-              "reason": "Independent acceptance evidence could supplement vendor tests rather than replace the robot or controller.",
+              "reason": "Independent cross-robot checks could supplement supplier and internal testing. Public methods already cover part of the work.",
               "claimIds": [
-                "terrain-fallback-tests:project-robot-parkour",
-                "terrain-fallback-tests:project-anymal-hike",
-                "terrain-fallback-tests:project-dtc",
-                "terrain-fallback-tests:what",
-                "terrain-fallback-tests:problem",
-                "terrain-fallback-tests:opportunity",
-                "terrain-fallback-tests:customer-0",
-                "terrain-fallback-tests:customer-1",
-                "terrain-fallback-tests:customer-2",
-                "terrain-fallback-tests:application-0",
-                "terrain-fallback-tests:application-1",
-                "terrain-fallback-tests:application-2"
+                "terrain-fallback-tests:v2-comparison"
               ]
             },
             "ventureScale": {
-              "status": "plausible",
-              "reason": "Recurring checks across installations and controller releases are plausible; buyer count and paid frequency are missing.",
+              "status": "missing",
+              "reason": "Reusable software could expand beyond site visits; eligible sites, frequency, price and repeat purchasing remain unknown.",
               "claimIds": [
-                "terrain-fallback-tests:project-robot-parkour",
-                "terrain-fallback-tests:project-anymal-hike",
-                "terrain-fallback-tests:project-dtc",
-                "terrain-fallback-tests:what",
-                "terrain-fallback-tests:problem",
-                "terrain-fallback-tests:opportunity",
-                "terrain-fallback-tests:customer-0",
-                "terrain-fallback-tests:customer-1",
-                "terrain-fallback-tests:customer-2",
-                "terrain-fallback-tests:application-0",
-                "terrain-fallback-tests:application-1",
-                "terrain-fallback-tests:application-2"
+                "terrain-fallback-tests:opportunity"
               ]
             },
             "businessCapital": {
               "status": "missing",
-              "reason": "Physical facilities, repeatability, liability and travel may make this a services business.",
+              "reason": "Engineer time, travel, robot access, liability, data rights and repeatable margins remain unmeasured.",
               "claimIds": [
-                "terrain-fallback-tests:project-robot-parkour",
-                "terrain-fallback-tests:project-anymal-hike",
-                "terrain-fallback-tests:project-dtc",
-                "terrain-fallback-tests:what",
-                "terrain-fallback-tests:problem",
-                "terrain-fallback-tests:opportunity",
-                "terrain-fallback-tests:customer-0",
-                "terrain-fallback-tests:customer-1",
-                "terrain-fallback-tests:customer-2",
-                "terrain-fallback-tests:application-0",
-                "terrain-fallback-tests:application-1",
-                "terrain-fallback-tests:application-2"
+                "terrain-fallback-tests:opportunity"
               ]
             },
             "timing": {
               "status": "missing",
-              "reason": "No reliable growth series or purchasing change is established by the saved project dates.",
+              "reason": "Software changes justify considering retests, but no comparable demand-growth series or paid adoption trigger is established.",
               "claimIds": [
-                "terrain-fallback-tests:project-robot-parkour",
-                "terrain-fallback-tests:project-anymal-hike",
-                "terrain-fallback-tests:project-dtc",
-                "terrain-fallback-tests:what",
-                "terrain-fallback-tests:problem",
-                "terrain-fallback-tests:opportunity",
-                "terrain-fallback-tests:customer-0",
-                "terrain-fallback-tests:customer-1",
-                "terrain-fallback-tests:customer-2",
-                "terrain-fallback-tests:application-0",
-                "terrain-fallback-tests:application-1",
-                "terrain-fallback-tests:application-2"
+                "terrain-fallback-tests:opportunity"
               ]
             }
           },
-          "strongestObjection": "Operators may rely on vendor assurances, and standardized tests may poorly predict real sites.",
-          "decisiveQuestion": "Ask whether a repeatable test changes deployment decisions and compare measured field failures against its predictions."
+          "strongestObjection": "Testing a route can show when to avoid it; it does not make every surface traversable. Paid repeat demand and a delivery model beyond bespoke site visits remain unproven.",
+          "decisiveQuestion": "On the same site, does independent testing change a deployment decision or reduce testing work enough to earn repeat payment?"
         },
         "migrationGaps": []
       },
