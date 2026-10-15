@@ -20,10 +20,10 @@ I looked for opportunities in those areas, along with the AI, computing, sensing
 
 ## Using the demo
 
-- Browse opportunities, open one to see its supporting research, and mark it as interesting to queue deeper research
+- Browse opportunities; open one to see its supporting research, and mark it as interesting to queue deeper research
 - Add notes by typing or recording your voice; notes used to help tune opportunity synthesis
 
-## Technology
+## Tech Stack
 
 - **Bun and TypeScript** — tooling and tests.
 - **React, TanStack Start and Router** — application and server routes.
