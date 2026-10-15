@@ -48,7 +48,11 @@ export async function interestChanged(
       });
     return;
   }
-  if (job.status === "awaiting-inspection") return;
+  if (
+    ["awaiting-inspection", "completed"].includes(job.status) ||
+    job.batchRequestedAt
+  )
+    return;
   if (interested && job.attempts >= 12)
     throw new ConvexError(
       "Research attempt limit reached. Review the retained results before continuing.",
@@ -83,8 +87,98 @@ export const list = query({
         startedAt: j.startedAt,
         completedSteps: j.steps.map((s) => s.name),
         failure: j.failure,
+        independentlyRequested: Boolean(j.batchRequestedAt),
+        review: j.review
+          ? {
+              id: j.review.id,
+              reviewedAt: j.review.reviewedAt,
+              publishedRevisionHash: j.review.publishedRevisionHash,
+            }
+          : null,
       })),
     };
+  },
+});
+// Operator-authorized, bounded to the current published collection. Repeating
+// this request preserves executions/checkpoints. Only an explicitly inspected
+// global-pause cancellation may be resumed; other failures need diagnosis.
+export const requestAll = mutation({
+  args: { secret: v.string(), resumeStopped: v.optional(v.boolean()) },
+  handler: async (ctx, a) => {
+    workerAuth(a.secret);
+    if (!enabled()) throw Error("Research is disabled");
+    const now = new Date().toISOString();
+    const result = {
+      created: [] as string[],
+      resumed: [] as string[],
+      preserved: [] as string[],
+      blocked: [] as string[],
+    };
+    for (const o of snapshot.opportunities) {
+      const job = await ctx.db
+        .query("researchJobs")
+        .withIndex("by_actor_card", (q) =>
+          q.eq("actor", "operator").eq("cardId", o.id),
+        )
+        .unique();
+      if (!job) {
+        await ctx.db.insert("researchJobs", {
+          actor: "operator",
+          cardId: o.id,
+          desired: true,
+          batchRequestedAt: now,
+          status: "queued",
+          execution: "",
+          owner: "",
+          attempts: 0,
+          createdAt: now,
+          updatedAt: now,
+          startedAt: null,
+          failure: null,
+          steps: [],
+        });
+        result.created.push(o.id);
+      } else if (["awaiting-inspection", "completed"].includes(job.status)) {
+        result.preserved.push(o.id);
+      } else if (
+        a.resumeStopped &&
+        job.status === "failed" &&
+        job.failure === "Research stopped; completed steps preserved." &&
+        !job.execution &&
+        !job.owner &&
+        job.steps.length < phases.length &&
+        job.attempts < 12
+      ) {
+        await ctx.db.patch(job._id, {
+          desired: true,
+          batchRequestedAt: job.batchRequestedAt ?? now,
+          status: "queued",
+          updatedAt: now,
+        });
+        result.resumed.push(o.id);
+      } else if (
+        job.status === "failed" ||
+        (job.attempts >= 12 && !["running", "pausing"].includes(job.status))
+      ) {
+        result.blocked.push(o.id);
+      } else {
+        // A pausing execution still has to settle before the worker can resume.
+        if (!job.batchRequestedAt || !job.desired || job.status === "paused") {
+          await ctx.db.patch(job._id, {
+            batchRequestedAt: job.batchRequestedAt ?? now,
+            desired: true,
+            status: job.status === "paused" ? "queued" : job.status,
+            updatedAt: now,
+          });
+        }
+        result[
+          job.status === "paused" || job.status === "pausing"
+            ? "resumed"
+            : "preserved"
+        ].push(o.id);
+      }
+    }
+    return result;
   },
 });
 // Recovery requires the protected supervisor to confirm the old model call ended.
@@ -270,23 +364,30 @@ export const settle = mutation({
       });
     }
     const paused = j.status === "pausing" || !j.desired;
+    const exhausted = steps.length < phases.length && j.attempts >= 12;
     const status =
       steps.length === phases.length
         ? "awaiting-inspection"
-        : paused
-          ? j.desired
-            ? "queued"
-            : "paused"
-          : a.error
-            ? "failed"
-            : "queued";
+        : exhausted && j.desired
+          ? "failed"
+          : paused
+            ? j.desired
+              ? "queued"
+              : "paused"
+            : a.error
+              ? "failed"
+              : "queued";
     await ctx.db.patch(j._id, {
       steps,
       status,
       execution: "",
       owner: "",
       updatedAt: now,
-      failure: a.error?.slice(0, 500) ?? null,
+      failure:
+        a.error?.slice(0, 500) ??
+        (exhausted
+          ? "Research attempt limit reached. Saved steps are retained; inspect before retrying."
+          : null),
     });
   },
 });
@@ -334,5 +435,80 @@ export const activateInterested = mutation({
       }
     }
     return { queued };
+  },
+});
+
+// The reviewer calls this only AFTER the exact accepted revision is deployed
+// and checked in the app. Completion records inspection, not venture approval.
+export const completeReview = mutation({
+  args: {
+    secret: v.string(),
+    cardId: v.string(),
+    reviewId: v.string(),
+    checkpointHashes: v.array(v.string()),
+    auditArchiveId: v.id("_storage"),
+    auditSha256: v.string(),
+    publishedRevisionId: v.string(),
+    publishedRevisionHash: v.string(),
+  },
+  handler: async (ctx, a) => {
+    workerAuth(a.secret);
+    const job = await ctx.db
+      .query("researchJobs")
+      .withIndex("by_actor_card", (q) =>
+        q.eq("actor", "operator").eq("cardId", a.cardId),
+      )
+      .unique();
+    if (!job || !["awaiting-inspection", "completed"].includes(job.status))
+      throw Error("Research is not ready for review");
+    if (
+      job.steps.length !== phases.length ||
+      JSON.stringify(job.steps.map((s) => s.sha256)) !==
+        JSON.stringify(a.checkpointHashes)
+    )
+      throw Error("Stale research checkpoints");
+    const published = snapshot.opportunities.find((o) => o.id === a.cardId);
+    if (
+      !published ||
+      published.accepted.id !== a.publishedRevisionId ||
+      published.accepted.contentHash !== a.publishedRevisionHash
+    )
+      throw Error("Published revision does not match");
+    if (!a.reviewId.trim() || !/^[a-f0-9]{64}$/.test(a.auditSha256))
+      throw Error("Invalid inspection audit");
+    const archive = await ctx.db.system.get(a.auditArchiveId);
+    if (!archive || archive.size === 0 || archive.size > 25_000_000)
+      throw Error("Missing inspection audit");
+    // The _storage system table encodes its checksum in base64.
+    const auditDigest = btoa(
+      String.fromCharCode(
+        ...a.auditSha256.match(/../g)!.map((byte) => parseInt(byte, 16)),
+      ),
+    );
+    if (archive.sha256 !== auditDigest)
+      throw Error("Inspection audit checksum mismatch");
+    const { secret, cardId, reviewId, ...receipt } = a;
+    const review = { id: reviewId, ...receipt };
+    if (job.review) {
+      const { reviewedAt, ...saved } = job.review;
+      if (
+        saved.id !== review.id ||
+        saved.auditArchiveId !== review.auditArchiveId ||
+        saved.auditSha256 !== review.auditSha256 ||
+        saved.publishedRevisionId !== review.publishedRevisionId ||
+        saved.publishedRevisionHash !== review.publishedRevisionHash ||
+        JSON.stringify(saved.checkpointHashes) !==
+          JSON.stringify(review.checkpointHashes)
+      )
+        throw Error("Review already recorded with different evidence");
+      return { reviewedAt, status: job.status };
+    }
+    const reviewedAt = new Date().toISOString();
+    await ctx.db.patch(job._id, {
+      status: "completed",
+      review: { ...review, reviewedAt },
+      updatedAt: reviewedAt,
+    });
+    return { reviewedAt, status: "completed" };
   },
 });

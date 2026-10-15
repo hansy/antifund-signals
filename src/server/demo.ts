@@ -108,14 +108,16 @@ export async function stages(request: Request, settings: DemoSettings) {
           return {
             ...o,
             researchEnabled: research.enabled,
-            stage: job ? "researching" : o.stage,
+            stage: job && job.status !== "completed" ? "researching" : o.stage,
             currentResearchId: job?.id ?? null,
             research: job
               ? {
                   id: job.id,
                   opportunityId: o.id,
                   baseRevisionId: o.acceptedRevisionId,
-                  trigger: "interested",
+                  trigger: job.independentlyRequested
+                    ? "explicit-research"
+                    : "interested",
                   actor,
                   requestIds: [],
                   inputHash: null,
@@ -127,10 +129,10 @@ export async function stages(request: Request, settings: DemoSettings) {
                   ownerId: null,
                   draftRevisionId: null,
                   failureIds: [],
-                  reviewId: null,
+                  reviewId: job.review?.id ?? null,
                   requestedAt: job.createdAt,
                   startedAt: job.startedAt,
-                  finishedAt: null,
+                  finishedAt: job.review?.reviewedAt ?? null,
                 }
               : null,
             failures: job?.failure

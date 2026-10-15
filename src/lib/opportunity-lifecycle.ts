@@ -156,7 +156,7 @@ export const opportunityRevisionSchema = z
     evidence: z.array(opportunityEvidenceSchema),
     assessment: z
       .object({
-        rubricVersion: z.literal("venture-screen-v1"),
+        rubricVersion: z.enum(["venture-screen-v1", "venture-screen-v2"]),
         dimensions: z.record(z.enum(dimensions), judgment),
         priority: z.enum(["high", "medium", "low", "insufficient-information"]),
         priorityReason: id,

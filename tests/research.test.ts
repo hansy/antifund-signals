@@ -39,6 +39,69 @@ const command = (
     requestId,
   }),
 });
+test("explicit batch resume restores only pause cancellations and preserves checkpoints", async () => {
+  const t = convexTest(schema, modules);
+  await t.mutation(api.research.requestAll, { secret: "worker" });
+  const jobs = await t.run((ctx) => ctx.db.query("researchJobs").collect());
+  const [stopped, broken, exhausted] = jobs;
+  const archiveId = await t.run((ctx) =>
+    ctx.storage.store(new Blob(["retained"])),
+  );
+  const steps = [
+    {
+      name: "problem-and-customer",
+      report: "{}",
+      archiveId,
+      sha256: "a".repeat(64),
+      completedAt: new Date().toISOString(),
+    },
+  ];
+  await t.run(async (ctx) => {
+    await ctx.db.patch(stopped!._id, {
+      status: "failed",
+      failure: "Research stopped; completed steps preserved.",
+      steps,
+      attempts: 2,
+    });
+    await ctx.db.patch(broken!._id, {
+      status: "failed",
+      failure: "Source validation failed",
+    });
+    await ctx.db.patch(exhausted!._id, {
+      status: "failed",
+      failure: "Research stopped; completed steps preserved.",
+      attempts: 12,
+    });
+  });
+  expect(
+    (await t.mutation(api.research.requestAll, { secret: "worker" })).blocked,
+  ).toContain(stopped!.cardId);
+  await expect(
+    t.mutation(api.research.requestAll, { secret: "web", resumeStopped: true }),
+  ).rejects.toThrow("Unauthorized");
+  const result = await t.mutation(api.research.requestAll, {
+    secret: "worker",
+    resumeStopped: true,
+  });
+  expect(result.resumed).toEqual([stopped!.cardId]);
+  expect(result.blocked).toContain(broken!.cardId);
+  expect(result.blocked).toContain(exhausted!.cardId);
+  const after = await t.run((ctx) => ctx.db.get(stopped!._id));
+  expect(after!.steps).toEqual(steps);
+  expect(after!.attempts).toBe(2);
+  expect(after!.status).toBe("queued");
+  expect(
+    (
+      await t.mutation(api.research.requestAll, {
+        secret: "worker",
+        resumeStopped: true,
+      })
+    ).resumed,
+  ).toEqual([]);
+  expect(
+    await t.run((ctx) => ctx.db.query("researchJobs").collect()),
+  ).toHaveLength(jobs.length);
+});
 test("one job, one owner, prompt pause; rapid resume waits for old execution to finish", async () => {
   const t = convexTest(schema, modules);
   await t.mutation(api.demo.prefer, command("interested", 0, "a"));
@@ -203,4 +266,244 @@ test("confirmed restart resumes unfinished work from its checkpoint and respects
       }),
     ).rejects.toThrow();
   }
+});
+
+test("explicit collection research is idempotent, private, and independent of interest", async () => {
+  const t = convexTest(schema, modules);
+  const snapshot = (await import("../data/opportunities.json")).default;
+  await expect(
+    t.mutation(api.research.requestAll, { secret: "web" }),
+  ).rejects.toThrow("Unauthorized");
+  process.env.RESEARCH_ENABLED = "false";
+  await expect(
+    t.mutation(api.research.requestAll, { secret: "worker" }),
+  ).rejects.toThrow("disabled");
+  process.env.RESEARCH_ENABLED = "true";
+  const first = await t.mutation(api.research.requestAll, { secret: "worker" });
+  expect(first.created.sort()).toEqual(
+    snapshot.opportunities.map((o) => o.id).sort(),
+  );
+  expect(
+    (await t.mutation(api.research.requestAll, { secret: "worker" })).created,
+  ).toEqual([]);
+  expect(
+    await t.run((ctx) => ctx.db.query("demoPreferences").collect()),
+  ).toEqual([]);
+  expect(
+    (await t.query(api.research.list, { secret: "web", actor: "test" })).jobs,
+  ).toEqual([]);
+  await t.mutation(api.research.acquire, auth);
+  const active = (await t.mutation(api.research.claim, auth))!;
+  await t.mutation(api.demo.prefer, {
+    secret: "web",
+    command: JSON.stringify({
+      actor: "operator",
+      cardId: active.opportunity.opportunityId,
+      verdict: "not-interested",
+      expectedVersion: 0,
+      requestId: "no",
+    }),
+  });
+  expect(
+    (
+      await t.query(api.research.control, {
+        ...auth,
+        id: active.id,
+        execution: active.execution,
+      })
+    ).stop,
+  ).toBe(false);
+  await t.mutation(api.research.requestAll, { secret: "worker" });
+  expect(await t.mutation(api.research.claim, auth)).toBeNull();
+  const jobs = await t.query(api.research.list, {
+    secret: "web",
+    actor: "operator",
+  });
+  expect(jobs.jobs).toHaveLength(snapshot.opportunities.length);
+  expect(jobs.jobs.every((j) => j.independentlyRequested)).toBe(true);
+});
+
+test("batch preserves completed research and checkpoint bytes, resumes paused work, and exposes failures", async () => {
+  const t = convexTest(schema, modules);
+  const snapshot = (await import("../data/opportunities.json")).default;
+  const [done, paused, failed] = snapshot.opportunities;
+  const seeded = await t.run(async (ctx) => {
+    const archiveId = await ctx.storage.store(new Blob(["original evidence"]));
+    const step = {
+      name: "problem-and-customer",
+      report: '{"original":true}',
+      archiveId,
+      sha256: "c".repeat(64),
+      completedAt: "2026-10-15T00:00:00.000Z",
+    };
+    const common = {
+      actor: "operator" as const,
+      desired: false,
+      execution: "",
+      owner: "",
+      attempts: 3,
+      createdAt: "2026-10-15T00:00:00.000Z",
+      updatedAt: "2026-10-15T00:00:00.000Z",
+      startedAt: null,
+      failure: null,
+    };
+    const ids = await Promise.all([
+      ctx.db.insert("researchJobs", {
+        ...common,
+        cardId: done!.id,
+        status: "awaiting-inspection",
+        steps: [
+          step,
+          { ...step, name: "market-and-alternatives" },
+          { ...step, name: "investment-case" },
+        ],
+      }),
+      ctx.db.insert("researchJobs", {
+        ...common,
+        cardId: paused!.id,
+        status: "paused",
+        steps: [step],
+      }),
+      ctx.db.insert("researchJobs", {
+        ...common,
+        cardId: failed!.id,
+        status: "failed",
+        failure: "retained error",
+        steps: [step],
+      }),
+    ]);
+    return await Promise.all(ids.map((id) => ctx.db.get(id)));
+  });
+  const result = await t.mutation(api.research.requestAll, {
+    secret: "worker",
+  });
+  expect(result.preserved).toContain(done!.id);
+  expect(result.resumed).toEqual([paused!.id]);
+  expect(result.blocked).toEqual([failed!.id]);
+  const after = await t.run((ctx) =>
+    Promise.all(seeded.map((j) => ctx.db.get(j!._id))),
+  );
+  expect(after[0]).toEqual(seeded[0]);
+  expect(after[1]?.steps).toEqual(seeded[1]?.steps);
+  expect(after[1]?.status).toBe("queued");
+  expect(after[2]).toEqual(seeded[2]);
+  await t.mutation(api.research.acquire, auth);
+  const resumed = (await t.mutation(api.research.claim, auth))!;
+  expect(resumed.id).toBe(seeded[1]!._id);
+  expect(resumed.phase).toBe("market-and-alternatives");
+  expect(resumed.steps).toEqual(seeded[1]!.steps);
+});
+
+test("batch adopts an active final attempt without resetting its budget or stranding a queued job", async () => {
+  for (const pausing of [false, true]) {
+    const t = convexTest(schema, modules);
+    await t.mutation(api.demo.prefer, command("interested", 0, "start"));
+    await t.mutation(api.research.acquire, auth);
+    const job = (await t.mutation(api.research.claim, auth))!;
+    if (pausing) await t.mutation(api.demo.prefer, command(null, 1, "pause"));
+    await t.run((ctx) => ctx.db.patch(job.id, { attempts: 12 }));
+    const result = await t.mutation(api.research.requestAll, {
+      secret: "worker",
+    });
+    expect(result.blocked).not.toContain("synthesis-o01");
+    const adopted = await t.run((ctx) => ctx.db.get(job.id));
+    expect(adopted?.execution).toBe(job.execution);
+    expect(adopted?.desired).toBe(true);
+    expect(adopted?.batchRequestedAt).toBeTruthy();
+    expect(adopted?.attempts).toBe(12);
+    const archiveId = await t.run((ctx) =>
+      ctx.storage.store(new Blob(["final attempt evidence"])),
+    );
+    await t.mutation(api.research.settle, {
+      ...auth,
+      id: job.id,
+      execution: job.execution,
+      report: "{}",
+      archiveId,
+      sha256: "d".repeat(64),
+    });
+    const ended = await t.run((ctx) => ctx.db.get(job.id));
+    expect(ended?.status).toBe("failed");
+    expect(ended?.failure).toContain("attempt limit");
+    expect(ended?.steps).toHaveLength(1);
+    expect(
+      (await t.mutation(api.research.requestAll, { secret: "worker" })).blocked,
+    ).toContain("synthesis-o01");
+  }
+});
+
+test("review completion requires exact checkpoints, deployed revision and audit, and never reruns", async () => {
+  const t = convexTest(schema, modules);
+  const s = (
+    await import("../data/opportunities.json")
+  ).default.opportunities.find((o) => o.id === "synthesis-o01")!;
+  await t.mutation(api.demo.prefer, command("interested", 0, "start"));
+  await t.mutation(api.research.acquire, auth);
+  const archiveId = await t.run((ctx) =>
+    ctx.storage.store(new Blob(["audit and evidence"])),
+  );
+  for (let i = 0; i < 3; i++) {
+    const j = (await t.mutation(api.research.claim, auth))!;
+    await t.mutation(api.research.settle, {
+      ...auth,
+      id: j.id,
+      execution: j.execution,
+      report: "{}",
+      archiveId,
+      sha256: "a".repeat(64),
+    });
+  }
+  const args = {
+    secret: "worker",
+    cardId: s.id,
+    reviewId: "review-test",
+    checkpointHashes: Array(3).fill("a".repeat(64)),
+    auditArchiveId: archiveId,
+    auditSha256: new Bun.CryptoHasher("sha256")
+      .update("audit and evidence")
+      .digest("hex"),
+    publishedRevisionId: s.accepted.id,
+    publishedRevisionHash: s.accepted.contentHash,
+  };
+  await expect(
+    t.mutation(api.research.completeReview, { ...args, secret: "web" }),
+  ).rejects.toThrow("Unauthorized");
+  await expect(
+    t.mutation(api.research.completeReview, { ...args, checkpointHashes: [] }),
+  ).rejects.toThrow("Stale");
+  await expect(
+    t.mutation(api.research.completeReview, {
+      ...args,
+      publishedRevisionHash: "c".repeat(64),
+    }),
+  ).rejects.toThrow("Published");
+  await expect(
+    t.mutation(api.research.completeReview, { ...args, auditSha256: "" }),
+  ).rejects.toThrow("audit");
+  await expect(
+    t.mutation(api.research.completeReview, {
+      ...args,
+      auditSha256: "b".repeat(64),
+    }),
+  ).rejects.toThrow("checksum");
+  const result = await t.mutation(api.research.completeReview, args);
+  expect(result.status).toBe("completed");
+  expect(await t.mutation(api.research.completeReview, args)).toEqual(result);
+  await expect(
+    t.mutation(api.research.completeReview, { ...args, reviewId: "other" }),
+  ).rejects.toThrow("different");
+  await t.mutation(api.demo.prefer, command(null, 1, "off"));
+  await t.mutation(api.demo.prefer, command("interested", 2, "on"));
+  expect(await t.mutation(api.research.claim, auth)).toBeNull();
+  expect(
+    (await t.mutation(api.research.requestAll, { secret: "worker" })).preserved,
+  ).toContain(s.id);
+  const view = await t.query(api.research.list, {
+    secret: "web",
+    actor: "operator",
+  });
+  const done = view.jobs.find((j) => j.cardId === s.id)!;
+  expect(done.status).toBe("completed");
+  expect(done.review?.publishedRevisionHash).toBe(s.accepted.contentHash);
+  expect(JSON.stringify(view)).not.toContain("auditArchiveId");
 });

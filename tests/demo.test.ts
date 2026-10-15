@@ -2,7 +2,7 @@ import { test, expect, beforeEach, afterEach } from "bun:test";
 import { convexTest } from "convex-test";
 import schema from "../convex/schema";
 import { api } from "../convex/_generated/api";
-import { corpusSchema } from "../src/lib/contracts";
+import { corpusSchema, insightSchema } from "../src/lib/contracts";
 import { lifecycleViewSchema } from "../src/lib/opportunity-lifecycle";
 import corpus from "../data/corpus.json";
 import opportunities from "../data/opportunities.json";
@@ -44,6 +44,16 @@ test("public snapshot retains evidence links, has no private feedback or active 
     expect(o.researchEnabled).toBe(false);
   }
   expect(JSON.stringify(opportunities)).not.toContain("/Users/");
+});
+test("an early lead can retain one supporting project without inventing corroboration", () => {
+  const lead = corpus.insights.find((i) => i.id === "laundry-folding")!;
+  expect(lead.projectIds).toHaveLength(1);
+  expect(insightSchema.parse(lead).confidence).toBe("Early signal");
+  expect(insightSchema.safeParse({ ...lead, projectIds: [] }).success).toBe(false);
+  const record = opportunities.opportunities.find((o) => o.id === lead.id)!;
+  expect(record.maturity).toBe("first-impressions");
+  expect(record.qualificationReviewId).toBeNull();
+  expect(record.accepted.content.marketSize).toEqual([]);
 });
 test("preferences persist idempotently, reject stale edits, and never enqueue work", async () => {
   const t = convexTest(schema, modules);

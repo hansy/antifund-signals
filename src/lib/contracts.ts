@@ -150,7 +150,8 @@ export const insightSchema = z.object({
   evidence: z.string(),
   counterpoint: z.string(),
   nextQuestion: z.string(),
-  projectIds: z.array(z.string()).min(2),
+  // A first impression can start with one project; source count is not validation.
+  projectIds: z.array(z.string()).min(1),
   sourceIds: z.array(z.string()).min(1),
   confidence: z.enum(["Early signal", "Supported", "Mixed evidence"]),
   brief: signalBriefSchema.optional(),

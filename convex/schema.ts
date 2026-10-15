@@ -10,6 +10,8 @@ export default defineSchema({
     actor: v.union(v.literal("operator"), v.literal("test")),
     cardId: v.string(),
     desired: v.boolean(),
+    // Explicit batch requests run independently of preference toggles.
+    batchRequestedAt: v.optional(v.string()),
     status: v.union(
       v.literal("queued"),
       v.literal("running"),
@@ -17,6 +19,18 @@ export default defineSchema({
       v.literal("paused"),
       v.literal("awaiting-inspection"),
       v.literal("failed"),
+      v.literal("completed"),
+    ),
+    review: v.optional(
+      v.object({
+        id: v.string(),
+        reviewedAt: v.string(),
+        checkpointHashes: v.array(v.string()),
+        auditArchiveId: v.id("_storage"),
+        auditSha256: v.string(),
+        publishedRevisionId: v.string(),
+        publishedRevisionHash: v.string(),
+      }),
     ),
     execution: v.string(),
     owner: v.string(),

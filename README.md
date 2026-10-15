@@ -18,6 +18,8 @@ I looked for opportunities in those areas, along with the AI, computing, sensing
 6. **Tested cheap opportunity synthesis.** I selected six areas spanning 18 of the 628 groups. Those groups held 299 candidate records; We read a bounded sample of 48, checked supporting passages, and drafted three opportunity hypotheses using saved data only. This was a small experiment, not a ranking of the whole corpus.
 7. **Brought opportunities into the demo.** The collection combines curated briefs and hypotheses drawn from the corpus, with supporting projects and source links. It grows as further opportunities are identified and reviewed. These are leads for investigation, not validated investment cases.
 
+The [opportunity rubric](docs/OPPORTUNITY-RUBRIC.md) considers adjacent uses and whether an approach replaces, complements or serves different needs from existing solutions. Investigation priority stays separate from evidence confidence.
+
 ## Using the demo
 
 - Browse opportunities; open one to see its supporting research, and mark it as interesting to queue deeper research
@@ -59,4 +61,4 @@ Deploy Convex with `bunx convex deploy`, configure Cloudflare secrets (`CONVEX_U
 
 ## Hosted research
 
-An Agent37 worker uses subscription-authenticated Codex to research interested signals. Convex manages the queue and saved progress. Research covers customers, markets, alternatives, and the investment case; results require evidence review before publication.
+An Agent37 worker uses subscription-authenticated Codex to research signals selected through interest or an explicit batch request. Batch research runs independently of interest. Convex manages the queue and saved progress. Research covers customers, markets, alternatives, and the investment case; results require evidence review before publication.
