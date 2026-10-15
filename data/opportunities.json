@@ -5323,8 +5323,8 @@
     {
       "schemaVersion": 1,
       "id": "factory-inspection",
-      "revision": 1,
-      "acceptedRevisionId": "factory-inspection:rubric-v2-20261015",
+      "revision": 2,
+      "acceptedRevisionId": "factory-inspection:evidence-review-v2-20261015",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -5332,10 +5332,10 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T16:51:48.275Z",
-      "updatedAt": "2026-10-15T21:24:18.427Z",
+      "updatedAt": "2026-10-15T23:26:11.294Z",
       "verdict": null,
       "stage": "first-impressions",
-      "qualificationError": null,
+      "qualificationError": "Evidence reviewed; reported inspection work is real, but additional product value, paid demand and venture scale remain unproven.",
       "accepted": {
         "content": {
           "marketSize": [],
@@ -5355,10 +5355,9 @@
           ],
           "applications": [
             "factory-inspection:application-0",
-            "factory-inspection:application-1",
-            "factory-inspection:application-2"
+            "factory-inspection:application-1"
           ],
-          "keyQuestion": "Compare the same parts for measurement accuracy, cycle time, false rejects, maintenance and annual full cost."
+          "keyQuestion": "On the same parts, does the attachment remove enough hand work to beat the best existing setup after installation, calibration and upkeep?"
         },
         "projects": [
           {
@@ -5395,72 +5394,95 @@
         "claims": [
           {
             "id": "factory-inspection:what",
-            "text": "Equipment that checks parts automatically during production. A concrete starting product is a robot-mounted gauge that measures protective coatings, including hard-to-reach inner surfaces.",
-            "evidenceIds": [],
+            "text": "A proposed robot attachment that measures the thickness of protective coatings on manufactured parts. It would move a small gauge around the outside and into difficult inner surfaces, replacing repeated hand positioning.",
+            "evidenceIds": [
+              "factory-inspection:synthesis-project-ba2a2f47a07d2d270f2a2cb0:source-0",
+              "factory-inspection:synthesis-project-ba2a2f47a07d2d270f2a2cb0:source-1",
+              "factory-inspection:synthesis-project-ba2a2f47a07d2d270f2a2cb0:source-2"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "No matched production trial, proven savings, purchase commitment or reachable market estimate. Adjacent uses require compatible materials, calibration and customer acceptance."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:26:11.294Z",
+              "reason": "Accepted as an explicit product/customer/transfer hypothesis, not verified benefit or payment."
             },
             "kind": "hypothesis",
             "testQuestion": "Can one inspection product serve many comparable production lines, and do measured annual savings justify its installed price and support cost?"
           },
           {
             "id": "factory-inspection:problem",
-            "text": "The project briefs describe workers measuring coatings by hand, slow checks of material produced in rolls, and cameras incorrectly rejecting good seals.",
-            "evidenceIds": [],
+            "text": "Plasma Processes reports time-consuming hand checks of protective coatings. Two other manufacturers report slow material testing and cameras wrongly rejecting good seals, but those are different measurement problems requiring different equipment.",
+            "evidenceIds": [
+              "factory-inspection:synthesis-project-ba2a2f47a07d2d270f2a2cb0:source-0",
+              "factory-inspection:synthesis-project-ba2a2f47a07d2d270f2a2cb0:source-1",
+              "factory-inspection:synthesis-project-ba2a2f47a07d2d270f2a2cb0:source-2",
+              "factory-inspection:synthesis-project-12bce8a5fcbe93e74818fb2b:source-0",
+              "factory-inspection:synthesis-project-12bce8a5fcbe93e74818fb2b:source-1",
+              "factory-inspection:synthesis-project-e166d0ad6643d2385d6e9289:source-0",
+              "factory-inspection:synthesis-project-e166d0ad6643d2385d6e9289:source-1"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "No matched production trial, proven savings, purchase commitment or reachable market estimate. Adjacent uses require compatible materials, calibration and customer acceptance."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:26:11.294Z",
+              "reason": "Inspected source context supports this bounded interpretation, not product superiority or market validation."
             },
-            "kind": "hypothesis",
-            "testQuestion": "Can one inspection product serve many comparable production lines, and do measured annual savings justify its installed price and support cost?"
+            "kind": "inference",
+            "reasoning": "Three original sponsor briefs establish reported burdens, but not actual factory loss, representative prevalence or a common sensing mechanism."
           },
           {
             "id": "factory-inspection:opportunity",
-            "text": "Inspection delays and mistaken rejects give manufacturers a measurable reason to buy better equipment. A repeatable product across similar production lines would be more attractive than bespoke installations.",
-            "evidenceIds": [],
+            "text": "A repeatable attachment could earn its place by removing costly hand checks that existing equipment still leaves behind. The opening is difficult surfaces or simpler installation—not robotic measurement alone. Savings must survive setup, calibration and maintenance costs.",
+            "evidenceIds": [
+              "factory-inspection:synthesis-project-ba2a2f47a07d2d270f2a2cb0:source-0",
+              "factory-inspection:synthesis-project-ba2a2f47a07d2d270f2a2cb0:source-1",
+              "factory-inspection:synthesis-project-ba2a2f47a07d2d270f2a2cb0:source-2",
+              "factory-inspection:review-fischer",
+              "factory-inspection:review-elcometer",
+              "factory-inspection:review-coatmaster"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "No matched production trial, proven savings, purchase commitment or reachable market estimate. Adjacent uses require compatible materials, calibration and customer acceptance."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:26:11.294Z",
+              "reason": "Accepted as an explicit product/customer/transfer hypothesis, not verified benefit or payment."
             },
             "kind": "hypothesis",
-            "testQuestion": "Can one inspection product serve many comparable production lines, and do measured annual savings justify its installed price and support cost?"
+            "testQuestion": "On the same parts, does the attachment remove enough hand work to beat the best existing setup after installation, calibration and upkeep?"
           },
           {
             "id": "factory-inspection:customer-0",
-            "text": "Manufacturers with production inspection bottlenecks",
-            "evidenceIds": [],
+            "text": "Manufacturers with repeated manual coating checks",
+            "evidenceIds": [
+              "factory-inspection:synthesis-project-ba2a2f47a07d2d270f2a2cb0:source-0",
+              "factory-inspection:synthesis-project-ba2a2f47a07d2d270f2a2cb0:source-1",
+              "factory-inspection:synthesis-project-ba2a2f47a07d2d270f2a2cb0:source-2"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "No matched production trial, proven savings, purchase commitment or reachable market estimate. Adjacent uses require compatible materials, calibration and customer acceptance."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:26:11.294Z",
+              "reason": "Accepted as an explicit product/customer/transfer hypothesis, not verified benefit or payment."
             },
             "kind": "hypothesis",
             "testQuestion": "Can one inspection product serve many comparable production lines, and do measured annual savings justify its installed price and support cost?"
@@ -5468,56 +5490,44 @@
           {
             "id": "factory-inspection:application-0",
             "text": "Measuring protective coatings",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "factory-inspection:synthesis-project-ba2a2f47a07d2d270f2a2cb0:source-0",
+              "factory-inspection:synthesis-project-ba2a2f47a07d2d270f2a2cb0:source-1",
+              "factory-inspection:synthesis-project-ba2a2f47a07d2d270f2a2cb0:source-2"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "No matched production trial, proven savings, purchase commitment or reachable market estimate. Adjacent uses require compatible materials, calibration and customer acceptance."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:26:11.294Z",
+              "reason": "Accepted as an explicit product/customer/transfer hypothesis, not verified benefit or payment."
             },
             "kind": "hypothesis",
             "testQuestion": "Can one inspection product serve many comparable production lines, and do measured annual savings justify its installed price and support cost?"
           },
           {
             "id": "factory-inspection:application-1",
-            "text": "Reducing mistaken rejects",
-            "evidenceIds": [],
+            "text": "Checking paint or plated-metal thickness with a suitable sensor",
+            "evidenceIds": [
+              "factory-inspection:review-fischer"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "No matched production trial, proven savings, purchase commitment or reachable market estimate. Adjacent uses require compatible materials, calibration and customer acceptance."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:26:11.294Z",
+              "reason": "Accepted as an explicit product/customer/transfer hypothesis, not verified benefit or payment."
             },
             "kind": "hypothesis",
-            "testQuestion": "Can one inspection product serve many comparable production lines, and do measured annual savings justify its installed price and support cost?"
-          },
-          {
-            "id": "factory-inspection:application-2",
-            "text": "Checking material during production",
-            "evidenceIds": [],
-            "derivedFromClaimIds": [],
-            "confidence": "low",
-            "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
-            ],
-            "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
-            },
-            "kind": "hypothesis",
-            "testQuestion": "Can one inspection product serve many comparable production lines, and do measured annual savings justify its installed price and support cost?"
+            "testQuestion": "Does a suitable sensor on this attachment deliver accepted paint or plating measurements with repeatable installation economics?"
           },
           {
             "id": "factory-inspection:project-synthesis-project-ba2a2f47a07d2d270f2a2cb0",
@@ -5530,13 +5540,13 @@
             "derivedFromClaimIds": [],
             "confidence": "moderate",
             "limitations": [
-              "Project-reported evidence; not independently reproduced."
+              "Sponsor-originated project brief, Spring 2026 event; no achieved performance, purchase or factory cost result established."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:26:11.294Z",
+              "reason": "Checked against original sponsor brief; design targets remain targets."
             },
             "kind": "reported",
             "attribution": "Automation of Inspection for Thermal Spray Processes; Automation of Inspection for Thermal Spray Processes; Automation of Inspection for Thermal Spray Processes",
@@ -5552,13 +5562,13 @@
             "derivedFromClaimIds": [],
             "confidence": "moderate",
             "limitations": [
-              "Project-reported evidence; not independently reproduced."
+              "Sponsor-originated project brief, Spring 2026 event; no achieved performance, purchase or factory cost result established."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:26:11.294Z",
+              "reason": "Checked against original sponsor brief; design targets remain targets."
             },
             "kind": "reported",
             "attribution": "Advancing Membrane Vent Testing Used in Regulation of Internal Pressure; Advancing Membrane Vent Testing Used in Regulation of Internal Pressure",
@@ -5574,13 +5584,13 @@
             "derivedFromClaimIds": [],
             "confidence": "moderate",
             "limitations": [
-              "Project-reported evidence; not independently reproduced."
+              "Sponsor-originated project brief, Spring 2026 event; no achieved performance, purchase or factory cost result established."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:26:11.294Z",
+              "reason": "Checked against original sponsor brief; design targets remain targets."
             },
             "kind": "reported",
             "attribution": "Bottom Unfill Inspection; Bottom Unfill Inspection",
@@ -5588,30 +5598,34 @@
           },
           {
             "id": "factory-inspection:v2-comparison",
-            "text": "Potential supplement to visual inspection or alternative to manual measurement; compare the appropriate measurement method for each defect.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "Fischer already sells robot-mounted coating probes. Elcometer offers small and angled handheld probes; coatmaster offers noncontact measurement. The attachment could replace hand positioning or supplement an existing setup on difficult surfaces. No matched-part comparison establishes better access, accepted accuracy or lower total cost.",
+            "kind": "inference",
+            "evidenceIds": [
+              "factory-inspection:review-fischer",
+              "factory-inspection:review-elcometer",
+              "factory-inspection:review-coatmaster"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No matched production trial, proven savings, purchase commitment or reachable market estimate. Adjacent uses require compatible materials, calibration and customer acceptance."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:26:11.294Z",
+              "reason": "Inspected source context supports this bounded interpretation, not product superiority or market validation."
             },
-            "testQuestion": "Can one inspection product serve many comparable production lines, and do measured annual savings justify its installed price and support cost?"
+            "reasoning": "Supplier descriptions establish substantial task overlap and different measurement mechanisms. Residual access, integration cost and complementary value require a matched-part trial."
           }
         ],
         "evidence": [
           {
             "id": "factory-inspection:synthesis-project-ba2a2f47a07d2d270f2a2cb0:source-0",
             "sourceUrl": "https://expo.gatech.edu/prod1/portal/portal.jsp?c=17462&g=413665329&id=417818763&p=413142918",
-            "finalUrl": null,
+            "finalUrl": "https://expo.gatech.edu/prod1/portal/portal.jsp?c=17462&g=413665329&id=417818763&p=413142918",
             "title": "Automation of Inspection for Thermal Spray Processes",
-            "publisher": null,
+            "publisher": "Georgia Tech Capstone Design Expo",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -5624,16 +5638,16 @@
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T16:51:48.275Z",
+              "checkedAt": "2026-10-15T23:26:11.294Z",
               "failureIds": []
             }
           },
           {
             "id": "factory-inspection:synthesis-project-ba2a2f47a07d2d270f2a2cb0:source-1",
             "sourceUrl": "https://expo.gatech.edu/prod1/portal/portal.jsp?c=17462&g=413665329&id=417818763&p=413142918",
-            "finalUrl": null,
+            "finalUrl": "https://expo.gatech.edu/prod1/portal/portal.jsp?c=17462&g=413665329&id=417818763&p=413142918",
             "title": "Automation of Inspection for Thermal Spray Processes",
-            "publisher": null,
+            "publisher": "Georgia Tech Capstone Design Expo",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -5646,16 +5660,16 @@
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T16:51:48.275Z",
+              "checkedAt": "2026-10-15T23:26:11.294Z",
               "failureIds": []
             }
           },
           {
             "id": "factory-inspection:synthesis-project-ba2a2f47a07d2d270f2a2cb0:source-2",
             "sourceUrl": "https://expo.gatech.edu/prod1/portal/portal.jsp?c=17462&g=413665329&id=417818763&p=413142918",
-            "finalUrl": null,
+            "finalUrl": "https://expo.gatech.edu/prod1/portal/portal.jsp?c=17462&g=413665329&id=417818763&p=413142918",
             "title": "Automation of Inspection for Thermal Spray Processes",
-            "publisher": null,
+            "publisher": "Georgia Tech Capstone Design Expo",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -5668,16 +5682,16 @@
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T16:51:48.275Z",
+              "checkedAt": "2026-10-15T23:26:11.294Z",
               "failureIds": []
             }
           },
           {
             "id": "factory-inspection:synthesis-project-12bce8a5fcbe93e74818fb2b:source-0",
             "sourceUrl": "https://expo.gatech.edu/prod1/portal/portal.jsp?c=17462&g=413665329&id=417821229&p=413142918",
-            "finalUrl": null,
+            "finalUrl": "https://expo.gatech.edu/prod1/portal/portal.jsp?c=17462&g=413665329&id=417821229&p=413142918",
             "title": "Advancing Membrane Vent Testing Used in Regulation of Internal Pressure",
-            "publisher": null,
+            "publisher": "Georgia Tech Capstone Design Expo",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -5690,16 +5704,16 @@
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T16:51:48.275Z",
+              "checkedAt": "2026-10-15T23:26:11.294Z",
               "failureIds": []
             }
           },
           {
             "id": "factory-inspection:synthesis-project-12bce8a5fcbe93e74818fb2b:source-1",
             "sourceUrl": "https://expo.gatech.edu/prod1/portal/portal.jsp?c=17462&g=413665329&id=417821229&p=413142918",
-            "finalUrl": null,
+            "finalUrl": "https://expo.gatech.edu/prod1/portal/portal.jsp?c=17462&g=413665329&id=417821229&p=413142918",
             "title": "Advancing Membrane Vent Testing Used in Regulation of Internal Pressure",
-            "publisher": null,
+            "publisher": "Georgia Tech Capstone Design Expo",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -5712,16 +5726,16 @@
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T16:51:48.275Z",
+              "checkedAt": "2026-10-15T23:26:11.294Z",
               "failureIds": []
             }
           },
           {
             "id": "factory-inspection:synthesis-project-e166d0ad6643d2385d6e9289:source-0",
             "sourceUrl": "https://expo.gatech.edu/prod1/portal/portal.jsp?c=17462&g=413665329&id=417818869&p=413142918",
-            "finalUrl": null,
+            "finalUrl": "https://expo.gatech.edu/prod1/portal/portal.jsp?c=17462&g=413665329&id=417818869&p=413142918",
             "title": "Bottom Unfill Inspection",
-            "publisher": null,
+            "publisher": "Georgia Tech Capstone Design Expo",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -5734,16 +5748,16 @@
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T16:51:48.275Z",
+              "checkedAt": "2026-10-15T23:26:11.294Z",
               "failureIds": []
             }
           },
           {
             "id": "factory-inspection:synthesis-project-e166d0ad6643d2385d6e9289:source-1",
             "sourceUrl": "https://expo.gatech.edu/prod1/portal/portal.jsp?c=17462&g=413665329&id=417818869&p=413142918",
-            "finalUrl": null,
+            "finalUrl": "https://expo.gatech.edu/prod1/portal/portal.jsp?c=17462&g=413665329&id=417818869&p=413142918",
             "title": "Bottom Unfill Inspection",
-            "publisher": null,
+            "publisher": "Georgia Tech Capstone Design Expo",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -5756,20 +5770,108 @@
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T16:51:48.275Z",
+              "checkedAt": "2026-10-15T23:26:11.294Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "factory-inspection:review-fischer",
+            "sourceUrl": "https://www.helmut-fischer.com/products/automation-solutions/fischerscope-mms-automation",
+            "finalUrl": "https://www.helmut-fischer.com/products/automation-solutions/fischerscope-mms-automation",
+            "title": "FISCHERSCOPE MMS Automation",
+            "publisher": "Helmut Fischer",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated company description retrieved October 15, 2026; performance is supplier-reported",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "probes that are mounted on an automated measuring stand or a robot arm.",
+            "pdfPage": null,
+            "locator": "Original HTML; product description and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:26:11.294Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "factory-inspection:review-elcometer",
+            "sourceUrl": "https://www.elcometer.com/en/elcometer-456-coating-thickness-gauge-probe-range.html",
+            "finalUrl": "https://www.elcometer.com/en/elcometer-456-coating-thickness-gauge-probe-range.html",
+            "title": "Elcometer 456 probe range",
+            "publisher": "Elcometer",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated company description retrieved October 15, 2026; performance is supplier-reported",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Mini probes are ideal for harder to reach areas and edges.",
+            "pdfPage": null,
+            "locator": "Original HTML; product description and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:26:11.294Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "factory-inspection:review-coatmaster",
+            "sourceUrl": "https://coatmaster.com/en/coatmaster/produkte/inline/",
+            "finalUrl": "https://coatmaster.com/en/coatmaster/produkte/inline/",
+            "title": "coatmaster Inline product page",
+            "publisher": "coatmaster",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated company description retrieved October 15, 2026; performance is supplier-reported",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Optimized for robot assembly",
+            "pdfPage": null,
+            "locator": "Original HTML; product description and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:26:11.294Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "factory-inspection:review-quality",
+            "sourceUrl": "https://plasmapros.com/quality-2/",
+            "finalUrl": "https://plasmapros.com/quality-2/",
+            "title": "Plasma Processes: Quality",
+            "publisher": "Plasma Processes",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated company description retrieved October 15, 2026; performance is supplier-reported",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "We also get certified to customer specific process specifications.",
+            "pdfPage": null,
+            "locator": "Original HTML; product description and limitations inspected",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:26:11.294Z",
               "failureIds": []
             }
           }
         ],
         "migrationGaps": [],
-        "id": "factory-inspection:rubric-v2-20261015",
+        "id": "factory-inspection:evidence-review-v2-20261015",
         "opportunityId": "factory-inspection",
-        "parentRevisionId": "factory-inspection:manifesto-20261015",
-        "createdAt": "2026-10-15T21:24:18.427Z",
-        "producerId": "rubric-reassessment-v2",
-        "origin": "saved-data-synthesis",
-        "changeReason": "Reassessed adjacent uses and functional alternatives. Original evidence review statuses preserved; no new market qualification.",
-        "contentHash": "165dad3d798bcbb3ad0912104d3e873088f86062b55fd77fc46506a29919ee5b",
+        "parentRevisionId": "factory-inspection:rubric-v2-20261015",
+        "createdAt": "2026-10-15T23:26:11.294Z",
+        "producerId": "codex-evidence-inspector",
+        "origin": "inspection-correction",
+        "changeReason": "Inspect original briefs and all research phases; narrow the product hypothesis to coating measurement, compare direct alternatives and complementary roles, and withhold unsupported market and savings claims.",
+        "contentHash": "967c5d25714678f8b7f529b1475941ad92b56d9be0973fb38eeb50292ef56900",
         "title": "Inspection equipment that keeps factory production moving",
         "classifications": [
           "Manufacturing",
@@ -5777,128 +5879,65 @@
         ],
         "assessment": {
           "rubricVersion": "venture-screen-v2",
-          "priority": "high",
-          "priorityReason": "Named manufacturing briefs describe concrete inspection burdens. A repeatable narrow measurement product is worth prioritizing even before a market estimate is available.",
+          "priority": "medium",
+          "priorityReason": "A named manufacturer has costly-looking hand checks, but direct alternatives narrow the test to residual surface access and repeatable installation. A matched-part comparison could establish additional value.",
           "confidence": {
             "level": "low",
-            "reason": "Low commercially; stronger evidence for specific customer problems."
+            "reason": "The reported problem and advertised alternatives are documented; project performance, factory economics, buying intent and reachable scale are unproven."
           },
           "dimensions": {
             "problem": {
               "status": "supported",
-              "reason": "Retained briefs describe manual coating checks, slow roll-material checks and mistaken seal rejects in named manufacturing contexts.",
+              "reason": "Named sponsor reports time-consuming hand coating checks; severity, frequency and lost production are not quantified.",
               "claimIds": [
-                "factory-inspection:what",
-                "factory-inspection:problem",
-                "factory-inspection:opportunity",
-                "factory-inspection:customer-0",
-                "factory-inspection:application-0",
-                "factory-inspection:application-1",
-                "factory-inspection:application-2",
-                "factory-inspection:project-synthesis-project-ba2a2f47a07d2d270f2a2cb0",
-                "factory-inspection:project-synthesis-project-12bce8a5fcbe93e74818fb2b",
-                "factory-inspection:project-synthesis-project-e166d0ad6643d2385d6e9289"
+                "factory-inspection:problem"
               ]
             },
             "customerPayment": {
               "status": "plausible",
-              "reason": "Manufacturers have the task; project sponsorship is not a purchase commitment.",
+              "reason": "Manufacturers with repeated checks are plausible payers; sponsorship and departmental listings do not establish budgets or willingness to buy.",
               "claimIds": [
-                "factory-inspection:what",
-                "factory-inspection:problem",
-                "factory-inspection:opportunity",
-                "factory-inspection:customer-0",
-                "factory-inspection:application-0",
-                "factory-inspection:application-1",
-                "factory-inspection:application-2",
-                "factory-inspection:project-synthesis-project-ba2a2f47a07d2d270f2a2cb0",
-                "factory-inspection:project-synthesis-project-12bce8a5fcbe93e74818fb2b",
-                "factory-inspection:project-synthesis-project-e166d0ad6643d2385d6e9289"
+                "factory-inspection:opportunity"
               ]
             },
             "productValue": {
               "status": "plausible",
-              "reason": "Robot-mounted measurement could reach surfaces or automate checks; accuracy and cycle time are not demonstrated.",
+              "reason": "Automated positioning could remove repeated hand work if readings and coverage pass quality checks; no achieved capability is established.",
               "claimIds": [
-                "factory-inspection:what",
-                "factory-inspection:problem",
-                "factory-inspection:opportunity",
-                "factory-inspection:customer-0",
-                "factory-inspection:application-0",
-                "factory-inspection:application-1",
-                "factory-inspection:application-2",
-                "factory-inspection:project-synthesis-project-ba2a2f47a07d2d270f2a2cb0",
-                "factory-inspection:project-synthesis-project-12bce8a5fcbe93e74818fb2b",
-                "factory-inspection:project-synthesis-project-e166d0ad6643d2385d6e9289"
+                "factory-inspection:opportunity"
               ]
             },
             "commercialGap": {
               "status": "plausible",
-              "reason": "Physical measurement may supplement cameras on hard-to-observe surfaces. A documented weakness in one setup is not proof of an open commercial market.",
+              "reason": "Possible value on residual difficult surfaces or simpler installation. Fischer already offers robot-mounted probes; superiority and combined-setup benefit remain unresolved.",
               "claimIds": [
-                "factory-inspection:what",
-                "factory-inspection:problem",
-                "factory-inspection:opportunity",
-                "factory-inspection:customer-0",
-                "factory-inspection:application-0",
-                "factory-inspection:application-1",
-                "factory-inspection:application-2",
-                "factory-inspection:project-synthesis-project-ba2a2f47a07d2d270f2a2cb0",
-                "factory-inspection:project-synthesis-project-12bce8a5fcbe93e74818fb2b",
-                "factory-inspection:project-synthesis-project-e166d0ad6643d2385d6e9289"
+                "factory-inspection:v2-comparison"
               ]
             },
             "ventureScale": {
-              "status": "plausible",
-              "reason": "Standardizing one task across comparable lines offers a scale path; do not pool three distinct inspections into one validated product market.",
+              "status": "missing",
+              "reason": "Compatible buyer and line counts, purchase rates and prices unknown. Three different inspection projects and one operator network cannot establish one reachable market.",
               "claimIds": [
-                "factory-inspection:what",
-                "factory-inspection:problem",
-                "factory-inspection:opportunity",
-                "factory-inspection:customer-0",
-                "factory-inspection:application-0",
-                "factory-inspection:application-1",
-                "factory-inspection:application-2",
-                "factory-inspection:project-synthesis-project-ba2a2f47a07d2d270f2a2cb0",
-                "factory-inspection:project-synthesis-project-12bce8a5fcbe93e74818fb2b",
-                "factory-inspection:project-synthesis-project-e166d0ad6643d2385d6e9289"
+                "factory-inspection:opportunity"
               ]
             },
             "businessCapital": {
               "status": "missing",
-              "reason": "Repeatable installation, maintenance cost and margins are not established.",
+              "reason": "Installation, qualification, maintenance, warranty and support costs unknown; repeated custom work could consume margin.",
               "claimIds": [
-                "factory-inspection:what",
-                "factory-inspection:problem",
-                "factory-inspection:opportunity",
-                "factory-inspection:customer-0",
-                "factory-inspection:application-0",
-                "factory-inspection:application-1",
-                "factory-inspection:application-2",
-                "factory-inspection:project-synthesis-project-ba2a2f47a07d2d270f2a2cb0",
-                "factory-inspection:project-synthesis-project-12bce8a5fcbe93e74818fb2b",
-                "factory-inspection:project-synthesis-project-e166d0ad6643d2385d6e9289"
+                "factory-inspection:opportunity"
               ]
             },
             "timing": {
               "status": "missing",
-              "reason": "No comparable time series establishes increasing demand; project dates are not growth evidence.",
+              "reason": "Available sensors enable integration but no inspection-budget growth series or new buying trigger is established.",
               "claimIds": [
-                "factory-inspection:what",
-                "factory-inspection:problem",
-                "factory-inspection:opportunity",
-                "factory-inspection:customer-0",
-                "factory-inspection:application-0",
-                "factory-inspection:application-1",
-                "factory-inspection:application-2",
-                "factory-inspection:project-synthesis-project-ba2a2f47a07d2d270f2a2cb0",
-                "factory-inspection:project-synthesis-project-12bce8a5fcbe93e74818fb2b",
-                "factory-inspection:project-synthesis-project-e166d0ad6643d2385d6e9289"
+                "factory-inspection:opportunity"
               ]
             }
           },
-          "strongestObjection": "Customization, calibration and line downtime may dominate the economics.",
-          "decisiveQuestion": "Compare the same parts for measurement accuracy, cycle time, false rejects, maintenance and annual full cost."
+          "strongestObjection": "A different fixture and program for every part could turn this into custom engineering rather than a repeatable product. Existing vendors already automate coating measurement.",
+          "decisiveQuestion": "On the same parts, does the attachment remove enough hand work to beat the best existing setup after installation, calibration and upkeep?"
         }
       },
       "research": null,

@@ -3316,7 +3316,7 @@
       "title": "Automation of Inspection for Thermal Spray Processes",
       "year": 2026,
       "summary": "Plasma Processes uses a handheld coating gauge at two stages. A robot attachment is proposed; its greater-than-95% inner-surface coverage is a target, not a result.",
-      "problem": "Workers manually measure coating thickness at two stages, slowing production.",
+      "problem": "The sponsor reports time-consuming hand coating measurements in a process with two inspection points. Actual lost production is not quantified.",
       "approach": "A proposed robot-mounted gauge measures protective coatings on the outside and inside of parts. Coverage and time savings have not been demonstrated.",
       "whyItMatters": "We think successful automation could free inspection staff and reduce production delays while preserving required coating checks.",
       "statusQuo": "Workers measure coating thickness by hand using an Elcometer 456 instrument.",
@@ -4930,13 +4930,13 @@
       "title": "Inspection equipment that keeps factory production moving",
       "summary": "Check manufactured parts without slowing production.",
       "topic": "Manufacturing",
-      "problem": "The project briefs describe workers measuring coatings by hand, slow checks of material produced in rolls, and cameras incorrectly rejecting good seals.",
-      "statusQuo": "The project briefs describe workers measuring coatings by hand, slow checks of material produced in rolls, and cameras incorrectly rejecting good seals.",
-      "gap": "The work may be custom factory integration with limited repeatability, or solvable by existing inspection vendors.",
-      "opportunity": "Inspection delays and mistaken rejects give manufacturers a measurable reason to buy better equipment. A repeatable product across similar production lines would be more attractive than bespoke installations.",
-      "evidence": "Strongest direct customer-problem evidence among these four. Ranked below robot testing because the sources mostly describe requested improvements, and a repeatable product across customers has not been shown.",
-      "counterpoint": "Customization, calibration and line downtime may dominate the economics.",
-      "nextQuestion": "Compare the same parts for measurement accuracy, cycle time, false rejects, maintenance and annual full cost.",
+      "problem": "Plasma Processes reports time-consuming hand checks of protective coatings. Two other manufacturers report slow material testing and cameras wrongly rejecting good seals, but those are different measurement problems requiring different equipment.",
+      "statusQuo": "Handheld gauges, robot-mounted probes from Fischer and noncontact systems from coatmaster cover different materials and shapes.",
+      "gap": "Repeated coating checks that compatible existing equipment leaves to people, or that require expensive custom setup.",
+      "opportunity": "A proposed robot attachment that measures the thickness of protective coatings on manufactured parts. It would move a small gauge around the outside and into difficult inner surfaces, replacing repeated hand positioning.",
+      "evidence": "Three manufacturer-sponsored briefs document different inspection problems. The coating attachment is a proposal; its coverage, speed and savings have not been demonstrated.",
+      "counterpoint": "A different fixture and program for every part could turn this into custom engineering rather than a repeatable product. Existing vendors already automate coating measurement.",
+      "nextQuestion": "On the same parts, does the attachment remove enough hand work to beat the best existing setup after installation, calibration and upkeep?",
       "projectIds": [
         "synthesis-project-ba2a2f47a07d2d270f2a2cb0",
         "synthesis-project-12bce8a5fcbe93e74818fb2b",
@@ -4949,8 +4949,8 @@
       ],
       "confidence": "Early signal",
       "brief": {
-        "whatItIs": "Equipment that checks parts automatically during production. A concrete starting product is a robot-mounted gauge that measures protective coatings, including hard-to-reach inner surfaces.",
-        "problem": "The project briefs describe workers measuring coatings by hand, slow checks of material produced in rolls, and cameras incorrectly rejecting good seals.",
+        "whatItIs": "A proposed robot attachment that measures the thickness of protective coatings on manufactured parts. It would move a small gauge around the outside and into difficult inner surfaces, replacing repeated hand positioning.",
+        "problem": "Plasma Processes reports time-consuming hand checks of protective coatings. Two other manufacturers report slow material testing and cameras wrongly rejecting good seals, but those are different measurement problems requiring different equipment.",
         "breakthroughs": [
           {
             "text": "Plasma Processes uses a handheld coating gauge at two stages. A robot attachment is proposed; its greater-than-95% inner-surface coverage is a target, not a result.",
@@ -4971,24 +4971,48 @@
             ]
           }
         ],
-        "marketOpportunity": "Inspection delays and mistaken rejects give manufacturers a measurable reason to buy better equipment. A repeatable product across similar production lines would be more attractive than bespoke installations.",
-        "buyer": "Manufacturers with production inspection bottlenecks",
+        "marketOpportunity": "A repeatable attachment could earn its place by removing costly hand checks that existing equipment still leaves behind. The opening is difficult surfaces or simpler installation—not robotic measurement alone. Savings must survive setup, calibration and maintenance costs.",
+        "buyer": "Manufacturers with repeated manual coating checks",
         "applications": [
           "Measuring protective coatings",
-          "Reducing mistaken rejects",
-          "Checking material during production"
+          "Checking paint or plated-metal thickness with a suitable sensor"
         ],
         "targetCustomers": [
-          "Manufacturers with production inspection bottlenecks"
+          "Manufacturers with repeated manual coating checks"
         ],
-        "marketStatus": "hypothesis",
-        "marketEvidence": [],
+        "marketStatus": "researched",
+        "marketEvidence": [
+          {
+            "title": "FISCHERSCOPE MMS Automation",
+            "url": "https://www.helmut-fischer.com/products/automation-solutions/fischerscope-mms-automation",
+            "excerpt": "probes that are mounted on an automated measuring stand or a robot arm.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Elcometer 456 probe range",
+            "url": "https://www.elcometer.com/en/elcometer-456-coating-thickness-gauge-probe-range.html",
+            "excerpt": "Mini probes are ideal for harder to reach areas and edges.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "coatmaster Inline product page",
+            "url": "https://coatmaster.com/en/coatmaster/produkte/inline/",
+            "excerpt": "Optimized for robot assembly",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Plasma Processes: Quality",
+            "url": "https://plasmapros.com/quality-2/",
+            "excerpt": "We also get certified to customer specific process specifications.",
+            "accessedAt": "2026-10-15"
+          }
+        ],
         "risks": [
-          "The work may be custom factory integration with limited repeatability, or solvable by existing inspection vendors.",
-          "Three different sponsors and project teams, all from one Georgia Tech expo context. These are adjacent problems requiring different measurement methods, not validation of one common device."
+          "A different fixture and program for every part could turn this into custom engineering rather than a repeatable product. Existing vendors already automate coating measurement.",
+          "Paid demand, accepted measurement accuracy and repeatable installation costs remain unproven. The membrane and seal projects do not establish a shared product market."
         ],
         "nextQuestions": [
-          "Compare the same parts for measurement accuracy, cycle time, false rejects, maintenance and annual full cost."
+          "On the same parts, does the attachment remove enough hand work to beat the best existing setup after installation, calibration and upkeep?"
         ]
       }
     },
