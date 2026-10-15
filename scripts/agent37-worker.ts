@@ -99,7 +99,12 @@ try {
   if (reconciledOwner)
     throw Error("Previous worker ledger is missing; inspect before resuming");
 }
-if (previous && !previousRuntimeEnded(previous.runtimeId, runtimeId)) {
+// An unacknowledged dispatch could still be in transit across a reboot. Only a
+// response ID proves it was created in the previous container before it stopped.
+if (
+  previous &&
+  (!previous.responseId || !previousRuntimeEnded(previous.runtimeId, runtimeId))
+) {
   if (!previous.responseId)
     throw Error(
       "Uncertain Agent37 dispatch. Inspect the instance sessions before restarting.",
