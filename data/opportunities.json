@@ -1205,8 +1205,8 @@
     {
       "schemaVersion": 1,
       "id": "compact-survey-maps",
-      "revision": 2,
-      "acceptedRevisionId": "compact-survey-maps:rubric-v2-20261015",
+      "revision": 3,
+      "acceptedRevisionId": "compact-survey-maps:evidence-review-v2-20261015",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -1214,19 +1214,19 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T02:31:21.257Z",
-      "updatedAt": "2026-10-15T21:24:18.427Z",
+      "updatedAt": "2026-10-15T22:21:27.650Z",
       "verdict": null,
       "stage": "first-impressions",
-      "qualificationError": null,
+      "qualificationError": "Evidence reviewed; incremental savings, paid demand and venture scale remain unproven.",
       "accepted": {
-        "id": "compact-survey-maps:rubric-v2-20261015",
+        "id": "compact-survey-maps:evidence-review-v2-20261015",
         "opportunityId": "compact-survey-maps",
-        "parentRevisionId": "compact-survey-maps:migration-v1",
-        "createdAt": "2026-10-15T21:24:18.427Z",
-        "producerId": "rubric-reassessment-v2",
-        "origin": "saved-data-synthesis",
-        "changeReason": "Reassessed adjacent uses and functional alternatives. Original evidence review statuses preserved; no new market qualification.",
-        "contentHash": "55314f89c940ac0408686d010b5bc65ec0a1e4072c892b85b0669a26362c9e0d",
+        "parentRevisionId": "compact-survey-maps:rubric-v2-20261015",
+        "createdAt": "2026-10-15T22:21:27.650Z",
+        "producerId": "codex-evidence-inspector",
+        "origin": "inspection-correction",
+        "changeReason": "Inspect primary paper, code warnings, procurement and existing workflow. Distinguish a possible complementary component from a demonstrated inspection product; remove broad drone-market proxy.",
+        "contentHash": "c4677b73222348b3a65dd6b8ab72598842d5b7af0a04b8992cd54cfe1a22c05d",
         "title": "Faster drone inspection maps",
         "classifications": [
           "Sensing"
@@ -1295,20 +1295,20 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Osprey and PlanarMesh are separate projects; integration, small-defect retention, paid adoption and additional savings have not been demonstrated."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:21:27.650Z",
+              "reason": "Retained as a clearly provisional application, buyer or product hypothesis, not demonstrated demand."
             },
             "kind": "hypothesis",
             "testQuestion": "On the same industrial survey, does integrating PlanarMesh preserve inspection detail while reducing storage, processing and deliverable preparation time?"
           },
           {
             "id": "compact-survey-maps:project-oxford-planarmesh-2025",
-            "text": "An incremental LiDAR reconstruction system that combines plane modeling and meshing to produce compact, detailed 3D surface maps in real time.",
+            "text": "PlanarMesh reports smaller 3D building models from laser scans. Its tested processing speed used more processor cores than the comparison methods; the paper and code report reliability limitations.",
             "evidenceIds": [
               "compact-survey-maps:oxford-planarmesh-2025:source-0",
               "compact-survey-maps:oxford-planarmesh-2025:source-1",
@@ -1318,13 +1318,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Osprey and PlanarMesh are separate projects; integration, small-defect retention, paid adoption and additional savings have not been demonstrated."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:21:27.650Z",
+              "reason": "Retained as a clearly provisional application, buyer or product hypothesis, not demonstrated demand."
             },
             "kind": "hypothesis",
             "testQuestion": "On the same industrial survey, does integrating PlanarMesh preserve inspection detail while reducing storage, processing and deliverable preparation time?"
@@ -1336,49 +1336,58 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Osprey and PlanarMesh are separate projects; integration, small-defect retention, paid adoption and additional savings have not been demonstrated."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:21:27.650Z",
+              "reason": "Retained as a clearly provisional application, buyer or product hypothesis, not demonstrated demand."
             },
             "kind": "hypothesis",
             "testQuestion": "On the same industrial survey, does integrating PlanarMesh preserve inspection detail while reducing storage, processing and deliverable preparation time?"
           },
           {
             "id": "compact-survey-maps:problem",
-            "text": "Mapping complex industrial structures requires online mapping and mission planning, while detailed LiDAR reconstruction must remain computationally efficient.",
-            "evidenceIds": [],
+            "text": "Inspection teams combine scans from several drone flights and deliver maps, images and reports that engineers can use to plan repairs. Smaller map files could ease handling, but customers still need the original inspection detail and required file formats.",
+            "evidenceIds": [
+              "compact-survey-maps:review-handover",
+              "compact-survey-maps:review-procurement"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Osprey and PlanarMesh are separate projects; integration, small-defect retention, paid adoption and additional savings have not been demonstrated."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:21:27.650Z",
+              "reason": "Source context inspected; narrowed to specific workflow requirements and reported capabilities."
             },
-            "kind": "hypothesis",
-            "testQuestion": "On the same industrial survey, does integrating PlanarMesh preserve inspection detail while reducing storage, processing and deliverable preparation time?"
+            "kind": "inference",
+            "reasoning": "A vendor workflow and one procurement document support handover requirements, not representative burden or compression savings."
           },
           {
             "id": "compact-survey-maps:opportunity",
-            "text": "Hypothesis: sell processing software per site or survey to reduce map handling and report preparation. Flyability already maps inspection findings onto 3D models, so this needs a demonstrated advantage in coverage, file size or delivery time.",
-            "evidenceIds": [],
+            "text": "Compact maps could help inspection teams hand over large surveys between different tools or work offline. The opening is a component that saves handling time while preserving inspection detail. Existing cloud sharing already avoids large file transfers; paid demand for an additional component remains unproven.",
+            "evidenceIds": [
+              "compact-survey-maps:review-handover",
+              "compact-survey-maps:review-procurement",
+              "compact-survey-maps:review-alternative",
+              "compact-survey-maps:review-paper",
+              "compact-survey-maps:review-implementation"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Osprey and PlanarMesh are separate projects; integration, small-defect retention, paid adoption and additional savings have not been demonstrated."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:21:27.650Z",
+              "reason": "Retained as a clearly provisional application, buyer or product hypothesis, not demonstrated demand."
             },
             "kind": "hypothesis",
             "testQuestion": "On the same industrial survey, does integrating PlanarMesh preserve inspection detail while reducing storage, processing and deliverable preparation time?"
@@ -1390,13 +1399,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Osprey and PlanarMesh are separate projects; integration, small-defect retention, paid adoption and additional savings have not been demonstrated."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:21:27.650Z",
+              "reason": "Retained as a clearly provisional application, buyer or product hypothesis, not demonstrated demand."
             },
             "kind": "hypothesis",
             "testQuestion": "On the same industrial survey, does integrating PlanarMesh preserve inspection detail while reducing storage, processing and deliverable preparation time?"
@@ -1408,13 +1417,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Osprey and PlanarMesh are separate projects; integration, small-defect retention, paid adoption and additional savings have not been demonstrated."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:21:27.650Z",
+              "reason": "Retained as a clearly provisional application, buyer or product hypothesis, not demonstrated demand."
             },
             "kind": "hypothesis",
             "testQuestion": "On the same industrial survey, does integrating PlanarMesh preserve inspection detail while reducing storage, processing and deliverable preparation time?"
@@ -1426,13 +1435,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Osprey and PlanarMesh are separate projects; integration, small-defect retention, paid adoption and additional savings have not been demonstrated."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:21:27.650Z",
+              "reason": "Retained as a clearly provisional application, buyer or product hypothesis, not demonstrated demand."
             },
             "kind": "hypothesis",
             "testQuestion": "On the same industrial survey, does integrating PlanarMesh preserve inspection detail while reducing storage, processing and deliverable preparation time?"
@@ -1444,13 +1453,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Osprey and PlanarMesh are separate projects; integration, small-defect retention, paid adoption and additional savings have not been demonstrated."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:21:27.650Z",
+              "reason": "Retained as a clearly provisional application, buyer or product hypothesis, not demonstrated demand."
             },
             "kind": "hypothesis",
             "testQuestion": "On the same industrial survey, does integrating PlanarMesh preserve inspection detail while reducing storage, processing and deliverable preparation time?"
@@ -1462,13 +1471,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Osprey and PlanarMesh are separate projects; integration, small-defect retention, paid adoption and additional savings have not been demonstrated."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:21:27.650Z",
+              "reason": "Retained as a clearly provisional application, buyer or product hypothesis, not demonstrated demand."
             },
             "kind": "hypothesis",
             "testQuestion": "On the same industrial survey, does integrating PlanarMesh preserve inspection detail while reducing storage, processing and deliverable preparation time?"
@@ -1480,298 +1489,367 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Osprey and PlanarMesh are separate projects; integration, small-defect retention, paid adoption and additional savings have not been demonstrated."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:21:27.650Z",
+              "reason": "Retained as a clearly provisional application, buyer or product hypothesis, not demonstrated demand."
             },
             "kind": "hypothesis",
             "testQuestion": "On the same industrial survey, does integrating PlanarMesh preserve inspection detail while reducing storage, processing and deliverable preparation time?"
           },
           {
             "id": "compact-survey-maps:v2-comparison",
-            "text": "Supplement capture and inspection systems with a compact derived view; retain original measurements and mandated exports. Alternative only where accepted deliverables remain equivalent.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "Flyability Inspector already links findings to maps and offers cloud access without transferring large files. Compact maps could supplement that workflow for offline use or transfer between tools; they are not a replacement for required images, scan files and reports. No same-survey comparison establishes additional savings.",
+            "kind": "inference",
+            "evidenceIds": [
+              "compact-survey-maps:review-alternative",
+              "compact-survey-maps:review-procurement"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "Osprey and PlanarMesh are separate projects; integration, small-defect retention, paid adoption and additional savings have not been demonstrated."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T22:21:27.650Z",
+              "reason": "Source context inspected; narrowed to specific workflow requirements and reported capabilities."
             },
-            "testQuestion": "On the same industrial survey, does integrating PlanarMesh preserve inspection detail while reducing storage, processing and deliverable preparation time?"
+            "reasoning": "Existing sharing overlaps file-transfer value; cross-tool and offline complementarity are testable hypotheses, not demonstrated competitor gaps."
           }
         ],
         "evidence": [
           {
             "id": "compact-survey-maps:oxford-osprey-2024:source-0",
             "sourceUrl": "https://dynamic.robots.ox.ac.uk/projects/aerial-robotics/",
-            "finalUrl": null,
+            "finalUrl": "https://dynamic.robots.ox.ac.uk/projects/aerial-robotics/",
             "title": "Aerial Robotics | Dynamic Robot Systems Group",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2024",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08T06:44:58.555Z",
+            "retrievedAt": "2026-10-15",
             "excerpt": "“Osprey: Multi-Session Autonomous Aerial Mapping with LiDAR-based SLAM and Next Best View Planning” , Rowan Border, Nived Chebrolu, Yifu Tao, Jonathan Gammell, Maurice Fallon, 2024.",
             "pdfPage": null,
             "locator": "Publications",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:21:27.650Z",
               "failureIds": []
             }
           },
           {
             "id": "compact-survey-maps:oxford-osprey-2024:source-1",
             "sourceUrl": "https://dynamic.robots.ox.ac.uk/projects/aerial-robotics/",
-            "finalUrl": null,
+            "finalUrl": "https://dynamic.robots.ox.ac.uk/projects/aerial-robotics/",
             "title": "Aerial Robotics | Dynamic Robot Systems Group",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2024",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08T06:44:58.555Z",
+            "retrievedAt": "2026-10-15",
             "excerpt": "Autonomously mapping complex 3D structures requires a system that performs online mapping and mission planning.",
             "pdfPage": null,
             "locator": "Osprey abstract",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:21:27.650Z",
               "failureIds": []
             }
           },
           {
             "id": "compact-survey-maps:oxford-osprey-2024:source-2",
             "sourceUrl": "https://dynamic.robots.ox.ac.uk/projects/aerial-robotics/",
-            "finalUrl": null,
+            "finalUrl": "https://dynamic.robots.ox.ac.uk/projects/aerial-robotics/",
             "title": "Aerial Robotics | Dynamic Robot Systems Group",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2024",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08T06:44:58.555Z",
+            "retrievedAt": "2026-10-15",
             "excerpt": "It enables a non-expert operator to specify a bounded target area that the aerial platform can then map autonomously over multiple flights.",
             "pdfPage": null,
             "locator": "Osprey abstract",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:21:27.650Z",
               "failureIds": []
             }
           },
           {
             "id": "compact-survey-maps:oxford-osprey-2024:source-3",
             "sourceUrl": "https://dynamic.robots.ox.ac.uk/projects/aerial-robotics/",
-            "finalUrl": null,
+            "finalUrl": "https://dynamic.robots.ox.ac.uk/projects/aerial-robotics/",
             "title": "Aerial Robotics | Dynamic Robot Systems Group",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2024",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08T06:44:58.555Z",
+            "retrievedAt": "2026-10-15",
             "excerpt": "Aerial platforms that can fly GPS-guided preplanned missions semi-autonomously are already widely available but fully autonomous systems can significantly improve efficiency.",
             "pdfPage": null,
             "locator": "Osprey abstract",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:21:27.650Z",
               "failureIds": []
             }
           },
           {
             "id": "compact-survey-maps:oxford-osprey-2024:source-4",
             "sourceUrl": "https://dynamic.robots.ox.ac.uk/projects/aerial-robotics/",
-            "finalUrl": null,
+            "finalUrl": "https://dynamic.robots.ox.ac.uk/projects/aerial-robotics/",
             "title": "Aerial Robotics | Dynamic Robot Systems Group",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2024",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08T06:44:58.555Z",
+            "retrievedAt": "2026-10-15",
             "excerpt": "Field experiments with Osprey demonstrate that this system can achieve greater map coverage of large industrial sites than manual surveys with a pilot-flown aerial platform or a terrestrial laser scanner (TLS). Three sites, with a total ground coverage of 2528 m2 and a maximum height of 27 m, were mapped in separate missions using 112 minutes of autonomous flight time.",
             "pdfPage": null,
             "locator": "Osprey abstract",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:21:27.650Z",
               "failureIds": []
             }
           },
           {
             "id": "compact-survey-maps:oxford-osprey-2024:source-5",
             "sourceUrl": "https://dynamic.robots.ox.ac.uk/projects/aerial-robotics/",
-            "finalUrl": null,
+            "finalUrl": "https://dynamic.robots.ox.ac.uk/projects/aerial-robotics/",
             "title": "Aerial Robotics | Dynamic Robot Systems Group",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2024",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08T06:44:58.555Z",
+            "retrievedAt": "2026-10-15",
             "excerpt": "True colour maps were created from images captured by Osprey using pointcloud and NeRF reconstruction methods. These maps provide useful data for structural inspection tasks.",
             "pdfPage": null,
             "locator": "Osprey abstract",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:21:27.650Z",
               "failureIds": []
             }
           },
           {
             "id": "compact-survey-maps:oxford-planarmesh-2025:source-0",
             "sourceUrl": "https://dynamic.robots.ox.ac.uk/projects/planarmesh/",
-            "finalUrl": null,
+            "finalUrl": "https://dynamic.robots.ox.ac.uk/projects/planarmesh/",
             "title": "PlanarMesh: Building Compact 3D Meshes from LiDAR using Incremental Adaptive Resolution Reconstruction",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2025",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08T06:44:25.119Z",
+            "retrievedAt": "2026-10-15",
             "excerpt": "Accepted at the 2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2025)",
             "pdfPage": null,
             "locator": "Acceptance statement",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:21:27.650Z",
               "failureIds": []
             }
           },
           {
             "id": "compact-survey-maps:oxford-planarmesh-2025:source-1",
             "sourceUrl": "https://dynamic.robots.ox.ac.uk/projects/planarmesh/",
-            "finalUrl": null,
+            "finalUrl": "https://dynamic.robots.ox.ac.uk/projects/planarmesh/",
             "title": "PlanarMesh: Building Compact 3D Meshes from LiDAR using Incremental Adaptive Resolution Reconstruction",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2025",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08T06:44:25.119Z",
+            "retrievedAt": "2026-10-15",
             "excerpt": "Building an online 3D LiDAR mapping system that produces a detailed surface reconstruction while remaining computationally efficient is a challenging task.",
             "pdfPage": null,
             "locator": "Abstract",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:21:27.650Z",
               "failureIds": []
             }
           },
           {
             "id": "compact-survey-maps:oxford-planarmesh-2025:source-2",
             "sourceUrl": "https://dynamic.robots.ox.ac.uk/projects/planarmesh/",
-            "finalUrl": null,
+            "finalUrl": "https://dynamic.robots.ox.ac.uk/projects/planarmesh/",
             "title": "PlanarMesh: Building Compact 3D Meshes from LiDAR using Incremental Adaptive Resolution Reconstruction",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2025",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08T06:44:25.119Z",
+            "retrievedAt": "2026-10-15",
             "excerpt": "It introduces a new representation, planar-mesh, which combines plane modeling and meshing to capture both large surfaces and detailed geometry. The planar-mesh can be incrementally updated considering both local surface curvature and free-space information from sensor measurements. We employ a multi-threaded architecture with a Bounding Volume Hierarchy (BVH) for efficient data storage and fast search operations, enabling real-time performance.",
             "pdfPage": null,
             "locator": "Abstract",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:21:27.650Z",
               "failureIds": []
             }
           },
           {
             "id": "compact-survey-maps:oxford-planarmesh-2025:source-3",
             "sourceUrl": "https://dynamic.robots.ox.ac.uk/projects/planarmesh/",
-            "finalUrl": null,
+            "finalUrl": "https://dynamic.robots.ox.ac.uk/projects/planarmesh/",
             "title": "PlanarMesh: Building Compact 3D Meshes from LiDAR using Incremental Adaptive Resolution Reconstruction",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2025",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08T06:44:25.119Z",
+            "retrievedAt": "2026-10-15",
             "excerpt": "Experimental results show that our method achieves reconstruction accuracy on par with, or exceeding, state-of-the-art techniques—including truncated signed distance functions, occupancy mapping, and voxel-based meshing—while producing smaller output file sizes (10 times smaller than raw input and more than 5 times smaller than mesh-based methods) and maintaining real-time performance (around 2 Hz for a 64-beam sensor).",
             "pdfPage": null,
             "locator": "Abstract",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:21:27.650Z",
               "failureIds": []
             }
           },
           {
-            "id": "compact-survey-maps:market-source-0",
-            "sourceUrl": "https://www.flyability.com/elios-3",
-            "finalUrl": null,
-            "title": "Flyability Elios 3 inspection workflow",
-            "publisher": null,
-            "sourceRole": "secondary",
-            "independence": "unknown",
+            "id": "compact-survey-maps:review-handover",
+            "sourceUrl": "https://www.flyability.com/casestudies/asset-management-flight-merging",
+            "finalUrl": "https://www.flyability.com/casestudies/asset-management-flight-merging",
+            "title": "Flyability: Automating Flight Merging at a Sugar Refinery with the Asset Management Extension",
+            "publisher": "Flyability",
+            "sourceRole": "primary",
+            "independence": "external",
             "publishedAt": null,
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08",
-            "excerpt": "All data and points of interest captured during flight are automatically mapped onto a 3D model of your asset",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Instead of spending hours aligning the different point clouds, Asset Management made quick work of combining lots of information from multiple flights.",
             "pdfPage": null,
-            "locator": null,
-            "relevance": "broader-context",
+            "locator": "Original HTML; surrounding context inspected",
+            "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:21:27.650Z",
               "failureIds": []
             }
           },
           {
-            "id": "compact-survey-maps:market-source-1",
-            "sourceUrl": "https://www.mordorintelligence.com/industry-reports/inspection-drones-market",
-            "finalUrl": null,
-            "title": "Mordor Intelligence · inspection drones",
-            "publisher": null,
-            "sourceRole": "secondary",
-            "independence": "unknown",
-            "publishedAt": null,
-            "observationPeriod": null,
-            "retrievedAt": "2026-10-08T18:09:38.335652Z",
-            "excerpt": "The inspection drones market size was valued at USD 11.75 billion in 2025",
+            "id": "compact-survey-maps:review-procurement",
+            "sourceUrl": "https://www.publiccontractsscotland.gov.uk/search/show/search_view.aspx?ID=JAN521821",
+            "finalUrl": "https://www.publiccontractsscotland.gov.uk/search/show/search_view.aspx?ID=JAN521821",
+            "title": "Fife Council: Framework: Drone Surveys for Inspection -Bridges & Structures; contract award notice JAN521821",
+            "publisher": "Fife Council",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2025-01-15",
+            "observationPeriod": "Fife Council, Scotland; January 2025 service procurement",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Our policy is to inspect Confined Spaces every 3 years due to the hazardous nature of confined space entry.",
             "pdfPage": null,
-            "locator": null,
-            "relevance": "broader-context",
+            "locator": "Original HTML; surrounding context inspected",
+            "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:21:27.650Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "compact-survey-maps:review-alternative",
+            "sourceUrl": "https://www.flyability.com/inspector",
+            "finalUrl": "https://www.flyability.com/inspector",
+            "title": "Flyability: Inspector inspection software",
+            "publisher": "Flyability",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": null,
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Access inspection datasets through a centralized online platform without transferring large files.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding context inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:21:27.650Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "compact-survey-maps:review-paper",
+            "sourceUrl": "https://arxiv.org/pdf/2510.13599",
+            "finalUrl": "https://arxiv.org/pdf/2510.13599",
+            "title": "Wang et al.: PlanarMesh, arXiv v1",
+            "publisher": "PlanarMesh authors",
+            "sourceRole": "primary",
+            "independence": "project-originated",
+            "publishedAt": "2025-10-15",
+            "observationPeriod": null,
+            "retrievedAt": "2026-10-15",
+            "excerpt": "reconstruction system uses continually more memory until it\nexceeds available memory at about 300 scans",
+            "pdfPage": 8,
+            "locator": "Physical PDF page 8; comparison setup on page 6",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:21:27.650Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "compact-survey-maps:review-implementation",
+            "sourceUrl": "https://github.com/ori-drs/planar_mesh",
+            "finalUrl": "https://github.com/ori-drs/planar_mesh",
+            "title": "PlanarMesh: authors’ public implementation README",
+            "publisher": "PlanarMesh authors",
+            "sourceRole": "primary",
+            "independence": "project-originated",
+            "publishedAt": null,
+            "observationPeriod": null,
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Due to an immature implementation, deadlocks may occur when using multithreading.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding context inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-15T22:21:27.650Z",
               "failureIds": []
             }
           }
@@ -1779,133 +1857,63 @@
         "assessment": {
           "rubricVersion": "venture-screen-v2",
           "priority": "medium",
-          "priorityReason": "Smaller maps may be a useful component in existing inspection workflows. The standalone platform case is weaker, and saved uninspected reports flag technical limits needing resolution.",
+          "priorityReason": "A compact component could help transfer surveys between tools or support offline work. Existing sharing overlaps the core benefit; test complete deliverables before treating it as a standalone business.",
           "confidence": {
-            "level": "low",
-            "reason": "Low; retained draft counterevidence requires inspection before publication."
+            "level": "moderate",
+            "reason": "Primary sources establish technical results, limitations and inspection requirements; additional value and commercial demand remain uncertain."
           },
           "dimensions": {
             "problem": {
-              "status": "plausible",
-              "reason": "The saved projects describe heavy scan processing and inspection handover; survey-service demand is not separate-software demand.",
+              "status": "supported",
+              "reason": "Inspection-service and supplier records establish scan combination and report requirements, not the prevalence or cost of file-handling problems.",
               "claimIds": [
-                "compact-survey-maps:project-oxford-osprey-2024",
-                "compact-survey-maps:project-oxford-planarmesh-2025",
-                "compact-survey-maps:what",
-                "compact-survey-maps:problem",
-                "compact-survey-maps:opportunity",
-                "compact-survey-maps:customer-0",
-                "compact-survey-maps:customer-1",
-                "compact-survey-maps:customer-2",
-                "compact-survey-maps:application-0",
-                "compact-survey-maps:application-1",
-                "compact-survey-maps:application-2"
+                "compact-survey-maps:problem"
               ]
             },
             "customerPayment": {
               "status": "plausible",
-              "reason": "Inspection teams or capture-tool suppliers are plausible buyers; no inspected purchase commitment for the compact representation.",
+              "reason": "Inspection services are purchased; separate payment for compact-map software is unproven.",
               "claimIds": [
-                "compact-survey-maps:project-oxford-osprey-2024",
-                "compact-survey-maps:project-oxford-planarmesh-2025",
-                "compact-survey-maps:what",
-                "compact-survey-maps:problem",
-                "compact-survey-maps:opportunity",
-                "compact-survey-maps:customer-0",
-                "compact-survey-maps:customer-1",
-                "compact-survey-maps:customer-2",
-                "compact-survey-maps:application-0",
-                "compact-survey-maps:application-1",
-                "compact-survey-maps:application-2"
+                "compact-survey-maps:opportunity"
               ]
             },
             "productValue": {
               "status": "plausible",
-              "reason": "Smaller geometry could reduce transfer or handling burden while preserving linked evidence. It has not been shown to preserve every relevant defect.",
+              "reason": "Smaller geometry is reported; preserving small defects and reducing complete handover time require testing.",
               "claimIds": [
-                "compact-survey-maps:project-oxford-osprey-2024",
-                "compact-survey-maps:project-oxford-planarmesh-2025",
-                "compact-survey-maps:what",
-                "compact-survey-maps:problem",
-                "compact-survey-maps:opportunity",
-                "compact-survey-maps:customer-0",
-                "compact-survey-maps:customer-1",
-                "compact-survey-maps:customer-2",
-                "compact-survey-maps:application-0",
-                "compact-survey-maps:application-1",
-                "compact-survey-maps:application-2"
+                "compact-survey-maps:opportunity"
               ]
             },
             "commercialGap": {
               "status": "plausible",
-              "reason": "A cross-system component could supplement mapping suites. Bundled sharing and free reduction tools directly overlap with a standalone viewer.",
+              "reason": "Cloud sharing overlaps; a cross-tool or offline component could supplement it. No demonstrated customer gap yet.",
               "claimIds": [
-                "compact-survey-maps:project-oxford-osprey-2024",
-                "compact-survey-maps:project-oxford-planarmesh-2025",
-                "compact-survey-maps:what",
-                "compact-survey-maps:problem",
-                "compact-survey-maps:opportunity",
-                "compact-survey-maps:customer-0",
-                "compact-survey-maps:customer-1",
-                "compact-survey-maps:customer-2",
-                "compact-survey-maps:application-0",
-                "compact-survey-maps:application-1",
-                "compact-survey-maps:application-2"
+                "compact-survey-maps:v2-comparison"
               ]
             },
             "ventureScale": {
               "status": "missing",
-              "reason": "No credible quantified customer pool or demonstrated expansion beyond a compact-map feature. One vendor’s customer count is neither market size nor ceiling.",
+              "reason": "No supported eligible-buyer count, repeat software spending or expansion path sufficient to establish venture scale.",
               "claimIds": [
-                "compact-survey-maps:project-oxford-osprey-2024",
-                "compact-survey-maps:project-oxford-planarmesh-2025",
-                "compact-survey-maps:what",
-                "compact-survey-maps:problem",
-                "compact-survey-maps:opportunity",
-                "compact-survey-maps:customer-0",
-                "compact-survey-maps:customer-1",
-                "compact-survey-maps:customer-2",
-                "compact-survey-maps:application-0",
-                "compact-survey-maps:application-1",
-                "compact-survey-maps:application-2"
+                "compact-survey-maps:opportunity"
               ]
             },
             "businessCapital": {
               "status": "missing",
-              "reason": "Compute, cleanup, original-file retention, integration and support costs are unmeasured.",
+              "reason": "Processing reliability, support, integration and retained original-file costs are unmeasured.",
               "claimIds": [
-                "compact-survey-maps:project-oxford-osprey-2024",
-                "compact-survey-maps:project-oxford-planarmesh-2025",
-                "compact-survey-maps:what",
-                "compact-survey-maps:problem",
-                "compact-survey-maps:opportunity",
-                "compact-survey-maps:customer-0",
-                "compact-survey-maps:customer-1",
-                "compact-survey-maps:customer-2",
-                "compact-survey-maps:application-0",
-                "compact-survey-maps:application-1",
-                "compact-survey-maps:application-2"
+                "compact-survey-maps:opportunity"
               ]
             },
             "timing": {
               "status": "missing",
-              "reason": "Research publication dates and general drone growth cannot establish growth in paid compact-map demand.",
+              "reason": "Publication dates and overall drone activity do not establish growing demand for this component.",
               "claimIds": [
-                "compact-survey-maps:project-oxford-osprey-2024",
-                "compact-survey-maps:project-oxford-planarmesh-2025",
-                "compact-survey-maps:what",
-                "compact-survey-maps:problem",
-                "compact-survey-maps:opportunity",
-                "compact-survey-maps:customer-0",
-                "compact-survey-maps:customer-1",
-                "compact-survey-maps:customer-2",
-                "compact-survey-maps:application-0",
-                "compact-survey-maps:application-1",
-                "compact-survey-maps:application-2"
+                "compact-survey-maps:opportunity"
               ]
             }
           },
-          "strongestObjection": "Loss of small defects or excessive processing could erase the benefit. Saved draft reports flag memory, threading and unequal-compute comparisons; those reports are not cleared facts.",
+          "strongestObjection": "Smaller files are not enough if defects disappear or processing becomes unreliable. PlanarMesh reports growing memory use, and its code warns that processing can freeze.",
           "decisiveQuestion": "Use the same complete survey with accepted defect locations and exports; compare processing, handover time and total cost on equal hardware."
         },
         "migrationGaps": []

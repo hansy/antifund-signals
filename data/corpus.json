@@ -2655,7 +2655,7 @@
       "whyItMatters": "Compact reconstructions with real-time updates could reduce storage requirements while retaining geometric detail for robot mapping.",
       "statusQuo": "The source compares PlanarMesh with truncated signed distance functions, occupancy mapping, and voxel-based meshing.",
       "results": "The source reports reconstruction accuracy matching or exceeding the compared techniques, output files 10 times smaller than raw input and more than 5 times smaller than mesh-based methods, and performance around 2 Hz for a 64-beam sensor. Accepted at IROS 2025.",
-      "limitations": "Not reported",
+      "limitations": "The 2025 paper reports running out of memory at about 300 scans in its setup. Speed comparisons used unequal processor resources. The public code warns of freezes; small-defect preservation in industrial inspections is unproven.",
       "topics": [
         "Sensing"
       ],
@@ -4436,12 +4436,12 @@
       "title": "Faster drone inspection maps",
       "summary": "Turn drone scans into smaller, easier-to-use inspection maps.",
       "topic": "Sensing",
-      "problem": "Mapping complex industrial structures requires online mapping and mission planning, while detailed LiDAR reconstruction must remain computationally efficient.",
-      "statusQuo": "Reported alternatives include GPS-guided preplanned flights, pilot-flown surveys, terrestrial laser scanners, and TSDF, occupancy or voxel-based reconstruction.",
-      "gap": "Hypothesis: survey teams could benefit from autonomous coverage and compact deliverables in one workflow. The excerpts do not establish that existing products lack this combination.",
+      "problem": "Inspection teams combine scans from several drone flights and deliver maps, images and reports that engineers can use to plan repairs. Smaller map files could ease handling, but customers still need the original inspection detail and required file formats.",
+      "statusQuo": "Inspection teams use drone suppliers’ mapping and reporting tools, cloud sharing and separate scan-processing software.",
+      "gap": "Faster handover between tools or offline access, without losing inspection detail or required exports.",
       "opportunity": "Software that turns drone scans of industrial sites into compact 3D maps with inspection images linked to their locations.",
-      "evidence": "Reported: Osprey autonomously mapped three industrial sites totaling 2528 m² in 112 flight minutes and achieved greater coverage than the manual survey alternatives. Reported: PlanarMesh produces files 10 times smaller than raw input and more than 5 times smaller than compared mesh methods, at around 2 Hz for a 64-beam sensor.",
-      "counterpoint": "Loss of small defects or excessive processing could erase the benefit. Saved draft reports flag memory, threading and unequal-compute comparisons; those reports are not cleared facts.",
+      "evidence": "Osprey reports autonomous mapping at three industrial sites. Separately, PlanarMesh reports smaller building-model files; their combined use in an inspection product has not been demonstrated.",
+      "counterpoint": "Smaller files are not enough if defects disappear or processing becomes unreliable. PlanarMesh reports growing memory use, and its code warns that processing can freeze.",
       "nextQuestion": "Use the same complete survey with accepted defect locations and exports; compare processing, handover time and total cost on equal hardware.",
       "projectIds": [
         "oxford-osprey-2024",
@@ -4451,10 +4451,10 @@
         "oxford-aerial-robotics",
         "oxford-planarmesh-2025-source"
       ],
-      "confidence": "Early signal",
+      "confidence": "Mixed evidence",
       "brief": {
         "whatItIs": "Software that turns drone scans of industrial sites into compact 3D maps with inspection images linked to their locations.",
-        "problem": "Mapping complex industrial structures requires online mapping and mission planning, while detailed LiDAR reconstruction must remain computationally efficient.",
+        "problem": "Inspection teams combine scans from several drone flights and deliver maps, images and reports that engineers can use to plan repairs. Smaller map files could ease handling, but customers still need the original inspection detail and required file formats.",
         "breakthroughs": [
           {
             "text": "Reported: Osprey autonomously mapped three industrial sites totaling 2528 m² in 112 flight minutes and achieved greater coverage than the manual survey alternatives.",
@@ -4463,23 +4463,14 @@
             ]
           },
           {
-            "text": "Reported: PlanarMesh produces files 10 times smaller than raw input and more than 5 times smaller than compared mesh methods, at around 2 Hz for a 64-beam sensor.",
+            "text": "PlanarMesh reports roughly tenfold smaller files than raw building scans. Its speed tests used 28 processor cores versus one for comparison methods; preservation of small inspection defects was not tested.",
             "sourceIds": [
               "oxford-planarmesh-2025-source"
             ]
           }
         ],
-        "marketOpportunity": "Hypothesis: sell processing software per site or survey to reduce map handling and report preparation. Flyability already maps inspection findings onto 3D models, so this needs a demonstrated advantage in coverage, file size or delivery time.",
+        "marketOpportunity": "Compact maps could help inspection teams hand over large surveys between different tools or work offline. The opening is a component that saves handling time while preserving inspection detail. Existing cloud sharing already avoids large file transfers; paid demand for an additional component remains unproven.",
         "buyer": "Industrial survey firms, drone inspection operators and asset maintenance teams.",
-        "marketSize": {
-          "value": "$11.75B",
-          "market": "Inspection drones",
-          "year": 2025,
-          "context": "Global estimate covering drones, services and software. The market for mapping software alone is not established.",
-          "sourceUrls": [
-            "https://www.mordorintelligence.com/industry-reports/inspection-drones-market"
-          ]
-        },
         "applications": [
           "Mapping industrial sites and confined spaces",
           "Repeat inspections of buildings and infrastructure",
@@ -4493,21 +4484,40 @@
         "marketStatus": "researched",
         "marketEvidence": [
           {
-            "title": "Flyability Elios 3 inspection workflow",
-            "url": "https://www.flyability.com/elios-3",
-            "excerpt": "All data and points of interest captured during flight are automatically mapped onto a 3D model of your asset",
-            "accessedAt": "2026-10-08"
+            "title": "Flyability: Automating Flight Merging at a Sugar Refinery with the Asset Management Extension",
+            "url": "https://www.flyability.com/casestudies/asset-management-flight-merging",
+            "excerpt": "Instead of spending hours aligning the different point clouds, Asset Management made quick work of combining lots of information from multiple flights.",
+            "accessedAt": "2026-10-15"
           },
           {
-            "title": "Mordor Intelligence · inspection drones",
-            "url": "https://www.mordorintelligence.com/industry-reports/inspection-drones-market",
-            "excerpt": "The inspection drones market size was valued at USD 11.75 billion in 2025",
-            "accessedAt": "2026-10-08T18:09:38.335652Z"
+            "title": "Fife Council: Framework: Drone Surveys for Inspection -Bridges & Structures; contract award notice JAN521821",
+            "url": "https://www.publiccontractsscotland.gov.uk/search/show/search_view.aspx?ID=JAN521821",
+            "excerpt": "Our policy is to inspect Confined Spaces every 3 years due to the hazardous nature of confined space entry.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Flyability: Inspector inspection software",
+            "url": "https://www.flyability.com/inspector",
+            "excerpt": "Access inspection datasets through a centralized online platform without transferring large files.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Wang et al.: PlanarMesh, arXiv v1",
+            "url": "https://arxiv.org/pdf/2510.13599",
+            "excerpt": "reconstruction system uses continually more memory until it\nexceeds available memory at about 300 scans",
+            "accessedAt": "2026-10-15",
+            "page": 8
+          },
+          {
+            "title": "PlanarMesh: authors’ public implementation README",
+            "url": "https://github.com/ori-drs/planar_mesh",
+            "excerpt": "Due to an immature implementation, deadlocks may occur when using multithreading.",
+            "accessedAt": "2026-10-15"
           }
         ],
         "risks": [
-          "These are separate evaluations. The excerpts do not show PlanarMesh integrated into Osprey, quantify survey time savings, or establish that compressed maps retain all inspection-relevant detail.",
-          "Existing inspection products already provide mapping and report workflows; compact files alone may not justify a separate purchase."
+          "Smaller files are not enough if defects disappear or processing becomes unreliable. PlanarMesh reports growing memory use, and its code warns that processing can freeze.",
+          "No measured handover savings, separate-software purchase evidence or reachable market estimate."
         ],
         "nextQuestions": [
           "Use the same complete survey with accepted defect locations and exports; compare processing, handover time and total cost on equal hardware."
