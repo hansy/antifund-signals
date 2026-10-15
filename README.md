@@ -55,16 +55,8 @@ bun run build
 
 ## Deploy
 
-Deploy the Convex functions with `bunx convex deploy`. Set `CONVEX_URL`, `RESEARCH_WRITE_SECRET`, and optionally `OPENAI_API_KEY` as Cloudflare Worker secrets, then run `bun run deploy`. The Convex and Worker secrets must match.
-
-The published dataset lives in `data/`. Raw downloads, private research checkpoints, earlier experiments, notes, and credentials are excluded. Voice uploads are limited to 8 MB, with a shared cap of 50 transcription attempts per UTC day. Audio is sent to OpenAI; the app stores transcript receipts, not uploaded audio. Failed uploads remain in the originating browser for retry.
+Deploy Convex with `bunx convex deploy`, configure Cloudflare secrets (`CONVEX_URL`, `RESEARCH_WRITE_SECRET`, and `OPENAI_API_KEY` for voice), then run `bun run deploy`. Use the same write secret in Convex and Cloudflare.
 
 ## Hosted research
 
-`scripts/agent37-worker.ts` runs on the existing Agent37 instance using subscription-authenticated Codex. Convex owns job state and leases. One research task runs at a time, with three saved steps, a ten-minute limit per step, and at most twelve attempts per signal. Test-mode preferences never start research. Originals, excerpts, and reports stay in private evidence storage.
-
-Enable `RESEARCH_ENABLED=true` and set a separate `RESEARCH_WORKER_SECRET` in Convex and the root-owned worker config. The worker config also requires the production Convex URL, Agent37 API key, and instance ID. Credentials are not exposed to the Codex process.
-
-The worker starts automatically after an ordinary Agent37 restart. Process locks and Convex leases prevent duplicate workers; completed steps survive pauses and restarts. An interrupted call whose outcome cannot be confirmed stays blocked for inspection rather than being repeated. Template image updates require reinstalling the worker.
-
-Startup uses `scripts/agent37-post-restart.sh` and the root-owned `scripts/agent37-ensure-started.sh` launcher. The boot hook holds a restricted token for Convex’s `/research-worker/start` endpoint. Configure matching `RESEARCH_BOOT_SECRET`, `AGENT37_API_KEY`, and `AGENT37_INSTANCE_ID` in Convex; keep the launcher mode 0700 and the hook’s curl config mode 0600. This is a shared proof of concept on one operator-owned instance, not a multi-tenant research service.
+An Agent37 worker uses subscription-authenticated Codex to research interested signals. Convex manages the queue and saved progress. Research covers customers, markets, alternatives, and the investment case; results require evidence review before publication.
