@@ -15,6 +15,7 @@ import {
 import { createWriteStream, constants } from "node:fs";
 import { readReport } from "./research-files";
 import { readEvents } from "./agent37-gateway";
+import { runtimeIdentity, previousRuntimeEnded } from "./worker-runtime";
 import { createHash, randomUUID } from "node:crypto";
 import { join, resolve } from "node:path";
 import { z } from "zod";
@@ -79,33 +80,72 @@ const headers = {
   "Content-Type": "application/json",
 };
 const ledgerFile = "/root/signals-worker/active.json";
+const runtimeId = await runtimeIdentity();
+let reconciledOwner: string | undefined;
+try {
+  const priorOwner = JSON.parse(
+    await readFile("/root/signals-worker/owner.json", "utf8"),
+  );
+  if (typeof priorOwner.owner === "string") reconciledOwner = priorOwner.owner;
+} catch (e: any) {
+  if (e.code !== "ENOENT") throw e;
+}
 // An interrupted dispatch must be reconciled, not blindly repeated.
 let previous: any = null;
 try {
   previous = JSON.parse(await readFile(ledgerFile, "utf8"));
 } catch (e: any) {
   if (e.code !== "ENOENT") throw e;
+  if (reconciledOwner)
+    throw Error("Previous worker ledger is missing; inspect before resuming");
 }
-if (previous) {
+if (previous && !previousRuntimeEnded(previous.runtimeId, runtimeId)) {
   if (!previous.responseId)
     throw Error(
       "Uncertain Agent37 dispatch. Inspect the instance sessions before restarting.",
     );
-  const r = await fetch(
-    `${gateway}/v1/responses/${previous.responseId}/cancel`,
-    { method: "POST", headers, signal: AbortSignal.timeout(15000) },
-  );
-  if (!r.ok)
-    throw Error("Cannot reconcile previous response; worker remains stopped");
-  const b: any = await r.json();
-  if (!["completed", "cancelled", "failed"].includes(b.status))
+  const deadline = Date.now() + 60000;
+  let terminal = false;
+  do {
+    const r = await fetch(
+      `${gateway}/v1/responses/${previous.responseId}/cancel`,
+      { method: "POST", headers, signal: AbortSignal.timeout(15000) },
+    );
+    if (!r.ok)
+      throw Error("Cannot reconcile previous response; worker remains stopped");
+    const b: any = await r.json();
+    terminal = ["completed", "cancelled", "failed"].includes(b.status);
+    if (!terminal) await sleep(2000);
+  } while (!terminal && Date.now() < deadline && !stopping);
+  if (!terminal)
     throw Error(
-      "Previous response is still stopping; restart only after it exits",
+      "Previous response did not stop; manual reconciliation required",
     );
   await writeFile(ledgerFile, "null", { mode: 0o600 });
 }
 await writeFile(ledgerFile, "null", { mode: 0o600 });
-await lease();
+// A reboot may finish before the old 30-second lease expires. Wait rather than
+// exiting or stealing it; no research can be claimed until ownership is confirmed.
+const leaseDeadline = Date.now() + 60000;
+while (
+  !(await client.mutation(api.research.acquire, { ...auth, reconciledOwner }))
+) {
+  if (Date.now() >= leaseDeadline || stopping)
+    throw Error("Worker lease unavailable at startup");
+  await sleep(2000);
+}
+await writeFile("/root/signals-worker/owner.json", JSON.stringify({ owner }), {
+  mode: 0o600,
+});
+await writeFile(
+  "/root/signals-worker/ready.json",
+  JSON.stringify({
+    owner,
+    pid: process.pid,
+    startedAt: new Date().toISOString(),
+  }),
+  { mode: 0o600 },
+);
 let renewing = false;
 const leaseTimer = setInterval(async () => {
   if (renewing) return;
@@ -229,6 +269,7 @@ while (!stopping) {
             jobId: job.id,
             execution: job.execution,
             responseId: null,
+            runtimeId,
           }),
           { mode: 0o600 },
         );
@@ -263,6 +304,7 @@ while (!stopping) {
                       jobId: job.id,
                       execution: job.execution,
                       responseId,
+                      runtimeId,
                     }),
                     { mode: 0o600 },
                   );

@@ -9,9 +9,11 @@
  */
 
 import type * as demo from "../demo.js";
+import type * as http from "../http.js";
 import type * as notes from "../notes.js";
 import type * as research from "../research.js";
 import type * as security from "../security.js";
+import type * as workerBoot from "../workerBoot.js";
 
 import type {
   ApiFromModules,
@@ -21,9 +23,11 @@ import type {
 
 declare const fullApi: ApiFromModules<{
   demo: typeof demo;
+  http: typeof http;
   notes: typeof notes;
   research: typeof research;
   security: typeof security;
+  workerBoot: typeof workerBoot;
 }>;
 
 /**

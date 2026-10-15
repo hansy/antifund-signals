@@ -147,3 +147,60 @@ test("lost worker is fenced and not silently replayed; test preferences do not r
     t.mutation(api.research.acquire, { secret: "web", owner: "third" }),
   ).rejects.toThrow("Unauthorized");
 });
+test("confirmed restart resumes unfinished work from its checkpoint and respects paused interest", async () => {
+  for (const desired of [true, false]) {
+    const t = convexTest(schema, modules);
+    await t.mutation(api.research.acquire, auth);
+    await t.mutation(api.demo.prefer, command("interested", 0, "a"));
+    const first = (await t.mutation(api.research.claim, auth))!;
+    const archiveId = await t.run((ctx) =>
+      ctx.storage.store(new Blob(["checkpoint"])),
+    );
+    await t.mutation(api.research.settle, {
+      ...auth,
+      id: first.id,
+      execution: first.execution,
+      report: "{}",
+      archiveId,
+      sha256: "b".repeat(64),
+    });
+    const interrupted = (await t.mutation(api.research.claim, auth))!;
+    if (!desired) await t.mutation(api.demo.prefer, command(null, 1, "pause"));
+    const next = { secret: "worker", owner: "after-reboot" };
+    expect(
+      await t.mutation(api.research.acquire, {
+        ...next,
+        reconciledOwner: auth.owner,
+      }),
+    ).toBe(false);
+    await t.run(async (ctx) => {
+      const lock = (await ctx.db.query("researchWorker").collect())[0]!;
+      await ctx.db.patch(lock._id, { expires: 0 });
+    });
+    await t.mutation(api.research.acquire, {
+      ...next,
+      reconciledOwner: auth.owner,
+    });
+    const resumed = await t.mutation(api.research.claim, next);
+    if (desired) {
+      expect(resumed?.id).toBe(first.id);
+      expect(resumed?.phase).toBe("market-and-alternatives");
+      expect(resumed?.steps[0]?.sha256).toBe("b".repeat(64));
+      expect(resumed?.execution).not.toBe(interrupted.execution);
+    } else {
+      expect(resumed).toBeNull();
+      expect(
+        (await t.query(api.research.list, { secret: "web", actor: "operator" }))
+          .jobs[0]?.status,
+      ).toBe("paused");
+    }
+    await expect(
+      t.mutation(api.research.settle, {
+        ...auth,
+        id: interrupted.id,
+        execution: interrupted.execution,
+        error: "late",
+      }),
+    ).rejects.toThrow();
+  }
+});

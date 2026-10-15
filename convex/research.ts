@@ -87,9 +87,13 @@ export const list = query({
     };
   },
 });
-// Worker lease fences duplicate processes; an expired owner is never silently replayed.
+// Recovery requires the protected supervisor to confirm the old model call ended.
 export const acquire = mutation({
-  args: { secret: v.string(), owner: v.string() },
+  args: {
+    secret: v.string(),
+    owner: v.string(),
+    reconciledOwner: v.optional(v.string()),
+  },
   handler: async (ctx, a) => {
     workerAuth(a.secret);
     const now = Date.now();
@@ -100,15 +104,24 @@ export const acquire = mutation({
     if (lock && lock.owner !== a.owner && lock.expires > now) return false;
     if (lock && lock.owner !== a.owner) {
       for (const job of await ctx.db.query("researchJobs").collect())
-        if (job.status === "running" || job.status === "pausing")
+        if (job.status === "running" || job.status === "pausing") {
+          const recovered =
+            a.reconciledOwner === lock.owner && job.owner === lock.owner;
           await ctx.db.patch(job._id, {
-            status: job.desired ? "failed" : "paused",
+            status: !job.desired
+              ? "paused"
+              : recovered && job.attempts < 12
+                ? "queued"
+                : "failed",
             execution: "",
             owner: "",
             failure:
-              "Worker interrupted. Saved steps are retained; toggle interest off and on to resume.",
+              recovered && (!job.desired || job.attempts < 12)
+                ? null
+                : "Worker interrupted. Saved steps are retained; toggle interest off and on to resume.",
             updatedAt: new Date().toISOString(),
           });
+        }
     }
     if (lock)
       await ctx.db.patch(lock._id, { owner: a.owner, expires: now + 30000 });
