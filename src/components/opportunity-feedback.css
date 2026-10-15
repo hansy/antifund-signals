@@ -1,0 +1,503 @@
+.opportunity-feedback {
+  padding-bottom: 110px;
+}
+.opportunity-feedback-dock {
+  position: fixed;
+  z-index: 40;
+  bottom: max(16px, env(safe-area-inset-bottom));
+  left: calc(var(--rail-width) + 24px);
+  right: 24px;
+  max-width: 1020px;
+  margin-inline: auto;
+  padding: 8px;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  flex-wrap: wrap;
+  background: #fffffff5;
+  backdrop-filter: blur(18px);
+  border: 1px solid #d3ddd4;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px #20372b14;
+}
+.opportunity-note-field {
+  position: relative;
+  flex: 1;
+  min-width: 120px;
+}
+.opportunity-feedback-dock textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 44px;
+  min-height: 44px;
+  padding: 12px 50px 12px 12px;
+  font: inherit;
+  font-size: 14px;
+  line-height: 18px;
+  background: #f7f8f5;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  resize: none;
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+.opportunity-feedback-dock textarea:focus {
+  background: #fff;
+  border-color: var(--accent);
+}
+.opportunity-feedback-dock textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.opportunity-note-field.is-transcribing textarea {
+  height: 76px;
+  padding-bottom: 42px;
+}
+.opportunity-input-status {
+  position: absolute;
+  left: 12px;
+  bottom: 9px;
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 11px;
+  color: var(--muted);
+  pointer-events: none;
+}
+.voice-spin {
+  animation: voice-note-spin 1s linear infinite;
+}
+@keyframes voice-note-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.opportunity-feedback-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.opportunity-feedback-dock button {
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  min-height: 44px;
+}
+.opportunity-feedback-actions button {
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: transparent;
+}
+.opportunity-feedback-actions .opportunity-decision-icon {
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  display: grid;
+  place-items: center;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease;
+}
+.opportunity-feedback-actions .opportunity-decision-icon:hover {
+  border-color: var(--accent);
+  background: #eaf0e9;
+}
+.opportunity-feedback-actions button[aria-pressed="true"],
+.opportunity-feedback-actions button[aria-pressed="true"]:hover {
+  color: #fff;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.opportunity-feedback-dock button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.opportunity-feedback-dock .training-voice.is-embedded {
+  display: contents;
+}
+.opportunity-feedback-dock .training-voice.is-embedded > button {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  bottom: auto;
+  width: 30px;
+  height: 30px;
+  min-height: 30px;
+  display: grid;
+  place-items: center;
+  padding: 6px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+}
+.opportunity-feedback-dock .training-voice.is-embedded > button:hover,
+.opportunity-feedback-dock
+  .training-voice.is-embedded
+  > button[aria-pressed="true"] {
+  background: #eaf0e9;
+  color: var(--accent);
+}
+.opportunity-feedback-dock .training-voice .voice-microphone-icon {
+  position: relative;
+  display: inline-flex;
+  color: inherit;
+}
+.voice-mute-slash {
+  position: absolute;
+  inset: 0;
+}
+.opportunity-feedback-dock > p:not(.sr-only) {
+  flex-basis: 100%;
+  font-size: 12px;
+}
+.opportunity-saved-note {
+  font-size: 12px;
+}
+
+.opportunity-saved-note p {
+  max-height: 80px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+@media (max-width: 959px) {
+  .opportunity-feedback-dock {
+    left: 16px;
+    right: 16px;
+    bottom: max(12px, env(safe-area-inset-bottom));
+  }
+  .opportunity-note-field {
+    min-width: 80px;
+  }
+  .opportunity-feedback-dock textarea {
+    font-size: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .opportunity-feedback {
+    padding-bottom: 160px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .opportunity-feedback-dock textarea,
+  .opportunity-feedback-actions .opportunity-decision-icon {
+    transition: none;
+  }
+  .voice-spin {
+    animation: none;
+  }
+}
+.opportunity-note-entry {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
+}
+.opportunity-note-entry p {
+  margin: 0 0 4px;
+}
+.opportunity-note-tools {
+  display: flex;
+  gap: 8px;
+}
+.opportunity-note-tools button {
+  border: 0;
+  background: transparent;
+  padding: 4px 8px;
+  color: var(--muted);
+}
+.opportunity-note-entry textarea {
+  min-height: 76px;
+  padding-right: 12px;
+}
+
+.opportunity-notes-trigger {
+  position: relative;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  border: 0;
+  border-radius: 6px;
+  color: var(--muted);
+  background: transparent;
+}
+.opportunity-notes-trigger:hover,
+.opportunity-notes-trigger[data-state="open"] {
+  background: #eaf0e9;
+  color: var(--accent);
+}
+.opportunity-notes-trigger:focus-visible {
+  outline: 2px solid var(--accent);
+}
+.opportunity-note-count {
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  font-size: 9px;
+  background: var(--accent);
+  color: white;
+  border-radius: 8px;
+  padding: 1px 4px;
+}
+.opportunity-note-history {
+  z-index: 60;
+  width: min(360px, calc(100vw - 50px));
+  max-height: min(420px, 55dvh, var(--radix-popover-content-available-height));
+  overflow-y: auto;
+  padding: 16px;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px #20372b20;
+  animation: notes-appear 180ms ease-out;
+}
+.opportunity-note-history strong {
+  font-size: 14px;
+}
+.opportunity-saved-note p {
+  max-height: none;
+  overflow-wrap: anywhere;
+}
+.opportunity-note-field.has-draft textarea {
+  padding-right: 82px;
+}
+.opportunity-note-field.is-multiline textarea {
+  padding-right: 50px;
+}
+.opportunity-feedback-dock .opportunity-save-note {
+  position: absolute;
+  right: 43px;
+  bottom: 7px;
+  width: 30px;
+  height: 30px;
+  min-height: 30px;
+  border: 0;
+  border-radius: 5px;
+  padding: 6px;
+  display: grid;
+  place-items: center;
+  color: white;
+  background: var(--accent);
+}
+.opportunity-note-field.is-multiline .opportunity-save-note {
+  right: 7px;
+}
+.opportunity-save-note:hover {
+  filter: brightness(1.1);
+}
+@keyframes notes-appear {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .opportunity-note-history {
+    animation: none;
+  }
+}
+
+.popover-content {
+  outline: none;
+  transform-origin: var(--radix-popover-content-transform-origin);
+}
+.popover-content[data-state="closed"] {
+  animation: notes-disappear 140ms ease-in;
+}
+.opportunity-note-history {
+  background: #f7f8f5;
+}
+.opportunity-note-history > strong {
+  display: block;
+  margin-bottom: 12px;
+}
+.opportunity-note-entry {
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: white;
+}
+.opportunity-note-entry p {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.55;
+}
+.opportunity-note-tools {
+  justify-content: flex-end;
+  gap: 4px;
+}
+.opportunity-note-history button {
+  font: inherit;
+  cursor: pointer;
+}
+.opportunity-note-tools button {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 7px;
+  border-radius: 5px;
+}
+.opportunity-note-tools button:hover {
+  color: var(--accent);
+  background: #eaf0e9;
+}
+.opportunity-note-tools button[aria-label="Delete note"]:hover {
+  color: #a43e36;
+  background: #faf0ed;
+}
+.opportunity-note-history button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.opportunity-note-history button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.opportunity-note-entry textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font: inherit;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+.icon-tooltip {
+  z-index: 110;
+  padding: 6px 9px;
+  background: #253d32;
+  color: white;
+  border-radius: 5px;
+  font-size: 11px;
+  animation: notes-appear 120ms ease-out;
+}
+.icon-tooltip-arrow {
+  fill: #253d32;
+}
+@keyframes notes-disappear {
+  to {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .popover-content,
+  .icon-tooltip {
+    animation: none !important;
+  }
+}
+
+.opportunity-note-entry .opportunity-note-inline-editor {
+  display: block;
+  min-height: 0;
+  resize: none;
+  overflow: hidden;
+  padding: 0;
+  margin: 0 0 10px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 13px;
+  line-height: 1.55;
+  outline: none;
+  box-shadow: 0 1px 0 var(--accent);
+}
+.opportunity-note-field .training-voice.is-embedded > button,
+.opportunity-note-field .opportunity-save-note {
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
+  padding: 6px;
+  border-radius: 6px;
+}
+.opportunity-note-field .training-voice.is-embedded > button svg,
+.opportunity-note-field .opportunity-save-note > svg {
+  width: 18px;
+  height: 18px;
+}
+.voice-dictation {
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  right: 50px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 24px;
+  color: var(--accent);
+  font-size: 11px;
+  pointer-events: none;
+}
+.voice-waveform {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.voice-waveform i {
+  display: block;
+  width: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transition: height 100ms ease-out;
+}
+.voice-dictation > span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.voice-dictation.is-processing .voice-waveform i {
+  animation: dictation-processing 900ms ease-in-out infinite alternate;
+}
+.opportunity-feedback-dock .training-voice.is-embedded > .voice-stop-button {
+  color: #fff;
+  background: var(--accent);
+}
+.opportunity-feedback-dock
+  .training-voice.is-embedded
+  > .voice-stop-button:hover {
+  color: #fff;
+  background: #294b3b;
+}
+@keyframes dictation-processing {
+  from {
+    transform: scaleY(1);
+    opacity: 0.45;
+  }
+  to {
+    transform: scaleY(5);
+    opacity: 1;
+  }
+}
+@media (max-width: 600px) {
+  .voice-dictation {
+    gap: 5px;
+  }
+  .voice-waveform {
+    gap: 1px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .voice-waveform i {
+    transition: none;
+    animation: none !important;
+  }
+}
