@@ -5947,8 +5947,8 @@
     {
       "schemaVersion": 1,
       "id": "compute-energy-control",
-      "revision": 1,
-      "acceptedRevisionId": "compute-energy-control:rubric-v2-20261015",
+      "revision": 2,
+      "acceptedRevisionId": "compute-energy-control:evidence-review-v2-20261015",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -5956,10 +5956,10 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T16:51:48.275Z",
-      "updatedAt": "2026-10-15T21:24:18.427Z",
+      "updatedAt": "2026-10-15T23:48:03.447Z",
       "verdict": null,
       "stage": "first-impressions",
-      "qualificationError": null,
+      "qualificationError": "Evidence reviewed; grid-flexibility need is supported, but incremental product value, paying demand and venture-scale economics remain unproven.",
       "accepted": {
         "content": {
           "marketSize": [],
@@ -5982,7 +5982,7 @@
             "compute-energy-control:application-1",
             "compute-energy-control:application-2"
           ],
-          "keyQuestion": "Same jobs and deadlines on the buyer’s tariff: total compute/energy bill plus idle capacity and transfer costs."
+          "keyQuestion": "For an operator with flexible jobs, can this beat its best existing setup on total cost and grid commitments while meeting the same deadlines and output quality?"
         },
         "projects": [
           {
@@ -6010,72 +6010,90 @@
         "claims": [
           {
             "id": "compute-energy-control:what",
-            "text": "A controller that pauses flexible AI training jobs, lowers chip power, or chooses where to run them when electricity is cheaper. It preserves progress so the job can continue later.",
-            "evidenceIds": [],
+            "text": "Software that slows or pauses AI training when electricity is expensive or the grid is strained, then resumes the work. The product idea is to coordinate these changes without missing agreed deadlines; choosing a different location is a separate option.",
+            "evidenceIds": [
+              "compute-energy-control:synthesis-project-8fedd89e66bcfe53ed61ac70:source-0",
+              "compute-energy-control:synthesis-project-8fedd89e66bcfe53ed61ac70:source-1",
+              "compute-energy-control:synthesis-project-20c5c651da1e2c1908216152:source-3"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "No matched buyer-level economics, paid demand or reachable market estimate. Deadline, output quality, grid eligibility, integration and control interactions remain to be tested."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:48:03.447Z",
+              "reason": "Retained as a bounded product, customer or transfer hypothesis; not established performance, payment or market."
             },
             "kind": "hypothesis",
             "testQuestion": "On an operator’s actual tariff and deadline-constrained jobs, what net savings remain after idle time, transfer costs and existing scheduling tools?"
           },
           {
             "id": "compute-energy-control:problem",
-            "text": "Running a flexible job at a fixed time and location can ignore changing electricity costs. This matters only when the operator pays those costs and can change the schedule.",
-            "evidenceIds": [],
+            "text": "Data centers need large amounts of power, including at times when the grid is stretched. Some computing work can wait. Google reports reducing AI power demand during three Nebraska grid events in 2024, but essential services and customer commitments limit how much can move.",
+            "evidenceIds": [
+              "compute-energy-control:review-google",
+              "compute-energy-control:review-doe",
+              "compute-energy-control:review-iea"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "No matched buyer-level economics, paid demand or reachable market estimate. Deadline, output quality, grid eligibility, integration and control interactions remain to be tested."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:48:03.447Z",
+              "reason": "Inspected original sources support this limited interpretation; no demonstrated commercial advantage."
             },
-            "kind": "hypothesis",
-            "testQuestion": "On an operator’s actual tariff and deadline-constrained jobs, what net savings remain after idle time, transfer costs and existing scheduling tools?"
+            "kind": "inference",
+            "reasoning": "Google reports real demand-response events but not representative frequency or savings. DOE distinguishes control from ownership. IEA sector growth is context, not reachable demand."
           },
           {
             "id": "compute-energy-control:opportunity",
-            "text": "Lower electricity use during expensive periods could reduce a recurring operating expense across many machines. Savings must outweigh delayed completion and any idle hardware costs.",
-            "evidenceIds": [],
+            "text": "Operators could pay to meet agreements to reduce demand during grid strain or cut electricity costs. A controller could add deadline and grid coordination to existing power controls. Emerald AI already offers this kind of coordination, so the opening is easier deployment or an underserved customer. Extra revenue or savings must cover delayed jobs, integration and support.",
+            "evidenceIds": [
+              "compute-energy-control:review-google",
+              "compute-energy-control:review-emerald",
+              "compute-energy-control:review-zeus",
+              "compute-energy-control:review-slurm",
+              "compute-energy-control:review-pjm",
+              "compute-energy-control:review-doe"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "No matched buyer-level economics, paid demand or reachable market estimate. Deadline, output quality, grid eligibility, integration and control interactions remain to be tested."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:48:03.447Z",
+              "reason": "Retained as a bounded product, customer or transfer hypothesis; not established performance, payment or market."
             },
             "kind": "hypothesis",
-            "testQuestion": "On an operator’s actual tariff and deadline-constrained jobs, what net savings remain after idle time, transfer costs and existing scheduling tools?"
+            "testQuestion": "For an operator with flexible jobs, can this beat its best existing setup on total cost and grid commitments while meeting the same deadlines and output quality?"
           },
           {
             "id": "compute-energy-control:customer-0",
-            "text": "AI infrastructure operators with flexible workloads and direct electricity costs",
-            "evidenceIds": [],
+            "text": "Data-center and AI-computing operators that control flexible jobs and capture the energy benefit",
+            "evidenceIds": [
+              "compute-energy-control:review-doe",
+              "compute-energy-control:review-pjm"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "No matched buyer-level economics, paid demand or reachable market estimate. Deadline, output quality, grid eligibility, integration and control interactions remain to be tested."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:48:03.447Z",
+              "reason": "Retained as a bounded product, customer or transfer hypothesis; not established performance, payment or market."
             },
             "kind": "hypothesis",
             "testQuestion": "On an operator’s actual tariff and deadline-constrained jobs, what net savings remain after idle time, transfer costs and existing scheduling tools?"
@@ -6083,56 +6101,66 @@
           {
             "id": "compute-energy-control:application-0",
             "text": "Scheduling flexible AI training",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "compute-energy-control:synthesis-project-8fedd89e66bcfe53ed61ac70:source-0",
+              "compute-energy-control:synthesis-project-8fedd89e66bcfe53ed61ac70:source-1",
+              "compute-energy-control:synthesis-project-20c5c651da1e2c1908216152:source-3"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "No matched buyer-level economics, paid demand or reachable market estimate. Deadline, output quality, grid eligibility, integration and control interactions remain to be tested."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:48:03.447Z",
+              "reason": "Retained as a bounded product, customer or transfer hypothesis; not established performance, payment or market."
             },
             "kind": "hypothesis",
-            "testQuestion": "On an operator’s actual tariff and deadline-constrained jobs, what net savings remain after idle time, transfer costs and existing scheduling tools?"
+            "testQuestion": "For an operator with flexible jobs, can this beat its best existing setup on total cost and grid commitments while meeting the same deadlines and output quality?"
           },
           {
             "id": "compute-energy-control:application-1",
-            "text": "Adjusting chip power",
-            "evidenceIds": [],
+            "text": "Reducing computing demand during grid strain",
+            "evidenceIds": [
+              "compute-energy-control:review-google",
+              "compute-energy-control:review-emerald"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "No matched buyer-level economics, paid demand or reachable market estimate. Deadline, output quality, grid eligibility, integration and control interactions remain to be tested."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:48:03.447Z",
+              "reason": "Retained as a bounded product, customer or transfer hypothesis; not established performance, payment or market."
             },
             "kind": "hypothesis",
-            "testQuestion": "On an operator’s actual tariff and deadline-constrained jobs, what net savings remain after idle time, transfer costs and existing scheduling tools?"
+            "testQuestion": "For an operator with flexible jobs, can this beat its best existing setup on total cost and grid commitments while meeting the same deadlines and output quality?"
           },
           {
             "id": "compute-energy-control:application-2",
-            "text": "Choosing where to run computing jobs",
-            "evidenceIds": [],
+            "text": "Scheduling other work that can wait, such as video processing",
+            "evidenceIds": [
+              "compute-energy-control:review-google",
+              "compute-energy-control:review-emerald"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "No matched buyer-level economics, paid demand or reachable market estimate. Deadline, output quality, grid eligibility, integration and control interactions remain to be tested."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:48:03.447Z",
+              "reason": "Retained as a bounded product, customer or transfer hypothesis; not established performance, payment or market."
             },
             "kind": "hypothesis",
-            "testQuestion": "On an operator’s actual tariff and deadline-constrained jobs, what net savings remain after idle time, transfer costs and existing scheduling tools?"
+            "testQuestion": "Can this controller safely schedule nonurgent video work and improve net value beyond the existing setup?"
           },
           {
             "id": "compute-energy-control:project-synthesis-project-8fedd89e66bcfe53ed61ac70",
@@ -6144,13 +6172,13 @@
             "derivedFromClaimIds": [],
             "confidence": "moderate",
             "limitations": [
-              "Project-reported evidence; not independently reproduced."
+              "Team-reported result; no independent reproduction, complete cost accounting or verified customer benefit."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:48:03.447Z",
+              "reason": "Matched to archived original project HTML; accepted only as a team report, not reproduced results."
             },
             "kind": "reported",
             "attribution": "CarbonShift; CarbonShift",
@@ -6160,21 +6188,18 @@
             "id": "compute-energy-control:project-synthesis-project-20c5c651da1e2c1908216152",
             "text": "GridMind reports starting a real computing machine in a selected region. No actual job-level savings or customer deployment are established.",
             "evidenceIds": [
-              "compute-energy-control:synthesis-project-20c5c651da1e2c1908216152:source-0",
-              "compute-energy-control:synthesis-project-20c5c651da1e2c1908216152:source-1",
-              "compute-energy-control:synthesis-project-20c5c651da1e2c1908216152:source-2",
               "compute-energy-control:synthesis-project-20c5c651da1e2c1908216152:source-3"
             ],
             "derivedFromClaimIds": [],
             "confidence": "moderate",
             "limitations": [
-              "Project-reported evidence; not independently reproduced."
+              "Team-reported result; no independent reproduction, complete cost accounting or verified customer benefit."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:48:03.447Z",
+              "reason": "Matched to archived original project HTML; accepted only as a team report, not reproduced results."
             },
             "kind": "reported",
             "attribution": "GridMind; GridMind; GridMind; GridMind",
@@ -6182,30 +6207,36 @@
           },
           {
             "id": "compute-energy-control:v2-comparison",
-            "text": "Supplement hardware efficiency and electricity procurement; alternative to current job placement/scheduling policies.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "Emerald AI already coordinates computing work with grid needs. Zeus tunes chip power; Slurm manages idle machines; NVIDIA provides power limits. A new controller could supplement these tools by coordinating deadlines and grid commitments, but would overlap directly with Emerald. Cheaper cloud rental is another option for renters; it addresses a different bill.",
+            "kind": "inference",
+            "evidenceIds": [
+              "compute-energy-control:review-emerald",
+              "compute-energy-control:review-zeus",
+              "compute-energy-control:review-slurm",
+              "compute-energy-control:review-nvidia",
+              "compute-energy-control:review-spot"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No matched buyer-level economics, paid demand or reachable market estimate. Deadline, output quality, grid eligibility, integration and control interactions remain to be tested."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:48:03.447Z",
+              "reason": "Inspected original sources support this limited interpretation; no demonstrated commercial advantage."
             },
-            "testQuestion": "On an operator’s actual tariff and deadline-constrained jobs, what net savings remain after idle time, transfer costs and existing scheduling tools?"
+            "reasoning": "Primary supplier descriptions establish substantial overlap and different control layers. Supplementary value and easier deployment remain hypotheses requiring matched testing."
           }
         ],
         "evidence": [
           {
             "id": "compute-energy-control:synthesis-project-8fedd89e66bcfe53ed61ac70:source-0",
             "sourceUrl": "https://devpost.com/software/carbonshift",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/carbonshift",
             "title": "CarbonShift",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -6213,21 +6244,21 @@
             "retrievedAt": "2026-10-15T16:51:48.275Z",
             "excerpt": "In our test run training ResNet-18, we achieved a 37% cost reduction and a 43% reduction in carbon footprint compared to a standard continuous run.",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Archived original HTML; team report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T16:51:48.275Z",
+              "checkedAt": "2026-10-15T23:48:03.447Z",
               "failureIds": []
             }
           },
           {
             "id": "compute-energy-control:synthesis-project-8fedd89e66bcfe53ed61ac70:source-1",
             "sourceUrl": "https://devpost.com/software/carbonshift",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/carbonshift",
             "title": "CarbonShift",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -6235,87 +6266,21 @@
             "retrievedAt": "2026-10-15T16:51:48.275Z",
             "excerpt": "Watching the wattage drop on our dashboard in real-time as prices spiked was a huge win.",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Archived original HTML; team report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T16:51:48.275Z",
-              "failureIds": []
-            }
-          },
-          {
-            "id": "compute-energy-control:synthesis-project-20c5c651da1e2c1908216152:source-0",
-            "sourceUrl": "https://devpost.com/software/gridmind-t42omn",
-            "finalUrl": null,
-            "title": "GridMind",
-            "publisher": null,
-            "sourceRole": "primary",
-            "independence": "project-originated",
-            "publishedAt": null,
-            "observationPeriod": "2026 source event; project completion date unverified",
-            "retrievedAt": "2026-10-15T16:51:48.275Z",
-            "excerpt": "Energy costs represent 30-40% of AI infrastructure spend at the hyperscale companies.",
-            "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
-            "relevance": "direct",
-            "artifactId": null,
-            "checks": {
-              "status": "passed",
-              "checkedAt": "2026-10-15T16:51:48.275Z",
-              "failureIds": []
-            }
-          },
-          {
-            "id": "compute-energy-control:synthesis-project-20c5c651da1e2c1908216152:source-1",
-            "sourceUrl": "https://devpost.com/software/gridmind-t42omn",
-            "finalUrl": null,
-            "title": "GridMind",
-            "publisher": null,
-            "sourceRole": "primary",
-            "independence": "project-originated",
-            "publishedAt": null,
-            "observationPeriod": "2026 source event; project completion date unverified",
-            "retrievedAt": "2026-10-15T16:51:48.275Z",
-            "excerpt": "Electricity wholesale prices swing 10x intraday",
-            "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
-            "relevance": "direct",
-            "artifactId": null,
-            "checks": {
-              "status": "passed",
-              "checkedAt": "2026-10-15T16:51:48.275Z",
-              "failureIds": []
-            }
-          },
-          {
-            "id": "compute-energy-control:synthesis-project-20c5c651da1e2c1908216152:source-2",
-            "sourceUrl": "https://devpost.com/software/gridmind-t42omn",
-            "finalUrl": null,
-            "title": "GridMind",
-            "publisher": null,
-            "sourceRole": "primary",
-            "independence": "project-originated",
-            "publishedAt": null,
-            "observationPeriod": "2026 source event; project completion date unverified",
-            "retrievedAt": "2026-10-15T16:51:48.275Z",
-            "excerpt": "Yet workload routing is static; we route code and models to regions without considering the actual physical state of the grid.",
-            "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
-            "relevance": "direct",
-            "artifactId": null,
-            "checks": {
-              "status": "passed",
-              "checkedAt": "2026-10-15T16:51:48.275Z",
+              "checkedAt": "2026-10-15T23:48:03.447Z",
               "failureIds": []
             }
           },
           {
             "id": "compute-energy-control:synthesis-project-20c5c651da1e2c1908216152:source-3",
             "sourceUrl": "https://devpost.com/software/gridmind-t42omn",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/gridmind-t42omn",
             "title": "GridMind",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -6323,25 +6288,223 @@
             "retrievedAt": "2026-10-15T16:51:48.275Z",
             "excerpt": "A real Fly.io machine booting in the agent-selected region.",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Archived original HTML; team report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T16:51:48.275Z",
+              "checkedAt": "2026-10-15T23:48:03.447Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "compute-energy-control:review-google",
+            "sourceUrl": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/how-were-making-data-centers-more-flexible-to-benefit-power-grids/",
+            "finalUrl": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/how-were-making-data-centers-more-flexible-to-benefit-power-grids/",
+            "title": "Google: How we’re making data centers more flexible to benefit power grids",
+            "publisher": "Google",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2025-08-04",
+            "observationPeriod": "Three grid events in 2024, OPPD service area; announced August 4, 2025; operator report",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "we reduced the power demand associated with ML workloads during three grid events last year",
+            "pdfPage": null,
+            "locator": "Original HTML; description and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:48:03.447Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "compute-energy-control:review-doe",
+            "sourceUrl": "https://www.energy.gov/sites/default/files/2024-08/Powering%20AI%20and%20Data%20Center%20Infrastructure%20Recommendations%20July%202024.pdf",
+            "finalUrl": "https://www.energy.gov/sites/default/files/2024-08/Powering%20AI%20and%20Data%20Center%20Infrastructure%20Recommendations%20July%202024.pdf",
+            "title": "DOE Secretary of Energy Advisory Board: Recommendations on Powering AI and Data Center Infrastructure; physical page 11",
+            "publisher": "U.S. Department of Energy",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2024-07",
+            "observationPeriod": "July 2024 U.S. advisory report; ownership and control can differ",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Management of the data processing is through the AI processing company and not the owner operator of the facility.",
+            "pdfPage": 11,
+            "locator": "Physical PDF page 11; surrounding context inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:48:03.447Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "compute-energy-control:review-emerald",
+            "sourceUrl": "https://arxiv.org/pdf/2507.00909",
+            "finalUrl": "https://arxiv.org/pdf/2507.00909",
+            "title": "Turning AI Data Centers into Grid-Interactive Assets: field demonstration, author and partner report",
+            "publisher": "Emerald AI, NVIDIA, SRP and EPRI authors",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2025-07-01",
+            "observationPeriod": "May 1 and 3, 2025, 256 NVIDIA A100 chips in Oracle Phoenix; supplier/partner report; permitted slowdowns, not unchanged speed",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "the trial achieved a 25% reduction in cluster power usage for three hours during peak grid events while maintaining AI quality of service (QoS) guarantees.",
+            "pdfPage": 1,
+            "locator": "Physical PDF page 1; surrounding context inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:48:03.447Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "compute-energy-control:review-zeus",
+            "sourceUrl": "https://ml.energy/zeus/optimize/",
+            "finalUrl": "https://ml.energy/zeus/optimize/",
+            "title": "Zeus: Optimizing Energy",
+            "publisher": "Zeus project",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated documentation retrieved October 15, 2026; advertised capability",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Finds the optimal GPU power limit for DNN training.",
+            "pdfPage": null,
+            "locator": "Original HTML; description and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:48:03.447Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "compute-energy-control:review-slurm",
+            "sourceUrl": "https://slurm.schedmd.com/power_save.html",
+            "finalUrl": "https://slurm.schedmd.com/power_save.html",
+            "title": "SchedMD: Slurm Power Saving Guide",
+            "publisher": "SchedMD",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated documentation retrieved October 15, 2026; advertised capability",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Nodes resumed by\nResumeProgram\nmust register within\nResumeTimeout\nor they will become\nDOWN\nand their allocated jobs\nare requeued.",
+            "pdfPage": null,
+            "locator": "Original HTML; description and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:48:03.447Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "compute-energy-control:review-nvidia",
+            "sourceUrl": "https://docs.nvidia.com/dgx/dgxb200-user-guide/power-capping.html",
+            "finalUrl": "https://docs.nvidia.com/dgx/dgxb200-user-guide/power-capping.html",
+            "title": "NVIDIA DGX B200 User Guide: Managing Power Capping",
+            "publisher": "NVIDIA",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated documentation retrieved October 15, 2026; hardware-specific controls",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "The GPU Performance Monitoring Unit (PMU) selects the most conservative policy to cap a system’s power consumption.",
+            "pdfPage": null,
+            "locator": "Original HTML; description and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:48:03.447Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "compute-energy-control:review-spot",
+            "sourceUrl": "https://aws.amazon.com/ec2/spot/",
+            "finalUrl": "https://aws.amazon.com/ec2/spot/",
+            "title": "AWS: Amazon EC2 Spot Instances",
+            "publisher": "Amazon Web Services",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated product description retrieved October 15, 2026; unused rental capacity, not electricity tariff",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Build sustainable solutions by leveraging unused EC2 capacity.",
+            "pdfPage": null,
+            "locator": "Original HTML; description and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:48:03.447Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "compute-energy-control:review-pjm",
+            "sourceUrl": "https://www.pjm.com/markets-and-operations/demand-response.aspx",
+            "finalUrl": "https://www.pjm.com/markets-and-operations/demand-response.aspx",
+            "title": "PJM: Demand Response; undated live program page retrieved October 15, 2026",
+            "publisher": "PJM",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated program description retrieved October 15, 2026; eligibility, payment and net benefit not established for these projects",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "These customers receive payments from PJM members called Curtailment Service Providers.",
+            "pdfPage": null,
+            "locator": "Original HTML; description and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:48:03.447Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "compute-energy-control:review-iea",
+            "sourceUrl": "https://iea.blob.core.windows.net/assets/3179f7f8-01f6-4dd6-bffa-c9f7b73f1dc9/KeyQuestionsonEnergyandAI.pdf",
+            "finalUrl": "https://iea.blob.core.windows.net/assets/3179f7f8-01f6-4dd6-bffa-c9f7b73f1dc9/KeyQuestionsonEnergyandAI.pdf",
+            "title": "IEA: Key Questions on Energy and AI, updated global outlook",
+            "publisher": "International Energy Agency",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2026",
+            "observationPeriod": "2026 outlook; global data centers, 2025 estimate and 2030 projection; broader context only",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "consumption from data centres roughly doubling from 485 TWh in 2025 to 950 TWh in 2030,",
+            "pdfPage": 10,
+            "locator": "Physical PDF page 10; surrounding context inspected",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:48:03.447Z",
               "failureIds": []
             }
           }
         ],
         "migrationGaps": [],
-        "id": "compute-energy-control:rubric-v2-20261015",
+        "id": "compute-energy-control:evidence-review-v2-20261015",
         "opportunityId": "compute-energy-control",
-        "parentRevisionId": "compute-energy-control:manifesto-20261015",
-        "createdAt": "2026-10-15T21:24:18.427Z",
-        "producerId": "rubric-reassessment-v2",
-        "origin": "saved-data-synthesis",
-        "changeReason": "Reassessed adjacent uses and functional alternatives. Original evidence review statuses preserved; no new market qualification.",
-        "contentHash": "c2cd00751902561eb22559027e21be6e08fc71fc65be65469a0b3343fd622d9a",
+        "parentRevisionId": "compute-energy-control:rubric-v2-20261015",
+        "createdAt": "2026-10-15T23:48:03.447Z",
+        "producerId": "codex-evidence-inspector",
+        "origin": "inspection-correction",
+        "changeReason": "Inspect all three v2 research phases and original project pages; identify grid-demand coordination as an adjacent opportunity, compare overlapping and complementary tools, and withhold unsupported savings and market conclusions.",
+        "contentHash": "3c6c695a19cf4ef209e71c94da3ad2431b2c9eec90c7791704de4f34446f612c",
         "title": "Software that schedules AI training around electricity costs",
         "classifications": [
           "Energy",
@@ -6350,120 +6513,64 @@
         "assessment": {
           "rubricVersion": "venture-screen-v2",
           "priority": "medium",
-          "priorityReason": "Workload-aware scheduling and chip control may complement power hardware and existing schedulers; the payer must actually capture the energy saving.",
+          "priorityReason": "A real grid-flexibility task and demonstrated supplier mechanism justify testing a specific coordination or installation gap; existing overlap and buyer economics keep priority medium.",
           "confidence": {
             "level": "low",
-            "reason": "Low commercially; reported physical control is more concrete than dollar savings."
+            "reason": "Grid-flexibility activity and supplier capabilities are documented; these projects’ net savings, willingness to pay and additional commercial value are unproven."
           },
           "dimensions": {
             "problem": {
-              "status": "plausible",
-              "reason": "Flexible compute can ignore changing energy conditions, but avoidable costs are not measured for a buyer.",
+              "status": "supported",
+              "reason": "Google reports real grid events; importance is established for particular operators, not a universal frequency or annual burden.",
               "claimIds": [
-                "compute-energy-control:what",
-                "compute-energy-control:problem",
-                "compute-energy-control:opportunity",
-                "compute-energy-control:customer-0",
-                "compute-energy-control:application-0",
-                "compute-energy-control:application-1",
-                "compute-energy-control:application-2",
-                "compute-energy-control:project-synthesis-project-8fedd89e66bcfe53ed61ac70",
-                "compute-energy-control:project-synthesis-project-20c5c651da1e2c1908216152"
+                "compute-energy-control:problem"
               ]
             },
             "customerPayment": {
               "status": "plausible",
-              "reason": "Hardware operators with relevant tariffs could pay; fixed-rate renters may capture no benefit.",
+              "reason": "Operators controlling flexible jobs and capturing energy benefits are plausible payers; grid payments are not software purchase commitments.",
               "claimIds": [
-                "compute-energy-control:what",
-                "compute-energy-control:problem",
-                "compute-energy-control:opportunity",
-                "compute-energy-control:customer-0",
-                "compute-energy-control:application-0",
-                "compute-energy-control:application-1",
-                "compute-energy-control:application-2",
-                "compute-energy-control:project-synthesis-project-8fedd89e66bcfe53ed61ac70",
-                "compute-energy-control:project-synthesis-project-20c5c651da1e2c1908216152"
+                "compute-energy-control:customer-0"
               ]
             },
             "productValue": {
-              "status": "supported",
-              "reason": "Retained work reports physical power control and regional provisioning in separate projects; combined savings are not established.",
+              "status": "plausible",
+              "reason": "Power reduction and controlled scheduling can help, but these projects have not demonstrated net customer benefit. Supplier trial allowed slower jobs.",
               "claimIds": [
-                "compute-energy-control:what",
-                "compute-energy-control:problem",
-                "compute-energy-control:opportunity",
-                "compute-energy-control:customer-0",
-                "compute-energy-control:application-0",
-                "compute-energy-control:application-1",
-                "compute-energy-control:application-2",
-                "compute-energy-control:project-synthesis-project-8fedd89e66bcfe53ed61ac70",
-                "compute-energy-control:project-synthesis-project-20c5c651da1e2c1908216152"
+                "compute-energy-control:opportunity"
               ]
             },
             "commercialGap": {
-              "status": "plausible",
-              "reason": "Workload/deadline coordination can supplement chip power controls and schedulers; overlapping features need comparison.",
+              "status": "missing",
+              "reason": "Direct Emerald overlap and existing controls are documented. Easier coordination or installation is testable, but no underserved paying segment is established.",
               "claimIds": [
-                "compute-energy-control:what",
-                "compute-energy-control:problem",
-                "compute-energy-control:opportunity",
-                "compute-energy-control:customer-0",
-                "compute-energy-control:application-0",
-                "compute-energy-control:application-1",
-                "compute-energy-control:application-2",
-                "compute-energy-control:project-synthesis-project-8fedd89e66bcfe53ed61ac70",
-                "compute-energy-control:project-synthesis-project-20c5c651da1e2c1908216152"
+                "compute-energy-control:v2-comparison"
               ]
             },
             "ventureScale": {
               "status": "plausible",
-              "reason": "Fleet deployment could create recurring revenue; eligible flexible loads and attainable price are unknown.",
+              "reason": "Recurring deployment across eligible fleets is a possible route; buyer counts, flexible capacity and obtainable fees are missing. Global electricity use is not reachable software demand.",
               "claimIds": [
-                "compute-energy-control:what",
-                "compute-energy-control:problem",
-                "compute-energy-control:opportunity",
-                "compute-energy-control:customer-0",
-                "compute-energy-control:application-0",
-                "compute-energy-control:application-1",
-                "compute-energy-control:application-2",
-                "compute-energy-control:project-synthesis-project-8fedd89e66bcfe53ed61ac70",
-                "compute-energy-control:project-synthesis-project-20c5c651da1e2c1908216152"
+                "compute-energy-control:opportunity"
               ]
             },
             "businessCapital": {
-              "status": "plausible",
-              "reason": "Software may repeat, but infrastructure permissions, transfer costs and integration remain unresolved.",
+              "status": "missing",
+              "reason": "Integration, security, support and acquisition costs, margins and financing requirements unknown. Competitor funding is not a product budget.",
               "claimIds": [
-                "compute-energy-control:what",
-                "compute-energy-control:problem",
-                "compute-energy-control:opportunity",
-                "compute-energy-control:customer-0",
-                "compute-energy-control:application-0",
-                "compute-energy-control:application-1",
-                "compute-energy-control:application-2",
-                "compute-energy-control:project-synthesis-project-8fedd89e66bcfe53ed61ac70",
-                "compute-energy-control:project-synthesis-project-20c5c651da1e2c1908216152"
+                "compute-energy-control:opportunity"
               ]
             },
             "timing": {
-              "status": "missing",
-              "reason": "No inspected series links this capability to growing paid demand.",
+              "status": "plausible",
+              "reason": "Published grid constraints and demand-response activity provide a reason to test adoption now; they do not establish current buying growth for a new vendor.",
               "claimIds": [
-                "compute-energy-control:what",
-                "compute-energy-control:problem",
-                "compute-energy-control:opportunity",
-                "compute-energy-control:customer-0",
-                "compute-energy-control:application-0",
-                "compute-energy-control:application-1",
-                "compute-energy-control:application-2",
-                "compute-energy-control:project-synthesis-project-8fedd89e66bcfe53ed61ac70",
-                "compute-energy-control:project-synthesis-project-20c5c651da1e2c1908216152"
+                "compute-energy-control:problem"
               ]
             }
           },
-          "strongestObjection": "Idle hardware, slower jobs and transfers can outweigh lower power draw.",
-          "decisiveQuestion": "Same jobs and deadlines on the buyer’s tariff: total compute/energy bill plus idle capacity and transfer costs."
+          "strongestObjection": "Existing software already covers much of the task. Lower power can mean slower jobs, idle expensive equipment or no change to a fixed cloud bill.",
+          "decisiveQuestion": "For an operator with flexible jobs, can this beat its best existing setup on total cost and grid commitments while meeting the same deadlines and output quality?"
         }
       },
       "research": null,

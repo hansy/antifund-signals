@@ -3466,10 +3466,10 @@
       "year": 2026,
       "summary": "GridMind reports starting a real computing machine in a selected region. No actual job-level savings or customer deployment are established.",
       "problem": "Choosing a fixed location can ignore changes in electricity price, emissions, cooling conditions, and response delay.",
-      "approach": "Software compares electricity and weather conditions across three US regions and starts a computing machine in the selected region.",
+      "approach": "The team describes software comparing electricity and weather conditions across three US regions and starting a computing machine in the selected region.",
       "whyItMatters": "We think movable jobs might cost less or cause fewer emissions if the customer actually benefits from local electricity conditions and moving the work does not erase those gains.",
       "statusQuo": "The team describes fixed workload placement that does not consider current electricity conditions. It does not benchmark existing cloud schedulers or energy-aware scheduling products.",
-      "results": "The source explicitly reports a real machine starting in the chosen location. This demonstrates the placement action, not lower energy bills, lower emissions, or successful completion of customer jobs.",
+      "results": "The team reports starting a real machine in the selected location. This has not been independently reproduced and does not establish lower bills, lower emissions or successful completion of customer jobs.",
       "limitations": "Wholesale electricity prices may not change a customer's cloud bill. No achieved job-level savings or emissions reduction is reported. Data transfer, hardware availability, deadlines, and data-location rules can restrict movement. Historical fallback data may be stale. Connection to customer-owned infrastructure is planned. The reported speed improvements lack reproducible tests. Year and school identify the source event collection, not a verified completion date or author affiliation.",
       "topics": [
         "Energy"
@@ -3479,21 +3479,6 @@
         "nicholas costello"
       ],
       "evidence": [
-        {
-          "sourceId": "synthesis-source-20c5c651da1e2c1908216152",
-          "quote": "Energy costs represent 30-40% of AI infrastructure spend at the hyperscale companies.",
-          "locator": "Saved project description; project-reported evidence"
-        },
-        {
-          "sourceId": "synthesis-source-20c5c651da1e2c1908216152",
-          "quote": "Electricity wholesale prices swing 10x intraday",
-          "locator": "Saved project description; project-reported evidence"
-        },
-        {
-          "sourceId": "synthesis-source-20c5c651da1e2c1908216152",
-          "quote": "Yet workload routing is static; we route code and models to regions without considering the actual physical state of the grid.",
-          "locator": "Saved project description; project-reported evidence"
-        },
         {
           "sourceId": "synthesis-source-20c5c651da1e2c1908216152",
           "quote": "A real Fly.io machine booting in the agent-selected region.",
@@ -5019,15 +5004,15 @@
     {
       "id": "compute-energy-control",
       "title": "Software that schedules AI training around electricity costs",
-      "summary": "Run flexible AI jobs when electricity costs less.",
+      "summary": "Adjust flexible AI work to electricity prices and grid demand.",
       "topic": "Energy",
-      "problem": "Running a flexible job at a fixed time and location can ignore changing electricity costs. This matters only when the operator pays those costs and can change the schedule.",
-      "statusQuo": "Running a flexible job at a fixed time and location can ignore changing electricity costs. This matters only when the operator pays those costs and can change the schedule.",
-      "gap": "Lower power does not necessarily lower the total bill; idle hardware, delayed completion and fixed cloud prices may outweigh savings.",
-      "opportunity": "Lower electricity use during expensive periods could reduce a recurring operating expense across many machines. Savings must outweigh delayed completion and any idle hardware costs.",
-      "evidence": "A specific cost-control mechanism and a reported physical chip demonstration. Weaker commercial evidence than the named industrial problems: cloud billing or slower completion could erase the apparent benefit.",
-      "counterpoint": "Idle hardware, slower jobs and transfers can outweigh lower power draw.",
-      "nextQuestion": "Same jobs and deadlines on the buyer’s tariff: total compute/energy bill plus idle capacity and transfer costs.",
+      "problem": "Data centers need large amounts of power, including at times when the grid is stretched. Some computing work can wait. Google reports reducing AI power demand during three Nebraska grid events in 2024, but essential services and customer commitments limit how much can move.",
+      "statusQuo": "Emerald AI offers grid-aware coordination; Zeus optimizes chip power, Slurm manages idle machines, and operators can set their own schedules.",
+      "gap": "Easier, reliable coordination for operators whose current setup does not meet their grid commitments or cost targets. That additional value remains unproven.",
+      "opportunity": "Operators could pay to meet agreements to reduce demand during grid strain or cut electricity costs. A controller could add deadline and grid coordination to existing power controls. Emerald AI already offers this kind of coordination, so the opening is easier deployment or an underserved customer. Extra revenue or savings must cover delayed jobs, integration and support.",
+      "evidence": "CarbonShift and GridMind report separate chip-control and location-choice demonstrations. Separately, Emerald and its partners report a 25% power reduction for three hours on a 256-chip Phoenix cluster in May 2025, with agreed slowdowns allowed. That supports the mechanism, not these projects’ savings or a new supplier’s advantage.",
+      "counterpoint": "Existing software already covers much of the task. Lower power can mean slower jobs, idle expensive equipment or no change to a fixed cloud bill.",
+      "nextQuestion": "For an operator with flexible jobs, can this beat its best existing setup on total cost and grid commitments while meeting the same deadlines and output quality?",
       "projectIds": [
         "synthesis-project-8fedd89e66bcfe53ed61ac70",
         "synthesis-project-20c5c651da1e2c1908216152"
@@ -5038,8 +5023,8 @@
       ],
       "confidence": "Early signal",
       "brief": {
-        "whatItIs": "A controller that pauses flexible AI training jobs, lowers chip power, or chooses where to run them when electricity is cheaper. It preserves progress so the job can continue later.",
-        "problem": "Running a flexible job at a fixed time and location can ignore changing electricity costs. This matters only when the operator pays those costs and can change the schedule.",
+        "whatItIs": "Software that slows or pauses AI training when electricity is expensive or the grid is strained, then resumes the work. The product idea is to coordinate these changes without missing agreed deadlines; choosing a different location is a separate option.",
+        "problem": "Data centers need large amounts of power, including at times when the grid is stretched. Some computing work can wait. Google reports reducing AI power demand during three Nebraska grid events in 2024, but essential services and customer commitments limit how much can move.",
         "breakthroughs": [
           {
             "text": "CarbonShift reports 37% lower cost and 43% lower estimated-or-measured carbon footprint in one image-model training comparison. Cost accounting, elapsed time, repeated runs and equal final model quality are unspecified. CarbonShift reports changing an A100 chip’s physical power draw and preserving training state.",
@@ -5054,24 +5039,61 @@
             ]
           }
         ],
-        "marketOpportunity": "Lower electricity use during expensive periods could reduce a recurring operating expense across many machines. Savings must outweigh delayed completion and any idle hardware costs.",
-        "buyer": "AI infrastructure operators with flexible workloads and direct electricity costs",
+        "marketOpportunity": "Operators could pay to meet agreements to reduce demand during grid strain or cut electricity costs. A controller could add deadline and grid coordination to existing power controls. Emerald AI already offers this kind of coordination, so the opening is easier deployment or an underserved customer. Extra revenue or savings must cover delayed jobs, integration and support.",
+        "buyer": "Data-center and AI-computing operators that control flexible jobs and capture the energy benefit",
         "applications": [
           "Scheduling flexible AI training",
-          "Adjusting chip power",
-          "Choosing where to run computing jobs"
+          "Reducing computing demand during grid strain",
+          "Scheduling other work that can wait, such as video processing"
         ],
         "targetCustomers": [
-          "AI infrastructure operators with flexible workloads and direct electricity costs"
+          "Data-center and AI-computing operators that control flexible jobs and capture the energy benefit"
         ],
-        "marketStatus": "hypothesis",
-        "marketEvidence": [],
+        "marketStatus": "researched",
+        "marketEvidence": [
+          {
+            "title": "Google: How we’re making data centers more flexible to benefit power grids",
+            "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/how-were-making-data-centers-more-flexible-to-benefit-power-grids/",
+            "excerpt": "we reduced the power demand associated with ML workloads during three grid events last year",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Turning AI Data Centers into Grid-Interactive Assets: field demonstration, author and partner report",
+            "url": "https://arxiv.org/pdf/2507.00909",
+            "excerpt": "the trial achieved a 25% reduction in cluster power usage for three hours during peak grid events while maintaining AI quality of service (QoS) guarantees.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Zeus: Optimizing Energy",
+            "url": "https://ml.energy/zeus/optimize/",
+            "excerpt": "Finds the optimal GPU power limit for DNN training.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "SchedMD: Slurm Power Saving Guide",
+            "url": "https://slurm.schedmd.com/power_save.html",
+            "excerpt": "Nodes resumed by\nResumeProgram\nmust register within\nResumeTimeout\nor they will become\nDOWN\nand their allocated jobs\nare requeued.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "NVIDIA DGX B200 User Guide: Managing Power Capping",
+            "url": "https://docs.nvidia.com/dgx/dgxb200-user-guide/power-capping.html",
+            "excerpt": "The GPU Performance Monitoring Unit (PMU) selects the most conservative policy to cap a system’s power consumption.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "AWS: Amazon EC2 Spot Instances",
+            "url": "https://aws.amazon.com/ec2/spot/",
+            "excerpt": "Build sustainable solutions by leveraging unused EC2 capacity.",
+            "accessedAt": "2026-10-15"
+          }
+        ],
         "risks": [
-          "Lower power does not necessarily lower the total bill; idle hardware, delayed completion and fixed cloud prices may outweigh savings.",
-          "Two distinct projects and author sets in separate hackathons. CarbonShift’s two candidate records count as one project. Similar interest is not market growth."
+          "Existing software already covers much of the task. Lower power can mean slower jobs, idle expensive equipment or no change to a fixed cloud bill.",
+          "Paid demand, repeatable installation costs and a reachable market remain unproven. Two project teams do not establish adoption or market growth."
         ],
         "nextQuestions": [
-          "Same jobs and deadlines on the buyer’s tariff: total compute/energy bill plus idle capacity and transfer costs."
+          "For an operator with flexible jobs, can this beat its best existing setup on total cost and grid commitments while meeting the same deadlines and output quality?"
         ]
       }
     },
