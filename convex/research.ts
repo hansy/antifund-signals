@@ -2,6 +2,7 @@ import { mutation, query } from "./_generated/server";
 import type { MutationCtx } from "./_generated/server";
 import { v, ConvexError } from "convex/values";
 import { requireSecret } from "./security";
+import { validateEvidenceArchive } from "./evidenceArchive";
 import snapshot from "../data/opportunities.json";
 export const phases = [
   "problem-and-customer",
@@ -241,7 +242,7 @@ export const claim = mutation({
   handler: async (ctx, a) => {
     workerAuth(a.secret);
     await own(ctx, a.owner);
-    if (!enabled()) return null;
+    if (!enabled() || process.env.RESEARCH_DRAIN === "true") return null;
     const jobs = await ctx.db.query("researchJobs").collect();
     if (jobs.some((j) => j.status === "running" || j.status === "pausing"))
       return null;
@@ -283,6 +284,9 @@ export const claim = mutation({
         .filter((n) => !n.deleted)
         .map((n) => ({ id: n.id, version: n.version, text: n.text })),
       steps: job.steps,
+      uploadRecovery: job.uploadRecovery?.completedAt
+        ? undefined
+        : job.uploadRecovery,
     };
   },
 });
@@ -353,8 +357,21 @@ export const settle = mutation({
       )
         throw Error("Invalid checkpoint");
       const file = await ctx.db.system.get(a.archiveId);
-      if (!file || file.size > 25000000)
-        throw Error("Missing or oversized evidence archive");
+      validateEvidenceArchive(file, a.sha256);
+      if (j.uploadRecovery && !j.uploadRecovery.completedAt) {
+        const digest = await crypto.subtle.digest(
+          "SHA-256",
+          new TextEncoder().encode(a.report),
+        );
+        const hex = Array.from(new Uint8Array(digest), (b) =>
+          b.toString(16).padStart(2, "0"),
+        ).join("");
+        if (
+          j.uploadRecovery.phase !== phases[steps.length] ||
+          hex !== j.uploadRecovery.reportHash
+        )
+          throw Error("Recovered report does not match retained research");
+      }
       steps.push({
         name: phases[steps.length]!,
         report: a.report,
@@ -379,6 +396,12 @@ export const settle = mutation({
               : "queued";
     await ctx.db.patch(j._id, {
       steps,
+      uploadRecovery:
+        j.uploadRecovery &&
+        a.report !== undefined &&
+        !j.uploadRecovery.completedAt
+          ? { ...j.uploadRecovery, completedAt: now }
+          : j.uploadRecovery,
       status,
       execution: "",
       owner: "",
@@ -510,5 +533,64 @@ export const completeReview = mutation({
       updatedAt: reviewedAt,
     });
     return { reviewedAt, status: "completed" };
+  },
+});
+
+// Explicit, diagnosed upload recovery. The worker must replay this exact saved
+// report; missing or changed inputs fail closed instead of spending on research.
+export const recoverUpload = mutation({
+  args: {
+    secret: v.string(),
+    cardId: v.string(),
+    reportHash: v.string(),
+    originalExecution: v.string(),
+  },
+  handler: async (ctx, a) => {
+    workerAuth(a.secret);
+    if (
+      !/^[a-f0-9]{64}$/.test(a.reportHash) ||
+      !/^[a-f0-9-]{36}$/.test(a.originalExecution)
+    )
+      throw Error("Invalid recovery identity");
+    const j = await ctx.db
+      .query("researchJobs")
+      .withIndex("by_actor_card", (q) =>
+        q.eq("actor", "operator").eq("cardId", a.cardId),
+      )
+      .unique();
+    if (!j) throw Error("Missing research job");
+    if (j.uploadRecovery) {
+      if (
+        j.uploadRecovery.reportHash !== a.reportHash ||
+        j.uploadRecovery.originalExecution !== a.originalExecution
+      )
+        throw Error("Conflicting recovery request");
+      return {
+        status: j.status,
+        recovered: Boolean(j.uploadRecovery.completedAt),
+      };
+    }
+    if (
+      j.status !== "failed" ||
+      j.execution ||
+      j.owner ||
+      j.attempts >= 12 ||
+      j.steps.length >= phases.length ||
+      !j.failure?.startsWith("Evidence archive exceeds ")
+    )
+      throw Error("Not an inspected upload failure");
+    const now = new Date().toISOString();
+    await ctx.db.patch(j._id, {
+      status: j.desired ? "queued" : "paused",
+      updatedAt: now,
+      uploadRecovery: {
+        phase: phases[j.steps.length]!,
+        reportHash: a.reportHash,
+        originalExecution: a.originalExecution,
+        requestedAt: now,
+        originalFailure: j.failure,
+      },
+    });
+    return { status: j.desired ? "queued" : "paused", recovered: false };
   },
 });

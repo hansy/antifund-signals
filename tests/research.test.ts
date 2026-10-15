@@ -7,6 +7,8 @@ const modules = {
   "../convex/demo.ts": () => import("../convex/demo"),
   "../convex/_generated/server.ts": () => import("../convex/_generated/server"),
 };
+const hash = (text: string) =>
+  new Bun.CryptoHasher("sha256").update(text).digest("hex");
 const previous = { ...process.env };
 beforeEach(() => {
   process.env.RESEARCH_ENABLED = "true";
@@ -16,6 +18,7 @@ beforeEach(() => {
 afterEach(() => {
   for (const k of [
     "RESEARCH_ENABLED",
+    "RESEARCH_DRAIN",
     "RESEARCH_WRITE_SECRET",
     "RESEARCH_WORKER_SECRET",
   ]) {
@@ -147,7 +150,7 @@ test("completed steps survive pauses; completion awaits inspection and never rep
       execution: j.execution,
       report: "{}",
       archiveId,
-      sha256: "a".repeat(64),
+      sha256: hash("retained evidence"),
     });
   await t.mutation(api.demo.prefer, command(null, 1, "b"));
   await finish();
@@ -225,7 +228,7 @@ test("confirmed restart resumes unfinished work from its checkpoint and respects
       execution: first.execution,
       report: "{}",
       archiveId,
-      sha256: "b".repeat(64),
+      sha256: hash("checkpoint"),
     });
     const interrupted = (await t.mutation(api.research.claim, auth))!;
     if (!desired) await t.mutation(api.demo.prefer, command(null, 1, "pause"));
@@ -248,7 +251,7 @@ test("confirmed restart resumes unfinished work from its checkpoint and respects
     if (desired) {
       expect(resumed?.id).toBe(first.id);
       expect(resumed?.phase).toBe("market-and-alternatives");
-      expect(resumed?.steps[0]?.sha256).toBe("b".repeat(64));
+      expect(resumed?.steps[0]?.sha256).toBe(hash("checkpoint"));
       expect(resumed?.execution).not.toBe(interrupted.execution);
     } else {
       expect(resumed).toBeNull();
@@ -420,7 +423,7 @@ test("batch adopts an active final attempt without resetting its budget or stran
       execution: job.execution,
       report: "{}",
       archiveId,
-      sha256: "d".repeat(64),
+      sha256: hash("final attempt evidence"),
     });
     const ended = await t.run((ctx) => ctx.db.get(job.id));
     expect(ended?.status).toBe("failed");
@@ -450,14 +453,14 @@ test("review completion requires exact checkpoints, deployed revision and audit,
       execution: j.execution,
       report: "{}",
       archiveId,
-      sha256: "a".repeat(64),
+      sha256: hash("audit and evidence"),
     });
   }
   const args = {
     secret: "worker",
     cardId: s.id,
     reviewId: "review-test",
-    checkpointHashes: Array(3).fill("a".repeat(64)),
+    checkpointHashes: Array(3).fill(hash("audit and evidence")),
     auditArchiveId: archiveId,
     auditSha256: new Bun.CryptoHasher("sha256")
       .update("audit and evidence")
@@ -506,4 +509,94 @@ test("review completion requires exact checkpoints, deployed revision and audit,
   expect(done.status).toBe("completed");
   expect(done.review?.publishedRevisionHash).toBe(s.accepted.contentHash);
   expect(JSON.stringify(view)).not.toContain("auditArchiveId");
+});
+
+test("upload recovery preserves saved work, rejects mismatches and repeats idempotently", async () => {
+  const t = convexTest(schema, modules);
+  await t.mutation(api.demo.prefer, command("interested", 0, "start"));
+  await t.mutation(api.research.acquire, auth);
+  const first = (await t.mutation(api.research.claim, auth))!;
+  await t.mutation(api.research.settle, {
+    ...auth,
+    id: first.id,
+    execution: first.execution,
+    error: "Evidence archive exceeds 25 MB; retained on worker for inspection",
+  });
+  const request = {
+    secret: "worker",
+    cardId: "synthesis-o01",
+    reportHash: hash("{}"),
+    originalExecution: first.execution,
+  };
+  await expect(
+    t.mutation(api.research.recoverUpload, { ...request, secret: "web" }),
+  ).rejects.toThrow("Unauthorized");
+  await t.mutation(api.research.recoverUpload, request);
+  await t.mutation(api.research.recoverUpload, request);
+  process.env.RESEARCH_DRAIN = "true";
+  expect(await t.mutation(api.research.claim, auth)).toBeNull();
+  process.env.RESEARCH_DRAIN = "false";
+  const replay = (await t.mutation(api.research.claim, auth))!;
+  expect(replay.uploadRecovery?.reportHash).toBe(hash("{}"));
+  process.env.RESEARCH_DRAIN = "true";
+  expect(
+    (
+      await t.query(api.research.control, {
+        ...auth,
+        id: replay.id,
+        execution: replay.execution,
+      })
+    ).stop,
+  ).toBe(false);
+  // A legitimate image-heavy source archive exceeds the old cap.
+  const bytes = new Uint8Array(33_525_760);
+  const digest = new Bun.CryptoHasher("sha256").update(bytes).digest("hex");
+  const archiveId = await t.run((ctx) => ctx.storage.store(new Blob([bytes])));
+  const settle = {
+    ...auth,
+    id: replay.id,
+    execution: replay.execution,
+    archiveId,
+    report: "{}",
+    sha256: digest,
+  };
+  await expect(
+    t.mutation(api.research.settle, { ...settle, sha256: "a".repeat(64) }),
+  ).rejects.toThrow("checksum mismatch");
+  await expect(
+    t.mutation(api.research.settle, { ...settle, report: "{ }" }),
+  ).rejects.toThrow("does not match");
+  await t.mutation(api.research.settle, settle);
+  await expect(t.mutation(api.research.settle, settle)).rejects.toThrow(
+    "Stale",
+  );
+  expect(
+    (await t.mutation(api.research.recoverUpload, request)).recovered,
+  ).toBe(true);
+  await expect(
+    t.mutation(api.research.recoverUpload, {
+      ...request,
+      reportHash: "b".repeat(64),
+    }),
+  ).rejects.toThrow("Conflicting");
+  process.env.RESEARCH_DRAIN = "false";
+  const next = (await t.mutation(api.research.claim, auth))!;
+  expect(next.id).toBe(first.id);
+  expect(next.steps).toHaveLength(1);
+  expect(next.steps[0]?.sha256).toBe(digest);
+  expect(next.phase).toBe("market-and-alternatives");
+  expect(next.uploadRecovery).toBeUndefined();
+});
+
+test("evidence bound rejects empty and oversized files", async () => {
+  const { validateEvidenceArchive, MAX_EVIDENCE_ARCHIVE_BYTES } =
+    await import("../convex/evidenceArchive");
+  for (const file of [
+    null,
+    { size: 0, sha256: "" },
+    { size: MAX_EVIDENCE_ARCHIVE_BYTES + 1, sha256: "" },
+  ])
+    expect(() => validateEvidenceArchive(file, hash("x"))).toThrow(
+      "Missing or oversized",
+    );
 });

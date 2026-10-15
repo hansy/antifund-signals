@@ -13,6 +13,7 @@ import {
   readdir,
 } from "node:fs/promises";
 import { createWriteStream, constants } from "node:fs";
+import { MAX_EVIDENCE_ARCHIVE_BYTES } from "../convex/evidenceArchive";
 import { readReport } from "./research-files";
 import {
   researchInstructionsVersion,
@@ -208,6 +209,11 @@ while (!stopping) {
       // Reuse its complete report only when the exact research input still matches.
       for (const receipt of await readdir(join(root, job.id))) {
         if (!receipt.endsWith(".completed")) continue;
+        if (
+          job.uploadRecovery &&
+          receipt !== `${job.uploadRecovery.originalExecution}.completed`
+        )
+          continue;
         const prior = join(root, job.id, receipt.slice(0, -10));
         try {
           if (
@@ -215,7 +221,16 @@ while (!stopping) {
             JSON.stringify(input)
           )
             continue;
-          reportSchema.parse(await readReport(join(prior, "report.json")));
+          const retained = reportSchema.parse(
+            await readReport(join(prior, "report.json")),
+          );
+          if (
+            job.uploadRecovery &&
+            createHash("sha256")
+              .update(JSON.stringify(retained))
+              .digest("hex") !== job.uploadRecovery.reportHash
+          )
+            continue;
           dir = prior;
           replay = true;
           break;
@@ -223,6 +238,10 @@ while (!stopping) {
           /* Invalid attempts remain retained; only valid reports can replay. */
         }
       }
+      if (!replay && job.uploadRecovery)
+        throw Error(
+          "Saved upload recovery does not match current input/report; research was not rerun",
+        );
       if (!replay) {
         await writeFile(
           join(dir, "input.json"),
@@ -432,9 +451,9 @@ while (!stopping) {
           else sink.once("finish", res);
         });
       });
-      if ((await stat(archive)).size > 25000000)
+      if ((await stat(archive)).size > MAX_EVIDENCE_ARCHIVE_BYTES)
         throw Error(
-          "Evidence archive exceeds 25 MB; retained on worker for inspection",
+          "Evidence archive exceeds 64 MiB; retained on worker for inspection",
         );
       const bytes = await readFile(archive);
       const sha256 = createHash("sha256").update(bytes).digest("hex");

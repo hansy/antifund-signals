@@ -32,6 +32,16 @@ export default defineSchema({
         publishedRevisionHash: v.string(),
       }),
     ),
+    uploadRecovery: v.optional(
+      v.object({
+        phase: v.string(),
+        reportHash: v.string(),
+        originalExecution: v.string(),
+        requestedAt: v.string(),
+        originalFailure: v.string(),
+        completedAt: v.optional(v.string()),
+      }),
+    ),
     execution: v.string(),
     owner: v.string(),
     attempts: v.number(),

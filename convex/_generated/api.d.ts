@@ -9,6 +9,7 @@
  */
 
 import type * as demo from "../demo.js";
+import type * as evidenceArchive from "../evidenceArchive.js";
 import type * as http from "../http.js";
 import type * as notes from "../notes.js";
 import type * as research from "../research.js";
@@ -23,6 +24,7 @@ import type {
 
 declare const fullApi: ApiFromModules<{
   demo: typeof demo;
+  evidenceArchive: typeof evidenceArchive;
   http: typeof http;
   notes: typeof notes;
   research: typeof research;
