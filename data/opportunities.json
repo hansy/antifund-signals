@@ -642,8 +642,8 @@
     {
       "schemaVersion": 1,
       "id": "factory-robot-setup",
-      "revision": 1,
-      "acceptedRevisionId": "factory-robot-setup:rubric-v2-20261015",
+      "revision": 2,
+      "acceptedRevisionId": "factory-robot-setup:evidence-review-v2-20261015",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -651,19 +651,19 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T02:31:21.257Z",
-      "updatedAt": "2026-10-15T21:24:18.427Z",
+      "updatedAt": "2026-10-15T21:59:29.732Z",
       "verdict": null,
       "stage": "first-impressions",
-      "qualificationError": null,
+      "qualificationError": "Evidence reviewed; additional customer value, reachable market and repeatable margins remain unproven.",
       "accepted": {
-        "id": "factory-robot-setup:rubric-v2-20261015",
+        "id": "factory-robot-setup:evidence-review-v2-20261015",
         "opportunityId": "factory-robot-setup",
-        "parentRevisionId": "factory-robot-setup:migration-v1",
-        "createdAt": "2026-10-15T21:24:18.427Z",
-        "producerId": "rubric-reassessment-v2",
-        "origin": "saved-data-synthesis",
-        "changeReason": "Reassessed adjacent uses and functional alternatives. Original evidence review statuses preserved; no new market qualification.",
-        "contentHash": "40f9dc81155138f0601b8f6e79cd5eb6253d83c7f856258f7f3e4cfd0feb55f7",
+        "parentRevisionId": "factory-robot-setup:rubric-v2-20261015",
+        "createdAt": "2026-10-15T21:59:29.732Z",
+        "producerId": "codex-evidence-inspector",
+        "origin": "inspection-correction",
+        "changeReason": "Inspected historical problem evidence, primary project pages and functional alternatives using venture-screen-v2. Remove adjacent industry market proxy; distinguish overlap, complementary role and unproven transfer.",
+        "contentHash": "0a041b926c12d28c6a8e464fe13c3822b92429e837f12dedd5cf84de82001e4f",
         "title": "Factory robots with less setup",
         "classifications": [
           "Manipulation"
@@ -735,13 +735,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Research demonstrations and supplier descriptions do not establish this proposed product’s production economics or demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T21:59:29.732Z",
+              "reason": "Accepted as an explicitly unproven opportunity, customer or transfer hypothesis, not demonstrated demand."
             },
             "kind": "hypothesis",
             "testQuestion": "Can one production line meet its cycle-time and defect limits after a part change with less technician time?"
@@ -755,13 +755,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Research demonstrations and supplier descriptions do not establish this proposed product’s production economics or demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T21:59:29.732Z",
+              "reason": "Accepted as an explicitly unproven opportunity, customer or transfer hypothesis, not demonstrated demand."
             },
             "kind": "hypothesis",
             "testQuestion": "Can one production line meet its cycle-time and defect limits after a part change with less technician time?"
@@ -775,13 +775,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Research demonstrations and supplier descriptions do not establish this proposed product’s production economics or demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T21:59:29.732Z",
+              "reason": "Accepted as an explicitly unproven opportunity, customer or transfer hypothesis, not demonstrated demand."
             },
             "kind": "hypothesis",
             "testQuestion": "Can one production line meet its cycle-time and defect limits after a part change with less technician time?"
@@ -793,52 +793,59 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Research demonstrations and supplier descriptions do not establish this proposed product’s production economics or demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T21:59:29.732Z",
+              "reason": "Accepted as an explicitly unproven opportunity, customer or transfer hypothesis, not demonstrated demand."
             },
             "kind": "hypothesis",
             "testQuestion": "Can one production line meet its cycle-time and defect limits after a part change with less technician time?"
           },
           {
             "id": "factory-robot-setup:problem",
-            "text": "Small changes in parts or their placement can require robot reprogramming, fixtures, or new demonstrations before production resumes.",
-            "evidenceIds": [],
+            "text": "When parts or their positions change, a factory robot may need new programming and equipment adjustments. Historical manufacturer interviews describe repeated reliance on outside specialists; easier programming alone did not always shorten the work.",
+            "evidenceIds": [
+              "factory-robot-setup:review-problem"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Research demonstrations and supplier descriptions do not establish this proposed product’s production economics or demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T21:59:29.732Z",
+              "reason": "Original technical/source context inspected; interpretation narrowed to the supported task."
             },
-            "kind": "hypothesis",
-            "testQuestion": "Can one production line meet its cycle-time and defect limits after a part change with less technician time?"
+            "kind": "inference",
+            "reasoning": "Historical nonrandom interviews establish a documented problem, not present-day prevalence or a savings estimate."
           },
           {
             "id": "factory-robot-setup:opportunity",
-            "text": "Hypothesis: sell deployment and support for one assembly task before expanding across a factory. Amazon’s deployed picking systems show commercial demand for better manipulation, but do not prove willingness to buy this assembly product.",
-            "evidenceIds": [],
+            "text": "Software that handles part variation could reduce repeated setup work on existing robot arms. It could complement stored programs and fixtures; MIRAI already offers learning from demonstrations. A business worth building needs repeatable savings on one task across many factories, without custom engineering absorbing the revenue.",
+            "evidenceIds": [
+              "factory-robot-setup:review-problem",
+              "factory-robot-setup:review-learning-alternative",
+              "factory-robot-setup:review-programmed-alternative",
+              "factory-robot-setup:review-fixtures"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Research demonstrations and supplier descriptions do not establish this proposed product’s production economics or demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T21:59:29.732Z",
+              "reason": "Accepted as an explicitly unproven opportunity, customer or transfer hypothesis, not demonstrated demand."
             },
             "kind": "hypothesis",
-            "testQuestion": "Can one production line meet its cycle-time and defect limits after a part change with less technician time?"
+            "testQuestion": "Compare technician hours, good output, defects and recovery for the same part changes against the best practical current setup."
           },
           {
             "id": "factory-robot-setup:customer-0",
@@ -847,13 +854,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Research demonstrations and supplier descriptions do not establish this proposed product’s production economics or demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T21:59:29.732Z",
+              "reason": "Accepted as an explicitly unproven opportunity, customer or transfer hypothesis, not demonstrated demand."
             },
             "kind": "hypothesis",
             "testQuestion": "Can one production line meet its cycle-time and defect limits after a part change with less technician time?"
@@ -865,13 +872,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Research demonstrations and supplier descriptions do not establish this proposed product’s production economics or demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T21:59:29.732Z",
+              "reason": "Accepted as an explicitly unproven opportunity, customer or transfer hypothesis, not demonstrated demand."
             },
             "kind": "hypothesis",
             "testQuestion": "Can one production line meet its cycle-time and defect limits after a part change with less technician time?"
@@ -883,13 +890,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Research demonstrations and supplier descriptions do not establish this proposed product’s production economics or demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T21:59:29.732Z",
+              "reason": "Accepted as an explicitly unproven opportunity, customer or transfer hypothesis, not demonstrated demand."
             },
             "kind": "hypothesis",
             "testQuestion": "Can one production line meet its cycle-time and defect limits after a part change with less technician time?"
@@ -901,13 +908,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Research demonstrations and supplier descriptions do not establish this proposed product’s production economics or demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T21:59:29.732Z",
+              "reason": "Accepted as an explicitly unproven opportunity, customer or transfer hypothesis, not demonstrated demand."
             },
             "kind": "hypothesis",
             "testQuestion": "Can one production line meet its cycle-time and defect limits after a part change with less technician time?"
@@ -919,13 +926,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Research demonstrations and supplier descriptions do not establish this proposed product’s production economics or demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T21:59:29.732Z",
+              "reason": "Accepted as an explicitly unproven opportunity, customer or transfer hypothesis, not demonstrated demand."
             },
             "kind": "hypothesis",
             "testQuestion": "Can one production line meet its cycle-time and defect limits after a part change with less technician time?"
@@ -937,144 +944,192 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Research demonstrations and supplier descriptions do not establish this proposed product’s production economics or demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T21:59:29.732Z",
+              "reason": "Accepted as an explicitly unproven opportunity, customer or transfer hypothesis, not demonstrated demand."
             },
             "kind": "hypothesis",
             "testQuestion": "Can one production line meet its cycle-time and defect limits after a part change with less technician time?"
           },
           {
             "id": "factory-robot-setup:v2-comparison",
-            "text": "Supplement robot hardware and integrators; alternative to stored programs, fixtures and overlapping learned-control products. Compare production restart, not just training time.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "MIRAI is an overlapping alternative: it learns movements from demonstrations. PolyScope X and stored fixtures simplify programmed changeovers; learned movement could supplement them when parts vary. Compatibility, safety and additional savings still need a same-task comparison. Warehouse handling is a different application, not proof of assembly demand.",
+            "kind": "inference",
+            "evidenceIds": [
+              "factory-robot-setup:review-learning-alternative",
+              "factory-robot-setup:review-programmed-alternative",
+              "factory-robot-setup:review-fixtures"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "Research demonstrations and supplier descriptions do not establish this proposed product’s production economics or demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T21:59:29.732Z",
+              "reason": "Original technical/source context inspected; interpretation narrowed to the supported task."
             },
-            "testQuestion": "Can one production line meet its cycle-time and defect limits after a part change with less technician time?"
+            "reasoning": "Compare the task and mechanism: learned movement overlaps MIRAI; predefined programs and fixtures do not by themselves establish handling of unseen variation. Complementarity remains conditional."
           }
         ],
         "evidence": [
           {
             "id": "factory-robot-setup:serl:source-0",
             "sourceUrl": "https://serl-robot.github.io/",
-            "finalUrl": null,
+            "finalUrl": "https://serl-robot.github.io/",
             "title": "SERL: A Software Suite for Sample-Efficient Robotic Reinforcement Learning",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2024",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08",
+            "retrievedAt": "2026-10-15",
             "excerpt": "The agent generalizes to route the cable through an unseen clip pose.",
             "pdfPage": null,
             "locator": "Cable Routing; ICRA 2024; affiliations",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T21:59:29.732Z",
               "failureIds": []
             }
           },
           {
             "id": "factory-robot-setup:aloha:source-0",
             "sourceUrl": "https://tonyzhaozh.github.io/aloha/",
-            "finalUrl": null,
+            "finalUrl": "https://tonyzhaozh.github.io/aloha/",
             "title": "Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2023",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08",
+            "retrievedAt": "2026-10-15",
             "excerpt": "We introduce Action Chunking with Transformers (ACT).",
             "pdfPage": null,
             "locator": "Learning Algorithm; RSS 2023; affiliations",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T21:59:29.732Z",
               "failureIds": []
             }
           },
           {
             "id": "factory-robot-setup:diffusion-policy:source-0",
             "sourceUrl": "https://diffusion-policy.cs.columbia.edu/",
-            "finalUrl": null,
+            "finalUrl": "https://diffusion-policy.cs.columbia.edu/",
             "title": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
             "publisher": null,
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2023",
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08",
+            "retrievedAt": "2026-10-15",
             "excerpt": "Diffusion Policy predicts a sequence of action for receding-horizon control.",
             "pdfPage": null,
             "locator": "Highlights; Team; RSS 2023 citation",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T21:59:29.732Z",
               "failureIds": []
             }
           },
           {
-            "id": "factory-robot-setup:market-source-0",
-            "sourceUrl": "https://www.aboutamazon.com/news/operations/amazon-vulcan-robot-pick-stow-touch",
-            "finalUrl": null,
-            "title": "Amazon Vulcan picking and stowing",
-            "publisher": null,
-            "sourceRole": "secondary",
-            "independence": "unknown",
-            "publishedAt": null,
-            "observationPeriod": null,
-            "retrievedAt": "2026-10-08",
-            "excerpt": "Vulcan is Amazon's first robot with a sense of touch, using sensors to pick and stow items at fulfillment centers.",
-            "pdfPage": null,
-            "locator": null,
-            "relevance": "broader-context",
+            "id": "factory-robot-setup:review-problem",
+            "sourceUrl": "https://arxiv.org/pdf/2010.14537",
+            "finalUrl": "https://arxiv.org/pdf/2010.14537",
+            "title": "The State of Industrial Robotics: Emerging Technologies, Challenges, and Key Research Directions",
+            "publisher": "Study authors",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2020-10-27",
+            "observationPeriod": "Nine nonrandom organizations in Germany, France and Italy; reported 2020, interview dates unspecified",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "manufacturers must continue to draw upon system integrators",
+            "pdfPage": 39,
+            "locator": "Physical PDF page 39; sample limitations on pages 9–10",
+            "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T21:59:29.732Z",
               "failureIds": []
             }
           },
           {
-            "id": "factory-robot-setup:market-source-1",
-            "sourceUrl": "https://ifr.org/ifr-press-releases/news/top-5-global-robotics-trends-2025",
-            "finalUrl": null,
-            "title": "IFR · global robotics trends, January 2025",
-            "publisher": null,
-            "sourceRole": "secondary",
-            "independence": "unknown",
+            "id": "factory-robot-setup:review-learning-alternative",
+            "sourceUrl": "https://www.micropsi-industries.com/product",
+            "finalUrl": "https://www.micropsi-industries.com/product",
+            "title": "micropsi industries: MIRAI product and MIRAI 2",
+            "publisher": "micropsi industries",
+            "sourceRole": "primary",
+            "independence": "external",
             "publishedAt": null,
             "observationPeriod": null,
-            "retrievedAt": "2026-10-08T18:09:38.335649Z",
-            "excerpt": "The global market value of industrial robot installations has reached an all-time high of US$ 16.5 billion.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Industrial robots powered with the MIRAI system can be easily trained and retrained for various production tasks.",
             "pdfPage": null,
-            "locator": null,
-            "relevance": "broader-context",
+            "locator": "Original HTML; surrounding context inspected",
+            "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T21:59:29.732Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "factory-robot-setup:review-programmed-alternative",
+            "sourceUrl": "https://www.universal-robots.com/products/polyscope-x/",
+            "finalUrl": "https://www.universal-robots.com/products/polyscope-x/",
+            "title": "Universal Robots: PolyScope X",
+            "publisher": "Universal Robots",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": null,
+            "retrievedAt": "2026-10-15",
+            "excerpt": "The operator screen enables operators to do changeovers themselves without support.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding context inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-15T21:59:29.732Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "factory-robot-setup:review-fixtures",
+            "sourceUrl": "https://www.universal-robots.com/case-stories/jenny-waltle-gmbh/",
+            "finalUrl": "https://www.universal-robots.com/case-stories/jenny-waltle-gmbh/",
+            "title": "Universal Robots: Jenny | Waltle customer case",
+            "publisher": "Universal Robots",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": null,
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Program codes for twelve different components have been installed and can be called up in the system immediately.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding context inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-15T21:59:29.732Z",
               "failureIds": []
             }
           }
@@ -1082,140 +1137,63 @@
         "assessment": {
           "rubricVersion": "venture-screen-v2",
           "priority": "medium",
-          "priorityReason": "The capability matters for repeated part changes. Direct overlapping learning/control products make a narrow whole-changeover comparison essential; simpler fixtures may already suffice.",
+          "priorityReason": "Documented setup burden and demonstrated learning methods justify a narrow task trial. Existing learning software overlaps directly; complementary value with programmed setups remains testable.",
           "confidence": {
-            "level": "low",
-            "reason": "Low commercially; additional saved research is marked draft, not newly verified."
+            "level": "moderate",
+            "reason": "Primary sources support the historical problem and technical approaches; current burden, additional savings and commercial scale remain unproven."
           },
           "dimensions": {
             "problem": {
-              "status": "plausible",
-              "reason": "Saved work describes reprogramming and physical setup when parts change; new research reports contain relevant historical interviews but remain uninspected.",
+              "status": "supported",
+              "reason": "Historical interviews document specialist-dependent changes, but do not quantify current prevalence.",
               "claimIds": [
-                "factory-robot-setup:project-serl",
-                "factory-robot-setup:project-aloha",
-                "factory-robot-setup:project-diffusion-policy",
-                "factory-robot-setup:what",
-                "factory-robot-setup:problem",
-                "factory-robot-setup:opportunity",
-                "factory-robot-setup:customer-0",
-                "factory-robot-setup:customer-1",
-                "factory-robot-setup:customer-2",
-                "factory-robot-setup:application-0",
-                "factory-robot-setup:application-1",
-                "factory-robot-setup:application-2"
+                "factory-robot-setup:problem"
               ]
             },
             "customerPayment": {
               "status": "plausible",
-              "reason": "Manufacturing engineers use it and plants could pay; no saved inspected purchase evidence for this software.",
+              "reason": "Factories buy integration; separate repeat spending on this software remains unproven.",
               "claimIds": [
-                "factory-robot-setup:project-serl",
-                "factory-robot-setup:project-aloha",
-                "factory-robot-setup:project-diffusion-policy",
-                "factory-robot-setup:what",
-                "factory-robot-setup:problem",
-                "factory-robot-setup:opportunity",
-                "factory-robot-setup:customer-0",
-                "factory-robot-setup:customer-1",
-                "factory-robot-setup:customer-2",
-                "factory-robot-setup:application-0",
-                "factory-robot-setup:application-1",
-                "factory-robot-setup:application-2"
+                "factory-robot-setup:opportunity"
               ]
             },
             "productValue": {
               "status": "plausible",
-              "reason": "Demonstration-based control could reduce part-specific programming. Research training time does not measure complete production setup.",
+              "reason": "Learned manipulation could adapt to variation; factory setup savings are not established by training times.",
               "claimIds": [
-                "factory-robot-setup:project-serl",
-                "factory-robot-setup:project-aloha",
-                "factory-robot-setup:project-diffusion-policy",
-                "factory-robot-setup:what",
-                "factory-robot-setup:problem",
-                "factory-robot-setup:opportunity",
-                "factory-robot-setup:customer-0",
-                "factory-robot-setup:customer-1",
-                "factory-robot-setup:customer-2",
-                "factory-robot-setup:application-0",
-                "factory-robot-setup:application-1",
-                "factory-robot-setup:application-2"
+                "factory-robot-setup:opportunity"
               ]
             },
             "commercialGap": {
               "status": "plausible",
-              "reason": "Could supplement existing robot hardware and integration; direct overlap with demonstration-based controllers remains. A different learning method is not itself a gap.",
+              "reason": "MIRAI overlaps; stored programs and fixtures may be supplemented. Additional value needs a direct task comparison.",
               "claimIds": [
-                "factory-robot-setup:project-serl",
-                "factory-robot-setup:project-aloha",
-                "factory-robot-setup:project-diffusion-policy",
-                "factory-robot-setup:what",
-                "factory-robot-setup:problem",
-                "factory-robot-setup:opportunity",
-                "factory-robot-setup:customer-0",
-                "factory-robot-setup:customer-1",
-                "factory-robot-setup:customer-2",
-                "factory-robot-setup:application-0",
-                "factory-robot-setup:application-1",
-                "factory-robot-setup:application-2"
+                "factory-robot-setup:v2-comparison"
               ]
             },
             "ventureScale": {
-              "status": "plausible",
-              "reason": "A reusable task package across similar cells offers a scale path; cell eligibility, change frequency, price and repeat deployments are missing.",
+              "status": "missing",
+              "reason": "A repeatable task package could scale across factories; eligible customers, prices and repeat purchases are unestablished.",
               "claimIds": [
-                "factory-robot-setup:project-serl",
-                "factory-robot-setup:project-aloha",
-                "factory-robot-setup:project-diffusion-policy",
-                "factory-robot-setup:what",
-                "factory-robot-setup:problem",
-                "factory-robot-setup:opportunity",
-                "factory-robot-setup:customer-0",
-                "factory-robot-setup:customer-1",
-                "factory-robot-setup:customer-2",
-                "factory-robot-setup:application-0",
-                "factory-robot-setup:application-1",
-                "factory-robot-setup:application-2"
+                "factory-robot-setup:opportunity"
               ]
             },
             "businessCapital": {
               "status": "missing",
-              "reason": "Safety work, integration and support may absorb revenue; installations are not shown to become cheaper over time.",
+              "reason": "Integration, safety and support costs may prevent repeatable margins; no proposal-specific cost ledger.",
               "claimIds": [
-                "factory-robot-setup:project-serl",
-                "factory-robot-setup:project-aloha",
-                "factory-robot-setup:project-diffusion-policy",
-                "factory-robot-setup:what",
-                "factory-robot-setup:problem",
-                "factory-robot-setup:opportunity",
-                "factory-robot-setup:customer-0",
-                "factory-robot-setup:customer-1",
-                "factory-robot-setup:customer-2",
-                "factory-robot-setup:application-0",
-                "factory-robot-setup:application-1",
-                "factory-robot-setup:application-2"
+                "factory-robot-setup:opportunity"
               ]
             },
             "timing": {
               "status": "missing",
-              "reason": "No inspected evidence in this reassessment establishes demand acceleration. Uninspected robot-stock figures are not adopted as software market evidence.",
+              "reason": "Historical research and current supplier offerings do not establish demand acceleration for this entrant.",
               "claimIds": [
-                "factory-robot-setup:project-serl",
-                "factory-robot-setup:project-aloha",
-                "factory-robot-setup:project-diffusion-policy",
-                "factory-robot-setup:what",
-                "factory-robot-setup:problem",
-                "factory-robot-setup:opportunity",
-                "factory-robot-setup:customer-0",
-                "factory-robot-setup:customer-1",
-                "factory-robot-setup:customer-2",
-                "factory-robot-setup:application-0",
-                "factory-robot-setup:application-1",
-                "factory-robot-setup:application-2"
+                "factory-robot-setup:opportunity"
               ]
             }
           },
-          "strongestObjection": "Each cell may require expensive engineering despite an apparently reusable controller.",
+          "strongestObjection": "Teaching a motion faster may not reduce total setup work. Each factory may still require costly integration and support.",
           "decisiveQuestion": "Compare technician hours, good output, defects and recovery for the same part changes against the best practical current setup."
         },
         "migrationGaps": []

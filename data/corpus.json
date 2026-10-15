@@ -4784,12 +4784,12 @@
       "title": "Factory robots with less setup",
       "summary": "Let factory workers teach robot arms by showing them what to do.",
       "topic": "Manipulation",
-      "problem": "Small changes in parts or their placement can require robot reprogramming, fixtures, or new demonstrations before production resumes.",
-      "statusQuo": "Factories use programmed robot motions and task-specific setups; learned controllers offer an alternative that still needs evaluation.",
-      "gap": "Hypothesis: a repeatable teaching and recovery workflow could make automation economical for changing, lower-volume tasks.",
-      "opportunity": "Robot control software that lets a technician demonstrate a narrow assembly task, train it, and monitor failures during operation.",
-      "evidence": "Reported: SERL shows PCB insertion and cable routing under disturbances and reports 25–50 minute policy training for its demonstrated setups. Reported: ALOHA demonstrates fine two-arm manipulation with action sequences. Diffusion Policy evaluates 12 tasks and demonstrates physical manipulation.",
-      "counterpoint": "Each cell may require expensive engineering despite an apparently reusable controller.",
+      "problem": "When parts or their positions change, a factory robot may need new programming and equipment adjustments. Historical manufacturer interviews describe repeated reliance on outside specialists; easier programming alone did not always shorten the work.",
+      "statusQuo": "Factories use integrators, stored robot programs, fixtures and commercial learning software.",
+      "gap": "Less total setup and recovery work when parts vary, with the same production speed, quality and safety.",
+      "opportunity": "Software that handles part variation could reduce repeated setup work on existing robot arms. It could complement stored programs and fixtures; MIRAI already offers learning from demonstrations. A business worth building needs repeatable savings on one task across many factories, without custom engineering absorbing the revenue.",
+      "evidence": "Historical interviews support the setup problem. Research demonstrates learned manipulation; supplier descriptions establish competing approaches, not their relative factory performance.",
+      "counterpoint": "Teaching a motion faster may not reduce total setup work. Each factory may still require costly integration and support.",
       "nextQuestion": "Compare technician hours, good output, defects and recovery for the same part changes against the best practical current setup.",
       "projectIds": [
         "serl",
@@ -4801,10 +4801,10 @@
         "source-aloha",
         "source-diffusion-policy"
       ],
-      "confidence": "Early signal",
+      "confidence": "Mixed evidence",
       "brief": {
         "whatItIs": "Robot control software that lets a technician demonstrate a narrow assembly task, train it, and monitor failures during operation.",
-        "problem": "Small changes in parts or their placement can require robot reprogramming, fixtures, or new demonstrations before production resumes.",
+        "problem": "When parts or their positions change, a factory robot may need new programming and equipment adjustments. Historical manufacturer interviews describe repeated reliance on outside specialists; easier programming alone did not always shorten the work.",
         "breakthroughs": [
           {
             "text": "Reported: SERL shows PCB insertion and cable routing under disturbances and reports 25–50 minute policy training for its demonstrated setups.",
@@ -4820,17 +4820,8 @@
             ]
           }
         ],
-        "marketOpportunity": "Hypothesis: sell deployment and support for one assembly task before expanding across a factory. Amazon’s deployed picking systems show commercial demand for better manipulation, but do not prove willingness to buy this assembly product.",
+        "marketOpportunity": "Software that handles part variation could reduce repeated setup work on existing robot arms. It could complement stored programs and fixtures; MIRAI already offers learning from demonstrations. A business worth building needs repeatable savings on one task across many factories, without custom engineering absorbing the revenue.",
         "buyer": "Automation integrators and electronics manufacturers with repetitive insertion or cable-handling tasks.",
-        "marketSize": {
-          "value": "$16.5B",
-          "market": "Industrial robot installations",
-          "year": 2025,
-          "context": "Industry value reported by IFR in January 2025. Installation and setup software is a subset whose size is not established.",
-          "sourceUrls": [
-            "https://ifr.org/ifr-press-releases/news/top-5-global-robotics-trends-2025"
-          ]
-        },
         "applications": [
           "Teaching robots new picking and handling tasks",
           "Adapting production lines to changing parts",
@@ -4844,21 +4835,34 @@
         "marketStatus": "researched",
         "marketEvidence": [
           {
-            "title": "Amazon Vulcan picking and stowing",
-            "url": "https://www.aboutamazon.com/news/operations/amazon-vulcan-robot-pick-stow-touch",
-            "excerpt": "Vulcan is Amazon's first robot with a sense of touch, using sensors to pick and stow items at fulfillment centers.",
-            "accessedAt": "2026-10-08"
+            "title": "The State of Industrial Robotics: Emerging Technologies, Challenges, and Key Research Directions",
+            "url": "https://arxiv.org/pdf/2010.14537",
+            "excerpt": "manufacturers must continue to draw upon system integrators",
+            "accessedAt": "2026-10-15",
+            "page": 39
           },
           {
-            "title": "IFR · global robotics trends, January 2025",
-            "url": "https://ifr.org/ifr-press-releases/news/top-5-global-robotics-trends-2025",
-            "excerpt": "The global market value of industrial robot installations has reached an all-time high of US$ 16.5 billion.",
-            "accessedAt": "2026-10-08T18:09:38.335649Z"
+            "title": "micropsi industries: MIRAI product and MIRAI 2",
+            "url": "https://www.micropsi-industries.com/product",
+            "excerpt": "Industrial robots powered with the MIRAI system can be easily trained and retrained for various production tasks.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Universal Robots: PolyScope X",
+            "url": "https://www.universal-robots.com/products/polyscope-x/",
+            "excerpt": "The operator screen enables operators to do changeovers themselves without support.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Universal Robots: Jenny | Waltle customer case",
+            "url": "https://www.universal-robots.com/case-stories/jenny-waltle-gmbh/",
+            "excerpt": "Program codes for twelve different components have been installed and can be called up in the system immediately.",
+            "accessedAt": "2026-10-15"
           }
         ],
         "risks": [
-          "Research training time is not factory setup time; throughput, defect rates and maintenance remain unmeasured.",
-          "Customer integration and safety requirements may outweigh savings from faster training."
+          "Teaching a motion faster may not reduce total setup work. Each factory may still require costly integration and support.",
+          "Reachable buyer count, paid repeat use and delivery margins remain unestablished."
         ],
         "nextQuestions": [
           "Compare technician hours, good output, defects and recovery for the same part changes against the best practical current setup."
