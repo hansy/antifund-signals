@@ -3014,59 +3014,6 @@
       }
     },
     {
-      "id": "synthesis-o03",
-      "title": "Reduce paperwork for insurance approvals",
-      "summary": "Prepare and track treatment approvals in the patient record.",
-      "topic": "Healthcare operations",
-      "problem": "Some treatments require insurer approval before care can proceed. Clinic staff gather patient information, complete forms and follow up on requests, often across separate systems. The saved projects aim to reduce repeated entry and status chasing.",
-      "statusQuo": "Some treatments require insurer approval before care can proceed. Clinic staff gather patient information, complete forms and follow up on requests, often across separate systems. The saved projects aim to reduce repeated entry and status chasing.",
-      "gap": "Existing health-record or approval vendors may already address the workflow; simulated integrations can hide most of the real implementation difficulty.",
-      "opportunity": "Sell clinics a way to spend less staff time obtaining insurer approvals. The proposed product combines requirements, patient information and request tracking. The saved demonstrations use simulated records or insurer connections; actual savings and an unmet gap in existing products still need research.",
-      "evidence": "The two projects converge on the same buyer workflow, unlike the broad paperwork group. Ranked below the first two because both use simulated records or insurer connections and neither measures actual staff savings.",
-      "counterpoint": "Existing health-record or approval vendors may already address the workflow; simulated integrations can hide most of the real implementation difficulty.",
-      "nextQuestion": "Which clinic segment still has material manual work despite its existing approval tools, and can a new product remove it at a viable price?",
-      "projectIds": [
-        "synthesis-project-222df4c063c4aea9f4372e33",
-        "synthesis-project-39987d56922a94ca1a91452f"
-      ],
-      "sourceIds": [
-        "synthesis-source-222df4c063c4aea9f4372e33",
-        "synthesis-source-39987d56922a94ca1a91452f"
-      ],
-      "confidence": "Early signal",
-      "brief": {
-        "whatItIs": "Software that fills insurer-approval forms from existing patient records, asks clinic staff for missing information, and shows the request\u2019s status in the same workspace.",
-        "problem": "Some treatments require insurer approval before care can proceed. Clinic staff gather patient information, complete forms and follow up on requests, often across separate systems. The saved projects aim to reduce repeated entry and status chasing.",
-        "breakthroughs": [
-          {
-            "text": "Direct workflow: requirements, chart-based autofill, submission and status in the patient-record interface. Submission and insurer decisions are simulated.",
-            "sourceIds": ["synthesis-source-222df4c063c4aea9f4372e33"]
-          },
-          {
-            "text": "Direct overlap: medicine coverage and partially completed approval forms. Demonstration uses generated patient records; live insurer integration remains future work.",
-            "sourceIds": ["synthesis-source-39987d56922a94ca1a91452f"]
-          }
-        ],
-        "marketOpportunity": "Sell clinics a way to spend less staff time obtaining insurer approvals. The proposed product combines requirements, patient information and request tracking. The saved demonstrations use simulated records or insurer connections; actual savings and an unmet gap in existing products still need research.",
-        "buyer": "Clinics; Health systems",
-        "applications": [
-          "Preparing treatment-approval requests",
-          "Checking missing patient information",
-          "Tracking insurer responses"
-        ],
-        "targetCustomers": ["Clinics", "Health systems"],
-        "marketStatus": "hypothesis",
-        "marketEvidence": [],
-        "risks": [
-          "Existing health-record or approval vendors may already address the workflow; simulated integrations can hide most of the real implementation difficulty.",
-          "Two distinct named teams; a common hackathon/provider ecosystem remains a selection bias. No customer interviews or independently verified deployment."
-        ],
-        "nextQuestions": [
-          "Which clinic segment still has material manual work despite its existing approval tools, and can a new product remove it at a viable price?"
-        ]
-      }
-    },
-    {
       "id": "compact-survey-maps",
       "title": "Faster drone inspection maps",
       "summary": "Turn drone scans into smaller, easier-to-use inspection maps.",

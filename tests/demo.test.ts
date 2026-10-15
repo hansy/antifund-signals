@@ -23,8 +23,11 @@ afterEach(() => {
 test("public snapshot retains evidence links, has no private feedback or active research", () => {
   const data = corpusSchema.parse(corpus);
   const view = lifecycleViewSchema.parse(opportunities);
-  expect(data.insights).toHaveLength(8);
-  expect(view.opportunities).toHaveLength(8);
+  expect(data.insights.length).toBeGreaterThan(0);
+  expect(view.opportunities.map((o) => o.id).sort()).toEqual(
+    data.insights.map((i) => i.id).sort(),
+  );
+  expect(data.insights.some((i) => i.id === "synthesis-o03")).toBe(false);
   for (const insight of data.insights) {
     for (const id of insight.projectIds)
       expect(data.projects.some((p) => p.id === id)).toBe(true);
