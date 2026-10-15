@@ -4288,8 +4288,8 @@
     {
       "schemaVersion": 1,
       "id": "synthesis-o02",
-      "revision": 3,
-      "acceptedRevisionId": "synthesis-o02:rubric-v2-20261015",
+      "revision": 4,
+      "acceptedRevisionId": "synthesis-o02:evidence-review-v2-20261015",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -4297,19 +4297,19 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T02:31:21.257Z",
-      "updatedAt": "2026-10-15T21:24:18.427Z",
+      "updatedAt": "2026-10-15T23:05:13.724Z",
       "verdict": null,
       "stage": "first-impressions",
-      "qualificationError": null,
+      "qualificationError": "Evidence reviewed; reliable reusable tests are plausible, but incremental customer value, payment and venture scale remain unproven.",
       "accepted": {
-        "id": "synthesis-o02:rubric-v2-20261015",
+        "id": "synthesis-o02:evidence-review-v2-20261015",
         "opportunityId": "synthesis-o02",
-        "parentRevisionId": "synthesis-o02:manifesto-20261015",
-        "createdAt": "2026-10-15T21:24:18.427Z",
-        "producerId": "rubric-reassessment-v2",
-        "origin": "saved-data-synthesis",
-        "changeReason": "Reassessed adjacent uses and functional alternatives. Original evidence review statuses preserved; no new market qualification.",
-        "contentHash": "1e56e12c95a91fd87d788df973e5e740d6083c811b75f27ba8a5e1eac97fa3db",
+        "parentRevisionId": "synthesis-o02:rubric-v2-20261015",
+        "createdAt": "2026-10-15T23:05:13.724Z",
+        "producerId": "codex-evidence-inspector",
+        "origin": "inspection-correction",
+        "changeReason": "Inspect all four saved project originals and completed research. Distinguish test-quality opportunity from existing test infrastructure, keep commercial claims hypothetical and withhold broad market/price extrapolations.",
+        "contentHash": "8768c370a743ee3ede3257801f2c87ba86213eabc9c212c3aa17aee92d80850c",
         "title": "A repeatable test suite for robot software",
         "classifications": [
           "Robotics and physical automation",
@@ -4339,7 +4339,7 @@
           ],
           "economics": [],
           "timing": [],
-          "keyQuestion": "Measure test preparation time and useful regressions found across two customer controllers, compared with their existing toolchain."
+          "keyQuestion": "On a customer’s robot, does the test package catch meaningful failures or reduce setup time beyond their existing tools, with results that repeat?"
         },
         "projects": [
           {
@@ -4397,13 +4397,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Builder tests are not independently reproduced. Physical reliability across customer robots, incremental benefit, budgets and scalable paid demand remain unproven."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:05:13.724Z",
+              "reason": "Retained as a hypothesis or qualified builder account, not verified adoption or commercial value."
             },
             "kind": "hypothesis",
             "testQuestion": "Will commercial robotics teams buy a shared evaluation workflow that materially improves their current release decisions, and what would they replace?"
@@ -4421,13 +4421,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Builder tests are not independently reproduced. Physical reliability across customer robots, incremental benefit, budgets and scalable paid demand remain unproven."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:05:13.724Z",
+              "reason": "Retained as a hypothesis or qualified builder account, not verified adoption or commercial value."
             },
             "kind": "hypothesis",
             "testQuestion": "Will commercial robotics teams buy a shared evaluation workflow that materially improves their current release decisions, and what would they replace?"
@@ -4446,70 +4446,77 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Builder tests are not independently reproduced. Physical reliability across customer robots, incremental benefit, budgets and scalable paid demand remain unproven."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:05:13.724Z",
+              "reason": "Retained as a hypothesis or qualified builder account, not verified adoption or commercial value."
             },
             "kind": "hypothesis",
             "testQuestion": "Will commercial robotics teams buy a shared evaluation workflow that materially improves their current release decisions, and what would they replace?"
           },
           {
             "id": "synthesis-o02:what",
-            "text": "Software that runs a robot through the same tasks after each software change, records what went wrong, and compares the results. For example: can the arm still pick up a box when lighting changes?",
+            "text": "Software that repeats the same robot tasks after a software change and shows whether performance improved or got worse. For example: can the arm still pick up a box when the lighting changes?",
             "evidenceIds": [],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Builder tests are not independently reproduced. Physical reliability across customer robots, incremental benefit, budgets and scalable paid demand remain unproven."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:05:13.724Z",
+              "reason": "Retained as a hypothesis or qualified builder account, not verified adoption or commercial value."
             },
             "kind": "hypothesis",
             "testQuestion": "What do three robot teams currently spend on release testing, and which recurring failure checks cannot be handled well by their existing tools?"
           },
           {
             "id": "synthesis-o02:problem",
-            "text": "Robot developers must assemble tests, load different controllers and inspect attempts to decide whether a change made their robot better or worse.",
-            "evidenceIds": [],
+            "text": "Robot teams must build test tasks, run different software versions and judge what happened. Simulations can save physical testing time, but a result is useful only if it repeats reliably and reflects how the real robot behaves.",
+            "evidenceIds": [
+              "synthesis-o02:review-survey",
+              "synthesis-o02:review-historical-case",
+              "synthesis-o02:review-simpler"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Builder tests are not independently reproduced. Physical reliability across customer robots, incremental benefit, budgets and scalable paid demand remain unproven."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:05:13.724Z",
+              "reason": "Original sources and surrounding context inspected; reported results remain attributed."
             },
-            "kind": "hypothesis",
-            "testQuestion": "What do three robot teams currently spend on release testing, and which recurring failure checks cannot be handled well by their existing tools?"
+            "kind": "inference",
+            "reasoning": "Historical engineering evidence and simulation research support repeatability and transfer challenges, not representative present-day cost or buyer demand."
           },
           {
             "id": "synthesis-o02:opportunity",
-            "text": "A shared test system could reduce repeated engineering work each time robot software changes. The business depends on solving tests that existing simulators and internal tools handle poorly.",
-            "evidenceIds": [],
+            "text": "Reusable task tests, checked against real robot outcomes, could save teams from rebuilding and validating tests for each release. They could work with existing testing platforms. The commercial question is whether they catch meaningful failures or save enough setup work to earn repeat payment.",
+            "evidenceIds": [
+              "synthesis-o02:review-simpler",
+              "synthesis-o02:review-signalflag"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Builder tests are not independently reproduced. Physical reliability across customer robots, incremental benefit, budgets and scalable paid demand remain unproven."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:05:13.724Z",
+              "reason": "Retained as a hypothesis or qualified builder account, not verified adoption or commercial value."
             },
             "kind": "hypothesis",
-            "testQuestion": "What do three robot teams currently spend on release testing, and which recurring failure checks cannot be handled well by their existing tools?"
+            "testQuestion": "On a customer’s robot, does the test package catch meaningful failures or reduce setup time beyond their existing tools, with results that repeat?"
           },
           {
             "id": "synthesis-o02:customer-0",
@@ -4518,13 +4525,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Builder tests are not independently reproduced. Physical reliability across customer robots, incremental benefit, budgets and scalable paid demand remain unproven."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:05:13.724Z",
+              "reason": "Retained as a hypothesis or qualified builder account, not verified adoption or commercial value."
             },
             "kind": "hypothesis",
             "testQuestion": "What do three robot teams currently spend on release testing, and which recurring failure checks cannot be handled well by their existing tools?"
@@ -4536,13 +4543,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Builder tests are not independently reproduced. Physical reliability across customer robots, incremental benefit, budgets and scalable paid demand remain unproven."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:05:13.724Z",
+              "reason": "Retained as a hypothesis or qualified builder account, not verified adoption or commercial value."
             },
             "kind": "hypothesis",
             "testQuestion": "What do three robot teams currently spend on release testing, and which recurring failure checks cannot be handled well by their existing tools?"
@@ -4554,13 +4561,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Builder tests are not independently reproduced. Physical reliability across customer robots, incremental benefit, budgets and scalable paid demand remain unproven."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:05:13.724Z",
+              "reason": "Retained as a hypothesis or qualified builder account, not verified adoption or commercial value."
             },
             "kind": "hypothesis",
             "testQuestion": "What do three robot teams currently spend on release testing, and which recurring failure checks cannot be handled well by their existing tools?"
@@ -4572,13 +4579,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Builder tests are not independently reproduced. Physical reliability across customer robots, incremental benefit, budgets and scalable paid demand remain unproven."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:05:13.724Z",
+              "reason": "Retained as a hypothesis or qualified builder account, not verified adoption or commercial value."
             },
             "kind": "hypothesis",
             "testQuestion": "What do three robot teams currently spend on release testing, and which recurring failure checks cannot be handled well by their existing tools?"
@@ -4590,13 +4597,13 @@
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Migrated text; claim-level support and interpretation have not been inspected."
+              "Builder tests are not independently reproduced. Physical reliability across customer robots, incremental benefit, budgets and scalable paid demand remain unproven."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:05:13.724Z",
+              "reason": "Retained as a hypothesis or qualified builder account, not verified adoption or commercial value."
             },
             "kind": "hypothesis",
             "testQuestion": "Will commercial robotics teams buy a shared evaluation workflow that materially improves their current release decisions, and what would they replace?"
@@ -4614,13 +4621,13 @@
             "derivedFromClaimIds": [],
             "confidence": "moderate",
             "limitations": [
-              "Project-reported evidence; not independently reproduced."
+              "Builder tests are not independently reproduced. Physical reliability across customer robots, incremental benefit, budgets and scalable paid demand remain unproven."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:05:13.724Z",
+              "reason": "Original sources and surrounding context inspected; reported results remain attributed."
             },
             "kind": "reported",
             "attribution": "FailureCloud; FailureCloud; FailureCloud; FailureCloud; FailureCloud",
@@ -4628,28 +4635,32 @@
           },
           {
             "id": "synthesis-o02:v2-comparison",
-            "text": "Supplement simulators, hardware test benches and vendor tooling with comparable execution and failure records.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "SignalFlag already coordinates simulator, hardware and recorded-data tests; Foxglove helps compare robot recordings. A validated task library could supplement these tools. SignalFlag also advertises scenario creation, so this approach must show additional value. SIMPLER supplies open research environments, but transferring their results to a customer’s robot still needs testing.",
+            "kind": "inference",
+            "evidenceIds": [
+              "synthesis-o02:review-simpler",
+              "synthesis-o02:review-signalflag",
+              "synthesis-o02:review-foxglove"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "Builder tests are not independently reproduced. Physical reliability across customer robots, incremental benefit, budgets and scalable paid demand remain unproven."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-15T23:05:13.724Z",
+              "reason": "Original sources and surrounding context inspected; reported results remain attributed."
             },
-            "testQuestion": "What do three robot teams currently spend on release testing, and which recurring failure checks cannot be handled well by their existing tools?"
+            "reasoning": "Existing tools perform overlapping coordination and comparison. Validated task content may supplement them, but no head-to-head advantage or missing incumbent capability is established."
           }
         ],
         "evidence": [
           {
             "id": "synthesis-o02:synthesis-project-22f51c407676fc9820e0e24d:source-0",
             "sourceUrl": "https://devpost.com/software/edge-rescue",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/edge-rescue",
             "title": "Edge Rescue",
             "publisher": null,
             "sourceRole": "primary",
@@ -4663,15 +4674,15 @@
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:05:13.724Z",
               "failureIds": []
             }
           },
           {
             "id": "synthesis-o02:synthesis-project-22f51c407676fc9820e0e24d:source-1",
             "sourceUrl": "https://devpost.com/software/edge-rescue",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/edge-rescue",
             "title": "Edge Rescue",
             "publisher": null,
             "sourceRole": "primary",
@@ -4685,15 +4696,15 @@
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:05:13.724Z",
               "failureIds": []
             }
           },
           {
             "id": "synthesis-o02:synthesis-project-22f51c407676fc9820e0e24d:source-2",
             "sourceUrl": "https://devpost.com/software/edge-rescue",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/edge-rescue",
             "title": "Edge Rescue",
             "publisher": null,
             "sourceRole": "primary",
@@ -4707,15 +4718,15 @@
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:05:13.724Z",
               "failureIds": []
             }
           },
           {
             "id": "synthesis-o02:synthesis-project-22f51c407676fc9820e0e24d:source-3",
             "sourceUrl": "https://devpost.com/software/edge-rescue",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/edge-rescue",
             "title": "Edge Rescue",
             "publisher": null,
             "sourceRole": "primary",
@@ -4729,15 +4740,15 @@
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:05:13.724Z",
               "failureIds": []
             }
           },
           {
             "id": "synthesis-o02:synthesis-project-22f51c407676fc9820e0e24d:source-4",
             "sourceUrl": "https://devpost.com/software/edge-rescue",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/edge-rescue",
             "title": "Edge Rescue",
             "publisher": null,
             "sourceRole": "primary",
@@ -4751,15 +4762,15 @@
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:05:13.724Z",
               "failureIds": []
             }
           },
           {
             "id": "synthesis-o02:synthesis-project-4612aadeef9931232e9b302d:source-0",
             "sourceUrl": "https://devpost.com/software/kosmos-lzsq2h",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/kosmos-lzsq2h",
             "title": "Kosmos",
             "publisher": null,
             "sourceRole": "primary",
@@ -4773,15 +4784,15 @@
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:05:13.724Z",
               "failureIds": []
             }
           },
           {
             "id": "synthesis-o02:synthesis-project-4612aadeef9931232e9b302d:source-1",
             "sourceUrl": "https://devpost.com/software/kosmos-lzsq2h",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/kosmos-lzsq2h",
             "title": "Kosmos",
             "publisher": null,
             "sourceRole": "primary",
@@ -4795,15 +4806,15 @@
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:05:13.724Z",
               "failureIds": []
             }
           },
           {
             "id": "synthesis-o02:synthesis-project-4612aadeef9931232e9b302d:source-2",
             "sourceUrl": "https://devpost.com/software/kosmos-lzsq2h",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/kosmos-lzsq2h",
             "title": "Kosmos",
             "publisher": null,
             "sourceRole": "primary",
@@ -4817,15 +4828,15 @@
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:05:13.724Z",
               "failureIds": []
             }
           },
           {
             "id": "synthesis-o02:synthesis-project-4612aadeef9931232e9b302d:source-3",
             "sourceUrl": "https://devpost.com/software/kosmos-lzsq2h",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/kosmos-lzsq2h",
             "title": "Kosmos",
             "publisher": null,
             "sourceRole": "primary",
@@ -4839,15 +4850,15 @@
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:05:13.724Z",
               "failureIds": []
             }
           },
           {
             "id": "synthesis-o02:synthesis-project-4612aadeef9931232e9b302d:source-4",
             "sourceUrl": "https://devpost.com/software/kosmos-lzsq2h",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/kosmos-lzsq2h",
             "title": "Kosmos",
             "publisher": null,
             "sourceRole": "primary",
@@ -4861,15 +4872,15 @@
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:05:13.724Z",
               "failureIds": []
             }
           },
           {
             "id": "synthesis-o02:synthesis-project-dd4d909f593b7da77e4b3f38:source-0",
             "sourceUrl": "https://devpost.com/software/latent-geometry-blind-spots-stress-test-jepa-world-models",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/latent-geometry-blind-spots-stress-test-jepa-world-models",
             "title": "Latent Geometry, Blind Spots: Stress-Test JEPA World Models",
             "publisher": null,
             "sourceRole": "primary",
@@ -4883,15 +4894,15 @@
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:05:13.724Z",
               "failureIds": []
             }
           },
           {
             "id": "synthesis-o02:synthesis-project-dd4d909f593b7da77e4b3f38:source-1",
             "sourceUrl": "https://devpost.com/software/latent-geometry-blind-spots-stress-test-jepa-world-models",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/latent-geometry-blind-spots-stress-test-jepa-world-models",
             "title": "Latent Geometry, Blind Spots: Stress-Test JEPA World Models",
             "publisher": null,
             "sourceRole": "primary",
@@ -4905,15 +4916,15 @@
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:05:13.724Z",
               "failureIds": []
             }
           },
           {
             "id": "synthesis-o02:synthesis-project-dd4d909f593b7da77e4b3f38:source-2",
             "sourceUrl": "https://devpost.com/software/latent-geometry-blind-spots-stress-test-jepa-world-models",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/latent-geometry-blind-spots-stress-test-jepa-world-models",
             "title": "Latent Geometry, Blind Spots: Stress-Test JEPA World Models",
             "publisher": null,
             "sourceRole": "primary",
@@ -4927,15 +4938,15 @@
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:05:13.724Z",
               "failureIds": []
             }
           },
           {
             "id": "synthesis-o02:synthesis-project-dd4d909f593b7da77e4b3f38:source-3",
             "sourceUrl": "https://devpost.com/software/latent-geometry-blind-spots-stress-test-jepa-world-models",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/latent-geometry-blind-spots-stress-test-jepa-world-models",
             "title": "Latent Geometry, Blind Spots: Stress-Test JEPA World Models",
             "publisher": null,
             "sourceRole": "primary",
@@ -4949,15 +4960,15 @@
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:05:13.724Z",
               "failureIds": []
             }
           },
           {
             "id": "synthesis-o02:synthesis-project-dd4d909f593b7da77e4b3f38:source-4",
             "sourceUrl": "https://devpost.com/software/latent-geometry-blind-spots-stress-test-jepa-world-models",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/latent-geometry-blind-spots-stress-test-jepa-world-models",
             "title": "Latent Geometry, Blind Spots: Stress-Test JEPA World Models",
             "publisher": null,
             "sourceRole": "primary",
@@ -4971,15 +4982,15 @@
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:05:13.724Z",
               "failureIds": []
             }
           },
           {
             "id": "synthesis-o02:synthesis-project-dd4d909f593b7da77e4b3f38:source-5",
             "sourceUrl": "https://devpost.com/software/latent-geometry-blind-spots-stress-test-jepa-world-models",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/latent-geometry-blind-spots-stress-test-jepa-world-models",
             "title": "Latent Geometry, Blind Spots: Stress-Test JEPA World Models",
             "publisher": null,
             "sourceRole": "primary",
@@ -4993,15 +5004,15 @@
             "relevance": "direct",
             "artifactId": null,
             "checks": {
-              "status": "pending",
-              "checkedAt": null,
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:05:13.724Z",
               "failureIds": []
             }
           },
           {
             "id": "synthesis-o02:synthesis-project-fd3963cfe178c86a2a4abcdb:source-0",
             "sourceUrl": "https://devpost.com/software/failurecloud",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/failurecloud",
             "title": "FailureCloud",
             "publisher": null,
             "sourceRole": "primary",
@@ -5016,14 +5027,14 @@
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T16:51:48.275Z",
+              "checkedAt": "2026-10-15T23:05:13.724Z",
               "failureIds": []
             }
           },
           {
             "id": "synthesis-o02:synthesis-project-fd3963cfe178c86a2a4abcdb:source-1",
             "sourceUrl": "https://devpost.com/software/failurecloud",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/failurecloud",
             "title": "FailureCloud",
             "publisher": null,
             "sourceRole": "primary",
@@ -5038,14 +5049,14 @@
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T16:51:48.275Z",
+              "checkedAt": "2026-10-15T23:05:13.724Z",
               "failureIds": []
             }
           },
           {
             "id": "synthesis-o02:synthesis-project-fd3963cfe178c86a2a4abcdb:source-2",
             "sourceUrl": "https://devpost.com/software/failurecloud",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/failurecloud",
             "title": "FailureCloud",
             "publisher": null,
             "sourceRole": "primary",
@@ -5060,14 +5071,14 @@
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T16:51:48.275Z",
+              "checkedAt": "2026-10-15T23:05:13.724Z",
               "failureIds": []
             }
           },
           {
             "id": "synthesis-o02:synthesis-project-fd3963cfe178c86a2a4abcdb:source-3",
             "sourceUrl": "https://devpost.com/software/failurecloud",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/failurecloud",
             "title": "FailureCloud",
             "publisher": null,
             "sourceRole": "primary",
@@ -5082,14 +5093,14 @@
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T16:51:48.275Z",
+              "checkedAt": "2026-10-15T23:05:13.724Z",
               "failureIds": []
             }
           },
           {
             "id": "synthesis-o02:synthesis-project-fd3963cfe178c86a2a4abcdb:source-4",
             "sourceUrl": "https://devpost.com/software/failurecloud",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/failurecloud",
             "title": "FailureCloud",
             "publisher": null,
             "sourceRole": "primary",
@@ -5104,149 +5115,204 @@
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T16:51:48.275Z",
+              "checkedAt": "2026-10-15T23:05:13.724Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "synthesis-o02:review-survey",
+            "sourceUrl": "https://arxiv.org/pdf/2004.07368",
+            "finalUrl": "https://arxiv.org/pdf/2004.07368",
+            "title": "A Study on the Challenges of Using Robotics Simulators for Testing",
+            "publisher": "Afsoon Afzal and coauthors",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2020-04-15",
+            "observationPeriod": "November 2019 online survey; 82 self-selected robotics developers; geography unspecified",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Lack of deterministic execution of simulators leads to unrepeatable results.",
+            "pdfPage": 5,
+            "locator": "Physical PDF page5; historical participant report, not prevalence estimate",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:05:13.724Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "synthesis-o02:review-historical-case",
+            "sourceUrl": "https://aws.amazon.com/blogs/robotics/how-inesc-tec-tests-and-deploys-ros-applications-with-aws-robomaker/",
+            "finalUrl": "https://aws.amazon.com/blogs/robotics/how-inesc-tec-tests-and-deploys-ros-applications-with-aws-robomaker/",
+            "title": "How INESC TEC tests and deploys ROS applications with AWS RoboMaker",
+            "publisher": "AWS and INESC TEC",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2021-01-29",
+            "observationPeriod": "Historical Portuguese research pilot, reported January 29, 2021; observation window unspecified",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "we were able to speed up our testing time from 4 hours per test in the physical world to a couple of minutes",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding context inspected",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:05:13.724Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "synthesis-o02:review-simpler",
+            "sourceUrl": "https://simpler-env.github.io/",
+            "finalUrl": "https://simpler-env.github.io/",
+            "title": "Evaluating Real-World Robot Manipulation Policies in Simulation",
+            "publisher": "SIMPLER authors",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": null,
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Visual discrepancies between real-world and simulated environments can comprise a distribution shift that adversely affects a learned policy’s behavior, rendering simulated evaluation unreliable.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding context inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:05:13.724Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "synthesis-o02:review-signalflag",
+            "sourceUrl": "https://signalflag.ai/",
+            "finalUrl": "https://signalflag.ai/",
+            "title": "SignalFlag: robotics test infrastructure, formerly ReSim",
+            "publisher": "SignalFlag",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": null,
+            "retrievedAt": "2026-10-15",
+            "excerpt": "The value is in orchestrating those runs and making their results comparable, not in producing the simulation itself.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding context inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:05:13.724Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "synthesis-o02:review-foxglove",
+            "sourceUrl": "https://foxglove.dev/pricing",
+            "finalUrl": "https://foxglove.dev/pricing",
+            "title": "Foxglove pricing",
+            "publisher": "Foxglove",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": null,
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Comparison mode\nLoad multiple recordings at once and compare them overlaid or side by side.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding context inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:05:13.724Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "synthesis-o02:review-robomaker-end",
+            "sourceUrl": "https://github.com/aws-robotics/aws-robomaker-github-actions",
+            "finalUrl": "https://github.com/aws-robotics/aws-robomaker-github-actions",
+            "title": "AWS RoboMaker GitHub Actions: repository archived",
+            "publisher": "AWS Robotics",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "End of support September 10, 2025; current archived repository notice",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "This repository was part of AWS RoboMaker, which reached end of support on September 10, 2025.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding context inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-15T23:05:13.724Z",
               "failureIds": []
             }
           }
         ],
         "assessment": {
           "rubricVersion": "venture-screen-v2",
-          "priority": "high",
-          "priorityReason": "A repeatable physical test-and-log workflow addresses a recurring development task and could complement existing simulators. Cross-controller reuse gives a coherent scalable product hypothesis.",
+          "priority": "medium",
+          "priorityReason": "Reusable task tests checked against physical outcomes could supplement existing platforms. A matched customer trial can establish whether this improves release decisions or saves setup work.",
           "confidence": {
-            "level": "low",
-            "reason": "Low commercially; moderate support for the reported bounded workflow."
+            "level": "moderate",
+            "reason": "Original builder pages, research and supplier descriptions are inspected. Commercial demand, customer-specific reliability and superior economics are not established."
           },
           "dimensions": {
             "problem": {
               "status": "supported",
-              "reason": "Retained builders describe manual controller comparisons and difficulty repeating failures.",
+              "reason": "Research and a historical customer-coauthored case document testing work and repeatability problems; no current representative cost estimate.",
               "claimIds": [
-                "synthesis-o02:project-synthesis-project-22f51c407676fc9820e0e24d",
-                "synthesis-o02:project-synthesis-project-4612aadeef9931232e9b302d",
-                "synthesis-o02:project-synthesis-project-dd4d909f593b7da77e4b3f38",
-                "synthesis-o02:what",
-                "synthesis-o02:problem",
-                "synthesis-o02:opportunity",
-                "synthesis-o02:customer-0",
-                "synthesis-o02:customer-1",
-                "synthesis-o02:application-0",
-                "synthesis-o02:application-1",
-                "synthesis-o02:application-2",
-                "synthesis-o02:project-synthesis-project-fd3963cfe178c86a2a4abcdb"
+                "synthesis-o02:problem"
               ]
             },
             "customerPayment": {
               "status": "plausible",
-              "reason": "Robot engineering teams perform the task; budgets and buying intent are unknown.",
+              "reason": "Robot software and testing teams are identifiable users. Budget owners, paid pilots, contracts and renewals remain unestablished.",
               "claimIds": [
-                "synthesis-o02:project-synthesis-project-22f51c407676fc9820e0e24d",
-                "synthesis-o02:project-synthesis-project-4612aadeef9931232e9b302d",
-                "synthesis-o02:project-synthesis-project-dd4d909f593b7da77e4b3f38",
-                "synthesis-o02:what",
-                "synthesis-o02:problem",
-                "synthesis-o02:opportunity",
-                "synthesis-o02:customer-0",
-                "synthesis-o02:customer-1",
-                "synthesis-o02:application-0",
-                "synthesis-o02:application-1",
-                "synthesis-o02:application-2",
-                "synthesis-o02:project-synthesis-project-fd3963cfe178c86a2a4abcdb"
+                "synthesis-o02:opportunity"
               ]
             },
             "productValue": {
-              "status": "supported",
-              "reason": "Shared execution and logs are reported on a physical arm; this supports a bounded capability, not production reliability.",
+              "status": "plausible",
+              "reason": "Validated reusable tasks could reduce preparation and reveal physical failures. Cross-robot reliability and net savings remain unmeasured.",
               "claimIds": [
-                "synthesis-o02:project-synthesis-project-22f51c407676fc9820e0e24d",
-                "synthesis-o02:project-synthesis-project-4612aadeef9931232e9b302d",
-                "synthesis-o02:project-synthesis-project-dd4d909f593b7da77e4b3f38",
-                "synthesis-o02:what",
-                "synthesis-o02:problem",
-                "synthesis-o02:opportunity",
-                "synthesis-o02:customer-0",
-                "synthesis-o02:customer-1",
-                "synthesis-o02:application-0",
-                "synthesis-o02:application-1",
-                "synthesis-o02:application-2",
-                "synthesis-o02:project-synthesis-project-fd3963cfe178c86a2a4abcdb"
+                "synthesis-o02:opportunity"
               ]
             },
             "commercialGap": {
               "status": "plausible",
-              "reason": "A layer coordinating tests across controllers could supplement simulation and existing test tools instead of replacing them.",
+              "reason": "Task quality and physical-outcome checks may complement test platforms. SignalFlag already offers orchestration and scenario creation; incremental value is unresolved.",
               "claimIds": [
-                "synthesis-o02:project-synthesis-project-22f51c407676fc9820e0e24d",
-                "synthesis-o02:project-synthesis-project-4612aadeef9931232e9b302d",
-                "synthesis-o02:project-synthesis-project-dd4d909f593b7da77e4b3f38",
-                "synthesis-o02:what",
-                "synthesis-o02:problem",
-                "synthesis-o02:opportunity",
-                "synthesis-o02:customer-0",
-                "synthesis-o02:customer-1",
-                "synthesis-o02:application-0",
-                "synthesis-o02:application-1",
-                "synthesis-o02:application-2",
-                "synthesis-o02:project-synthesis-project-fd3963cfe178c86a2a4abcdb"
+                "synthesis-o02:v2-comparison"
               ]
             },
             "ventureScale": {
-              "status": "plausible",
-              "reason": "Repeated use across releases, controllers and customers offers a recurring-software path; no measured reachable revenue.",
+              "status": "missing",
+              "reason": "Qualified buyer count, annual spend, repeated purchases and obtainable revenue unknown. Broad producer counts and competitor list prices do not establish market size.",
               "claimIds": [
-                "synthesis-o02:project-synthesis-project-22f51c407676fc9820e0e24d",
-                "synthesis-o02:project-synthesis-project-4612aadeef9931232e9b302d",
-                "synthesis-o02:project-synthesis-project-dd4d909f593b7da77e4b3f38",
-                "synthesis-o02:what",
-                "synthesis-o02:problem",
-                "synthesis-o02:opportunity",
-                "synthesis-o02:customer-0",
-                "synthesis-o02:customer-1",
-                "synthesis-o02:application-0",
-                "synthesis-o02:application-1",
-                "synthesis-o02:application-2",
-                "synthesis-o02:project-synthesis-project-fd3963cfe178c86a2a4abcdb"
+                "synthesis-o02:opportunity"
               ]
             },
             "businessCapital": {
-              "status": "plausible",
-              "reason": "Software and compatible fixtures may repeat; extensive hardware adaptation could turn it into custom integration.",
+              "status": "missing",
+              "reason": "Robot access, integration, compute, support and customer-specific setup costs are unknown; margins and repeatability unproven.",
               "claimIds": [
-                "synthesis-o02:project-synthesis-project-22f51c407676fc9820e0e24d",
-                "synthesis-o02:project-synthesis-project-4612aadeef9931232e9b302d",
-                "synthesis-o02:project-synthesis-project-dd4d909f593b7da77e4b3f38",
-                "synthesis-o02:what",
-                "synthesis-o02:problem",
-                "synthesis-o02:opportunity",
-                "synthesis-o02:customer-0",
-                "synthesis-o02:customer-1",
-                "synthesis-o02:application-0",
-                "synthesis-o02:application-1",
-                "synthesis-o02:application-2",
-                "synthesis-o02:project-synthesis-project-fd3963cfe178c86a2a4abcdb"
+                "synthesis-o02:opportunity"
               ]
             },
             "timing": {
               "status": "plausible",
-              "reason": "Different controller/tool demonstrations create an integration reason to investigate now; no market acceleration is inferred.",
+              "reason": "More capable robot-control models make comparison useful, but current growth in release-testing spend is not established.",
               "claimIds": [
-                "synthesis-o02:project-synthesis-project-22f51c407676fc9820e0e24d",
-                "synthesis-o02:project-synthesis-project-4612aadeef9931232e9b302d",
-                "synthesis-o02:project-synthesis-project-dd4d909f593b7da77e4b3f38",
-                "synthesis-o02:what",
-                "synthesis-o02:problem",
-                "synthesis-o02:opportunity",
-                "synthesis-o02:customer-0",
-                "synthesis-o02:customer-1",
-                "synthesis-o02:application-0",
-                "synthesis-o02:application-1",
-                "synthesis-o02:application-2",
-                "synthesis-o02:project-synthesis-project-fd3963cfe178c86a2a4abcdb"
+                "synthesis-o02:opportunity"
               ]
             }
           },
-          "strongestObjection": "Existing open-source tools may already provide enough integration, and simulated success may not predict hardware performance.",
-          "decisiveQuestion": "Measure test preparation time and useful regressions found across two customer controllers, compared with their existing toolchain."
+          "strongestObjection": "Existing platforms already run and compare tests. The remaining question is the quality and setup effort of the tests themselves, not whether another dashboard can display results.",
+          "decisiveQuestion": "On a customer’s robot, does the test package catch meaningful failures or reduce setup time beyond their existing tools, with results that repeat?"
         },
         "migrationGaps": []
       },

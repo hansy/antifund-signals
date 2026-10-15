@@ -4361,13 +4361,13 @@
       "title": "A repeatable test suite for robot software",
       "summary": "Compare robot software on repeatable tasks.",
       "topic": "Robotics",
-      "problem": "Robot developers must assemble tests, load different controllers and inspect attempts to decide whether a change made their robot better or worse.",
-      "statusQuo": "Robot developers must assemble tests, load different controllers and inspect attempts to decide whether a change made their robot better or worse.",
-      "gap": "Existing robot simulators, manufacturers or open-source tools could supply this as a feature. Passing a simulated test may not predict physical success.",
-      "opportunity": "A shared test system could reduce repeated engineering work each time robot software changes. The business depends on solving tests that existing simulators and internal tools handle poorly.",
-      "evidence": "The clearest combination of a specific workflow, a reported physical implementation and a repeat-use software product. Builds on an existing opportunity rather than adding a duplicate lead.",
-      "counterpoint": "Existing open-source tools may already provide enough integration, and simulated success may not predict hardware performance.",
-      "nextQuestion": "Measure test preparation time and useful regressions found across two customer controllers, compared with their existing toolchain.",
+      "problem": "Robot teams must build test tasks, run different software versions and judge what happened. Simulations can save physical testing time, but a result is useful only if it repeats reliably and reflects how the real robot behaves.",
+      "statusQuo": "Teams build their own tests or use products such as SignalFlag to run and compare them. Simulators and Foxglove cover other parts of the workflow.",
+      "gap": "Reusable tests that reliably predict relevant physical failures with less setup than the team’s current approach.",
+      "opportunity": "Software that repeats the same robot tasks after a software change and shows whether performance improved or got worse. For example: can the arm still pick up a box when the lighting changes?",
+      "evidence": "Builder reports show different parts of the testing workflow. Independent research documents repeatability problems and methods for matching simulation to real robot behaviour; commercial benefit remains unproven.",
+      "counterpoint": "Existing platforms already run and compare tests. The remaining question is the quality and setup effort of the tests themselves, not whether another dashboard can display results.",
+      "nextQuestion": "On a customer’s robot, does the test package catch meaningful failures or reduce setup time beyond their existing tools, with results that repeat?",
       "projectIds": [
         "synthesis-project-22f51c407676fc9820e0e24d",
         "synthesis-project-4612aadeef9931232e9b302d",
@@ -4382,8 +4382,8 @@
       ],
       "confidence": "Early signal",
       "brief": {
-        "whatItIs": "Software that runs a robot through the same tasks after each software change, records what went wrong, and compares the results. For example: can the arm still pick up a box when lighting changes?",
-        "problem": "Robot developers must assemble tests, load different controllers and inspect attempts to decide whether a change made their robot better or worse.",
+        "whatItIs": "Software that repeats the same robot tasks after a software change and shows whether performance improved or got worse. For example: can the arm still pick up a box when the lighting changes?",
+        "problem": "Robot teams must build test tasks, run different software versions and judge what happened. Simulations can save physical testing time, but a result is useful only if it repeats reliably and reflects how the real robot behaves.",
         "breakthroughs": [
           {
             "text": "Direct physical testing workflow: two controllers used the same arm/cameras/tasks/judge; different compute hardware and no validated judge accuracy or comparative success rates.",
@@ -4410,7 +4410,7 @@
             ]
           }
         ],
-        "marketOpportunity": "A shared test system could reduce repeated engineering work each time robot software changes. The business depends on solving tests that existing simulators and internal tools handle poorly.",
+        "marketOpportunity": "Reusable task tests, checked against real robot outcomes, could save teams from rebuilding and validating tests for each release. They could work with existing testing platforms. The commercial question is whether they catch meaningful failures or save enough setup work to earn repeat payment.",
         "buyer": "Robot manufacturers; Robotics engineering and integration teams",
         "applications": [
           "Comparing robot software versions",
@@ -4420,14 +4420,52 @@
           "Robot manufacturers",
           "Robotics engineering and integration teams"
         ],
-        "marketStatus": "hypothesis",
-        "marketEvidence": [],
+        "marketStatus": "researched",
+        "marketEvidence": [
+          {
+            "title": "A Study on the Challenges of Using Robotics Simulators for Testing",
+            "url": "https://arxiv.org/pdf/2004.07368",
+            "excerpt": "Lack of deterministic execution of simulators leads to unrepeatable results.",
+            "accessedAt": "2026-10-15",
+            "page": 5
+          },
+          {
+            "title": "How INESC TEC tests and deploys ROS applications with AWS RoboMaker",
+            "url": "https://aws.amazon.com/blogs/robotics/how-inesc-tec-tests-and-deploys-ros-applications-with-aws-robomaker/",
+            "excerpt": "we were able to speed up our testing time from 4 hours per test in the physical world to a couple of minutes",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Evaluating Real-World Robot Manipulation Policies in Simulation",
+            "url": "https://simpler-env.github.io/",
+            "excerpt": "Visual discrepancies between real-world and simulated environments can comprise a distribution shift that adversely affects a learned policy’s behavior, rendering simulated evaluation unreliable.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "SignalFlag: robotics test infrastructure, formerly ReSim",
+            "url": "https://signalflag.ai/",
+            "excerpt": "The value is in orchestrating those runs and making their results comparable, not in producing the simulation itself.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Foxglove pricing",
+            "url": "https://foxglove.dev/pricing",
+            "excerpt": "Comparison mode\nLoad multiple recordings at once and compare them overlaid or side by side.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "AWS RoboMaker GitHub Actions: repository archived",
+            "url": "https://github.com/aws-robotics/aws-robomaker-github-actions",
+            "excerpt": "This repository was part of AWS RoboMaker, which reached end of support on September 10, 2025.",
+            "accessedAt": "2026-10-15"
+          }
+        ],
         "risks": [
-          "Existing robot simulators, manufacturers or open-source tools could supply this as a feature. Passing a simulated test may not predict physical success.",
-          "Two distinct projects and author sets at two hackathons. These are two implementations, not two customer purchases or evidence of a growing market."
+          "Existing platforms already run and compare tests. The remaining question is the quality and setup effort of the tests themselves, not whether another dashboard can display results.",
+          "A simulated pass may not predict physical success. Setup costs, paid demand and reuse across customers remain unproven."
         ],
         "nextQuestions": [
-          "Measure test preparation time and useful regressions found across two customer controllers, compared with their existing toolchain."
+          "On a customer’s robot, does the test package catch meaningful failures or reduce setup time beyond their existing tools, with results that repeat?"
         ]
       }
     },
