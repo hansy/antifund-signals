@@ -37,6 +37,13 @@ import {
   type ReactNode,
 } from "react";
 import { useCorpus } from "../lib/client";
+import {
+  collectionEntries,
+  collectionRecord,
+  collectionGroup,
+  collectionIncludes,
+  supportingRecords,
+} from "../lib/opportunity-collection";
 import { getSignalBrief } from "../lib/signals";
 import { groupResearchTeams } from "../lib/teams";
 import { Portrait, TeamView } from "./TeamView";
@@ -257,9 +264,33 @@ export function Workspace() {
       onClick: (event: MouseEvent<HTMLAnchorElement>) => navigate(event, next),
     };
   }
+  const entries = collectionEntries(corpus?.insights ?? []);
+  const selectedGroup = collectionGroup(selection.signal);
   const insight = selection.signal
     ? corpus?.insights.find((item) => item.id === selection.signal)
     : corpus?.insights[0];
+  const editorial = collectionRecord(insight?.id);
+  const displayTitle = editorial?.title ?? insight?.title ?? "";
+  const parentEntry = entries.find((x) => x.id === editorial?.parentId);
+  function supportingLinks(id: string) {
+    const children = supportingRecords(id).filter((x) =>
+      corpus?.insights.some((i) => i.id === x.id),
+    );
+    if (!children.length) return null;
+    return (
+      <div className="supporting-research-list">
+        {children.map((child) => (
+          <div key={child.id}>
+            <a {...internalLink({ ...emptySelection, signal: child.id })}>
+              {child.title}
+              <Arrow />
+            </a>
+            <p>{child.reason}</p>
+          </div>
+        ))}
+      </div>
+    );
+  }
   const source =
     insight &&
     corpus?.sources.find(
@@ -294,7 +325,7 @@ export function Workspace() {
   const unknownSelection =
     ready &&
     corpus &&
-    ((selection.signal && !insight) ||
+    ((selection.signal && !insight && !selectedGroup) ||
       (selection.source && !source) ||
       (selection.project && !project) ||
       (selection.team && (!team || selection.source || selection.project)));
@@ -306,12 +337,21 @@ export function Workspace() {
       team: null,
     });
   }
-  const visibleSignals = (corpus?.insights ?? []).filter(
+  const collectionView =
+    signalFilter === "Projects"
+      ? "project"
+      : signalFilter === "Supporting research"
+        ? "supporting"
+        : "main";
+  const visibleSignals = entries.filter(
     (item) =>
-      signalFilter === "All" ||
-      signalCategory(
-        stages.data?.opportunities.find((o) => o.id === item.id),
-      ) === signalFilter,
+      collectionIncludes(item, collectionView) &&
+      (signalFilter === "All" ||
+        collectionView !== "main" ||
+        (!item.group &&
+          signalCategory(
+            stages.data?.opportunities.find((o) => o.id === item.id),
+          ) === signalFilter)),
   );
   const filterControl = (
     <SignalFilters value={signalFilter} onChange={setSignalFilter} />
@@ -356,25 +396,44 @@ export function Workspace() {
                     project: null,
                     team: null,
                   })}
-                  className={`signal-card ${item.id === insight?.id ? "is-active" : ""}`}
-                  aria-current={item.id === insight?.id ? "page" : undefined}
+                  className={`signal-card ${item.id === (selectedGroup?.id ?? insight?.id) ? "is-active" : ""}`}
+                  aria-current={
+                    item.id === (selectedGroup?.id ?? insight?.id)
+                      ? "page"
+                      : undefined
+                  }
                 >
                   <div className="signal-copy">
                     <h2>{item.title}</h2>
-                    <StageBadge
-                      verdict={
-                        stages.data?.opportunities.find((o) => o.id === item.id)
-                          ?.verdict
-                      }
-                      research={
-                        stages.data?.opportunities.find((o) => o.id === item.id)
-                          ?.research
-                      }
-                      stage={
-                        stages.data?.opportunities.find((o) => o.id === item.id)
-                          ?.stage
-                      }
-                    />
+                    {item.group || item.placement !== "opportunity" ? (
+                      <span className="collection-kind">
+                        {item.group
+                          ? item.placement === "opportunity"
+                            ? "Opportunity family"
+                            : "Research area"
+                          : item.placement === "project"
+                            ? "Project"
+                            : "Supporting research"}
+                      </span>
+                    ) : (
+                      <StageBadge
+                        verdict={
+                          stages.data?.opportunities.find(
+                            (o) => o.id === item.id,
+                          )?.verdict
+                        }
+                        research={
+                          stages.data?.opportunities.find(
+                            (o) => o.id === item.id,
+                          )?.research
+                        }
+                        stage={
+                          stages.data?.opportunities.find(
+                            (o) => o.id === item.id,
+                          )?.stage
+                        }
+                      />
+                    )}
                     <p>{item.summary}</p>
                   </div>
                   <span className="signal-arrow">
@@ -446,7 +505,11 @@ export function Workspace() {
                 <a
                   key={item.id}
                   href={selectionUrl({ ...emptySelection, signal: item.id })}
-                  aria-current={item.id === insight?.id ? "page" : undefined}
+                  aria-current={
+                    item.id === (selectedGroup?.id ?? insight?.id)
+                      ? "page"
+                      : undefined
+                  }
                   onClick={(event) => {
                     navigate(event, { ...emptySelection, signal: item.id });
                     if (event.defaultPrevented) {
@@ -456,20 +519,32 @@ export function Workspace() {
                   }}
                 >
                   <span>{item.title}</span>
-                  <StageBadge
-                    verdict={
-                      stages.data?.opportunities.find((o) => o.id === item.id)
-                        ?.verdict
-                    }
-                    research={
-                      stages.data?.opportunities.find((o) => o.id === item.id)
-                        ?.research
-                    }
-                    stage={
-                      stages.data?.opportunities.find((o) => o.id === item.id)
-                        ?.stage
-                    }
-                  />
+                  {item.group || item.placement !== "opportunity" ? (
+                    <span className="collection-kind">
+                      {item.group
+                        ? item.placement === "opportunity"
+                          ? "Opportunity family"
+                          : "Research area"
+                        : item.placement === "project"
+                          ? "Project"
+                          : "Supporting research"}
+                    </span>
+                  ) : (
+                    <StageBadge
+                      verdict={
+                        stages.data?.opportunities.find((o) => o.id === item.id)
+                          ?.verdict
+                      }
+                      research={
+                        stages.data?.opportunities.find((o) => o.id === item.id)
+                          ?.research
+                      }
+                      stage={
+                        stages.data?.opportunities.find((o) => o.id === item.id)
+                          ?.stage
+                      }
+                    />
+                  )}
                 </a>
               ))}
             </nav>
@@ -498,6 +573,24 @@ export function Workspace() {
                 Signals <Arrow />
               </a>
             </div>
+          ) : corpus && selectedGroup ? (
+            <article className="report">
+              <p className="collection-kind">
+                {selectedGroup.placement === "opportunity"
+                  ? "Opportunity family"
+                  : "Research area"}
+              </p>
+              <div className="brief-header">
+                <h1 ref={headingRef} tabIndex={-1}>
+                  {selectedGroup.title}
+                </h1>
+                <p className="brief-summary">{selectedGroup.summary}</p>
+              </div>
+              <BriefSection id="tracks" title={selectedGroup.section}>
+                {supportingLinks(selectedGroup.id)}
+              </BriefSection>
+              <p className="collection-boundary">{selectedGroup.boundary}</p>
+            </article>
           ) : corpus && insight && brief ? (
             <>
               <nav className="mobile-navigation" aria-label="Breadcrumb">
@@ -518,12 +611,12 @@ export function Workspace() {
                 <span aria-hidden="true">/</span>
                 {source || team ? (
                   <>
-                    <a {...internalLink(signalSelection)}>{insight.title}</a>
+                    <a {...internalLink(signalSelection)}>{displayTitle}</a>
                     <span aria-hidden="true">/</span>
                     <span aria-current="page">{team ? "Team" : "Source"}</span>
                   </>
                 ) : (
-                  <span aria-current="page">{insight.title}</span>
+                  <span aria-current="page">{displayTitle}</span>
                 )}
               </nav>
               {team ? (
@@ -531,10 +624,10 @@ export function Workspace() {
                   <a
                     className="source-return"
                     {...internalLink(signalSelection)}
-                    aria-label={`Return to ${insight.title}`}
+                    aria-label={`Return to ${displayTitle}`}
                   >
                     <Arrow back />
-                    <span>{insight.title}</span>
+                    <span>{displayTitle}</span>
                   </a>
                   <TeamView team={team} headingRef={headingRef} />
                 </div>
@@ -546,10 +639,10 @@ export function Workspace() {
                   <a
                     className="source-return"
                     {...internalLink(signalSelection)}
-                    aria-label={`Return to ${insight.title}`}
+                    aria-label={`Return to ${displayTitle}`}
                   >
                     <Arrow back />
-                    <span>{insight.title}</span>
+                    <span>{displayTitle}</span>
                   </a>
                   <SourceView
                     source={source}
@@ -561,8 +654,32 @@ export function Workspace() {
                 </div>
               ) : (
                 <article className="report" key={insight.id}>
-                  {opportunity && (
-                    <OpportunityStage opportunity={opportunity} />
+                  {editorial?.placement === "opportunity" ? (
+                    opportunity ? (
+                      <OpportunityStage opportunity={opportunity} />
+                    ) : null
+                  ) : (
+                    <div className="collection-context">
+                      <span className="collection-kind">
+                        {editorial?.placement === "project"
+                          ? "Project archive"
+                          : "Supporting research"}
+                      </span>
+                      {parentEntry && (
+                        <a
+                          {...internalLink({
+                            ...emptySelection,
+                            signal: parentEntry.id,
+                          })}
+                        >
+                          {parentEntry.title}
+                          <Arrow />
+                        </a>
+                      )}
+                      {editorial?.placement === "project" && (
+                        <p>{editorial.reason}</p>
+                      )}
+                    </div>
                   )}
                   {insight.id.startsWith("synthesis-") && !opportunity && (
                     <p className="stage-load" role="status">
@@ -576,7 +693,7 @@ export function Workspace() {
                   )}
                   <div className="brief-header">
                     <h1 ref={headingRef} tabIndex={-1}>
-                      {opportunity?.accepted.title ?? insight.title}
+                      {displayTitle}
                     </h1>
                     <p className="brief-summary">{brief.whatItIs}</p>
                   </div>
@@ -656,6 +773,11 @@ export function Workspace() {
                     <BriefSection id="problem" title="The problem">
                       <p>{brief.problem}</p>
                     </BriefSection>
+                    {insight && supportingRecords(insight.id).length > 0 && (
+                      <BriefSection id="supporting" title="Supporting research">
+                        {supportingLinks(insight.id)}
+                      </BriefSection>
+                    )}
                     <BriefSection id="teams" title="Projects & teams">
                       <div className="research-list">
                         {researchTeams.map((team) => {

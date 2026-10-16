@@ -1,0 +1,161 @@
+{
+  "version": "opportunity-screen-v1",
+  "records": [
+    {
+      "id": "synthesis-o01",
+      "placement": "opportunity",
+      "title": "Make AI tools cheaper to run",
+      "reason": "Several independent approaches reduce repeated information processing across AI workflows. The common customer expense and reusable software direction extend beyond a single project."
+    },
+    {
+      "id": "synthesis-o02",
+      "placement": "opportunity",
+      "title": "Testing suite for robot software",
+      "reason": "Reusable tests address recurring software changes across robot teams; a credible product category rather than one benchmark."
+    },
+    {
+      "id": "compact-survey-maps",
+      "placement": "opportunity",
+      "title": "Faster drone inspection maps",
+      "reason": "Repeated survey-to-map delivery across infrastructure inspections has a common workflow and a usable software output."
+    },
+    {
+      "id": "generated-training-review",
+      "placement": "opportunity",
+      "title": "Cheaper robot training data",
+      "reason": "Demonstration collection, generated variation and evaluation are repeatable needs across robot tasks. Saved research includes actual category spending."
+    },
+    {
+      "id": "factory-robot-setup",
+      "placement": "opportunity",
+      "title": "Factory robots with less setup",
+      "reason": "Reducing reprogramming and adaptation when parts change is a recurring deployment constraint across factories."
+    },
+    {
+      "id": "everyday-leg-assistance",
+      "placement": "opportunity",
+      "title": "Lightweight powered assistance for mobility",
+      "reason": "Repeated mobility needs, powered-assistance mechanisms and existing commercial offers support a product category beyond one knee device."
+    },
+    {
+      "id": "ai-action-controls",
+      "placement": "opportunity",
+      "title": "Safer actions by AI assistants",
+      "reason": "A reusable control layer could address consequential actions across connected business systems; multiple projects attempt parts of this capability."
+    },
+    {
+      "id": "automated-lab-experiments",
+      "placement": "opportunity",
+      "title": "Run repeated lab experiments with less manual work",
+      "reason": "Make-measure-adjust loops recur in materials development, with documented manual work and an existing equipment/software budget category."
+    },
+    {
+      "id": "hardware-code-testing",
+      "placement": "opportunity",
+      "title": "Find device-software faults using real hardware",
+      "reason": "Testing and diagnosis recur across electronics makers. Connecting code, instruments and follow-up tests gives a defined product direction."
+    },
+    {
+      "id": "checked-part-designs",
+      "placement": "opportunity",
+      "title": "Turn drawings and measurements into checked part designs",
+      "reason": "Reconstruction and correction recur across engineering and repair work; the capability is broader than one generated object."
+    },
+    {
+      "id": "laundry-folding",
+      "placement": "opportunity",
+      "title": "Less manual handling in commercial laundries",
+      "reason": "Recurring work, established equipment buyers and existing automation support a repeatable business category despite only one supporting corpus prototype."
+    },
+    {
+      "id": "protective-clothing-cooling",
+      "placement": "opportunity",
+      "title": "Keep workers cooler while wearing protective gear",
+      "reason": "Multiple projects address a shared constraint: workers cannot simply remove required clothing to cool down. The benefit extends beyond one vest."
+    },
+    {
+      "id": "cycling-scenario-tests",
+      "placement": "supporting",
+      "title": "Cyclist safety tests",
+      "reason": "Vehicle scenarios are a specialized testing track with different buyers and requirements. The supporting projects have not demonstrated an integrated suite.",
+      "parentId": "synthesis-o02"
+    },
+    {
+      "id": "terrain-fallback-tests",
+      "placement": "supporting",
+      "title": "Safer inspection robots",
+      "reason": "Site testing complements software tests. The underlying locomotion research does not itself establish a testing product.",
+      "parentId": "synthesis-o02"
+    },
+    {
+      "id": "wearable-robot-testing",
+      "placement": "supporting",
+      "title": "A sensor-equipped test leg for wearable robots",
+      "reason": "Fit and development tools, not evidence of walking benefit or a standalone testing market.",
+      "parentId": "everyday-leg-assistance"
+    },
+    {
+      "id": "factory-inspection",
+      "placement": "supporting",
+      "title": "Inspection equipment that keeps factory production moving",
+      "reason": "Coating, membrane and camera checks use different equipment. These briefs do not yet establish one repeatable solution.",
+      "parentId": "group-factory-quality"
+    },
+    {
+      "id": "compute-energy-control",
+      "placement": "supporting",
+      "title": "Schedule AI training around electricity costs",
+      "reason": "Computing operators must preserve job deadlines and account for the cost of idle hardware.",
+      "parentId": "group-flexible-energy"
+    },
+    {
+      "id": "flexible-electricity",
+      "placement": "supporting",
+      "title": "Move flexible electricity use to cheaper hours",
+      "reason": "Fleet departures and building comfort impose different constraints and buying requirements.",
+      "parentId": "group-flexible-energy"
+    },
+    {
+      "id": "gesture-robot-assistance",
+      "placement": "project",
+      "title": "Gesture controls for robots that provide physical help",
+      "reason": "The evidence establishes a gesture interface and recorded human-operated tasks, not a broader capability that reliably reduces effort in independent assistance."
+    },
+    {
+      "id": "field-blood-transport",
+      "placement": "project",
+      "title": "A portable cooler for blood transport in the field",
+      "reason": "A real mission requirement and category research award support a useful specialized product, but the saved evidence does not connect this design to a repeatable large-business opportunity."
+    },
+    {
+      "id": "reusable-metal-filters",
+      "placement": "project",
+      "title": "Reusable filters that release captured copper",
+      "reason": "One material concept for household water; industrial transfer and improved full treatment economics remain untested."
+    },
+    {
+      "id": "walking-freeze-cues",
+      "placement": "project",
+      "title": "A wearable cue for sudden walking freezes",
+      "reason": "A detector and mechanical prompt address a defined symptom, but no patient benefit or evidence-backed expansion connects the project to a larger commercial capability."
+    }
+  ],
+  "groups": [
+    {
+      "id": "group-flexible-energy",
+      "title": "Lower energy costs by shifting flexible work",
+      "placement": "opportunity",
+      "summary": "Schedule work for times when electricity costs less or the grid has spare capacity, while still meeting deadlines.",
+      "boundary": "Computing, fleets and buildings are separate customer tracks. They share an economic idea, not a proven common product or combined market.",
+      "section": "Customer tracks"
+    },
+    {
+      "id": "group-factory-quality",
+      "title": "Less manual factory quality control",
+      "placement": "supporting",
+      "summary": "Manufacturers describe repeated inspection work and unreliable checks that interrupt production.",
+      "boundary": "Coating measurements, membrane tests and camera inspection need different equipment. This is a research area; a common repeatable product has not been established.",
+      "section": "Supporting research"
+    }
+  ]
+}

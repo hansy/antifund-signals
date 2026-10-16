@@ -1716,3 +1716,25 @@ a.research-project-link:hover {
     animation: none;
   }
 }
+
+/* Editorial organization is separate from research status and saved feedback. */
+.collection-kind {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: var(--muted, #687065);
+}
+.collection-context { margin-bottom: 1.25rem; }
+.collection-context a, .supporting-research-list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: inherit;
+}
+.collection-context p, .collection-boundary,
+.supporting-research-list p { color: var(--muted, #687065); font-size: 0.9rem; line-height: 1.6; }
+.supporting-research-list > div { padding: 0.9rem 0; border-bottom: 1px solid #dde1d7; }
+.supporting-research-list a { font-weight: 600; text-decoration: none; }
+.supporting-research-list a svg { flex-shrink: 0; }
+.supporting-research-list p { margin: 0.4rem 0 0; }
+.collection-boundary { margin-top: 1.5rem; }

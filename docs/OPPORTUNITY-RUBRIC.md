@@ -1,6 +1,23 @@
-# Opportunity rubric — venture-screen-v2
+# Opportunity rubric — venture-screen-v3
 
 Find opportunities worth investigating within the investment thesis. A project is a technical clue, not the boundary of the opportunity. Keep investigation priority separate from evidence confidence and investment readiness.
+
+## Opportunity-level surfacing
+
+The main list contains meaningful, repeatable customer benefits with a concrete product direction. Themes organize the collection; projects supply evidence. A useful invention is not automatically an investment signal. Screen the level of the opportunity before rating its commercial strength:
+
+1. What useful capability becomes substantially easier, cheaper, faster or more accessible?
+2. Does the benefit recur across a coherent customer activity, with a credible path beyond one project or bespoke installation?
+3. What saved evidence connects the demonstrated or proposed capability to that wider opportunity? Explain the bridge; a broader headline, adjacent industry total or invented application is not evidence.
+4. Does this merit an independent opportunity, a supporting branch of an existing opportunity, or retention as a project only?
+
+Record an explicit editorial decision: **opportunity**, **supporting**, or **project**, with a reason and supporting source/project identities. New records require this screen before appearing on the main list. Being source-verified, first to finish or technically novel does not bypass it. A single project can support a coherent opportunity; several unrelated projects do not automatically create one. Specificity alone is not a rejection: a narrow product needs a supported path to substantial repeat business.
+
+Group related work without claiming a common product or pooling incompatible markets. Robot software tests, physical site validation and wearable fit rigs are different development tasks. Flexible computing, fleet charging and building controls share an economic mechanism but have different buyers and constraints. Factory coating checks and camera defects form a research area until a common repeatable offering is supported. Keep these boundaries visible.
+
+Examples: cheaper robot training data and factory robots with less setup describe repeatable capabilities. A copper-filter material or a blood cooler remains a project unless evidence supports a larger business direction. Do not rename either as water recovery or medical cold chains to manufacture scale. Sensory cues for Parkinson’s are not evidence for powered mobility assistance.
+
+Editorial placement does not change evidence confidence, investment readiness, user interest or research status. Preserve all source records, links, notes and reviewed revisions when grouping or archiving. No editorial change starts research. Historical research and reviews keep their original rubric versions.
 
 ## Cheap discovery: saved evidence first
 
