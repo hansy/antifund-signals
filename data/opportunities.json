@@ -11113,8 +11113,8 @@
     {
       "schemaVersion": 1,
       "id": "wearable-robot-testing",
-      "revision": 0,
-      "acceptedRevisionId": "wearable-robot-testing:rubric-v2-20261015",
+      "revision": 1,
+      "acceptedRevisionId": "wearable-robot-testing:evidence-review-v2-20261016",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -11122,19 +11122,19 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T21:24:18.427Z",
-      "updatedAt": "2026-10-15T21:24:18.427Z",
+      "updatedAt": "2026-10-16T02:25:07.664Z",
       "verdict": null,
       "stage": "first-impressions",
-      "qualificationError": null,
+      "qualificationError": "Reviewed medium-priority hypothesis; useful incremental test decisions, paid repeat demand and venture-scale economics remain unproven.",
       "accepted": {
-        "id": "wearable-robot-testing:rubric-v2-20261015",
+        "id": "wearable-robot-testing:evidence-review-v2-20261016",
         "opportunityId": "wearable-robot-testing",
-        "parentRevisionId": null,
-        "createdAt": "2026-10-15T21:24:18.427Z",
-        "producerId": "rubric-reassessment-v2",
-        "origin": "saved-data-synthesis",
-        "changeReason": "User-authorized preliminary opportunity from saved source evidence; adjacent uses and market demand remain hypotheses.",
-        "contentHash": "63b4e98ba716acb73b35aa358e2a4cd51a0c0deed2bed9e5fdf193ff1b51c52d",
+        "parentRevisionId": "wearable-robot-testing:rubric-v2-20261015",
+        "createdAt": "2026-10-16T02:25:07.664Z",
+        "producerId": "codex-evidence-inspector",
+        "origin": "inspection-correction",
+        "changeReason": "Inspect project intent, separate research apparatus, original clinical context and financial PDFs; compare a complete testing workflow, preserve unavailable regulation and quotation failure, and leave scale unknown.",
+        "contentHash": "5d1eaf38ea30f3487d6320a4260bc011616e238594a66c655bc229b039e6fe90",
         "title": "A sensor-equipped test leg for wearable robots",
         "classifications": [
           "Robotics"
@@ -11146,7 +11146,7 @@
           ],
           "economics": [],
           "timing": [],
-          "keyQuestion": "Validate force measurements and tissue response against reference methods, then assess purchase or repeated-service demand.",
+          "keyQuestion": "Does a reusable testing system change useful design decisions and save enough total work for independent manufacturers to pay repeatedly, without extensive custom rebuilding?",
           "what": "wearable-robot-testing:v2-what",
           "problem": "wearable-robot-testing:v2-problem",
           "opportunity": "wearable-robot-testing:v2-opportunity",
@@ -11179,129 +11179,152 @@
         "claims": [
           {
             "id": "wearable-robot-testing:v2-what",
-            "text": "An artificial leg imitates knee movement and soft-tissue contact. Sensors measure the forces a wearable robot applies to it.",
+            "text": "An artificial leg bends at the knee while sensors measure how a wearable robot presses and pulls on it. Developers could compare straps, padding and alignment before trying early designs on people. KneeMatic proposes this setup; its measurement accuracy has not been demonstrated.",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "wearable-robot-testing:synthesis-project-0f3df7dd0dc37e309bafe4cd:source-v2"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No KneeMatic calibration, human-outcome prediction, customer payment or full delivery economics. Other apparatus and supplier claims do not establish this product performance or reachable demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T02:25:07.664Z",
+              "reason": "Explicit opportunity/customer/transfer hypothesis, not validated device performance, payment or clinical benefit."
             },
-            "testQuestion": "Validate force measurements and tissue response against reference methods, then assess purchase or repeated-service demand."
+            "testQuestion": "Does a reusable testing system change useful design decisions and save enough total work for independent manufacturers to pay repeatedly, without extensive custom rebuilding?"
           },
           {
             "id": "wearable-robot-testing:v2-problem",
-            "text": "Developers need repeatable ways to investigate uncomfortable or unsafe loading before trying early hardware on people.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "Wearable robots must transfer force through straps and soft tissue. Poor fit can cause pain or injury, and tissue can absorb some of the intended assistance. Developers need repeatable tests, but a pressure reading alone cannot predict whether a person will be comfortable or safe.",
+            "kind": "inference",
+            "evidenceIds": [
+              "wearable-robot-testing:review-nist",
+              "wearable-robot-testing:review-phantom",
+              "wearable-robot-testing:review-clinical"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No KneeMatic calibration, human-outcome prediction, customer payment or full delivery economics. Other apparatus and supplier claims do not establish this product performance or reachable demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T02:25:07.664Z",
+              "reason": "Bounded interpretation from original sources; competitor overlap and missing customer outcomes retained."
             },
-            "testQuestion": "Validate force measurements and tissue response against reference methods, then assess purchase or repeated-service demand."
+            "reasoning": "NIST documents fit risk and a separate research apparatus demonstrates force transmission effects. Clinical events are broader context, not knee-rig benefit or population prevalence."
           },
           {
             "id": "wearable-robot-testing:v2-opportunity",
-            "text": "A standard test rig could serve multiple wearable-robot developers and testing laboratories. The key question is whether useful repeat testing supports a substantial business.",
+            "text": "Give wearable-robot developers a ready-to-use testing system that reduces custom fixture work and improves design decisions. It could combine artificial legs, pressure sensing and reporting, then sell testing, calibration and replacement parts. Existing research legs and Tekscan sensors already cover parts of this job. Repeat buying and a market large enough for venture investment remain unproven.",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "wearable-robot-testing:synthesis-project-0f3df7dd0dc37e309bafe4cd:source-v2",
+              "wearable-robot-testing:review-phantom",
+              "wearable-robot-testing:review-tekscan"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No KneeMatic calibration, human-outcome prediction, customer payment or full delivery economics. Other apparatus and supplier claims do not establish this product performance or reachable demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T02:25:07.664Z",
+              "reason": "Explicit opportunity/customer/transfer hypothesis, not validated device performance, payment or clinical benefit."
             },
-            "testQuestion": "Validate force measurements and tissue response against reference methods, then assess purchase or repeated-service demand."
+            "testQuestion": "Does a reusable testing system change useful design decisions and save enough total work for independent manufacturers to pay repeatedly, without extensive custom rebuilding?"
           },
           {
             "id": "wearable-robot-testing:v2-customer-0",
-            "text": "Wearable-robot developers",
+            "text": "Wearable-robot manufacturers developing knee interfaces",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "wearable-robot-testing:synthesis-project-0f3df7dd0dc37e309bafe4cd:source-v2",
+              "wearable-robot-testing:review-phantom"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No KneeMatic calibration, human-outcome prediction, customer payment or full delivery economics. Other apparatus and supplier claims do not establish this product performance or reachable demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T02:25:07.664Z",
+              "reason": "Explicit opportunity/customer/transfer hypothesis, not validated device performance, payment or clinical benefit."
             },
-            "testQuestion": "Validate force measurements and tissue response against reference methods, then assess purchase or repeated-service demand."
+            "testQuestion": "Which independent development sites have recurring tests and a budget for improved decisions or lower total effort?"
           },
           {
             "id": "wearable-robot-testing:v2-customer-1",
-            "text": "Testing laboratories",
+            "text": "Testing laboratories serving device manufacturers",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "wearable-robot-testing:synthesis-project-0f3df7dd0dc37e309bafe4cd:source-v2",
+              "wearable-robot-testing:review-phantom"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No KneeMatic calibration, human-outcome prediction, customer payment or full delivery economics. Other apparatus and supplier claims do not establish this product performance or reachable demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T02:25:07.664Z",
+              "reason": "Explicit opportunity/customer/transfer hypothesis, not validated device performance, payment or clinical benefit."
             },
-            "testQuestion": "Validate force measurements and tissue response against reference methods, then assess purchase or repeated-service demand."
+            "testQuestion": "Which independent development sites have recurring tests and a budget for improved decisions or lower total effort?"
           },
           {
             "id": "wearable-robot-testing:v2-application-0",
-            "text": "Measuring contact forces before human trials",
+            "text": "Comparing knee straps, padding and alignment; industrial knee devices and passive braces would need separate validation",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "wearable-robot-testing:synthesis-project-0f3df7dd0dc37e309bafe4cd:source-v2"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No KneeMatic calibration, human-outcome prediction, customer payment or full delivery economics. Other apparatus and supplier claims do not establish this product performance or reachable demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T02:25:07.664Z",
+              "reason": "Explicit opportunity/customer/transfer hypothesis, not validated device performance, payment or clinical benefit."
             },
-            "testQuestion": "Validate force measurements and tissue response against reference methods, then assess purchase or repeated-service demand."
+            "testQuestion": "Does a reusable testing system change useful design decisions and save enough total work for independent manufacturers to pay repeatedly, without extensive custom rebuilding?"
           },
           {
             "id": "wearable-robot-testing:v2-comparison",
-            "text": "Supplement to simulation and supervised human testing; alternative to existing physical test rigs. It cannot establish clinical benefit.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "Existing artificial legs substantially overlap with the mechanical test. Tekscan pressure sensors could equip an existing rig or become part of a complete product. Motion tracking, simulation and human tests supply different information and would still be needed. The opening is better decisions with less total work than this combined setup; realistic tissue, calibration and maintenance are part of the cost.",
+            "kind": "inference",
+            "evidenceIds": [
+              "wearable-robot-testing:review-phantom",
+              "wearable-robot-testing:review-nist",
+              "wearable-robot-testing:review-tekscan",
+              "wearable-robot-testing:review-astm"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No KneeMatic calibration, human-outcome prediction, customer payment or full delivery economics. Other apparatus and supplier claims do not establish this product performance or reachable demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T02:25:07.664Z",
+              "reason": "Bounded interpretation from original sources; competitor overlap and missing customer outcomes retained."
             },
-            "testQuestion": "Validate force measurements and tissue response against reference methods, then assess purchase or repeated-service demand."
+            "reasoning": "Original research and supplier sources establish overlapping measurement approaches; combined-system decision value remains unmeasured."
           },
           {
             "id": "wearable-robot-testing:project-v2-0f3df7dd0dc37e309bafe4cd",
@@ -11316,10 +11339,10 @@
               "No calibration, tissue-realism validation or demonstrated prediction of human injury. Source school and year identify the event collection, not confirmed author affiliation or project completion date."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T02:25:07.664Z",
+              "reason": "Original project section and excerpt verified; development intent only, no completed accuracy validation."
             },
             "attribution": "19. Kneematic",
             "quantity": null
@@ -11329,9 +11352,9 @@
           {
             "id": "wearable-robot-testing:synthesis-project-0f3df7dd0dc37e309bafe4cd:source-v2",
             "sourceUrl": "https://uwaterloo.ca/capstone-design/project-abstracts/2026-capstone-design-projects/2026-mechanical-engineering-capstone-designs",
-            "finalUrl": null,
+            "finalUrl": "https://uwaterloo.ca/capstone-design/project-abstracts/2026-capstone-design-projects/2026-mechanical-engineering-capstone-designs",
             "title": "19. Kneematic",
-            "publisher": null,
+            "publisher": "University of Waterloo",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -11339,12 +11362,122 @@
             "retrievedAt": "2026-10-15T21:24:18.427Z",
             "excerpt": "mimics human knee and soft tissue biomechanics with integrated distributed pressure and force sensing to enable safe, quantitative, and repeatable testing of lower-limb exoskeletons.",
             "pdfPage": null,
-            "locator": "Original project page; exact retained excerpt",
+            "locator": "Original archived project page; team description and limitations inspected",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T21:24:18.427Z",
+              "checkedAt": "2026-10-16T02:25:07.664Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "wearable-robot-testing:review-phantom",
+            "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10311455/",
+            "finalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10311455/",
+            "title": "Research leg measures force transfer through soft tissue",
+            "publisher": "IEEE / University of Florida, archived by PMC",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2023-06-01",
+            "observationPeriod": "June1,2023 final article; US research apparatus. Its force results are specific to its leg, interface and spring. Not KneeMatic performance or injury prediction.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Our results of assistive force transmission to the joint are exclusive to our exoskeleton, lower limb, and interface.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T02:25:07.664Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "wearable-robot-testing:review-nist",
+            "sourceUrl": "https://www.nist.gov/news-events/news/2020/08/exoskeleton-research-marches-forward-nist-study-fit",
+            "finalUrl": "https://www.nist.gov/news-events/news/2020/08/exoskeleton-research-marches-forward-nist-study-fit",
+            "title": "NIST measures how a wearable robot and its user move together",
+            "publisher": "NIST",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2020-08-20",
+            "observationPeriod": "August20,2020 research account. Alignment measurement complements pressure sensing; no customer injury rate or product certification.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "can cause pain or injury if their joints are not aligned with the user’s.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T02:25:07.664Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "wearable-robot-testing:review-tekscan",
+            "sourceUrl": "https://www.tekscan.com/products-solutions/systems/i-scan-system",
+            "finalUrl": "https://www.tekscan.com/products-solutions/systems/i-scan-system",
+            "title": "Commercial sensors already measure contact pressure",
+            "publisher": "Tekscan",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "October15,2026 retained supplier page; publication date unknown. Offered sensing system, not independently reproduced accuracy or savings.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "I‑Scan measures and analyzes dynamic interface pressure between two surfaces using thin, flexible sensors",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T02:25:07.664Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "wearable-robot-testing:review-astm",
+            "sourceUrl": "https://www.astm.org/news/task-group-on-exoskeleton-training-and-certification",
+            "finalUrl": "https://www.astm.org/news/task-group-on-exoskeleton-training-and-certification",
+            "title": "Work on shared testing protocols is still developing",
+            "publisher": "ASTM",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2025-11-02",
+            "observationPeriod": "Page dated November2,2025; issue January/February2026. Task-group groundwork, not an adopted requirement, accepted KneeMatic protocol or buying deadline. Phase3original403 resolved with retained phase2original.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "This will lay the groundwork to define baseline test categories, lab infrastructure requirements, and pilot protocols",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T02:25:07.664Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "wearable-robot-testing:review-clinical",
+            "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10091314/",
+            "finalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10091314/",
+            "title": "Small hospital study documents device-related skin injuries",
+            "publisher": "Journal of NeuroEngineering and Rehabilitation / PMC",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2023-04-12",
+            "observationPeriod": "Published April12,2023;24 adults with spinal cord injury, Spain/Germany, November2020–October2021;242sessions.81all-causeevents,8device-related,5device-relatedskinlesions;2moderatesacralevents inoneperson caused8weekpause;none serious. Broader context, not knee-specific frequency or preventable injuries.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Two device-related skin lesions occurring in the same participant were rated as moderate (grade II sacral pressure injury).",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T02:25:07.664Z",
               "failureIds": []
             }
           }
@@ -11354,112 +11487,63 @@
           "rubricVersion": "venture-screen-v2",
           "dimensions": {
             "problem": {
-              "status": "plausible",
-              "reason": "Developers need to investigate contact and loading before exposing people to early hardware. This is inferred from the stated test purpose.",
+              "status": "supported",
+              "reason": "Misalignment and soft-tissue force loss are supported; knee-specific preventable harm and engineering cost missing.",
               "claimIds": [
-                "wearable-robot-testing:v2-what",
-                "wearable-robot-testing:v2-problem",
-                "wearable-robot-testing:v2-opportunity",
-                "wearable-robot-testing:v2-customer-0",
-                "wearable-robot-testing:v2-customer-1",
-                "wearable-robot-testing:v2-application-0",
-                "wearable-robot-testing:v2-comparison",
-                "wearable-robot-testing:project-v2-0f3df7dd0dc37e309bafe4cd"
+                "wearable-robot-testing:v2-problem"
               ]
             },
             "customerPayment": {
               "status": "plausible",
-              "reason": "Wearable-robot developers and safety-testing laboratories. Willingness to pay for this offer is not established.",
+              "reason": "Manufacturers and test laboratories are credible payers; no buying commitment, testing budget or paid repeat use.",
               "claimIds": [
-                "wearable-robot-testing:v2-what",
-                "wearable-robot-testing:v2-problem",
-                "wearable-robot-testing:v2-opportunity",
-                "wearable-robot-testing:v2-customer-0",
-                "wearable-robot-testing:v2-customer-1",
-                "wearable-robot-testing:v2-application-0",
-                "wearable-robot-testing:v2-comparison",
-                "wearable-robot-testing:project-v2-0f3df7dd0dc37e309bafe4cd"
+                "wearable-robot-testing:v2-customer-0"
               ]
             },
             "productValue": {
               "status": "plausible",
-              "reason": "Repeatable physical measurements could complement simulation and later human trials.",
+              "reason": "Repeated motion and contact measurement could aid design decisions; a separate apparatus supports mechanism, not KneeMatic accuracy or benefit.",
               "claimIds": [
-                "wearable-robot-testing:v2-what",
-                "wearable-robot-testing:v2-problem",
-                "wearable-robot-testing:v2-opportunity",
-                "wearable-robot-testing:v2-customer-0",
-                "wearable-robot-testing:v2-customer-1",
-                "wearable-robot-testing:v2-application-0",
-                "wearable-robot-testing:v2-comparison",
-                "wearable-robot-testing:project-v2-0f3df7dd0dc37e309bafe4cd"
+                "wearable-robot-testing:v2-what"
               ]
             },
             "commercialGap": {
               "status": "plausible",
-              "reason": "Supplement to simulation and supervised human testing; alternative to existing physical test rigs. It cannot establish clinical benefit. Open gap: Whether this rig predicts meaningful human contact problems more cheaply or repeatably than existing rigs.",
+              "reason": "Supported platform could reduce custom work; existing research legs and commercial sensors overlap and may suffice.",
               "claimIds": [
-                "wearable-robot-testing:v2-what",
-                "wearable-robot-testing:v2-problem",
-                "wearable-robot-testing:v2-opportunity",
-                "wearable-robot-testing:v2-customer-0",
-                "wearable-robot-testing:v2-customer-1",
-                "wearable-robot-testing:v2-application-0",
-                "wearable-robot-testing:v2-comparison",
-                "wearable-robot-testing:project-v2-0f3df7dd0dc37e309bafe4cd"
+                "wearable-robot-testing:v2-comparison"
               ]
             },
             "ventureScale": {
-              "status": "plausible",
-              "reason": "Hardware plus repeated testing services could serve multiple device makers; the buyer population may be too small for a standalone venture.",
+              "status": "missing",
+              "reason": "Independent development sites, rigs per site, purchase frequency, service volume and prices unknown; device catalogues and patient numbers are not demand.",
               "claimIds": [
-                "wearable-robot-testing:v2-what",
-                "wearable-robot-testing:v2-problem",
-                "wearable-robot-testing:v2-opportunity",
-                "wearable-robot-testing:v2-customer-0",
-                "wearable-robot-testing:v2-customer-1",
-                "wearable-robot-testing:v2-application-0",
-                "wearable-robot-testing:v2-comparison",
-                "wearable-robot-testing:project-v2-0f3df7dd0dc37e309bafe4cd"
+                "wearable-robot-testing:v2-opportunity"
               ]
             },
             "businessCapital": {
               "status": "missing",
-              "reason": "Unvalidated tissue realism may create false reassurance. One proposed rig does not establish a large testing business. Delivered costs, repeat economics and capital needs remain unresolved.",
+              "reason": "Fixtures, calibration, tissue replacement, customer adaptation, operators and validation costs unknown; scalable margins unestablished.",
               "claimIds": [
-                "wearable-robot-testing:v2-what",
-                "wearable-robot-testing:v2-problem",
-                "wearable-robot-testing:v2-opportunity",
-                "wearable-robot-testing:v2-customer-0",
-                "wearable-robot-testing:v2-customer-1",
-                "wearable-robot-testing:v2-application-0",
-                "wearable-robot-testing:v2-comparison",
-                "wearable-robot-testing:project-v2-0f3df7dd0dc37e309bafe4cd"
+                "wearable-robot-testing:v2-opportunity"
               ]
             },
             "timing": {
-              "status": "missing",
-              "reason": "The retained project dates do not establish adoption or market acceleration. Adjacent-use readiness has not been validated.",
+              "status": "plausible",
+              "reason": "ASTM task-group work supports investigation of shared methods, not a requirement to buy this rig or a validated growth rate.",
               "claimIds": [
-                "wearable-robot-testing:v2-what",
-                "wearable-robot-testing:v2-problem",
-                "wearable-robot-testing:v2-opportunity",
-                "wearable-robot-testing:v2-customer-0",
-                "wearable-robot-testing:v2-customer-1",
-                "wearable-robot-testing:v2-application-0",
-                "wearable-robot-testing:v2-comparison",
-                "wearable-robot-testing:project-v2-0f3df7dd0dc37e309bafe4cd"
+                "wearable-robot-testing:v2-comparison"
               ]
             }
           },
           "priority": "medium",
-          "priorityReason": "Repeatable physical measurements could complement simulation and later human trials. Hardware plus repeated testing services could serve multiple device makers; the buyer population may be too small for a standalone venture.",
+          "priorityReason": "Fit and force transfer matter, and repeatable measurement has a credible mechanism. Prioritize a paid comparison of design decisions and setup effort; the paying-site base and repeat purchase model are too unclear for a high-priority venture case.",
           "confidence": {
             "level": "low",
-            "reason": "Original project excerpts checked; commercial demand and adjacent-use benefit remain hypotheses."
+            "reason": "The engineering problem and existing measurement approaches are supported. KneeMatic performance, incremental value, payment and business scale remain unproven."
           },
-          "strongestObjection": "Unvalidated tissue realism may create false reassurance. One proposed rig does not establish a large testing business.",
-          "decisiveQuestion": "Validate force measurements and tissue response against reference methods, then assess purchase or repeated-service demand."
+          "strongestObjection": "A small set of developers may already have adequate tools. Custom fitting, tissue replacement and calibration could make each sale a bespoke engineering project.",
+          "decisiveQuestion": "Does a reusable testing system change useful design decisions and save enough total work for independent manufacturers to pay repeatedly, without extensive custom rebuilding?"
         }
       },
       "research": null,

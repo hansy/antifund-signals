@@ -5783,15 +5783,15 @@
     {
       "id": "wearable-robot-testing",
       "title": "A sensor-equipped test leg for wearable robots",
-      "summary": "An artificial leg imitates knee movement and soft-tissue contact. Sensors measure the forces a wearable robot applies to it.",
+      "summary": "An artificial leg for checking how wearable robots fit and transfer force.",
       "topic": "Robotics",
-      "problem": "Developers need repeatable ways to investigate uncomfortable or unsafe loading before trying early hardware on people.",
-      "statusQuo": "",
-      "gap": "Whether this rig predicts meaningful human contact problems more cheaply or repeatably than existing rigs.",
-      "opportunity": "A standard test rig could serve multiple wearable-robot developers and testing laboratories. The key question is whether useful repeat testing supports a substantial business.",
-      "evidence": "Repeatable physical measurements could complement simulation and later human trials.",
-      "counterpoint": "Unvalidated tissue realism may create false reassurance. One proposed rig does not establish a large testing business.",
-      "nextQuestion": "Validate force measurements and tissue response against reference methods, then assess purchase or repeated-service demand.",
+      "problem": "Wearable robots must transfer force through straps and soft tissue. Poor fit can cause pain or injury, and tissue can absorb some of the intended assistance. Developers need repeatable tests, but a pressure reading alone cannot predict whether a person will be comfortable or safe.",
+      "statusQuo": "Custom artificial legs, commercial pressure sensors, motion tracking, simulation and supervised human tests.",
+      "gap": "A calibrated, supported system that produces useful repeatable decisions with less setup; added value remains unmeasured.",
+      "opportunity": "Give wearable-robot developers a ready-to-use testing system that reduces custom fixture work and improves design decisions. It could combine artificial legs, pressure sensing and reporting, then sell testing, calibration and replacement parts. Existing research legs and Tekscan sensors already cover parts of this job. Repeat buying and a market large enough for venture investment remain unproven.",
+      "evidence": "A separate University of Florida research leg measured how soft tissue changes force transfer. That supports the testing mechanism, not KneeMatic accuracy or its ability to predict injury.",
+      "counterpoint": "A small set of developers may already have adequate tools. Custom fitting, tissue replacement and calibration could make each sale a bespoke engineering project.",
+      "nextQuestion": "Does a reusable testing system change useful design decisions and save enough total work for independent manufacturers to pay repeatedly, without extensive custom rebuilding?",
       "projectIds": [
         "synthesis-project-0f3df7dd0dc37e309bafe4cd"
       ],
@@ -5800,8 +5800,8 @@
       ],
       "confidence": "Early signal",
       "brief": {
-        "whatItIs": "An artificial leg imitates knee movement and soft-tissue contact. Sensors measure the forces a wearable robot applies to it.",
-        "problem": "Developers need repeatable ways to investigate uncomfortable or unsafe loading before trying early hardware on people.",
+        "whatItIs": "An artificial leg bends at the knee while sensors measure how a wearable robot presses and pulls on it. Developers could compare straps, padding and alignment before trying early designs on people. KneeMatic proposes this setup; its measurement accuracy has not been demonstrated.",
+        "problem": "Wearable robots must transfer force through straps and soft tissue. Poor fit can cause pain or injury, and tissue can absorb some of the intended assistance. Developers need repeatable tests, but a pressure reading alone cannot predict whether a person will be comfortable or safe.",
         "breakthroughs": [
           {
             "text": "KneeMatic proposes a knee and soft-tissue test model with force and pressure sensors for lower-limb exoskeletons.",
@@ -5810,23 +5810,54 @@
             ]
           }
         ],
-        "marketOpportunity": "A standard test rig could serve multiple wearable-robot developers and testing laboratories. The key question is whether useful repeat testing supports a substantial business.",
-        "buyer": "Wearable-robot developers; Testing laboratories",
+        "marketOpportunity": "Give wearable-robot developers a ready-to-use testing system that reduces custom fixture work and improves design decisions. It could combine artificial legs, pressure sensing and reporting, then sell testing, calibration and replacement parts. Existing research legs and Tekscan sensors already cover parts of this job. Repeat buying and a market large enough for venture investment remain unproven.",
+        "buyer": "Wearable-robot manufacturers developing knee interfaces; Testing laboratories serving device manufacturers",
         "applications": [
-          "Measuring contact forces before human trials"
+          "Comparing knee straps, padding and alignment; industrial knee devices and passive braces would need separate validation"
         ],
         "targetCustomers": [
-          "Wearable-robot developers",
-          "Testing laboratories"
+          "Wearable-robot manufacturers developing knee interfaces",
+          "Testing laboratories serving device manufacturers"
         ],
-        "marketStatus": "hypothesis",
-        "marketEvidence": [],
+        "marketStatus": "researched",
+        "marketEvidence": [
+          {
+            "title": "Research leg measures force transfer through soft tissue",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10311455/",
+            "excerpt": "Our results of assistive force transmission to the joint are exclusive to our exoskeleton, lower limb, and interface.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "NIST measures how a wearable robot and its user move together",
+            "url": "https://www.nist.gov/news-events/news/2020/08/exoskeleton-research-marches-forward-nist-study-fit",
+            "excerpt": "can cause pain or injury if their joints are not aligned with the user’s.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Commercial sensors already measure contact pressure",
+            "url": "https://www.tekscan.com/products-solutions/systems/i-scan-system",
+            "excerpt": "I‑Scan measures and analyzes dynamic interface pressure between two surfaces using thin, flexible sensors",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Work on shared testing protocols is still developing",
+            "url": "https://www.astm.org/news/task-group-on-exoskeleton-training-and-certification",
+            "excerpt": "This will lay the groundwork to define baseline test categories, lab infrastructure requirements, and pilot protocols",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Small hospital study documents device-related skin injuries",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10091314/",
+            "excerpt": "Two device-related skin lesions occurring in the same participant were rated as moderate (grade II sacral pressure injury).",
+            "accessedAt": "2026-10-15"
+          }
+        ],
         "risks": [
-          "Unvalidated tissue realism may create false reassurance. One proposed rig does not establish a large testing business.",
-          "Hardware plus repeated testing services could serve multiple device makers; the buyer population may be too small for a standalone venture."
+          "A small set of developers may already have adequate tools. Custom fitting, tissue replacement and calibration could make each sale a bespoke engineering project.",
+          "No validated KneeMatic accuracy, human-outcome prediction, paid demand, recurring margin or reachable market. A knee test cannot establish whole-body safety."
         ],
         "nextQuestions": [
-          "Validate force measurements and tissue response against reference methods, then assess purchase or repeated-service demand."
+          "Does a reusable testing system change useful design decisions and save enough total work for independent manufacturers to pay repeatedly, without extensive custom rebuilding?"
         ]
       }
     },
