@@ -405,12 +405,12 @@ export function Workspace() {
                 >
                   <div className="signal-copy">
                     <h2>{item.title}</h2>
-                    {item.group || item.placement !== "opportunity" ? (
+                    {item.group &&
+                    item.placement === "opportunity" ? null : item.group ||
+                      item.placement !== "opportunity" ? (
                       <span className="collection-kind">
                         {item.group
-                          ? item.placement === "opportunity"
-                            ? "Opportunity family"
-                            : "Research area"
+                          ? "Research area"
                           : item.placement === "project"
                             ? "Project"
                             : "Supporting research"}
@@ -519,12 +519,12 @@ export function Workspace() {
                   }}
                 >
                   <span>{item.title}</span>
-                  {item.group || item.placement !== "opportunity" ? (
+                  {item.group &&
+                  item.placement === "opportunity" ? null : item.group ||
+                    item.placement !== "opportunity" ? (
                     <span className="collection-kind">
                       {item.group
-                        ? item.placement === "opportunity"
-                          ? "Opportunity family"
-                          : "Research area"
+                        ? "Research area"
                         : item.placement === "project"
                           ? "Project"
                           : "Supporting research"}
