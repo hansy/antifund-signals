@@ -12974,8 +12974,8 @@
     {
       "schemaVersion": 1,
       "id": "reusable-metal-filters",
-      "revision": 0,
-      "acceptedRevisionId": "reusable-metal-filters:rubric-v2-20261015",
+      "revision": 1,
+      "acceptedRevisionId": "reusable-metal-filters:evidence-review-v2-20261016",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -12983,19 +12983,19 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T21:24:18.427Z",
-      "updatedAt": "2026-10-15T21:24:18.427Z",
+      "updatedAt": "2026-10-16T03:45:05.995Z",
       "verdict": null,
       "stage": "first-impressions",
-      "qualificationError": null,
+      "qualificationError": "Reviewed hypothesis; industrial transfer, comparative treatment value, paid demand and venture scale remain unproven.",
       "accepted": {
-        "id": "reusable-metal-filters:rubric-v2-20261015",
+        "id": "reusable-metal-filters:evidence-review-v2-20261016",
         "opportunityId": "reusable-metal-filters",
-        "parentRevisionId": null,
-        "createdAt": "2026-10-15T21:24:18.427Z",
-        "producerId": "rubric-reassessment-v2",
-        "origin": "saved-data-synthesis",
-        "changeReason": "User-authorized preliminary opportunity from saved source evidence; adjacent uses and market demand remain hypotheses.",
-        "contentHash": "380b71af9c739cde8018e483b1273ede0df2531454f995ccd76bd2a6ad731f7a",
+        "parentRevisionId": "reusable-metal-filters:rubric-v2-20261015",
+        "createdAt": "2026-10-16T03:45:05.995Z",
+        "producerId": "codex-evidence-inspector",
+        "origin": "inspection-correction",
+        "changeReason": "Inspect original project and treatment documentation; distinguish household development from industrial transfer, compare existing regeneration services and exclude broad site counts as demand.",
+        "contentHash": "705c57290d94d6d357903f6f77e23f8c0dc4aaac496da32755b6d8ce3061b487",
         "title": "Reusable filters that release captured copper",
         "classifications": [
           "Manufacturing"
@@ -13007,7 +13007,7 @@
           ],
           "economics": [],
           "timing": [],
-          "keyQuestion": "Measure removal, useful cycles, release chemicals, waste and full cost for one representative stream against existing media.",
+          "keyQuestion": "On a real factory water stream, does CuLater beat a suitable existing material—or improve the same treatment system—after every cleaning and waste cost is counted?",
           "what": "reusable-metal-filters:v2-what",
           "problem": "reusable-metal-filters:v2-problem",
           "opportunity": "reusable-metal-filters:v2-opportunity",
@@ -13036,111 +13036,136 @@
         "claims": [
           {
             "id": "reusable-metal-filters:v2-what",
-            "text": "A cellulose-based filter is designed to capture copper from water and release it so the filter can be reused. The starting project targets tap water.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "A filter material designed to trap copper from water, then release it during cleaning so it can be used again. CuLater starts with cellulose, the material in plant cell walls, and added polymers. The project targets tap water; removal rates, useful flow and performance after repeated cleaning remain unverified.",
+            "kind": "inference",
+            "evidenceIds": [
+              "reusable-metal-filters:synthesis-project-03c4a5647a5e5a699a881b9a:source-v2"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No industrial-stream trial, safe repeated-use result, full delivered cost or buyer commitment. Broad metal-finishing site counts are not reachable copper-filter demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T03:45:05.995Z",
+              "reason": "Bounded interpretation of original documents, preserving competing mechanisms and missing comparative outcomes."
             },
-            "testQuestion": "Measure removal, useful cycles, release chemicals, waste and full cost for one representative stream against existing media."
+            "reasoning": "University abstract describes intended capture and reuse, without measured removal, cycle life or industrial results."
           },
           {
             "id": "reusable-metal-filters:v2-problem",
-            "text": "Removing metals can create recurring filter replacement and disposal work. Industrial use would require testing with different contaminants and operating conditions.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "Factories wash parts and circuit boards with water that can pick up copper and other contaminants. Treating that water creates recurring work and waste; shortages can threaten production. Copper can also enter household water from pipes, but a home filter and a factory treatment system face different requirements.",
+            "kind": "inference",
+            "evidenceIds": [
+              "reusable-metal-filters:review-service",
+              "reusable-metal-filters:review-home",
+              "reusable-metal-filters:review-cost"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No industrial-stream trial, safe repeated-use result, full delivered cost or buyer commitment. Broad metal-finishing site counts are not reachable copper-filter demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T03:45:05.995Z",
+              "reason": "Bounded interpretation of original documents, preserving competing mechanisms and missing comparative outcomes."
             },
-            "testQuestion": "Measure removal, useful cycles, release chemicals, waste and full cost for one representative stream against existing media."
+            "reasoning": "Supplier case and official guidance document treatment and maintenance needs; frequency and cost for a buying segment remain unknown."
           },
           {
             "id": "reusable-metal-filters:v2-opportunity",
-            "text": "A filter that survives repeated cleaning could reduce treatment costs and support repeat equipment or material sales. Its advantage must hold against existing reusable treatment media.",
+            "text": "Sell treatment suppliers a material that lowers the full cost of removing copper from a specific factory water stream. Existing suppliers already sell reusable materials and off-site cleaning services. The opening is better performance, less cleaning or lower waste costs on a stream they serve poorly. No measured advantage, paying customer or venture-scale market is established yet.",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "reusable-metal-filters:synthesis-project-03c4a5647a5e5a699a881b9a:source-v2",
+              "reusable-metal-filters:review-dupont",
+              "reusable-metal-filters:review-sheet",
+              "reusable-metal-filters:review-service",
+              "reusable-metal-filters:review-cost"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No industrial-stream trial, safe repeated-use result, full delivered cost or buyer commitment. Broad metal-finishing site counts are not reachable copper-filter demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T03:45:05.995Z",
+              "reason": "Explicit industrial buyer, transfer or cost hypothesis, not demonstrated customer benefit or demand."
             },
-            "testQuestion": "Measure removal, useful cycles, release chemicals, waste and full cost for one representative stream against existing media."
+            "testQuestion": "On a real factory water stream, does CuLater beat a suitable existing material—or improve the same treatment system—after every cleaning and waste cost is counted?"
           },
           {
             "id": "reusable-metal-filters:v2-customer-0",
-            "text": "Water-treatment equipment suppliers",
+            "text": "Industrial water-treatment suppliers serving factories with copper-bearing rinse water",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "reusable-metal-filters:review-dupont",
+              "reusable-metal-filters:review-service"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No industrial-stream trial, safe repeated-use result, full delivered cost or buyer commitment. Broad metal-finishing site counts are not reachable copper-filter demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T03:45:05.995Z",
+              "reason": "Explicit industrial buyer, transfer or cost hypothesis, not demonstrated customer benefit or demand."
             },
-            "testQuestion": "Measure removal, useful cycles, release chemicals, waste and full cost for one representative stream against existing media."
+            "testQuestion": "Which provider has a compatible customer stream and a priced qualification decision for improved material?"
           },
           {
             "id": "reusable-metal-filters:v2-application-0",
-            "text": "Repeated metal removal and filter reuse",
+            "text": "Factory rinse-water treatment is a transfer hypothesis; household tap-water treatment is the original use",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "reusable-metal-filters:synthesis-project-03c4a5647a5e5a699a881b9a:source-v2",
+              "reusable-metal-filters:review-dupont",
+              "reusable-metal-filters:review-sheet"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No industrial-stream trial, safe repeated-use result, full delivered cost or buyer commitment. Broad metal-finishing site counts are not reachable copper-filter demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T03:45:05.995Z",
+              "reason": "Explicit industrial buyer, transfer or cost hypothesis, not demonstrated customer benefit or demand."
             },
-            "testQuestion": "Measure removal, useful cycles, release chemicals, waste and full cost for one representative stream against existing media."
+            "testQuestion": "Does performance survive actual factory chemistry, useful flow and repeated safe cleaning?"
           },
           {
             "id": "reusable-metal-filters:v2-comparison",
-            "text": "Potential alternative to disposable filters and supplement to treatment stages; must compare with existing regenerable treatment media.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "DuPont sells copper-binding materials for factory rinse water. Xylem exchanges exhausted treatment vessels and cleans the material off site. Household cartridges such as Brita offer simple replacement instead. CuLater could replace a material or add a copper-removal step, but must improve the same water-quality outcome after cleaning, waste and installation costs. A reusable material alone is not a new commercial gap.",
+            "kind": "inference",
+            "evidenceIds": [
+              "reusable-metal-filters:review-dupont",
+              "reusable-metal-filters:review-sheet",
+              "reusable-metal-filters:review-service",
+              "reusable-metal-filters:review-brita",
+              "reusable-metal-filters:review-cost"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No industrial-stream trial, safe repeated-use result, full delivered cost or buyer commitment. Broad metal-finishing site counts are not reachable copper-filter demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T03:45:05.995Z",
+              "reason": "Bounded interpretation of original documents, preserving competing mechanisms and missing comparative outcomes."
             },
-            "testQuestion": "Measure removal, useful cycles, release chemicals, waste and full cost for one representative stream against existing media."
+            "reasoning": "Existing commercial material and service mechanisms overlap. Replacement or supplemental value depends on full-system equal-output comparisons, not cellulose identity."
           },
           {
             "id": "reusable-metal-filters:project-v2-03c4a5647a5e5a699a881b9a",
@@ -13155,10 +13180,10 @@
               "No measured removal rate, useful reuse cycles or industrial-water validation. Source school and year identify the event collection, not confirmed author affiliation or project completion date."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T03:45:05.995Z",
+              "reason": "Original CuLater subsection verifies team-described design, not measured reuse or health/sustainability results."
             },
             "attribution": "2. CuLater",
             "quantity": null
@@ -13168,9 +13193,9 @@
           {
             "id": "reusable-metal-filters:synthesis-project-03c4a5647a5e5a699a881b9a:source-v2",
             "sourceUrl": "https://uwaterloo.ca/capstone-design/project-abstracts/2025-capstone-design-projects/2025-nanotechnology-engineering-capstone-designs",
-            "finalUrl": null,
+            "finalUrl": "https://uwaterloo.ca/capstone-design/project-abstracts/2025-capstone-design-projects/2025-nanotechnology-engineering-capstone-designs",
             "title": "2. CuLater",
-            "publisher": null,
+            "publisher": "University of Waterloo",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -13178,12 +13203,144 @@
             "retrievedAt": "2026-10-15T21:24:18.427Z",
             "excerpt": "Constructed from cellulose-based materials, it incorporates sustainable polymer fillers that facilitate the purging of filtered copper, allowing for reuse.",
             "pdfPage": null,
-            "locator": "Original project page; exact retained excerpt",
+            "locator": "Original university collection, CuLater subsection only; development claims without measured results",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T21:24:18.427Z",
+              "checkedAt": "2026-10-16T03:45:05.995Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "reusable-metal-filters:review-dupont",
+            "sourceUrl": "https://www.dupont.com/water/periodic-table/copper.html/1000",
+            "finalUrl": "https://www.dupont.com/water/periodic-table/copper.html/1000",
+            "title": "Commercial materials already capture copper from factory rinse water",
+            "publisher": "DuPont",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "October16,2026 manufacturer snapshot; publication unknown. Describes copper-plating rinse use, not a matched trial, local availability or independent outcomes.",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "AmberSep™ IRC748 Chelating Resin is used to remove copper from copper plating rinse streams.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T03:45:05.995Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "reusable-metal-filters:review-sheet",
+            "sourceUrl": "https://www.dupont.com/content/dam/water/amer/us/en/water/public/documents/en/IER-AmberSep-IRC748-UPS-PDS-45-D00807-en.pdf",
+            "finalUrl": "https://www.dupont.com/content/dam/water/amer/us/en/water/public/documents/en/IER-AmberSep-IRC748-UPS-PDS-45-D00807-en.pdf",
+            "title": "Existing materials can be cleaned for reuse, but actual water chemistry matters",
+            "publisher": "DuPont",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2026-09",
+            "observationPeriod": "September2026 revision5, physical1 regeneration and physical2 chemistry-dependent selectivity. Manufacturer instructions, not CuLater validation. Older search revision not used.",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "laboratory testing is essential when a resin is required to selectively remove one or more types of metal ions.",
+            "pdfPage": 2,
+            "locator": "Original PDF physical page 2; study methods and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T03:45:05.995Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "reusable-metal-filters:review-service",
+            "sourceUrl": "https://www.xylem.com/en-us/resources/case-studies/recycling-waste-rinsewater-meets-production-needs-during-water-shortage/",
+            "finalUrl": "https://www.xylem.com/en-us/resources/case-studies/recycling-waste-rinsewater-meets-production-needs-during-water-shortage/",
+            "title": "Existing services exchange and clean exhausted treatment material",
+            "publisher": "Xylem / Evoqua",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated supplier case retrieved October16,2026; one unnamed west-coast circuit-board plant. Page locale not location proof.90% is supplier-assessed recyclable share of one process, not verified actual reuse or market prevalence; no percentage published.",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "Once exhausted, the wastewater ion exchange vessels are removed and replaced with fresh resin and/or media vessels.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T03:45:05.995Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "reusable-metal-filters:review-cost",
+            "sourceUrl": "https://www.epa.gov/sites/default/files/2016-07/documents/metal-finishing-study-2015-status-report_jun-2016.pdf",
+            "finalUrl": "https://www.epa.gov/sites/default/files/2016-07/documents/metal-finishing-study-2015-status-report_jun-2016.pdf",
+            "title": "Cleaning and waste disposal can limit the value of reusable treatment",
+            "publisher": "US Environmental Protection Agency",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2016-06",
+            "observationPeriod": "June2016 historical study; physical65, printed4-34. Industry discussion and literature context, not current prices, CuLater costs or market growth.",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "hindered by costs related to resin regeneration and solids disposal",
+            "pdfPage": 65,
+            "locator": "Original PDF physical page 65; study methods and limitations inspected",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T03:45:05.995Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "reusable-metal-filters:review-home",
+            "sourceUrl": "https://www.canada.ca/en/health-canada/services/environmental-workplace-health/reports-publications/water-quality/copper.html",
+            "finalUrl": "https://www.canada.ca/en/health-canada/services/environmental-workplace-health/reports-publications/water-quality/copper.html",
+            "title": "Household copper filters need testing and maintenance",
+            "publisher": "Health Canada",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2019-06",
+            "observationPeriod": "June2019 Canadian guidance; original HTML. Plumbing-derived exposure, periodic testing and appropriate certification; no population prevalence, industrial transfer or CuLater health benefit.",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "Before a treatment device is installed, the water should be tested to determine general water chemistry and to verify the concentration of copper.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T03:45:05.995Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "reusable-metal-filters:review-brita",
+            "sourceUrl": "https://www.brita.com/pitchers-dispensers-replacement-filters/",
+            "finalUrl": "https://www.brita.com/pitchers-dispensers-replacement-filters/",
+            "title": "Household copper-removal cartridges offer replacement instead of cleaning",
+            "publisher": "Brita",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "US manufacturer page retrieved October16,2026.40gallons/twomonths applies to Original cartridges, not every filter or water condition. Refillable shell is not regenerated material; no comparative cost established.",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "lasts 40 gal / 2 months.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T03:45:05.995Z",
               "failureIds": []
             }
           }
@@ -13193,105 +13350,63 @@
           "rubricVersion": "venture-screen-v2",
           "dimensions": {
             "problem": {
-              "status": "plausible",
-              "reason": "Replacement and disposal can matter where metals must be removed; the industrial burden is not quantified by this household source.",
+              "status": "supported",
+              "reason": "Recurring contaminated-water treatment and maintenance are documented; target-segment cost and frequency unknown.",
               "claimIds": [
-                "reusable-metal-filters:v2-what",
-                "reusable-metal-filters:v2-problem",
-                "reusable-metal-filters:v2-opportunity",
-                "reusable-metal-filters:v2-customer-0",
-                "reusable-metal-filters:v2-application-0",
-                "reusable-metal-filters:v2-comparison",
-                "reusable-metal-filters:project-v2-03c4a5647a5e5a699a881b9a"
+                "reusable-metal-filters:v2-problem"
               ]
             },
             "customerPayment": {
               "status": "plausible",
-              "reason": "Original use is household metal removal; industrial water-treatment operators are an adjacent hypothesis. Willingness to pay for this offer is not established.",
+              "reason": "Factories pay for treatment and suppliers could buy material; willingness to qualify this material is unconfirmed.",
               "claimIds": [
-                "reusable-metal-filters:v2-what",
-                "reusable-metal-filters:v2-problem",
-                "reusable-metal-filters:v2-opportunity",
-                "reusable-metal-filters:v2-customer-0",
-                "reusable-metal-filters:v2-application-0",
-                "reusable-metal-filters:v2-comparison",
-                "reusable-metal-filters:project-v2-03c4a5647a5e5a699a881b9a"
+                "reusable-metal-filters:v2-customer-0"
               ]
             },
             "productValue": {
               "status": "plausible",
-              "reason": "Regeneration is a specific mechanism that could matter beyond disposable home filters.",
+              "reason": "Restoring capture capacity could reduce full treatment cost if flow, safety and durability hold; no measured result.",
               "claimIds": [
-                "reusable-metal-filters:v2-what",
-                "reusable-metal-filters:v2-problem",
-                "reusable-metal-filters:v2-opportunity",
-                "reusable-metal-filters:v2-customer-0",
-                "reusable-metal-filters:v2-application-0",
-                "reusable-metal-filters:v2-comparison",
-                "reusable-metal-filters:project-v2-03c4a5647a5e5a699a881b9a"
+                "reusable-metal-filters:v2-what"
               ]
             },
             "commercialGap": {
               "status": "plausible",
-              "reason": "Potential alternative to disposable filters and supplement to treatment stages; must compare with existing regenerable treatment media. Open gap: Useful removal and reuse under realistic industrial mixtures, without excessive chemicals, fouling or waste.",
+              "reason": "Better stream-specific cost or performance could matter; reusable materials and service exchange already overlap.",
               "claimIds": [
-                "reusable-metal-filters:v2-what",
-                "reusable-metal-filters:v2-problem",
-                "reusable-metal-filters:v2-opportunity",
-                "reusable-metal-filters:v2-customer-0",
-                "reusable-metal-filters:v2-application-0",
-                "reusable-metal-filters:v2-comparison",
-                "reusable-metal-filters:project-v2-03c4a5647a5e5a699a881b9a"
+                "reusable-metal-filters:v2-comparison"
               ]
             },
             "ventureScale": {
-              "status": "plausible",
-              "reason": "Repeated treatment could create equipment or consumable demand; household results cannot establish industrial volume, revenue or economics.",
+              "status": "missing",
+              "reason": "Compatible sites, reachable buyers, annual supplier revenue and viable margins unknown.",
               "claimIds": [
-                "reusable-metal-filters:v2-what",
-                "reusable-metal-filters:v2-problem",
-                "reusable-metal-filters:v2-opportunity",
-                "reusable-metal-filters:v2-customer-0",
-                "reusable-metal-filters:v2-application-0",
-                "reusable-metal-filters:v2-comparison",
-                "reusable-metal-filters:project-v2-03c4a5647a5e5a699a881b9a"
+                "reusable-metal-filters:v2-opportunity"
               ]
             },
             "businessCapital": {
               "status": "missing",
-              "reason": "No achieved filtration or reuse-cycle results. Transfer to industrial streams could fail. Delivered costs, repeat economics and capital needs remain unresolved.",
+              "reason": "Production yield, qualification costs, channel share and retained revenue with longer-lived material unknown.",
               "claimIds": [
-                "reusable-metal-filters:v2-what",
-                "reusable-metal-filters:v2-problem",
-                "reusable-metal-filters:v2-opportunity",
-                "reusable-metal-filters:v2-customer-0",
-                "reusable-metal-filters:v2-application-0",
-                "reusable-metal-filters:v2-comparison",
-                "reusable-metal-filters:project-v2-03c4a5647a5e5a699a881b9a"
+                "reusable-metal-filters:v2-opportunity"
               ]
             },
             "timing": {
-              "status": "missing",
-              "reason": "The retained project dates do not establish adoption or market acceleration. Adjacent-use readiness has not been validated.",
+              "status": "plausible",
+              "reason": "Production continuity can trigger site purchases; undated case is not market acceleration or a new copper deadline.",
               "claimIds": [
-                "reusable-metal-filters:v2-what",
-                "reusable-metal-filters:v2-problem",
-                "reusable-metal-filters:v2-opportunity",
-                "reusable-metal-filters:v2-customer-0",
-                "reusable-metal-filters:v2-application-0",
-                "reusable-metal-filters:v2-comparison",
-                "reusable-metal-filters:project-v2-03c4a5647a5e5a699a881b9a"
+                "reusable-metal-filters:v2-problem"
               ]
             }
           },
           "priority": "medium",
-          "priorityReason": "Regeneration is a specific mechanism that could matter beyond disposable home filters. Repeated treatment could create equipment or consumable demand; household results cannot establish industrial volume, revenue or economics.",
+          "priorityReason": "Recurring treatment and waste costs create a coherent industrial hypothesis. A material-level comparison could reveal value, but existing reuse services overlap and scale is unestablished.",
           "confidence": {
             "level": "low",
-            "reason": "Original project excerpts checked; commercial demand and adjacent-use benefit remain hypotheses."
+            "reason": "Treatment needs and competing offers are supported. CuLater performance, industrial transfer, commercial advantage and reachable demand remain unproven."
           },
-          "strongestObjection": "No achieved filtration or reuse-cycle results. Transfer to industrial streams could fail.",
-          "decisiveQuestion": "Measure removal, useful cycles, release chemicals, waste and full cost for one representative stream against existing media."
+          "strongestObjection": "Existing services already remove cleaning work from the factory. An added copper-only step may not extend service life when other contaminants determine it. Longer-lived filters can also reduce replacement sales, so customer savings need a viable supplier margin.",
+          "decisiveQuestion": "On a real factory water stream, does CuLater beat a suitable existing material—or improve the same treatment system—after every cleaning and waste cost is counted?"
         }
       },
       "research": null,

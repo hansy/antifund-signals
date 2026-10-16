@@ -6137,15 +6137,15 @@
     {
       "id": "reusable-metal-filters",
       "title": "Reusable filters that release captured copper",
-      "summary": "A cellulose-based filter is designed to capture copper from water and release it so the filter can be reused. The starting project targets tap water.",
+      "summary": "A reusable material for capturing copper from water.",
       "topic": "Manufacturing",
-      "problem": "Removing metals can create recurring filter replacement and disposal work. Industrial use would require testing with different contaminants and operating conditions.",
-      "statusQuo": "",
-      "gap": "Useful removal and reuse under realistic industrial mixtures, without excessive chemicals, fouling or waste.",
-      "opportunity": "A filter that survives repeated cleaning could reduce treatment costs and support repeat equipment or material sales. Its advantage must hold against existing reusable treatment media.",
-      "evidence": "Regeneration is a specific mechanism that could matter beyond disposable home filters.",
-      "counterpoint": "No achieved filtration or reuse-cycle results. Transfer to industrial streams could fail.",
-      "nextQuestion": "Measure removal, useful cycles, release chemicals, waste and full cost for one representative stream against existing media.",
+      "problem": "Factories wash parts and circuit boards with water that can pick up copper and other contaminants. Treating that water creates recurring work and waste; shortages can threaten production. Copper can also enter household water from pipes, but a home filter and a factory treatment system face different requirements.",
+      "statusQuo": "Commercial metal-binding materials, off-site cleaning services, chemical treatment, membranes and more efficient rinsing.",
+      "gap": "Lower full treatment cost or better performance on a defined copper-bearing stream; improvement remains unmeasured.",
+      "opportunity": "Sell treatment suppliers a material that lowers the full cost of removing copper from a specific factory water stream. Existing suppliers already sell reusable materials and off-site cleaning services. The opening is better performance, less cleaning or lower waste costs on a stream they serve poorly. No measured advantage, paying customer or venture-scale market is established yet.",
+      "evidence": "DuPont documents reusable copper capture and Xylem offers off-site cleaning and exchange. EPA’s historical review identifies cleaning and waste-disposal costs as barriers, but CuLater has no checked cost or performance result.",
+      "counterpoint": "Existing services already remove cleaning work from the factory. An added copper-only step may not extend service life when other contaminants determine it. Longer-lived filters can also reduce replacement sales, so customer savings need a viable supplier margin.",
+      "nextQuestion": "On a real factory water stream, does CuLater beat a suitable existing material—or improve the same treatment system—after every cleaning and waste cost is counted?",
       "projectIds": [
         "synthesis-project-03c4a5647a5e5a699a881b9a"
       ],
@@ -6154,8 +6154,8 @@
       ],
       "confidence": "Early signal",
       "brief": {
-        "whatItIs": "A cellulose-based filter is designed to capture copper from water and release it so the filter can be reused. The starting project targets tap water.",
-        "problem": "Removing metals can create recurring filter replacement and disposal work. Industrial use would require testing with different contaminants and operating conditions.",
+        "whatItIs": "A filter material designed to trap copper from water, then release it during cleaning so it can be used again. CuLater starts with cellulose, the material in plant cell walls, and added polymers. The project targets tap water; removal rates, useful flow and performance after repeated cleaning remain unverified.",
+        "problem": "Factories wash parts and circuit boards with water that can pick up copper and other contaminants. Treating that water creates recurring work and waste; shortages can threaten production. Copper can also enter household water from pipes, but a home filter and a factory treatment system face different requirements.",
         "breakthroughs": [
           {
             "text": "CuLater describes a cellulose-based tap-water filter designed to release captured copper for reuse.",
@@ -6164,22 +6164,59 @@
             ]
           }
         ],
-        "marketOpportunity": "A filter that survives repeated cleaning could reduce treatment costs and support repeat equipment or material sales. Its advantage must hold against existing reusable treatment media.",
-        "buyer": "Water-treatment equipment suppliers",
+        "marketOpportunity": "Sell treatment suppliers a material that lowers the full cost of removing copper from a specific factory water stream. Existing suppliers already sell reusable materials and off-site cleaning services. The opening is better performance, less cleaning or lower waste costs on a stream they serve poorly. No measured advantage, paying customer or venture-scale market is established yet.",
+        "buyer": "Industrial water-treatment suppliers serving factories with copper-bearing rinse water",
         "applications": [
-          "Repeated metal removal and filter reuse"
+          "Factory rinse-water treatment is a transfer hypothesis; household tap-water treatment is the original use"
         ],
         "targetCustomers": [
-          "Water-treatment equipment suppliers"
+          "Industrial water-treatment suppliers serving factories with copper-bearing rinse water"
         ],
-        "marketStatus": "hypothesis",
-        "marketEvidence": [],
+        "marketStatus": "researched",
+        "marketEvidence": [
+          {
+            "title": "Commercial materials already capture copper from factory rinse water",
+            "url": "https://www.dupont.com/water/periodic-table/copper.html/1000",
+            "excerpt": "AmberSep™ IRC748 Chelating Resin is used to remove copper from copper plating rinse streams.",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "Existing materials can be cleaned for reuse, but actual water chemistry matters",
+            "url": "https://www.dupont.com/content/dam/water/amer/us/en/water/public/documents/en/IER-AmberSep-IRC748-UPS-PDS-45-D00807-en.pdf",
+            "excerpt": "laboratory testing is essential when a resin is required to selectively remove one or more types of metal ions.",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "Existing services exchange and clean exhausted treatment material",
+            "url": "https://www.xylem.com/en-us/resources/case-studies/recycling-waste-rinsewater-meets-production-needs-during-water-shortage/",
+            "excerpt": "Once exhausted, the wastewater ion exchange vessels are removed and replaced with fresh resin and/or media vessels.",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "Cleaning and waste disposal can limit the value of reusable treatment",
+            "url": "https://www.epa.gov/sites/default/files/2016-07/documents/metal-finishing-study-2015-status-report_jun-2016.pdf",
+            "excerpt": "hindered by costs related to resin regeneration and solids disposal",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "Household copper filters need testing and maintenance",
+            "url": "https://www.canada.ca/en/health-canada/services/environmental-workplace-health/reports-publications/water-quality/copper.html",
+            "excerpt": "Before a treatment device is installed, the water should be tested to determine general water chemistry and to verify the concentration of copper.",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "Household copper-removal cartridges offer replacement instead of cleaning",
+            "url": "https://www.brita.com/pitchers-dispensers-replacement-filters/",
+            "excerpt": "lasts 40 gal / 2 months.",
+            "accessedAt": "2026-10-16"
+          }
+        ],
         "risks": [
-          "No achieved filtration or reuse-cycle results. Transfer to industrial streams could fail.",
-          "Repeated treatment could create equipment or consumable demand; household results cannot establish industrial volume, revenue or economics."
+          "Existing services already remove cleaning work from the factory. An added copper-only step may not extend service life when other contaminants determine it. Longer-lived filters can also reduce replacement sales, so customer savings need a viable supplier margin.",
+          "Industrial chemical compatibility, safe cleaning, manufacturing cost and reachable sales remain unknown. Releasing captured copper concentrates waste; it does not remove the disposal problem."
         ],
         "nextQuestions": [
-          "Measure removal, useful cycles, release chemicals, waste and full cost for one representative stream against existing media."
+          "On a real factory water stream, does CuLater beat a suitable existing material—or improve the same treatment system—after every cleaning and waste cost is counted?"
         ]
       }
     },
