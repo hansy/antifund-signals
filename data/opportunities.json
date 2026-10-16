@@ -7815,8 +7815,8 @@
     {
       "schemaVersion": 1,
       "id": "checked-part-designs",
-      "revision": 1,
-      "acceptedRevisionId": "checked-part-designs:rubric-v2-20261015",
+      "revision": 2,
+      "acceptedRevisionId": "checked-part-designs:evidence-review-v2-20261016",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -7824,10 +7824,10 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T18:55:13.081Z",
-      "updatedAt": "2026-10-15T21:24:18.427Z",
+      "updatedAt": "2026-10-16T00:25:42.130Z",
       "verdict": null,
       "stage": "first-impressions",
-      "qualificationError": null,
+      "qualificationError": "Reviewed; recurring correction work is supported, but net customer value, paid demand and venture-scale economics are not established.",
       "accepted": {
         "content": {
           "marketSize": [],
@@ -7851,9 +7851,10 @@
           ],
           "applications": [
             "checked-part-designs:application-0",
-            "checked-part-designs:application-1"
+            "checked-part-designs:application-1",
+            "checked-part-designs:application-2"
           ],
-          "keyQuestion": "Produce fitting parts from actual customer inputs with less total correction time and unchanged acceptance standards."
+          "keyQuestion": "On real customer parts, does adding this tool reduce total measurement, correction and checking work while producing equally acceptable parts—and will the buyer pay to keep using it?"
         },
         "projects": [
           {
@@ -7890,129 +7891,189 @@
         "claims": [
           {
             "id": "checked-part-designs:what",
-            "text": "A user supplies a drawing or photos and actual measurements. The software makes an editable 3D part and checks its shape and dimensions before it is printed or manufactured.",
-            "evidenceIds": [],
+            "text": "Software that turns a drawing or measured photos into an editable 3D part design, then checks it against the supplied dimensions. The projects report tests on generated drawings and one printed badge case; reliable reconstruction of real customer parts remains unproven.",
+            "evidenceIds": [
+              "checked-part-designs:synthesis-project-ad0cbde9a0257cfd907b8c1b:source-0",
+              "checked-part-designs:synthesis-project-ad0cbde9a0257cfd907b8c1b:source-1",
+              "checked-part-designs:synthesis-project-ad0cbde9a0257cfd907b8c1b:source-2",
+              "checked-part-designs:synthesis-project-ad0cbde9a0257cfd907b8c1b:source-3",
+              "checked-part-designs:synthesis-project-ad0cbde9a0257cfd907b8c1b:source-4",
+              "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-0",
+              "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-1",
+              "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-2",
+              "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-3",
+              "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-4",
+              "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-5"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Eligible job frequency, net effort saved, willingness to pay and reachable market are unknown. Engineering and physical acceptance remain necessary."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T00:25:42.130Z",
+              "reason": "Explicit opportunity or transfer hypothesis; not a demonstrated benefit or buyer commitment."
             },
             "kind": "hypothesis",
             "testQuestion": "Can engineers use it on real imperfect customer drawings and produce fitting parts with less total correction time?"
           },
           {
             "id": "checked-part-designs:problem",
-            "text": "Knowing the part you need is not enough to manufacture it. Someone must recover dimensions, construct the design and catch mistakes that would produce a part that does not fit.",
-            "evidenceIds": [],
+            "text": "Before a replacement part can be made, someone must work out its dimensions and resolve conflicting instructions. Xometry warns that disagreements between drawings, models and quotes can hold up orders. Missing drawings also create reconstruction work for older parts.",
+            "evidenceIds": [
+              "checked-part-designs:review-xometry",
+              "checked-part-designs:review-cim"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Eligible job frequency, net effort saved, willingness to pay and reachable market are unknown. Engineering and physical acceptance remain necessary."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T00:25:42.130Z",
+              "reason": "Original supplier/provider material supports this bounded interpretation, not market scale or superiority."
             },
-            "kind": "hypothesis",
-            "testQuestion": "Can engineers use it on real imperfect customer drawings and produce fitting parts with less total correction time?"
+            "kind": "inference",
+            "reasoning": "Supplier instructions establish real clarification work, and an original provider case establishes part reconstruction. Frequency and avoidable cost are unknown."
           },
           {
             "id": "checked-part-designs:opportunity",
-            "text": "The useful step is checking whether the generated design matches the source measurements. That could reduce repeated design and correction work across many small parts.",
-            "evidenceIds": [],
+            "text": "Engineering teams and repair workshops could pay to reduce repeated design corrections before ordering parts. Zoo already generates editable designs from images. The opening is asking for missing measurements and catching costly mistakes alongside existing design tools—not generating another model. It needs to reduce total engineering work without lowering part quality.",
+            "evidenceIds": [
+              "checked-part-designs:synthesis-project-ad0cbde9a0257cfd907b8c1b:source-0",
+              "checked-part-designs:synthesis-project-ad0cbde9a0257cfd907b8c1b:source-1",
+              "checked-part-designs:synthesis-project-ad0cbde9a0257cfd907b8c1b:source-2",
+              "checked-part-designs:synthesis-project-ad0cbde9a0257cfd907b8c1b:source-3",
+              "checked-part-designs:synthesis-project-ad0cbde9a0257cfd907b8c1b:source-4",
+              "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-0",
+              "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-1",
+              "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-2",
+              "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-3",
+              "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-4",
+              "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-5",
+              "checked-part-designs:review-xometry",
+              "checked-part-designs:review-zoo",
+              "checked-part-designs:review-cim"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Eligible job frequency, net effort saved, willingness to pay and reachable market are unknown. Engineering and physical acceptance remain necessary."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T00:25:42.130Z",
+              "reason": "Explicit opportunity or transfer hypothesis; not a demonstrated benefit or buyer commitment."
             },
             "kind": "hypothesis",
-            "testQuestion": "Can engineers use it on real imperfect customer drawings and produce fitting parts with less total correction time?"
+            "testQuestion": "On real customer parts, does adding this tool reduce total measurement, correction and checking work while producing equally acceptable parts—and will the buyer pay to keep using it?"
           },
           {
             "id": "checked-part-designs:customer-0",
-            "text": "Mechanical engineering teams",
-            "evidenceIds": [],
+            "text": "Engineering teams and suppliers handling repeated part-design corrections",
+            "evidenceIds": [
+              "checked-part-designs:review-xometry"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Eligible job frequency, net effort saved, willingness to pay and reachable market are unknown. Engineering and physical acceptance remain necessary."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T00:25:42.130Z",
+              "reason": "Explicit opportunity or transfer hypothesis; not a demonstrated benefit or buyer commitment."
             },
             "kind": "hypothesis",
             "testQuestion": "Can engineers use it on real imperfect customer drawings and produce fitting parts with less total correction time?"
           },
           {
             "id": "checked-part-designs:customer-1",
-            "text": "Workshops making replacement or custom parts",
-            "evidenceIds": [],
+            "text": "Specialist workshops reconstructing unavailable replacement parts",
+            "evidenceIds": [
+              "checked-part-designs:review-cim"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Eligible job frequency, net effort saved, willingness to pay and reachable market are unknown. Engineering and physical acceptance remain necessary."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T00:25:42.130Z",
+              "reason": "Explicit opportunity or transfer hypothesis; not a demonstrated benefit or buyer commitment."
             },
             "kind": "hypothesis",
             "testQuestion": "Can engineers use it on real imperfect customer drawings and produce fitting parts with less total correction time?"
           },
           {
             "id": "checked-part-designs:application-0",
-            "text": "Turning drawings into editable parts",
-            "evidenceIds": [],
+            "text": "Turning drawings into editable part designs",
+            "evidenceIds": [
+              "checked-part-designs:synthesis-project-ad0cbde9a0257cfd907b8c1b:source-0",
+              "checked-part-designs:synthesis-project-ad0cbde9a0257cfd907b8c1b:source-1",
+              "checked-part-designs:synthesis-project-ad0cbde9a0257cfd907b8c1b:source-2",
+              "checked-part-designs:synthesis-project-ad0cbde9a0257cfd907b8c1b:source-3",
+              "checked-part-designs:synthesis-project-ad0cbde9a0257cfd907b8c1b:source-4",
+              "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-0",
+              "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-1",
+              "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-2",
+              "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-3",
+              "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-4",
+              "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-5",
+              "checked-part-designs:review-xometry"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Eligible job frequency, net effort saved, willingness to pay and reachable market are unknown. Engineering and physical acceptance remain necessary."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T00:25:42.130Z",
+              "reason": "Explicit opportunity or transfer hypothesis; not a demonstrated benefit or buyer commitment."
             },
             "kind": "hypothesis",
-            "testQuestion": "Can engineers use it on real imperfect customer drawings and produce fitting parts with less total correction time?"
+            "testQuestion": "On real customer parts, does adding this tool reduce total measurement, correction and checking work while producing equally acceptable parts—and will the buyer pay to keep using it?"
           },
           {
             "id": "checked-part-designs:application-1",
-            "text": "Checking dimensions before fabrication",
-            "evidenceIds": [],
+            "text": "Checking conflicting dimensions before an order",
+            "evidenceIds": [
+              "checked-part-designs:synthesis-project-ad0cbde9a0257cfd907b8c1b:source-0",
+              "checked-part-designs:synthesis-project-ad0cbde9a0257cfd907b8c1b:source-1",
+              "checked-part-designs:synthesis-project-ad0cbde9a0257cfd907b8c1b:source-2",
+              "checked-part-designs:synthesis-project-ad0cbde9a0257cfd907b8c1b:source-3",
+              "checked-part-designs:synthesis-project-ad0cbde9a0257cfd907b8c1b:source-4",
+              "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-0",
+              "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-1",
+              "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-2",
+              "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-3",
+              "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-4",
+              "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-5",
+              "checked-part-designs:review-xometry"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Eligible job frequency, net effort saved, willingness to pay and reachable market are unknown. Engineering and physical acceptance remain necessary."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T00:25:42.130Z",
+              "reason": "Explicit opportunity or transfer hypothesis; not a demonstrated benefit or buyer commitment."
             },
             "kind": "hypothesis",
-            "testQuestion": "Can engineers use it on real imperfect customer drawings and produce fitting parts with less total correction time?"
+            "testQuestion": "On real customer parts, does adding this tool reduce total measurement, correction and checking work while producing equally acceptable parts—and will the buyer pay to keep using it?"
           },
           {
             "id": "checked-part-designs:project-synthesis-project-ad0cbde9a0257cfd907b8c1b",
@@ -8027,13 +8088,13 @@
             "derivedFromClaimIds": [],
             "confidence": "moderate",
             "limitations": [
-              "Project-reported evidence; not independently reproduced."
+              "Team report; no independent reproduction or verified customer savings. Footwear is a different buying and validation workflow."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T00:25:42.130Z",
+              "reason": "Original archived project excerpt and context checked; only attributed bounded claims accepted."
             },
             "kind": "reported",
             "attribution": "Cadabra; Cadabra; Cadabra; Cadabra; Cadabra",
@@ -8053,13 +8114,13 @@
             "derivedFromClaimIds": [],
             "confidence": "moderate",
             "limitations": [
-              "Project-reported evidence; not independently reproduced."
+              "Team report; no independent reproduction or verified customer savings. Footwear is a different buying and validation workflow."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T00:25:42.130Z",
+              "reason": "Original archived project excerpt and context checked; only attributed bounded claims accepted."
             },
             "kind": "reported",
             "attribution": "CADEX; CADEX; CADEX; CADEX; CADEX; CADEX",
@@ -8067,25 +8128,30 @@
           },
           {
             "id": "checked-part-designs:v2-comparison",
-            "text": "Supplement CAD and measurement, with engineering review; alternative to manual tracing/checking for suitable parts.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "SOLIDWORKS provides a manual drawing-to-model workflow, while Zoo already offers AI generation and geometry inspection. Xometry checks manufacturing instructions, and CIM describes rebuilding an older part from scans and drawings. Measurement guidance and earlier source checks could supplement these workflows; added value after setup, false alarms and engineering review remains untested.",
+            "kind": "inference",
+            "evidenceIds": [
+              "checked-part-designs:review-solidworks",
+              "checked-part-designs:review-zoo",
+              "checked-part-designs:review-xometry",
+              "checked-part-designs:review-cim"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "Eligible job frequency, net effort saved, willingness to pay and reachable market are unknown. Engineering and physical acceptance remain necessary."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T00:25:42.130Z",
+              "reason": "Original supplier/provider material supports this bounded interpretation, not market scale or superiority."
             },
-            "testQuestion": "Can engineers use it on real imperfect customer drawings and produce fitting parts with less total correction time?"
+            "reasoning": "Original descriptions establish overlapping and complementary tasks, not superiority or complete competitive coverage."
           },
           {
             "id": "checked-part-designs:project-v2-8af7ad1edd27a1457348900d",
-            "text": "SoleMate reports a phone-scanning prototype that creates editable files for printing shoe inserts. Successful fit and comfort are not established.",
+            "text": "SoleMate reports scanning feet with a phone and generating files for printing shoe inserts. Fit and comfort are not established; this is a different application, not evidence of mechanical-part demand.",
             "kind": "reported",
             "evidenceIds": [
               "checked-part-designs:synthesis-project-8af7ad1edd27a1457348900d:source-v2"
@@ -8093,25 +8159,56 @@
             "derivedFromClaimIds": [],
             "confidence": "moderate",
             "limitations": [
-              "No validated fitting outcome or achieved manufacturing price. Unsupported prevalence and price figures are excluded; the displayed excerpt preserves original wording without the extraction-added space before punctuation. Source school and year identify the event collection, not confirmed author affiliation or project completion date."
+              "Team report; no independent reproduction or verified customer savings. Footwear is a different buying and validation workflow."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T00:25:42.130Z",
+              "reason": "Original archived project excerpt and context checked; only attributed bounded claims accepted."
             },
             "attribution": "SoleMate",
             "quantity": null
+          },
+          {
+            "id": "checked-part-designs:application-2",
+            "text": "Reconstructing simple replacement parts for restoration",
+            "evidenceIds": [
+              "checked-part-designs:synthesis-project-ad0cbde9a0257cfd907b8c1b:source-0",
+              "checked-part-designs:synthesis-project-ad0cbde9a0257cfd907b8c1b:source-1",
+              "checked-part-designs:synthesis-project-ad0cbde9a0257cfd907b8c1b:source-2",
+              "checked-part-designs:synthesis-project-ad0cbde9a0257cfd907b8c1b:source-3",
+              "checked-part-designs:synthesis-project-ad0cbde9a0257cfd907b8c1b:source-4",
+              "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-0",
+              "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-1",
+              "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-2",
+              "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-3",
+              "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-4",
+              "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-5",
+              "checked-part-designs:review-cim"
+            ],
+            "derivedFromClaimIds": [],
+            "confidence": "low",
+            "limitations": [
+              "Eligible job frequency, net effort saved, willingness to pay and reachable market are unknown. Engineering and physical acceptance remain necessary."
+            ],
+            "review": {
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T00:25:42.130Z",
+              "reason": "Explicit opportunity or transfer hypothesis; not a demonstrated benefit or buyer commitment."
+            },
+            "kind": "hypothesis",
+            "testQuestion": "On real customer parts, does adding this tool reduce total measurement, correction and checking work while producing equally acceptable parts—and will the buyer pay to keep using it?"
           }
         ],
         "evidence": [
           {
             "id": "checked-part-designs:synthesis-project-ad0cbde9a0257cfd907b8c1b:source-0",
             "sourceUrl": "https://devpost.com/software/sadgsuiahidohwa",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/sadgsuiahidohwa",
             "title": "Cadabra",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -8119,21 +8216,21 @@
             "retrievedAt": "2026-10-15T18:55:13.081Z",
             "excerpt": "However, engineers work from drawings, so we kept the same parts and changed only the input, re-rendering each one as a drawing sheet",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Archived original HTML; team report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T18:55:13.081Z",
+              "checkedAt": "2026-10-16T00:25:42.130Z",
               "failureIds": []
             }
           },
           {
             "id": "checked-part-designs:synthesis-project-ad0cbde9a0257cfd907b8c1b:source-1",
             "sourceUrl": "https://devpost.com/software/sadgsuiahidohwa",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/sadgsuiahidohwa",
             "title": "Cadabra",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -8141,21 +8238,21 @@
             "retrievedAt": "2026-10-15T18:55:13.081Z",
             "excerpt": "Every lane answered the same 497 held-out parts, and neither those parts nor any variant of them appeared in training.",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Archived original HTML; team report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T18:55:13.081Z",
+              "checkedAt": "2026-10-16T00:25:42.130Z",
               "failureIds": []
             }
           },
           {
             "id": "checked-part-designs:synthesis-project-ad0cbde9a0257cfd907b8c1b:source-2",
             "sourceUrl": "https://devpost.com/software/sadgsuiahidohwa",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/sadgsuiahidohwa",
             "title": "Cadabra",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -8163,21 +8260,21 @@
             "retrievedAt": "2026-10-15T18:55:13.081Z",
             "excerpt": "On medium parts we reach 52.1% against 37.0% and 30.3%.",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Archived original HTML; team report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T18:55:13.081Z",
+              "checkedAt": "2026-10-16T00:25:42.130Z",
               "failureIds": []
             }
           },
           {
             "id": "checked-part-designs:synthesis-project-ad0cbde9a0257cfd907b8c1b:source-3",
             "sourceUrl": "https://devpost.com/software/sadgsuiahidohwa",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/sadgsuiahidohwa",
             "title": "Cadabra",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -8185,21 +8282,21 @@
             "retrievedAt": "2026-10-15T18:55:13.081Z",
             "excerpt": "We beat both frontier models overall and on every complexity tier, and the gap widens as the parts get harder.",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Archived original HTML; team report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T18:55:13.081Z",
+              "checkedAt": "2026-10-16T00:25:42.130Z",
               "failureIds": []
             }
           },
           {
             "id": "checked-part-designs:synthesis-project-ad0cbde9a0257cfd907b8c1b:source-4",
             "sourceUrl": "https://devpost.com/software/sadgsuiahidohwa",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/sadgsuiahidohwa",
             "title": "Cadabra",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -8207,21 +8304,21 @@
             "retrievedAt": "2026-10-15T18:55:13.081Z",
             "excerpt": "asked to choose among several answers for one part it picked a correct one 98.1% of the time, against 76.3% for a random pick.",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Archived original HTML; team report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T18:55:13.081Z",
+              "checkedAt": "2026-10-16T00:25:42.130Z",
               "failureIds": []
             }
           },
           {
             "id": "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-0",
             "sourceUrl": "https://devpost.com/software/cadex",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/cadex",
             "title": "CADEX",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -8229,21 +8326,21 @@
             "retrievedAt": "2026-10-15T18:55:13.081Z",
             "excerpt": "We found a broken foosball handle, a missing ping-pong table clamp, and a lectern missing a cup-holder insert.",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Archived original HTML; team report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T18:55:13.081Z",
+              "checkedAt": "2026-10-16T00:25:42.130Z",
               "failureIds": []
             }
           },
           {
             "id": "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-1",
             "sourceUrl": "https://devpost.com/software/cadex",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/cadex",
             "title": "CADEX",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -8251,21 +8348,21 @@
             "retrievedAt": "2026-10-15T18:55:13.081Z",
             "excerpt": "These are all simple physical issues, but to someone without CAD knowledge, they demand a disproportionately difficult solution.",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Archived original HTML; team report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T18:55:13.081Z",
+              "checkedAt": "2026-10-16T00:25:42.130Z",
               "failureIds": []
             }
           },
           {
             "id": "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-2",
             "sourceUrl": "https://devpost.com/software/cadex",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/cadex",
             "title": "CADEX",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -8273,21 +8370,21 @@
             "retrievedAt": "2026-10-15T18:55:13.081Z",
             "excerpt": "Understanding how and what to dimension, physically design it, constrain geometry, iterate, and have it integrate physically all pose a barrier on people with crystal clear ideas.",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Archived original HTML; team report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T18:55:13.081Z",
+              "checkedAt": "2026-10-16T00:25:42.130Z",
               "failureIds": []
             }
           },
           {
             "id": "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-3",
             "sourceUrl": "https://devpost.com/software/cadex",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/cadex",
             "title": "CADEX",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -8295,21 +8392,21 @@
             "retrievedAt": "2026-10-15T18:55:13.081Z",
             "excerpt": "In early prototypes, we had to inspect every generated model manually.",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Archived original HTML; team report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T18:55:13.081Z",
+              "checkedAt": "2026-10-16T00:25:42.130Z",
               "failureIds": []
             }
           },
           {
             "id": "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-4",
             "sourceUrl": "https://devpost.com/software/cadex",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/cadex",
             "title": "CADEX",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -8317,21 +8414,21 @@
             "retrievedAt": "2026-10-15T18:55:13.081Z",
             "excerpt": "the badge case we designed, printed, and presented in our demo.",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Archived original HTML; team report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T18:55:13.081Z",
+              "checkedAt": "2026-10-16T00:25:42.130Z",
               "failureIds": []
             }
           },
           {
             "id": "checked-part-designs:synthesis-project-f461d2ba665089e5abe7455c:source-5",
             "sourceUrl": "https://devpost.com/software/cadex",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/cadex",
             "title": "CADEX",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -8339,21 +8436,21 @@
             "retrievedAt": "2026-10-15T18:55:13.081Z",
             "excerpt": "To our slight surprise, it fit perfectly: every screw lined up, and the case assembled exactly as intended.",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Archived original HTML; team report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T18:55:13.081Z",
+              "checkedAt": "2026-10-16T00:25:42.130Z",
               "failureIds": []
             }
           },
           {
             "id": "checked-part-designs:synthesis-project-8af7ad1edd27a1457348900d:source-v2",
             "sourceUrl": "https://devpost.com/software/solemate-9jmhuf",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/solemate-9jmhuf",
             "title": "SoleMate",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -8361,25 +8458,157 @@
             "retrievedAt": "2026-10-15T21:24:18.427Z",
             "excerpt": "Successfully built a working prototype that scans feet using LiDAR and generates customizable, printable STL files",
             "pdfPage": null,
-            "locator": "Original project page; exact retained excerpt",
+            "locator": "Archived original HTML; team report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T21:24:18.427Z",
+              "checkedAt": "2026-10-16T00:25:42.130Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "checked-part-designs:review-xometry",
+            "sourceUrl": "https://community.xometry.com/kb/articles/690-model-drawing-and-quote-discrepancies",
+            "finalUrl": "https://community.xometry.com/kb/articles/690-model-drawing-and-quote-discrepancies",
+            "title": "Xometry: conflicting manufacturing instructions",
+            "publisher": "Xometry",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated supplier documentation retrieved October 15, 2026; offered workflow, not measured outcomes",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "your order may be placed on hold so our engineers can contact you to work out any discrepancies",
+            "pdfPage": null,
+            "locator": "Article HTML decoded from original page JSON without executing scripts",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T00:25:42.130Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "checked-part-designs:review-cim",
+            "sourceUrl": "https://cim.eu/en/case-studies/reverse-engineering-and-optimization-of-spare-parts-for-vintage-vehicles/",
+            "finalUrl": "https://cim.eu/en/case-studies/reverse-engineering-and-optimization-of-spare-parts-for-vintage-vehicles/",
+            "title": "CIM: reconstructing a vintage vehicle part",
+            "publisher": "CIM",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated provider case, Turin, Italy; no repeat-volume or customer-economics data",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "The company provided the original component and some of its technical drawings.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding context inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T00:25:42.130Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "checked-part-designs:review-zoo",
+            "sourceUrl": "https://zoo.dev/docs/faq",
+            "finalUrl": "https://zoo.dev/docs/faq",
+            "title": "Zoo: AI design capabilities and limits",
+            "publisher": "Zoo",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated supplier documentation retrieved October 15, 2026; offered workflow, not measured outcomes",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "It can create and edit parametric CAD models from prompts, images, and sketches.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding context inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T00:25:42.130Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "checked-part-designs:review-solidworks",
+            "sourceUrl": "https://help.solidworks.com/2025/english/SolidWorks/sldworks/c_2D_to_3D_Conversion_Overview.htm",
+            "finalUrl": "https://help.solidworks.com/2025/english/SolidWorks/sldworks/c_2D_to_3D_Conversion_Overview.htm",
+            "title": "SOLIDWORKS 2025: drawing-to-model workflow",
+            "publisher": "Dassault Systèmes",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "2025 software documentation; version is not publication date",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "The 2D sketch can be an imported drawing, or it can be a sketch constructed in SOLIDWORKS.",
+            "pdfPage": null,
+            "locator": "Article HTML decoded from original page JSON without executing scripts",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T00:25:42.130Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "checked-part-designs:review-nist",
+            "sourceUrl": "https://www.nist.gov/news-events/news/2020/02/inadequate-modeling-data-costs-billions-us-manufacturers",
+            "finalUrl": "https://www.nist.gov/news-events/news/2020/02/inadequate-modeling-data-costs-billions-us-manufacturers",
+            "title": "NIST: gaps in design-data cost evidence",
+            "publisher": "NIST",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2020-02-12",
+            "observationPeriod": "Historical US manufacturing discussion, February 2020; broad estimates excluded",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "The frequency and impact of low-quality design data on product research and development is also not clear.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding context inspected",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T00:25:42.130Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "checked-part-designs:review-purchase",
+            "sourceUrl": "https://www.xometry.com/how-xometry-works/",
+            "finalUrl": "https://www.xometry.com/how-xometry-works/",
+            "title": "Xometry: part ordering and engineering review",
+            "publisher": "Xometry",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated supplier documentation retrieved October 15, 2026; offered workflow, not measured outcomes",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "You can also share your quote with a purchaser or team member using the \"Forward to Purchaser\" button below the checkout button.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding context inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T00:25:42.130Z",
               "failureIds": []
             }
           }
         ],
         "migrationGaps": [],
-        "id": "checked-part-designs:rubric-v2-20261015",
+        "id": "checked-part-designs:evidence-review-v2-20261016",
         "opportunityId": "checked-part-designs",
-        "parentRevisionId": "checked-part-designs:manifesto-pass2-20261015",
-        "createdAt": "2026-10-15T21:24:18.427Z",
-        "producerId": "rubric-reassessment-v2",
-        "origin": "saved-data-synthesis",
-        "changeReason": "Reassessed adjacent uses and functional alternatives. Original evidence review statuses preserved; no new market qualification.",
-        "contentHash": "a6372245fdc68acb17ce10385e932c232777af1c9d599f68452c58467fed35d5",
+        "parentRevisionId": "checked-part-designs:rubric-v2-20261015",
+        "createdAt": "2026-10-16T00:25:42.130Z",
+        "producerId": "codex-evidence-inspector",
+        "origin": "inspection-correction",
+        "changeReason": "Inspect all three v2 reports, recover embedded source articles, verify archived projects, compare existing generation and checking workflows, and exclude unsupported market inputs.",
+        "contentHash": "8705aa6241d483aa6dc93ecb1bb09b54ca70031bb55d6c091c3db88a926e1d69",
         "title": "Software that turns drawings and measurements into checked part designs",
         "classifications": [
           "Manufacturing",
@@ -8388,120 +8617,64 @@
         "assessment": {
           "rubricVersion": "venture-screen-v2",
           "priority": "medium",
-          "priorityReason": "The value may be a checking layer within existing design tools, not replacement of CAD. Physical fit and end-to-end correction effort are the meaningful tests.",
+          "priorityReason": "Real reconstruction and clarification work supports a focused trial. Existing editable AI design makes generation alone a weak distinction; the case rests on reducing total correction effort for recurring jobs.",
           "confidence": {
             "level": "low",
-            "reason": "Low commercially; moderate support for constrained capabilities."
+            "reason": "Original sources support the tasks and several existing capabilities. Customer savings, payment, repeat use and reachable scale remain unproven."
           },
           "dimensions": {
             "problem": {
               "status": "supported",
-              "reason": "Saved reports identify wrong geometry, unreliable dimensions and misplaced features.",
+              "reason": "Xometry documents order holds for conflicts; CIM describes reconstructing an unavailable design. Frequency and avoidable cost remain unknown.",
               "claimIds": [
-                "checked-part-designs:what",
-                "checked-part-designs:problem",
-                "checked-part-designs:opportunity",
-                "checked-part-designs:customer-0",
-                "checked-part-designs:customer-1",
-                "checked-part-designs:application-0",
-                "checked-part-designs:application-1",
-                "checked-part-designs:project-synthesis-project-ad0cbde9a0257cfd907b8c1b",
-                "checked-part-designs:project-synthesis-project-f461d2ba665089e5abe7455c"
+                "checked-part-designs:problem"
               ]
             },
             "customerPayment": {
-              "status": "plausible",
-              "reason": "Design teams, repair workshops or manufacturers could buy repeatable reductions in work; payment evidence is absent.",
+              "status": "missing",
+              "reason": "Potential employer/workshop payer, but no confirmed software budget, buyer commitment or paid repeat use.",
               "claimIds": [
-                "checked-part-designs:what",
-                "checked-part-designs:problem",
-                "checked-part-designs:opportunity",
-                "checked-part-designs:customer-0",
-                "checked-part-designs:customer-1",
-                "checked-part-designs:application-0",
-                "checked-part-designs:application-1",
-                "checked-part-designs:project-synthesis-project-ad0cbde9a0257cfd907b8c1b",
-                "checked-part-designs:project-synthesis-project-f461d2ba665089e5abe7455c"
+                "checked-part-designs:customer-0"
               ]
             },
             "productValue": {
-              "status": "supported",
-              "reason": "Geometry checks, measurement guidance and one limited physical fit result are reported.",
+              "status": "plausible",
+              "reason": "Measurement guidance and source checking could reduce corrections. Limited reported benchmarks and one badge case do not prove lower total customer effort.",
               "claimIds": [
-                "checked-part-designs:what",
-                "checked-part-designs:problem",
-                "checked-part-designs:opportunity",
-                "checked-part-designs:customer-0",
-                "checked-part-designs:customer-1",
-                "checked-part-designs:application-0",
-                "checked-part-designs:application-1",
-                "checked-part-designs:project-synthesis-project-ad0cbde9a0257cfd907b8c1b",
-                "checked-part-designs:project-synthesis-project-f461d2ba665089e5abe7455c"
+                "checked-part-designs:what"
               ]
             },
             "commercialGap": {
               "status": "plausible",
-              "reason": "Could supplement established CAD and measurement tools with source-to-part checking; direct competition is not assessed.",
+              "reason": "Existing generation and manual/supplier checks overlap. Earlier missing-measurement guidance could supplement them, but net additional value is untested.",
               "claimIds": [
-                "checked-part-designs:what",
-                "checked-part-designs:problem",
-                "checked-part-designs:opportunity",
-                "checked-part-designs:customer-0",
-                "checked-part-designs:customer-1",
-                "checked-part-designs:application-0",
-                "checked-part-designs:application-1",
-                "checked-part-designs:project-synthesis-project-ad0cbde9a0257cfd907b8c1b",
-                "checked-part-designs:project-synthesis-project-f461d2ba665089e5abe7455c"
+                "checked-part-designs:v2-comparison"
               ]
             },
             "ventureScale": {
-              "status": "plausible",
-              "reason": "Repeat custom-part workflows offer a path; the number of feasible parts, users and revenue are not established.",
+              "status": "missing",
+              "reason": "Reachable organizations, suitable recurring jobs, achieved price and retention unknown. Occupation and marketplace counts are not software demand.",
               "claimIds": [
-                "checked-part-designs:what",
-                "checked-part-designs:problem",
-                "checked-part-designs:opportunity",
-                "checked-part-designs:customer-0",
-                "checked-part-designs:customer-1",
-                "checked-part-designs:application-0",
-                "checked-part-designs:application-1",
-                "checked-part-designs:project-synthesis-project-ad0cbde9a0257cfd907b8c1b",
-                "checked-part-designs:project-synthesis-project-f461d2ba665089e5abe7455c"
+                "checked-part-designs:opportunity"
               ]
             },
             "businessCapital": {
               "status": "plausible",
-              "reason": "Software can repeat; tolerance, material and machine-specific work may require expensive services.",
+              "reason": "Focused software may be reusable; per-part expert work, integrations, private files and physical qualification could make delivery labor-heavy. Capital requirement unknown.",
               "claimIds": [
-                "checked-part-designs:what",
-                "checked-part-designs:problem",
-                "checked-part-designs:opportunity",
-                "checked-part-designs:customer-0",
-                "checked-part-designs:customer-1",
-                "checked-part-designs:application-0",
-                "checked-part-designs:application-1",
-                "checked-part-designs:project-synthesis-project-ad0cbde9a0257cfd907b8c1b",
-                "checked-part-designs:project-synthesis-project-f461d2ba665089e5abe7455c"
+                "checked-part-designs:opportunity"
               ]
             },
             "timing": {
               "status": "plausible",
-              "reason": "Bounded generation/checking demonstrations support feasibility questions; no market growth evidence.",
+              "reason": "Current reported prototypes and offered AI design tools make a trial feasible, while raising the competitive baseline. No supported demand-growth series.",
               "claimIds": [
-                "checked-part-designs:what",
-                "checked-part-designs:problem",
-                "checked-part-designs:opportunity",
-                "checked-part-designs:customer-0",
-                "checked-part-designs:customer-1",
-                "checked-part-designs:application-0",
-                "checked-part-designs:application-1",
-                "checked-part-designs:project-synthesis-project-ad0cbde9a0257cfd907b8c1b",
-                "checked-part-designs:project-synthesis-project-f461d2ba665089e5abe7455c"
+                "checked-part-designs:v2-comparison"
               ]
             }
           },
-          "strongestObjection": "Matching shape is not manufacturability, strength or fit across real imperfect inputs.",
-          "decisiveQuestion": "Produce fitting parts from actual customer inputs with less total correction time and unchanged acceptance standards."
+          "strongestObjection": "The hardest work may be discovering missing requirements and proving that the finished part is suitable. Faster shape generation may save little if engineers must remeasure or rebuild it.",
+          "decisiveQuestion": "On real customer parts, does adding this tool reduce total measurement, correction and checking work while producing equally acceptable parts—and will the buyer pay to keep using it?"
         }
       },
       "research": null,

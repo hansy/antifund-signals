@@ -3667,8 +3667,8 @@
       "approach": "A model turns drawing views and supplied dimensions into a program that builds a 3D part. Separate geometric checks compare the generated shape with the drawing.",
       "whyItMatters": "We think this might make drawing conversion cheaper and more reliable within similarly constrained tasks. It does not establish reliable reconstruction of real engineering drawings.",
       "statusQuo": "The same 497 withheld parts were tested with general models. Reported overall correctness was 66.2% for GLM-5.3 Flash and 61.8% for Kimi K3.",
-      "results": "The team reports better shape correctness on the shared benchmark. A separate answer-selection test picked a correct program 98.1% of the time, compared with 76.3% for random selection.",
-      "limitations": "Drawings were generated from known programs and supplied with overall dimensions. Correctness means sufficient volume overlap after allowed rotations; it does not establish every engineering detail or manufacturing requirement. The source reports weaker results on complex parts. Reported prices are model costs, not complete service costs. The benchmark and comparisons have not been independently reproduced. No PDF page numbers were supplied. Year and school identify the source event collection, not a verified completion date or author affiliation.",
+      "results": "The team reports shape tests on 497 held-out parts rendered as drawings, with overall dimensions supplied. A separate test selected a correct answer 98.1% of the time from candidate answers, versus 76.3% for random selection. That is answer selection, not a 98.1% success rate for producing customer parts.",
+      "limitations": "Drawings were generated from known programs and supplied with overall dimensions. Correctness means sufficient volume overlap after allowed rotations; it does not establish every engineering detail or manufacturing requirement. The source reports weaker results on complex parts. Reported prices are model costs, not complete service costs. The benchmark and comparisons have not been independently reproduced. No PDF page numbers were supplied. Year and school identify the source event collection, not a verified completion date or author affiliation. The verifier analysis used 689 model answers on 237 parts; the source does not give the selection test’s complete eligible-case denominator. Overall shape overlap can miss important local details.",
       "topics": [
         "Manufacturing"
       ],
@@ -3714,10 +3714,10 @@
       "year": 2026,
       "summary": "CADEX reports guiding measurements, generating a design, and printing a badge case whose screw holes aligned when assembled.",
       "problem": "They may know what part they need but struggle to measure it, design it, and ensure it fits.",
-      "approach": "The user supplies photos and measured dimensions. Software creates a 3D design, checks its geometry and hole positions, and prepares files for printing.",
+      "approach": "The team describes asking the user for photos and measured dimensions, generating a 3D design, checking geometry and hole positions, and preparing files for printing.",
       "whyItMatters": "We think this could help novices produce simple fitted parts with fewer design errors. One successful case does not establish general manufacturability or repair economics.",
       "statusQuo": "Early versions required the team to inspect every generated model manually.",
-      "results": "The badge case was designed, printed, presented, and assembled with aligned screws. Replacement handles and cup holders are described as designs, not validated physical repairs.",
+      "results": "The team reports designing, printing and assembling a badge case with aligned screws. Replacement handles and cup holders are described as designs, not validated physical repairs.",
       "limitations": "Generated parts sometimes had reversed orientation or misplaced features. Photos did not provide reliable precise dimensions. The team encountered printer configuration and material-loading problems. Strength, tolerances across materials, novice success rates, and cost are unknown. Buying replacements or hiring a designer may be better for many tasks. Year and school identify the source event collection, not a verified completion date or author affiliation.",
       "topics": [
         "Manufacturing"
@@ -3927,12 +3927,12 @@
       "schoolId": "stanford",
       "title": "SoleMate",
       "year": 2025,
-      "summary": "SoleMate reports a phone-scanning prototype that creates editable files for printing shoe inserts. Successful fit and comfort are not established.",
-      "problem": "Obtaining a comfortable custom insert can involve expensive appointments and fitting work.",
+      "summary": "SoleMate reports scanning feet with a phone and generating files for printing shoe inserts. Fit and comfort are not established; this is a different application, not evidence of mechanical-part demand.",
+      "problem": "The team aims to simplify obtaining a shoe insert matched to a foot’s shape; cost and fitting benefits are unverified.",
       "approach": "An equipped iPhone measures foot shape with LiDAR, a sensor that uses light to measure distance. Software turns those measurements into a file for printing a shoe insert.",
-      "whyItMatters": "A measurement-to-manufacture workflow could reduce repeat measurement or ordering work.",
+      "whyItMatters": "This is another measurement-to-print concept, but footwear fitting has different requirements and buyers. It does not validate the mechanical-part opportunity.",
       "statusQuo": "",
-      "results": "SoleMate reports a phone-scanning prototype that creates editable files for printing shoe inserts. Successful fit and comfort are not established.",
+      "results": "SoleMate reports scanning feet with a phone and generating files for printing shoe inserts. Fit and comfort are not established; this is a different application, not evidence of mechanical-part demand.",
       "limitations": "No validated fitting outcome or achieved manufacturing price. Unsupported prevalence and price figures are excluded; the displayed excerpt preserves original wording without the extraction-added space before punctuation. Source school and year identify the event collection, not confirmed author affiliation or project completion date.",
       "topics": [
         "Manufacturing"
@@ -5249,15 +5249,15 @@
     {
       "id": "checked-part-designs",
       "title": "Software that turns drawings and measurements into checked part designs",
-      "summary": "Turn drawings and measurements into checked 3D parts.",
+      "summary": "Prepare and check replacement-part designs before manufacture.",
       "topic": "Manufacturing",
-      "problem": "Knowing the part you need is not enough to manufacture it. Someone must recover dimensions, construct the design and catch mistakes that would produce a part that does not fit.",
-      "statusQuo": "Knowing the part you need is not enough to manufacture it. Someone must recover dimensions, construct the design and catch mistakes that would produce a part that does not fit.",
-      "gap": "Cadabra uses drawings generated from known programs with supplied overall dimensions; matching shape volume is not full manufacturability. CADEX physically demonstrated a badge case. Other replacement parts were designs, not demonstrated successful repairs. No full workflow advantage over an engineer using existing design software is measured.",
-      "opportunity": "The useful step is checking whether the generated design matches the source measurements. That could reduce repeated design and correction work across many small parts.",
-      "evidence": "The useful step is checking whether the generated design matches the source measurements. That could reduce repeated design and correction work across many small parts.",
-      "counterpoint": "Matching shape is not manufacturability, strength or fit across real imperfect inputs.",
-      "nextQuestion": "Produce fitting parts from actual customer inputs with less total correction time and unchanged acceptance standards.",
+      "problem": "Before a replacement part can be made, someone must work out its dimensions and resolve conflicting instructions. Xometry warns that disagreements between drawings, models and quotes can hold up orders. Missing drawings also create reconstruction work for older parts.",
+      "statusQuo": "Designers already reconstruct parts with design software, measurements and scans. Manufacturers review production instructions; AI design tools also generate and inspect geometry.",
+      "gap": "Recovering missing measurements and catching source-to-design errors early enough to reduce total engineering work.",
+      "opportunity": "Engineering teams and repair workshops could pay to reduce repeated design corrections before ordering parts. Zoo already generates editable designs from images. The opening is asking for missing measurements and catching costly mistakes alongside existing design tools—not generating another model. It needs to reduce total engineering work without lowering part quality.",
+      "evidence": "Cadabra reports a 497-part benchmark using drawings generated from known designs. CADEX reports one printed badge case that assembled correctly. Neither establishes reliable customer-part production or paid demand.",
+      "counterpoint": "The hardest work may be discovering missing requirements and proving that the finished part is suitable. Faster shape generation may save little if engineers must remeasure or rebuild it.",
+      "nextQuestion": "On real customer parts, does adding this tool reduce total measurement, correction and checking work while producing equally acceptable parts—and will the buyer pay to keep using it?",
       "projectIds": [
         "synthesis-project-ad0cbde9a0257cfd907b8c1b",
         "synthesis-project-f461d2ba665089e5abe7455c",
@@ -5270,8 +5270,8 @@
       ],
       "confidence": "Early signal",
       "brief": {
-        "whatItIs": "A user supplies a drawing or photos and actual measurements. The software makes an editable 3D part and checks its shape and dimensions before it is printed or manufactured.",
-        "problem": "Knowing the part you need is not enough to manufacture it. Someone must recover dimensions, construct the design and catch mistakes that would produce a part that does not fit.",
+        "whatItIs": "Software that turns a drawing or measured photos into an editable 3D part design, then checks it against the supplied dimensions. The projects report tests on generated drawings and one printed badge case; reliable reconstruction of real customer parts remains unproven.",
+        "problem": "Before a replacement part can be made, someone must work out its dimensions and resolve conflicting instructions. Xometry warns that disagreements between drawings, models and quotes can hold up orders. Missing drawings also create reconstruction work for older parts.",
         "breakthroughs": [
           {
             "text": "Cadabra reports tests on 497 held-out part drawings. It generates editable designs and checks their shape against the drawing; this does not establish full manufacturing readiness.",
@@ -5286,30 +5286,68 @@
             ]
           },
           {
-            "text": "SoleMate reports a phone-scanning prototype that creates editable files for printing shoe inserts. Successful fit and comfort are not established.",
+            "text": "SoleMate reports scanning feet with a phone and generating files for printing shoe inserts. Fit and comfort are not established; this is a different application, not evidence of mechanical-part demand.",
             "sourceIds": [
               "synthesis-source-8af7ad1edd27a1457348900d"
             ]
           }
         ],
-        "marketOpportunity": "The useful step is checking whether the generated design matches the source measurements. That could reduce repeated design and correction work across many small parts.",
-        "buyer": "Mechanical engineering teams; Workshops making replacement or custom parts",
+        "marketOpportunity": "Engineering teams and repair workshops could pay to reduce repeated design corrections before ordering parts. Zoo already generates editable designs from images. The opening is asking for missing measurements and catching costly mistakes alongside existing design tools—not generating another model. It needs to reduce total engineering work without lowering part quality.",
+        "buyer": "Engineering teams and suppliers handling repeated part-design corrections; Specialist workshops reconstructing unavailable replacement parts",
         "applications": [
-          "Turning drawings into editable parts",
-          "Checking dimensions before fabrication"
+          "Turning drawings into editable part designs",
+          "Checking conflicting dimensions before an order",
+          "Reconstructing simple replacement parts for restoration"
         ],
         "targetCustomers": [
-          "Mechanical engineering teams",
-          "Workshops making replacement or custom parts"
+          "Engineering teams and suppliers handling repeated part-design corrections",
+          "Specialist workshops reconstructing unavailable replacement parts"
         ],
-        "marketStatus": "hypothesis",
-        "marketEvidence": [],
+        "marketStatus": "researched",
+        "marketEvidence": [
+          {
+            "title": "Xometry: conflicting manufacturing instructions",
+            "url": "https://community.xometry.com/kb/articles/690-model-drawing-and-quote-discrepancies",
+            "excerpt": "your order may be placed on hold so our engineers can contact you to work out any discrepancies",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "CIM: reconstructing a vintage vehicle part",
+            "url": "https://cim.eu/en/case-studies/reverse-engineering-and-optimization-of-spare-parts-for-vintage-vehicles/",
+            "excerpt": "The company provided the original component and some of its technical drawings.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Zoo: AI design capabilities and limits",
+            "url": "https://zoo.dev/docs/faq",
+            "excerpt": "It can create and edit parametric CAD models from prompts, images, and sketches.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "SOLIDWORKS 2025: drawing-to-model workflow",
+            "url": "https://help.solidworks.com/2025/english/SolidWorks/sldworks/c_2D_to_3D_Conversion_Overview.htm",
+            "excerpt": "The 2D sketch can be an imported drawing, or it can be a sketch constructed in SOLIDWORKS.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "NIST: gaps in design-data cost evidence",
+            "url": "https://www.nist.gov/news-events/news/2020/02/inadequate-modeling-data-costs-billions-us-manufacturers",
+            "excerpt": "The frequency and impact of low-quality design data on product research and development is also not clear.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Xometry: part ordering and engineering review",
+            "url": "https://www.xometry.com/how-xometry-works/",
+            "excerpt": "You can also share your quote with a purchaser or team member using the \"Forward to Purchaser\" button below the checkout button.",
+            "accessedAt": "2026-10-15"
+          }
+        ],
         "risks": [
-          "Cadabra uses drawings generated from known programs with supplied overall dimensions; matching shape volume is not full manufacturability. CADEX physically demonstrated a badge case. Other replacement parts were designs, not demonstrated successful repairs. No full workflow advantage over an engineer using existing design software is measured.",
-          "Distinct named teams provide different demonstrations. Their reports do not independently reproduce each other or establish demand."
+          "The hardest work may be discovering missing requirements and proving that the finished part is suitable. Faster shape generation may save little if engineers must remeasure or rebuild it.",
+          "Paid demand, repeat-job volume and a reachable market remain unknown. A matching shape does not prove strength, material suitability or safe use."
         ],
         "nextQuestions": [
-          "Produce fitting parts from actual customer inputs with less total correction time and unchanged acceptance standards."
+          "On real customer parts, does adding this tool reduce total measurement, correction and checking work while producing equally acceptable parts—and will the buyer pay to keep using it?"
         ]
       }
     },
