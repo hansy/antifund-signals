@@ -3582,7 +3582,7 @@
       "year": 2026,
       "summary": "Sentinel reports running more than 40 test programs on physical Raspberry Pi boards and demonstrating an operating system. It connects code changes to measured electrical signals.",
       "problem": "Software-writing agents can produce code without checking whether it works on the actual device.",
-      "approach": "Software loads programs onto connected boards, captures electrical signals and uses those readings to guide code changes.",
+      "approach": "The team describes software loading programs onto connected boards, capturing electrical signals and using those readings to guide code changes.",
       "whyItMatters": "We think direct device feedback could help agents find errors that software-only checks miss.",
       "statusQuo": "Early versions of the team's agent workflow committed code without testing it on hardware.",
       "results": "The team reports more than 40 physical test programs and a Raspberry Pi operating system that works with a display and Bluetooth keyboard. The 24-hour development claim does not establish a measured improvement over human developers.",
@@ -3625,13 +3625,13 @@
       "schoolId": "stanford",
       "title": "EdgeCase",
       "year": 2026,
-      "summary": "EdgeCase demonstrates testing communication settings on an electronic board until recorded signals decode correctly. Broader fault diagnosis is not demonstrated.",
+      "summary": "EdgeCase reports searching settings that let software read a recorded communication signal. This does not establish that it repairs faulty device software.",
       "problem": "Intermittent faults are hard to reproduce. Ordinary logs may not reveal what happened in the electrical signals.",
-      "approach": "Software runs a sequence of experiments on a connected board, captures its electrical signals, and tests settings until communication works.",
+      "approach": "The team describes loading software onto a board and recording its electrical signals. Its example searches the settings used to decode those recordings.",
       "whyItMatters": "We think this could reduce repeated setup work and make debugging conclusions easier for another engineer to reproduce.",
       "statusQuo": "The source contrasts the project with diagnosis using vague logs. Existing signal recording tools and engineer-run experiments are also relevant alternatives, but their performance is not compared.",
-      "results": "The source reports a working experiment loop. Its concrete demo searches settings for UART, a simple connection that sends data between electronic components, until messages decode correctly.",
-      "limitations": "The demonstrated problem is narrow; arbitrary hardware fault diagnosis is not established. No comparison with an engineer or a scripted settings search is supplied. Required computing equipment, setup effort, and support across boards may limit practical use. Local operation does not establish privacy or security. Year and school identify the source event collection, not a verified completion date or author affiliation.",
+      "results": "The team reports a loop that tries decoder settings until messages can be read correctly. UART is a simple connection between electronic components. Finding its decoder settings is narrower than repairing a board or its software; the demonstration has not been independently reproduced.",
+      "limitations": "The reported demonstration is narrow; arbitrary hardware fault diagnosis is not established. No comparison with an engineer or a scripted settings search is supplied. Required computing equipment, setup effort, and support across boards may limit practical use. Local operation does not establish privacy or security. Year and school identify the source event collection, not a verified completion date or author affiliation.",
       "topics": [
         "Manufacturing"
       ],
@@ -5159,15 +5159,15 @@
     {
       "id": "hardware-code-testing",
       "title": "A test bench that lets AI write and check software on real electronics",
-      "summary": "Write device software and test it on actual electronics.",
+      "summary": "Investigate device-software faults using real-board measurements.",
       "topic": "Manufacturing",
-      "problem": "Code can look correct yet fail on a physical chip. Engineers must repeatedly load it, collect measurements and work out what went wrong.",
-      "statusQuo": "Code can look correct yet fail on a physical chip. Engineers must repeatedly load it, collect measurements and work out what went wrong.",
-      "gap": "Sentinel was co-developed with its showcase project on one device family. Its 24-hour claim is not a measured comparison with engineers. EdgeCase demonstrates a narrow communication-setting problem, not arbitrary fault repair. No measured reduction in engineering hours, support burden or equipment costs.",
-      "opportunity": "The product connects AI coding tools to the physical evidence they lack. If it works across boards, it could become a recurring development tool rather than a one-off custom device.",
-      "evidence": "The product connects AI coding tools to the physical evidence they lack. If it works across boards, it could become a recurring development tool rather than a one-off custom device.",
-      "counterpoint": "The demonstrations cover narrow device families and faults, not general self-debugging electronics.",
-      "nextQuestion": "Resolve previously unseen customer-board faults with fewer engineer hours, counting failed attempts, setup and support.",
+      "problem": "Device software can pass computer-based checks and still fail on the electronics it controls. Engineers then have to reproduce the fault and interpret measurements. Whirlpool describes building an automated system to test washing-machine control boards, showing that this work already warrants dedicated equipment.",
+      "statusQuo": "Engineers already use signal analyzers, scripted debuggers and automated board tests. Saleae also provides an experimental AI connection to its instruments.",
+      "gap": "Choosing and interpreting the next useful experiment across tools, beyond merely recording signals or running a fixed test.",
+      "opportunity": "Device makers could pay for faster diagnosis of recurring faults using equipment they already own. Saleae already gives AI access to signal measurements; Twister and NI automate tests. The opening is choosing useful follow-up tests and checking fixes across these tools. It must save more engineering time than setup, wrong answers and review consume.",
+      "evidence": "Sentinel reports more than 40 test programs on Raspberry Pi boards. EdgeCase reports searching decoder settings until a recorded communication signal can be read; that does not establish repair of faulty software. Neither result has been independently reproduced.",
+      "counterpoint": "Board setup, reproducing faults and deciding what counts as correct may still require more expert effort than the assistant removes.",
+      "nextQuestion": "On unfamiliar customer faults, does adding this tool produce more correct fixes with fewer total engineer hours than the best existing setup, including setup, failed attempts and checking?",
       "projectIds": [
         "synthesis-project-cb17ebac85e7ba1d62d7f138",
         "synthesis-project-85a06c91ad32fb33b50814d1"
@@ -5178,8 +5178,8 @@
       ],
       "confidence": "Early signal",
       "brief": {
-        "whatItIs": "Software loads code onto an electronic board, measures what the board actually does, and uses those measurements to diagnose the next problem.",
-        "problem": "Code can look correct yet fail on a physical chip. Engineers must repeatedly load it, collect measurements and work out what went wrong.",
+        "whatItIs": "An AI assistant connected to a real electronic board and its test equipment. It would load software, read measurements and choose the next test to investigate a fault. The projects report narrow demonstrations; general fault diagnosis remains unproven.",
+        "problem": "Device software can pass computer-based checks and still fail on the electronics it controls. Engineers then have to reproduce the fault and interpret measurements. Whirlpool describes building an automated system to test washing-machine control boards, showing that this work already warrants dedicated equipment.",
         "breakthroughs": [
           {
             "text": "Sentinel reports running more than 40 test programs on physical Raspberry Pi boards and demonstrating an operating system. It connects code changes to measured electrical signals.",
@@ -5188,30 +5188,61 @@
             ]
           },
           {
-            "text": "EdgeCase demonstrates testing communication settings on an electronic board until recorded signals decode correctly. Broader fault diagnosis is not demonstrated.",
+            "text": "EdgeCase reports searching settings that let software read a recorded communication signal. This does not establish that it repairs faulty device software.",
             "sourceIds": [
               "synthesis-source-85a06c91ad32fb33b50814d1"
             ]
           }
         ],
-        "marketOpportunity": "The product connects AI coding tools to the physical evidence they lack. If it works across boards, it could become a recurring development tool rather than a one-off custom device.",
-        "buyer": "Teams developing software for electronic devices; Hardware engineering and test teams",
+        "marketOpportunity": "Device makers could pay for faster diagnosis of recurring faults using equipment they already own. Saleae already gives AI access to signal measurements; Twister and NI automate tests. The opening is choosing useful follow-up tests and checking fixes across these tools. It must save more engineering time than setup, wrong answers and review consume.",
+        "buyer": "Device manufacturers with recurring board-software faults and compatible test equipment",
         "applications": [
-          "Testing device software on physical boards",
-          "Diagnosing repeatable hardware communication faults"
+          "Investigating faults on electronic boards",
+          "Finding which software update broke a physical test",
+          "Reproducing faults from returned devices in the lab"
         ],
         "targetCustomers": [
-          "Teams developing software for electronic devices",
-          "Hardware engineering and test teams"
+          "Device manufacturers with recurring board-software faults and compatible test equipment"
         ],
-        "marketStatus": "hypothesis",
-        "marketEvidence": [],
+        "marketStatus": "researched",
+        "marketEvidence": [
+          {
+            "title": "Saleae: AI access to Logic 2 instruments",
+            "url": "https://docs.saleae.com/mcp/guides/getting-started",
+            "excerpt": "Start captures, decode protocols, and export data — all from your AI tool of choice.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "SEGGER Ozone: debugging and test automation",
+            "url": "https://www.segger.com/products/development-tools/ozone-j-link-debugger/",
+            "excerpt": "For automation tasks, Ozone users can add scripts to a project or run them directly in the console.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Zephyr Twister: physical-device tests",
+            "url": "https://docs.zephyrproject.org/latest/develop/twister/index.html",
+            "excerpt": "Some tests require additional setup or special wiring specific to the test.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Whirlpool: automated control-board testing",
+            "url": "https://www.ni.com/en/solutions/industrial-machinery/case-studies/making-washing-machines-more-reliable-with-hardware-in-the-loop.html",
+            "excerpt": "fast, automatic testing of the low-level signals processed and provided by the production control board",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "NI: testing control software with real electronics",
+            "url": "https://www.ni.com/en/solutions/hardware-in-the-loop-testing.html",
+            "excerpt": "Features include hardware fault insertion, and multi‑ECU and integrated test support",
+            "accessedAt": "2026-10-15"
+          }
+        ],
         "risks": [
-          "Sentinel was co-developed with its showcase project on one device family. Its 24-hour claim is not a measured comparison with engineers. EdgeCase demonstrates a narrow communication-setting problem, not arbitrary fault repair. No measured reduction in engineering hours, support burden or equipment costs.",
-          "Distinct named teams provide different demonstrations. Their reports do not independently reproduce each other or establish demand."
+          "Board setup, reproducing faults and deciding what counts as correct may still require more expert effort than the assistant removes.",
+          "Paid demand, repeatable integration costs and a reachable market remain unproven. A device returned from a customer may fail only under conditions the lab cannot reproduce."
         ],
         "nextQuestions": [
-          "Resolve previously unseen customer-board faults with fewer engineer hours, counting failed attempts, setup and support."
+          "On unfamiliar customer faults, does adding this tool produce more correct fixes with fewer total engineer hours than the best existing setup, including setup, failed attempts and checking?"
         ]
       }
     },

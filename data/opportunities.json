@@ -7155,8 +7155,8 @@
     {
       "schemaVersion": 1,
       "id": "hardware-code-testing",
-      "revision": 1,
-      "acceptedRevisionId": "hardware-code-testing:rubric-v2-20261015",
+      "revision": 2,
+      "acceptedRevisionId": "hardware-code-testing:evidence-review-v2-20261016",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -7164,10 +7164,10 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T18:55:13.081Z",
-      "updatedAt": "2026-10-15T21:24:18.427Z",
+      "updatedAt": "2026-10-16T00:04:48.852Z",
       "verdict": null,
       "stage": "first-impressions",
-      "qualificationError": null,
+      "qualificationError": "Evidence reviewed; the task is supported, but additional diagnostic value, paid demand and venture-scale economics remain unproven.",
       "accepted": {
         "content": {
           "marketSize": [],
@@ -7183,17 +7183,14 @@
             {
               "role": "buyer",
               "claimId": "hardware-code-testing:customer-0"
-            },
-            {
-              "role": "buyer",
-              "claimId": "hardware-code-testing:customer-1"
             }
           ],
           "applications": [
             "hardware-code-testing:application-0",
-            "hardware-code-testing:application-1"
+            "hardware-code-testing:application-1",
+            "hardware-code-testing:application-2"
           ],
-          "keyQuestion": "Resolve previously unseen customer-board faults with fewer engineer hours, counting failed attempts, setup and support."
+          "keyQuestion": "On unfamiliar customer faults, does adding this tool produce more correct fixes with fewer total engineer hours than the best existing setup, including setup, failed attempts and checking?"
         },
         "projects": [
           {
@@ -7220,129 +7217,155 @@
         "claims": [
           {
             "id": "hardware-code-testing:what",
-            "text": "Software loads code onto an electronic board, measures what the board actually does, and uses those measurements to diagnose the next problem.",
-            "evidenceIds": [],
+            "text": "An AI assistant connected to a real electronic board and its test equipment. It would load software, read measurements and choose the next test to investigate a fault. The projects report narrow demonstrations; general fault diagnosis remains unproven.",
+            "evidenceIds": [
+              "hardware-code-testing:synthesis-project-cb17ebac85e7ba1d62d7f138:source-0",
+              "hardware-code-testing:synthesis-project-cb17ebac85e7ba1d62d7f138:source-1",
+              "hardware-code-testing:synthesis-project-cb17ebac85e7ba1d62d7f138:source-2",
+              "hardware-code-testing:synthesis-project-cb17ebac85e7ba1d62d7f138:source-3",
+              "hardware-code-testing:synthesis-project-85a06c91ad32fb33b50814d1:source-0",
+              "hardware-code-testing:synthesis-project-85a06c91ad32fb33b50814d1:source-1",
+              "hardware-code-testing:synthesis-project-85a06c91ad32fb33b50814d1:source-2"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Unknown customer fault frequency, net time saved, paid demand and reachable market. Setup, independent checking and safe equipment control remain necessary."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T00:04:48.852Z",
+              "reason": "Accepted only as an explicit product/customer/transfer hypothesis, not proven benefit or demand."
             },
             "kind": "hypothesis",
             "testQuestion": "Can the same installation solve several previously unseen customer-board faults with less engineer time than their existing tools?"
           },
           {
             "id": "hardware-code-testing:problem",
-            "text": "Code can look correct yet fail on a physical chip. Engineers must repeatedly load it, collect measurements and work out what went wrong.",
-            "evidenceIds": [],
+            "text": "Device software can pass computer-based checks and still fail on the electronics it controls. Engineers then have to reproduce the fault and interpret measurements. Whirlpool describes building an automated system to test washing-machine control boards, showing that this work already warrants dedicated equipment.",
+            "evidenceIds": [
+              "hardware-code-testing:review-whirlpool",
+              "hardware-code-testing:review-twister",
+              "hardware-code-testing:synthesis-project-cb17ebac85e7ba1d62d7f138:source-0",
+              "hardware-code-testing:synthesis-project-cb17ebac85e7ba1d62d7f138:source-1",
+              "hardware-code-testing:synthesis-project-cb17ebac85e7ba1d62d7f138:source-2",
+              "hardware-code-testing:synthesis-project-cb17ebac85e7ba1d62d7f138:source-3",
+              "hardware-code-testing:synthesis-project-85a06c91ad32fb33b50814d1:source-0",
+              "hardware-code-testing:synthesis-project-85a06c91ad32fb33b50814d1:source-1",
+              "hardware-code-testing:synthesis-project-85a06c91ad32fb33b50814d1:source-2"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Unknown customer fault frequency, net time saved, paid demand and reachable market. Setup, independent checking and safe equipment control remain necessary."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T00:04:48.852Z",
+              "reason": "Original supplier and customer descriptions support this bounded interpretation; no superiority or paid-demand inference."
             },
-            "kind": "hypothesis",
-            "testQuestion": "Can the same installation solve several previously unseen customer-board faults with less engineer time than their existing tools?"
+            "kind": "inference",
+            "reasoning": "Named manufacturer and documented physical-test workflow establish real work, not quantified frequency, losses or this product’s savings."
           },
           {
             "id": "hardware-code-testing:opportunity",
-            "text": "The product connects AI coding tools to the physical evidence they lack. If it works across boards, it could become a recurring development tool rather than a one-off custom device.",
-            "evidenceIds": [],
+            "text": "Device makers could pay for faster diagnosis of recurring faults using equipment they already own. Saleae already gives AI access to signal measurements; Twister and NI automate tests. The opening is choosing useful follow-up tests and checking fixes across these tools. It must save more engineering time than setup, wrong answers and review consume.",
+            "evidenceIds": [
+              "hardware-code-testing:review-saleae",
+              "hardware-code-testing:review-twister",
+              "hardware-code-testing:review-ni",
+              "hardware-code-testing:review-whirlpool"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Unknown customer fault frequency, net time saved, paid demand and reachable market. Setup, independent checking and safe equipment control remain necessary."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T00:04:48.852Z",
+              "reason": "Accepted only as an explicit product/customer/transfer hypothesis, not proven benefit or demand."
             },
             "kind": "hypothesis",
-            "testQuestion": "Can the same installation solve several previously unseen customer-board faults with less engineer time than their existing tools?"
+            "testQuestion": "On unfamiliar customer faults, does adding this tool produce more correct fixes with fewer total engineer hours than the best existing setup, including setup, failed attempts and checking?"
           },
           {
             "id": "hardware-code-testing:customer-0",
-            "text": "Teams developing software for electronic devices",
-            "evidenceIds": [],
+            "text": "Device manufacturers with recurring board-software faults and compatible test equipment",
+            "evidenceIds": [
+              "hardware-code-testing:review-whirlpool",
+              "hardware-code-testing:review-twister"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Unknown customer fault frequency, net time saved, paid demand and reachable market. Setup, independent checking and safe equipment control remain necessary."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
-            },
-            "kind": "hypothesis",
-            "testQuestion": "Can the same installation solve several previously unseen customer-board faults with less engineer time than their existing tools?"
-          },
-          {
-            "id": "hardware-code-testing:customer-1",
-            "text": "Hardware engineering and test teams",
-            "evidenceIds": [],
-            "derivedFromClaimIds": [],
-            "confidence": "low",
-            "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
-            ],
-            "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T00:04:48.852Z",
+              "reason": "Accepted only as an explicit product/customer/transfer hypothesis, not proven benefit or demand."
             },
             "kind": "hypothesis",
             "testQuestion": "Can the same installation solve several previously unseen customer-board faults with less engineer time than their existing tools?"
           },
           {
             "id": "hardware-code-testing:application-0",
-            "text": "Testing device software on physical boards",
-            "evidenceIds": [],
+            "text": "Investigating faults on electronic boards",
+            "evidenceIds": [
+              "hardware-code-testing:synthesis-project-cb17ebac85e7ba1d62d7f138:source-0",
+              "hardware-code-testing:synthesis-project-cb17ebac85e7ba1d62d7f138:source-1",
+              "hardware-code-testing:synthesis-project-cb17ebac85e7ba1d62d7f138:source-2",
+              "hardware-code-testing:synthesis-project-cb17ebac85e7ba1d62d7f138:source-3",
+              "hardware-code-testing:synthesis-project-85a06c91ad32fb33b50814d1:source-0",
+              "hardware-code-testing:synthesis-project-85a06c91ad32fb33b50814d1:source-1",
+              "hardware-code-testing:synthesis-project-85a06c91ad32fb33b50814d1:source-2",
+              "hardware-code-testing:review-twister"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Unknown customer fault frequency, net time saved, paid demand and reachable market. Setup, independent checking and safe equipment control remain necessary."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T00:04:48.852Z",
+              "reason": "Accepted only as an explicit product/customer/transfer hypothesis, not proven benefit or demand."
             },
             "kind": "hypothesis",
-            "testQuestion": "Can the same installation solve several previously unseen customer-board faults with less engineer time than their existing tools?"
+            "testQuestion": "On unfamiliar customer faults, does adding this tool produce more correct fixes with fewer total engineer hours than the best existing setup, including setup, failed attempts and checking?"
           },
           {
             "id": "hardware-code-testing:application-1",
-            "text": "Diagnosing repeatable hardware communication faults",
-            "evidenceIds": [],
+            "text": "Finding which software update broke a physical test",
+            "evidenceIds": [
+              "hardware-code-testing:synthesis-project-cb17ebac85e7ba1d62d7f138:source-0",
+              "hardware-code-testing:synthesis-project-cb17ebac85e7ba1d62d7f138:source-1",
+              "hardware-code-testing:synthesis-project-cb17ebac85e7ba1d62d7f138:source-2",
+              "hardware-code-testing:synthesis-project-cb17ebac85e7ba1d62d7f138:source-3",
+              "hardware-code-testing:synthesis-project-85a06c91ad32fb33b50814d1:source-0",
+              "hardware-code-testing:synthesis-project-85a06c91ad32fb33b50814d1:source-1",
+              "hardware-code-testing:synthesis-project-85a06c91ad32fb33b50814d1:source-2",
+              "hardware-code-testing:review-twister"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Unknown customer fault frequency, net time saved, paid demand and reachable market. Setup, independent checking and safe equipment control remain necessary."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T00:04:48.852Z",
+              "reason": "Accepted only as an explicit product/customer/transfer hypothesis, not proven benefit or demand."
             },
             "kind": "hypothesis",
-            "testQuestion": "Can the same installation solve several previously unseen customer-board faults with less engineer time than their existing tools?"
+            "testQuestion": "On unfamiliar customer faults, does adding this tool produce more correct fixes with fewer total engineer hours than the best existing setup, including setup, failed attempts and checking?"
           },
           {
             "id": "hardware-code-testing:project-synthesis-project-cb17ebac85e7ba1d62d7f138",
@@ -7356,13 +7379,13 @@
             "derivedFromClaimIds": [],
             "confidence": "moderate",
             "limitations": [
-              "Project-reported evidence; not independently reproduced."
+              "Team report, no independent reproduction or comparison with expert use of existing tools. Decoder search is not arbitrary firmware repair."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T00:04:48.852Z",
+              "reason": "Matched to original project HTML; scope narrowed to team report without reproduction."
             },
             "kind": "reported",
             "attribution": "Sentinel; Sentinel; Sentinel; Sentinel",
@@ -7370,7 +7393,7 @@
           },
           {
             "id": "hardware-code-testing:project-synthesis-project-85a06c91ad32fb33b50814d1",
-            "text": "EdgeCase demonstrates testing communication settings on an electronic board until recorded signals decode correctly. Broader fault diagnosis is not demonstrated.",
+            "text": "EdgeCase reports searching settings that let software read a recorded communication signal. This does not establish that it repairs faulty device software.",
             "evidenceIds": [
               "hardware-code-testing:synthesis-project-85a06c91ad32fb33b50814d1:source-0",
               "hardware-code-testing:synthesis-project-85a06c91ad32fb33b50814d1:source-1",
@@ -7379,13 +7402,13 @@
             "derivedFromClaimIds": [],
             "confidence": "moderate",
             "limitations": [
-              "Project-reported evidence; not independently reproduced."
+              "Team report, no independent reproduction or comparison with expert use of existing tools. Decoder search is not arbitrary firmware repair."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T00:04:48.852Z",
+              "reason": "Matched to original project HTML; scope narrowed to team report without reproduction."
             },
             "kind": "reported",
             "attribution": "EdgeCase; EdgeCase; EdgeCase",
@@ -7393,30 +7416,62 @@
           },
           {
             "id": "hardware-code-testing:v2-comparison",
-            "text": "Supplement coding assistants, debuggers and existing test equipment; alternative to manual orchestration, not replacement for physical testing.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "Saleae’s experimental AI connector overlaps in capturing and decoding signals. SEGGER Ozone automates debugging; Twister and NI automate physical tests. An investigator could supplement them by connecting measurements to code changes and choosing follow-up experiments. That added diagnostic value has not been demonstrated against an expert’s existing setup.",
+            "kind": "inference",
+            "evidenceIds": [
+              "hardware-code-testing:review-saleae",
+              "hardware-code-testing:review-ozone",
+              "hardware-code-testing:review-twister",
+              "hardware-code-testing:review-ni"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "Unknown customer fault frequency, net time saved, paid demand and reachable market. Setup, independent checking and safe equipment control remain necessary."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T00:04:48.852Z",
+              "reason": "Original supplier and customer descriptions support this bounded interpretation; no superiority or paid-demand inference."
             },
-            "testQuestion": "Can the same installation solve several previously unseen customer-board faults with less engineer time than their existing tools?"
+            "reasoning": "Supplier descriptions establish tool overlap. Cross-tool reasoning may supplement it, but integration, correctness and net effort have not been compared."
+          },
+          {
+            "id": "hardware-code-testing:application-2",
+            "text": "Reproducing faults from returned devices in the lab",
+            "evidenceIds": [
+              "hardware-code-testing:synthesis-project-cb17ebac85e7ba1d62d7f138:source-0",
+              "hardware-code-testing:synthesis-project-cb17ebac85e7ba1d62d7f138:source-1",
+              "hardware-code-testing:synthesis-project-cb17ebac85e7ba1d62d7f138:source-2",
+              "hardware-code-testing:synthesis-project-cb17ebac85e7ba1d62d7f138:source-3",
+              "hardware-code-testing:synthesis-project-85a06c91ad32fb33b50814d1:source-0",
+              "hardware-code-testing:synthesis-project-85a06c91ad32fb33b50814d1:source-1",
+              "hardware-code-testing:synthesis-project-85a06c91ad32fb33b50814d1:source-2",
+              "hardware-code-testing:review-twister"
+            ],
+            "derivedFromClaimIds": [],
+            "confidence": "low",
+            "limitations": [
+              "Unknown customer fault frequency, net time saved, paid demand and reachable market. Setup, independent checking and safe equipment control remain necessary."
+            ],
+            "review": {
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T00:04:48.852Z",
+              "reason": "Accepted only as an explicit product/customer/transfer hypothesis, not proven benefit or demand."
+            },
+            "kind": "hypothesis",
+            "testQuestion": "Can returned-device faults be reproduced and resolved with less total effort, including logistics and missing field conditions?"
           }
         ],
         "evidence": [
           {
             "id": "hardware-code-testing:synthesis-project-cb17ebac85e7ba1d62d7f138:source-0",
             "sourceUrl": "https://devpost.com/software/sentinel-c8ki50",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/sentinel-c8ki50",
             "title": "Sentinel",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -7424,21 +7479,21 @@
             "retrievedAt": "2026-10-15T18:55:13.081Z",
             "excerpt": "Early versions would write code and commit without testing; we had to make hardware testing mandatory in the agent prompts and verify Pi output before allowing commits",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Archived original HTML; team report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T18:55:13.081Z",
+              "checkedAt": "2026-10-16T00:04:48.852Z",
               "failureIds": []
             }
           },
           {
             "id": "hardware-code-testing:synthesis-project-cb17ebac85e7ba1d62d7f138:source-1",
             "sourceUrl": "https://devpost.com/software/sentinel-c8ki50",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/sentinel-c8ki50",
             "title": "Sentinel",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -7446,21 +7501,21 @@
             "retrievedAt": "2026-10-15T18:55:13.081Z",
             "excerpt": "Early versions would write code and commit without testing",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Archived original HTML; team report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T18:55:13.081Z",
+              "checkedAt": "2026-10-16T00:04:48.852Z",
               "failureIds": []
             }
           },
           {
             "id": "hardware-code-testing:synthesis-project-cb17ebac85e7ba1d62d7f138:source-2",
             "sourceUrl": "https://devpost.com/software/sentinel-c8ki50",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/sentinel-c8ki50",
             "title": "Sentinel",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -7468,21 +7523,21 @@
             "retrievedAt": "2026-10-15T18:55:13.081Z",
             "excerpt": "All features tested on physical hardware — 40+ test programs validated on real Pi Zero W devices.",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Archived original HTML; team report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T18:55:13.081Z",
+              "checkedAt": "2026-10-16T00:04:48.852Z",
               "failureIds": []
             }
           },
           {
             "id": "hardware-code-testing:synthesis-project-cb17ebac85e7ba1d62d7f138:source-3",
             "sourceUrl": "https://devpost.com/software/sentinel-c8ki50",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/sentinel-c8ki50",
             "title": "Sentinel",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -7490,21 +7545,21 @@
             "retrievedAt": "2026-10-15T18:55:13.081Z",
             "excerpt": "The final demo is a Raspberry Pi brought up from bare-metal which can be plugged into a display and power and work as an OS with a bluetooth keyboard.",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Archived original HTML; team report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T18:55:13.081Z",
+              "checkedAt": "2026-10-16T00:04:48.852Z",
               "failureIds": []
             }
           },
           {
             "id": "hardware-code-testing:synthesis-project-85a06c91ad32fb33b50814d1:source-0",
             "sourceUrl": "https://devpost.com/software/edgecase-lsc926",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/edgecase-lsc926",
             "title": "EdgeCase",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -7512,21 +7567,21 @@
             "retrievedAt": "2026-10-15T18:55:13.081Z",
             "excerpt": "Hardware issues are often timing-sensitive, hard to reproduce, and expensive to diagnose when your only feedback is vague logs.",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Archived original HTML; team report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T18:55:13.081Z",
+              "checkedAt": "2026-10-16T00:04:48.852Z",
               "failureIds": []
             }
           },
           {
             "id": "hardware-code-testing:synthesis-project-85a06c91ad32fb33b50814d1:source-1",
             "sourceUrl": "https://devpost.com/software/edgecase-lsc926",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/edgecase-lsc926",
             "title": "EdgeCase",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -7534,21 +7589,21 @@
             "retrievedAt": "2026-10-15T18:55:13.081Z",
             "excerpt": "A working closed-loop workflow where “debug” becomes a sequence of experiments with saved evidence, not guesswork.",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Archived original HTML; team report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T18:55:13.081Z",
+              "checkedAt": "2026-10-16T00:04:48.852Z",
               "failureIds": []
             }
           },
           {
             "id": "hardware-code-testing:synthesis-project-85a06c91ad32fb33b50814d1:source-2",
             "sourceUrl": "https://devpost.com/software/edgecase-lsc926",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/edgecase-lsc926",
             "title": "EdgeCase",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -7556,25 +7611,135 @@
             "retrievedAt": "2026-10-15T18:55:13.081Z",
             "excerpt": "the user picks a nonstandard UART baud rate (e.g., 76200), and the agents automatically test decode settings until the UART stream decodes correctly and passes validation checks.",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Archived original HTML; team report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T18:55:13.081Z",
+              "checkedAt": "2026-10-16T00:04:48.852Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "hardware-code-testing:review-saleae",
+            "sourceUrl": "https://docs.saleae.com/mcp/guides/getting-started",
+            "finalUrl": "https://docs.saleae.com/mcp/guides/getting-started",
+            "title": "Saleae: AI access to Logic 2 instruments",
+            "publisher": "Saleae",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated supplier documentation retrieved October 15, 2026; advertised capability, not comparative performance",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Start captures, decode protocols, and export data — all from your AI tool of choice.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding mechanism and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T00:04:48.852Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "hardware-code-testing:review-ozone",
+            "sourceUrl": "https://www.segger.com/products/development-tools/ozone-j-link-debugger/",
+            "finalUrl": "https://www.segger.com/products/development-tools/ozone-j-link-debugger/",
+            "title": "SEGGER Ozone: debugging and test automation",
+            "publisher": "SEGGER",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated supplier documentation retrieved October 15, 2026; advertised capability, not comparative performance",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "For automation tasks, Ozone users can add scripts to a project or run them directly in the console.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding mechanism and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T00:04:48.852Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "hardware-code-testing:review-twister",
+            "sourceUrl": "https://docs.zephyrproject.org/latest/develop/twister/index.html",
+            "finalUrl": "https://docs.zephyrproject.org/latest/develop/twister/index.html",
+            "title": "Zephyr Twister: physical-device tests",
+            "publisher": "Zephyr Project",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated supplier documentation retrieved October 15, 2026; advertised capability, not comparative performance",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Some tests require additional setup or special wiring specific to the test.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding mechanism and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T00:04:48.852Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "hardware-code-testing:review-whirlpool",
+            "sourceUrl": "https://www.ni.com/en/solutions/industrial-machinery/case-studies/making-washing-machines-more-reliable-with-hardware-in-the-loop.html",
+            "finalUrl": "https://www.ni.com/en/solutions/industrial-machinery/case-studies/making-washing-machines-more-reliable-with-hardware-in-the-loop.html",
+            "title": "Whirlpool: automated control-board testing",
+            "publisher": "Whirlpool engineers, hosted by NI",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated customer-authored case; equipment indicates historical workflow, location and measurement period unspecified",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "fast, automatic testing of the low-level signals processed and provided by the production control board",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding mechanism and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T00:04:48.852Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "hardware-code-testing:review-ni",
+            "sourceUrl": "https://www.ni.com/en/solutions/hardware-in-the-loop-testing.html",
+            "finalUrl": "https://www.ni.com/en/solutions/hardware-in-the-loop-testing.html",
+            "title": "NI: testing control software with real electronics",
+            "publisher": "NI",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated supplier documentation retrieved October 15, 2026; advertised capability, not comparative performance",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Features include hardware fault insertion, and multi‑ECU and integrated test support",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding mechanism and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T00:04:48.852Z",
               "failureIds": []
             }
           }
         ],
         "migrationGaps": [],
-        "id": "hardware-code-testing:rubric-v2-20261015",
+        "id": "hardware-code-testing:evidence-review-v2-20261016",
         "opportunityId": "hardware-code-testing",
-        "parentRevisionId": "hardware-code-testing:manifesto-pass2-20261015",
-        "createdAt": "2026-10-15T21:24:18.427Z",
-        "producerId": "rubric-reassessment-v2",
-        "origin": "saved-data-synthesis",
-        "changeReason": "Reassessed adjacent uses and functional alternatives. Original evidence review statuses preserved; no new market qualification.",
-        "contentHash": "89a05551a27036c82eb78af6d9b9343c18311b3c8b55f4ddab89c8f67ae96e2f",
+        "parentRevisionId": "hardware-code-testing:rubric-v2-20261015",
+        "createdAt": "2026-10-16T00:04:48.852Z",
+        "producerId": "codex-evidence-inspector",
+        "origin": "inspection-correction",
+        "changeReason": "Inspect all three v2 research reports and archived originals; distinguish decoder-setting search from firmware repair, compare supplier AI access and test automation, and keep cross-tool diagnosis and adjacent uses as hypotheses.",
+        "contentHash": "5815a423ec6f0ec5d063eb5c73b65ffa9b9bdc5779523b56d99d0b43480c0ff8",
         "title": "A test bench that lets AI write and check software on real electronics",
         "classifications": [
           "Manufacturing",
@@ -7582,121 +7747,65 @@
         ],
         "assessment": {
           "rubricVersion": "venture-screen-v2",
-          "priority": "high",
-          "priorityReason": "Generic code generation lacks the physical measurements needed to debug electronics. Two named workflows give a concrete route to a recurring engineering tool.",
+          "priority": "medium",
+          "priorityReason": "A consequential engineering task and physical-feedback mechanism justify investigating cross-tool diagnosis. Existing AI instrument access makes basic connectivity a weak differentiator; net effort and repeatability need testing.",
           "confidence": {
             "level": "low",
-            "reason": "Low commercially; moderate support for the reported physical workflow."
+            "reason": "Real testing tasks and alternative capabilities are documented. Project generalization, additional value, payment and reachable scale remain unproven."
           },
           "dimensions": {
             "problem": {
               "status": "supported",
-              "reason": "Saved reports describe loading code, taking physical measurements and diagnosing hardware-specific failures.",
+              "reason": "Whirlpool and physical-test documentation establish a real engineering task; customer-specific fault frequency, delay and avoidable hours are unknown.",
               "claimIds": [
-                "hardware-code-testing:what",
-                "hardware-code-testing:problem",
-                "hardware-code-testing:opportunity",
-                "hardware-code-testing:customer-0",
-                "hardware-code-testing:customer-1",
-                "hardware-code-testing:application-0",
-                "hardware-code-testing:application-1",
-                "hardware-code-testing:project-synthesis-project-cb17ebac85e7ba1d62d7f138",
-                "hardware-code-testing:project-synthesis-project-85a06c91ad32fb33b50814d1"
+                "hardware-code-testing:problem"
               ]
             },
             "customerPayment": {
-              "status": "plausible",
-              "reason": "Device engineering teams perform the task; no purchase budget or paid adoption established.",
+              "status": "missing",
+              "reason": "Plausible engineering-budget payer, but no actual buyer, willingness to pay or paid continuation.",
               "claimIds": [
-                "hardware-code-testing:what",
-                "hardware-code-testing:problem",
-                "hardware-code-testing:opportunity",
-                "hardware-code-testing:customer-0",
-                "hardware-code-testing:customer-1",
-                "hardware-code-testing:application-0",
-                "hardware-code-testing:application-1",
-                "hardware-code-testing:project-synthesis-project-cb17ebac85e7ba1d62d7f138",
-                "hardware-code-testing:project-synthesis-project-85a06c91ad32fb33b50814d1"
+                "hardware-code-testing:customer-0"
               ]
             },
             "productValue": {
-              "status": "supported",
-              "reason": "Physical execution and measurement feedback are reported, beyond generating code alone.",
+              "status": "plausible",
+              "reason": "Selecting useful physical experiments could shorten diagnosis; narrow team demonstrations do not establish general repair or customer time savings.",
               "claimIds": [
-                "hardware-code-testing:what",
-                "hardware-code-testing:problem",
-                "hardware-code-testing:opportunity",
-                "hardware-code-testing:customer-0",
-                "hardware-code-testing:customer-1",
-                "hardware-code-testing:application-0",
-                "hardware-code-testing:application-1",
-                "hardware-code-testing:project-synthesis-project-cb17ebac85e7ba1d62d7f138",
-                "hardware-code-testing:project-synthesis-project-85a06c91ad32fb33b50814d1"
+                "hardware-code-testing:opportunity"
               ]
             },
             "commercialGap": {
               "status": "plausible",
-              "reason": "Could connect coding assistants to existing benches and debugging equipment; need to prove a gap beyond their existing automation.",
+              "reason": "Cross-tool investigation may supplement supplier automation; direct AI access already exists and additional value remains untested.",
               "claimIds": [
-                "hardware-code-testing:what",
-                "hardware-code-testing:problem",
-                "hardware-code-testing:opportunity",
-                "hardware-code-testing:customer-0",
-                "hardware-code-testing:customer-1",
-                "hardware-code-testing:application-0",
-                "hardware-code-testing:application-1",
-                "hardware-code-testing:project-synthesis-project-cb17ebac85e7ba1d62d7f138",
-                "hardware-code-testing:project-synthesis-project-85a06c91ad32fb33b50814d1"
+                "hardware-code-testing:v2-comparison"
               ]
             },
             "ventureScale": {
-              "status": "plausible",
-              "reason": "Reusable support across boards and repeated releases could scale; number of compatible paying teams is missing.",
+              "status": "missing",
+              "reason": "Qualifying organizations, paying teams and attainable add-on spending unknown. Board counts and broad electronics spending are not buyer counts.",
               "claimIds": [
-                "hardware-code-testing:what",
-                "hardware-code-testing:problem",
-                "hardware-code-testing:opportunity",
-                "hardware-code-testing:customer-0",
-                "hardware-code-testing:customer-1",
-                "hardware-code-testing:application-0",
-                "hardware-code-testing:application-1",
-                "hardware-code-testing:project-synthesis-project-cb17ebac85e7ba1d62d7f138",
-                "hardware-code-testing:project-synthesis-project-85a06c91ad32fb33b50814d1"
+                "hardware-code-testing:opportunity"
               ]
             },
             "businessCapital": {
               "status": "plausible",
-              "reason": "Software around existing equipment may repeat; custom adapters and support could dominate.",
+              "reason": "Using existing instruments could support a software product, but installation, adapters, model costs, security and support could make it custom services. Financing requirement unknown.",
               "claimIds": [
-                "hardware-code-testing:what",
-                "hardware-code-testing:problem",
-                "hardware-code-testing:opportunity",
-                "hardware-code-testing:customer-0",
-                "hardware-code-testing:customer-1",
-                "hardware-code-testing:application-0",
-                "hardware-code-testing:application-1",
-                "hardware-code-testing:project-synthesis-project-cb17ebac85e7ba1d62d7f138",
-                "hardware-code-testing:project-synthesis-project-85a06c91ad32fb33b50814d1"
+                "hardware-code-testing:opportunity"
               ]
             },
             "timing": {
               "status": "plausible",
-              "reason": "Bounded assistant-plus-hardware demonstrations motivate investigation; no claim of demand acceleration.",
+              "reason": "Current instrument AI access enables integration while reducing differentiation. No evidence of accelerating paid demand.",
               "claimIds": [
-                "hardware-code-testing:what",
-                "hardware-code-testing:problem",
-                "hardware-code-testing:opportunity",
-                "hardware-code-testing:customer-0",
-                "hardware-code-testing:customer-1",
-                "hardware-code-testing:application-0",
-                "hardware-code-testing:application-1",
-                "hardware-code-testing:project-synthesis-project-cb17ebac85e7ba1d62d7f138",
-                "hardware-code-testing:project-synthesis-project-85a06c91ad32fb33b50814d1"
+                "hardware-code-testing:v2-comparison"
               ]
             }
           },
-          "strongestObjection": "The demonstrations cover narrow device families and faults, not general self-debugging electronics.",
-          "decisiveQuestion": "Resolve previously unseen customer-board faults with fewer engineer hours, counting failed attempts, setup and support."
+          "strongestObjection": "Board setup, reproducing faults and deciding what counts as correct may still require more expert effort than the assistant removes.",
+          "decisiveQuestion": "On unfamiliar customer faults, does adding this tool produce more correct fixes with fewer total engineer hours than the best existing setup, including setup, failed attempts and checking?"
         }
       },
       "research": null,
