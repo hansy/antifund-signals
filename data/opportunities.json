@@ -12051,8 +12051,8 @@
     {
       "schemaVersion": 1,
       "id": "gesture-robot-assistance",
-      "revision": 0,
-      "acceptedRevisionId": "gesture-robot-assistance:rubric-v2-20261015",
+      "revision": 1,
+      "acceptedRevisionId": "gesture-robot-assistance:evidence-review-v2-20261016",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -12060,19 +12060,19 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T21:24:18.427Z",
-      "updatedAt": "2026-10-15T21:24:18.427Z",
+      "updatedAt": "2026-10-16T03:05:45.510Z",
       "verdict": null,
       "stage": "first-impressions",
-      "qualificationError": null,
+      "qualificationError": "Reviewed hypothesis; intended-user benefit, safe integration, funded demand and venture scale remain unproven.",
       "accepted": {
-        "id": "gesture-robot-assistance:rubric-v2-20261015",
+        "id": "gesture-robot-assistance:evidence-review-v2-20261016",
         "opportunityId": "gesture-robot-assistance",
-        "parentRevisionId": null,
-        "createdAt": "2026-10-15T21:24:18.427Z",
-        "producerId": "rubric-reassessment-v2",
-        "origin": "saved-data-synthesis",
-        "changeReason": "User-authorized preliminary opportunity from saved source evidence; adjacent uses and market demand remain hypotheses.",
-        "contentHash": "eb62f8d51fed0293a78f74687175d53e5e67d76fb4b7797ef115b304f4c688bc",
+        "parentRevisionId": "gesture-robot-assistance:rubric-v2-20261015",
+        "createdAt": "2026-10-16T03:05:45.510Z",
+        "producerId": "codex-evidence-inspector",
+        "origin": "inspection-correction",
+        "changeReason": "Inspect archived team source, owner study and original control documentation; distinguish gesture input from autonomous help, compare wearable overlap and preserve funding/safety limits.",
+        "contentHash": "46efc754d0f367b56ecb1413eb464c474541d699fe665a2e7f6af62cb58f407c",
         "title": "Gesture controls for robots that provide physical help",
         "classifications": [
           "Robotics"
@@ -12084,7 +12084,7 @@
           ],
           "economics": [],
           "timing": [],
-          "keyQuestion": "Compare task requests and mistaken actions with accessible existing controls, including fatigue, confirmation and safe stopping.",
+          "keyQuestion": "For users who need physical help and can gesture comfortably, does this input improve independent task completion over their best fitted controls enough for a robot maker to pay for integration and support?",
           "what": "gesture-robot-assistance:v2-what",
           "problem": "gesture-robot-assistance:v2-problem",
           "opportunity": "gesture-robot-assistance:v2-opportunity",
@@ -12114,111 +12114,132 @@
         "claims": [
           {
             "id": "gesture-robot-assistance:v2-what",
-            "text": "A camera recognizes a small set of hand gestures and connects them to a requested task. The starting project records people operating the robot; autonomous help is a future step.",
+            "text": "A camera turns a hand gesture into a request for a robot, such as picking something up. GEST recognizes a few gestures and records a person operating robot arms to carry out tasks. The robot performing those tasks on its own remains a future step.",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "gesture-robot-assistance:synthesis-project-be58bcefdc869b9b7f0ade66:source-v2"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No intended-user task benefit, reliable immediate stopping, accessory payment or full delivery cost. Manufacturer descriptions and qualitative owner reports do not establish GEST outcomes or reachable demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T03:05:45.510Z",
+              "reason": "Explicit customer/control-transfer hypothesis, not demonstrated daily assistance or funded accessory demand."
             },
-            "testQuestion": "Compare task requests and mistaken actions with accessible existing controls, including fatigue, confirmation and safe stopping."
+            "testQuestion": "For users who need physical help and can gesture comfortably, does this input improve independent task completion over their best fitted controls enough for a robot maker to pay for integration and support?"
           },
           {
             "id": "gesture-robot-assistance:v2-problem",
-            "text": "People who cannot comfortably give spoken commands need another way to request and stop physical help.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "An assistive arm can help someone drink or reach an object, but controlling each movement can take sustained concentration. A small study of existing owners found frustration with switching between wheelchair and arm controls. A simpler request could help—if the person can make it comfortably and the robot can carry it out safely.",
+            "kind": "inference",
+            "evidenceIds": [
+              "gesture-robot-assistance:review-owners"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No intended-user task benefit, reliable immediate stopping, accessory payment or full delivery cost. Manufacturer descriptions and qualitative owner reports do not establish GEST outcomes or reachable demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T03:05:45.510Z",
+              "reason": "Bounded interpretation from original sources; competitor overlap and missing customer outcomes retained."
             },
-            "testQuestion": "Compare task requests and mistaken actions with accessible existing controls, including fatigue, confirmation and safe stopping."
+            "reasoning": "Small qualitative owner study supports control burden; two specialized setups already avoided switching frustration. Gestures have not been shown to solve this."
           },
           {
             "id": "gesture-robot-assistance:v2-opportunity",
-            "text": "A reliable control component could work across assistive robots. The case depends on usability for intended users and an advantage over existing voice, switch or touch controls.",
+            "text": "Sell robot makers a control component that lets users request useful physical help with less effort. Camera input could suit people who dislike a wearable and still have comfortable, visible hand movement. Existing switches and wearable gesture controls already serve similar needs. The opening is better everyday task completion after setup and support are counted; paid demand and a venture-scale market remain unproven.",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "gesture-robot-assistance:synthesis-project-be58bcefdc869b9b7f0ade66:source-v2",
+              "gesture-robot-assistance:review-kinova",
+              "gesture-robot-assistance:review-kinemo",
+              "gesture-robot-assistance:review-google"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No intended-user task benefit, reliable immediate stopping, accessory payment or full delivery cost. Manufacturer descriptions and qualitative owner reports do not establish GEST outcomes or reachable demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T03:05:45.510Z",
+              "reason": "Explicit customer/control-transfer hypothesis, not demonstrated daily assistance or funded accessory demand."
             },
-            "testQuestion": "Compare task requests and mistaken actions with accessible existing controls, including fatigue, confirmation and safe stopping."
+            "testQuestion": "For users who need physical help and can gesture comfortably, does this input improve independent task completion over their best fitted controls enough for a robot maker to pay for integration and support?"
           },
           {
             "id": "gesture-robot-assistance:v2-customer-0",
-            "text": "Assistive-robot developers",
+            "text": "Assistive-robot manufacturers and specialist equipment suppliers",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "gesture-robot-assistance:synthesis-project-be58bcefdc869b9b7f0ade66:source-v2",
+              "gesture-robot-assistance:review-funding",
+              "gesture-robot-assistance:review-aetna"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No intended-user task benefit, reliable immediate stopping, accessory payment or full delivery cost. Manufacturer descriptions and qualitative owner reports do not establish GEST outcomes or reachable demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T03:05:45.510Z",
+              "reason": "Explicit customer/control-transfer hypothesis, not demonstrated daily assistance or funded accessory demand."
             },
-            "testQuestion": "Compare task requests and mistaken actions with accessible existing controls, including fatigue, confirmation and safe stopping."
+            "testQuestion": "Which equipment makers have eligible users and a budget for an improved control component?"
           },
           {
             "id": "gesture-robot-assistance:v2-application-0",
-            "text": "Requesting and stopping physical assistance",
+            "text": "Requesting everyday physical help; mealtime selection needs separate usability and safety validation",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "gesture-robot-assistance:synthesis-project-be58bcefdc869b9b7f0ade66:source-v2"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No intended-user task benefit, reliable immediate stopping, accessory payment or full delivery cost. Manufacturer descriptions and qualitative owner reports do not establish GEST outcomes or reachable demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T03:05:45.510Z",
+              "reason": "Explicit customer/control-transfer hypothesis, not demonstrated daily assistance or funded accessory demand."
             },
-            "testQuestion": "Compare task requests and mistaken actions with accessible existing controls, including fatigue, confirmation and safe stopping."
+            "testQuestion": "For users who need physical help and can gesture comfortably, does this input improve independent task completion over their best fitted controls enough for a robot maker to pay for integration and support?"
           },
           {
             "id": "gesture-robot-assistance:v2-comparison",
-            "text": "Alternative to voice or switch input, supplement to the robot itself; recorded demonstrations also contribute to the existing robot-data lead.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "Jaco supports joystick, head and breath controls. Kinemo already turns body movements into commands for an Obi feeding robot; camera input could remove the wearable but needs a clear view. Google supplies gesture recognition that a robot maker could use internally. The component supplements a capable robot, not its physical skills. Compare the same tasks against each user’s best fitted controls, including caregiver help where needed.",
+            "kind": "inference",
+            "evidenceIds": [
+              "gesture-robot-assistance:review-kinova",
+              "gesture-robot-assistance:review-kinemo",
+              "gesture-robot-assistance:review-obi",
+              "gesture-robot-assistance:review-google",
+              "gesture-robot-assistance:review-owners"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No intended-user task benefit, reliable immediate stopping, accessory payment or full delivery cost. Manufacturer descriptions and qualitative owner reports do not establish GEST outcomes or reachable demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T03:05:45.510Z",
+              "reason": "Bounded interpretation from original sources; competitor overlap and missing customer outcomes retained."
             },
-            "testQuestion": "Compare task requests and mistaken actions with accessible existing controls, including fatigue, confirmation and safe stopping."
+            "reasoning": "Manufacturer sources document overlapping controls and feeding commands. Added value depends on the same robot and best individually fitted setup; immediate stop cannot be assumed."
           },
           {
             "id": "gesture-robot-assistance:project-v2-be58bcefdc869b9b7f0ade66",
@@ -12233,10 +12254,10 @@
               "Few recorded episodes; no intended-user usability trial. Power and connection problems affected operation. Source school and year identify the event collection, not confirmed author affiliation or project completion date."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T03:05:45.510Z",
+              "reason": "Original archived team page inspected: gesture recognition and human-operated recordings, not autonomous assistance or intended-user outcomes."
             },
             "attribution": "GEST: Gesture-Enabled System for Teleoperation",
             "quantity": null
@@ -12246,9 +12267,9 @@
           {
             "id": "gesture-robot-assistance:synthesis-project-be58bcefdc869b9b7f0ade66:source-v2",
             "sourceUrl": "https://devpost.com/software/gest-gesture-enabled-system-for-teleoperation",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/gest-gesture-enabled-system-for-teleoperation",
             "title": "GEST: Gesture-Enabled System for Teleoperation",
-            "publisher": null,
+            "publisher": "Devpost; GEST team",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -12256,12 +12277,166 @@
             "retrievedAt": "2026-10-15T21:24:18.427Z",
             "excerpt": "Achieved consistent gesture recognition and mapped gestures to labeled episodes.",
             "pdfPage": null,
-            "locator": "Original project page; exact retained excerpt",
+            "locator": "Original archived project page; demonstration, future work and hardware/connection limitations inspected",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T21:24:18.427Z",
+              "checkedAt": "2026-10-16T03:05:45.510Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "gesture-robot-assistance:review-owners",
+            "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12353078/",
+            "finalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12353078/",
+            "title": "Owners describe the effort of controlling an assistive arm",
+            "publisher": "Disability and Rehabilitation / University of Pittsburgh; PMC archive",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2025-02-27",
+            "observationPeriod": "Published February27,2025;11 established owners in US/Canada, self-selected interviews, dates unspecified.9reported switching frustration;2specialized setups did not. Qualitative burden, not population prevalence, care savings or evidence gestures solve it. Historical200US/600worldwide users attributed to manufacturer inApril2023, not independently counted/current demand.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "This switching between the robotic arm and wheelchair is a common frustration for nine of the eleven owners.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T03:05:45.510Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "gesture-robot-assistance:review-kinova",
+            "sourceUrl": "https://assistive.kinovarobotics.com/uploads/Jaco-Robotic-Arm-Brochure-EN.pdf",
+            "finalUrl": "https://assistive.kinovarobotics.com/uploads/Jaco-Robotic-Arm-Brochure-EN.pdf",
+            "title": "Existing arm controls include joystick, head and breath input",
+            "publisher": "Kinova",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Brochure copyright2024, publication date unknown; physical2. Manufacturer description, not comparative outcomes. Some additional connections marked in progress, not all available.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "sip-and-puff, with many other types of accessible controls.",
+            "pdfPage": 2,
+            "locator": "Original PDF physical page 2; study methods and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T03:05:45.510Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "gesture-robot-assistance:review-kinemo",
+            "sourceUrl": "https://kinemo.io/products/kinemo-one?variant=47270021955803",
+            "finalUrl": "https://kinemo.io/products/kinemo-one?variant=47270021955803",
+            "title": "Wearable gestures already control feeding commands",
+            "publisher": "Kinemo",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "October16,2026 retained manufacturer page; publication date unknown. Describes Obi receiver compatibility, not observed outcomes or adoption. Original requests pricing; conflicting browserextract499.99 excluded.",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "Kinemo One can recognize multiple gestures from the same body part",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T03:05:45.510Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "gesture-robot-assistance:review-obi",
+            "sourceUrl": "https://meetobi.com/wp-content/uploads/2025/10/IFD-600-003_INSTRUCTIONS-FOR-USE_FINAL_R5.2.0.pdf",
+            "finalUrl": "https://meetobi.com/wp-content/uploads/2025/10/IFD-600-003_INSTRUCTIONS-FOR-USE_FINAL_R5.2.0.pdf",
+            "title": "Normal feeding switches operate while the arm is stationary",
+            "publisher": "DESiN / Obi",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Instructions R5.2.0, physical32 and shutdown33 inspected. Publication date unknown. Ordinary switch mapping does not establish immediate stopping. Separate collision response described; no claim device has no safety protections.",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "the Accessibility Switches and Teach Button will only operate when the Arm is stationary.",
+            "pdfPage": 32,
+            "locator": "Original PDF physical page 32; study methods and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T03:05:45.510Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "gesture-robot-assistance:review-google",
+            "sourceUrl": "https://ai.google.dev/edge/mediapipe/solutions/vision/gesture_recognizer",
+            "finalUrl": "https://developers.google.com/edge/mediapipe/solutions/vision/gesture_recognizer",
+            "title": "Ready-made gesture recognition is available to developers",
+            "publisher": "Google",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Documentation updated October1,2026; retained October15. Gesture labels and landmarks, not reliable target selection, accessibility performance or a complete robot controller.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "The MediaPipe Gesture Recognizer task lets you recognize hand gestures in real time",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T03:05:45.510Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "gesture-robot-assistance:review-funding",
+            "sourceUrl": "https://meetobi.com/funding-reimbursement/",
+            "finalUrl": "https://meetobi.com/funding-reimbursement/",
+            "title": "Equipment funding requires a separate approval process",
+            "publisher": "Obi",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Retained October16,2026; publication date unknown. Manufacturer describes trial, clinical evaluation and supplier submission; if approved delivery. No approval-rate denominator or funding for GEST.",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "DME partner submits reimbursement package.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T03:05:45.510Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "gesture-robot-assistance:review-aetna",
+            "sourceUrl": "https://www.aetna.com/cpb/medical/data/700_799/0778.html",
+            "finalUrl": "https://www.aetna.com/cpb/medical/data/700_799/0778.html",
+            "title": "Useful equipment does not automatically receive insurance coverage",
+            "publisher": "Aetna",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Retained October16,2026; displayed last reviewApril22,2026, next reviewSeptember11already passed. One US insurer bulletin, plan-specific and changeable. Jaco exclusion and Obi unproven listing do not establish all-payer or Medicare rules.",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "The Kinova JACO assistive robot or Kinova JACO assistive robotic arm is not covered as it is considered a personal convenience item.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T03:05:45.510Z",
               "failureIds": []
             }
           }
@@ -12271,105 +12446,63 @@
           "rubricVersion": "venture-screen-v2",
           "dimensions": {
             "problem": {
-              "status": "plausible",
-              "reason": "Spoken commands are not accessible to everyone. This user need is an inference from the demonstrated gesture-to-task recordings.",
+              "status": "supported",
+              "reason": "Established owners report control burden; target subgroup frequency and quantified cost remain missing.",
               "claimIds": [
-                "gesture-robot-assistance:v2-what",
-                "gesture-robot-assistance:v2-problem",
-                "gesture-robot-assistance:v2-opportunity",
-                "gesture-robot-assistance:v2-customer-0",
-                "gesture-robot-assistance:v2-application-0",
-                "gesture-robot-assistance:v2-comparison",
-                "gesture-robot-assistance:project-v2-be58bcefdc869b9b7f0ade66"
+                "gesture-robot-assistance:v2-problem"
               ]
             },
             "customerPayment": {
               "status": "plausible",
-              "reason": "Assistive-robot developers; eventual users with limited speech or movement need separate validation. Willingness to pay for this offer is not established.",
+              "reason": "Equipment makers could buy integration; whole-device funding is variable and does not fund this accessory.",
               "claimIds": [
-                "gesture-robot-assistance:v2-what",
-                "gesture-robot-assistance:v2-problem",
-                "gesture-robot-assistance:v2-opportunity",
-                "gesture-robot-assistance:v2-customer-0",
-                "gesture-robot-assistance:v2-application-0",
-                "gesture-robot-assistance:v2-comparison",
-                "gesture-robot-assistance:project-v2-be58bcefdc869b9b7f0ade66"
+                "gesture-robot-assistance:v2-customer-0"
               ]
             },
             "productValue": {
               "status": "plausible",
-              "reason": "GEST connects gestures, intended targets and recorded physical actions, providing a concrete starting point for accessible control.",
+              "reason": "Gestures could simplify requests for comfortable-movement users; GEST supplies neither autonomous tasks nor validated stopping.",
               "claimIds": [
-                "gesture-robot-assistance:v2-what",
-                "gesture-robot-assistance:v2-problem",
-                "gesture-robot-assistance:v2-opportunity",
-                "gesture-robot-assistance:v2-customer-0",
-                "gesture-robot-assistance:v2-application-0",
-                "gesture-robot-assistance:v2-comparison",
-                "gesture-robot-assistance:project-v2-be58bcefdc869b9b7f0ade66"
+                "gesture-robot-assistance:v2-what"
               ]
             },
             "commercialGap": {
               "status": "plausible",
-              "reason": "Alternative to voice or switch input, supplement to the robot itself; recorded demonstrations also contribute to the existing robot-data lead. Open gap: Reliable personally usable commands, confirmation and stopping when input is ambiguous.",
+              "reason": "Camera input may suit users who dislike wearables; fitted controls, Kinemo and internal software overlap.",
               "claimIds": [
-                "gesture-robot-assistance:v2-what",
-                "gesture-robot-assistance:v2-problem",
-                "gesture-robot-assistance:v2-opportunity",
-                "gesture-robot-assistance:v2-customer-0",
-                "gesture-robot-assistance:v2-application-0",
-                "gesture-robot-assistance:v2-comparison",
-                "gesture-robot-assistance:project-v2-be58bcefdc869b9b7f0ade66"
+                "gesture-robot-assistance:v2-comparison"
               ]
             },
             "ventureScale": {
-              "status": "plausible",
-              "reason": "A component used across assistive equipment could repeat; direct user demand, equipment compatibility and payment are missing.",
+              "status": "missing",
+              "reason": "Compatible installations, eligible movement, funded adoption and net price unknown; historical product users not current reachable market.",
               "claimIds": [
-                "gesture-robot-assistance:v2-what",
-                "gesture-robot-assistance:v2-problem",
-                "gesture-robot-assistance:v2-opportunity",
-                "gesture-robot-assistance:v2-customer-0",
-                "gesture-robot-assistance:v2-application-0",
-                "gesture-robot-assistance:v2-comparison",
-                "gesture-robot-assistance:project-v2-be58bcefdc869b9b7f0ade66"
+                "gesture-robot-assistance:v2-opportunity"
               ]
             },
             "businessCapital": {
               "status": "missing",
-              "reason": "GEST used human-operated robots and few examples; autonomous assistance and trials with intended users are absent. Delivered costs, repeat economics and capital needs remain unresolved.",
+              "reason": "Fitting, safety validation, integration and support costs unknown; recurring margin not established.",
               "claimIds": [
-                "gesture-robot-assistance:v2-what",
-                "gesture-robot-assistance:v2-problem",
-                "gesture-robot-assistance:v2-opportunity",
-                "gesture-robot-assistance:v2-customer-0",
-                "gesture-robot-assistance:v2-application-0",
-                "gesture-robot-assistance:v2-comparison",
-                "gesture-robot-assistance:project-v2-be58bcefdc869b9b7f0ade66"
+                "gesture-robot-assistance:v2-opportunity"
               ]
             },
             "timing": {
-              "status": "missing",
-              "reason": "The retained project dates do not establish adoption or market acceleration. Adjacent-use readiness has not been validated.",
+              "status": "plausible",
+              "reason": "Existing robots and recognition software allow focused testing; no adoption acceleration or new purchasing budget demonstrated.",
               "claimIds": [
-                "gesture-robot-assistance:v2-what",
-                "gesture-robot-assistance:v2-problem",
-                "gesture-robot-assistance:v2-opportunity",
-                "gesture-robot-assistance:v2-customer-0",
-                "gesture-robot-assistance:v2-application-0",
-                "gesture-robot-assistance:v2-comparison",
-                "gesture-robot-assistance:project-v2-be58bcefdc869b9b7f0ade66"
+                "gesture-robot-assistance:v2-comparison"
               ]
             }
           },
           "priority": "medium",
-          "priorityReason": "GEST connects gestures, intended targets and recorded physical actions, providing a concrete starting point for accessible control. A component used across assistive equipment could repeat; direct user demand, equipment compatibility and payment are missing.",
+          "priorityReason": "Control effort affects independence and a simpler request has a credible mechanism. A focused comparison is worthwhile, but the group able to gesture comfortably, added value over fitted controls and path to substantial sales remain unclear.",
           "confidence": {
             "level": "low",
-            "reason": "Original project excerpts checked; commercial demand and adjacent-use benefit remain hypotheses."
+            "reason": "Owner-reported control burden and existing alternatives are supported. Intended-user benefit, payment and venture scale remain unproven."
           },
-          "strongestObjection": "GEST used human-operated robots and few examples; autonomous assistance and trials with intended users are absent.",
-          "decisiveQuestion": "Compare task requests and mistaken actions with accessible existing controls, including fatigue, confirmation and safe stopping."
+          "strongestObjection": "People who need robotic help may struggle to make hand gestures. Existing fitted controls or Kinemo may work as well, leaving too few buyers to cover integration and support. A stop gesture does not establish immediate safe stopping.",
+          "decisiveQuestion": "For users who need physical help and can gesture comfortably, does this input improve independent task completion over their best fitted controls enough for a robot maker to pay for integration and support?"
         }
       },
       "research": null,

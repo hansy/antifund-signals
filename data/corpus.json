@@ -5953,15 +5953,15 @@
     {
       "id": "gesture-robot-assistance",
       "title": "Gesture controls for robots that provide physical help",
-      "summary": "A camera recognizes a small set of hand gestures and connects them to a requested task. The starting project records people operating the robot; autonomous help is a future step.",
+      "summary": "Camera gestures that request physical help from an existing robot.",
       "topic": "Robotics",
-      "problem": "People who cannot comfortably give spoken commands need another way to request and stop physical help.",
-      "statusQuo": "",
-      "gap": "Reliable personally usable commands, confirmation and stopping when input is ambiguous.",
-      "opportunity": "A reliable control component could work across assistive robots. The case depends on usability for intended users and an advantage over existing voice, switch or touch controls.",
-      "evidence": "GEST connects gestures, intended targets and recorded physical actions, providing a concrete starting point for accessible control.",
-      "counterpoint": "GEST used human-operated robots and few examples; autonomous assistance and trials with intended users are absent.",
-      "nextQuestion": "Compare task requests and mistaken actions with accessible existing controls, including fatigue, confirmation and safe stopping.",
+      "problem": "An assistive arm can help someone drink or reach an object, but controlling each movement can take sustained concentration. A small study of existing owners found frustration with switching between wheelchair and arm controls. A simpler request could help—if the person can make it comfortably and the robot can carry it out safely.",
+      "statusQuo": "Fitted joystick, switches, head or breath controls, wearable gesture accessories, and caregiver assistance.",
+      "gap": "Less effort or more independent task completion for a defined group; improvement over fitted controls remains unmeasured.",
+      "opportunity": "Sell robot makers a control component that lets users request useful physical help with less effort. Camera input could suit people who dislike a wearable and still have comfortable, visible hand movement. Existing switches and wearable gesture controls already serve similar needs. The opening is better everyday task completion after setup and support are counted; paid demand and a venture-scale market remain unproven.",
+      "evidence": "In a 2025 study, nine of eleven established Jaco owners in the US and Canada described frustrating control switching. Two owners with specialized setups did not have that problem. GEST has no intended-user trial or demonstrated autonomous assistance.",
+      "counterpoint": "People who need robotic help may struggle to make hand gestures. Existing fitted controls or Kinemo may work as well, leaving too few buyers to cover integration and support. A stop gesture does not establish immediate safe stopping.",
+      "nextQuestion": "For users who need physical help and can gesture comfortably, does this input improve independent task completion over their best fitted controls enough for a robot maker to pay for integration and support?",
       "projectIds": [
         "synthesis-project-be58bcefdc869b9b7f0ade66"
       ],
@@ -5970,8 +5970,8 @@
       ],
       "confidence": "Early signal",
       "brief": {
-        "whatItIs": "A camera recognizes a small set of hand gestures and connects them to a requested task. The starting project records people operating the robot; autonomous help is a future step.",
-        "problem": "People who cannot comfortably give spoken commands need another way to request and stop physical help.",
+        "whatItIs": "A camera turns a hand gesture into a request for a robot, such as picking something up. GEST recognizes a few gestures and records a person operating robot arms to carry out tasks. The robot performing those tasks on its own remains a future step.",
+        "problem": "An assistive arm can help someone drink or reach an object, but controlling each movement can take sustained concentration. A small study of existing owners found frustration with switching between wheelchair and arm controls. A simpler request could help—if the person can make it comfortably and the robot can carry it out safely.",
         "breakthroughs": [
           {
             "text": "GEST reports gesture recognition linked to recorded episodes of a person operating robot arms. Autonomous assistance has not been demonstrated.",
@@ -5980,22 +5980,65 @@
             ]
           }
         ],
-        "marketOpportunity": "A reliable control component could work across assistive robots. The case depends on usability for intended users and an advantage over existing voice, switch or touch controls.",
-        "buyer": "Assistive-robot developers",
+        "marketOpportunity": "Sell robot makers a control component that lets users request useful physical help with less effort. Camera input could suit people who dislike a wearable and still have comfortable, visible hand movement. Existing switches and wearable gesture controls already serve similar needs. The opening is better everyday task completion after setup and support are counted; paid demand and a venture-scale market remain unproven.",
+        "buyer": "Assistive-robot manufacturers and specialist equipment suppliers",
         "applications": [
-          "Requesting and stopping physical assistance"
+          "Requesting everyday physical help; mealtime selection needs separate usability and safety validation"
         ],
         "targetCustomers": [
-          "Assistive-robot developers"
+          "Assistive-robot manufacturers and specialist equipment suppliers"
         ],
-        "marketStatus": "hypothesis",
-        "marketEvidence": [],
+        "marketStatus": "researched",
+        "marketEvidence": [
+          {
+            "title": "Owners describe the effort of controlling an assistive arm",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12353078/",
+            "excerpt": "This switching between the robotic arm and wheelchair is a common frustration for nine of the eleven owners.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Existing arm controls include joystick, head and breath input",
+            "url": "https://assistive.kinovarobotics.com/uploads/Jaco-Robotic-Arm-Brochure-EN.pdf",
+            "excerpt": "sip-and-puff, with many other types of accessible controls.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Wearable gestures already control feeding commands",
+            "url": "https://kinemo.io/products/kinemo-one?variant=47270021955803",
+            "excerpt": "Kinemo One can recognize multiple gestures from the same body part",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "Normal feeding switches operate while the arm is stationary",
+            "url": "https://meetobi.com/wp-content/uploads/2025/10/IFD-600-003_INSTRUCTIONS-FOR-USE_FINAL_R5.2.0.pdf",
+            "excerpt": "the Accessibility Switches and Teach Button will only operate when the Arm is stationary.",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "Ready-made gesture recognition is available to developers",
+            "url": "https://ai.google.dev/edge/mediapipe/solutions/vision/gesture_recognizer",
+            "excerpt": "The MediaPipe Gesture Recognizer task lets you recognize hand gestures in real time",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Equipment funding requires a separate approval process",
+            "url": "https://meetobi.com/funding-reimbursement/",
+            "excerpt": "DME partner submits reimbursement package.",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "Useful equipment does not automatically receive insurance coverage",
+            "url": "https://www.aetna.com/cpb/medical/data/700_799/0778.html",
+            "excerpt": "The Kinova JACO assistive robot or Kinova JACO assistive robotic arm is not covered as it is considered a personal convenience item.",
+            "accessedAt": "2026-10-16"
+          }
+        ],
         "risks": [
-          "GEST used human-operated robots and few examples; autonomous assistance and trials with intended users are absent.",
-          "A component used across assistive equipment could repeat; direct user demand, equipment compatibility and payment are missing."
+          "People who need robotic help may struggle to make hand gestures. Existing fitted controls or Kinemo may work as well, leaving too few buyers to cover integration and support. A stop gesture does not establish immediate safe stopping.",
+          "No eligible-user count, funded accessory route, sustained benefit, component price or delivery margin. Recognizing a request does not make a robot able to execute it."
         ],
         "nextQuestions": [
-          "Compare task requests and mistaken actions with accessible existing controls, including fatigue, confirmation and safe stopping."
+          "For users who need physical help and can gesture comfortably, does this input improve independent task completion over their best fitted controls enough for a robot maker to pay for integration and support?"
         ]
       }
     },
