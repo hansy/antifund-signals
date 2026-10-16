@@ -3805,8 +3805,8 @@
       "summary": "Gridly describes a charging scheduler connected to controllable hardware, with deadlines and low-battery safeguards. Its claimed savings lack a documented measurement method.",
       "problem": "They cannot conveniently monitor prices and decide when to charge while ensuring devices are ready.",
       "approach": "A scheduler combines electricity conditions, charging deadlines and low-battery rules, then controls power through a connected plug.",
-      "whyItMatters": "We think it might lower bills where prices vary and users can delay charging. Wider grid congestion and emissions benefits require separate evidence.",
-      "statusQuo": "The source contrasts its system with charging that ignores changing prices and grid conditions. It does not compare against existing scheduled charging products.",
+      "whyItMatters": "Scheduling could reduce bills when a tariff rewards shifting use. Added savings over an existing timer, wider grid benefits and fleet transfer remain unproven.",
+      "statusQuo": "Vehicle schedules and timers already shift charging. Fleet platforms address coordination; the project provides no matched comparison.",
       "results": "The team explicitly reports a working load-shifting system. Its savings percentage remains an unsupported outcome assertion rather than a measured comparison.",
       "limitations": "Savings lack a specified tariff, comparison schedule, sample, or measurement period. The demonstration's loads and physical testing conditions are unspecified. Device compatibility and reliable access to battery levels are unclear. The 10,000-user emissions scenario is a projection, not adoption or impact evidence. Year and school identify the source event collection, not a verified completion date or author affiliation.",
       "topics": [
@@ -3845,7 +3845,7 @@
       "summary": "A Berkeley–Siemens capstone reports a working building-load scheduling and comparison prototype using building readings, weather and electricity-emissions forecasts. Live building savings are not demonstrated.",
       "problem": "Fixed schedules do not respond to changes in how much carbon pollution electricity production causes during the day.",
       "approach": "Software uses building readings, weather and emissions forecasts to propose flexible equipment schedules and compare them with a baseline.",
-      "whyItMatters": "We think the platform might reduce operational emissions without equipment replacement. Actual savings depend on forecasts, operating constraints, and electricity-accounting choices.",
+      "whyItMatters": "Carbon-aware schedules might reduce operational emissions. Live control, occupant comfort and bill savings require separate tests; cheaper hours need not be lower-carbon hours.",
       "statusQuo": "Fixed energy schedules are the stated alternative. The source supplies no measured baseline emissions.",
       "results": "The source reports a functional prototype for scheduling and visual comparison. It does not report live equipment control or measured emissions savings.",
       "limitations": "No occupied-building trial or measured comfort result is supplied. Cost effects and integration with existing control products are unknown. The supplied source has no PDF page numbers. Year and school identify the source event collection, not a verified completion date or author affiliation.",
@@ -5435,15 +5435,15 @@
     {
       "id": "flexible-electricity",
       "title": "Controls that move flexible electricity use to cheaper hours",
-      "summary": "Schedule flexible electricity use around prices and deadlines.",
+      "summary": "Coordinate vehicle charging and building demand within a shared power limit.",
       "topic": "Energy",
-      "problem": "Flexible equipment can run at expensive or congested times unless its schedule is coordinated with when it is actually needed.",
-      "statusQuo": "Flexible equipment can run at expensive or congested times unless its schedule is coordinated with when it is actually needed.",
-      "gap": "Gridly’s 20–40% savings has no stated sample, period or adequate comparison; not accepted as verified savings. The Berkeley prototype demonstrates scheduling and visual comparison, not live occupied-building savings. Do not reuse the source’s broad building-electricity percentage as this product’s market size.",
-      "opportunity": "The value would come from changing actual equipment schedules while preserving readiness and comfort. The buyer needs an electricity tariff or contract that rewards that change.",
-      "evidence": "The value would come from changing actual equipment schedules while preserving readiness and comfort. The buyer needs an electricity tariff or contract that rewards that change.",
-      "counterpoint": "Existing controls may suffice, or readiness and comfort constraints may remove most flexibility.",
-      "nextQuestion": "Real bill savings net of installation and service costs, compared with the best current schedule under identical readiness/comfort requirements.",
+      "problem": "Charging several vehicles at once can raise a site’s peak electricity bill or exceed its available power. Moving charging to another time can help, but each vehicle still needs enough energy before departure. Building demand competes for the same supply.",
+      "statusQuo": "Vehicle schedules, fleet-management platforms, building controls and utility programs already shift electricity use.",
+      "gap": "A repeatable scheduling conflict or costly integration that existing controls handle poorly; no such customer case is yet established.",
+      "opportunity": "Fleet depots with changing departure times and limited power are the strongest use to test. Coordinating chargers with building demand could lower bills or postpone an electrical upgrade. ChargePoint already offers fleet scheduling and integration, so a new controller must solve a specific remaining problem or cost less to install and support. Building cooling is a related possibility; predictable household charging may need only a timer.",
+      "evidence": "DOE documents peak-cost and capacity constraints. ChargePoint describes overlapping fleet controls. The two projects provide prototype descriptions, not measured added savings against existing products.",
+      "counterpoint": "Available controls may capture most of the savings. Custom integration, support and readiness failures could consume the remaining value.",
+      "nextQuestion": "At a depot with changing departures, does the added controller reduce total costs versus well-configured existing controls without missed departures, and can that benefit be repeated at other sites after installation and support?",
       "projectIds": [
         "synthesis-project-ce407ead6196a40cd98b802e",
         "synthesis-project-f3705a8858dff7a8bed4b96c"
@@ -5454,8 +5454,8 @@
       ],
       "confidence": "Early signal",
       "brief": {
-        "whatItIs": "Software schedules charging or other movable electricity use around prices and operating deadlines, then sends instructions to connected equipment.",
-        "problem": "Flexible equipment can run at expensive or congested times unless its schedule is coordinated with when it is actually needed.",
+        "whatItIs": "Software chooses when vehicles charge or building equipment runs, while meeting departure times and comfort limits. The projects report household charging and building-scheduling prototypes. Reliable fleet operation and customer bill savings remain unproven.",
+        "problem": "Charging several vehicles at once can raise a site’s peak electricity bill or exceed its available power. Moving charging to another time can help, but each vehicle still needs enough energy before departure. Building demand competes for the same supply.",
         "breakthroughs": [
           {
             "text": "Gridly describes a charging scheduler connected to controllable hardware, with deadlines and low-battery safeguards. Its claimed savings lack a documented measurement method.",
@@ -5470,24 +5470,61 @@
             ]
           }
         ],
-        "marketOpportunity": "The value would come from changing actual equipment schedules while preserving readiness and comfort. The buyer needs an electricity tariff or contract that rewards that change.",
-        "buyer": "Building operators; Owners of controllable charging equipment",
+        "marketOpportunity": "Fleet depots with changing departure times and limited power are the strongest use to test. Coordinating chargers with building demand could lower bills or postpone an electrical upgrade. ChargePoint already offers fleet scheduling and integration, so a new controller must solve a specific remaining problem or cost less to install and support. Building cooling is a related possibility; predictable household charging may need only a timer.",
+        "buyer": "Fleet operators with controllable chargers and constrained site power; Building owners who control equipment and benefit from lower electricity bills",
         "applications": [
-          "Scheduling charging before a deadline",
-          "Comparing flexible building-load schedules"
+          "Coordinating vehicle charging with departures and building demand",
+          "Moving flexible building cooling while preserving comfort"
         ],
         "targetCustomers": [
-          "Building operators",
-          "Owners of controllable charging equipment"
+          "Fleet operators with controllable chargers and constrained site power",
+          "Building owners who control equipment and benefit from lower electricity bills"
         ],
-        "marketStatus": "hypothesis",
-        "marketEvidence": [],
+        "marketStatus": "researched",
+        "marketEvidence": [
+          {
+            "title": "DOE: managed charging for federal fleets",
+            "url": "https://www.energy.gov/cmei/femp/managed-ev-charging-federal-fleets",
+            "excerpt": "Higher demand charge costs when charging occurs during facility peak demand",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "DOE: charging data, integration and commissioning",
+            "url": "https://www.energy.gov/cmei/femp/smart-charge-management-implementation-federal-fleets",
+            "excerpt": "Verify that the SCM system is properly integrated with the charging stations, fleet management software, and any utility demand response programs.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "ChargePoint: fleet charging and integration",
+            "url": "https://www.chargepoint.com/download-file/chargepoint-fleet-software-br-na-en",
+            "excerpt": "cost with automated charging \nbased on time of day, demand \ncharges and other factors.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Tesla Model 3: built-in scheduled charging",
+            "url": "https://service.tesla.com/docs/Public/diy/model3/en_us/GUID-9C2F6258-81FB-484C-B16A-AF4238EDF028.html",
+            "excerpt": "Scheduled charge cannot be used with fast chargers, including Tesla Superchargers.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "DOE: costs beyond charging hardware",
+            "url": "https://www.energy.gov/cmei/vehicles/understanding-soft-costs-ev-charging",
+            "excerpt": "Soft costs are highly variable, harder to estimate, and driven by time-sensitive processes.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "SCE: conditional incentives for automatic load reduction",
+            "url": "https://www.sce.com/business/save-costs-energy/savings-strategies-for-businesses/what-is-demand-response/automated-demand-response/auto-dr-express-control-incentives",
+            "excerpt": "You’ll earn up to $300 per kW of pre-calculated DR load reduction.",
+            "accessedAt": "2026-10-15"
+          }
+        ],
         "risks": [
-          "Gridly’s 20–40% savings has no stated sample, period or adequate comparison; not accepted as verified savings. The Berkeley prototype demonstrates scheduling and visual comparison, not live occupied-building savings. Do not reuse the source’s broad building-electricity percentage as this product’s market size.",
-          "Distinct named teams provide different demonstrations. Their reports do not independently reproduce each other or establish demand."
+          "Available controls may capture most of the savings. Custom integration, support and readiness failures could consume the remaining value.",
+          "Eligible sites, buying commitments, deployment costs and reachable revenue remain unknown. Lower emissions do not automatically mean lower bills."
         ],
         "nextQuestions": [
-          "Real bill savings net of installation and service costs, compared with the best current schedule under identical readiness/comfort requirements."
+          "At a depot with changing departures, does the added controller reduce total costs versus well-configured existing controls without missed departures, and can that benefit be repeated at other sites after installation and support?"
         ]
       }
     },

@@ -9155,8 +9155,8 @@
     {
       "schemaVersion": 1,
       "id": "flexible-electricity",
-      "revision": 1,
-      "acceptedRevisionId": "flexible-electricity:rubric-v2-20261015",
+      "revision": 2,
+      "acceptedRevisionId": "flexible-electricity:evidence-review-v2-20261016",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -9164,10 +9164,10 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T18:55:13.081Z",
-      "updatedAt": "2026-10-15T21:24:18.427Z",
+      "updatedAt": "2026-10-16T01:06:17.559Z",
       "verdict": null,
       "stage": "first-impressions",
-      "qualificationError": null,
+      "qualificationError": "Reviewed; scheduling constraints are supported, but added customer value, paid demand and venture-scale economics are not established.",
       "accepted": {
         "content": {
           "marketSize": [],
@@ -9193,7 +9193,7 @@
             "flexible-electricity:application-0",
             "flexible-electricity:application-1"
           ],
-          "keyQuestion": "Real bill savings net of installation and service costs, compared with the best current schedule under identical readiness/comfort requirements."
+          "keyQuestion": "At a depot with changing departures, does the added controller reduce total costs versus well-configured existing controls without missed departures, and can that benefit be repeated at other sites after installation and support?"
         },
         "projects": [
           {
@@ -9220,129 +9220,175 @@
         "claims": [
           {
             "id": "flexible-electricity:what",
-            "text": "Software schedules charging or other movable electricity use around prices and operating deadlines, then sends instructions to connected equipment.",
-            "evidenceIds": [],
+            "text": "Software chooses when vehicles charge or building equipment runs, while meeting departure times and comfort limits. The projects report household charging and building-scheduling prototypes. Reliable fleet operation and customer bill savings remain unproven.",
+            "evidenceIds": [
+              "flexible-electricity:synthesis-project-ce407ead6196a40cd98b802e:source-0",
+              "flexible-electricity:synthesis-project-ce407ead6196a40cd98b802e:source-1",
+              "flexible-electricity:synthesis-project-ce407ead6196a40cd98b802e:source-2",
+              "flexible-electricity:synthesis-project-f3705a8858dff7a8bed4b96c:source-0",
+              "flexible-electricity:synthesis-project-f3705a8858dff7a8bed4b96c:source-1",
+              "flexible-electricity:synthesis-project-f3705a8858dff7a8bed4b96c:source-2"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Qualified sites, purchase commitments, incremental savings, installation costs and reachable revenue remain unknown. Available controls may already address the task."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T01:06:17.559Z",
+              "reason": "Explicit opportunity or transfer hypothesis; not validated deployment, payment or investment qualification."
             },
             "kind": "hypothesis",
             "testQuestion": "Do controls on a specific customer tariff reduce a measured bill after integration costs, while meeting readiness and comfort requirements?"
           },
           {
             "id": "flexible-electricity:problem",
-            "text": "Flexible equipment can run at expensive or congested times unless its schedule is coordinated with when it is actually needed.",
-            "evidenceIds": [],
+            "text": "Charging several vehicles at once can raise a site’s peak electricity bill or exceed its available power. Moving charging to another time can help, but each vehicle still needs enough energy before departure. Building demand competes for the same supply.",
+            "evidenceIds": [
+              "flexible-electricity:review-problem",
+              "flexible-electricity:review-integration"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Qualified sites, purchase commitments, incremental savings, installation costs and reachable revenue remain unknown. Available controls may already address the task."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T01:06:17.559Z",
+              "reason": "Original primary material supports this bounded interpretation, not buyer prevalence or measured superiority."
             },
-            "kind": "hypothesis",
-            "testQuestion": "Do controls on a specific customer tariff reduce a measured bill after integration costs, while meeting readiness and comfort requirements?"
+            "kind": "inference",
+            "reasoning": "DOE documents the causal mechanism for federal fleets; prevalence, costs and budgets at commercial target sites remain unknown."
           },
           {
             "id": "flexible-electricity:opportunity",
-            "text": "The value would come from changing actual equipment schedules while preserving readiness and comfort. The buyer needs an electricity tariff or contract that rewards that change.",
-            "evidenceIds": [],
+            "text": "Fleet depots with changing departure times and limited power are the strongest use to test. Coordinating chargers with building demand could lower bills or postpone an electrical upgrade. ChargePoint already offers fleet scheduling and integration, so a new controller must solve a specific remaining problem or cost less to install and support. Building cooling is a related possibility; predictable household charging may need only a timer.",
+            "evidenceIds": [
+              "flexible-electricity:synthesis-project-ce407ead6196a40cd98b802e:source-0",
+              "flexible-electricity:synthesis-project-ce407ead6196a40cd98b802e:source-1",
+              "flexible-electricity:synthesis-project-ce407ead6196a40cd98b802e:source-2",
+              "flexible-electricity:synthesis-project-f3705a8858dff7a8bed4b96c:source-0",
+              "flexible-electricity:synthesis-project-f3705a8858dff7a8bed4b96c:source-1",
+              "flexible-electricity:synthesis-project-f3705a8858dff7a8bed4b96c:source-2",
+              "flexible-electricity:review-problem",
+              "flexible-electricity:review-integration",
+              "flexible-electricity:review-chargepoint",
+              "flexible-electricity:review-tesla",
+              "flexible-electricity:review-costs"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Qualified sites, purchase commitments, incremental savings, installation costs and reachable revenue remain unknown. Available controls may already address the task."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T01:06:17.559Z",
+              "reason": "Explicit opportunity or transfer hypothesis; not validated deployment, payment or investment qualification."
             },
             "kind": "hypothesis",
-            "testQuestion": "Do controls on a specific customer tariff reduce a measured bill after integration costs, while meeting readiness and comfort requirements?"
+            "testQuestion": "At a depot with changing departures, does the added controller reduce total costs versus well-configured existing controls without missed departures, and can that benefit be repeated at other sites after installation and support?"
           },
           {
             "id": "flexible-electricity:customer-0",
-            "text": "Building operators",
-            "evidenceIds": [],
+            "text": "Fleet operators with controllable chargers and constrained site power",
+            "evidenceIds": [
+              "flexible-electricity:review-problem",
+              "flexible-electricity:review-integration"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Qualified sites, purchase commitments, incremental savings, installation costs and reachable revenue remain unknown. Available controls may already address the task."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T01:06:17.559Z",
+              "reason": "Explicit opportunity or transfer hypothesis; not validated deployment, payment or investment qualification."
             },
             "kind": "hypothesis",
-            "testQuestion": "Do controls on a specific customer tariff reduce a measured bill after integration costs, while meeting readiness and comfort requirements?"
+            "testQuestion": "Which site has useful flexibility, authority to control equipment, a budget and added value beyond current controls?"
           },
           {
             "id": "flexible-electricity:customer-1",
-            "text": "Owners of controllable charging equipment",
-            "evidenceIds": [],
+            "text": "Building owners who control equipment and benefit from lower electricity bills",
+            "evidenceIds": [
+              "flexible-electricity:review-problem",
+              "flexible-electricity:review-integration"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Qualified sites, purchase commitments, incremental savings, installation costs and reachable revenue remain unknown. Available controls may already address the task."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T01:06:17.559Z",
+              "reason": "Explicit opportunity or transfer hypothesis; not validated deployment, payment or investment qualification."
             },
             "kind": "hypothesis",
-            "testQuestion": "Do controls on a specific customer tariff reduce a measured bill after integration costs, while meeting readiness and comfort requirements?"
+            "testQuestion": "Which site has useful flexibility, authority to control equipment, a budget and added value beyond current controls?"
           },
           {
             "id": "flexible-electricity:application-0",
-            "text": "Scheduling charging before a deadline",
-            "evidenceIds": [],
+            "text": "Coordinating vehicle charging with departures and building demand",
+            "evidenceIds": [
+              "flexible-electricity:synthesis-project-ce407ead6196a40cd98b802e:source-0",
+              "flexible-electricity:synthesis-project-ce407ead6196a40cd98b802e:source-1",
+              "flexible-electricity:synthesis-project-ce407ead6196a40cd98b802e:source-2",
+              "flexible-electricity:synthesis-project-f3705a8858dff7a8bed4b96c:source-0",
+              "flexible-electricity:synthesis-project-f3705a8858dff7a8bed4b96c:source-1",
+              "flexible-electricity:synthesis-project-f3705a8858dff7a8bed4b96c:source-2",
+              "flexible-electricity:review-integration",
+              "flexible-electricity:review-chargepoint"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Qualified sites, purchase commitments, incremental savings, installation costs and reachable revenue remain unknown. Available controls may already address the task."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T01:06:17.559Z",
+              "reason": "Explicit opportunity or transfer hypothesis; not validated deployment, payment or investment qualification."
             },
             "kind": "hypothesis",
-            "testQuestion": "Do controls on a specific customer tariff reduce a measured bill after integration costs, while meeting readiness and comfort requirements?"
+            "testQuestion": "At a depot with changing departures, does the added controller reduce total costs versus well-configured existing controls without missed departures, and can that benefit be repeated at other sites after installation and support?"
           },
           {
             "id": "flexible-electricity:application-1",
-            "text": "Comparing flexible building-load schedules",
-            "evidenceIds": [],
+            "text": "Moving flexible building cooling while preserving comfort",
+            "evidenceIds": [
+              "flexible-electricity:synthesis-project-ce407ead6196a40cd98b802e:source-0",
+              "flexible-electricity:synthesis-project-ce407ead6196a40cd98b802e:source-1",
+              "flexible-electricity:synthesis-project-ce407ead6196a40cd98b802e:source-2",
+              "flexible-electricity:synthesis-project-f3705a8858dff7a8bed4b96c:source-0",
+              "flexible-electricity:synthesis-project-f3705a8858dff7a8bed4b96c:source-1",
+              "flexible-electricity:synthesis-project-f3705a8858dff7a8bed4b96c:source-2",
+              "flexible-electricity:review-integration",
+              "flexible-electricity:review-chargepoint"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Qualified sites, purchase commitments, incremental savings, installation costs and reachable revenue remain unknown. Available controls may already address the task."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T01:06:17.559Z",
+              "reason": "Explicit opportunity or transfer hypothesis; not validated deployment, payment or investment qualification."
             },
             "kind": "hypothesis",
-            "testQuestion": "Do controls on a specific customer tariff reduce a measured bill after integration costs, while meeting readiness and comfort requirements?"
+            "testQuestion": "At a depot with changing departures, does the added controller reduce total costs versus well-configured existing controls without missed departures, and can that benefit be repeated at other sites after installation and support?"
           },
           {
             "id": "flexible-electricity:project-synthesis-project-ce407ead6196a40cd98b802e",
@@ -9355,13 +9401,13 @@
             "derivedFromClaimIds": [],
             "confidence": "moderate",
             "limitations": [
-              "Project-reported evidence; not independently reproduced."
+              "Project description only; no independently measured savings or live fleet transfer. Carbon and bill outcomes are distinct."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T01:06:17.559Z",
+              "reason": "Original source and project boundary inspected; attributed prototype account only, no verified savings."
             },
             "kind": "reported",
             "attribution": "Gridly; Gridly; Gridly",
@@ -9378,13 +9424,13 @@
             "derivedFromClaimIds": [],
             "confidence": "moderate",
             "limitations": [
-              "Project-reported evidence; not independently reproduced."
+              "Project description only; no independently measured savings or live fleet transfer. Carbon and bill outcomes are distinct."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T01:06:17.559Z",
+              "reason": "Original source and project boundary inspected; attributed prototype account only, no verified savings."
             },
             "kind": "reported",
             "attribution": "Shaping the Future of Digital Building Platforms through Open Innovation; Shaping the Future of Digital Building Platforms through Open Innovation; Shaping the Future of Digital Building Platforms through Open Innovation",
@@ -9392,30 +9438,35 @@
           },
           {
             "id": "flexible-electricity:v2-comparison",
-            "text": "Supplement chargers, thermostats and demand-response programs; alternative to each device’s independent schedule.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "ChargePoint advertises charging around time-of-day prices and peak charges, with vehicle and system integration. Tesla documents scheduled household charging. A new controller could supplement existing controls where shared power or changing schedules remain poorly handled. Utility programs can reward eligible reductions, but their payments are conditional and are not guaranteed software revenue.",
+            "kind": "inference",
+            "evidenceIds": [
+              "flexible-electricity:review-chargepoint",
+              "flexible-electricity:review-tesla",
+              "flexible-electricity:review-sce",
+              "flexible-electricity:review-integration"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "Qualified sites, purchase commitments, incremental savings, installation costs and reachable revenue remain unknown. Available controls may already address the task."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T01:06:17.559Z",
+              "reason": "Original primary material supports this bounded interpretation, not buyer prevalence or measured superiority."
             },
-            "testQuestion": "Do controls on a specific customer tariff reduce a measured bill after integration costs, while meeting readiness and comfort requirements?"
+            "reasoning": "Original descriptions establish overlapping functions and conditional program support. Incremental benefit and current compatibility are unresolved."
           }
         ],
         "evidence": [
           {
             "id": "flexible-electricity:synthesis-project-ce407ead6196a40cd98b802e:source-0",
             "sourceUrl": "https://devpost.com/software/gridly-0h29vm",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/gridly-0h29vm",
             "title": "Gridly",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -9423,21 +9474,21 @@
             "retrievedAt": "2026-10-15T18:55:13.081Z",
             "excerpt": "expecting consumers to manually respond to price spikes, congestion, and forecast changes is unrealistic.",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Retained original HTML; source-reported prototype, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T18:55:13.081Z",
+              "checkedAt": "2026-10-16T01:06:17.559Z",
               "failureIds": []
             }
           },
           {
             "id": "flexible-electricity:synthesis-project-ce407ead6196a40cd98b802e:source-1",
             "sourceUrl": "https://devpost.com/software/gridly-0h29vm",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/gridly-0h29vm",
             "title": "Gridly",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -9445,21 +9496,21 @@
             "retrievedAt": "2026-10-15T18:55:13.081Z",
             "excerpt": "standard charging is “blind” to fluctuations in electricity prices",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Retained original HTML; source-reported prototype, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T18:55:13.081Z",
+              "checkedAt": "2026-10-16T01:06:17.559Z",
               "failureIds": []
             }
           },
           {
             "id": "flexible-electricity:synthesis-project-ce407ead6196a40cd98b802e:source-2",
             "sourceUrl": "https://devpost.com/software/gridly-0h29vm",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/gridly-0h29vm",
             "title": "Gridly",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -9467,21 +9518,21 @@
             "retrievedAt": "2026-10-15T18:55:13.081Z",
             "excerpt": "Built a working system that shifts flexible residential load away from peak hours, directly reducing grid congestion while delivering 20–40% household cost savings",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Retained original HTML; source-reported prototype, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T18:55:13.081Z",
+              "checkedAt": "2026-10-16T01:06:17.559Z",
               "failureIds": []
             }
           },
           {
             "id": "flexible-electricity:synthesis-project-f3705a8858dff7a8bed4b96c:source-0",
             "sourceUrl": "https://funginstitute.berkeley.edu/meng-showcase-2026/",
-            "finalUrl": null,
+            "finalUrl": "https://funginstitute.berkeley.edu/meng-showcase-2026/",
             "title": "Shaping the Future of Digital Building Platforms through Open Innovation",
-            "publisher": null,
+            "publisher": "UC Berkeley Fung Institute",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -9489,21 +9540,21 @@
             "retrievedAt": "2026-10-15T18:55:13.081Z",
             "excerpt": "yet most operate on fixed energy schedules that ignore how grid carbon intensity fluctuates hour by hour.",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Retained original HTML; source-reported prototype, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T18:55:13.081Z",
+              "checkedAt": "2026-10-16T01:06:17.559Z",
               "failureIds": []
             }
           },
           {
             "id": "flexible-electricity:synthesis-project-f3705a8858dff7a8bed4b96c:source-1",
             "sourceUrl": "https://funginstitute.berkeley.edu/meng-showcase-2026/",
-            "finalUrl": null,
+            "finalUrl": "https://funginstitute.berkeley.edu/meng-showcase-2026/",
             "title": "Shaping the Future of Digital Building Platforms through Open Innovation",
-            "publisher": null,
+            "publisher": "UC Berkeley Fung Institute",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -9511,21 +9562,21 @@
             "retrievedAt": "2026-10-15T18:55:13.081Z",
             "excerpt": "A Python FastAPI backend drives the scheduling logic while a React dashboard lets operators visualize and compare baseline versus optimized cumulative CO₂ emissions in real time.",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Retained original HTML; source-reported prototype, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T18:55:13.081Z",
+              "checkedAt": "2026-10-16T01:06:17.559Z",
               "failureIds": []
             }
           },
           {
             "id": "flexible-electricity:synthesis-project-f3705a8858dff7a8bed4b96c:source-2",
             "sourceUrl": "https://funginstitute.berkeley.edu/meng-showcase-2026/",
-            "finalUrl": null,
+            "finalUrl": "https://funginstitute.berkeley.edu/meng-showcase-2026/",
             "title": "Shaping the Future of Digital Building Platforms through Open Innovation",
-            "publisher": null,
+            "publisher": "UC Berkeley Fung Institute",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -9533,25 +9584,157 @@
             "retrievedAt": "2026-10-15T18:55:13.081Z",
             "excerpt": "The result is a functional prototype demonstrating how forecast-driven carbon intelligence can be practically embedded into commercial building operations.",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Retained original HTML; source-reported prototype, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T18:55:13.081Z",
+              "checkedAt": "2026-10-16T01:06:17.559Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "flexible-electricity:review-problem",
+            "sourceUrl": "https://www.energy.gov/cmei/femp/managed-ev-charging-federal-fleets",
+            "finalUrl": "https://www.energy.gov/cmei/femp/managed-ev-charging-federal-fleets",
+            "title": "DOE: managed charging for federal fleets",
+            "publisher": "US Department of Energy",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated US federal implementation guidance retrieved October 15, 2026; not a measured commercial fleet sample",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Higher demand charge costs when charging occurs during facility peak demand",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding context inspected",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T01:06:17.559Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "flexible-electricity:review-integration",
+            "sourceUrl": "https://www.energy.gov/cmei/femp/smart-charge-management-implementation-federal-fleets",
+            "finalUrl": "https://www.energy.gov/cmei/femp/smart-charge-management-implementation-federal-fleets",
+            "title": "DOE: charging data, integration and commissioning",
+            "publisher": "US Department of Energy",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated US federal guidance; local buyer authority and costs unresolved",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Verify that the SCM system is properly integrated with the charging stations, fleet management software, and any utility demand response programs.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding context inspected",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T01:06:17.559Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "flexible-electricity:review-chargepoint",
+            "sourceUrl": "https://www.chargepoint.com/download-file/chargepoint-fleet-software-br-na-en",
+            "finalUrl": "https://www.chargepoint.com/download-file/chargepoint-fleet-software-br-na-en",
+            "title": "ChargePoint: fleet charging and integration",
+            "publisher": "ChargePoint",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "February 2023 supplier brochure; capability description, not measured savings",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "cost with automated charging \nbased on time of day, demand \ncharges and other factors.",
+            "pdfPage": 5,
+            "locator": "Original PDF physical page 5; column visually inspected; reading-order extraction resolves layout mismatch",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T01:06:17.559Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "flexible-electricity:review-tesla",
+            "sourceUrl": "https://service.tesla.com/docs/Public/diy/model3/en_us/GUID-9C2F6258-81FB-484C-B16A-AF4238EDF028.html",
+            "finalUrl": "https://service.tesla.com/docs/Public/diy/model3/en_us/GUID-9C2F6258-81FB-484C-B16A-AF4238EDF028.html",
+            "title": "Tesla Model 3: built-in scheduled charging",
+            "publisher": "Tesla",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated Model 3 documentation retrieved October 15, 2026; fast chargers excluded",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Scheduled charge cannot be used with fast chargers, including Tesla Superchargers.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding context inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T01:06:17.559Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "flexible-electricity:review-costs",
+            "sourceUrl": "https://www.energy.gov/cmei/vehicles/understanding-soft-costs-ev-charging",
+            "finalUrl": "https://www.energy.gov/cmei/vehicles/understanding-soft-costs-ev-charging",
+            "title": "DOE: costs beyond charging hardware",
+            "publisher": "US Department of Energy",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated US infrastructure guidance; not a startup cost estimate",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Soft costs are highly variable, harder to estimate, and driven by time-sensitive processes.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding context inspected",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T01:06:17.559Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "flexible-electricity:review-sce",
+            "sourceUrl": "https://www.sce.com/business/save-costs-energy/savings-strategies-for-businesses/what-is-demand-response/automated-demand-response/auto-dr-express-control-incentives",
+            "finalUrl": "https://www.sce.com/business/save-costs-energy/savings-strategies-for-businesses/what-is-demand-response/automated-demand-response/auto-dr-express-control-incentives",
+            "title": "SCE: conditional incentives for automatic load reduction",
+            "publisher": "Southern California Edison",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated California business program page retrieved October 15, 2026; eligibility and tariff terms apply",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "You’ll earn up to $300 per kW of pre-calculated DR load reduction.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding context inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T01:06:17.559Z",
               "failureIds": []
             }
           }
         ],
         "migrationGaps": [],
-        "id": "flexible-electricity:rubric-v2-20261015",
+        "id": "flexible-electricity:evidence-review-v2-20261016",
         "opportunityId": "flexible-electricity",
-        "parentRevisionId": "flexible-electricity:manifesto-pass2-20261015",
-        "createdAt": "2026-10-15T21:24:18.427Z",
-        "producerId": "rubric-reassessment-v2",
-        "origin": "saved-data-synthesis",
-        "changeReason": "Reassessed adjacent uses and functional alternatives. Original evidence review statuses preserved; no new market qualification.",
-        "contentHash": "66bcc09dbf86f287fab17b26eb6ffb7e632ff8e094c3f07f4123108e2493ef2f",
+        "parentRevisionId": "flexible-electricity:rubric-v2-20261015",
+        "createdAt": "2026-10-16T01:06:17.559Z",
+        "producerId": "codex-evidence-inspector",
+        "origin": "inspection-correction",
+        "changeReason": "Inspect original projects, tariffs, planning scenarios and existing controls; distinguish depot transfer and supplementary coordination from demonstrated savings; exclude inaccessible sources and unsupported market figures.",
+        "contentHash": "c55aebf5e31f89071a86c693ed15f2ba93ebb7db61d7f7127d2f50ec54702f3e",
         "title": "Controls that move flexible electricity use to cheaper hours",
         "classifications": [
           "Energy"
@@ -9559,120 +9742,64 @@
         "assessment": {
           "rubricVersion": "venture-screen-v2",
           "priority": "medium",
-          "priorityReason": "A coordination layer could work with existing chargers/building controls. Its added value must come from constraints those controls do not already coordinate.",
+          "priorityReason": "Constrained fleet depots offer a credible coordination problem, but existing controls overlap. A matched site trial could identify valuable remaining constraints or show that integration consumes the benefit.",
           "confidence": {
             "level": "low",
-            "reason": "Low; scheduling demos do not establish paid savings."
+            "reason": "Primary guidance supports the mechanism and suppliers document existing options. Project savings, customer payment and repeatable deployment economics are unproven."
           },
           "dimensions": {
             "problem": {
-              "status": "plausible",
-              "reason": "Movable loads may run at expensive times; actual buyer losses are not quantified.",
+              "status": "supported",
+              "reason": "DOE documents peak-price, peak-demand and site-capacity constraints; target-site frequency and loss remain unknown.",
               "claimIds": [
-                "flexible-electricity:what",
-                "flexible-electricity:problem",
-                "flexible-electricity:opportunity",
-                "flexible-electricity:customer-0",
-                "flexible-electricity:customer-1",
-                "flexible-electricity:application-0",
-                "flexible-electricity:application-1",
-                "flexible-electricity:project-synthesis-project-ce407ead6196a40cd98b802e",
-                "flexible-electricity:project-synthesis-project-f3705a8858dff7a8bed4b96c"
+                "flexible-electricity:problem"
               ]
             },
             "customerPayment": {
-              "status": "plausible",
-              "reason": "Operators facing time-varying prices or paid flexibility programs are plausible payers, subject to contract eligibility.",
+              "status": "missing",
+              "reason": "Potential operator/account-holder payers identified, but no verified project budget or buying commitment.",
               "claimIds": [
-                "flexible-electricity:what",
-                "flexible-electricity:problem",
-                "flexible-electricity:opportunity",
-                "flexible-electricity:customer-0",
-                "flexible-electricity:customer-1",
-                "flexible-electricity:application-0",
-                "flexible-electricity:application-1",
-                "flexible-electricity:project-synthesis-project-ce407ead6196a40cd98b802e",
-                "flexible-electricity:project-synthesis-project-f3705a8858dff7a8bed4b96c"
+                "flexible-electricity:customer-0"
               ]
             },
             "productValue": {
               "status": "plausible",
-              "reason": "Scheduling and integrations are reported, but real bills and maintained service levels are not measured.",
+              "reason": "Coordinated schedules could preserve readiness while reducing costs. Neither project proves added savings or successful depot transfer.",
               "claimIds": [
-                "flexible-electricity:what",
-                "flexible-electricity:problem",
-                "flexible-electricity:opportunity",
-                "flexible-electricity:customer-0",
-                "flexible-electricity:customer-1",
-                "flexible-electricity:application-0",
-                "flexible-electricity:application-1",
-                "flexible-electricity:project-synthesis-project-ce407ead6196a40cd98b802e",
-                "flexible-electricity:project-synthesis-project-f3705a8858dff7a8bed4b96c"
+                "flexible-electricity:what"
               ]
             },
             "commercialGap": {
               "status": "plausible",
-              "reason": "Cross-equipment coordination could supplement local controllers and utility programs; no incremental advantage is demonstrated.",
+              "reason": "A layer across shared site demands could supplement current controls, but no unresolved customer task or cost advantage is established.",
               "claimIds": [
-                "flexible-electricity:what",
-                "flexible-electricity:problem",
-                "flexible-electricity:opportunity",
-                "flexible-electricity:customer-0",
-                "flexible-electricity:customer-1",
-                "flexible-electricity:application-0",
-                "flexible-electricity:application-1",
-                "flexible-electricity:project-synthesis-project-ce407ead6196a40cd98b802e",
-                "flexible-electricity:project-synthesis-project-f3705a8858dff7a8bed4b96c"
+                "flexible-electricity:v2-comparison"
               ]
             },
             "ventureScale": {
-              "status": "plausible",
-              "reason": "Repeated compatible loads offer an expansion path; load availability, revenues and acquisition cost remain unknown.",
+              "status": "missing",
+              "reason": "Historical building counts and projected charger ports are context, not qualified buyers. Price, adoption and reachable revenue missing.",
               "claimIds": [
-                "flexible-electricity:what",
-                "flexible-electricity:problem",
-                "flexible-electricity:opportunity",
-                "flexible-electricity:customer-0",
-                "flexible-electricity:customer-1",
-                "flexible-electricity:application-0",
-                "flexible-electricity:application-1",
-                "flexible-electricity:project-synthesis-project-ce407ead6196a40cd98b802e",
-                "flexible-electricity:project-synthesis-project-f3705a8858dff7a8bed4b96c"
+                "flexible-electricity:opportunity"
               ]
             },
             "businessCapital": {
               "status": "missing",
-              "reason": "Installation, maintenance, customer acquisition and shared savings economics are absent.",
+              "reason": "Installation, integration, reliability, support and sales costs unmeasured; using existing hardware does not establish software-like margins.",
               "claimIds": [
-                "flexible-electricity:what",
-                "flexible-electricity:problem",
-                "flexible-electricity:opportunity",
-                "flexible-electricity:customer-0",
-                "flexible-electricity:customer-1",
-                "flexible-electricity:application-0",
-                "flexible-electricity:application-1",
-                "flexible-electricity:project-synthesis-project-ce407ead6196a40cd98b802e",
-                "flexible-electricity:project-synthesis-project-f3705a8858dff7a8bed4b96c"
+                "flexible-electricity:opportunity"
               ]
             },
             "timing": {
               "status": "plausible",
-              "reason": "The sources connect forecasts and controllable loads; this is a mechanism, not evidence of rising demand.",
+              "reason": "Equipment selection and capacity constraints offer possible buying windows; no verified current growth or cost advantage.",
               "claimIds": [
-                "flexible-electricity:what",
-                "flexible-electricity:problem",
-                "flexible-electricity:opportunity",
-                "flexible-electricity:customer-0",
-                "flexible-electricity:customer-1",
-                "flexible-electricity:application-0",
-                "flexible-electricity:application-1",
-                "flexible-electricity:project-synthesis-project-ce407ead6196a40cd98b802e",
-                "flexible-electricity:project-synthesis-project-f3705a8858dff7a8bed4b96c"
+                "flexible-electricity:v2-comparison"
               ]
             }
           },
-          "strongestObjection": "Existing controls may suffice, or readiness and comfort constraints may remove most flexibility.",
-          "decisiveQuestion": "Real bill savings net of installation and service costs, compared with the best current schedule under identical readiness/comfort requirements."
+          "strongestObjection": "Available controls may capture most of the savings. Custom integration, support and readiness failures could consume the remaining value.",
+          "decisiveQuestion": "At a depot with changing departures, does the added controller reduce total costs versus well-configured existing controls without missed departures, and can that benefit be repeated at other sites after installation and support?"
         }
       },
       "research": null,
