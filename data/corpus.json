@@ -3543,7 +3543,7 @@
       "summary": "Phagentic describes moving a controller from simulation to a live color-changing liquid reaction using pumps, a mixer and a sensor. No biological manufacturing or yield improvement is established.",
       "problem": "The source says the target manufacturing reaction has several stages and behaves differently each run.",
       "approach": "A sensor watches a color-changing liquid while software adjusts pumps and mixing. This chemical demonstration is not biological manufacturing.",
-      "whyItMatters": "We think adaptive control might reduce the effort needed to tune variable chemical batches. Transfer to manufacturing phages—viruses that infect bacteria—must be established separately.",
+      "whyItMatters": "Adjusting a reaction from sensor feedback could reduce manual intervention. Keeping a color-changing reaction stable does not establish better industrial recipes or biological manufacturing.",
       "statusQuo": "The project includes a conventional feedback controller, which adjusts actions from the difference between a target and a sensor reading. Its performance as an alternative is not reported.",
       "results": "The team reports testing controllers in simulation and moving them onto a live color-changing reaction. It does not report achieved target tracking, stability, or manufacturing yield.",
       "limitations": "The physical experiment used a color-changing chemical reaction, not bacteria or phages. No comparison establishes better control than the conventional controller. A mathematical analogy between reactions does not establish equivalent manufacturing behavior. The claims about antibiotic-resistance deaths and resistance never recurring are unsupported here. Limits on controller actions do not by themselves establish safe operation. Year and school identify the source event collection, not a verified completion date or author affiliation.",
@@ -5100,15 +5100,15 @@
     {
       "id": "automated-lab-experiments",
       "title": "Lab equipment that runs and adjusts repeated experiments",
-      "summary": "Make a sample, measure it, and adjust the next experiment.",
+      "summary": "Connect lab instruments to choose and run the next materials experiment.",
       "topic": "Manufacturing",
-      "problem": "Developing a material or manufacturing process requires repeated preparation, measurement and adjustment. The builders describe manual trial and error and unstable physical conditions.",
-      "statusQuo": "Developing a material or manufacturing process requires repeated preparation, measurement and adjustment. The builders describe manual trial and error and unstable physical conditions.",
-      "gap": "Different experiments may require custom hardware and expert setup, making a general lab platform expensive to deploy.",
-      "opportunity": "Automating preparation, measurement and adjustment could let laboratories test more settings with less hands-on work. A viable product needs a repeatable workflow that does not require extensive custom engineering.",
-      "evidence": "Physical attempts support a concrete product idea, but the two workflows differ substantially and reported gains are not quantified. Hardware reliability and customization could dominate the economics.",
-      "counterpoint": "Every experiment may need specialist hardware and setup.",
-      "nextQuestion": "One workflow: accepted results per staff-hour and full cost versus the existing partially automated process.",
+      "problem": "Materials teams repeat mixing, coating and measurement to find a useful recipe. Unreliable measurements can send the next experiment in the wrong direction. Polybot’s published coating work documents repeated measurements; BASF describes time-consuming manual reaction tuning.",
+      "statusQuo": "Scientists, automated workstations and experiment-planning software already select and run material tests.",
+      "gap": "Reliable execution across existing instruments is a possible extra layer; a valuable unmet customer need is not yet established.",
+      "opportunity": "Coating-development labs could use a layer that connects existing instruments and reliably runs the next experiment. Chemspeed already automates formulation; Uncountable and BayBE help choose experiments. The opening to test is a reusable execution layer that delivers more usable results with less staff work, after setup and support. That added value and willingness to pay remain unproven.",
+      "evidence": "Original project descriptions support limited prototypes. Polybot reports a complete coating workflow; Chemspeed, Uncountable and BayBE establish substantial overlap with available tools.",
+      "counterpoint": "Custom measurement, setup and maintenance at each lab could consume the benefit and make this a service business rather than a repeatable product.",
+      "nextQuestion": "Does one repeatable coating workflow deliver more accepted results per staff-hour than the lab’s best existing setup, after installation, cleaning and support—and will a budget holder pay for that gain?",
       "projectIds": [
         "synthesis-project-b8decce73f3d44a87f4b472d",
         "synthesis-project-9f88a41408ebcfd3897b79f5"
@@ -5119,8 +5119,8 @@
       ],
       "confidence": "Early signal",
       "brief": {
-        "whatItIs": "Equipment that makes a sample, measures it, changes the settings and runs the next experiment. For example, adjusting light exposure until a patterned coating comes out correctly.",
-        "problem": "Developing a material or manufacturing process requires repeated preparation, measurement and adjustment. The builders describe manual trial and error and unstable physical conditions.",
+        "whatItIs": "Equipment makes a sample, measures the result and chooses the next settings. For example, it could change a coating recipe until the film conducts electricity well. The projects report patterned-coating and color-changing reaction prototypes; industrial performance remains unproven.",
+        "problem": "Materials teams repeat mixing, coating and measurement to find a useful recipe. Unreliable measurements can send the next experiment in the wrong direction. Polybot’s published coating work documents repeated measurements; BASF describes time-consuming manual reaction tuning.",
         "breakthroughs": [
           {
             "text": "Desktop Autonomous Chip Fabrication reports a physical pattern-making loop that improves settings from camera feedback. No working electronic chip, production yield or numerical quality comparison is established.",
@@ -5135,24 +5135,61 @@
             ]
           }
         ],
-        "marketOpportunity": "Automating preparation, measurement and adjustment could let laboratories test more settings with less hands-on work. A viable product needs a repeatable workflow that does not require extensive custom engineering.",
-        "buyer": "Industrial materials laboratories; Manufacturing process-development teams",
+        "marketOpportunity": "Coating-development labs could use a layer that connects existing instruments and reliably runs the next experiment. Chemspeed already automates formulation; Uncountable and BayBE help choose experiments. The opening to test is a reusable execution layer that delivers more usable results with less staff work, after setup and support. That added value and willingness to pay remain unproven.",
+        "buyer": "Industrial coating-development laboratories; Chemical process-development teams",
         "applications": [
-          "Tuning patterned coatings",
-          "Adjusting repeatable chemical experiments"
+          "Finding coating recipes with useful measured properties",
+          "Tuning chemical reactions, if suitable measurements and safe control transfer"
         ],
         "targetCustomers": [
-          "Industrial materials laboratories",
-          "Manufacturing process-development teams"
+          "Industrial coating-development laboratories",
+          "Chemical process-development teams"
         ],
-        "marketStatus": "hypothesis",
-        "marketEvidence": [],
+        "marketStatus": "researched",
+        "marketEvidence": [
+          {
+            "title": "Polybot: repeated measurements in automated coating experiments",
+            "url": "https://www.nature.com/articles/s41467-024-55655-3",
+            "excerpt": "To ensure the repeatability of our experiments, Polybot performs at least two trials and up to four trials for every sample.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Chemspeed: automated formulation with planning-software interfaces",
+            "url": "https://www.chemspeed.com/example-solutions/flex-formax/",
+            "excerpt": "Interface to DOE / AI.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Uncountable: software that recommends formulations",
+            "url": "https://www.support.uncountable.com/knowledge-base/10473/",
+            "excerpt": "The algorithm suggests formulations that are most likely to meet your specs.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "BayBE: open-source experiment selection",
+            "url": "https://github.com/emdgroup/baybe",
+            "excerpt": "Create materials, chemical mixtures or formulations with desired properties",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "BASF: an internal system that tunes chemical reactions",
+            "url": "https://www.basf.com/global/en/media/news-releases/2025/12/p-25-241",
+            "excerpt": "Our first experiments already demonstrated that we are 20 times faster than when we do it manually",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Chemspeed’s reported 2023 revenue: a supplier analogue, not market size",
+            "url": "https://s22.q4cdn.com/617463959/files/doc_news/2024/Jan/25/chemspeed_acquisition_1-24-24.pdf",
+            "excerpt": "In 2023, Chemspeed generated revenues greater than $50 million, and Chemspeed was profitable.",
+            "accessedAt": "2026-10-15"
+          }
+        ],
         "risks": [
-          "Different experiments may require custom hardware and expert setup, making a general lab platform expensive to deploy.",
-          "Two author teams in separate events; distinct experiments demonstrate adjacent mechanisms, not one interchangeable process or independent replication."
+          "Custom measurement, setup and maintenance at each lab could consume the benefit and make this a service business rather than a repeatable product.",
+          "No paid demand, reachable market estimate or demonstrated advantage over a well-configured existing system."
         ],
         "nextQuestions": [
-          "One workflow: accepted results per staff-hour and full cost versus the existing partially automated process."
+          "Does one repeatable coating workflow deliver more accepted results per staff-hour than the lab’s best existing setup, after installation, cleaning and support—and will a budget holder pay for that gain?"
         ]
       }
     },

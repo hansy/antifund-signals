@@ -6580,8 +6580,8 @@
     {
       "schemaVersion": 1,
       "id": "automated-lab-experiments",
-      "revision": 1,
-      "acceptedRevisionId": "automated-lab-experiments:rubric-v2-20261015",
+      "revision": 2,
+      "acceptedRevisionId": "automated-lab-experiments:evidence-review-v2-20261016",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -6589,10 +6589,10 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T16:51:48.275Z",
-      "updatedAt": "2026-10-15T21:24:18.427Z",
+      "updatedAt": "2026-10-16T01:27:37.357Z",
       "verdict": null,
       "stage": "first-impressions",
-      "qualificationError": null,
+      "qualificationError": "Reviewed; useful coating-workflow hypothesis, but an unmet paid need, repeatable economics and venture qualification remain unestablished.",
       "accepted": {
         "content": {
           "marketSize": [],
@@ -6618,7 +6618,7 @@
             "automated-lab-experiments:application-0",
             "automated-lab-experiments:application-1"
           ],
-          "keyQuestion": "One workflow: accepted results per staff-hour and full cost versus the existing partially automated process."
+          "keyQuestion": "Does one repeatable coating workflow deliver more accepted results per staff-hour than the lab’s best existing setup, after installation, cleaning and support—and will a budget holder pay for that gain?"
         },
         "projects": [
           {
@@ -6645,129 +6645,185 @@
         "claims": [
           {
             "id": "automated-lab-experiments:what",
-            "text": "Equipment that makes a sample, measures it, changes the settings and runs the next experiment. For example, adjusting light exposure until a patterned coating comes out correctly.",
-            "evidenceIds": [],
+            "text": "Equipment makes a sample, measures the result and chooses the next settings. For example, it could change a coating recipe until the film conducts electricity well. The projects report patterned-coating and color-changing reaction prototypes; industrial performance remains unproven.",
+            "evidenceIds": [
+              "automated-lab-experiments:synthesis-project-b8decce73f3d44a87f4b472d:source-0",
+              "automated-lab-experiments:synthesis-project-b8decce73f3d44a87f4b472d:source-1",
+              "automated-lab-experiments:synthesis-project-b8decce73f3d44a87f4b472d:source-2",
+              "automated-lab-experiments:synthesis-project-b8decce73f3d44a87f4b472d:source-3",
+              "automated-lab-experiments:synthesis-project-b8decce73f3d44a87f4b472d:source-4",
+              "automated-lab-experiments:synthesis-project-9f88a41408ebcfd3897b79f5:source-0",
+              "automated-lab-experiments:synthesis-project-9f88a41408ebcfd3897b79f5:source-1",
+              "automated-lab-experiments:synthesis-project-9f88a41408ebcfd3897b79f5:source-2",
+              "automated-lab-experiments:review-polybot"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Compatible paid sites, incremental benefits, installation costs and reachable revenue remain unknown. Existing tools substantially overlap."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T01:27:37.357Z",
+              "reason": "Explicit product or transfer hypothesis; no established buying commitment, savings or venture qualification."
             },
             "kind": "hypothesis",
-            "testQuestion": "Which single laboratory workflow has enough repeated paid demand that a standard machine can recover its purchase and support cost?"
+            "testQuestion": "Does one repeatable coating workflow deliver more accepted results per staff-hour than the lab’s best existing setup, after installation, cleaning and support—and will a budget holder pay for that gain?"
           },
           {
             "id": "automated-lab-experiments:problem",
-            "text": "Developing a material or manufacturing process requires repeated preparation, measurement and adjustment. The builders describe manual trial and error and unstable physical conditions.",
-            "evidenceIds": [],
+            "text": "Materials teams repeat mixing, coating and measurement to find a useful recipe. Unreliable measurements can send the next experiment in the wrong direction. Polybot’s published coating work documents repeated measurements; BASF describes time-consuming manual reaction tuning.",
+            "evidenceIds": [
+              "automated-lab-experiments:review-polybot",
+              "automated-lab-experiments:review-basf"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Compatible paid sites, incremental benefits, installation costs and reachable revenue remain unknown. Existing tools substantially overlap."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T01:27:37.357Z",
+              "reason": "Original sources support this bounded interpretation; no target-market growth, payment or project superiority inferred."
             },
-            "kind": "hypothesis",
-            "testQuestion": "Which single laboratory workflow has enough repeated paid demand that a standard machine can recover its purchase and support cost?"
+            "kind": "inference",
+            "reasoning": "Published coating experiments and an industrial operator document repeated measurements and tuning. No representative target-lab workload or loss is established."
           },
           {
             "id": "automated-lab-experiments:opportunity",
-            "text": "Automating preparation, measurement and adjustment could let laboratories test more settings with less hands-on work. A viable product needs a repeatable workflow that does not require extensive custom engineering.",
-            "evidenceIds": [],
+            "text": "Coating-development labs could use a layer that connects existing instruments and reliably runs the next experiment. Chemspeed already automates formulation; Uncountable and BayBE help choose experiments. The opening to test is a reusable execution layer that delivers more usable results with less staff work, after setup and support. That added value and willingness to pay remain unproven.",
+            "evidenceIds": [
+              "automated-lab-experiments:synthesis-project-b8decce73f3d44a87f4b472d:source-0",
+              "automated-lab-experiments:synthesis-project-b8decce73f3d44a87f4b472d:source-1",
+              "automated-lab-experiments:synthesis-project-b8decce73f3d44a87f4b472d:source-2",
+              "automated-lab-experiments:synthesis-project-b8decce73f3d44a87f4b472d:source-3",
+              "automated-lab-experiments:synthesis-project-b8decce73f3d44a87f4b472d:source-4",
+              "automated-lab-experiments:synthesis-project-9f88a41408ebcfd3897b79f5:source-0",
+              "automated-lab-experiments:synthesis-project-9f88a41408ebcfd3897b79f5:source-1",
+              "automated-lab-experiments:synthesis-project-9f88a41408ebcfd3897b79f5:source-2",
+              "automated-lab-experiments:review-polybot",
+              "automated-lab-experiments:review-chemspeed",
+              "automated-lab-experiments:review-uncountable",
+              "automated-lab-experiments:review-baybe"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Compatible paid sites, incremental benefits, installation costs and reachable revenue remain unknown. Existing tools substantially overlap."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T01:27:37.357Z",
+              "reason": "Explicit product or transfer hypothesis; no established buying commitment, savings or venture qualification."
             },
             "kind": "hypothesis",
-            "testQuestion": "Which single laboratory workflow has enough repeated paid demand that a standard machine can recover its purchase and support cost?"
+            "testQuestion": "Does one repeatable coating workflow deliver more accepted results per staff-hour than the lab’s best existing setup, after installation, cleaning and support—and will a budget holder pay for that gain?"
           },
           {
             "id": "automated-lab-experiments:customer-0",
-            "text": "Industrial materials laboratories",
-            "evidenceIds": [],
+            "text": "Industrial coating-development laboratories",
+            "evidenceIds": [
+              "automated-lab-experiments:review-polybot",
+              "automated-lab-experiments:review-basf",
+              "automated-lab-experiments:review-category"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Compatible paid sites, incremental benefits, installation costs and reachable revenue remain unknown. Existing tools substantially overlap."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T01:27:37.357Z",
+              "reason": "Explicit product or transfer hypothesis; no established buying commitment, savings or venture qualification."
             },
             "kind": "hypothesis",
-            "testQuestion": "Which single laboratory workflow has enough repeated paid demand that a standard machine can recover its purchase and support cost?"
+            "testQuestion": "Which compatible lab has a funded unmet need and prefers to buy this added capability rather than configure existing tools?"
           },
           {
             "id": "automated-lab-experiments:customer-1",
-            "text": "Manufacturing process-development teams",
-            "evidenceIds": [],
+            "text": "Chemical process-development teams",
+            "evidenceIds": [
+              "automated-lab-experiments:review-polybot",
+              "automated-lab-experiments:review-basf",
+              "automated-lab-experiments:review-category"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Compatible paid sites, incremental benefits, installation costs and reachable revenue remain unknown. Existing tools substantially overlap."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T01:27:37.357Z",
+              "reason": "Explicit product or transfer hypothesis; no established buying commitment, savings or venture qualification."
             },
             "kind": "hypothesis",
-            "testQuestion": "Which single laboratory workflow has enough repeated paid demand that a standard machine can recover its purchase and support cost?"
+            "testQuestion": "Which compatible lab has a funded unmet need and prefers to buy this added capability rather than configure existing tools?"
           },
           {
             "id": "automated-lab-experiments:application-0",
-            "text": "Tuning patterned coatings",
-            "evidenceIds": [],
+            "text": "Finding coating recipes with useful measured properties",
+            "evidenceIds": [
+              "automated-lab-experiments:synthesis-project-b8decce73f3d44a87f4b472d:source-0",
+              "automated-lab-experiments:synthesis-project-b8decce73f3d44a87f4b472d:source-1",
+              "automated-lab-experiments:synthesis-project-b8decce73f3d44a87f4b472d:source-2",
+              "automated-lab-experiments:synthesis-project-b8decce73f3d44a87f4b472d:source-3",
+              "automated-lab-experiments:synthesis-project-b8decce73f3d44a87f4b472d:source-4",
+              "automated-lab-experiments:synthesis-project-9f88a41408ebcfd3897b79f5:source-0",
+              "automated-lab-experiments:synthesis-project-9f88a41408ebcfd3897b79f5:source-1",
+              "automated-lab-experiments:synthesis-project-9f88a41408ebcfd3897b79f5:source-2",
+              "automated-lab-experiments:review-polybot",
+              "automated-lab-experiments:review-basf"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Compatible paid sites, incremental benefits, installation costs and reachable revenue remain unknown. Existing tools substantially overlap."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T01:27:37.357Z",
+              "reason": "Explicit product or transfer hypothesis; no established buying commitment, savings or venture qualification."
             },
             "kind": "hypothesis",
-            "testQuestion": "Which single laboratory workflow has enough repeated paid demand that a standard machine can recover its purchase and support cost?"
+            "testQuestion": "Does one repeatable coating workflow deliver more accepted results per staff-hour than the lab’s best existing setup, after installation, cleaning and support—and will a budget holder pay for that gain?"
           },
           {
             "id": "automated-lab-experiments:application-1",
-            "text": "Adjusting repeatable chemical experiments",
-            "evidenceIds": [],
+            "text": "Tuning chemical reactions, if suitable measurements and safe control transfer",
+            "evidenceIds": [
+              "automated-lab-experiments:synthesis-project-b8decce73f3d44a87f4b472d:source-0",
+              "automated-lab-experiments:synthesis-project-b8decce73f3d44a87f4b472d:source-1",
+              "automated-lab-experiments:synthesis-project-b8decce73f3d44a87f4b472d:source-2",
+              "automated-lab-experiments:synthesis-project-b8decce73f3d44a87f4b472d:source-3",
+              "automated-lab-experiments:synthesis-project-b8decce73f3d44a87f4b472d:source-4",
+              "automated-lab-experiments:synthesis-project-9f88a41408ebcfd3897b79f5:source-0",
+              "automated-lab-experiments:synthesis-project-9f88a41408ebcfd3897b79f5:source-1",
+              "automated-lab-experiments:synthesis-project-9f88a41408ebcfd3897b79f5:source-2",
+              "automated-lab-experiments:review-polybot",
+              "automated-lab-experiments:review-basf"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Compatible paid sites, incremental benefits, installation costs and reachable revenue remain unknown. Existing tools substantially overlap."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T01:27:37.357Z",
+              "reason": "Explicit product or transfer hypothesis; no established buying commitment, savings or venture qualification."
             },
             "kind": "hypothesis",
-            "testQuestion": "Which single laboratory workflow has enough repeated paid demand that a standard machine can recover its purchase and support cost?"
+            "testQuestion": "Does one repeatable coating workflow deliver more accepted results per staff-hour than the lab’s best existing setup, after installation, cleaning and support—and will a budget holder pay for that gain?"
           },
           {
             "id": "automated-lab-experiments:project-synthesis-project-b8decce73f3d44a87f4b472d",
@@ -6782,13 +6838,13 @@
             "derivedFromClaimIds": [],
             "confidence": "moderate",
             "limitations": [
-              "Project-reported evidence; not independently reproduced."
+              "Team-reported prototype only; no independent reproduction, working electronic chips, biological manufacturing or industrial yield established."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T01:27:37.357Z",
+              "reason": "Archived original project source inspected; attribution only, not verified industrial performance."
             },
             "kind": "reported",
             "attribution": "Desktop Autonomous Chip Fabrication; Desktop Autonomous Chip Fabrication; Desktop Autonomous Chip Fabrication; Desktop Autonomous Chip Fabrication; Desktop Autonomous Chip Fabrication",
@@ -6805,13 +6861,13 @@
             "derivedFromClaimIds": [],
             "confidence": "moderate",
             "limitations": [
-              "Project-reported evidence; not independently reproduced."
+              "Team-reported prototype only; no independent reproduction, working electronic chips, biological manufacturing or industrial yield established."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T01:27:37.357Z",
+              "reason": "Archived original project source inspected; attribution only, not verified industrial performance."
             },
             "kind": "reported",
             "attribution": "Phagentic; Phagentic; Phagentic",
@@ -6819,30 +6875,42 @@
           },
           {
             "id": "automated-lab-experiments:v2-comparison",
-            "text": "Supplement existing instruments with measurement-to-next-action control; alternative to manual experiment selection for a defined process.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "Chemspeed already automates formulation and connects to experiment-planning software. Uncountable recommends formulations; Merck’s open-source BayBE also helps choose experiments. A product could supplement these tools by handling physical execution and recovery, but compatibility and added value need testing. Maintaining a reaction’s color, as in Phagentic, is a different task from discovering a better recipe.",
+            "kind": "inference",
+            "evidenceIds": [
+              "automated-lab-experiments:synthesis-project-b8decce73f3d44a87f4b472d:source-0",
+              "automated-lab-experiments:synthesis-project-b8decce73f3d44a87f4b472d:source-1",
+              "automated-lab-experiments:synthesis-project-b8decce73f3d44a87f4b472d:source-2",
+              "automated-lab-experiments:synthesis-project-b8decce73f3d44a87f4b472d:source-3",
+              "automated-lab-experiments:synthesis-project-b8decce73f3d44a87f4b472d:source-4",
+              "automated-lab-experiments:synthesis-project-9f88a41408ebcfd3897b79f5:source-0",
+              "automated-lab-experiments:synthesis-project-9f88a41408ebcfd3897b79f5:source-1",
+              "automated-lab-experiments:synthesis-project-9f88a41408ebcfd3897b79f5:source-2",
+              "automated-lab-experiments:review-chemspeed",
+              "automated-lab-experiments:review-uncountable",
+              "automated-lab-experiments:review-baybe"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "Compatible paid sites, incremental benefits, installation costs and reachable revenue remain unknown. Existing tools substantially overlap."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T01:27:37.357Z",
+              "reason": "Original sources support this bounded interpretation; no target-market growth, payment or project superiority inferred."
             },
-            "testQuestion": "Which single laboratory workflow has enough repeated paid demand that a standard machine can recover its purchase and support cost?"
+            "reasoning": "Original supplier/repository documentation supports overlapping selection and execution functions. Additional integration value remains a hypothesis, not measured superiority."
           }
         ],
         "evidence": [
           {
             "id": "automated-lab-experiments:synthesis-project-b8decce73f3d44a87f4b472d:source-0",
             "sourceUrl": "https://devpost.com/software/autonomous-nanofabrication",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/autonomous-nanofabrication",
             "title": "Desktop Autonomous Chip Fabrication",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -6850,21 +6918,21 @@
             "retrievedAt": "2026-10-15T16:51:48.275Z",
             "excerpt": "Each material change, exposure adjustment, or process tweak can require dozens to hundreds of experiments. Human expertise is scarce, and iteration cycles are slow.",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Retained original HTML; attributed prototype report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T16:51:48.275Z",
+              "checkedAt": "2026-10-16T01:27:37.357Z",
               "failureIds": []
             }
           },
           {
             "id": "automated-lab-experiments:synthesis-project-b8decce73f3d44a87f4b472d:source-1",
             "sourceUrl": "https://devpost.com/software/autonomous-nanofabrication",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/autonomous-nanofabrication",
             "title": "Desktop Autonomous Chip Fabrication",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -6872,21 +6940,21 @@
             "retrievedAt": "2026-10-15T16:51:48.275Z",
             "excerpt": "Scientists want to run thousands of experiments to improve the chip development lifecycle, but are bottlenecked by time and resources.",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Retained original HTML; attributed prototype report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T16:51:48.275Z",
+              "checkedAt": "2026-10-16T01:27:37.357Z",
               "failureIds": []
             }
           },
           {
             "id": "automated-lab-experiments:synthesis-project-b8decce73f3d44a87f4b472d:source-2",
             "sourceUrl": "https://devpost.com/software/autonomous-nanofabrication",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/autonomous-nanofabrication",
             "title": "Desktop Autonomous Chip Fabrication",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -6894,21 +6962,21 @@
             "retrievedAt": "2026-10-15T16:51:48.275Z",
             "excerpt": "At the same time, semiconductor fabrication still relies heavily on manual experimentation and heuristic tuning.",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Retained original HTML; attributed prototype report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T16:51:48.275Z",
+              "checkedAt": "2026-10-16T01:27:37.357Z",
               "failureIds": []
             }
           },
           {
             "id": "automated-lab-experiments:synthesis-project-b8decce73f3d44a87f4b472d:source-3",
             "sourceUrl": "https://devpost.com/software/autonomous-nanofabrication",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/autonomous-nanofabrication",
             "title": "Desktop Autonomous Chip Fabrication",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -6916,21 +6984,21 @@
             "retrievedAt": "2026-10-15T16:51:48.275Z",
             "excerpt": "Demonstrated closed-loop convergence toward amazing pattern fidelity",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Retained original HTML; attributed prototype report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T16:51:48.275Z",
+              "checkedAt": "2026-10-16T01:27:37.357Z",
               "failureIds": []
             }
           },
           {
             "id": "automated-lab-experiments:synthesis-project-b8decce73f3d44a87f4b472d:source-4",
             "sourceUrl": "https://devpost.com/software/autonomous-nanofabrication",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/autonomous-nanofabrication",
             "title": "Desktop Autonomous Chip Fabrication",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -6938,21 +7006,21 @@
             "retrievedAt": "2026-10-15T16:51:48.275Z",
             "excerpt": "Built a fully autonomous physical fabrication loop",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Retained original HTML; attributed prototype report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T16:51:48.275Z",
+              "checkedAt": "2026-10-16T01:27:37.357Z",
               "failureIds": []
             }
           },
           {
             "id": "automated-lab-experiments:synthesis-project-9f88a41408ebcfd3897b79f5:source-0",
             "sourceUrl": "https://devpost.com/software/phagentic",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/phagentic",
             "title": "Phagentic",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -6960,21 +7028,21 @@
             "retrievedAt": "2026-10-15T16:51:48.275Z",
             "excerpt": "Dozens of trial batches were spent dialing those ratios in.",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Retained original HTML; attributed prototype report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T16:51:48.275Z",
+              "checkedAt": "2026-10-16T01:27:37.357Z",
               "failureIds": []
             }
           },
           {
             "id": "automated-lab-experiments:synthesis-project-9f88a41408ebcfd3897b79f5:source-1",
             "sourceUrl": "https://devpost.com/software/phagentic",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/phagentic",
             "title": "Phagentic",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -6982,21 +7050,21 @@
             "retrievedAt": "2026-10-15T16:51:48.275Z",
             "excerpt": "The model is safety-gated by a classic PID loop; it isn’t allowed to take actions too drastic to prevent catastrophic failures.",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Retained original HTML; attributed prototype report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T16:51:48.275Z",
+              "checkedAt": "2026-10-16T01:27:37.357Z",
               "failureIds": []
             }
           },
           {
             "id": "automated-lab-experiments:synthesis-project-9f88a41408ebcfd3897b79f5:source-2",
             "sourceUrl": "https://devpost.com/software/phagentic",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/phagentic",
             "title": "Phagentic",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -7004,25 +7072,157 @@
             "retrievedAt": "2026-10-15T16:51:48.275Z",
             "excerpt": "We developed and tested the controllers in simulation against our ODE model first, where iteration is cheap — then moved them onto the live reactor",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Retained original HTML; attributed prototype report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T16:51:48.275Z",
+              "checkedAt": "2026-10-16T01:27:37.357Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "automated-lab-experiments:review-polybot",
+            "sourceUrl": "https://www.nature.com/articles/s41467-024-55655-3",
+            "finalUrl": "https://www.nature.com/articles/s41467-024-55655-3",
+            "title": "Polybot: repeated measurements in automated coating experiments",
+            "publisher": "Nature Communications",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2025-02-17",
+            "observationPeriod": "Published February 17, 2025; electronic-polymer film research at Argonne, Illinois, US. Experiment dates and representative industry workload unavailable.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "To ensure the repeatability of our experiments, Polybot performs at least two trials and up to four trials for every sample.",
+            "pdfPage": null,
+            "locator": "Original HTML and surrounding context inspected",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T01:27:37.357Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "automated-lab-experiments:review-chemspeed",
+            "sourceUrl": "https://www.chemspeed.com/example-solutions/flex-formax/",
+            "finalUrl": "https://www.chemspeed.com/example-solutions/flex-formax/",
+            "title": "Chemspeed: automated formulation with planning-software interfaces",
+            "publisher": "Chemspeed",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated supplier documentation retrieved October 15, 2026; features, not independent performance or savings.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Interface to DOE / AI.",
+            "pdfPage": null,
+            "locator": "Original HTML and surrounding context inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T01:27:37.357Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "automated-lab-experiments:review-uncountable",
+            "sourceUrl": "https://www.support.uncountable.com/knowledge-base/10473/",
+            "finalUrl": "https://www.support.uncountable.com/knowledge-base/10473/",
+            "title": "Uncountable: software that recommends formulations",
+            "publisher": "Uncountable",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Documentation updated July 2, 2026; no physical execution or customer savings established.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "The algorithm suggests formulations that are most likely to meet your specs.",
+            "pdfPage": null,
+            "locator": "Original HTML and surrounding context inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T01:27:37.357Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "automated-lab-experiments:review-baybe",
+            "sourceUrl": "https://github.com/emdgroup/baybe",
+            "finalUrl": "https://github.com/emdgroup/baybe",
+            "title": "BayBE: open-source experiment selection",
+            "publisher": "Merck / BayBE maintainers",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Repository retrieved October 15, 2026; availability does not establish free integration or equivalent uptime.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Create materials, chemical mixtures or formulations with desired properties",
+            "pdfPage": null,
+            "locator": "Original HTML and surrounding context inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T01:27:37.357Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "automated-lab-experiments:review-basf",
+            "sourceUrl": "https://www.basf.com/global/en/media/news-releases/2025/12/p-25-241",
+            "finalUrl": "https://www.basf.com/global/en/media/news-releases/2025/12/p-25-241",
+            "title": "BASF: an internal system that tunes chemical reactions",
+            "publisher": "BASF",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2025-12-11",
+            "observationPeriod": "December 11, 2025 release. Operator-reported initial experiments; sample size, site and timing baseline undisclosed. Not a project result or industry growth measure.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Our first experiments already demonstrated that we are 20 times faster than when we do it manually",
+            "pdfPage": null,
+            "locator": "Original HTML and surrounding context inspected",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T01:27:37.357Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "automated-lab-experiments:review-category",
+            "sourceUrl": "https://s22.q4cdn.com/617463959/files/doc_news/2024/Jan/25/chemspeed_acquisition_1-24-24.pdf",
+            "finalUrl": "https://s22.q4cdn.com/617463959/files/doc_news/2024/Jan/25/chemspeed_acquisition_1-24-24.pdf",
+            "title": "Chemspeed’s reported 2023 revenue: a supplier analogue, not market size",
+            "publisher": "Bruker",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2024-01-25",
+            "observationPeriod": "One Swiss-based supplier’s worldwide 2023 business across laboratory R&D and quality-control industries. Not coating-only revenue or this product’s reachable market.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "In 2023, Chemspeed generated revenues greater than $50 million, and Chemspeed was profitable.",
+            "pdfPage": 1,
+            "locator": "Original publisher PDF physical page 1, visually inspected",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T01:27:37.357Z",
               "failureIds": []
             }
           }
         ],
         "migrationGaps": [],
-        "id": "automated-lab-experiments:rubric-v2-20261015",
+        "id": "automated-lab-experiments:evidence-review-v2-20261016",
         "opportunityId": "automated-lab-experiments",
-        "parentRevisionId": "automated-lab-experiments:manifesto-20261015",
-        "createdAt": "2026-10-15T21:24:18.427Z",
-        "producerId": "rubric-reassessment-v2",
-        "origin": "saved-data-synthesis",
-        "changeReason": "Reassessed adjacent uses and functional alternatives. Original evidence review statuses preserved; no new market qualification.",
-        "contentHash": "82afebe1034e8341764d16e8cb4479c336bcad066bfcdab2fbe2861db9827486",
+        "parentRevisionId": "automated-lab-experiments:rubric-v2-20261015",
+        "createdAt": "2026-10-16T01:27:37.357Z",
+        "producerId": "codex-evidence-inspector",
+        "origin": "inspection-correction",
+        "changeReason": "Inspect all recovered lab evidence and original project sources; distinguish coating/reaction transfer hypotheses, existing tools and possible supplementary execution. Exclude inaccessible originals and unsupported market denominators.",
+        "contentHash": "a3a29b2b05da2cfb8b2678c7d20c46ec66dcdd7115bead0d520ef2b8ac2a180a",
         "title": "Lab equipment that runs and adjusts repeated experiments",
         "classifications": [
           "Manufacturing",
@@ -7032,120 +7232,64 @@
         "assessment": {
           "rubricVersion": "venture-screen-v2",
           "priority": "medium",
-          "priorityReason": "Selecting the next experiment may complement existing laboratory machines. The initial product should fit one repeated workflow instead of promising a universal lab.",
+          "priorityReason": "A repeatable coating workflow has a concrete link between measurement and useful output. Investigate added execution value over current tools; broad autonomous-lab claims are not supported.",
           "confidence": {
             "level": "low",
-            "reason": "Low; physical attempts support investigation, not general laboratory autonomy."
+            "reason": "Original sources support prototypes, a real workflow and overlapping alternatives. Customer payment, added savings and cross-site economics are unproven."
           },
           "dimensions": {
             "problem": {
               "status": "supported",
-              "reason": "Saved builders describe repeated tuning and unstable physical conditions.",
+              "reason": "Polybot and BASF document repeated measurement and tuning. Target-customer frequency and financial burden remain unknown.",
               "claimIds": [
-                "automated-lab-experiments:what",
-                "automated-lab-experiments:problem",
-                "automated-lab-experiments:opportunity",
-                "automated-lab-experiments:customer-0",
-                "automated-lab-experiments:customer-1",
-                "automated-lab-experiments:application-0",
-                "automated-lab-experiments:application-1",
-                "automated-lab-experiments:project-synthesis-project-b8decce73f3d44a87f4b472d",
-                "automated-lab-experiments:project-synthesis-project-9f88a41408ebcfd3897b79f5"
+                "automated-lab-experiments:problem"
               ]
             },
             "customerPayment": {
               "status": "plausible",
-              "reason": "Industrial and research labs have the workflow; buying intent and budgets are missing.",
+              "reason": "Organizations buy laboratory automation, but no verified budget holder or purchase commitment for this proposed product.",
               "claimIds": [
-                "automated-lab-experiments:what",
-                "automated-lab-experiments:problem",
-                "automated-lab-experiments:opportunity",
-                "automated-lab-experiments:customer-0",
-                "automated-lab-experiments:customer-1",
-                "automated-lab-experiments:application-0",
-                "automated-lab-experiments:application-1",
-                "automated-lab-experiments:project-synthesis-project-b8decce73f3d44a87f4b472d",
-                "automated-lab-experiments:project-synthesis-project-9f88a41408ebcfd3897b79f5"
+                "automated-lab-experiments:customer-0"
               ]
             },
             "productValue": {
               "status": "plausible",
-              "reason": "A measured experiment can inform the next setting; the reported loops do not quantify staff-time savings.",
+              "reason": "Measured results can guide the next experiment. Project-level time savings and industrial transfer are unproven.",
               "claimIds": [
-                "automated-lab-experiments:what",
-                "automated-lab-experiments:problem",
-                "automated-lab-experiments:opportunity",
-                "automated-lab-experiments:customer-0",
-                "automated-lab-experiments:customer-1",
-                "automated-lab-experiments:application-0",
-                "automated-lab-experiments:application-1",
-                "automated-lab-experiments:project-synthesis-project-b8decce73f3d44a87f4b472d",
-                "automated-lab-experiments:project-synthesis-project-9f88a41408ebcfd3897b79f5"
+                "automated-lab-experiments:what"
               ]
             },
             "commercialGap": {
-              "status": "plausible",
-              "reason": "A decision/control layer could supplement existing liquid handling or process equipment. Replacing all lab hardware is unnecessary.",
+              "status": "missing",
+              "reason": "A supplementary execution layer is plausible, but no valuable unmet task beyond Chemspeed, planning software and internal tools is established.",
               "claimIds": [
-                "automated-lab-experiments:what",
-                "automated-lab-experiments:problem",
-                "automated-lab-experiments:opportunity",
-                "automated-lab-experiments:customer-0",
-                "automated-lab-experiments:customer-1",
-                "automated-lab-experiments:application-0",
-                "automated-lab-experiments:application-1",
-                "automated-lab-experiments:project-synthesis-project-b8decce73f3d44a87f4b472d",
-                "automated-lab-experiments:project-synthesis-project-9f88a41408ebcfd3897b79f5"
+                "automated-lab-experiments:v2-comparison"
               ]
             },
             "ventureScale": {
               "status": "plausible",
-              "reason": "Repeat workflows and compatible instruments offer a potential expansion route; no reachable market estimate.",
+              "reason": "Repeatable installation across similar labs is conceivable; incumbent revenue is an analogue, not reachable demand. Site counts, price and adoption remain missing.",
               "claimIds": [
-                "automated-lab-experiments:what",
-                "automated-lab-experiments:problem",
-                "automated-lab-experiments:opportunity",
-                "automated-lab-experiments:customer-0",
-                "automated-lab-experiments:customer-1",
-                "automated-lab-experiments:application-0",
-                "automated-lab-experiments:application-1",
-                "automated-lab-experiments:project-synthesis-project-b8decce73f3d44a87f4b472d",
-                "automated-lab-experiments:project-synthesis-project-9f88a41408ebcfd3897b79f5"
+                "automated-lab-experiments:customer-0"
               ]
             },
             "businessCapital": {
               "status": "missing",
-              "reason": "Instrument adapters, contamination control, calibration and service burden are unresolved.",
+              "reason": "Adapters, calibration, cleaning, safety engineering and support costs are unmeasured.",
               "claimIds": [
-                "automated-lab-experiments:what",
-                "automated-lab-experiments:problem",
-                "automated-lab-experiments:opportunity",
-                "automated-lab-experiments:customer-0",
-                "automated-lab-experiments:customer-1",
-                "automated-lab-experiments:application-0",
-                "automated-lab-experiments:application-1",
-                "automated-lab-experiments:project-synthesis-project-b8decce73f3d44a87f4b472d",
-                "automated-lab-experiments:project-synthesis-project-9f88a41408ebcfd3897b79f5"
+                "automated-lab-experiments:opportunity"
               ]
             },
             "timing": {
-              "status": "missing",
-              "reason": "Prototype activity does not establish increasing laboratory purchases.",
+              "status": "plausible",
+              "reason": "Related research and available tools support technical feasibility; no accelerating purchases or time-limited buying window demonstrated.",
               "claimIds": [
-                "automated-lab-experiments:what",
-                "automated-lab-experiments:problem",
-                "automated-lab-experiments:opportunity",
-                "automated-lab-experiments:customer-0",
-                "automated-lab-experiments:customer-1",
-                "automated-lab-experiments:application-0",
-                "automated-lab-experiments:application-1",
-                "automated-lab-experiments:project-synthesis-project-b8decce73f3d44a87f4b472d",
-                "automated-lab-experiments:project-synthesis-project-9f88a41408ebcfd3897b79f5"
+                "automated-lab-experiments:v2-comparison"
               ]
             }
           },
-          "strongestObjection": "Every experiment may need specialist hardware and setup.",
-          "decisiveQuestion": "One workflow: accepted results per staff-hour and full cost versus the existing partially automated process."
+          "strongestObjection": "Custom measurement, setup and maintenance at each lab could consume the benefit and make this a service business rather than a repeatable product.",
+          "decisiveQuestion": "Does one repeatable coating workflow deliver more accepted results per staff-hour than the lab’s best existing setup, after installation, cleaning and support—and will a budget holder pay for that gain?"
         }
       },
       "research": null,
