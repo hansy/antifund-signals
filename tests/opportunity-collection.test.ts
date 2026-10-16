@@ -26,11 +26,14 @@ test("every saved signal has exactly one placement without changing its research
     corpus.insights.map((x) => x.id).sort(),
   );
   const main = entries.filter((x) => collectionIncludes(x, "main"));
-  expect(main).toHaveLength(13);
-  expect(main.filter((x) => x.group).map((x) => x.id)).toEqual([
-    "group-flexible-energy",
-  ]);
+  expect(main).toHaveLength(12);
+  expect(main.filter((x) => x.group)).toEqual([]);
+  expect(
+    opportunityCollection.groups.some((x) => x.id === "group-flexible-energy"),
+  ).toBe(false);
   for (const id of [
+    "compute-energy-control",
+    "flexible-electricity",
     "walking-freeze-cues",
     "reusable-metal-filters",
     "field-blood-transport",

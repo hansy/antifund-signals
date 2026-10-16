@@ -103,17 +103,15 @@
     },
     {
       "id": "compute-energy-control",
-      "placement": "supporting",
+      "placement": "project",
       "title": "Schedule AI training around electricity costs",
-      "reason": "Computing operators must preserve job deadlines and account for the cost of idle hardware.",
-      "parentId": "group-flexible-energy"
+      "reason": "Removed from surfaced opportunities at the user’s request. Original research and evidence are retained here."
     },
     {
       "id": "flexible-electricity",
-      "placement": "supporting",
+      "placement": "project",
       "title": "Move flexible electricity use to cheaper hours",
-      "reason": "Fleet departures and building comfort impose different constraints and buying requirements.",
-      "parentId": "group-flexible-energy"
+      "reason": "Removed from surfaced opportunities at the user’s request. Original research and evidence are retained here."
     },
     {
       "id": "gesture-robot-assistance",
@@ -141,14 +139,6 @@
     }
   ],
   "groups": [
-    {
-      "id": "group-flexible-energy",
-      "title": "Lower energy costs by shifting flexible work",
-      "placement": "opportunity",
-      "summary": "Schedule work for times when electricity costs less or the grid has spare capacity, while still meeting deadlines.",
-      "boundary": "Computing, fleets and buildings are separate customer tracks. They share an economic idea, not a proven common product or combined market.",
-      "section": "Customer tracks"
-    },
     {
       "id": "group-factory-quality",
       "title": "Less manual factory quality control",
