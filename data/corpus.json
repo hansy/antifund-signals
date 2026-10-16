@@ -3768,10 +3768,10 @@
       "title": "Infer",
       "year": 2026,
       "summary": "Infer reports folding towels, shirts and pillowcases, checking alignment and retrying slipped grips. It supplies no trial count, cycle time or labor-savings comparison.",
-      "problem": "We think shifting cloth and failed grasps make reliable automation difficult.",
-      "approach": "Cameras track cloth edges while two robot arms fold it. Software checks alignment, retries failed grips and allows remote human takeover.",
-      "whyItMatters": "We think a narrow folding service could reduce repetitive handling if it works reliably and quickly enough. Labor savings and broader manipulation ability are unproven.",
-      "statusQuo": "Manual folding and existing folding machinery or robots are plausible alternatives. The source provides no comparable cost or performance tests.",
+      "problem": "Cloth slips and changes shape during folding; the team describes failed grips and conflicting arm movements.",
+      "approach": "The team describes camera-guided folding with two robot arms, checks and retries after slips, and remote human takeover.",
+      "whyItMatters": "Recovery could help automate recurring folding work, if the time saved exceeds loading, checking and assistance. No commercial benefit is demonstrated.",
+      "statusQuo": "Conventional garment folders and assisted folding robots overlap with this task; the team supplies no matched comparison.",
       "results": "The source reports folding towels, shirts, and pillowcases with unchanged settings, and describes physical slip and arm-coordination fixes. Test counts and success rates are absent.",
       "limitations": "No trial count, cycle time, failure distribution, or economic comparison is reported. Pixel alignment alone does not establish customer-acceptable fold quality. Arbitrary garment handling remains future work. One operator supervising dozens of robots is not demonstrated. Broad superiority to learned robot behavior is unsupported. Year and school identify the source event collection, not a verified completion date or author affiliation.",
       "topics": [
@@ -5356,13 +5356,13 @@
       "title": "Laundry-folding robots that retry mistakes and ask for help",
       "summary": "Fold laundry, retry mistakes, and call for human help.",
       "topic": "Robotics",
-      "problem": "Cloth moves and slips as it is handled, so repeating the same robot movement is not enough.",
-      "statusQuo": "Cloth moves and slips as it is handled, so repeating the same robot movement is not enough.",
-      "gap": "One operator supervising dozens of robots is an unsupported future scale claim. No cycle time, trial count, successful shifts or labor savings. Assertions of broad superiority over learned robot policies are not accepted.",
-      "opportunity": "Recovery from mistakes is necessary for useful unattended work. A narrowly defined folding task could be worth testing before attempting general household robotics.",
-      "evidence": "Recovery from mistakes is necessary for useful unattended work. A narrowly defined folding task could be worth testing before attempting general household robotics.",
-      "counterpoint": "Slow cycles and human recovery may leave less output per paid hour than manual work.",
-      "nextQuestion": "Accepted folds per paid operator-hour over full shifts against the actual current mix of equipment and manual work.",
+      "problem": "Folding laundry involves repeated handling and awkward postures. A Canadian hotel case documents strain risks from towel folding. Existing machines automate some items, but garment folders can still require workers to position each piece.",
+      "statusQuo": "Manual folding, conventional folding machines and assisted folding robots already perform parts of the task.",
+      "gap": "Recurring items that remain costly to handle after choosing suitable existing equipment and improving the manual workflow.",
+      "opportunity": "Commercial laundries could use a robot for recurring items that their current equipment leaves to staff. The value would come from reducing total paid handling, including loading, checking and human help. JENSEN already sells garment folders, and Weave offers assisted folding robots; the opening depends on handling a useful mix of items at a lower total cost.",
+      "evidence": "Infer reports retries and human takeover, but gives no trial count, cycle time or labor-savings comparison. Existing suppliers already offer garment folding and remote assistance.",
+      "counterpoint": "The remaining items may be too infrequent or need too much help to justify another machine. Good folds alone do not mean fewer paid hours.",
+      "nextQuestion": "Across full laundry shifts, does this robot increase acceptable folds per paid staff-hour after loading, checking, packing, repairs and remote help—and will an operator pay for the improvement?",
       "projectIds": [
         "synthesis-project-75d27902a56c2e3c8462b6bb"
       ],
@@ -5371,8 +5371,8 @@
       ],
       "confidence": "Early signal",
       "brief": {
-        "whatItIs": "Cameras track a garment while two robot arms fold it. The machine checks the result, retries a failed grip and lets a person take over when it gets stuck.",
-        "problem": "Cloth moves and slips as it is handled, so repeating the same robot movement is not enough.",
+        "whatItIs": "Two robot arms use cameras to fold laundry, check the result and retry slipped grips. Infer’s team reports folding towels, shirts and pillowcases, with human takeover when needed. Full-shift reliability and labor savings remain untested.",
+        "problem": "Folding laundry involves repeated handling and awkward postures. A Canadian hotel case documents strain risks from towel folding. Existing machines automate some items, but garment folders can still require workers to position each piece.",
         "breakthroughs": [
           {
             "text": "Infer reports folding towels, shirts and pillowcases, checking alignment and retrying slipped grips. It supplies no trial count, cycle time or labor-savings comparison.",
@@ -5381,23 +5381,54 @@
             ]
           }
         ],
-        "marketOpportunity": "Recovery from mistakes is necessary for useful unattended work. A narrowly defined folding task could be worth testing before attempting general household robotics.",
-        "buyer": "Commercial laundry operators",
+        "marketOpportunity": "Commercial laundries could use a robot for recurring items that their current equipment leaves to staff. The value would come from reducing total paid handling, including loading, checking and human help. JENSEN already sells garment folders, and Weave offers assisted folding robots; the opening depends on handling a useful mix of items at a lower total cost.",
+        "buyer": "Commercial laundry operators with recurring manual folding work",
         "applications": [
-          "Folding a defined set of garments",
-          "Recovering from failed grips"
+          "Folding a defined mix of clean garments",
+          "Handling recurring items left to staff beside an existing folding line"
         ],
         "targetCustomers": [
-          "Commercial laundry operators"
+          "Commercial laundry operators with recurring manual folding work"
         ],
-        "marketStatus": "hypothesis",
-        "marketEvidence": [],
+        "marketStatus": "researched",
+        "marketEvidence": [
+          {
+            "title": "CCOHS: manual laundry work in a Canadian hotel",
+            "url": "https://www.ccohs.ca/oshanswers/occup_workplace/laundry.html",
+            "excerpt": "Folding towels puts workers at risk for neck and shoulder injuries. Bending and twisting pose the risk for back injuries.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "JENSEN: automatic towel handling",
+            "url": "https://www.jensen-group.com/products/flatwork-finishing-technology/handling-and-sorting/blizz",
+            "excerpt": "Automatic separation and feeding by BLIZZ.\nAutomatic folding, sorting and stacking by the Butterfly towel folder.\nAutomatic rejection of washcloths and pillow cases",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "JENSEN: garment folding with manual feeding",
+            "url": "https://www.jensen-group.com/nl/news/news-detail/perfectly-folded-bathrobes-and-towels-in-one-machine",
+            "excerpt": "the bathrobe is manually fed onto an almost vertically positioned feeding station at one end of the machine.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Weave: folding with remote assistance",
+            "url": "https://www.weaverobotics.com/isaac-0",
+            "excerpt": "Isaac 0 blends autonomy with teleoperation (remote assistance by a Weave specialist) to guarantee that we complete every fold.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Weave: business installation and support",
+            "url": "https://www.weaverobotics.com/business",
+            "excerpt": "Weave handles installation, support, and improvements over the air.",
+            "accessedAt": "2026-10-15"
+          }
+        ],
         "risks": [
-          "One operator supervising dozens of robots is an unsupported future scale claim. No cycle time, trial count, successful shifts or labor savings. Assertions of broad superiority over learned robot policies are not accepted.",
-          "One project supplies the direct evidence; repeat descriptions are not independent corroboration."
+          "The remaining items may be too infrequent or need too much help to justify another machine. Good folds alone do not mean fewer paid hours.",
+          "Machine price, support costs, paid demand and the number of suitable sites remain unknown."
         ],
         "nextQuestions": [
-          "Accepted folds per paid operator-hour over full shifts against the actual current mix of equipment and manual work."
+          "Across full laundry shifts, does this robot increase acceptable folds per paid staff-hour after loading, checking, packing, repairs and remote help—and will an operator pay for the improvement?"
         ]
       }
     },

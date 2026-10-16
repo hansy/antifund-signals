@@ -8684,8 +8684,8 @@
     {
       "schemaVersion": 1,
       "id": "laundry-folding",
-      "revision": 1,
-      "acceptedRevisionId": "laundry-folding:rubric-v2-20261015",
+      "revision": 2,
+      "acceptedRevisionId": "laundry-folding:evidence-review-v2-20261016",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -8693,10 +8693,10 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T18:55:13.081Z",
-      "updatedAt": "2026-10-15T21:24:18.427Z",
+      "updatedAt": "2026-10-16T00:49:48.758Z",
       "verdict": null,
       "stage": "first-impressions",
-      "qualificationError": null,
+      "qualificationError": "Reviewed; recurring manual work is supported, but added customer value, payment and venture-scale economics are not established.",
       "accepted": {
         "content": {
           "marketSize": [],
@@ -8718,7 +8718,7 @@
             "laundry-folding:application-0",
             "laundry-folding:application-1"
           ],
-          "keyQuestion": "Accepted folds per paid operator-hour over full shifts against the actual current mix of equipment and manual work."
+          "keyQuestion": "Across full laundry shifts, does this robot increase acceptable folds per paid staff-hour after loading, checking, packing, repairs and remote help—and will an operator pay for the improvement?"
         },
         "projects": [
           {
@@ -8735,111 +8735,140 @@
         "claims": [
           {
             "id": "laundry-folding:what",
-            "text": "Cameras track a garment while two robot arms fold it. The machine checks the result, retries a failed grip and lets a person take over when it gets stuck.",
-            "evidenceIds": [],
+            "text": "Two robot arms use cameras to fold laundry, check the result and retry slipped grips. Infer’s team reports folding towels, shirts and pillowcases, with human takeover when needed. Full-shift reliability and labor savings remain untested.",
+            "evidenceIds": [
+              "laundry-folding:synthesis-project-75d27902a56c2e3c8462b6bb:source-0",
+              "laundry-folding:synthesis-project-75d27902a56c2e3c8462b6bb:source-1"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Eligible workload, all human assistance, net savings, payment and reachable market remain unknown. Supplier descriptions are not independently measured performance."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T00:49:48.758Z",
+              "reason": "Explicit proposed use or business hypothesis; not customer validation."
             },
             "kind": "hypothesis",
             "testQuestion": "How many acceptable folds per paid operator-hour can it sustain on a real laundry shift, including all interventions?"
           },
           {
             "id": "laundry-folding:problem",
-            "text": "Cloth moves and slips as it is handled, so repeating the same robot movement is not enough.",
-            "evidenceIds": [],
+            "text": "Folding laundry involves repeated handling and awkward postures. A Canadian hotel case documents strain risks from towel folding. Existing machines automate some items, but garment folders can still require workers to position each piece.",
+            "evidenceIds": [
+              "laundry-folding:review-ccohs",
+              "laundry-folding:review-fox"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Eligible workload, all human assistance, net savings, payment and reachable market remain unknown. Supplier descriptions are not independently measured performance."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T00:49:48.758Z",
+              "reason": "Original primary material supports this bounded interpretation; not a claim of measured savings or market scale."
             },
-            "kind": "hypothesis",
-            "testQuestion": "How many acceptable folds per paid operator-hour can it sustain on a real laundry shift, including all interventions?"
+            "kind": "inference",
+            "reasoning": "The hotel case establishes manual work and posture risks; original supplier descriptions establish remaining manual placement. No prevalence or avoidable cost is inferred."
           },
           {
             "id": "laundry-folding:opportunity",
-            "text": "Recovery from mistakes is necessary for useful unattended work. A narrowly defined folding task could be worth testing before attempting general household robotics.",
-            "evidenceIds": [],
+            "text": "Commercial laundries could use a robot for recurring items that their current equipment leaves to staff. The value would come from reducing total paid handling, including loading, checking and human help. JENSEN already sells garment folders, and Weave offers assisted folding robots; the opening depends on handling a useful mix of items at a lower total cost.",
+            "evidenceIds": [
+              "laundry-folding:synthesis-project-75d27902a56c2e3c8462b6bb:source-0",
+              "laundry-folding:synthesis-project-75d27902a56c2e3c8462b6bb:source-1",
+              "laundry-folding:review-blizz",
+              "laundry-folding:review-fox",
+              "laundry-folding:review-weave",
+              "laundry-folding:review-service"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Eligible workload, all human assistance, net savings, payment and reachable market remain unknown. Supplier descriptions are not independently measured performance."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T00:49:48.758Z",
+              "reason": "Explicit proposed use or business hypothesis; not customer validation."
             },
             "kind": "hypothesis",
-            "testQuestion": "How many acceptable folds per paid operator-hour can it sustain on a real laundry shift, including all interventions?"
+            "testQuestion": "Across full laundry shifts, does this robot increase acceptable folds per paid staff-hour after loading, checking, packing, repairs and remote help—and will an operator pay for the improvement?"
           },
           {
             "id": "laundry-folding:customer-0",
-            "text": "Commercial laundry operators",
-            "evidenceIds": [],
+            "text": "Commercial laundry operators with recurring manual folding work",
+            "evidenceIds": [
+              "laundry-folding:review-ccohs",
+              "laundry-folding:review-fox",
+              "laundry-folding:review-service"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Eligible workload, all human assistance, net savings, payment and reachable market remain unknown. Supplier descriptions are not independently measured performance."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T00:49:48.758Z",
+              "reason": "Explicit proposed use or business hypothesis; not customer validation."
             },
             "kind": "hypothesis",
-            "testQuestion": "How many acceptable folds per paid operator-hour can it sustain on a real laundry shift, including all interventions?"
+            "testQuestion": "Which operator has enough eligible work, budget and achievable net savings to pay?"
           },
           {
             "id": "laundry-folding:application-0",
-            "text": "Folding a defined set of garments",
-            "evidenceIds": [],
+            "text": "Folding a defined mix of clean garments",
+            "evidenceIds": [
+              "laundry-folding:synthesis-project-75d27902a56c2e3c8462b6bb:source-0",
+              "laundry-folding:synthesis-project-75d27902a56c2e3c8462b6bb:source-1",
+              "laundry-folding:review-blizz",
+              "laundry-folding:review-fox",
+              "laundry-folding:review-weave"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Eligible workload, all human assistance, net savings, payment and reachable market remain unknown. Supplier descriptions are not independently measured performance."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T00:49:48.758Z",
+              "reason": "Explicit proposed use or business hypothesis; not customer validation."
             },
             "kind": "hypothesis",
-            "testQuestion": "How many acceptable folds per paid operator-hour can it sustain on a real laundry shift, including all interventions?"
+            "testQuestion": "Across full laundry shifts, does this robot increase acceptable folds per paid staff-hour after loading, checking, packing, repairs and remote help—and will an operator pay for the improvement?"
           },
           {
             "id": "laundry-folding:application-1",
-            "text": "Recovering from failed grips",
-            "evidenceIds": [],
+            "text": "Handling recurring items left to staff beside an existing folding line",
+            "evidenceIds": [
+              "laundry-folding:synthesis-project-75d27902a56c2e3c8462b6bb:source-0",
+              "laundry-folding:synthesis-project-75d27902a56c2e3c8462b6bb:source-1",
+              "laundry-folding:review-blizz",
+              "laundry-folding:review-fox",
+              "laundry-folding:review-weave"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; market size, buying intent and growth are unverified."
+              "Eligible workload, all human assistance, net savings, payment and reachable market remain unknown. Supplier descriptions are not independently measured performance."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T00:49:48.758Z",
+              "reason": "Explicit proposed use or business hypothesis; not customer validation."
             },
             "kind": "hypothesis",
-            "testQuestion": "How many acceptable folds per paid operator-hour can it sustain on a real laundry shift, including all interventions?"
+            "testQuestion": "Across full laundry shifts, does this robot increase acceptable folds per paid staff-hour after loading, checking, packing, repairs and remote help—and will an operator pay for the improvement?"
           },
           {
             "id": "laundry-folding:project-synthesis-project-75d27902a56c2e3c8462b6bb",
@@ -8851,13 +8880,13 @@
             "derivedFromClaimIds": [],
             "confidence": "moderate",
             "limitations": [
-              "Project-reported evidence; not independently reproduced."
+              "No independent reproduction, trial count, cycle time or customer economics. Pixel alignment is not accepted-fold quality."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T00:49:48.758Z",
+              "reason": "Original project excerpt and context checked; attributed team account only."
             },
             "kind": "reported",
             "attribution": "Infer; Infer",
@@ -8865,30 +8894,35 @@
           },
           {
             "id": "laundry-folding:v2-comparison",
-            "text": "Potential supplement handling jobs current equipment does poorly; alternative to manual folding for those items.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "JENSEN’s BLIZZ automates towel feeding and folding; its Fox MF Duo folds garments after manual placement. Weave already combines folding with remote human help. A robot could supplement a laundry line by handling its leftover work, but must also beat better manual organization on total cost and acceptable output.",
+            "kind": "inference",
+            "evidenceIds": [
+              "laundry-folding:review-blizz",
+              "laundry-folding:review-fox",
+              "laundry-folding:review-weave",
+              "laundry-folding:review-ccohs"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "Eligible workload, all human assistance, net savings, payment and reachable market remain unknown. Supplier descriptions are not independently measured performance."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T00:49:48.758Z",
+              "reason": "Original primary material supports this bounded interpretation; not a claim of measured savings or market scale."
             },
-            "testQuestion": "How many acceptable folds per paid operator-hour can it sustain on a real laundry shift, including all interventions?"
+            "reasoning": "Original supplier descriptions establish overlap; the CCOHS case discusses work organization as an alternative. Net value of a supplementary station remains hypothetical."
           }
         ],
         "evidence": [
           {
             "id": "laundry-folding:synthesis-project-75d27902a56c2e3c8462b6bb:source-0",
             "sourceUrl": "https://devpost.com/software/infer-t3smnh",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/infer-t3smnh",
             "title": "Infer",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -8896,21 +8930,21 @@
             "retrievedAt": "2026-10-15T18:55:13.081Z",
             "excerpt": "Generalization: Tested on towels, shirts, and pillowcases with identical settings and zero retraining.",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Retained original HTML; attributed team report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T18:55:13.081Z",
+              "checkedAt": "2026-10-16T00:49:48.758Z",
               "failureIds": []
             }
           },
           {
             "id": "laundry-folding:synthesis-project-75d27902a56c2e3c8462b6bb:source-1",
             "sourceUrl": "https://devpost.com/software/infer-t3smnh",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/infer-t3smnh",
             "title": "Infer",
-            "publisher": null,
+            "publisher": "Project authors on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -8918,25 +8952,135 @@
             "retrievedAt": "2026-10-15T18:55:13.081Z",
             "excerpt": "The distance between the cloth's moving edge and the fold target drops from roughly 200 pixels to zero across 2-3 attempts",
             "pdfPage": null,
-            "locator": "Saved project description; project-reported evidence",
+            "locator": "Retained original HTML; attributed team report, not independent reproduction",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T18:55:13.081Z",
+              "checkedAt": "2026-10-16T00:49:48.758Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "laundry-folding:review-ccohs",
+            "sourceUrl": "https://www.ccohs.ca/oshanswers/occup_workplace/laundry.html",
+            "finalUrl": "https://www.ccohs.ca/oshanswers/occup_workplace/laundry.html",
+            "title": "CCOHS: manual laundry work in a Canadian hotel",
+            "publisher": "Canadian Centre for Occupational Health and Safety",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Hotel Newfoundland, Canada; observation date unspecified, guidance revised December 17, 2021",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Folding towels puts workers at risk for neck and shoulder injuries. Bending and twisting pose the risk for back injuries.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding context inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T00:49:48.758Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "laundry-folding:review-blizz",
+            "sourceUrl": "https://www.jensen-group.com/products/flatwork-finishing-technology/handling-and-sorting/blizz",
+            "finalUrl": "https://www.jensen-group.com/products/flatwork-finishing-technology/handling-and-sorting/blizz",
+            "title": "JENSEN: automatic towel handling",
+            "publisher": "JENSEN-GROUP",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated supplier description; no independent throughput comparison",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Automatic separation and feeding by BLIZZ.\nAutomatic folding, sorting and stacking by the Butterfly towel folder.\nAutomatic rejection of washcloths and pillow cases",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding context inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T00:49:48.758Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "laundry-folding:review-fox",
+            "sourceUrl": "https://www.jensen-group.com/nl/news/news-detail/perfectly-folded-bathrobes-and-towels-in-one-machine",
+            "finalUrl": "https://www.jensen-group.com/nl/news/news-detail/perfectly-folded-bathrobes-and-towels-in-one-machine",
+            "title": "JENSEN: garment folding with manual feeding",
+            "publisher": "JENSEN-GROUP",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated supplier description; task and workflow only",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "the bathrobe is manually fed onto an almost vertically positioned feeding station at one end of the machine.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding context inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T00:49:48.758Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "laundry-folding:review-weave",
+            "sourceUrl": "https://www.weaverobotics.com/isaac-0",
+            "finalUrl": "https://www.weaverobotics.com/isaac-0",
+            "title": "Weave: folding with remote assistance",
+            "publisher": "Weave Robotics",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated supplier description retrieved October 15, 2026; commercial outcome unverified",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Isaac 0 blends autonomy with teleoperation (remote assistance by a Weave specialist) to guarantee that we complete every fold.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding context inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T00:49:48.758Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "laundry-folding:review-service",
+            "sourceUrl": "https://www.weaverobotics.com/business",
+            "finalUrl": "https://www.weaverobotics.com/business",
+            "title": "Weave: business installation and support",
+            "publisher": "Weave Robotics",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated supplier offer, California; no verified deployment economics",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Weave handles installation, support, and improvements over the air.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding context inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T00:49:48.758Z",
               "failureIds": []
             }
           }
         ],
         "migrationGaps": [],
-        "id": "laundry-folding:rubric-v2-20261015",
+        "id": "laundry-folding:evidence-review-v2-20261016",
         "opportunityId": "laundry-folding",
-        "parentRevisionId": "laundry-folding:manifesto-pass2-20261015",
-        "createdAt": "2026-10-15T21:24:18.427Z",
-        "producerId": "rubric-reassessment-v2",
-        "origin": "saved-data-synthesis",
-        "changeReason": "Reassessed adjacent uses and functional alternatives. Original evidence review statuses preserved; no new market qualification.",
-        "contentHash": "999afd68dee869ccfbb4900710a73034e48864a44e7bb20999897994a6c3bfae",
+        "parentRevisionId": "laundry-folding:rubric-v2-20261015",
+        "createdAt": "2026-10-16T00:49:48.758Z",
+        "producerId": "codex-evidence-inspector",
+        "origin": "inspection-correction",
+        "changeReason": "Inspect original project and three research reports; compare existing garment folders and assisted robots; distinguish a supplementary use from a demonstrated commercial gap; exclude unverified figures.",
+        "contentHash": "90cb2f8a5f07fb8215ac7ed048599cd006838c48d5905208273cd5e8bec09fff",
         "title": "Laundry-folding robots that retry mistakes and ask for help",
         "classifications": [
           "Robotics"
@@ -8944,106 +9088,64 @@
         "assessment": {
           "rubricVersion": "venture-screen-v2",
           "priority": "medium",
-          "priorityReason": "A robot may complement existing laundry equipment by handling awkward items or recovery. Do not require it to replace an entire laundry line, or presume a profitable exception market.",
+          "priorityReason": "Repeated folding work and a plausible recovery mechanism support a focused operating trial. Existing folders and assisted robots raise the bar: useful item coverage and lower total handling cost must be demonstrated.",
           "confidence": {
             "level": "low",
-            "reason": "Low commercially; one reported prototype with detailed limitations."
+            "reason": "Manual work and competing capabilities are documented. Infer’s shift performance, payment, service costs and reachable scale remain unproven."
           },
           "dimensions": {
             "problem": {
               "status": "supported",
-              "reason": "The saved prototype describes slipping cloth, changing corners and conflicting arm movements.",
+              "reason": "A Canadian hotel case documents repetitive folding and posture risks; suitable garment machinery still includes manual feeding. Folding-only cost and prevalence unknown.",
               "claimIds": [
-                "laundry-folding:what",
-                "laundry-folding:problem",
-                "laundry-folding:opportunity",
-                "laundry-folding:customer-0",
-                "laundry-folding:application-0",
-                "laundry-folding:application-1",
-                "laundry-folding:project-synthesis-project-75d27902a56c2e3c8462b6bb"
+                "laundry-folding:problem"
               ]
             },
             "customerPayment": {
-              "status": "plausible",
-              "reason": "Laundry operators perform the task; cost burden and willingness to buy this approach are not established.",
+              "status": "missing",
+              "reason": "A plausible operator payer is identified, but no budget, purchase commitment or paid adoption of Infer is verified.",
               "claimIds": [
-                "laundry-folding:what",
-                "laundry-folding:problem",
-                "laundry-folding:opportunity",
-                "laundry-folding:customer-0",
-                "laundry-folding:application-0",
-                "laundry-folding:application-1",
-                "laundry-folding:project-synthesis-project-75d27902a56c2e3c8462b6bb"
+                "laundry-folding:customer-0"
               ]
             },
             "productValue": {
-              "status": "supported",
-              "reason": "Physical retries and human override are described; unattended shift performance is absent.",
+              "status": "plausible",
+              "reason": "Retries and human takeover may help, but accepted output per total paid staff-hour is untested.",
               "claimIds": [
-                "laundry-folding:what",
-                "laundry-folding:problem",
-                "laundry-folding:opportunity",
-                "laundry-folding:customer-0",
-                "laundry-folding:application-0",
-                "laundry-folding:application-1",
-                "laundry-folding:project-synthesis-project-75d27902a56c2e3c8462b6bb"
+                "laundry-folding:what"
               ]
             },
             "commercialGap": {
               "status": "plausible",
-              "reason": "An exception-handling or mixed-garment role could complement current folding equipment; the claimed gap is untested.",
+              "reason": "An exception station could supplement existing equipment; Weave already overlaps assisted folding. Suitable recurring workload and net added value are unresolved.",
               "claimIds": [
-                "laundry-folding:what",
-                "laundry-folding:problem",
-                "laundry-folding:opportunity",
-                "laundry-folding:customer-0",
-                "laundry-folding:application-0",
-                "laundry-folding:application-1",
-                "laundry-folding:project-synthesis-project-75d27902a56c2e3c8462b6bb"
+                "laundry-folding:v2-comparison"
               ]
             },
             "ventureScale": {
-              "status": "plausible",
-              "reason": "Repeated paid shifts at comparable operators offer a possible scale path; productive throughput and eligible sites are missing.",
+              "status": "missing",
+              "reason": "No verified suitable-site count, price, adoption or repeatable deployment economics. Broad laundry employment is not robot demand.",
               "claimIds": [
-                "laundry-folding:what",
-                "laundry-folding:problem",
-                "laundry-folding:opportunity",
-                "laundry-folding:customer-0",
-                "laundry-folding:application-0",
-                "laundry-folding:application-1",
-                "laundry-folding:project-synthesis-project-75d27902a56c2e3c8462b6bb"
+                "laundry-folding:opportunity"
               ]
             },
             "businessCapital": {
               "status": "missing",
-              "reason": "Machine cost, interventions, maintenance and deployment effort remain unknown.",
+              "reason": "Build, installation, safety validation, maintenance and remote support costs are unknown.",
               "claimIds": [
-                "laundry-folding:what",
-                "laundry-folding:problem",
-                "laundry-folding:opportunity",
-                "laundry-folding:customer-0",
-                "laundry-folding:application-0",
-                "laundry-folding:application-1",
-                "laundry-folding:project-synthesis-project-75d27902a56c2e3c8462b6bb"
+                "laundry-folding:opportunity"
               ]
             },
             "timing": {
-              "status": "missing",
-              "reason": "One prototype does not establish an improving cost curve or market growth.",
+              "status": "plausible",
+              "reason": "Current prototypes and supplier offers support a trial, but no verified robot cost trend or demand acceleration.",
               "claimIds": [
-                "laundry-folding:what",
-                "laundry-folding:problem",
-                "laundry-folding:opportunity",
-                "laundry-folding:customer-0",
-                "laundry-folding:application-0",
-                "laundry-folding:application-1",
-                "laundry-folding:project-synthesis-project-75d27902a56c2e3c8462b6bb"
+                "laundry-folding:v2-comparison"
               ]
             }
           },
-          "strongestObjection": "Slow cycles and human recovery may leave less output per paid hour than manual work.",
-          "decisiveQuestion": "Accepted folds per paid operator-hour over full shifts against the actual current mix of equipment and manual work."
+          "strongestObjection": "The remaining items may be too infrequent or need too much help to justify another machine. Good folds alone do not mean fewer paid hours.",
+          "decisiveQuestion": "Across full laundry shifts, does this robot increase acceptable folds per paid staff-hour after loading, checking, packing, repairs and remote help—and will an operator pay for the improvement?"
         }
       },
       "research": null,
