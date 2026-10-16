@@ -12512,8 +12512,8 @@
     {
       "schemaVersion": 1,
       "id": "field-blood-transport",
-      "revision": 0,
-      "acceptedRevisionId": "field-blood-transport:rubric-v2-20261015",
+      "revision": 1,
+      "acceptedRevisionId": "field-blood-transport:evidence-review-v2-20261016",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -12521,19 +12521,19 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T21:24:18.427Z",
-      "updatedAt": "2026-10-15T21:24:18.427Z",
+      "updatedAt": "2026-10-16T03:26:43.827Z",
       "verdict": null,
       "stage": "first-impressions",
-      "qualificationError": null,
+      "qualificationError": "Reviewed hypothesis; comparative mission benefit, funded demand and venture scale remain unproven.",
       "accepted": {
-        "id": "field-blood-transport:rubric-v2-20261015",
+        "id": "field-blood-transport:evidence-review-v2-20261016",
         "opportunityId": "field-blood-transport",
-        "parentRevisionId": null,
-        "createdAt": "2026-10-15T21:24:18.427Z",
-        "producerId": "rubric-reassessment-v2",
-        "origin": "saved-data-synthesis",
-        "changeReason": "User-authorized preliminary opportunity from saved source evidence; adjacent uses and market demand remain hypotheses.",
-        "contentHash": "f88725e7f8e22fad3017615a17d26a1774c57f9922d2da3fdd21857c56b00b3e",
+        "parentRevisionId": "field-blood-transport:rubric-v2-20261015",
+        "createdAt": "2026-10-16T03:26:43.827Z",
+        "producerId": "codex-evidence-inspector",
+        "origin": "inspection-correction",
+        "changeReason": "Inspect original project, military guidance, purchasing evidence and incumbent products; separate mission-level improvement from treatment outcomes and exclude unsupported market scenarios.",
+        "contentHash": "b8e74a64cc8421bfc924f525c9f536b7fd8f54c411f7045581fc0a2be03137a0",
         "title": "A portable cooler for blood transport in the field",
         "classifications": [
           "Defense"
@@ -12545,7 +12545,7 @@
           ],
           "economics": [],
           "timing": [],
-          "keyQuestion": "Compare complete mission temperature histories, payload, battery needs and cost against the current kit.",
+          "keyQuestion": "Which recurring missions cannot be served well by the current kit, and would a lighter or easier carrier improve them enough for a funded buyer to switch?",
           "what": "field-blood-transport:v2-what",
           "problem": "field-blood-transport:v2-problem",
           "opportunity": "field-blood-transport:v2-opportunity",
@@ -12574,111 +12574,134 @@
         "claims": [
           {
             "id": "field-blood-transport:v2-what",
-            "text": "A rugged carrier would keep different blood products within their required temperature ranges during transport.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "A rugged carrier for keeping blood products at the temperatures they need during transport. A Georgia Tech team describes work for Air Force Special Operations Command. The brief states the intended design; measured cooling, carrying weight and blood-preservation results remain unverified.",
+            "kind": "inference",
+            "evidenceIds": [
+              "field-blood-transport:synthesis-project-a8ccbbabcebfbed8a9503169:source-v2"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No matched mission tests, temperature-failure frequency, funded project orders or reachable placement count. Research awards and competitor list prices are not market size."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T03:26:43.827Z",
+              "reason": "Bounded interpretation from original sources, preserving existing alternatives and missing comparative outcomes."
             },
-            "testQuestion": "Compare complete mission temperature histories, payload, battery needs and cost against the current kit."
+            "reasoning": "Original brief describes development intent; no inspected measured outcome. An uninspected linked video is not proof that no prototype exists."
           },
           {
             "id": "field-blood-transport:v2-problem",
-            "text": "Field medical teams must protect temperature-sensitive supplies while moving them through difficult conditions.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "Medics need usable blood where people are injured. Keeping it cold adds packing, monitoring and exchange work to a mission. Temperature failures can make supplies unusable, but a better cooler cannot fix a shortage of blood or replace trained treatment.",
+            "kind": "inference",
+            "evidenceIds": [
+              "field-blood-transport:review-workflow"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No matched mission tests, temperature-failure frequency, funded project orders or reachable placement count. Research awards and competitor list prices are not market size."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T03:26:43.827Z",
+              "reason": "Bounded interpretation from original sources, preserving existing alternatives and missing comparative outcomes."
             },
-            "testQuestion": "Compare complete mission temperature histories, payload, battery needs and cost against the current kit."
+            "reasoning": "Military guidance documents temperature rejection and handling duties; loss frequency and cooler-attributable harm are unknown."
           },
           {
             "id": "field-blood-transport:v2-opportunity",
-            "text": "A lighter or more capable carrier could fit a defined military transport need and potentially emergency civilian use. Orders depend on performance against the equipment teams already carry.",
+            "text": "Sell military medical teams a carrier that keeps a necessary blood load usable with less weight or handling. A 2024 Air Force research award for a competing refrigerator shows spending on this task. Ambulance blood programs are a possible extension. The opening depends on a mission where existing equipment falls short; funded orders and a venture-scale market remain unproven.",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "field-blood-transport:synthesis-project-a8ccbbabcebfbed8a9503169:source-v2",
+              "field-blood-transport:review-award",
+              "field-blood-transport:review-civilian",
+              "field-blood-transport:review-passive",
+              "field-blood-transport:review-powered"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No matched mission tests, temperature-failure frequency, funded project orders or reachable placement count. Research awards and competitor list prices are not market size."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T03:26:43.827Z",
+              "reason": "Explicit mission, buyer or adjacent-use hypothesis; no proven orders, comparative advantage or venture scale."
             },
-            "testQuestion": "Compare complete mission temperature histories, payload, battery needs and cost against the current kit."
+            "testQuestion": "Which recurring missions cannot be served well by the current kit, and would a lighter or easier carrier improve them enough for a funded buyer to switch?"
           },
           {
             "id": "field-blood-transport:v2-customer-0",
             "text": "Military medical logistics teams",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "field-blood-transport:review-award",
+              "field-blood-transport:review-workflow"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No matched mission tests, temperature-failure frequency, funded project orders or reachable placement count. Research awards and competitor list prices are not market size."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T03:26:43.827Z",
+              "reason": "Explicit mission, buyer or adjacent-use hypothesis; no proven orders, comparative advantage or venture scale."
             },
-            "testQuestion": "Compare complete mission temperature histories, payload, battery needs and cost against the current kit."
+            "testQuestion": "Which military medical budget has a funded unmet transport requirement?"
           },
           {
             "id": "field-blood-transport:v2-application-0",
-            "text": "Transporting blood products in difficult conditions",
+            "text": "Field blood transport; civilian ambulance use and aerial resupply remain transfer hypotheses",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "field-blood-transport:synthesis-project-a8ccbbabcebfbed8a9503169:source-v2",
+              "field-blood-transport:review-civilian",
+              "field-blood-transport:review-aerial"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No matched mission tests, temperature-failure frequency, funded project orders or reachable placement count. Research awards and competitor list prices are not market size."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T03:26:43.827Z",
+              "reason": "Explicit mission, buyer or adjacent-use hypothesis; no proven orders, comparative advantage or venture scale."
             },
-            "testQuestion": "Compare complete mission temperature histories, payload, battery needs and cost against the current kit."
+            "testQuestion": "Does the same advantage survive civilian validation and aerial impact, vibration and recovery requirements?"
           },
           {
             "id": "field-blood-transport:v2-comparison",
-            "text": "Alternative to current field transport containers; supplement to medical logistics. Other organ-cooling projects are not interchangeable validation.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "Peli Golden Hour uses insulation and prepared cooling material; Delta APRU uses powered refrigeration with monitoring and alarms. Both already carry blood in difficult conditions. A new carrier could replace them if it reduces the complete load or exchange work, or handles a necessary mix of products better. It would still supplement blood supply and stock rotation. Civilian ambulance use and aerial resupply need separate validation.",
+            "kind": "inference",
+            "evidenceIds": [
+              "field-blood-transport:review-passive",
+              "field-blood-transport:review-powered",
+              "field-blood-transport:review-workflow",
+              "field-blood-transport:review-aerial",
+              "field-blood-transport:review-civilian"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No matched mission tests, temperature-failure frequency, funded project orders or reachable placement count. Research awards and competitor list prices are not market size."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T03:26:43.827Z",
+              "reason": "Bounded interpretation from original sources, preserving existing alternatives and missing comparative outcomes."
             },
-            "testQuestion": "Compare complete mission temperature histories, payload, battery needs and cost against the current kit."
+            "reasoning": "Original manufacturer descriptions show overlapping approaches. Replacement benefit is a hypothesis; monitoring and logistics remain necessary. Mission mix and complete-system performance determine value."
           },
           {
             "id": "field-blood-transport:project-v2-a8ccbbabcebfbed8a9503169",
@@ -12693,10 +12716,10 @@
               "A project brief is not a purchase order, working cooler, measured preservation result or survival benefit. Source school and year identify the event collection, not confirmed author affiliation or project completion date."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T03:26:43.827Z",
+              "reason": "Original university page confirms the stated development brief, not successful cooling or survival results."
             },
             "attribution": "Creating a Portable Blood Cooler for Extreme Military Environments",
             "quantity": null
@@ -12706,9 +12729,9 @@
           {
             "id": "field-blood-transport:synthesis-project-a8ccbbabcebfbed8a9503169:source-v2",
             "sourceUrl": "https://expo.gatech.edu/prod1/portal/portal.jsp?c=17462&g=413665329&id=417243914&p=413142918",
-            "finalUrl": null,
+            "finalUrl": "https://expo.gatech.edu/prod1/portal/portal.jsp?c=17462&g=413665329&id=417243914&p=413142918",
             "title": "Creating a Portable Blood Cooler for Extreme Military Environments",
-            "publisher": null,
+            "publisher": "Georgia Institute of Technology",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -12716,12 +12739,166 @@
             "retrievedAt": "2026-10-15T21:24:18.427Z",
             "excerpt": "Working for Air Force Special Operations Command to create a portable, ruggedized device capable of transporting multiple blood products within various strict temperature ranges to reduce temperature excursions and increase survival rates in combat zones.",
             "pdfPage": null,
-            "locator": "Original project page; exact retained excerpt",
+            "locator": "Original archived Spring 2025 project page; development intent, not measured performance",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T21:24:18.427Z",
+              "checkedAt": "2026-10-16T03:26:43.827Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "field-blood-transport:review-workflow",
+            "sourceUrl": "https://jts.health.mil/assets/docs/cpgs/Prehospital_Blood_Transfusion_30_Oct_2020_ID82.pdf",
+            "finalUrl": "https://jts.health.mil/assets/docs/cpgs/Prehospital_Blood_Transfusion_30_Oct_2020_ID82.pdf",
+            "title": "Field blood carriage requires monitoring and exchanges",
+            "publisher": "Joint Trauma System",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2020-10-30",
+            "observationPeriod": "October30,2020 guidance with June2023 update. Physical16–17 describe48hour exchange and24hour inspection workflow. Historical operating rules, not failure rate or current catalog endurance.",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "GHC is only approved for 48 hours use",
+            "pdfPage": 17,
+            "locator": "Original PDF physical page 17; study methods and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T03:26:43.827Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "field-blood-transport:review-aerial",
+            "sourceUrl": "https://jts.health.mil/assets/docs/cpgs/Aerial_Delivery_Fresh_Stored_Blood_Products_01_Dec_2025.pdf",
+            "finalUrl": "https://jts.health.mil/assets/docs/cpgs/Aerial_Delivery_Fresh_Stored_Blood_Products_01_Dec_2025.pdf",
+            "title": "Aerial delivery adds impact and recovery requirements",
+            "publisher": "Joint Trauma System",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2025-12-01",
+            "observationPeriod": "December1,2025 operational planning guidance. Physical5; existing carriers and study summaries do not validate this project or create an independent buyer pool.",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "Blood products must be shielded from high-impact landings and vibrations during transit.",
+            "pdfPage": 5,
+            "locator": "Original PDF physical page 5; study methods and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T03:26:43.827Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "field-blood-transport:review-passive",
+            "sourceUrl": "https://www.pelibiothermal.com/product/goldenhour/",
+            "finalUrl": "https://www.pelibiothermal.com/product/goldenhour/",
+            "title": "Existing insulated carriers carry whole blood without powered refrigeration",
+            "publisher": "Peli BioThermal",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Manufacturer snapshot October16,2026, publication date unknown. Up to72hours headline varies by model, ambient profile and load; not a matched trial or simultaneous temperature zones.",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "Golden Hour containers transport 1 to 4 units of whole blood safely for up to 72 hours",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T03:26:43.827Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "field-blood-transport:review-powered",
+            "sourceUrl": "https://deltadevteam.com/apru-6l/",
+            "finalUrl": "https://deltadevteam.com/apru-6l/",
+            "title": "Existing powered blood refrigeration includes monitoring and alarms",
+            "publisher": "Delta Development Team",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Manufacturer snapshot October16,2026, publication date unknown. Six500mL capacity and advertised endurance are vendor claims, not independently reproduced or matched to this design.",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "Unit Capacity – Six (6) 500 ml Units of Blood",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T03:26:43.827Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "field-blood-transport:review-price",
+            "sourceUrl": "https://store.deltadevteam.com/product/apru-6l-autonomous-portable-refrigeration-unit/",
+            "finalUrl": "https://store.deltadevteam.com/product/apru-6l-autonomous-portable-refrigeration-unit/",
+            "title": "An existing blood refrigerator lists at $15,400",
+            "publisher": "Delta Development Team",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "US-facing store October16,2026. One configuration list price, not realized procurement price, complete installed cost or this project’s price. No placement denominator; no market estimate.",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "15,400.00",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T03:26:43.827Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "field-blood-transport:review-award",
+            "sourceUrl": "https://www.sbir.gov/awards/210784",
+            "finalUrl": "https://www.sbir.gov/awards/210784",
+            "title": "Air Force research funding targets a lighter blood refrigerator",
+            "publisher": "US Small Business Administration / SBIR award record",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "2024 PhaseI award to RINI; $74,928, contractFA8649-24-P-0697, May14–August19,2024. One research award, not equipment orders, overall market or this team funding. Abstract capability gap is applicant-reported.",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "Total Award Amount:\n$74,928",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T03:26:43.827Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "field-blood-transport:review-civilian",
+            "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12278122/",
+            "finalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12278122/",
+            "title": "Civilian blood programs need validated coolers and temperature monitoring",
+            "publisher": "Prehospital Blood Transfusion Coalition / Trauma Surgery and Acute Care Open",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2025-07-16",
+            "observationPeriod": "Published July16,2025; original PMC full text. Guidance describes requirements, not a census of buyers, equipment spending or clinical advantage of this design.",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "Temperature monitoring devices with local alarms, as well as remote tracking and audit capabilities consistent with established requirements.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T03:26:43.827Z",
               "failureIds": []
             }
           }
@@ -12731,105 +12908,63 @@
           "rubricVersion": "venture-screen-v2",
           "dimensions": {
             "problem": {
-              "status": "plausible",
-              "reason": "The project brief identifies strict storage temperatures under combat transport conditions.",
+              "status": "supported",
+              "reason": "Temperature requirements and exchange work are documented; cooler-specific failure frequency and avoidable loss remain unknown.",
               "claimIds": [
-                "field-blood-transport:v2-what",
-                "field-blood-transport:v2-problem",
-                "field-blood-transport:v2-opportunity",
-                "field-blood-transport:v2-customer-0",
-                "field-blood-transport:v2-application-0",
-                "field-blood-transport:v2-comparison",
-                "field-blood-transport:project-v2-a8ccbbabcebfbed8a9503169"
+                "field-blood-transport:v2-problem"
               ]
             },
             "customerPayment": {
-              "status": "plausible",
-              "reason": "Field medical logistics teams; the source names Air Force Special Operations Command, not a purchase commitment. Willingness to pay for this offer is not established.",
+              "status": "missing",
+              "reason": "A competing research award and product pricing establish a spending category, not a funded requirement for this offer.",
               "claimIds": [
-                "field-blood-transport:v2-what",
-                "field-blood-transport:v2-problem",
-                "field-blood-transport:v2-opportunity",
-                "field-blood-transport:v2-customer-0",
-                "field-blood-transport:v2-application-0",
-                "field-blood-transport:v2-comparison",
-                "field-blood-transport:project-v2-a8ccbbabcebfbed8a9503169"
+                "field-blood-transport:v2-customer-0"
               ]
             },
             "productValue": {
               "status": "plausible",
-              "reason": "A suitable multi-temperature system could reduce handling constraints across a specific transport mission.",
+              "reason": "Preserving a necessary load with less carrying or handling has a credible mechanism; no measured complete-mission advantage.",
               "claimIds": [
-                "field-blood-transport:v2-what",
-                "field-blood-transport:v2-problem",
-                "field-blood-transport:v2-opportunity",
-                "field-blood-transport:v2-customer-0",
-                "field-blood-transport:v2-application-0",
-                "field-blood-transport:v2-comparison",
-                "field-blood-transport:project-v2-a8ccbbabcebfbed8a9503169"
+                "field-blood-transport:v2-what"
               ]
             },
             "commercialGap": {
               "status": "plausible",
-              "reason": "Alternative to current field transport containers; supplement to medical logistics. Other organ-cooling projects are not interchangeable validation. Open gap: Capacity, duration and ruggedness at a weight and power burden suited to actual transport.",
+              "reason": "A particular mission may need lower load or mixed temperatures; strong passive and powered alternatives overlap.",
               "claimIds": [
-                "field-blood-transport:v2-what",
-                "field-blood-transport:v2-problem",
-                "field-blood-transport:v2-opportunity",
-                "field-blood-transport:v2-customer-0",
-                "field-blood-transport:v2-application-0",
-                "field-blood-transport:v2-comparison",
-                "field-blood-transport:project-v2-a8ccbbabcebfbed8a9503169"
+                "field-blood-transport:v2-comparison"
               ]
             },
             "ventureScale": {
-              "status": "plausible",
-              "reason": "Defense procurement and possible civilian emergency transfer offer a route to investigate; reachable orders and margins are unknown.",
+              "status": "missing",
+              "reason": "No funded placement count, replacement pipeline or viable margins establishes venture-scale returns.",
               "claimIds": [
-                "field-blood-transport:v2-what",
-                "field-blood-transport:v2-problem",
-                "field-blood-transport:v2-opportunity",
-                "field-blood-transport:v2-customer-0",
-                "field-blood-transport:v2-application-0",
-                "field-blood-transport:v2-comparison",
-                "field-blood-transport:project-v2-a8ccbbabcebfbed8a9503169"
+                "field-blood-transport:v2-opportunity"
               ]
             },
             "businessCapital": {
               "status": "missing",
-              "reason": "The source supplies requirements, not a working cooling system, measured preservation or buying intent. Delivered costs, repeat economics and capital needs remain unresolved.",
+              "reason": "Engineering, qualification, production, inventory and service costs unknown; one research award does not fund a business.",
               "claimIds": [
-                "field-blood-transport:v2-what",
-                "field-blood-transport:v2-problem",
-                "field-blood-transport:v2-opportunity",
-                "field-blood-transport:v2-customer-0",
-                "field-blood-transport:v2-application-0",
-                "field-blood-transport:v2-comparison",
-                "field-blood-transport:project-v2-a8ccbbabcebfbed8a9503169"
+                "field-blood-transport:v2-opportunity"
               ]
             },
             "timing": {
-              "status": "missing",
-              "reason": "The retained project dates do not establish adoption or market acceleration. Adjacent-use readiness has not been validated.",
+              "status": "plausible",
+              "reason": "Recent aerial guidance and relevant research spending support investigation, not adoption acceleration.",
               "claimIds": [
-                "field-blood-transport:v2-what",
-                "field-blood-transport:v2-problem",
-                "field-blood-transport:v2-opportunity",
-                "field-blood-transport:v2-customer-0",
-                "field-blood-transport:v2-application-0",
-                "field-blood-transport:v2-comparison",
-                "field-blood-transport:project-v2-a8ccbbabcebfbed8a9503169"
+                "field-blood-transport:v2-comparison"
               ]
             }
           },
           "priority": "medium",
-          "priorityReason": "A suitable multi-temperature system could reduce handling constraints across a specific transport mission. Defense procurement and possible civilian emergency transfer offer a route to investigate; reachable orders and margins are unknown.",
+          "priorityReason": "Consequential field logistics and an actual competing research award justify a focused mission comparison. Mixed-product necessity, additional benefit and enough reachable sales remain open.",
           "confidence": {
             "level": "low",
-            "reason": "Original project excerpts checked; commercial demand and adjacent-use benefit remain hypotheses."
+            "reason": "Transport requirements and existing equipment are supported. This carrier’s performance, paid demand and venture scale remain unproven."
           },
-          "strongestObjection": "The source supplies requirements, not a working cooling system, measured preservation or buying intent.",
-          "decisiveQuestion": "Compare complete mission temperature histories, payload, battery needs and cost against the current kit."
+          "strongestObjection": "Existing carriers already solve much of the task. Multiple temperature zones may add weight and support work without helping missions that only need refrigerated whole blood. No matched performance test or funded order establishes an advantage.",
+          "decisiveQuestion": "Which recurring missions cannot be served well by the current kit, and would a lighter or easier carrier improve them enough for a funded buyer to switch?"
         }
       },
       "research": null,

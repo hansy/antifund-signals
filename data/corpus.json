@@ -6045,15 +6045,15 @@
     {
       "id": "field-blood-transport",
       "title": "A portable cooler for blood transport in the field",
-      "summary": "A rugged carrier would keep different blood products within their required temperature ranges during transport.",
+      "summary": "A rugged carrier for blood products needed before hospital arrival.",
       "topic": "Defense",
-      "problem": "Field medical teams must protect temperature-sensitive supplies while moving them through difficult conditions.",
-      "statusQuo": "",
-      "gap": "Capacity, duration and ruggedness at a weight and power burden suited to actual transport.",
-      "opportunity": "A lighter or more capable carrier could fit a defined military transport need and potentially emergency civilian use. Orders depend on performance against the equipment teams already carry.",
-      "evidence": "A suitable multi-temperature system could reduce handling constraints across a specific transport mission.",
-      "counterpoint": "The source supplies requirements, not a working cooling system, measured preservation or buying intent.",
-      "nextQuestion": "Compare complete mission temperature histories, payload, battery needs and cost against the current kit.",
+      "problem": "Medics need usable blood where people are injured. Keeping it cold adds packing, monitoring and exchange work to a mission. Temperature failures can make supplies unusable, but a better cooler cannot fix a shortage of blood or replace trained treatment.",
+      "statusQuo": "Insulated carriers with prepared coolant, powered blood refrigerators, temperature checks and stock exchanges.",
+      "gap": "Less total carrying weight or handling for a necessary blood load; improvement over current complete kits remains unmeasured.",
+      "opportunity": "Sell military medical teams a carrier that keeps a necessary blood load usable with less weight or handling. A 2024 Air Force research award for a competing refrigerator shows spending on this task. Ambulance blood programs are a possible extension. The opening depends on a mission where existing equipment falls short; funded orders and a venture-scale market remain unproven.",
+      "evidence": "A 2024 US Air Force award provided $74,928 to RINI for research on a miniature blood refrigerator. This is spending on another supplier’s research, not orders for this design or a market-size estimate.",
+      "counterpoint": "Existing carriers already solve much of the task. Multiple temperature zones may add weight and support work without helping missions that only need refrigerated whole blood. No matched performance test or funded order establishes an advantage.",
+      "nextQuestion": "Which recurring missions cannot be served well by the current kit, and would a lighter or easier carrier improve them enough for a funded buyer to switch?",
       "projectIds": [
         "synthesis-project-a8ccbbabcebfbed8a9503169"
       ],
@@ -6062,8 +6062,8 @@
       ],
       "confidence": "Early signal",
       "brief": {
-        "whatItIs": "A rugged carrier would keep different blood products within their required temperature ranges during transport.",
-        "problem": "Field medical teams must protect temperature-sensitive supplies while moving them through difficult conditions.",
+        "whatItIs": "A rugged carrier for keeping blood products at the temperatures they need during transport. A Georgia Tech team describes work for Air Force Special Operations Command. The brief states the intended design; measured cooling, carrying weight and blood-preservation results remain unverified.",
+        "problem": "Medics need usable blood where people are injured. Keeping it cold adds packing, monitoring and exchange work to a mission. Temperature failures can make supplies unusable, but a better cooler cannot fix a shortage of blood or replace trained treatment.",
         "breakthroughs": [
           {
             "text": "A Georgia Tech project brief names Air Force Special Operations Command and specifies a portable carrier for blood products with different temperature requirements.",
@@ -6072,22 +6072,65 @@
             ]
           }
         ],
-        "marketOpportunity": "A lighter or more capable carrier could fit a defined military transport need and potentially emergency civilian use. Orders depend on performance against the equipment teams already carry.",
+        "marketOpportunity": "Sell military medical teams a carrier that keeps a necessary blood load usable with less weight or handling. A 2024 Air Force research award for a competing refrigerator shows spending on this task. Ambulance blood programs are a possible extension. The opening depends on a mission where existing equipment falls short; funded orders and a venture-scale market remain unproven.",
         "buyer": "Military medical logistics teams",
         "applications": [
-          "Transporting blood products in difficult conditions"
+          "Field blood transport; civilian ambulance use and aerial resupply remain transfer hypotheses"
         ],
         "targetCustomers": [
           "Military medical logistics teams"
         ],
-        "marketStatus": "hypothesis",
-        "marketEvidence": [],
+        "marketStatus": "researched",
+        "marketEvidence": [
+          {
+            "title": "Field blood carriage requires monitoring and exchanges",
+            "url": "https://jts.health.mil/assets/docs/cpgs/Prehospital_Blood_Transfusion_30_Oct_2020_ID82.pdf",
+            "excerpt": "GHC is only approved for 48 hours use",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "Aerial delivery adds impact and recovery requirements",
+            "url": "https://jts.health.mil/assets/docs/cpgs/Aerial_Delivery_Fresh_Stored_Blood_Products_01_Dec_2025.pdf",
+            "excerpt": "Blood products must be shielded from high-impact landings and vibrations during transit.",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "Existing insulated carriers carry whole blood without powered refrigeration",
+            "url": "https://www.pelibiothermal.com/product/goldenhour/",
+            "excerpt": "Golden Hour containers transport 1 to 4 units of whole blood safely for up to 72 hours",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "Existing powered blood refrigeration includes monitoring and alarms",
+            "url": "https://deltadevteam.com/apru-6l/",
+            "excerpt": "Unit Capacity – Six (6) 500 ml Units of Blood",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "An existing blood refrigerator lists at $15,400",
+            "url": "https://store.deltadevteam.com/product/apru-6l-autonomous-portable-refrigeration-unit/",
+            "excerpt": "15,400.00",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "Air Force research funding targets a lighter blood refrigerator",
+            "url": "https://www.sbir.gov/awards/210784",
+            "excerpt": "Total Award Amount:\n$74,928",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "Civilian blood programs need validated coolers and temperature monitoring",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12278122/",
+            "excerpt": "Temperature monitoring devices with local alarms, as well as remote tracking and audit capabilities consistent with established requirements.",
+            "accessedAt": "2026-10-16"
+          }
+        ],
         "risks": [
-          "The source supplies requirements, not a working cooling system, measured preservation or buying intent.",
-          "Defense procurement and possible civilian emergency transfer offer a route to investigate; reachable orders and margins are unknown."
+          "Existing carriers already solve much of the task. Multiple temperature zones may add weight and support work without helping missions that only need refrigerated whole blood. No matched performance test or funded order establishes an advantage.",
+          "Reachable orders, manufacturing costs, margins and qualification costs remain unknown. No survival benefit is established for this carrier."
         ],
         "nextQuestions": [
-          "Compare complete mission temperature histories, payload, battery needs and cost against the current kit."
+          "Which recurring missions cannot be served well by the current kit, and would a lighter or easier carrier improve them enough for a funded buyer to switch?"
         ]
       }
     },
