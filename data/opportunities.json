@@ -9953,8 +9953,8 @@
     {
       "schemaVersion": 1,
       "id": "everyday-leg-assistance",
-      "revision": 1,
-      "acceptedRevisionId": "everyday-leg-assistance:rubric-v2-20261015:source-clarification",
+      "revision": 2,
+      "acceptedRevisionId": "everyday-leg-assistance:evidence-review-v2-20261016",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -9962,19 +9962,19 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T21:24:18.427Z",
-      "updatedAt": "2026-10-15T21:35:39.113Z",
+      "updatedAt": "2026-10-16T01:45:49.156Z",
       "verdict": null,
       "stage": "first-impressions",
-      "qualificationError": null,
+      "qualificationError": "Reviewed high-priority hypothesis; safe added activity, paying customers and venture-scale economics remain unproven.",
       "accepted": {
-        "id": "everyday-leg-assistance:rubric-v2-20261015:source-clarification",
+        "id": "everyday-leg-assistance:evidence-review-v2-20261016",
         "opportunityId": "everyday-leg-assistance",
-        "parentRevisionId": "everyday-leg-assistance:rubric-v2-20261015",
-        "createdAt": "2026-10-15T21:35:39.113Z",
-        "producerId": "rubric-reassessment-v2",
-        "origin": "saved-data-synthesis",
-        "changeReason": "User-authorized preliminary opportunity from saved source evidence; adjacent uses and market demand remain hypotheses. Wording clarified: no reported older-adult outcomes, not proof no testing occurred.",
-        "contentHash": "c524dd52342bb143fa96c6d143e28648c4fa05be0c8039ff4a589a3d464496d7",
+        "parentRevisionId": "everyday-leg-assistance:rubric-v2-20261015:source-clarification",
+        "createdAt": "2026-10-16T01:45:49.156Z",
+        "producerId": "codex-evidence-inspector",
+        "origin": "inspection-correction",
+        "changeReason": "Inspect original sources and older-adult transfer, correct combined Exoni quotations, distinguish ordinary-shoe from inactive-device clinical comparison, and compare existing powered and nonpowered options without inventing demand.",
+        "contentHash": "d2e806d285ad33cc5deadf1bdd1ac8f9b0e48312241a50b3701c5917d1cdf4fb",
         "title": "Lightweight powered assistance for everyday walking",
         "classifications": [
           "Robotics"
@@ -9986,7 +9986,7 @@
           ],
           "economics": [],
           "timing": [],
-          "keyQuestion": "Define safe eligibility, then compare effort, useful independent activity, comfort and total price against appropriate current aids.",
+          "keyQuestion": "For a safely eligible group, does assistance add useful everyday walking beyond ordinary walking and appropriate current care, with sustained use and purchases at a price that covers fitting, returns and support?",
           "what": "everyday-leg-assistance:v2-what",
           "problem": "everyday-leg-assistance:v2-problem",
           "opportunity": "everyday-leg-assistance:v2-opportunity",
@@ -10019,129 +10019,158 @@
         "claims": [
           {
             "id": "everyday-leg-assistance:v2-what",
-            "text": "Motors worn at the knees add power to a person’s steps. The starting design targets hiking; everyday mobility is a possible next use.",
+            "text": "Motors worn at the knees add power to a person’s steps. Exoni’s design targets hiking and running. Helping older adults complete everyday walks is a promising next use to test; Exoni reports no outcomes for that group.",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "everyday-leg-assistance:synthesis-project-891359e6b8c9ce97a5becdaa:source-v2"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No established Exoni benefit, eligible buyer count, sustained use or viable delivered economics. Other ankle-study results do not transfer to this knee design; nonsignificance does not establish no effect."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T01:45:49.156Z",
+              "reason": "Explicit transfer/customer hypothesis; not established benefit, payment, safety or venture qualification."
             },
-            "testQuestion": "Define safe eligibility, then compare effort, useful independent activity, comfort and total price against appropriate current aids."
+            "testQuestion": "For a safely eligible group, does assistance add useful everyday walking beyond ordinary walking and appropriate current care, with sustained use and purchases at a price that covers fitting, returns and support?"
           },
           {
             "id": "everyday-leg-assistance:v2-problem",
-            "text": "People with limited strength or endurance may struggle to stay active independently. Assistance must help enough to justify carrying and wearing it.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "When walking becomes too tiring, errands and social outings can become difficult. A growing older population makes preserving mobility consequential, but age alone does not identify suitable users. Added knee power may not address pain, poor balance or heart and lung limitations.",
+            "kind": "inference",
+            "evidenceIds": [
+              "everyday-leg-assistance:review-life",
+              "everyday-leg-assistance:review-population",
+              "everyday-leg-assistance:review-study",
+              "everyday-leg-assistance:review-care"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No established Exoni benefit, eligible buyer count, sustained use or viable delivered economics. Other ankle-study results do not transfer to this knee design; nonsignificance does not establish no effect."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T01:45:49.156Z",
+              "reason": "Original sources support bounded interpretation; ordinary-shoe comparison limits retained, no adjacent-population market inference."
             },
-            "testQuestion": "Define safe eligibility, then compare effort, useful independent activity, comfort and total price against appropriate current aids."
+            "reasoning": "LIFE supports consequential mobility loss and Census supports historical demographic growth. Neither establishes device eligibility; original clinical study and care guidance constrain transfer."
           },
           {
             "id": "everyday-leg-assistance:v2-opportunity",
-            "text": "A light, affordable device could reach people who need walking assistance outside a clinic. The business depends on safe everyday benefit and an attainable complete-device price.",
+            "text": "Help people who can still walk and balance independently but cut outings short because of muscular effort. Assistance could supplement exercise and walking aids. Skip and Hypershell already target outdoor movement; the opening is better everyday usefulness, comfort or full cost for a defined group. A small older-adult ankle study did not establish a clear benefit over normal shoes, so useful daily activity—not motor power—is the result to prove.",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "everyday-leg-assistance:synthesis-project-891359e6b8c9ce97a5becdaa:source-v2",
+              "everyday-leg-assistance:review-study",
+              "everyday-leg-assistance:review-skip",
+              "everyday-leg-assistance:review-hypershell",
+              "everyday-leg-assistance:review-care"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No established Exoni benefit, eligible buyer count, sustained use or viable delivered economics. Other ankle-study results do not transfer to this knee design; nonsignificance does not establish no effect."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T01:45:49.156Z",
+              "reason": "Explicit transfer/customer hypothesis; not established benefit, payment, safety or venture qualification."
             },
-            "testQuestion": "Define safe eligibility, then compare effort, useful independent activity, comfort and total price against appropriate current aids."
+            "testQuestion": "For a safely eligible group, does assistance add useful everyday walking beyond ordinary walking and appropriate current care, with sustained use and purchases at a price that covers fitting, returns and support?"
           },
           {
             "id": "everyday-leg-assistance:v2-customer-0",
-            "text": "Mobility-device suppliers",
+            "text": "People or families paying for everyday or outdoor walking assistance",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "everyday-leg-assistance:review-skip",
+              "everyday-leg-assistance:review-care"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No established Exoni benefit, eligible buyer count, sustained use or viable delivered economics. Other ankle-study results do not transfer to this knee design; nonsignificance does not establish no effect."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T01:45:49.156Z",
+              "reason": "Explicit transfer/customer hypothesis; not established benefit, payment, safety or venture qualification."
             },
-            "testQuestion": "Define safe eligibility, then compare effort, useful independent activity, comfort and total price against appropriate current aids."
+            "testQuestion": "Who is safely eligible, values added activity and will fund the full delivered cost? Clinic buying and household reimbursement must be tested separately."
           },
           {
             "id": "everyday-leg-assistance:v2-customer-1",
-            "text": "Rehabilitation providers",
+            "text": "Rehabilitation providers, if extra practice justifies fitting and supervision",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "everyday-leg-assistance:review-skip",
+              "everyday-leg-assistance:review-care"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No established Exoni benefit, eligible buyer count, sustained use or viable delivered economics. Other ankle-study results do not transfer to this knee design; nonsignificance does not establish no effect."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T01:45:49.156Z",
+              "reason": "Explicit transfer/customer hypothesis; not established benefit, payment, safety or venture qualification."
             },
-            "testQuestion": "Define safe eligibility, then compare effort, useful independent activity, comfort and total price against appropriate current aids."
+            "testQuestion": "Who is safely eligible, values added activity and will fund the full delivered cost? Clinic buying and household reimbursement must be tested separately."
           },
           {
             "id": "everyday-leg-assistance:v2-application-0",
-            "text": "Walking assistance outside clinics",
+            "text": "Everyday walking for people limited mainly by muscular effort",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "everyday-leg-assistance:synthesis-project-891359e6b8c9ce97a5becdaa:source-v2",
+              "everyday-leg-assistance:review-study",
+              "everyday-leg-assistance:review-life"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No established Exoni benefit, eligible buyer count, sustained use or viable delivered economics. Other ankle-study results do not transfer to this knee design; nonsignificance does not establish no effect."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T01:45:49.156Z",
+              "reason": "Explicit transfer/customer hypothesis; not established benefit, payment, safety or venture qualification."
             },
-            "testQuestion": "Define safe eligibility, then compare effort, useful independent activity, comfort and total price against appropriate current aids."
+            "testQuestion": "For a safely eligible group, does assistance add useful everyday walking beyond ordinary walking and appropriate current care, with sustained use and purchases at a price that covers fitting, returns and support?"
           },
           {
             "id": "everyday-leg-assistance:v2-comparison",
-            "text": "Potential supplement to rehabilitation; different function from balance aids; alternative to other powered assistance. No head-to-head evidence.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "Skip MO/GO overlaps in powered knee assistance; its October 2026 offer is a reservation for future delivery, not proof of sustained use. Hypershell offers hip assistance and describes hip-plus-knee assistance, while requiring unassisted walking and balance. Roam describes testing for knee osteoarthritis, a pain-related use. Exercise and walking aids can address different limitations; any added device must improve the best appropriate setup enough to justify wearing, fitting and maintenance.",
+            "kind": "inference",
+            "evidenceIds": [
+              "everyday-leg-assistance:review-skip",
+              "everyday-leg-assistance:review-hypershell",
+              "everyday-leg-assistance:review-halo",
+              "everyday-leg-assistance:review-roam",
+              "everyday-leg-assistance:review-care"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No established Exoni benefit, eligible buyer count, sustained use or viable delivered economics. Other ankle-study results do not transfer to this knee design; nonsignificance does not establish no effect."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T01:45:49.156Z",
+              "reason": "Original sources support bounded interpretation; ordinary-shoe comparison limits retained, no adjacent-population market inference."
             },
-            "testQuestion": "Define safe eligibility, then compare effort, useful independent activity, comfort and total price against appropriate current aids."
+            "reasoning": "Original supplier sources establish functional overlap and use restrictions, not comparative effectiveness. Supplementary benefit with best care is a hypothesis."
           },
           {
             "id": "everyday-leg-assistance:project-v2-891359e6b8c9ce97a5becdaa",
@@ -10153,13 +10182,13 @@
             "derivedFromClaimIds": [],
             "confidence": "moderate",
             "limitations": [
-              "No validated older-adult outcome, delivered price or safe-use population. Parts cost is not the price of a qualified product; unnamed medical-device comparisons are excluded. Source school and year identify the event collection, not confirmed author affiliation or project completion date."
+              "Team-reported design; no controlled walking benefit, complete-device cost, safe-use population or older-adult outcome."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T01:45:49.156Z",
+              "reason": "Original project boundary and exact excerpt inspected; reported concept, no older-adult efficacy established."
             },
             "attribution": "49. Exoni",
             "quantity": null
@@ -10169,9 +10198,9 @@
           {
             "id": "everyday-leg-assistance:synthesis-project-891359e6b8c9ce97a5becdaa:source-v2",
             "sourceUrl": "https://uwaterloo.ca/capstone-design/project-abstracts/2026-capstone-design-projects/2026-mechatronics-engineering-capstone-designs",
-            "finalUrl": null,
+            "finalUrl": "https://uwaterloo.ca/capstone-design/project-abstracts/2026-capstone-design-projects/2026-mechatronics-engineering-capstone-designs",
             "title": "49. Exoni",
-            "publisher": null,
+            "publisher": "University of Waterloo",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -10179,12 +10208,188 @@
             "retrievedAt": "2026-10-15T21:24:18.427Z",
             "excerpt": "We are developing a predictive-control exoskeleton knee that makes powered assistance commercially viable for hiking and running.",
             "pdfPage": null,
-            "locator": "Original project page; exact retained excerpt",
+            "locator": "Original 2026 project listing, section 49 Exoni; team description, not independent performance",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T21:24:18.427Z",
+              "checkedAt": "2026-10-16T01:45:49.156Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "everyday-leg-assistance:review-study",
+            "sourceUrl": "https://link.springer.com/article/10.1186/s12984-023-01287-5",
+            "finalUrl": "https://link.springer.com/article/10.1186/s12984-023-01287-5",
+            "title": "Older-adult ankle study: inactive-device gains, uncertain benefit over normal shoes",
+            "publisher": "Journal of NeuroEngineering and Rehabilitation",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2024-01-02",
+            "observationPeriod": "Published January 2, 2024; Stanford, US. Ten healthy adults over 65, mean72; about240minutes treadmill training. Different joint/device from Exoni. Ordinary-shoe comparisons p=0.15 speed,0.28 metabolic rate,0.07 cost of transport; small sample, not proof of no effect.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Compared to walking in normal shoes, self-selected walking speed increased by 3.6 ± 5.2% (0.05 ± 0.07 m/s), metabolic cost decreased by 12.7 ± 16.0% (0.41 ± 0.69 W/kg), and cost of transport decreased by 15.6 ± 15.6% (0.41 ± 0.48 J/kg/m) with optimized torque",
+            "pdfPage": null,
+            "locator": "Original HTML; relevant body, comparison and limitations inspected",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T01:45:49.156Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "everyday-leg-assistance:review-life",
+            "sourceUrl": "https://agingresearchbiobank.nia.nih.gov/studies/life/details",
+            "finalUrl": "https://agingresearchbiobank.nia.nih.gov/studies/life/details",
+            "title": "LIFE trial: preserving walking ability in older adults",
+            "publisher": "US National Institute on Aging",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Selected US sedentary volunteers70–89 with physical limitations, initially able to walk400m. Recruitment2010–2011, follow-upended2013,mean2.6years.246/818exercise vs290/817education lost400mability. Not general prevalence or device eligibility.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Incident major mobility disability occurred in 30.1% (246 participants) of the physical activity group and 35.5% (290 participants)",
+            "pdfPage": null,
+            "locator": "Original HTML; relevant body, comparison and limitations inspected",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T01:45:49.156Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "everyday-leg-assistance:review-population",
+            "sourceUrl": "https://cdn.www.census.gov/newsroom/press-releases/2025/older-adults-outnumber-children.html",
+            "finalUrl": "https://cdn.www.census.gov/newsroom/press-releases/2025/older-adults-outnumber-children.html",
+            "title": "US older population growth: demographic context, not buyers",
+            "publisher": "US Census Bureau",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2025-06-26",
+            "observationPeriod": "Vintage2024: US65+ population61.2million,3.1%growth2023–2024. ReleasedJune26,2025; not latest possible release or eligible customer count.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "The U.S. population age 65 and older rose by 3.1% (to 61.2 million)",
+            "pdfPage": null,
+            "locator": "Original HTML; relevant body, comparison and limitations inspected",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T01:45:49.156Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "everyday-leg-assistance:review-skip",
+            "sourceUrl": "https://www.skipwithjoy.com/reserve/p/style-01-ej5na-hbs9d",
+            "finalUrl": "https://www.skipwithjoy.com/reserve/p/style-01-ej5na-hbs9d",
+            "title": "MO/GO: refundable reservation for powered knee assistance",
+            "publisher": "Skip",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "October15,2026 snapshot;US$99deposit towardUS$4999, advertisedsummer2027delivery. Companyclaims1500+reservations; cancellations/geography/unique buyers unknown. Not delivered sales or annual demand.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Ships to you in Summer 2027.",
+            "pdfPage": null,
+            "locator": "Original HTML; relevant body, comparison and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T01:45:49.156Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "everyday-leg-assistance:review-hypershell",
+            "sourceUrl": "https://hypershell.tech/en-us/products/hypershell-x",
+            "finalUrl": "https://hypershell.tech/en-us/products/hypershell-x",
+            "title": "Hypershell: outdoor assistance requires independent walking and balance",
+            "publisher": "Hypershell",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "October15,2026 USstorefrontsnapshot. Mixeddiscontinued/in-stock/newmodel language and conflictingdynamicprices; availabilityunresolved. No comparativeeffectiveness established.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Lifestyle power. Not a medical aid. Requires unassisted walking and balance.",
+            "pdfPage": null,
+            "locator": "Original HTML; relevant body, comparison and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T01:45:49.156Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "everyday-leg-assistance:review-halo",
+            "sourceUrl": "https://hypershell.tech/en-us/pages/exoskeleton-101-beginners-guide",
+            "finalUrl": "https://hypershell.tech/en-us/pages/exoskeleton-101-beginners-guide",
+            "title": "Hypershell describes hip and knee assistance",
+            "publisher": "Hypershell",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "October15,2026 supplierguide; productfeatures, not confirmedshipping,safety or useroutcomes.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Integrated Hip + Knee Assistance",
+            "pdfPage": null,
+            "locator": "Original HTML; relevant body, comparison and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T01:45:49.156Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "everyday-leg-assistance:review-care",
+            "sourceUrl": "https://www.nice.org.uk/guidance/ng226/chapter/Recommendations",
+            "finalUrl": "https://www.nice.org.uk/guidance/ng226/chapter/Recommendations",
+            "title": "Osteoarthritis guidance: exercise and walking aids",
+            "publisher": "NICE",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2022-10-19",
+            "observationPeriod": "EnglandNG226,October19,2022; disease-specificguidance, notallfatiguedwalkers or Exonieligibility.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "For all people with osteoarthritis, offer therapeutic exercise tailored to their needs",
+            "pdfPage": null,
+            "locator": "Original HTML; relevant body, comparison and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T01:45:49.156Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "everyday-leg-assistance:review-roam",
+            "sourceUrl": "https://www.roamrobotics.com/",
+            "finalUrl": "https://www.roamrobotics.com/",
+            "title": "Roam: knee osteoarthritis testing",
+            "publisher": "Roam Robotics",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "October15,2026 page; testingdescribed, no currentmedicalprice,supply,comparableoutcomes orcoverage established.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Currently being tested for reducing pain and increasing mobility for patients with advanced knee osteoarthritis.",
+            "pdfPage": null,
+            "locator": "Original HTML; relevant body, comparison and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T01:45:49.156Z",
               "failureIds": []
             }
           }
@@ -10194,112 +10399,63 @@
           "rubricVersion": "venture-screen-v2",
           "dimensions": {
             "problem": {
-              "status": "plausible",
-              "reason": "Maintaining independent movement is consequential. Exoni targets hiking; benefit for older adults is an adjacent-use hypothesis.",
+              "status": "supported",
+              "reason": "LIFE documents mobility loss in a selected older group; effort-limited outings and Exoni eligibility remain unmeasured.",
               "claimIds": [
-                "everyday-leg-assistance:v2-what",
-                "everyday-leg-assistance:v2-problem",
-                "everyday-leg-assistance:v2-opportunity",
-                "everyday-leg-assistance:v2-customer-0",
-                "everyday-leg-assistance:v2-customer-1",
-                "everyday-leg-assistance:v2-application-0",
-                "everyday-leg-assistance:v2-comparison",
-                "everyday-leg-assistance:project-v2-891359e6b8c9ce97a5becdaa"
+                "everyday-leg-assistance:v2-problem"
               ]
             },
             "customerPayment": {
               "status": "plausible",
-              "reason": "People whose limited strength or endurance restricts walking; the payer is unresolved. Willingness to pay for this offer is not established.",
+              "reason": "A competitor advertises refundable consumer reservations; no Exoni purchase, clinic budget or coverage demonstrated.",
               "claimIds": [
-                "everyday-leg-assistance:v2-what",
-                "everyday-leg-assistance:v2-problem",
-                "everyday-leg-assistance:v2-opportunity",
-                "everyday-leg-assistance:v2-customer-0",
-                "everyday-leg-assistance:v2-customer-1",
-                "everyday-leg-assistance:v2-application-0",
-                "everyday-leg-assistance:v2-comparison",
-                "everyday-leg-assistance:project-v2-891359e6b8c9ce97a5becdaa"
+                "everyday-leg-assistance:v2-customer-0"
               ]
             },
             "productValue": {
               "status": "plausible",
-              "reason": "Low weight and lower parts cost could make assistance practical outside clinics, if the complete device safely reduces effort.",
+              "reason": "Timed joint power can assist movement, but the small ankle study did not establish clear advantage over normal shoes; Exoni transfer is untested.",
               "claimIds": [
-                "everyday-leg-assistance:v2-what",
-                "everyday-leg-assistance:v2-problem",
-                "everyday-leg-assistance:v2-opportunity",
-                "everyday-leg-assistance:v2-customer-0",
-                "everyday-leg-assistance:v2-customer-1",
-                "everyday-leg-assistance:v2-application-0",
-                "everyday-leg-assistance:v2-comparison",
-                "everyday-leg-assistance:project-v2-891359e6b8c9ce97a5becdaa"
+                "everyday-leg-assistance:v2-opportunity"
               ]
             },
             "commercialGap": {
               "status": "plausible",
-              "reason": "Potential supplement to rehabilitation; different function from balance aids; alternative to other powered assistance. No head-to-head evidence. Open gap: Whether safe everyday assistance can fit users poorly served by current equipment.",
+              "reason": "Useful everyday activity with less burden could supplement care or improve on powered alternatives; no matched advantage established.",
               "claimIds": [
-                "everyday-leg-assistance:v2-what",
-                "everyday-leg-assistance:v2-problem",
-                "everyday-leg-assistance:v2-opportunity",
-                "everyday-leg-assistance:v2-customer-0",
-                "everyday-leg-assistance:v2-customer-1",
-                "everyday-leg-assistance:v2-application-0",
-                "everyday-leg-assistance:v2-comparison",
-                "everyday-leg-assistance:project-v2-891359e6b8c9ce97a5becdaa"
+                "everyday-leg-assistance:v2-comparison"
               ]
             },
             "ventureScale": {
               "status": "plausible",
-              "reason": "A reusable product for a defined mobility-limited population could expand beyond hikers. Eligibility, affordable delivered price and buying rates are missing.",
+              "reason": "A reusable product for repeated mobility needs could expand; demographic growth is context only. Eligibility, affordable price, access and buying flows missing.",
               "claimIds": [
-                "everyday-leg-assistance:v2-what",
-                "everyday-leg-assistance:v2-problem",
-                "everyday-leg-assistance:v2-opportunity",
-                "everyday-leg-assistance:v2-customer-0",
-                "everyday-leg-assistance:v2-customer-1",
-                "everyday-leg-assistance:v2-application-0",
-                "everyday-leg-assistance:v2-comparison",
-                "everyday-leg-assistance:project-v2-891359e6b8c9ce97a5becdaa"
+                "everyday-leg-assistance:v2-problem"
               ]
             },
             "businessCapital": {
               "status": "missing",
-              "reason": "The users needing assistance most may be hardest to assist safely; wearable burden can outweigh help. Delivered costs, repeat economics and capital needs remain unresolved.",
+              "reason": "Full production, fitting, returns, service, safety and clinical evidence costs unknown; parts cost does not establish margin.",
               "claimIds": [
-                "everyday-leg-assistance:v2-what",
-                "everyday-leg-assistance:v2-problem",
-                "everyday-leg-assistance:v2-opportunity",
-                "everyday-leg-assistance:v2-customer-0",
-                "everyday-leg-assistance:v2-customer-1",
-                "everyday-leg-assistance:v2-application-0",
-                "everyday-leg-assistance:v2-comparison",
-                "everyday-leg-assistance:project-v2-891359e6b8c9ce97a5becdaa"
+                "everyday-leg-assistance:v2-opportunity"
               ]
             },
             "timing": {
-              "status": "missing",
-              "reason": "The retained project dates do not establish adoption or market acceleration. Adjacent-use readiness has not been validated.",
+              "status": "plausible",
+              "reason": "Historical aging and consumer offers justify testing; no accelerating device sales or demonstrated battery breakthrough.",
               "claimIds": [
-                "everyday-leg-assistance:v2-what",
-                "everyday-leg-assistance:v2-problem",
-                "everyday-leg-assistance:v2-opportunity",
-                "everyday-leg-assistance:v2-customer-0",
-                "everyday-leg-assistance:v2-customer-1",
-                "everyday-leg-assistance:v2-application-0",
-                "everyday-leg-assistance:v2-comparison",
-                "everyday-leg-assistance:project-v2-891359e6b8c9ce97a5becdaa"
+                "everyday-leg-assistance:v2-problem"
               ]
             }
           },
           "priority": "high",
-          "priorityReason": "Low weight and lower parts cost could make assistance practical outside clinics, if the complete device safely reduces effort. A reusable product for a defined mobility-limited population could expand beyond hikers. Eligibility, affordable delivered price and buying rates are missing.",
+          "priorityReason": "Preserving independent outings is consequential and timed assistance offers a credible mechanism. A repeatable consumer product could have broad use, but the priority is to test a safely eligible effort-limited group and added value over existing care—not to infer demand from age.",
           "confidence": {
             "level": "low",
-            "reason": "Original project excerpts checked; commercial demand and adjacent-use benefit remain hypotheses."
+            "reason": "Original evidence establishes the problem and relevant alternatives. Exoni-specific benefit, superiority to ordinary walking or appropriate care, paid demand and repeat economics remain unproven."
           },
-          "strongestObjection": "The users needing assistance most may be hardest to assist safely; wearable burden can outweigh help.",
-          "decisiveQuestion": "Define safe eligibility, then compare effort, useful independent activity, comfort and total price against appropriate current aids."
+          "strongestObjection": "Weight, discomfort, fitting and cost may outweigh the extra activity. Users may need balance or pain care rather than additional knee power.",
+          "decisiveQuestion": "For a safely eligible group, does assistance add useful everyday walking beyond ordinary walking and appropriate current care, with sustained use and purchases at a price that covers fitting, returns and support?"
         }
       },
       "research": null,

@@ -3953,12 +3953,12 @@
       "title": "49. Exoni",
       "year": 2026,
       "summary": "Exoni describes a lightweight powered knee for hiking and running. No results for older adults are reported.",
-      "problem": "The team says current powered wearable supports are too heavy and expensive for practical outdoor use.",
+      "problem": "The team targets the weight and cost of powered assistance for hiking and running. Existing consumer devices mean the task is not confined to military or rehabilitation equipment.",
       "approach": "An exoskeleton is a powered support worn on the body. Exoni proposes a lightweight knee motor and software that predicts the user's next movement.",
-      "whyItMatters": "Low weight and lower parts cost could make assistance practical outside clinics, if the complete device safely reduces effort.",
-      "statusQuo": "",
+      "whyItMatters": "A wearable device could help a suitable person finish useful walks with less effort. Whether Exoni can do so safely, comfortably and at a viable full price remains unproven.",
+      "statusQuo": "Consumer powered wearables already target outdoor walking. Exoni provides no matched comparison with them.",
       "results": "Exoni describes a lightweight powered knee for hiking and running. No results for older adults are reported.",
-      "limitations": "No validated older-adult outcome, delivered price or safe-use population. Parts cost is not the price of a qualified product; unnamed medical-device comparisons are excluded. Source school and year identify the event collection, not confirmed author affiliation or project completion date.",
+      "limitations": "No validated older-adult outcome, delivered price or safe-use population. Parts cost is not the price of a qualified product; unnamed medical-device comparisons are excluded. Source school and year identify the event collection, not confirmed author affiliation or project completion date. Reported motor force, per-leg weight and parts budget are not measured daily-life benefit, complete-system weight or delivered price. No claim of first or cheapest product is accepted.",
       "topics": [
         "Robotics"
       ],
@@ -5568,15 +5568,15 @@
     {
       "id": "everyday-leg-assistance",
       "title": "Lightweight powered assistance for everyday walking",
-      "summary": "Motors worn at the knees add power to a person’s steps. The starting design targets hiking; everyday mobility is a possible next use.",
+      "summary": "Powered knee assistance to help people complete useful everyday walks.",
       "topic": "Robotics",
-      "problem": "People with limited strength or endurance may struggle to stay active independently. Assistance must help enough to justify carrying and wearing it.",
-      "statusQuo": "",
-      "gap": "Whether safe everyday assistance can fit users poorly served by current equipment.",
-      "opportunity": "A light, affordable device could reach people who need walking assistance outside a clinic. The business depends on safe everyday benefit and an attainable complete-device price.",
-      "evidence": "Low weight and lower parts cost could make assistance practical outside clinics, if the complete device safely reduces effort.",
-      "counterpoint": "The users needing assistance most may be hardest to assist safely; wearable burden can outweigh help.",
-      "nextQuestion": "Define safe eligibility, then compare effort, useful independent activity, comfort and total price against appropriate current aids.",
+      "problem": "When walking becomes too tiring, errands and social outings can become difficult. A growing older population makes preserving mobility consequential, but age alone does not identify suitable users. Added knee power may not address pain, poor balance or heart and lung limitations.",
+      "statusQuo": "Exercise, walking aids, rest breaks and existing powered wearables address different parts of the task.",
+      "gap": "More useful daily activity for an effort-limited group, with manageable wearing burden and full cost; additional benefit remains unproven.",
+      "opportunity": "Help people who can still walk and balance independently but cut outings short because of muscular effort. Assistance could supplement exercise and walking aids. Skip and Hypershell already target outdoor movement; the opening is better everyday usefulness, comfort or full cost for a defined group. A small older-adult ankle study did not establish a clear benefit over normal shoes, so useful daily activity—not motor power—is the result to prove.",
+      "evidence": "A small Stanford ankle-assistance study found improvement over inactive equipment, but not statistically clear improvement over normal shoes. Exoni itself has no reported older-adult outcome. Consumer offers support testing payment, not proven demand for this design.",
+      "counterpoint": "Weight, discomfort, fitting and cost may outweigh the extra activity. Users may need balance or pain care rather than additional knee power.",
+      "nextQuestion": "For a safely eligible group, does assistance add useful everyday walking beyond ordinary walking and appropriate current care, with sustained use and purchases at a price that covers fitting, returns and support?",
       "projectIds": [
         "synthesis-project-891359e6b8c9ce97a5becdaa"
       ],
@@ -5585,8 +5585,8 @@
       ],
       "confidence": "Early signal",
       "brief": {
-        "whatItIs": "Motors worn at the knees add power to a person’s steps. The starting design targets hiking; everyday mobility is a possible next use.",
-        "problem": "People with limited strength or endurance may struggle to stay active independently. Assistance must help enough to justify carrying and wearing it.",
+        "whatItIs": "Motors worn at the knees add power to a person’s steps. Exoni’s design targets hiking and running. Helping older adults complete everyday walks is a promising next use to test; Exoni reports no outcomes for that group.",
+        "problem": "When walking becomes too tiring, errands and social outings can become difficult. A growing older population makes preserving mobility consequential, but age alone does not identify suitable users. Added knee power may not address pain, poor balance or heart and lung limitations.",
         "breakthroughs": [
           {
             "text": "Exoni describes a lightweight powered knee for hiking and running. No results for older adults are reported.",
@@ -5595,23 +5595,72 @@
             ]
           }
         ],
-        "marketOpportunity": "A light, affordable device could reach people who need walking assistance outside a clinic. The business depends on safe everyday benefit and an attainable complete-device price.",
-        "buyer": "Mobility-device suppliers; Rehabilitation providers",
+        "marketOpportunity": "Help people who can still walk and balance independently but cut outings short because of muscular effort. Assistance could supplement exercise and walking aids. Skip and Hypershell already target outdoor movement; the opening is better everyday usefulness, comfort or full cost for a defined group. A small older-adult ankle study did not establish a clear benefit over normal shoes, so useful daily activity—not motor power—is the result to prove.",
+        "buyer": "People or families paying for everyday or outdoor walking assistance; Rehabilitation providers, if extra practice justifies fitting and supervision",
         "applications": [
-          "Walking assistance outside clinics"
+          "Everyday walking for people limited mainly by muscular effort"
         ],
         "targetCustomers": [
-          "Mobility-device suppliers",
-          "Rehabilitation providers"
+          "People or families paying for everyday or outdoor walking assistance",
+          "Rehabilitation providers, if extra practice justifies fitting and supervision"
         ],
-        "marketStatus": "hypothesis",
-        "marketEvidence": [],
+        "marketStatus": "researched",
+        "marketEvidence": [
+          {
+            "title": "Older-adult ankle study: inactive-device gains, uncertain benefit over normal shoes",
+            "url": "https://link.springer.com/article/10.1186/s12984-023-01287-5",
+            "excerpt": "Compared to walking in normal shoes, self-selected walking speed increased by 3.6 ± 5.2% (0.05 ± 0.07 m/s), metabolic cost decreased by 12.7 ± 16.0% (0.41 ± 0.69 W/kg), and cost of transport decreased by 15.6 ± 15.6% (0.41 ± 0.48 J/kg/m) with optimized torque",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "LIFE trial: preserving walking ability in older adults",
+            "url": "https://agingresearchbiobank.nia.nih.gov/studies/life/details",
+            "excerpt": "Incident major mobility disability occurred in 30.1% (246 participants) of the physical activity group and 35.5% (290 participants)",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "US older population growth: demographic context, not buyers",
+            "url": "https://cdn.www.census.gov/newsroom/press-releases/2025/older-adults-outnumber-children.html",
+            "excerpt": "The U.S. population age 65 and older rose by 3.1% (to 61.2 million)",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "MO/GO: refundable reservation for powered knee assistance",
+            "url": "https://www.skipwithjoy.com/reserve/p/style-01-ej5na-hbs9d",
+            "excerpt": "Ships to you in Summer 2027.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Hypershell: outdoor assistance requires independent walking and balance",
+            "url": "https://hypershell.tech/en-us/products/hypershell-x",
+            "excerpt": "Lifestyle power. Not a medical aid. Requires unassisted walking and balance.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Hypershell describes hip and knee assistance",
+            "url": "https://hypershell.tech/en-us/pages/exoskeleton-101-beginners-guide",
+            "excerpt": "Integrated Hip + Knee Assistance",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Osteoarthritis guidance: exercise and walking aids",
+            "url": "https://www.nice.org.uk/guidance/ng226/chapter/Recommendations",
+            "excerpt": "For all people with osteoarthritis, offer therapeutic exercise tailored to their needs",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Roam: knee osteoarthritis testing",
+            "url": "https://www.roamrobotics.com/",
+            "excerpt": "Currently being tested for reducing pain and increasing mobility for patients with advanced knee osteoarthritis.",
+            "accessedAt": "2026-10-15"
+          }
+        ],
         "risks": [
-          "The users needing assistance most may be hardest to assist safely; wearable burden can outweigh help.",
-          "A reusable product for a defined mobility-limited population could expand beyond hikers. Eligibility, affordable delivered price and buying rates are missing."
+          "Weight, discomfort, fitting and cost may outweigh the extra activity. Users may need balance or pain care rather than additional knee power.",
+          "Safe eligibility, sustained use, full cost, buying rates and reachable market remain unknown. Clinical and consumer uses have different requirements."
         ],
         "nextQuestions": [
-          "Define safe eligibility, then compare effort, useful independent activity, comfort and total price against appropriate current aids."
+          "For a safely eligible group, does assistance add useful everyday walking beyond ordinary walking and appropriate current care, with sustained use and purchases at a price that covers fitting, returns and support?"
         ]
       }
     },
