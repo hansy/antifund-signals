@@ -10465,8 +10465,8 @@
     {
       "schemaVersion": 1,
       "id": "ai-action-controls",
-      "revision": 0,
-      "acceptedRevisionId": "ai-action-controls:rubric-v2-20261015",
+      "revision": 1,
+      "acceptedRevisionId": "ai-action-controls:evidence-review-v2-20261016",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -10474,19 +10474,19 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T21:24:18.427Z",
-      "updatedAt": "2026-10-15T21:24:18.427Z",
+      "updatedAt": "2026-10-16T02:07:40.100Z",
       "verdict": null,
       "stage": "first-impressions",
-      "qualificationError": null,
+      "qualificationError": "Reviewed hypothesis; added value over existing controls, paying customers and venture-scale economics remain unproven.",
       "accepted": {
-        "id": "ai-action-controls:rubric-v2-20261015",
+        "id": "ai-action-controls:evidence-review-v2-20261016",
         "opportunityId": "ai-action-controls",
-        "parentRevisionId": null,
-        "createdAt": "2026-10-15T21:24:18.427Z",
-        "producerId": "rubric-reassessment-v2",
-        "origin": "saved-data-synthesis",
-        "changeReason": "User-authorized preliminary opportunity from saved source evidence; adjacent uses and market demand remain hypotheses.",
-        "contentHash": "49d1c119ac9eb2fcea508d274d477035f1b22751fdf486e3c4f7d108400e2af3",
+        "parentRevisionId": "ai-action-controls:rubric-v2-20261015",
+        "createdAt": "2026-10-16T02:07:40.100Z",
+        "producerId": "codex-evidence-inspector",
+        "origin": "inspection-correction",
+        "changeReason": "Inspect original project and primary vendor sources; distinguish prototypes from protection, compare overlapping and supplementary controls, exclude inaccessible growth evidence and preserve unknown commercial demand.",
+        "contentHash": "412f54202ed426f4d04026a60b0e3931be263f3a8509cd2a5a335bc192db6be5",
         "title": "Controls that approve or block an AI assistant’s actions",
         "classifications": [
           "Enabling AI"
@@ -10498,7 +10498,7 @@
           ],
           "economics": [],
           "timing": [],
-          "keyQuestion": "Compare correct allow/block/escalate decisions, bypass resistance and workflow delays with existing controls on real permitted workflows.",
+          "keyQuestion": "In a real security workflow, does adding this layer prevent important mistakes or reduce setup and review work beyond existing controls, at a total cost a buyer will pay?",
           "what": "ai-action-controls:v2-what",
           "problem": "ai-action-controls:v2-problem",
           "opportunity": "ai-action-controls:v2-opportunity",
@@ -10552,147 +10552,187 @@
         "claims": [
           {
             "id": "ai-action-controls:v2-what",
-            "text": "Software sits between an AI assistant and its tools, checking an action before it changes a file, account or physical system.",
+            "text": "Software checks an AI assistant’s proposed action before it runs, then allows it, blocks it or asks a person. For example, it could stop an assistant from disabling the wrong account or sending confidential information to the wrong recipient.",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "ai-action-controls:synthesis-project-b2069485b88c5bcc64abe4c5:source-v2",
+              "ai-action-controls:synthesis-project-1a561f198a15270c058a0c1f:source-v2",
+              "ai-action-controls:synthesis-project-83f5c2da5621754b2b7f623a:source-v2"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No independently demonstrated additional protection, customer payment or full delivery economics. Vendor descriptions establish offered functions, not comparative effectiveness or reachable demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T02:07:40.100Z",
+              "reason": "Explicit opportunity/customer/transfer hypothesis, not proven demand or protection."
             },
-            "testQuestion": "Compare correct allow/block/escalate decisions, bypass resistance and workflow delays with existing controls on real permitted workflows."
+            "testQuestion": "In a real security workflow, does adding this layer prevent important mistakes or reduce setup and review work beyond existing controls, at a total cost a buyer will pay?"
           },
           {
             "id": "ai-action-controls:v2-problem",
-            "text": "An assistant can make a harmful change before anyone reads its activity log. Checking its words alone does not control what its tools execute.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "Giving an assistant access to company systems lets it make real changes. A mistake—or malicious instructions hidden in a page it reads—can turn that access into harm. Reviewing a log afterward may be too late; asking a person about every action can make approvals careless.",
+            "kind": "inference",
+            "evidenceIds": [
+              "ai-action-controls:review-nist",
+              "ai-action-controls:review-attacks"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No independently demonstrated additional protection, customer payment or full delivery economics. Vendor descriptions establish offered functions, not comparative effectiveness or reachable demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T02:07:40.100Z",
+              "reason": "Bounded interpretation from original sources; competitor overlap and missing customer outcomes retained."
             },
-            "testQuestion": "Compare correct allow/block/escalate decisions, bypass resistance and workflow delays with existing controls on real permitted workflows."
+            "reasoning": "Retained attack research supports the risk and NIST warns about consent fatigue; neither measures customer losses."
           },
           {
             "id": "ai-action-controls:v2-opportunity",
-            "text": "A reusable control layer could let teams automate more work while limiting costly mistakes. It must add protection beyond existing permissions without constantly interrupting useful work.",
+            "text": "Help security teams safely automate actions across several systems with less custom setup and fewer interruptions. This could supplement existing permissions and content checks. AWS, Cerbos and Tines already offer overlapping controls, so the opening is better protection or lower total effort in a specific workflow—not simply another approval button. Extra customer value and paid demand remain unproven.",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "ai-action-controls:synthesis-project-b2069485b88c5bcc64abe4c5:source-v2",
+              "ai-action-controls:synthesis-project-1a561f198a15270c058a0c1f:source-v2",
+              "ai-action-controls:synthesis-project-83f5c2da5621754b2b7f623a:source-v2",
+              "ai-action-controls:review-aws",
+              "ai-action-controls:review-cerbos",
+              "ai-action-controls:review-tines"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No independently demonstrated additional protection, customer payment or full delivery economics. Vendor descriptions establish offered functions, not comparative effectiveness or reachable demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T02:07:40.100Z",
+              "reason": "Explicit opportunity/customer/transfer hypothesis, not proven demand or protection."
             },
-            "testQuestion": "Compare correct allow/block/escalate decisions, bypass resistance and workflow delays with existing controls on real permitted workflows."
+            "testQuestion": "In a real security workflow, does adding this layer prevent important mistakes or reduce setup and review work beyond existing controls, at a total cost a buyer will pay?"
           },
           {
             "id": "ai-action-controls:v2-customer-0",
-            "text": "Security teams",
+            "text": "Security teams automating account or system changes",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "ai-action-controls:synthesis-project-b2069485b88c5bcc64abe4c5:source-v2",
+              "ai-action-controls:synthesis-project-1a561f198a15270c058a0c1f:source-v2",
+              "ai-action-controls:synthesis-project-83f5c2da5621754b2b7f623a:source-v2",
+              "ai-action-controls:review-tines",
+              "ai-action-controls:review-microsoft"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No independently demonstrated additional protection, customer payment or full delivery economics. Vendor descriptions establish offered functions, not comparative effectiveness or reachable demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T02:07:40.100Z",
+              "reason": "Explicit opportunity/customer/transfer hypothesis, not proven demand or protection."
             },
-            "testQuestion": "Compare correct allow/block/escalate decisions, bypass resistance and workflow delays with existing controls on real permitted workflows."
+            "testQuestion": "Which workflow has an uncovered need and a budget for additional protection or lower operating effort?"
           },
           {
             "id": "ai-action-controls:v2-customer-1",
-            "text": "Teams building AI automation",
+            "text": "Teams building assistants that make purchases or send sensitive information",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "ai-action-controls:synthesis-project-b2069485b88c5bcc64abe4c5:source-v2",
+              "ai-action-controls:synthesis-project-1a561f198a15270c058a0c1f:source-v2",
+              "ai-action-controls:synthesis-project-83f5c2da5621754b2b7f623a:source-v2",
+              "ai-action-controls:review-tines",
+              "ai-action-controls:review-microsoft"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No independently demonstrated additional protection, customer payment or full delivery economics. Vendor descriptions establish offered functions, not comparative effectiveness or reachable demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T02:07:40.100Z",
+              "reason": "Explicit opportunity/customer/transfer hypothesis, not proven demand or protection."
             },
-            "testQuestion": "Compare correct allow/block/escalate decisions, bypass resistance and workflow delays with existing controls on real permitted workflows."
+            "testQuestion": "Which workflow has an uncovered need and a budget for additional protection or lower operating effort?"
           },
           {
             "id": "ai-action-controls:v2-application-0",
-            "text": "Approving sensitive tool actions",
+            "text": "Security response across connected systems",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "ai-action-controls:synthesis-project-b2069485b88c5bcc64abe4c5:source-v2",
+              "ai-action-controls:synthesis-project-1a561f198a15270c058a0c1f:source-v2",
+              "ai-action-controls:synthesis-project-83f5c2da5621754b2b7f623a:source-v2"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No independently demonstrated additional protection, customer payment or full delivery economics. Vendor descriptions establish offered functions, not comparative effectiveness or reachable demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T02:07:40.100Z",
+              "reason": "Explicit opportunity/customer/transfer hypothesis, not proven demand or protection."
             },
-            "testQuestion": "Compare correct allow/block/escalate decisions, bypass resistance and workflow delays with existing controls on real permitted workflows."
+            "testQuestion": "In a real security workflow, does adding this layer prevent important mistakes or reduce setup and review work beyond existing controls, at a total cost a buyer will pay?"
           },
           {
             "id": "ai-action-controls:v2-application-1",
-            "text": "Limiting access to connected systems",
+            "text": "Purchasing and outbound messages, if checks use reliable current business information",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "ai-action-controls:synthesis-project-b2069485b88c5bcc64abe4c5:source-v2",
+              "ai-action-controls:synthesis-project-1a561f198a15270c058a0c1f:source-v2",
+              "ai-action-controls:synthesis-project-83f5c2da5621754b2b7f623a:source-v2"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No independently demonstrated additional protection, customer payment or full delivery economics. Vendor descriptions establish offered functions, not comparative effectiveness or reachable demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T02:07:40.100Z",
+              "reason": "Explicit opportunity/customer/transfer hypothesis, not proven demand or protection."
             },
-            "testQuestion": "Compare correct allow/block/escalate decisions, bypass resistance and workflow delays with existing controls on real permitted workflows."
+            "testQuestion": "In a real security workflow, does adding this layer prevent important mistakes or reduce setup and review work beyond existing controls, at a total cost a buyer will pay?"
           },
           {
             "id": "ai-action-controls:v2-comparison",
-            "text": "Potential supplement to access management, content filters and logs. Direct substitute for overlapping agent gateways. Existing products were not benchmarked.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "AWS checks tool requests before execution. Cerbos adds rules and business context across applications, with a free engine. Tines pauses security workflows for human input; Microsoft describes multistage approvals in preview, not for production use. Internal checks and manual execution are alternatives. A new layer must improve the best current setup enough to cover its integration, maintenance and review burden.",
+            "kind": "inference",
+            "evidenceIds": [
+              "ai-action-controls:review-aws",
+              "ai-action-controls:review-cerbos",
+              "ai-action-controls:review-tines",
+              "ai-action-controls:review-microsoft",
+              "ai-action-controls:review-cerbos-price"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No independently demonstrated additional protection, customer payment or full delivery economics. Vendor descriptions establish offered functions, not comparative effectiveness or reachable demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T02:07:40.100Z",
+              "reason": "Bounded interpretation from original sources; competitor overlap and missing customer outcomes retained."
             },
-            "testQuestion": "Compare correct allow/block/escalate decisions, bypass resistance and workflow delays with existing controls on real permitted workflows."
+            "reasoning": "Original vendor descriptions establish overlap, not comparative adequacy. Supplementary value requires matched combined-system testing."
           },
           {
             "id": "ai-action-controls:project-v2-b2069485b88c5bcc64abe4c5",
@@ -10707,10 +10747,10 @@
               "A controlled demonstration does not establish production security or resistance to bypass. Source school and year identify the event collection, not confirmed author affiliation or project completion date."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T02:07:40.100Z",
+              "reason": "Original project excerpt and surrounding limitations verified; team-reported demonstration only."
             },
             "attribution": "Aegishmesh",
             "quantity": null
@@ -10728,10 +10768,10 @@
               "No production security validation; the human review queue was not persistent and the engine ran on a laptop. Source school and year identify the event collection, not confirmed author affiliation or project completion date."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T02:07:40.100Z",
+              "reason": "Original project excerpt and surrounding limitations verified; team-reported demonstration only."
             },
             "attribution": "Agent-Gate",
             "quantity": null
@@ -10749,10 +10789,10 @@
               "Without credentials, services are simulated. Team policies and wider integrations remain future work. Source school and year identify the event collection, not confirmed author affiliation or project completion date."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T02:07:40.100Z",
+              "reason": "Original project excerpt and surrounding limitations verified; team-reported demonstration only."
             },
             "attribution": "Zephyr",
             "quantity": null
@@ -10762,9 +10802,9 @@
           {
             "id": "ai-action-controls:synthesis-project-b2069485b88c5bcc64abe4c5:source-v2",
             "sourceUrl": "https://devpost.com/software/aegismesh-oj813b",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/aegismesh-oj813b",
             "title": "Aegishmesh",
-            "publisher": null,
+            "publisher": "Devpost; project team",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -10772,21 +10812,21 @@
             "retrievedAt": "2026-10-15T21:24:18.427Z",
             "excerpt": "a Raspberry Pi edge service demonstrates signed-capability enforcement using low-voltage hardware.",
             "pdfPage": null,
-            "locator": "Original project page; exact retained excerpt",
+            "locator": "Original archived project page; team description and limitations inspected",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T21:24:18.427Z",
+              "checkedAt": "2026-10-16T02:07:40.100Z",
               "failureIds": []
             }
           },
           {
             "id": "ai-action-controls:synthesis-project-1a561f198a15270c058a0c1f:source-v2",
             "sourceUrl": "https://devpost.com/software/agent-wall-hqrjvb",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/agent-wall-hqrjvb",
             "title": "Agent-Gate",
-            "publisher": null,
+            "publisher": "Devpost; project team",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -10794,21 +10834,21 @@
             "retrievedAt": "2026-10-15T21:24:18.427Z",
             "excerpt": "Three mock agents (customer support, procurement, and a coding agent, with nine tools between them) run their calls through the gateway, so the demo shows the firewall working live instead of us just describing it.",
             "pdfPage": null,
-            "locator": "Original project page; exact retained excerpt",
+            "locator": "Original archived project page; team description and limitations inspected",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T21:24:18.427Z",
+              "checkedAt": "2026-10-16T02:07:40.100Z",
               "failureIds": []
             }
           },
           {
             "id": "ai-action-controls:synthesis-project-83f5c2da5621754b2b7f623a:source-v2",
             "sourceUrl": "https://devpost.com/software/zephyr-dgnire",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/zephyr-dgnire",
             "title": "Zephyr",
-            "publisher": null,
+            "publisher": "Devpost; project team",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -10816,12 +10856,188 @@
             "retrievedAt": "2026-10-15T21:24:18.427Z",
             "excerpt": "A run that pauses on an irreversible action, shows the exact payload, and resumes on\napproval — against real services, from a plain sentence.",
             "pdfPage": null,
-            "locator": "Original project page; exact retained excerpt",
+            "locator": "Original archived project page; team description and limitations inspected",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T21:24:18.427Z",
+              "checkedAt": "2026-10-16T02:07:40.100Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "ai-action-controls:review-nist",
+            "sourceUrl": "https://www.nist.gov/blogs/cybersecurity-insights/back-future-why-agentic-ai-needs-strong-identity-foundation",
+            "finalUrl": "https://www.nist.gov/blogs/cybersecurity-insights/back-future-why-agentic-ai-needs-strong-identity-foundation",
+            "title": "Too many approval requests can encourage careless consent",
+            "publisher": "NIST",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2026-08-27",
+            "observationPeriod": "August27,2026 US technical commentary; no binding standard, incident rate or buyer count.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "relying too heavily on HITL mechanisms introduces a severe risk of consent fatigue.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T02:07:40.100Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "ai-action-controls:review-attacks",
+            "sourceUrl": "https://www.anthropic.com/news/prompt-injection-defenses",
+            "finalUrl": "https://www.anthropic.com/news/prompt-injection-defenses",
+            "title": "Browser assistants remain vulnerable to hostile instructions",
+            "publisher": "Anthropic",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2025-11-24",
+            "observationPeriod": "November24,2025 vendor attack research. Illustrative leakage scenario and test attacks, not observed customer losses or incident prevalence.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "No browser agent is immune to prompt injection",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T02:07:40.100Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "ai-action-controls:review-aws",
+            "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/secure-ai-agents-with-policy-in-amazon-bedrock-agentcore/",
+            "finalUrl": "https://aws.amazon.com/blogs/machine-learning/secure-ai-agents-with-policy-in-amazon-bedrock-agentcore/",
+            "title": "AWS: tool requests checked before execution",
+            "publisher": "AWS",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2026-03-12",
+            "observationPeriod": "March12,2026 implementation example. Mechanism overlap, not independent performance comparison.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "evaluating every agent-to-tool request against the policies in the policy engine before granting or denying tool access.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T02:07:40.100Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "ai-action-controls:review-cerbos",
+            "sourceUrl": "https://www.cerbos.dev/ecosystem/mcp",
+            "finalUrl": "https://www.cerbos.dev/ecosystem/mcp",
+            "title": "Cerbos: action rules and business context across applications",
+            "publisher": "Cerbos",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "October15,2026 retained vendor page, publication date unknown; features not independently benchmarked.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Policies are written in human-readable YAML and evaluated at request time.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T02:07:40.100Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "ai-action-controls:review-tines",
+            "sourceUrl": "https://www.tines.com/blog/human-in-the-loop-workflows-where-intelligent-automation-meets-judgment/",
+            "finalUrl": "https://www.tines.com/blog/human-in-the-loop-workflows-where-intelligent-automation-meets-judgment/",
+            "title": "Tines: pause security workflows for human input",
+            "publisher": "Tines",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2026-06-18",
+            "observationPeriod": "June18,2026 supplier account; no comparative outcomes or regulatory assurance adopted.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Pages pause stories for human input",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T02:07:40.100Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "ai-action-controls:review-microsoft",
+            "sourceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/flows-advanced-approvals",
+            "finalUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/flows-advanced-approvals",
+            "title": "Microsoft: multistage approvals are a preview",
+            "publisher": "Microsoft",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "October15,2026 snapshot; publication date unknown. Explicitly not intended for production; not a lasting market gap.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Preview features aren't meant for production use and may have restricted functionality.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T02:07:40.100Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "ai-action-controls:review-aws-price",
+            "sourceUrl": "https://aws.amazon.com/bedrock/agentcore/pricing/",
+            "finalUrl": "https://aws.amazon.com/bedrock/agentcore/pricing/",
+            "title": "AWS lists per-request authorization pricing",
+            "publisher": "AWS",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "October15,2026 public USD table; no regional quote. Authorization $0.000025/request and Gateway $0.005/1000 invocations exclude other services, integration and human review. Not a complete customer bill.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "$0.000025 per request",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T02:07:40.100Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "ai-action-controls:review-cerbos-price",
+            "sourceUrl": "https://www.cerbos.dev/pricing",
+            "finalUrl": "https://www.cerbos.dev/pricing",
+            "title": "Cerbos offers a free engine and paid management",
+            "publisher": "Cerbos",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "October15,2026 public dollar offer. Production management from $933/month including first5000 monthly active principals (people or services). Geography and negotiated terms unspecified. Posted price is not observed sales; billing units differ from AWS.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "From $933/month",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T02:07:40.100Z",
               "failureIds": []
             }
           }
@@ -10831,133 +11047,63 @@
           "rubricVersion": "venture-screen-v2",
           "dimensions": {
             "problem": {
-              "status": "plausible",
-              "reason": "A wrong action can change a system before anyone reads the log; the retained sources describe this specific risk.",
+              "status": "supported",
+              "reason": "Technical risk and approval fatigue supported; frequency and realized losses in target customers missing.",
               "claimIds": [
-                "ai-action-controls:v2-what",
-                "ai-action-controls:v2-problem",
-                "ai-action-controls:v2-opportunity",
-                "ai-action-controls:v2-customer-0",
-                "ai-action-controls:v2-customer-1",
-                "ai-action-controls:v2-application-0",
-                "ai-action-controls:v2-application-1",
-                "ai-action-controls:v2-comparison",
-                "ai-action-controls:project-v2-b2069485b88c5bcc64abe4c5",
-                "ai-action-controls:project-v2-1a561f198a15270c058a0c1f",
-                "ai-action-controls:project-v2-83f5c2da5621754b2b7f623a"
+                "ai-action-controls:v2-problem"
               ]
             },
             "customerPayment": {
               "status": "plausible",
-              "reason": "Security and engineering teams giving assistants access to files, accounts or equipment. Willingness to pay for this offer is not established.",
+              "reason": "Security and automation budget owners are credible hypotheses; no paid pilot, buying commitment or observed procurement path.",
               "claimIds": [
-                "ai-action-controls:v2-what",
-                "ai-action-controls:v2-problem",
-                "ai-action-controls:v2-opportunity",
-                "ai-action-controls:v2-customer-0",
-                "ai-action-controls:v2-customer-1",
-                "ai-action-controls:v2-application-0",
-                "ai-action-controls:v2-application-1",
-                "ai-action-controls:v2-comparison",
-                "ai-action-controls:project-v2-b2069485b88c5bcc64abe4c5",
-                "ai-action-controls:project-v2-1a561f198a15270c058a0c1f",
-                "ai-action-controls:project-v2-83f5c2da5621754b2b7f623a"
+                "ai-action-controls:v2-customer-0"
               ]
             },
             "productValue": {
               "status": "plausible",
-              "reason": "Permissions limited to the action and target address execution, beyond checking whether generated text is safe.",
+              "reason": "Checks precede actions, but prototypes do not establish production protection or lower review burden.",
               "claimIds": [
-                "ai-action-controls:v2-what",
-                "ai-action-controls:v2-problem",
-                "ai-action-controls:v2-opportunity",
-                "ai-action-controls:v2-customer-0",
-                "ai-action-controls:v2-customer-1",
-                "ai-action-controls:v2-application-0",
-                "ai-action-controls:v2-application-1",
-                "ai-action-controls:v2-comparison",
-                "ai-action-controls:project-v2-b2069485b88c5bcc64abe4c5",
-                "ai-action-controls:project-v2-1a561f198a15270c058a0c1f",
-                "ai-action-controls:project-v2-83f5c2da5621754b2b7f623a"
+                "ai-action-controls:v2-what"
               ]
             },
             "commercialGap": {
               "status": "plausible",
-              "reason": "Potential supplement to access management, content filters and logs. Direct substitute for overlapping agent gateways. Existing products were not benchmarked. Open gap: Consistent enforcement across tools, including bypass paths, cumulative actions and human review.",
+              "reason": "Supplementary cross-system value possible; AWS, Cerbos and Tines substantially overlap, including context and approvals.",
               "claimIds": [
-                "ai-action-controls:v2-what",
-                "ai-action-controls:v2-problem",
-                "ai-action-controls:v2-opportunity",
-                "ai-action-controls:v2-customer-0",
-                "ai-action-controls:v2-customer-1",
-                "ai-action-controls:v2-application-0",
-                "ai-action-controls:v2-application-1",
-                "ai-action-controls:v2-comparison",
-                "ai-action-controls:project-v2-b2069485b88c5bcc64abe4c5",
-                "ai-action-controls:project-v2-1a561f198a15270c058a0c1f",
-                "ai-action-controls:project-v2-83f5c2da5621754b2b7f623a"
+                "ai-action-controls:v2-comparison"
               ]
             },
             "ventureScale": {
               "status": "plausible",
-              "reason": "Reusable integrations across tool-using applications offer a plausible recurring software path; paid demand and obtainable revenue are unknown.",
+              "reason": "Reusable software could expand across workflows; qualifying accounts, attainable contract value and distribution missing.",
               "claimIds": [
-                "ai-action-controls:v2-what",
-                "ai-action-controls:v2-problem",
-                "ai-action-controls:v2-opportunity",
-                "ai-action-controls:v2-customer-0",
-                "ai-action-controls:v2-customer-1",
-                "ai-action-controls:v2-application-0",
-                "ai-action-controls:v2-application-1",
-                "ai-action-controls:v2-comparison",
-                "ai-action-controls:project-v2-b2069485b88c5bcc64abe4c5",
-                "ai-action-controls:project-v2-1a561f198a15270c058a0c1f",
-                "ai-action-controls:project-v2-83f5c2da5621754b2b7f623a"
+                "ai-action-controls:v2-opportunity"
               ]
             },
             "businessCapital": {
               "status": "missing",
-              "reason": "A gateway is ineffective if actions bypass it. Agent-Gate reports many routing mistakes; a demonstration does not establish protection. Delivered costs, repeat economics and capital needs remain unresolved.",
+              "reason": "Public platform prices are not delivery cost or margin; adapter maintenance, security engineering and support unmeasured.",
               "claimIds": [
-                "ai-action-controls:v2-what",
-                "ai-action-controls:v2-problem",
-                "ai-action-controls:v2-opportunity",
-                "ai-action-controls:v2-customer-0",
-                "ai-action-controls:v2-customer-1",
-                "ai-action-controls:v2-application-0",
-                "ai-action-controls:v2-application-1",
-                "ai-action-controls:v2-comparison",
-                "ai-action-controls:project-v2-b2069485b88c5bcc64abe4c5",
-                "ai-action-controls:project-v2-1a561f198a15270c058a0c1f",
-                "ai-action-controls:project-v2-83f5c2da5621754b2b7f623a"
+                "ai-action-controls:v2-opportunity"
               ]
             },
             "timing": {
-              "status": "missing",
-              "reason": "The retained project dates do not establish adoption or market acceleration. Adjacent-use readiness has not been validated.",
+              "status": "plausible",
+              "reason": "Dated vendor research and technical guidance show active control work; no buyer urgency or adoption-growth evidence accepted.",
               "claimIds": [
-                "ai-action-controls:v2-what",
-                "ai-action-controls:v2-problem",
-                "ai-action-controls:v2-opportunity",
-                "ai-action-controls:v2-customer-0",
-                "ai-action-controls:v2-customer-1",
-                "ai-action-controls:v2-application-0",
-                "ai-action-controls:v2-application-1",
-                "ai-action-controls:v2-comparison",
-                "ai-action-controls:project-v2-b2069485b88c5bcc64abe4c5",
-                "ai-action-controls:project-v2-1a561f198a15270c058a0c1f",
-                "ai-action-controls:project-v2-83f5c2da5621754b2b7f623a"
+                "ai-action-controls:v2-problem"
               ]
             }
           },
           "priority": "high",
-          "priorityReason": "Permissions limited to the action and target address execution, beyond checking whether generated text is safe. Reusable integrations across tool-using applications offer a plausible recurring software path; paid demand and obtainable revenue are unknown.",
+          "priorityReason": "Consequential account changes and data sends have a direct connection to pre-execution checks. Prioritize finding a specific uncovered workflow and testing the added layer with existing controls; broad AI activity alone is not the investment case.",
           "confidence": {
             "level": "low",
-            "reason": "Original project excerpts checked; commercial demand and adjacent-use benefit remain hypotheses."
+            "reason": "Technical risk and offered alternatives are supported. Additional protection, customer payment, reachable market and delivery economics remain unproven."
           },
-          "strongestObjection": "A gateway is ineffective if actions bypass it. Agent-Gate reports many routing mistakes; a demonstration does not establish protection.",
-          "decisiveQuestion": "Compare correct allow/block/escalate decisions, bypass resistance and workflow delays with existing controls on real permitted workflows."
+          "strongestObjection": "Existing platforms may cover the important actions already. Another layer can duplicate rules, delay valid work and add maintenance without earning a separate budget.",
+          "decisiveQuestion": "In a real security workflow, does adding this layer prevent important mistakes or reduce setup and review work beyond existing controls, at a total cost a buyer will pay?"
         }
       },
       "research": null,

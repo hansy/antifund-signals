@@ -5667,15 +5667,15 @@
     {
       "id": "ai-action-controls",
       "title": "Controls that approve or block an AI assistant’s actions",
-      "summary": "Software sits between an AI assistant and its tools, checking an action before it changes a file, account or physical system.",
+      "summary": "Approve, block or review an AI assistant’s actions before they change company systems.",
       "topic": "Enabling AI",
-      "problem": "An assistant can make a harmful change before anyone reads its activity log. Checking its words alone does not control what its tools execute.",
-      "statusQuo": "",
-      "gap": "Consistent enforcement across tools, including bypass paths, cumulative actions and human review.",
-      "opportunity": "A reusable control layer could let teams automate more work while limiting costly mistakes. It must add protection beyond existing permissions without constantly interrupting useful work.",
-      "evidence": "Permissions limited to the action and target address execution, beyond checking whether generated text is safe.",
-      "counterpoint": "A gateway is ineffective if actions bypass it. Agent-Gate reports many routing mistakes; a demonstration does not establish protection.",
-      "nextQuestion": "Compare correct allow/block/escalate decisions, bypass resistance and workflow delays with existing controls on real permitted workflows.",
+      "problem": "Giving an assistant access to company systems lets it make real changes. A mistake—or malicious instructions hidden in a page it reads—can turn that access into harm. Reviewing a log afterward may be too late; asking a person about every action can make approvals careless.",
+      "statusQuo": "Application permissions, AWS or Cerbos action checks, Tines approvals, internal code and people executing sensitive steps.",
+      "gap": "More dependable protection or less total work across connected systems; additional value over existing controls is not established.",
+      "opportunity": "Help security teams safely automate actions across several systems with less custom setup and fewer interruptions. This could supplement existing permissions and content checks. AWS, Cerbos and Tines already offer overlapping controls, so the opening is better protection or lower total effort in a specific workflow—not simply another approval button. Extra customer value and paid demand remain unproven.",
+      "evidence": "Three teams report demonstrations, not independently tested production security. Agent-Gate reports about 72% correct decisions in 112 self-labelled scenarios, often blocking actions that should go to a person. Zephyr can use simulated services when credentials are missing.",
+      "counterpoint": "Existing platforms may cover the important actions already. Another layer can duplicate rules, delay valid work and add maintenance without earning a separate budget.",
+      "nextQuestion": "In a real security workflow, does adding this layer prevent important mistakes or reduce setup and review work beyond existing controls, at a total cost a buyer will pay?",
       "projectIds": [
         "synthesis-project-b2069485b88c5bcc64abe4c5",
         "synthesis-project-1a561f198a15270c058a0c1f",
@@ -5688,8 +5688,8 @@
       ],
       "confidence": "Early signal",
       "brief": {
-        "whatItIs": "Software sits between an AI assistant and its tools, checking an action before it changes a file, account or physical system.",
-        "problem": "An assistant can make a harmful change before anyone reads its activity log. Checking its words alone does not control what its tools execute.",
+        "whatItIs": "Software checks an AI assistant’s proposed action before it runs, then allows it, blocks it or asks a person. For example, it could stop an assistant from disabling the wrong account or sending confidential information to the wrong recipient.",
+        "problem": "Giving an assistant access to company systems lets it make real changes. A mistake—or malicious instructions hidden in a page it reads—can turn that access into harm. Reviewing a log afterward may be too late; asking a person about every action can make approvals careless.",
         "breakthroughs": [
           {
             "text": "Aegishmesh reports a low-voltage hardware demonstration that checks permission before an action executes.",
@@ -5710,24 +5710,73 @@
             ]
           }
         ],
-        "marketOpportunity": "A reusable control layer could let teams automate more work while limiting costly mistakes. It must add protection beyond existing permissions without constantly interrupting useful work.",
-        "buyer": "Security teams; Teams building AI automation",
+        "marketOpportunity": "Help security teams safely automate actions across several systems with less custom setup and fewer interruptions. This could supplement existing permissions and content checks. AWS, Cerbos and Tines already offer overlapping controls, so the opening is better protection or lower total effort in a specific workflow—not simply another approval button. Extra customer value and paid demand remain unproven.",
+        "buyer": "Security teams automating account or system changes; Teams building assistants that make purchases or send sensitive information",
         "applications": [
-          "Approving sensitive tool actions",
-          "Limiting access to connected systems"
+          "Security response across connected systems",
+          "Purchasing and outbound messages, if checks use reliable current business information"
         ],
         "targetCustomers": [
-          "Security teams",
-          "Teams building AI automation"
+          "Security teams automating account or system changes",
+          "Teams building assistants that make purchases or send sensitive information"
         ],
-        "marketStatus": "hypothesis",
-        "marketEvidence": [],
+        "marketStatus": "researched",
+        "marketEvidence": [
+          {
+            "title": "Too many approval requests can encourage careless consent",
+            "url": "https://www.nist.gov/blogs/cybersecurity-insights/back-future-why-agentic-ai-needs-strong-identity-foundation",
+            "excerpt": "relying too heavily on HITL mechanisms introduces a severe risk of consent fatigue.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Browser assistants remain vulnerable to hostile instructions",
+            "url": "https://www.anthropic.com/news/prompt-injection-defenses",
+            "excerpt": "No browser agent is immune to prompt injection",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "AWS: tool requests checked before execution",
+            "url": "https://aws.amazon.com/blogs/machine-learning/secure-ai-agents-with-policy-in-amazon-bedrock-agentcore/",
+            "excerpt": "evaluating every agent-to-tool request against the policies in the policy engine before granting or denying tool access.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Cerbos: action rules and business context across applications",
+            "url": "https://www.cerbos.dev/ecosystem/mcp",
+            "excerpt": "Policies are written in human-readable YAML and evaluated at request time.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Tines: pause security workflows for human input",
+            "url": "https://www.tines.com/blog/human-in-the-loop-workflows-where-intelligent-automation-meets-judgment/",
+            "excerpt": "Pages pause stories for human input",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Microsoft: multistage approvals are a preview",
+            "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/flows-advanced-approvals",
+            "excerpt": "Preview features aren't meant for production use and may have restricted functionality.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "AWS lists per-request authorization pricing",
+            "url": "https://aws.amazon.com/bedrock/agentcore/pricing/",
+            "excerpt": "$0.000025 per request",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Cerbos offers a free engine and paid management",
+            "url": "https://www.cerbos.dev/pricing",
+            "excerpt": "From $933/month",
+            "accessedAt": "2026-10-15"
+          }
+        ],
         "risks": [
-          "A gateway is ineffective if actions bypass it. Agent-Gate reports many routing mistakes; a demonstration does not establish protection.",
-          "Reusable integrations across tool-using applications offer a plausible recurring software path; paid demand and obtainable revenue are unknown."
+          "Existing platforms may cover the important actions already. Another layer can duplicate rules, delay valid work and add maintenance without earning a separate budget.",
+          "Customer losses, buying rates, full delivery costs and reachable market remain unknown. A permitted action can still be harmful if the rules are incomplete."
         ],
         "nextQuestions": [
-          "Compare correct allow/block/escalate decisions, bypass resistance and workflow delays with existing controls on real permitted workflows."
+          "In a real security workflow, does adding this layer prevent important mistakes or reduce setup and review work beyond existing controls, at a total cost a buyer will pay?"
         ]
       }
     },
