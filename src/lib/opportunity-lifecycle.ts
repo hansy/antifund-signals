@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { marketSizingSchema, marketIssues } from "./market-sizing";
 const id = z.string().min(1);
 const time = z.iso.datetime();
 const hash = z.string().regex(/^[a-f0-9]{64}$/);
@@ -117,6 +118,7 @@ export const opportunityRevisionSchema = z
     ]),
     changeReason: id,
     contentHash: hash,
+    marketSizing: marketSizingSchema.optional(),
     title: id,
     classifications: z.array(id),
     content: z
@@ -160,6 +162,7 @@ export const opportunityRevisionSchema = z
           "venture-screen-v1",
           "venture-screen-v2",
           "venture-screen-v3",
+          "venture-screen-v4",
         ]),
         dimensions: z.record(z.enum(dimensions), judgment),
         priority: z.enum(["high", "medium", "low", "insufficient-information"]),
@@ -177,7 +180,17 @@ export const opportunityRevisionSchema = z
       )
       .default([]),
   })
-  .strict();
+  .strict()
+  .superRefine((revision, ctx) => {
+    if (!revision.marketSizing) return;
+    const available = new Set(
+      revision.evidence
+        .filter((e) => e.checks.status === "passed")
+        .map((e) => e.id),
+    );
+    for (const message of marketIssues(revision.marketSizing, available))
+      ctx.addIssue({ code: "custom", message, path: ["marketSizing"] });
+  });
 export const opportunitySchema = z
   .object({
     schemaVersion: z.literal(1),

@@ -1,4 +1,4 @@
-# Opportunity rubric — venture-screen-v3
+# Opportunity rubric — venture-screen-v4
 
 Find opportunities worth investigating within the investment thesis. A project is a technical clue, not the boundary of the opportunity. Keep investigation priority separate from evidence confidence and investment readiness.
 
@@ -76,3 +76,17 @@ Reviewers must check whether an incumbent objection establishes actual overlap o
 Feedback changes the general reasoning rule, not just topic preferences. The exoskeleton example teaches adjacent-use exploration, not automatic preference for aging. The AI-cost example teaches functional comparison, not automatic preference for supplements. Preserve contrary evidence.
 
 Research starts or resumes only with explicit user authorization. Updating these instructions alone does not start discovery, research, review or publication.
+
+## Market sizing is a required research output
+
+Each market phase must produce a model or a specific unresolved result. A blank market field does not mean the task was completed. Do not invent numbers to pass this requirement.
+
+For a model, record the product and paying segment, geography, currency, observation years, and **annual spending** unit. Separate source-reported inputs from assumptions. Show the low/high calculation, source links, units, and a reason for each bound. Convert workers, devices or projects into actual buying units; shared licenses and multi-site buyers matter. Annualize equipment only with an explicit replacement cycle. Never label one-time equipment stock as annual revenue.
+
+Use scoped customer counts or relevant spending, then price or budget evidence. Comparable prices and value-based budgets are assumptions about a new product, not proven willingness to pay. Eligibility and adoption sensitivities are unmeasured until researched; justify the proposed segment, show what narrows the range, and acknowledge that demand can be zero. Do not manufacture a large TAM with a percentage of an adjacent industry. Keep overlapping opportunity budgets separate.
+
+Growth needs dates, sources, geography, and observed-versus-forecast status. Specify whether it measures spending, units, workforce or population. A broader proxy can support timing but cannot be labeled product-market growth. Note inflation, changing definitions and weak or negative trends.
+
+An unresolved result lists sources attempted, usable inputs, exactly what is missing, why a meaningful range cannot yet be calculated, and the next evidence needed. Retain failures and original artifacts. Never silently omit sizing because precise data is unavailable.
+
+Publication requires arithmetic and source inspection plus a dated supplemental revision. Display the conditional range and defined segment concisely; disclose assumptions, growth relevance and sources. A modeled range does not automatically raise confidence, qualify Exploring or establish venture scale. Preserve historical criteria versions and review receipts.

@@ -98,7 +98,7 @@ test("unscreened additions are not automatically surfaced; new instructions pres
       }).insights,
     ).some((x) => x.id === candidate.id),
   ).toBe(false);
-  expect(researchInstructionsVersion).toBe("opportunity-research-v3");
+  expect(researchInstructionsVersion).toBe("opportunity-research-v4");
   expect(researchPrompt("investment-case")).toContain(
     "supporting branch or only a project",
   );

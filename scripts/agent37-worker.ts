@@ -24,6 +24,10 @@ import { runtimeIdentity, previousRuntimeEnded } from "./worker-runtime";
 import { createHash, randomUUID } from "node:crypto";
 import { join, resolve } from "node:path";
 import { z } from "zod";
+import {
+  researchReportSchema,
+  validateResearchMarket,
+} from "./research-report";
 const config = JSON.parse(
   await readFile(
     process.env.RESEARCH_CONFIG || "/root/signals-worker/config.json",
@@ -34,34 +38,6 @@ const client = new ConvexHttpClient(config.convexUrl);
 const secret: string = config.workerSecret;
 const owner = randomUUID();
 const root = resolve(config.workDir || "/var/lib/signals-research/jobs");
-const source = z
-  .object({
-    id: z.string(),
-    url: z.url(),
-    title: z.string(),
-    quote: z.string(),
-    pdfPage: z.number().int().positive().nullable(),
-    publishedAt: z.string().nullable(),
-    artifactPath: z.string().nullable(),
-  })
-  .strict();
-const reportSchema = z
-  .object({
-    summary: z.string(),
-    claims: z.array(
-      z
-        .object({
-          text: z.string(),
-          kind: z.enum(["reported", "inference", "estimate", "hypothesis"]),
-          sourceIds: z.array(z.string()),
-          limitations: z.array(z.string()),
-        })
-        .strict(),
-    ),
-    sources: z.array(source),
-    gaps: z.array(z.string()),
-  })
-  .strict();
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 let stopping = false;
 let stopChild: (() => void) | null = null;
@@ -204,6 +180,10 @@ while (!stopping) {
           report: JSON.parse(s.report),
         })),
       };
+      const reportSchema = researchReportSchema(
+        job.phase,
+        researchInstructionsVersion,
+      );
       let replay = false;
       // A supervisor-owned receipt proves the previous model call ended normally.
       // Reuse its complete report only when the exact research input still matches.
@@ -398,6 +378,7 @@ while (!stopping) {
       const report = reportSchema.parse(
         await readReport(join(dir, "report.json")),
       );
+      validateResearchMarket(report, job.phase, researchInstructionsVersion);
       const ids = new Set(report.sources.map((s) => s.id));
       if (
         report.claims.some(

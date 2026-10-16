@@ -330,6 +330,39 @@ p {
   font-size: 12px;
   font-weight: 500;
 }
+.market-growth {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+}
+.market-method {
+  margin-top: 0.9rem;
+  font-size: 0.875rem;
+}
+.market-method summary {
+  cursor: pointer;
+  color: var(--text-muted, #65705e);
+}
+.market-method-content {
+  padding-top: 0.75rem;
+}
+.market-inputs {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+.market-inputs li {
+  margin: 0 0 1rem;
+}
+.market-inputs span {
+  display: block;
+}
+.market-inputs p {
+  margin-top: 0.2rem;
+}
+.market-date {
+  opacity: 0.7;
+  font-size: 0.75rem;
+}
 .market-scope {
   font-size: 13px;
   line-height: 1.65;

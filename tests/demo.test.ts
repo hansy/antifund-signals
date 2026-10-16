@@ -53,7 +53,8 @@ test("an early lead can retain one supporting project without inventing corrobor
   const record = opportunities.opportunities.find((o) => o.id === lead.id)!;
   expect(record.maturity).toBe("first-impressions");
   expect(record.qualificationReviewId).toBeNull();
-  expect(record.accepted.content.marketSize).toEqual([]);
+  expect(record.accepted.marketSizing?.confidence).toBe("low");
+  expect(record.accepted.claims.find(c => record.accepted.content.marketSize.includes(c.id))?.kind).toBe("estimate");
 });
 test("preferences persist idempotently, reject stale edits, and never enqueue work", async () => {
   const t = convexTest(schema, modules);

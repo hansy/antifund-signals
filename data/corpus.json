@@ -4330,6 +4330,12 @@
             "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
             "excerpt": "overly aggressive compaction can result in the loss of subtle but critical context whose importance only becomes apparent later.",
             "accessedAt": "2026-10-15T19:51:30.051Z"
+          },
+          {
+            "title": "Menlo · enterprise AI spending, 2025",
+            "url": "https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/",
+            "excerpt": "Foundation model APIs",
+            "accessedAt": "2026-10-16"
           }
         ],
         "risks": [
@@ -4338,7 +4344,16 @@
         ],
         "nextQuestions": [
           "Compare the best cached/indexed baseline with selection or memory added, including successful tasks, total bill, retries and maintenance."
-        ]
+        ],
+        "marketSize": {
+          "value": "$25M–$380M / year",
+          "market": "Software fees for reducing enterprise model-API bills.",
+          "year": 2026,
+          "context": "Conditional estimate · Enterprise spending model; geography not delimited. Menlo estimates enterprise AI spending grew 3.2× in 2025. Broader category: $11.5B to $37B on the restated methodology, not growth of optimization tools. Menlo is an investor; estimates combine a 495-person US survey with modeling. Assumptions and calculation are available in the market details; demand is not verified.",
+          "sourceUrls": [
+            "https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/"
+          ]
+        }
       }
     },
     {
@@ -4443,6 +4458,18 @@
             "url": "https://github.com/aws-robotics/aws-robomaker-github-actions",
             "excerpt": "This repository was part of AWS RoboMaker, which reached end of support on September 10, 2025.",
             "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "IFR · service robot producers and sales",
+            "url": "https://ifr.org/img/worldrobotics/Executive_Summary_WR_2026_-_Service_Robots.pdf",
+            "excerpt": "more than 1,000",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "RoboDK · software pricing",
+            "url": "https://robodk.com/pricing",
+            "excerpt": "1500 / year",
+            "accessedAt": "2026-10-16"
           }
         ],
         "risks": [
@@ -4451,7 +4478,17 @@
         ],
         "nextQuestions": [
           "On a customer’s robot, does the test package catch meaningful failures or reduce setup time beyond their existing tools, with results that repeat?"
-        ]
+        ],
+        "marketSize": {
+          "value": "$1.9M–$23M / year",
+          "market": "Robot-testing subscriptions sold to service-robot manufacturers.",
+          "year": 2026,
+          "context": "Conditional estimate · Worldwide. Professional service robot sales rose 24% in 2025 worldwide. Reported unit growth excludes medical robots. It is not measured growth in software or training-data spending; sample composition and spending per robot can differ. Assumptions and calculation are available in the market details; demand is not verified.",
+          "sourceUrls": [
+            "https://ifr.org/img/worldrobotics/Executive_Summary_WR_2026_-_Service_Robots.pdf",
+            "https://robodk.com/pricing"
+          ]
+        }
       }
     },
     {
@@ -4536,6 +4573,24 @@
             "url": "https://github.com/ori-drs/planar_mesh",
             "excerpt": "Due to an immature implementation, deadlocks may occur when using multithreading.",
             "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "FAA · active commercial drone fleet",
+            "url": "https://www.faa.gov/data_research/aviation/aerospace_forecasts/2026_Emerging_Aviation_Entrants_Unmanned_Aircraft_Systems_Advanced_Air_Mobility-1.pdf",
+            "excerpt": "424,516",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "PIX4D · mapping software price",
+            "url": "https://www.pix4d.com/pricing/pix4dmapper/",
+            "excerpt": "Billed yearly",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "PIX4D · mapper retirement dates",
+            "url": "https://support.pix4d.com/hc/pix4dmapper-end-of-support-timeline",
+            "excerpt": "January 1, 2027.",
+            "accessedAt": "2026-10-16"
           }
         ],
         "risks": [
@@ -4544,7 +4599,18 @@
         ],
         "nextQuestions": [
           "Use the same complete survey with accepted defect locations and exports; compare processing, handover time and total cost on equal hardware."
-        ]
+        ],
+        "marketSize": {
+          "value": "$8.5M–$210M / year",
+          "market": "Mapping-software spending by commercial drone teams.",
+          "year": 2026,
+          "context": "Conditional estimate · United States. FAA forecasts about 5% annual growth in the active commercial drone fleet through 2030. Base fleet grows from 424,516 to 540,845. This is a fleet projection, not measured growth in mapping subscriptions. The high FAA series counts registrations differently and is not used. Assumptions and calculation are available in the market details; demand is not verified.",
+          "sourceUrls": [
+            "https://www.faa.gov/data_research/aviation/aerospace_forecasts/2026_Emerging_Aviation_Entrants_Unmanned_Aircraft_Systems_Advanced_Air_Mobility-1.pdf",
+            "https://www.pix4d.com/pricing/pix4dmapper/",
+            "https://support.pix4d.com/hc/pix4dmapper-end-of-support-timeline"
+          ]
+        }
       }
     },
     {
@@ -4719,6 +4785,18 @@
             "url": "https://scale.com/physical-ai",
             "excerpt": "An internal team of experienced roboticists will work with you to produce data specifications tailored to your program.",
             "accessedAt": "2026-10-15T19:10:16.115109+00:00"
+          },
+          {
+            "title": "IFR · service robot producers and sales",
+            "url": "https://ifr.org/img/worldrobotics/Executive_Summary_WR_2026_-_Service_Robots.pdf",
+            "excerpt": "more than 1,000",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "BLS · software developer wages",
+            "url": "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm",
+            "excerpt": "$135,980",
+            "accessedAt": "2026-10-16"
           }
         ],
         "risks": [
@@ -4727,7 +4805,17 @@
         ],
         "nextQuestions": [
           "At matched real-robot success on unseen objects, compare full delivery and retraining cost with the buyer’s internal collection and current supplier."
-        ]
+        ],
+        "marketSize": {
+          "value": "$5M–$50M / year",
+          "market": "Training-data services for service-robot manufacturers.",
+          "year": 2026,
+          "context": "Conditional estimate · Worldwide. Professional service robot sales rose 24% in 2025 worldwide. Reported unit growth excludes medical robots. It is not measured growth in software or training-data spending; sample composition and spending per robot can differ. Assumptions and calculation are available in the market details; demand is not verified.",
+          "sourceUrls": [
+            "https://ifr.org/img/worldrobotics/Executive_Summary_WR_2026_-_Service_Robots.pdf",
+            "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm"
+          ]
+        }
       }
     },
     {
@@ -4899,6 +4987,18 @@
             "url": "https://www.universal-robots.com/case-stories/jenny-waltle-gmbh/",
             "excerpt": "Program codes for twelve different components have been installed and can be called up in the system immediately.",
             "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "IFR · industrial robot installations",
+            "url": "https://ifr.org/ifr-press-releases/five-million-robots-now-operate-in-factories-globally",
+            "excerpt": "600,000",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "RoboDK · software pricing",
+            "url": "https://robodk.com/pricing",
+            "excerpt": "1500 / year",
+            "accessedAt": "2026-10-16"
           }
         ],
         "risks": [
@@ -4907,7 +5007,17 @@
         ],
         "nextQuestions": [
           "Compare technician hours, good output, defects and recovery for the same part changes against the best practical current setup."
-        ]
+        ],
+        "marketSize": {
+          "value": "$12M–$360M / year",
+          "market": "Setup software for newly installed industrial robot cells.",
+          "year": 2026,
+          "context": "Conditional estimate · Worldwide. Worldwide industrial robot installations rose 11% in 2025. Installed stock grew 9%, but new installations are the denominator here. Software attach rates and fee growth are unknown. Assumptions and calculation are available in the market details; demand is not verified.",
+          "sourceUrls": [
+            "https://ifr.org/ifr-press-releases/five-million-robots-now-operate-in-factories-globally",
+            "https://robodk.com/pricing"
+          ]
+        }
       }
     },
     {
@@ -5182,6 +5292,18 @@
             "url": "https://s22.q4cdn.com/617463959/files/doc_news/2024/Jan/25/chemspeed_acquisition_1-24-24.pdf",
             "excerpt": "In 2023, Chemspeed generated revenues greater than $50 million, and Chemspeed was profitable.",
             "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "BLS · medical scientists",
+            "url": "https://www.bls.gov/ooh/life-physical-and-social-science/medical-scientists.htm",
+            "excerpt": "181,000",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "Opentrons · configured lab robots",
+            "url": "https://opentrons.com/robots/flex",
+            "excerpt": "Configurations starting at $26,400",
+            "accessedAt": "2026-10-16"
           }
         ],
         "risks": [
@@ -5190,7 +5312,17 @@
         ],
         "nextQuestions": [
           "Does one repeatable coating workflow deliver more accepted results per staff-hour than the lab’s best existing setup, after installation, cleaning and support—and will a budget holder pay for that gain?"
-        ]
+        ],
+        "marketSize": {
+          "value": "$19M–$120M / year",
+          "market": "Automation equipment for repetitive biomedical experiments.",
+          "year": 2026,
+          "context": "Conditional estimate · United States. BLS projects 13% growth in US medical-scientist jobs from 2025 to 2035. Workforce growth is a demand proxy, not a lab-automation revenue forecast. Funding and purchasing cycles can move differently. Assumptions and calculation are available in the market details; demand is not verified.",
+          "sourceUrls": [
+            "https://www.bls.gov/ooh/life-physical-and-social-science/medical-scientists.htm",
+            "https://opentrons.com/robots/flex"
+          ]
+        }
       }
     },
     {
@@ -5272,6 +5404,12 @@
             "url": "https://www.ni.com/en/solutions/hardware-in-the-loop-testing.html",
             "excerpt": "Features include hardware fault insertion, and multi‑ECU and integrated test support",
             "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "BLS · electrical and electronics engineers",
+            "url": "https://www.bls.gov/ooh/architecture-and-engineering/electrical-and-electronics-engineers.htm",
+            "excerpt": "297,900",
+            "accessedAt": "2026-10-16"
           }
         ],
         "risks": [
@@ -5280,7 +5418,16 @@
         ],
         "nextQuestions": [
           "On unfamiliar customer faults, does adding this tool produce more correct fixes with fewer total engineer hours than the best existing setup, including setup, failed attempts and checking?"
-        ]
+        ],
+        "marketSize": {
+          "value": "$30M–$360M / year",
+          "market": "Annual test-software budgets for embedded-electronics teams.",
+          "year": 2026,
+          "context": "Conditional estimate · United States. BLS projects 8% growth in US electrical and electronics engineering jobs by 2035. This is a ten-year workforce projection, not annual growth or measured test-software spending. Assumptions and calculation are available in the market details; demand is not verified.",
+          "sourceUrls": [
+            "https://www.bls.gov/ooh/architecture-and-engineering/electrical-and-electronics-engineers.htm"
+          ]
+        }
       }
     },
     {
@@ -5377,6 +5524,18 @@
             "url": "https://www.xometry.com/how-xometry-works/",
             "excerpt": "You can also share your quote with a purchaser or team member using the \"Forward to Purchaser\" button below the checkout button.",
             "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "BLS · mechanical engineers",
+            "url": "https://www.bls.gov/ooh/architecture-and-engineering/mechanical-engineers.htm",
+            "excerpt": "298,500",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "Onshape · CAD subscription prices",
+            "url": "https://www.onshape.com/en/pricing",
+            "excerpt": "Standard: $1,500 per user, per year",
+            "accessedAt": "2026-10-16"
           }
         ],
         "risks": [
@@ -5385,7 +5544,17 @@
         ],
         "nextQuestions": [
           "On real customer parts, does adding this tool reduce total measurement, correction and checking work while producing equally acceptable parts—and will the buyer pay to keep using it?"
-        ]
+        ],
+        "marketSize": {
+          "value": "$15M–$130M / year",
+          "market": "Part-design checking add-ons for mechanical engineers.",
+          "year": 2026,
+          "context": "Conditional estimate · United States. BLS projects 11% growth in US mechanical-engineering jobs from 2025 to 2035. Workforce growth does not establish paid demand for automated design checks. CAD vendors can bundle similar functions. Assumptions and calculation are available in the market details; demand is not verified.",
+          "sourceUrls": [
+            "https://www.bls.gov/ooh/architecture-and-engineering/mechanical-engineers.htm",
+            "https://www.onshape.com/en/pricing"
+          ]
+        }
       }
     },
     {
@@ -5458,6 +5627,18 @@
             "url": "https://www.weaverobotics.com/business",
             "excerpt": "Weave handles installation, support, and improvements over the air.",
             "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Census · linen and industrial laundry sites",
+            "url": "https://www2.census.gov/programs-surveys/cbp/datasets/2023/cbp23us.zip",
+            "excerpt": "\"est\": \"905\"",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "Census / FRED · industrial laundry revenue",
+            "url": "https://fred.stlouisfed.org/series/AIES812332RCTTUS",
+            "excerpt": "13,861,352",
+            "accessedAt": "2026-10-16"
           }
         ],
         "risks": [
@@ -5466,7 +5647,17 @@
         ],
         "nextQuestions": [
           "Across full laundry shifts, does this robot increase acceptable folds per paid staff-hour after loading, checking, packing, repairs and remote help—and will an operator pay for the improvement?"
-        ]
+        ],
+        "marketSize": {
+          "value": "$2.3M–$21M / year",
+          "market": "Folding equipment at industrial laundry and linen-supply sites.",
+          "year": 2026,
+          "context": "Conditional estimate · United States. US industrial-laundry revenue rose about 5.9% in 2024, in nominal dollars. Calculated from $13.091B to $13.861B. Industry sales include services, inflation and mix changes; this is not folding-machine growth or a $13.9B equipment market. Assumptions and calculation are available in the market details; demand is not verified.",
+          "sourceUrls": [
+            "https://www2.census.gov/programs-surveys/cbp/datasets/2023/cbp23us.zip",
+            "https://fred.stlouisfed.org/series/AIES812332RCTTUS"
+          ]
+        }
       }
     },
     {
@@ -5653,6 +5844,24 @@
             "url": "https://www.roamrobotics.com/",
             "excerpt": "Currently being tested for reducing pain and increasing mobility for patients with advanced knee osteoarthritis.",
             "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "CDC · walking difficulty among older adults",
+            "url": "https://www.cdc.gov/mmwr/volumes/69/wr/mm6927a5.htm",
+            "excerpt": "6,218,999",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "Hypershell · consumer exoskeleton prices",
+            "url": "https://hypershell.tech/en-us",
+            "excerpt": "US$999.00",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "Census · US population aged 65+",
+            "url": "https://cdn.www.census.gov/newsroom/press-releases/2025/older-adults-outnumber-children.html",
+            "excerpt": "61.2 million",
+            "accessedAt": "2026-10-16"
           }
         ],
         "risks": [
@@ -5661,7 +5870,18 @@
         ],
         "nextQuestions": [
           "For a safely eligible group, does assistance add useful everyday walking beyond ordinary walking and appropriate current care, with sustained use and purchases at a price that covers fitting, returns and support?"
-        ]
+        ],
+        "marketSize": {
+          "value": "$13M–$240M / year",
+          "market": "Consumer-priced walking assistance for a subset of older adults with mobility difficulty.",
+          "year": 2026,
+          "context": "Conditional estimate · United States. The US population aged 65+ grew 3.1% in 2024 to 61.2 million. Demographic growth is broader context, not exoskeleton sales growth. The historical mobility subgroup is not scaled up to 2024 without matched data. Assumptions and calculation are available in the market details; demand is not verified.",
+          "sourceUrls": [
+            "https://www.cdc.gov/mmwr/volumes/69/wr/mm6927a5.htm",
+            "https://hypershell.tech/en-us",
+            "https://cdn.www.census.gov/newsroom/press-releases/2025/older-adults-outnumber-children.html"
+          ]
+        }
       }
     },
     {
@@ -5769,6 +5989,12 @@
             "url": "https://www.cerbos.dev/pricing",
             "excerpt": "From $933/month",
             "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Menlo · enterprise AI spending, 2025",
+            "url": "https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/",
+            "excerpt": "Foundation model APIs",
+            "accessedAt": "2026-10-16"
           }
         ],
         "risks": [
@@ -5777,7 +6003,16 @@
         ],
         "nextQuestions": [
           "In a real security workflow, does adding this layer prevent important mistakes or reduce setup and review work beyond existing controls, at a total cost a buyer will pay?"
-        ]
+        ],
+        "marketSize": {
+          "value": "$7.5M–$56M / year",
+          "market": "Additional control software for agent-platform spending.",
+          "year": 2026,
+          "context": "Conditional estimate · Enterprise spending model; geography not delimited. The broader enterprise AI category grew 3.2× in 2025, according to Menlo. No comparable growth rate was established for paid action-control tools. Copilots dominate horizontal AI spending; platform growth need not create an independent control budget. Assumptions and calculation are available in the market details; demand is not verified.",
+          "sourceUrls": [
+            "https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/"
+          ]
+        }
       }
     },
     {
@@ -5939,6 +6174,18 @@
             "url": "https://www.fda.gov/media/71026/download?attachment=",
             "excerpt": "The Agency recommends gowns that are sterilized and nonshedding, and cover the skin and hair",
             "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "BLS · firefighters",
+            "url": "https://www.bls.gov/ooh/protective-service/firefighters.htm",
+            "excerpt": "355,300",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "Polar · fire-resistant cooling vest price",
+            "url": "https://polarproducts.com/collections/first-responders/products/nomex-fire-resistant-cooling-vest",
+            "excerpt": "$265.00",
+            "accessedAt": "2026-10-16"
           }
         ],
         "risks": [
@@ -5947,7 +6194,17 @@
         ],
         "nextQuestions": [
           "At a workplace with a persistent heat problem, does this garment add useful cooling beyond the best existing vest and heat controls, while preserving protection at a total cost the employer will pay?"
-        ]
+        ],
+        "marketSize": {
+          "value": "$3.1M–$19M / year",
+          "market": "Cooling equipment for a subset of paid firefighters.",
+          "year": 2026,
+          "context": "Conditional estimate · United States. BLS projects 4% growth in US paid firefighter jobs from 2025 to 2035. Modest workforce growth, not evidence of a fast-growing cooling market. Heat exposure alone does not establish purchasing growth. Assumptions and calculation are available in the market details; demand is not verified.",
+          "sourceUrls": [
+            "https://www.bls.gov/ooh/protective-service/firefighters.htm",
+            "https://polarproducts.com/collections/first-responders/products/nomex-fire-resistant-cooling-vest"
+          ]
+        }
       }
     },
     {
