@@ -24,6 +24,7 @@ import {
 } from "./ui/sheet";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { WorkspaceSkeleton } from "./WorkspaceSkeleton";
+import { SignalVisual } from "./SignalVisual";
 import { useOpportunityStages } from "../lib/use-opportunity-stages";
 import {
   OpportunityStage,
@@ -411,6 +412,9 @@ export function Workspace() {
                       : undefined
                   }
                 >
+                  {item.placement === "opportunity" && (
+                    <SignalVisual id={item.id} />
+                  )}
                   <div className="signal-copy">
                     <h2>{item.title}</h2>
                     {item.group &&
@@ -507,7 +511,6 @@ export function Workspace() {
                 </button>
               </SheetClose>
             </SheetHeader>
-            {filterControl}
             <nav aria-label="Mobile signals" className="signal-drawer-list">
               {visibleSignals.map((item) => (
                 <a
@@ -526,33 +529,41 @@ export function Workspace() {
                     }
                   }}
                 >
-                  <span>{item.title}</span>
-                  {item.group &&
-                  item.placement === "opportunity" ? null : item.group ||
-                    item.placement !== "opportunity" ? (
-                    <span className="collection-kind">
-                      {item.group
-                        ? "Research area"
-                        : item.placement === "project"
-                          ? "Project"
-                          : "Supporting research"}
-                    </span>
-                  ) : (
-                    <StageBadge
-                      verdict={
-                        stages.data?.opportunities.find((o) => o.id === item.id)
-                          ?.verdict
-                      }
-                      research={
-                        stages.data?.opportunities.find((o) => o.id === item.id)
-                          ?.research
-                      }
-                      stage={
-                        stages.data?.opportunities.find((o) => o.id === item.id)
-                          ?.stage
-                      }
-                    />
+                  {item.placement === "opportunity" && (
+                    <SignalVisual id={item.id} />
                   )}
+                  <div className="drawer-signal-copy">
+                    <span>{item.title}</span>
+                    {item.group &&
+                    item.placement === "opportunity" ? null : item.group ||
+                      item.placement !== "opportunity" ? (
+                      <span className="collection-kind">
+                        {item.group
+                          ? "Research area"
+                          : item.placement === "project"
+                            ? "Project"
+                            : "Supporting research"}
+                      </span>
+                    ) : (
+                      <StageBadge
+                        verdict={
+                          stages.data?.opportunities.find(
+                            (o) => o.id === item.id,
+                          )?.verdict
+                        }
+                        research={
+                          stages.data?.opportunities.find(
+                            (o) => o.id === item.id,
+                          )?.research
+                        }
+                        stage={
+                          stages.data?.opportunities.find(
+                            (o) => o.id === item.id,
+                          )?.stage
+                        }
+                      />
+                    )}
+                  </div>
                 </a>
               ))}
             </nav>
@@ -700,6 +711,11 @@ export function Workspace() {
                     </p>
                   )}
                   <div className="brief-header">
+                    {editorial?.placement === "opportunity" && (
+                      <div className="brief-header-art" aria-hidden="true">
+                        <SignalVisual id={insight.id} />
+                      </div>
+                    )}
                     <h1 ref={headingRef} tabIndex={-1}>
                       {displayTitle}
                     </h1>
