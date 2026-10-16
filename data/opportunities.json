@@ -13416,8 +13416,8 @@
     {
       "schemaVersion": 1,
       "id": "walking-freeze-cues",
-      "revision": 0,
-      "acceptedRevisionId": "walking-freeze-cues:rubric-v2-20261015",
+      "revision": 1,
+      "acceptedRevisionId": "walking-freeze-cues:evidence-review-v2-20261016",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -13425,19 +13425,19 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T21:24:18.427Z",
-      "updatedAt": "2026-10-15T21:24:18.427Z",
+      "updatedAt": "2026-10-16T04:08:32.064Z",
       "verdict": null,
       "stage": "first-impressions",
-      "qualificationError": null,
+      "qualificationError": "Reviewed hypothesis; safe added walking benefit, paid demand and venture scale remain unproven.",
       "accepted": {
-        "id": "walking-freeze-cues:rubric-v2-20261015",
+        "id": "walking-freeze-cues:evidence-review-v2-20261016",
         "opportunityId": "walking-freeze-cues",
-        "parentRevisionId": null,
-        "createdAt": "2026-10-15T21:24:18.427Z",
-        "producerId": "rubric-reassessment-v2",
-        "origin": "saved-data-synthesis",
-        "changeReason": "User-authorized preliminary opportunity from saved source evidence; adjacent uses and market demand remain hypotheses.",
-        "contentHash": "139b9677da8d8f6a861368786fa1beee2f479deea0e01a402138c42c6bd4a88c",
+        "parentRevisionId": "walking-freeze-cues:rubric-v2-20261015",
+        "createdAt": "2026-10-16T04:08:32.064Z",
+        "producerId": "codex-evidence-inspector",
+        "origin": "inspection-correction",
+        "changeReason": "Inspect original prototype and clinical sources; separate detection from patient benefit, assess personalized and complementary use, and exclude inaccessible trial claims and broad disease counts as demand.",
+        "contentHash": "d4fa0e7f55dd71a82ddd7e8499eb15c957fa06b994ce3b691b6b83610d5c8722",
         "title": "A wearable cue for sudden walking freezes",
         "classifications": [
           "Robotics"
@@ -13449,7 +13449,7 @@
           ],
           "economics": [],
           "timing": [],
-          "keyQuestion": "Clinically supervised comparison against current cues, measuring safe useful walking and false prompts.",
+          "keyQuestion": "Does a safely timed touch help an identifiable group walk better than their best current cue, and will patients or clinics pay enough to cover fitting and support?",
           "what": "walking-freeze-cues:v2-what",
           "problem": "walking-freeze-cues:v2-problem",
           "opportunity": "walking-freeze-cues:v2-opportunity",
@@ -13482,129 +13482,156 @@
         "claims": [
           {
             "id": "walking-freeze-cues:v2-what",
-            "text": "A worn motion sensor detects when a person stops mid-step and triggers a small mechanical prompt. The project targets Parkinson’s-related walking freezes.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "A wearable that detects when someone with Parkinson’s cannot start a step, then gives their leg a small physical poke. The pFOG team reports a working detector and motor-driven arm. Whether its prompts safely help patients resume walking has not been established; it does not support their weight or restore muscle strength.",
+            "kind": "inference",
+            "evidenceIds": [
+              "walking-freeze-cues:synthesis-project-ecc14b21fdad83ff3ad2faab:source-v2"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No verified pFOG patient benefit, buyer commitment, qualified market or full delivered cost. Broad disease projections are not reachable device demand; cueing is not physical support."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T04:08:32.064Z",
+              "reason": "Bounded interpretation of original sources, with clinical scope and competing cue mechanisms preserved."
             },
-            "testQuestion": "Clinically supervised comparison against current cues, measuring safe useful walking and false prompts."
+            "reasoning": "Original team story describes sensor detection and a servo-driven poke, not electrical stimulation, weight support or verified patient outcomes."
           },
           {
             "id": "walking-freeze-cues:v2-problem",
-            "text": "One family’s experience inspired a device that could provide a prompt without someone standing nearby. The prototype has not established safer or better walking.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "Some people with Parkinson’s suddenly cannot step even though they want to walk. This is called freezing. It can interrupt a turn or a trip through a doorway and create a danger of falling. Sound, visual targets and touch can provide prompts, but the useful cue differs from person to person.",
+            "kind": "inference",
+            "evidenceIds": [
+              "walking-freeze-cues:review-problem",
+              "walking-freeze-cues:review-tactile"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No verified pFOG patient benefit, buyer commitment, qualified market or full delivered cost. Broad disease projections are not reachable device demand; cueing is not physical support."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T04:08:32.064Z",
+              "reason": "Bounded interpretation of original sources, with clinical scope and competing cue mechanisms preserved."
             },
-            "testQuestion": "Clinically supervised comparison against current cues, measuring safe useful walking and false prompts."
+            "reasoning": "Foundation guidance and original clinical study support consequential freezing and individual cue response; they do not quantify avoidable harm for this device."
           },
           {
             "id": "walking-freeze-cues:v2-opportunity",
-            "text": "A dependable cueing device could support independent mobility for a defined patient group. Clinical benefit, eligible users and a workable payment route must be established.",
+            "text": "Help people whose walking freezes persist despite their best existing cues. An automatic touch could provide a prompt without a nearby helper, a visible floor line or an audible beat. Supervised fitting could identify who benefits before home use. A mobility supplier’s 2025 acquisition of NexStride shows commercial interest in walking cues; this device’s added benefit, paid demand and potential business size remain unproven.",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "walking-freeze-cues:synthesis-project-ecc14b21fdad83ff3ad2faab:source-v2",
+              "walking-freeze-cues:review-problem",
+              "walking-freeze-cues:review-tactile",
+              "walking-freeze-cues:review-acquisition"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No verified pFOG patient benefit, buyer commitment, qualified market or full delivered cost. Broad disease projections are not reachable device demand; cueing is not physical support."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T04:08:32.064Z",
+              "reason": "Explicit responder, buying or clinical-use hypothesis; no established demand or outcome."
             },
-            "testQuestion": "Clinically supervised comparison against current cues, measuring safe useful walking and false prompts."
+            "testQuestion": "Does a safely timed touch help an identifiable group walk better than their best current cue, and will patients or clinics pay enough to cover fitting and support?"
           },
           {
             "id": "walking-freeze-cues:v2-customer-0",
-            "text": "Assistive-device suppliers",
+            "text": "People with Parkinson’s who benefit safely from touch cues, or their families",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "walking-freeze-cues:review-problem",
+              "walking-freeze-cues:review-tactile",
+              "walking-freeze-cues:review-vibration"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No verified pFOG patient benefit, buyer commitment, qualified market or full delivered cost. Broad disease projections are not reachable device demand; cueing is not physical support."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T04:08:32.064Z",
+              "reason": "Explicit responder, buying or clinical-use hypothesis; no established demand or outcome."
             },
-            "testQuestion": "Clinically supervised comparison against current cues, measuring safe useful walking and false prompts."
+            "testQuestion": "Who benefits safely and repeatedly and accepts a price covering fitting, returns and support?"
           },
           {
             "id": "walking-freeze-cues:v2-customer-1",
-            "text": "Rehabilitation providers",
+            "text": "Parkinson’s rehabilitation clinics assessing and fitting walking cues",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "walking-freeze-cues:review-problem",
+              "walking-freeze-cues:review-tactile"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No verified pFOG patient benefit, buyer commitment, qualified market or full delivered cost. Broad disease projections are not reachable device demand; cueing is not physical support."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T04:08:32.064Z",
+              "reason": "Explicit responder, buying or clinical-use hypothesis; no established demand or outcome."
             },
-            "testQuestion": "Clinically supervised comparison against current cues, measuring safe useful walking and false prompts."
+            "testQuestion": "Does the device add enough benefit over therapist cues to justify clinic time and budget?"
           },
           {
             "id": "walking-freeze-cues:v2-application-0",
-            "text": "Cueing during walking freezes",
+            "text": "Supervised rehabilitation could identify suitable home users; benefit over therapist-led cues is untested",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "walking-freeze-cues:synthesis-project-ecc14b21fdad83ff3ad2faab:source-v2",
+              "walking-freeze-cues:review-problem",
+              "walking-freeze-cues:review-tactile"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No verified pFOG patient benefit, buyer commitment, qualified market or full delivered cost. Broad disease projections are not reachable device demand; cueing is not physical support."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T04:08:32.064Z",
+              "reason": "Explicit responder, buying or clinical-use hypothesis; no established demand or outcome."
             },
-            "testQuestion": "Clinically supervised comparison against current cues, measuring safe useful walking and false prompts."
+            "testQuestion": "Can supervised comparison identify users who retain safe additional benefit at home?"
           },
           {
             "id": "walking-freeze-cues:v2-comparison",
-            "text": "Potential supplement to clinical care and alternative to other cueing aids; different from exoskeleton strength assistance.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "U-Step offers visual and sound cues, while CUE1+ uses chest vibration; its shop currently lists it as unavailable. A leg poke is a different stimulus, not evidence of a better result. It could replace an ineffective cue while supplementing medication, therapy and walking support. Any benefit must outweigh fitting, charging, discomfort and false prompts.",
+            "kind": "inference",
+            "evidenceIds": [
+              "walking-freeze-cues:review-ustep",
+              "walking-freeze-cues:review-vibration",
+              "walking-freeze-cues:review-availability",
+              "walking-freeze-cues:review-tactile",
+              "walking-freeze-cues:review-problem"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No verified pFOG patient benefit, buyer commitment, qualified market or full delivered cost. Broad disease projections are not reachable device demand; cueing is not physical support."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T04:08:32.064Z",
+              "reason": "Bounded interpretation of original sources, with clinical scope and competing cue mechanisms preserved."
             },
-            "testQuestion": "Clinically supervised comparison against current cues, measuring safe useful walking and false prompts."
+            "reasoning": "Sensory cueing overlaps; contact modality and automatic timing may matter to selected users, while usual treatment and physical support address broader needs."
           },
           {
             "id": "walking-freeze-cues:project-v2-ecc14b21fdad83ff3ad2faab",
@@ -13619,10 +13646,10 @@
               "No demonstrated improvement in walking, participant count or independent evaluation. The reported accuracy and unsupplied clinical citation are not used as clinical proof. Source school and year identify the event collection, not confirmed author affiliation or project completion date."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T04:08:32.064Z",
+              "reason": "Original project excerpt verifies team-described motivation, not a clinical benefit or validated detection score."
             },
             "attribution": "pFOG: Parkinson's Medical Aid Device",
             "quantity": null
@@ -13632,9 +13659,9 @@
           {
             "id": "walking-freeze-cues:synthesis-project-ecc14b21fdad83ff3ad2faab:source-v2",
             "sourceUrl": "https://devpost.com/software/foggy",
-            "finalUrl": null,
+            "finalUrl": "https://devpost.com/software/foggy",
             "title": "pFOG: Parkinson's Medical Aid Device",
-            "publisher": null,
+            "publisher": "pFOG project team on Devpost",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -13642,12 +13669,166 @@
             "retrievedAt": "2026-10-15T21:24:18.427Z",
             "excerpt": "Someone we know has Parkinson’s disease, and like many patients, he suffers from Freezing of Gait (FOG) — a sudden, involuntary inability to walk.",
             "pdfPage": null,
-            "locator": "Original project page; exact retained excerpt",
+            "locator": "Original archived project story; team-reported prototype, not a verified patient trial",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T21:24:18.427Z",
+              "checkedAt": "2026-10-16T04:08:32.064Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "walking-freeze-cues:review-problem",
+            "sourceUrl": "https://www.parkinson.org/living-with-parkinsons/management/activities-daily-living/freezing",
+            "finalUrl": "https://www.parkinson.org/living-with-parkinsons/management/activities-daily-living/freezing",
+            "title": "Walking freezes can interrupt daily movement and create fall danger",
+            "publisher": "Parkinson’s Foundation",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated patient-organization guidance retrieved October16,2026. Broad clinical context; not a device trial or preventable-injury count.",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "Freezing creates a danger of falling because the beginning and end of a freezing episode are unpredictable.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T04:08:32.064Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "walking-freeze-cues:review-tactile",
+            "sourceUrl": "https://link.springer.com/article/10.1007/s00415-023-11663-9",
+            "finalUrl": "https://link.springer.com/article/10.1007/s00415-023-11663-9",
+            "title": "A study of sound and vibration cues found differing individual responses",
+            "publisher": "Journal of Neurology / study authors",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2023-03-21",
+            "observationPeriod": "PublishedMarch21,2023; selected patients at Enschede and Nijmegen centers, Netherlands.40included,9unable to perceive vibration,31analyzed. No group benefit;22responders across ANY of the sound or vibration conditions, not22tactile responders. Laboratory tasks, not demonstrated everyday fall reduction or pFOG benefit.",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "Cueing did not improve FOG at the group level; however, tactile as well as auditory cueing improved FOG in many individuals.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T04:08:32.064Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "walking-freeze-cues:review-vibration",
+            "sourceUrl": "https://charconeurotech.com/faq/",
+            "finalUrl": "https://charconeurotech.com/faq/",
+            "title": "Wearable chest vibration is an existing approach",
+            "publisher": "Charco Neurotech",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated manufacturer FAQ retrieved October16,2026. Device description only; no supplier outcome or testimonial treated as independent evidence. Sales wording conflicts with shop unavailability; terms unresolved.",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "The CUE1+ is a non-invasive, sternum-worn medical device designed for people living with Parkinson’s.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T04:08:32.064Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "walking-freeze-cues:review-availability",
+            "sourceUrl": "https://charconeurotech.com/shop/cue1plus/",
+            "finalUrl": "https://charconeurotech.com/shop/cue1plus/",
+            "title": "The CUE1+ shop lists the device as unavailable",
+            "publisher": "Charco Neurotech",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "October16,2026 retrieved shop state, not all-country supply status or evidence of demand. Search-index purchase text differs. Placeholder testimonial and promotional outcome percentages excluded.",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "The CUE1+ Device is currently unavailable.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T04:08:32.064Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "walking-freeze-cues:review-ustep",
+            "sourceUrl": "https://www.ustep.com/product/laser-sound-cueing-module/",
+            "finalUrl": "https://www.ustep.com/product/laser-sound-cueing-module/",
+            "title": "Existing walker accessories provide visual and sound cues",
+            "publisher": "In-Step Mobility Products / U-Step",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "Undated US manufacturer page retrieved October16,2026. Advertised259–279USD is accessory-only, not full walker, realized price or pFOG willingness to pay. Unsubstantiated fall-reduction claim excluded.",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "You can also turn on the sound feature to set a beat pattern for maintaining a steady walking speed.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T04:08:32.064Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "walking-freeze-cues:review-acquisition",
+            "sourceUrl": "https://www.drivemedical.com/news-article/drive-devilbiss-healthcare-acquires-product-line-of-de-oro-devices-makers-of-nexstride-gait-cueing-device",
+            "finalUrl": "https://www.drivemedical.com/news-article/drive-devilbiss-healthcare-acquires-product-line-of-de-oro-devices-makers-of-nexstride-gait-cueing-device",
+            "title": "A mobility supplier acquired the NexStride walking-cue product line",
+            "publisher": "Drive DeVilbiss Healthcare",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2025-06-18",
+            "observationPeriod": "June18,2025 acquirer announcement. Category distribution interest, not disclosed deal value, customer orders, pFOG access or venture returns. Supplier clinical percentages excluded.",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "it has acquired the product line of De Oro Devices",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T04:08:32.064Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "walking-freeze-cues:review-laser",
+            "sourceUrl": "https://nhct.dspace-express.com/server/api/core/bitstreams/41e75c98-7654-4cf8-b247-cd2d7962a742/content",
+            "finalUrl": "https://nhct.dspace-express.com/server/api/core/bitstreams/41e75c98-7654-4cf8-b247-cd2d7962a742/content",
+            "title": "Laser shoes did not improve walking in a short laboratory test",
+            "publisher": "Neurorehabilitation and Neural Repair / study authors",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2025-09-11",
+            "observationPeriod": "PublishedonlineSeptember11,2025;80people with Parkinson’s able to walk unaided, NewcastleUK laboratory. Physical1results,2methods; short tasks, fixedorder, briefpractice. Not personalized home response, fall reduction or evidence touch is superior.",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "Laser shoe cueing did not improve gait in PD regardless of disease severity or FOG status.",
+            "pdfPage": 1,
+            "locator": "Original PDF physical page 1; study methods and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T04:08:32.064Z",
               "failureIds": []
             }
           }
@@ -13657,112 +13838,63 @@
           "rubricVersion": "venture-screen-v2",
           "dimensions": {
             "problem": {
-              "status": "plausible",
-              "reason": "The source describes one family needing to prompt a relative during a walking freeze.",
+              "status": "supported",
+              "reason": "Freezing disrupts intended walking and poses fall danger; target-population frequency and avoidable harm not quantified.",
               "claimIds": [
-                "walking-freeze-cues:v2-what",
-                "walking-freeze-cues:v2-problem",
-                "walking-freeze-cues:v2-opportunity",
-                "walking-freeze-cues:v2-customer-0",
-                "walking-freeze-cues:v2-customer-1",
-                "walking-freeze-cues:v2-application-0",
-                "walking-freeze-cues:v2-comparison",
-                "walking-freeze-cues:project-v2-ecc14b21fdad83ff3ad2faab"
+                "walking-freeze-cues:v2-problem"
               ]
             },
             "customerPayment": {
               "status": "plausible",
-              "reason": "People with Parkinson’s walking freezes and their caregivers; payer unknown. Willingness to pay for this offer is not established.",
+              "reason": "Patients, families or clinics could buy after benefit is shown; no payment commitment or device coverage.",
               "claimIds": [
-                "walking-freeze-cues:v2-what",
-                "walking-freeze-cues:v2-problem",
-                "walking-freeze-cues:v2-opportunity",
-                "walking-freeze-cues:v2-customer-0",
-                "walking-freeze-cues:v2-customer-1",
-                "walking-freeze-cues:v2-application-0",
-                "walking-freeze-cues:v2-comparison",
-                "walking-freeze-cues:project-v2-ecc14b21fdad83ff3ad2faab"
+                "walking-freeze-cues:v2-customer-0"
               ]
             },
             "productValue": {
               "status": "plausible",
-              "reason": "Automating that specific prompt could reduce dependence on a nearby person if it works safely.",
+              "reason": "Automatic touch could supply a useful prompt without a helper, visible line or sound; safe benefit unproven.",
               "claimIds": [
-                "walking-freeze-cues:v2-what",
-                "walking-freeze-cues:v2-problem",
-                "walking-freeze-cues:v2-opportunity",
-                "walking-freeze-cues:v2-customer-0",
-                "walking-freeze-cues:v2-customer-1",
-                "walking-freeze-cues:v2-application-0",
-                "walking-freeze-cues:v2-comparison",
-                "walking-freeze-cues:project-v2-ecc14b21fdad83ff3ad2faab"
+                "walking-freeze-cues:v2-what"
               ]
             },
             "commercialGap": {
               "status": "plausible",
-              "reason": "Potential supplement to clinical care and alternative to other cueing aids; different from exoskeleton strength assistance. Open gap: Reliable prompts that improve useful walking without false triggers or discomfort.",
+              "reason": "Personalized touch could help users poorly served by existing cues; differences alone do not demonstrate an advantage.",
               "claimIds": [
-                "walking-freeze-cues:v2-what",
-                "walking-freeze-cues:v2-problem",
-                "walking-freeze-cues:v2-opportunity",
-                "walking-freeze-cues:v2-customer-0",
-                "walking-freeze-cues:v2-customer-1",
-                "walking-freeze-cues:v2-application-0",
-                "walking-freeze-cues:v2-comparison",
-                "walking-freeze-cues:project-v2-ecc14b21fdad83ff3ad2faab"
+                "walking-freeze-cues:v2-comparison"
               ]
             },
             "ventureScale": {
-              "status": "plausible",
-              "reason": "A reusable device for a defined patient group could justify further investigation; eligible population, price and payment are absent.",
+              "status": "missing",
+              "reason": "Eligible responders, paid conversion, replacement interval, realized price and reachable sales unknown.",
               "claimIds": [
-                "walking-freeze-cues:v2-what",
-                "walking-freeze-cues:v2-problem",
-                "walking-freeze-cues:v2-opportunity",
-                "walking-freeze-cues:v2-customer-0",
-                "walking-freeze-cues:v2-customer-1",
-                "walking-freeze-cues:v2-application-0",
-                "walking-freeze-cues:v2-comparison",
-                "walking-freeze-cues:project-v2-ecc14b21fdad83ff3ad2faab"
+                "walking-freeze-cues:v2-opportunity"
               ]
             },
             "businessCapital": {
               "status": "missing",
-              "reason": "A detection-and-response demo does not show restored walking; the claimed accuracy lacks test details. Delivered costs, repeat economics and capital needs remain unresolved.",
+              "reason": "Clinical/regulatory requirements, manufacturing, fitting, returns and support economics unknown.",
               "claimIds": [
-                "walking-freeze-cues:v2-what",
-                "walking-freeze-cues:v2-problem",
-                "walking-freeze-cues:v2-opportunity",
-                "walking-freeze-cues:v2-customer-0",
-                "walking-freeze-cues:v2-customer-1",
-                "walking-freeze-cues:v2-application-0",
-                "walking-freeze-cues:v2-comparison",
-                "walking-freeze-cues:project-v2-ecc14b21fdad83ff3ad2faab"
+                "walking-freeze-cues:v2-opportunity"
               ]
             },
             "timing": {
-              "status": "missing",
-              "reason": "The retained project dates do not establish adoption or market acceleration. Adjacent-use readiness has not been validated.",
+              "status": "plausible",
+              "reason": "Clinical studies and reported2025product-line acquisition support category investigation, not a proven adoption surge.",
               "claimIds": [
-                "walking-freeze-cues:v2-what",
-                "walking-freeze-cues:v2-problem",
-                "walking-freeze-cues:v2-opportunity",
-                "walking-freeze-cues:v2-customer-0",
-                "walking-freeze-cues:v2-customer-1",
-                "walking-freeze-cues:v2-application-0",
-                "walking-freeze-cues:v2-comparison",
-                "walking-freeze-cues:project-v2-ecc14b21fdad83ff3ad2faab"
+                "walking-freeze-cues:v2-opportunity"
               ]
             }
           },
           "priority": "medium",
-          "priorityReason": "Automating that specific prompt could reduce dependence on a nearby person if it works safely. A reusable device for a defined patient group could justify further investigation; eligible population, price and payment are absent.",
+          "priorityReason": "Consequential freezing and a plausible selected-user benefit warrant investigation; personalized comparisons and reachable paid demand are unresolved.",
           "confidence": {
             "level": "low",
-            "reason": "Original project excerpts checked; commercial demand and adjacent-use benefit remain hypotheses."
+            "reason": "Problem and existing cue approaches are documented. Safe added benefit, responder population and commercial scale are unproven."
           },
-          "strongestObjection": "A detection-and-response demo does not show restored walking; the claimed accuracy lacks test details.",
-          "decisiveQuestion": "Clinically supervised comparison against current cues, measuring safe useful walking and false prompts."
+          "strongestObjection": "Detecting a freeze is not the same as safely ending it. Existing cues may work just as well, and the group helped by a physical poke may be too small to support the hardware, fitting and clinical support costs.",
+          "decisiveQuestion": "Does a safely timed touch help an identifiable group walk better than their best current cue, and will patients or clinics pay enough to cover fitting and support?"
         }
       },
       "research": null,

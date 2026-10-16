@@ -6223,15 +6223,15 @@
     {
       "id": "walking-freeze-cues",
       "title": "A wearable cue for sudden walking freezes",
-      "summary": "A worn motion sensor detects when a person stops mid-step and triggers a small mechanical prompt. The project targets Parkinson’s-related walking freezes.",
+      "summary": "Automatic touch prompts for people whose Parkinson’s symptoms stop them taking a step.",
       "topic": "Robotics",
-      "problem": "One family’s experience inspired a device that could provide a prompt without someone standing nearby. The prototype has not established safer or better walking.",
-      "statusQuo": "",
-      "gap": "Reliable prompts that improve useful walking without false triggers or discomfort.",
-      "opportunity": "A dependable cueing device could support independent mobility for a defined patient group. Clinical benefit, eligible users and a workable payment route must be established.",
-      "evidence": "Automating that specific prompt could reduce dependence on a nearby person if it works safely.",
-      "counterpoint": "A detection-and-response demo does not show restored walking; the claimed accuracy lacks test details.",
-      "nextQuestion": "Clinically supervised comparison against current cues, measuring safe useful walking and false prompts.",
+      "problem": "Some people with Parkinson’s suddenly cannot step even though they want to walk. This is called freezing. It can interrupt a turn or a trip through a doorway and create a danger of falling. Sound, visual targets and touch can provide prompts, but the useful cue differs from person to person.",
+      "statusQuo": "Personalized sound or visual cues, wearable vibration, help from another person, medication, therapy and walking aids.",
+      "gap": "A useful automatic touch for people poorly served by their current cues; safe added benefit remains untested.",
+      "opportunity": "Help people whose walking freezes persist despite their best existing cues. An automatic touch could provide a prompt without a nearby helper, a visible floor line or an audible beat. Supervised fitting could identify who benefits before home use. A mobility supplier’s 2025 acquisition of NexStride shows commercial interest in walking cues; this device’s added benefit, paid demand and potential business size remain unproven.",
+      "evidence": "A 2023 study analyzed 31 people with Parkinson’s and found no group-level improvement from the tested sound or vibration cues, although individual responses differed. The pFOG prototype has no verified patient benefit. Drive DeVilbiss reported acquiring NexStride’s product line in 2025.",
+      "counterpoint": "Detecting a freeze is not the same as safely ending it. Existing cues may work just as well, and the group helped by a physical poke may be too small to support the hardware, fitting and clinical support costs.",
+      "nextQuestion": "Does a safely timed touch help an identifiable group walk better than their best current cue, and will patients or clinics pay enough to cover fitting and support?",
       "projectIds": [
         "synthesis-project-ecc14b21fdad83ff3ad2faab"
       ],
@@ -6240,8 +6240,8 @@
       ],
       "confidence": "Early signal",
       "brief": {
-        "whatItIs": "A worn motion sensor detects when a person stops mid-step and triggers a small mechanical prompt. The project targets Parkinson’s-related walking freezes.",
-        "problem": "One family’s experience inspired a device that could provide a prompt without someone standing nearby. The prototype has not established safer or better walking.",
+        "whatItIs": "A wearable that detects when someone with Parkinson’s cannot start a step, then gives their leg a small physical poke. The pFOG team reports a working detector and motor-driven arm. Whether its prompts safely help patients resume walking has not been established; it does not support their weight or restore muscle strength.",
+        "problem": "Some people with Parkinson’s suddenly cannot step even though they want to walk. This is called freezing. It can interrupt a turn or a trip through a doorway and create a danger of falling. Sound, visual targets and touch can provide prompts, but the useful cue differs from person to person.",
         "breakthroughs": [
           {
             "text": "pFOG reports a motion-detection and mechanical-response prototype inspired by one family’s experience of walking freezes.",
@@ -6250,23 +6250,66 @@
             ]
           }
         ],
-        "marketOpportunity": "A dependable cueing device could support independent mobility for a defined patient group. Clinical benefit, eligible users and a workable payment route must be established.",
-        "buyer": "Assistive-device suppliers; Rehabilitation providers",
+        "marketOpportunity": "Help people whose walking freezes persist despite their best existing cues. An automatic touch could provide a prompt without a nearby helper, a visible floor line or an audible beat. Supervised fitting could identify who benefits before home use. A mobility supplier’s 2025 acquisition of NexStride shows commercial interest in walking cues; this device’s added benefit, paid demand and potential business size remain unproven.",
+        "buyer": "People with Parkinson’s who benefit safely from touch cues, or their families; Parkinson’s rehabilitation clinics assessing and fitting walking cues",
         "applications": [
-          "Cueing during walking freezes"
+          "Supervised rehabilitation could identify suitable home users; benefit over therapist-led cues is untested"
         ],
         "targetCustomers": [
-          "Assistive-device suppliers",
-          "Rehabilitation providers"
+          "People with Parkinson’s who benefit safely from touch cues, or their families",
+          "Parkinson’s rehabilitation clinics assessing and fitting walking cues"
         ],
-        "marketStatus": "hypothesis",
-        "marketEvidence": [],
+        "marketStatus": "researched",
+        "marketEvidence": [
+          {
+            "title": "Walking freezes can interrupt daily movement and create fall danger",
+            "url": "https://www.parkinson.org/living-with-parkinsons/management/activities-daily-living/freezing",
+            "excerpt": "Freezing creates a danger of falling because the beginning and end of a freezing episode are unpredictable.",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "A study of sound and vibration cues found differing individual responses",
+            "url": "https://link.springer.com/article/10.1007/s00415-023-11663-9",
+            "excerpt": "Cueing did not improve FOG at the group level; however, tactile as well as auditory cueing improved FOG in many individuals.",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "Wearable chest vibration is an existing approach",
+            "url": "https://charconeurotech.com/faq/",
+            "excerpt": "The CUE1+ is a non-invasive, sternum-worn medical device designed for people living with Parkinson’s.",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "The CUE1+ shop lists the device as unavailable",
+            "url": "https://charconeurotech.com/shop/cue1plus/",
+            "excerpt": "The CUE1+ Device is currently unavailable.",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "Existing walker accessories provide visual and sound cues",
+            "url": "https://www.ustep.com/product/laser-sound-cueing-module/",
+            "excerpt": "You can also turn on the sound feature to set a beat pattern for maintaining a steady walking speed.",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "A mobility supplier acquired the NexStride walking-cue product line",
+            "url": "https://www.drivemedical.com/news-article/drive-devilbiss-healthcare-acquires-product-line-of-de-oro-devices-makers-of-nexstride-gait-cueing-device",
+            "excerpt": "it has acquired the product line of De Oro Devices",
+            "accessedAt": "2026-10-16"
+          },
+          {
+            "title": "Laser shoes did not improve walking in a short laboratory test",
+            "url": "https://nhct.dspace-express.com/server/api/core/bitstreams/41e75c98-7654-4cf8-b247-cd2d7962a742/content",
+            "excerpt": "Laser shoe cueing did not improve gait in PD regardless of disease severity or FOG status.",
+            "accessedAt": "2026-10-16"
+          }
+        ],
         "risks": [
-          "A detection-and-response demo does not show restored walking; the claimed accuracy lacks test details.",
-          "A reusable device for a defined patient group could justify further investigation; eligible population, price and payment are absent."
+          "Detecting a freeze is not the same as safely ending it. Existing cues may work just as well, and the group helped by a physical poke may be too small to support the hardware, fitting and clinical support costs.",
+          "False prompts, unsafe contact, poor sensation and distraction could disrupt balance. Clinical benefit, regulatory route, coverage and full delivery cost remain unestablished."
         ],
         "nextQuestions": [
-          "Clinically supervised comparison against current cues, measuring safe useful walking and false prompts."
+          "Does a safely timed touch help an identifiable group walk better than their best current cue, and will patients or clinics pay enough to cover fitting and support?"
         ]
       }
     }
