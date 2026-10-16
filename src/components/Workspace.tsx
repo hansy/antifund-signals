@@ -1,3 +1,5 @@
+import publicOpportunities from "../../data/opportunities.json";
+import { lifecycleViewSchema } from "../lib/opportunity-lifecycle";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -27,6 +29,7 @@ import {
   OpportunityStage,
   StageBadge,
   OpportunityMarket,
+  OpportunityMarketSources,
 } from "./OpportunityStage";
 import { OpportunityFeedback } from "./OpportunityFeedback";
 import {
@@ -161,6 +164,7 @@ function CollectionInfo({ corpus }: { corpus: Corpus }) {
     </details>
   );
 }
+const marketSnapshot = lifecycleViewSchema.parse(publicOpportunities);
 function SignalFilters({
   value,
   onChange,
@@ -308,6 +312,10 @@ export function Workspace() {
   const opportunity = stages.data?.opportunities.find(
     (o) => o.id === insight?.id,
   );
+  const marketRevision =
+    opportunity?.accepted ??
+    marketSnapshot.opportunities.find((item) => item.id === insight?.id)
+      ?.accepted;
   const brief = insight ? getSignalBrief(insight, opportunity?.accepted) : null;
   const relatedProjects =
     corpus?.projects.filter((item) => insight?.projectIds.includes(item.id)) ??
@@ -726,8 +734,8 @@ export function Workspace() {
                       </div>
                       <section className="market-size">
                         <h2>Market size</h2>
-                        {opportunity ? (
-                          <OpportunityMarket revision={opportunity.accepted} />
+                        {marketRevision ? (
+                          <OpportunityMarket revision={marketRevision} />
                         ) : brief.marketSize ? (
                           <>
                             <p className="market-value">
@@ -740,25 +748,6 @@ export function Workspace() {
                             <p className="market-scope">
                               {brief.marketSize.context}
                             </p>
-                            <div className="market-references">
-                              {brief.marketSize.sourceUrls.map((url) => {
-                                const evidence = brief.marketEvidence.find(
-                                  (e) => e.url === url,
-                                );
-                                return (
-                                  <a
-                                    key={url}
-                                    href={url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                  >
-                                    {evidence?.title.split(" · ")[0] ??
-                                      "Source"}
-                                    <Arrow external />
-                                  </a>
-                                );
-                              })}
-                            </div>
                           </>
                         ) : (
                           <p className="market-scope">
@@ -924,28 +913,32 @@ export function Workspace() {
                         })}
                       </div>
                     </BriefSection>
-                    {brief.marketEvidence.length > 0 && (
-                      <details className="deeper-detail">
-                        <summary>Market sources</summary>
-                        <div className="market-sources">
-                          {brief.marketEvidence.map((item) => (
-                            <div key={item.url}>
-                              <a
-                                href={item.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                {item.title}
-                                <Arrow external />
-                              </a>
-                              <blockquote>{item.excerpt}</blockquote>
-                              <small>
-                                Accessed {formatDate(item.accessedAt)}
-                              </small>
-                            </div>
-                          ))}
-                        </div>
-                      </details>
+                    {marketRevision ? (
+                      <OpportunityMarketSources revision={marketRevision} />
+                    ) : (
+                      brief.marketEvidence.length > 0 && (
+                        <details className="deeper-detail">
+                          <summary>Market sources</summary>
+                          <div className="market-sources">
+                            {brief.marketEvidence.map((item) => (
+                              <div key={item.url}>
+                                <a
+                                  href={item.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  {item.title}
+                                  <Arrow external />
+                                </a>
+                                <blockquote>{item.excerpt}</blockquote>
+                                <small>
+                                  Accessed {formatDate(item.accessedAt)}
+                                </small>
+                              </div>
+                            ))}
+                          </div>
+                        </details>
+                      )
                     )}
                     {opportunity && (
                       <OpportunityFeedback key={insight.id} id={insight.id} />

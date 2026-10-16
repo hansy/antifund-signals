@@ -49,12 +49,20 @@ test("an early lead can retain one supporting project without inventing corrobor
   const lead = corpus.insights.find((i) => i.id === "laundry-folding")!;
   expect(lead.projectIds).toHaveLength(1);
   expect(insightSchema.parse(lead).confidence).toBe("Early signal");
-  expect(insightSchema.safeParse({ ...lead, projectIds: [] }).success).toBe(false);
-  const record = opportunities.opportunities.find((o) => o.id === lead.id)!;
+  expect(insightSchema.safeParse({ ...lead, projectIds: [] }).success).toBe(
+    false,
+  );
+  const record = lifecycleViewSchema
+    .parse(opportunities)
+    .opportunities.find((o) => o.id === lead.id)!;
   expect(record.maturity).toBe("first-impressions");
   expect(record.qualificationReviewId).toBeNull();
   expect(record.accepted.marketSizing?.confidence).toBe("low");
-  expect(record.accepted.claims.find(c => record.accepted.content.marketSize.includes(c.id))?.kind).toBe("estimate");
+  expect(
+    record.accepted.claims.find((c) =>
+      record.accepted.content.marketSize.includes(c.id),
+    )?.kind,
+  ).toBe("reported");
 });
 test("preferences persist idempotently, reject stale edits, and never enqueue work", async () => {
   const t = convexTest(schema, modules);

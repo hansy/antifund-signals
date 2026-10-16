@@ -3,7 +3,7 @@ import {
   researchStatusLabels,
   type OpportunityView,
 } from "../lib/opportunity-lifecycle";
-import { marketRangeLabel, factorValue } from "../lib/market-sizing";
+import { marketMoney } from "../lib/market-sizing";
 const compactStatus = {
   queued: "Queued",
   running: "In progress",
@@ -87,79 +87,32 @@ export function OpportunityMarket({
 }: {
   revision: OpportunityView["accepted"];
 }) {
-  const model = revision.marketSizing;
-  if (model) {
-    const sourceIds = new Set([
-      ...model.factors.flatMap((f) => f.sourceIds),
-      ...model.growth.sourceIds,
-    ]);
-    const sources = revision.evidence.filter((e) => sourceIds.has(e.id));
+  const market = revision.reportedMarket;
+  if (market) {
+    const latest = market.end.kind === "estimate" ? market.end : market.start;
     return (
       <div className="market-model">
-        <p className="market-value">{marketRangeLabel(model)}</p>
-        <p className="market-category">
-          Conditional estimate · {model.geography}
+        <p className="market-scope">
+          {market.name} · {market.geography}
         </p>
-        <p className="market-scope">{model.scope}</p>
-        <p className="market-growth">{model.growth.text}</p>
-        <details className="market-method">
-          <summary>Calculation, assumptions & sources</summary>
-          <div className="market-method-content">
-            <p>
-              {model.basis === "annualized-equipment-spend"
-                ? "Equipment purchases spread over an assumed replacement cycle."
-                : "Annual spending for the defined segment."}{" "}
-              Scenario, not measured demand or a sales forecast. Confidence:{" "}
-              {model.confidence}.
-            </p>
-            <ol className="market-inputs">
-              {model.factors.map((f, index) => (
-                <li key={f.label}>
-                  <strong>
-                    {index === 0 ? "" : f.operation === "divide" ? "÷ " : "× "}
-                    {factorValue(f)}
-                  </strong>
-                  <span>
-                    {f.label} ·{" "}
-                    {f.basis === "reported" ? "Reported input" : "Assumption"}
-                  </span>
-                  <p>{f.reason}</p>
-                </li>
-              ))}
-            </ol>
-            <p>
-              <strong>Growth: </strong>
-              {model.growth.kind === "forecast" ? "Forecast" : "Observed"}{" "}
-              {model.growth.measure}, {model.growth.period}.{" "}
-              {model.growth.limitation}
-            </p>
-            <ul>
-              {model.limitations.map((l) => (
-                <li key={l}>{l}</li>
-              ))}
-            </ul>
-            <p>
-              <strong>To narrow the range: </strong>
-              {model.nextEvidence}
-            </p>
-            <div className="market-references">
-              {sources.map((s) => (
-                <a
-                  key={s.id}
-                  href={s.sourceUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {s.title}
-                  {s.pdfPage ? ` · p. ${s.pdfPage}` : ""}
-                </a>
-              ))}
-            </div>
-            <p className="market-date">
-              Inputs: {model.period}. Checked {model.asOf}.
-            </p>
+        <div className="market-metrics">
+          <div className="market-size-metric">
+            <p className="market-metric-number">{marketMoney(latest.value)}</p>
+            <span className="market-metric-label">{latest.year} estimate</span>
           </div>
-        </details>
+          <div className="market-growth-metric">
+            <p className="market-metric-number">
+              {market.growth.value}
+              {market.growth.unit === "multiple" ? "×" : "%"}
+            </p>
+            <span className="market-metric-label">
+              {market.growth.kind === "forecast"
+                ? "Annual growth forecast"
+                : "Year-over-year growth"}
+            </span>
+            <span className="market-growth-period">{market.growth.period}</span>
+          </div>
+        </div>
       </div>
     );
   }
@@ -186,5 +139,64 @@ export function OpportunityMarket({
     </div>
   ) : (
     <p className="market-scope">No sourced estimate yet.</p>
+  );
+}
+
+export function OpportunityMarketSources({
+  revision,
+}: {
+  revision: OpportunityView["accepted"];
+}) {
+  const model = revision.marketSizing;
+  const claimSourceIds = revision.claims
+    .filter((claim) => revision.content.marketSize.includes(claim.id))
+    .flatMap((claim) => claim.evidenceIds);
+  const sourceIds = new Set(
+    revision.reportedMarket
+      ? revision.reportedMarket.sourceIds
+      : model
+        ? [
+            ...model.factors.flatMap((factor) => factor.sourceIds),
+            ...model.growth.sourceIds,
+          ]
+        : claimSourceIds,
+  );
+  const sources = revision.evidence.filter((source) =>
+    sourceIds.has(source.id),
+  );
+  if (!sources.length) return null;
+  return (
+    <section className="market-source-section" aria-label="Market sources">
+      <h2>Market sources</h2>
+      {revision.reportedMarket && (
+        <p className="market-scope">{revision.reportedMarket.scopeNote}</p>
+      )}
+      <div className="market-sources">
+        {sources.map((source) => (
+          <div key={source.id}>
+            <a
+              href={source.sourceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {source.title}
+              {source.pdfPage ? ` · p. ${source.pdfPage}` : ""}
+              <span aria-hidden="true"> ↗</span>
+            </a>
+            <blockquote>{source.excerpt}</blockquote>
+            <small>
+              {[
+                source.publisher,
+                source.publishedAt ? `Published ${source.publishedAt}` : null,
+                source.retrievedAt ? `Accessed ${source.retrievedAt}` : null,
+                source.locator,
+              ]
+                .filter(Boolean)
+                .join(" · ")}
+            </small>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }

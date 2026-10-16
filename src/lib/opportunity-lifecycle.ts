@@ -1,5 +1,9 @@
 import { z } from "zod";
-import { marketSizingSchema, marketIssues } from "./market-sizing";
+import {
+  marketSizingSchema,
+  marketIssues,
+  reportedMarketSchema,
+} from "./market-sizing";
 const id = z.string().min(1);
 const time = z.iso.datetime();
 const hash = z.string().regex(/^[a-f0-9]{64}$/);
@@ -119,6 +123,7 @@ export const opportunityRevisionSchema = z
     changeReason: id,
     contentHash: hash,
     marketSizing: marketSizingSchema.optional(),
+    reportedMarket: reportedMarketSchema.optional(),
     title: id,
     classifications: z.array(id),
     content: z
@@ -182,13 +187,20 @@ export const opportunityRevisionSchema = z
   })
   .strict()
   .superRefine((revision, ctx) => {
-    if (!revision.marketSizing) return;
     const available = new Set(
       revision.evidence
         .filter((e) => e.checks.status === "passed")
         .map((e) => e.id),
     );
-    for (const message of marketIssues(revision.marketSizing, available))
+    if (revision.reportedMarket?.sourceIds.some((id) => !available.has(id)))
+      ctx.addIssue({
+        code: "custom",
+        message: "Reported market needs inspected sources",
+        path: ["reportedMarket"],
+      });
+    for (const message of revision.marketSizing
+      ? marketIssues(revision.marketSizing, available)
+      : [])
       ctx.addIssue({ code: "custom", message, path: ["marketSizing"] });
   });
 export const opportunitySchema = z

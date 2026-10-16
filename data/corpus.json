@@ -4302,39 +4302,9 @@
         "marketStatus": "researched",
         "marketEvidence": [
           {
-            "title": "Anthropic prompt caching",
-            "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
-            "excerpt": "Cache hits require 100% identical prompt segments, including all text and images up to and including the block marked with cache control.",
-            "accessedAt": "2026-10-15T19:51:30.051Z"
-          },
-          {
-            "title": "Microsoft LLMLingua",
-            "url": "https://github.com/microsoft/LLMLingua",
-            "excerpt": "MIT license",
-            "accessedAt": "2026-10-15T19:51:30.051Z"
-          },
-          {
-            "title": "Anthropic context management",
-            "url": "https://claude.com/resources/articles/context-management",
-            "excerpt": "Context editing automatically clears stale tool calls and results from within the context window when approaching token limits.",
-            "accessedAt": "2026-10-15T19:51:30.051Z"
-          },
-          {
-            "title": "The Token Company pricing",
-            "url": "https://thetokencompany.com/pricing",
-            "excerpt": "You only pay for the tokens we remove from your input.",
-            "accessedAt": "2026-10-15T19:51:30.051Z"
-          },
-          {
-            "title": "Anthropic context engineering",
-            "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
-            "excerpt": "overly aggressive compaction can result in the loss of subtle but critical context whose importance only becomes apparent later.",
-            "accessedAt": "2026-10-15T19:51:30.051Z"
-          },
-          {
-            "title": "Menlo · enterprise AI spending, 2025",
+            "title": "Menlo Ventures · Enterprise generative AI spending",
             "url": "https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/",
-            "excerpt": "Foundation model APIs",
+            "excerpt": "up from $11.5 billion",
             "accessedAt": "2026-10-16"
           }
         ],
@@ -4346,10 +4316,10 @@
           "Compare the best cached/indexed baseline with selection or memory added, including successful tasks, total bill, retries and maintenance."
         ],
         "marketSize": {
-          "value": "$25M–$380M / year",
-          "market": "Software fees for reducing enterprise model-API bills.",
-          "year": 2026,
-          "context": "Conditional estimate · Enterprise spending model; geography not delimited. Menlo estimates enterprise AI spending grew 3.2× in 2025. Broader category: $11.5B to $37B on the restated methodology, not growth of optimization tools. Menlo is an investor; estimates combine a 495-person US survey with modeling. Assumptions and calculation are available in the market details; demand is not verified.",
+          "value": "$11.5B (2024) → $37B (2025)",
+          "market": "Enterprise generative AI spending",
+          "year": 2024,
+          "context": "Modeled enterprise spending; survey of US buyers. Enterprise generative AI spending: 3.2× year-over-year growth, 2024–2025.",
           "sourceUrls": [
             "https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/"
           ]
@@ -4423,52 +4393,9 @@
         "marketStatus": "researched",
         "marketEvidence": [
           {
-            "title": "A Study on the Challenges of Using Robotics Simulators for Testing",
-            "url": "https://arxiv.org/pdf/2004.07368",
-            "excerpt": "Lack of deterministic execution of simulators leads to unrepeatable results.",
-            "accessedAt": "2026-10-15",
-            "page": 5
-          },
-          {
-            "title": "How INESC TEC tests and deploys ROS applications with AWS RoboMaker",
-            "url": "https://aws.amazon.com/blogs/robotics/how-inesc-tec-tests-and-deploys-ros-applications-with-aws-robomaker/",
-            "excerpt": "we were able to speed up our testing time from 4 hours per test in the physical world to a couple of minutes",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Evaluating Real-World Robot Manipulation Policies in Simulation",
-            "url": "https://simpler-env.github.io/",
-            "excerpt": "Visual discrepancies between real-world and simulated environments can comprise a distribution shift that adversely affects a learned policy’s behavior, rendering simulated evaluation unreliable.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "SignalFlag: robotics test infrastructure, formerly ReSim",
-            "url": "https://signalflag.ai/",
-            "excerpt": "The value is in orchestrating those runs and making their results comparable, not in producing the simulation itself.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Foxglove pricing",
-            "url": "https://foxglove.dev/pricing",
-            "excerpt": "Comparison mode\nLoad multiple recordings at once and compare them overlaid or side by side.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "AWS RoboMaker GitHub Actions: repository archived",
-            "url": "https://github.com/aws-robotics/aws-robomaker-github-actions",
-            "excerpt": "This repository was part of AWS RoboMaker, which reached end of support on September 10, 2025.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "IFR · service robot producers and sales",
-            "url": "https://ifr.org/img/worldrobotics/Executive_Summary_WR_2026_-_Service_Robots.pdf",
-            "excerpt": "more than 1,000",
-            "accessedAt": "2026-10-16"
-          },
-          {
-            "title": "RoboDK · software pricing",
-            "url": "https://robodk.com/pricing",
-            "excerpt": "1500 / year",
+            "title": "Global Market Insights · Robotic software",
+            "url": "https://www.gminsights.com/industry-analysis/robotic-software-market",
+            "excerpt": "2025 and $29.6 billion in 2026",
             "accessedAt": "2026-10-16"
           }
         ],
@@ -4480,13 +4407,12 @@
           "On a customer’s robot, does the test package catch meaningful failures or reduce setup time beyond their existing tools, with results that repeat?"
         ],
         "marketSize": {
-          "value": "$1.9M–$23M / year",
-          "market": "Robot-testing subscriptions sold to service-robot manufacturers.",
+          "value": "$29.6B (2026) → $185.2B (2035 forecast)",
+          "market": "Robotic software",
           "year": 2026,
-          "context": "Conditional estimate · Worldwide. Professional service robot sales rose 24% in 2025 worldwide. Reported unit growth excludes medical robots. It is not measured growth in software or training-data spending; sample composition and spending per robot can differ. Assumptions and calculation are available in the market details; demand is not verified.",
+          "context": "Global. Robotic software: 22.6% annual growth forecast, 2026–2035.",
           "sourceUrls": [
-            "https://ifr.org/img/worldrobotics/Executive_Summary_WR_2026_-_Service_Robots.pdf",
-            "https://robodk.com/pricing"
+            "https://www.gminsights.com/industry-analysis/robotic-software-market"
           ]
         }
       }
@@ -4544,52 +4470,9 @@
         "marketStatus": "researched",
         "marketEvidence": [
           {
-            "title": "Flyability: Automating Flight Merging at a Sugar Refinery with the Asset Management Extension",
-            "url": "https://www.flyability.com/casestudies/asset-management-flight-merging",
-            "excerpt": "Instead of spending hours aligning the different point clouds, Asset Management made quick work of combining lots of information from multiple flights.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Fife Council: Framework: Drone Surveys for Inspection -Bridges & Structures; contract award notice JAN521821",
-            "url": "https://www.publiccontractsscotland.gov.uk/search/show/search_view.aspx?ID=JAN521821",
-            "excerpt": "Our policy is to inspect Confined Spaces every 3 years due to the hazardous nature of confined space entry.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Flyability: Inspector inspection software",
-            "url": "https://www.flyability.com/inspector",
-            "excerpt": "Access inspection datasets through a centralized online platform without transferring large files.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Wang et al.: PlanarMesh, arXiv v1",
-            "url": "https://arxiv.org/pdf/2510.13599",
-            "excerpt": "reconstruction system uses continually more memory until it\nexceeds available memory at about 300 scans",
-            "accessedAt": "2026-10-15",
-            "page": 8
-          },
-          {
-            "title": "PlanarMesh: authors’ public implementation README",
-            "url": "https://github.com/ori-drs/planar_mesh",
-            "excerpt": "Due to an immature implementation, deadlocks may occur when using multithreading.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "FAA · active commercial drone fleet",
-            "url": "https://www.faa.gov/data_research/aviation/aerospace_forecasts/2026_Emerging_Aviation_Entrants_Unmanned_Aircraft_Systems_Advanced_Air_Mobility-1.pdf",
-            "excerpt": "424,516",
-            "accessedAt": "2026-10-16"
-          },
-          {
-            "title": "PIX4D · mapping software price",
-            "url": "https://www.pix4d.com/pricing/pix4dmapper/",
-            "excerpt": "Billed yearly",
-            "accessedAt": "2026-10-16"
-          },
-          {
-            "title": "PIX4D · mapper retirement dates",
-            "url": "https://support.pix4d.com/hc/pix4dmapper-end-of-support-timeline",
-            "excerpt": "January 1, 2027.",
+            "title": "Grand View Research · Drone analytics",
+            "url": "https://www.grandviewresearch.com/industry-analysis/drone-analytics-market-report",
+            "excerpt": "reach USD 18.49 billion in 2025",
             "accessedAt": "2026-10-16"
           }
         ],
@@ -4601,14 +4484,12 @@
           "Use the same complete survey with accepted defect locations and exports; compare processing, handover time and total cost on equal hardware."
         ],
         "marketSize": {
-          "value": "$8.5M–$210M / year",
-          "market": "Mapping-software spending by commercial drone teams.",
-          "year": 2026,
-          "context": "Conditional estimate · United States. FAA forecasts about 5% annual growth in the active commercial drone fleet through 2030. Base fleet grows from 424,516 to 540,845. This is a fleet projection, not measured growth in mapping subscriptions. The high FAA series counts registrations differently and is not used. Assumptions and calculation are available in the market details; demand is not verified.",
+          "value": "$18.49B (2025) → $49.97B (2030 forecast)",
+          "market": "Drone analytics",
+          "year": 2025,
+          "context": "Global. Drone analytics: 22% annual growth forecast, 2025–2030.",
           "sourceUrls": [
-            "https://www.faa.gov/data_research/aviation/aerospace_forecasts/2026_Emerging_Aviation_Entrants_Unmanned_Aircraft_Systems_Advanced_Air_Mobility-1.pdf",
-            "https://www.pix4d.com/pricing/pix4dmapper/",
-            "https://support.pix4d.com/hc/pix4dmapper-end-of-support-timeline"
+            "https://www.grandviewresearch.com/industry-analysis/drone-analytics-market-report"
           ]
         }
       }
@@ -4763,39 +4644,9 @@
         "marketStatus": "researched",
         "marketEvidence": [
           {
-            "title": "Figure: Introducing Index: Building The World’s Largest and Most Diverse Physical Dataset",
-            "url": "https://www.figure.ai/news/introducing-index",
-            "excerpt": "Prior to this we tried buying data. Vendors couldn't hit the throughput, diversity, or quality bar Helix requires",
-            "accessedAt": "2026-10-15T19:10:16.136209+00:00"
-          },
-          {
-            "title": "Figure: Introducing Index: Building The World’s Largest and Most Diverse Physical Dataset",
-            "url": "https://www.figure.ai/news/introducing-index",
-            "excerpt": "We’ve paid out $15M to Creators to date that have contributed to our data",
-            "accessedAt": "2026-10-15T19:10:16.136209+00:00"
-          },
-          {
-            "title": "Figure: Helix Accelerating Real-World Logistics",
-            "url": "https://www.figure.ai/news/helix-logistics",
-            "excerpt": "a model trained with curated, high quality demonstrations achieves 40% better throughput despite being trained with ⅓ less data.",
-            "accessedAt": "2026-10-15T19:10:16.128974+00:00"
-          },
-          {
-            "title": "Scale AI: Physical AI Data Engine",
-            "url": "https://scale.com/physical-ai",
-            "excerpt": "An internal team of experienced roboticists will work with you to produce data specifications tailored to your program.",
-            "accessedAt": "2026-10-15T19:10:16.115109+00:00"
-          },
-          {
-            "title": "IFR · service robot producers and sales",
-            "url": "https://ifr.org/img/worldrobotics/Executive_Summary_WR_2026_-_Service_Robots.pdf",
-            "excerpt": "more than 1,000",
-            "accessedAt": "2026-10-16"
-          },
-          {
-            "title": "BLS · software developer wages",
-            "url": "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm",
-            "excerpt": "$135,980",
+            "title": "Global Market Insights · Robotic software",
+            "url": "https://www.gminsights.com/industry-analysis/robotic-software-market",
+            "excerpt": "2025 and $29.6 billion in 2026",
             "accessedAt": "2026-10-16"
           }
         ],
@@ -4807,13 +4658,12 @@
           "At matched real-robot success on unseen objects, compare full delivery and retraining cost with the buyer’s internal collection and current supplier."
         ],
         "marketSize": {
-          "value": "$5M–$50M / year",
-          "market": "Training-data services for service-robot manufacturers.",
+          "value": "$29.6B (2026) → $185.2B (2035 forecast)",
+          "market": "Robotic software",
           "year": 2026,
-          "context": "Conditional estimate · Worldwide. Professional service robot sales rose 24% in 2025 worldwide. Reported unit growth excludes medical robots. It is not measured growth in software or training-data spending; sample composition and spending per robot can differ. Assumptions and calculation are available in the market details; demand is not verified.",
+          "context": "Global. Robotic software: 22.6% annual growth forecast, 2026–2035.",
           "sourceUrls": [
-            "https://ifr.org/img/worldrobotics/Executive_Summary_WR_2026_-_Service_Robots.pdf",
-            "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm"
+            "https://www.gminsights.com/industry-analysis/robotic-software-market"
           ]
         }
       }
@@ -4964,40 +4814,9 @@
         "marketStatus": "researched",
         "marketEvidence": [
           {
-            "title": "The State of Industrial Robotics: Emerging Technologies, Challenges, and Key Research Directions",
-            "url": "https://arxiv.org/pdf/2010.14537",
-            "excerpt": "manufacturers must continue to draw upon system integrators",
-            "accessedAt": "2026-10-15",
-            "page": 39
-          },
-          {
-            "title": "micropsi industries: MIRAI product and MIRAI 2",
-            "url": "https://www.micropsi-industries.com/product",
-            "excerpt": "Industrial robots powered with the MIRAI system can be easily trained and retrained for various production tasks.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Universal Robots: PolyScope X",
-            "url": "https://www.universal-robots.com/products/polyscope-x/",
-            "excerpt": "The operator screen enables operators to do changeovers themselves without support.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Universal Robots: Jenny | Waltle customer case",
-            "url": "https://www.universal-robots.com/case-stories/jenny-waltle-gmbh/",
-            "excerpt": "Program codes for twelve different components have been installed and can be called up in the system immediately.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "IFR · industrial robot installations",
-            "url": "https://ifr.org/ifr-press-releases/five-million-robots-now-operate-in-factories-globally",
-            "excerpt": "600,000",
-            "accessedAt": "2026-10-16"
-          },
-          {
-            "title": "RoboDK · software pricing",
-            "url": "https://robodk.com/pricing",
-            "excerpt": "1500 / year",
+            "title": "Global Market Insights · Robotic software",
+            "url": "https://www.gminsights.com/industry-analysis/robotic-software-market",
+            "excerpt": "2025 and $29.6 billion in 2026",
             "accessedAt": "2026-10-16"
           }
         ],
@@ -5009,13 +4828,12 @@
           "Compare technician hours, good output, defects and recovery for the same part changes against the best practical current setup."
         ],
         "marketSize": {
-          "value": "$12M–$360M / year",
-          "market": "Setup software for newly installed industrial robot cells.",
+          "value": "$29.6B (2026) → $185.2B (2035 forecast)",
+          "market": "Robotic software",
           "year": 2026,
-          "context": "Conditional estimate · Worldwide. Worldwide industrial robot installations rose 11% in 2025. Installed stock grew 9%, but new installations are the denominator here. Software attach rates and fee growth are unknown. Assumptions and calculation are available in the market details; demand is not verified.",
+          "context": "Global. Robotic software: 22.6% annual growth forecast, 2026–2035.",
           "sourceUrls": [
-            "https://ifr.org/ifr-press-releases/five-million-robots-now-operate-in-factories-globally",
-            "https://robodk.com/pricing"
+            "https://www.gminsights.com/industry-analysis/robotic-software-market"
           ]
         }
       }
@@ -5258,51 +5076,9 @@
         "marketStatus": "researched",
         "marketEvidence": [
           {
-            "title": "Polybot: repeated measurements in automated coating experiments",
-            "url": "https://www.nature.com/articles/s41467-024-55655-3",
-            "excerpt": "To ensure the repeatability of our experiments, Polybot performs at least two trials and up to four trials for every sample.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Chemspeed: automated formulation with planning-software interfaces",
-            "url": "https://www.chemspeed.com/example-solutions/flex-formax/",
-            "excerpt": "Interface to DOE / AI.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Uncountable: software that recommends formulations",
-            "url": "https://www.support.uncountable.com/knowledge-base/10473/",
-            "excerpt": "The algorithm suggests formulations that are most likely to meet your specs.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "BayBE: open-source experiment selection",
-            "url": "https://github.com/emdgroup/baybe",
-            "excerpt": "Create materials, chemical mixtures or formulations with desired properties",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "BASF: an internal system that tunes chemical reactions",
-            "url": "https://www.basf.com/global/en/media/news-releases/2025/12/p-25-241",
-            "excerpt": "Our first experiments already demonstrated that we are 20 times faster than when we do it manually",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Chemspeed’s reported 2023 revenue: a supplier analogue, not market size",
-            "url": "https://s22.q4cdn.com/617463959/files/doc_news/2024/Jan/25/chemspeed_acquisition_1-24-24.pdf",
-            "excerpt": "In 2023, Chemspeed generated revenues greater than $50 million, and Chemspeed was profitable.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "BLS · medical scientists",
-            "url": "https://www.bls.gov/ooh/life-physical-and-social-science/medical-scientists.htm",
-            "excerpt": "181,000",
-            "accessedAt": "2026-10-16"
-          },
-          {
-            "title": "Opentrons · configured lab robots",
-            "url": "https://opentrons.com/robots/flex",
-            "excerpt": "Configurations starting at $26,400",
+            "title": "Grand View Research · Lab automation",
+            "url": "https://www.grandviewresearch.com/industry-analysis/lab-automation-market",
+            "excerpt": "estimated at USD 10.0 billion for 2026",
             "accessedAt": "2026-10-16"
           }
         ],
@@ -5314,13 +5090,12 @@
           "Does one repeatable coating workflow deliver more accepted results per staff-hour than the lab’s best existing setup, after installation, cleaning and support—and will a budget holder pay for that gain?"
         ],
         "marketSize": {
-          "value": "$19M–$120M / year",
-          "market": "Automation equipment for repetitive biomedical experiments.",
+          "value": "$10B (2026) → $18.4B (2033 forecast)",
+          "market": "Lab automation",
           "year": 2026,
-          "context": "Conditional estimate · United States. BLS projects 13% growth in US medical-scientist jobs from 2025 to 2035. Workforce growth is a demand proxy, not a lab-automation revenue forecast. Funding and purchasing cycles can move differently. Assumptions and calculation are available in the market details; demand is not verified.",
+          "context": "Global. Lab automation: 9.3% annual growth forecast, 2025–2033.",
           "sourceUrls": [
-            "https://www.bls.gov/ooh/life-physical-and-social-science/medical-scientists.htm",
-            "https://opentrons.com/robots/flex"
+            "https://www.grandviewresearch.com/industry-analysis/lab-automation-market"
           ]
         }
       }
@@ -5376,39 +5151,9 @@
         "marketStatus": "researched",
         "marketEvidence": [
           {
-            "title": "Saleae: AI access to Logic 2 instruments",
-            "url": "https://docs.saleae.com/mcp/guides/getting-started",
-            "excerpt": "Start captures, decode protocols, and export data — all from your AI tool of choice.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "SEGGER Ozone: debugging and test automation",
-            "url": "https://www.segger.com/products/development-tools/ozone-j-link-debugger/",
-            "excerpt": "For automation tasks, Ozone users can add scripts to a project or run them directly in the console.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Zephyr Twister: physical-device tests",
-            "url": "https://docs.zephyrproject.org/latest/develop/twister/index.html",
-            "excerpt": "Some tests require additional setup or special wiring specific to the test.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Whirlpool: automated control-board testing",
-            "url": "https://www.ni.com/en/solutions/industrial-machinery/case-studies/making-washing-machines-more-reliable-with-hardware-in-the-loop.html",
-            "excerpt": "fast, automatic testing of the low-level signals processed and provided by the production control board",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "NI: testing control software with real electronics",
-            "url": "https://www.ni.com/en/solutions/hardware-in-the-loop-testing.html",
-            "excerpt": "Features include hardware fault insertion, and multi‑ECU and integrated test support",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "BLS · electrical and electronics engineers",
-            "url": "https://www.bls.gov/ooh/architecture-and-engineering/electrical-and-electronics-engineers.htm",
-            "excerpt": "297,900",
+            "title": "Grand View Research · Test and measurement equipment",
+            "url": "https://www.grandviewresearch.com/industry-analysis/test-measurement-equipment-market-report",
+            "excerpt": "at a CAGR of 4.8% from 2026 to 2033",
             "accessedAt": "2026-10-16"
           }
         ],
@@ -5420,12 +5165,12 @@
           "On unfamiliar customer faults, does adding this tool produce more correct fixes with fewer total engineer hours than the best existing setup, including setup, failed attempts and checking?"
         ],
         "marketSize": {
-          "value": "$30M–$360M / year",
-          "market": "Annual test-software budgets for embedded-electronics teams.",
+          "value": "$36.4B (2026) → $50.6B (2033 forecast)",
+          "market": "Test and measurement equipment",
           "year": 2026,
-          "context": "Conditional estimate · United States. BLS projects 8% growth in US electrical and electronics engineering jobs by 2035. This is a ten-year workforce projection, not annual growth or measured test-software spending. Assumptions and calculation are available in the market details; demand is not verified.",
+          "context": "Global. Test and measurement equipment: 4.8% annual growth forecast, 2026–2033.",
           "sourceUrls": [
-            "https://www.bls.gov/ooh/architecture-and-engineering/electrical-and-electronics-engineers.htm"
+            "https://www.grandviewresearch.com/industry-analysis/test-measurement-equipment-market-report"
           ]
         }
       }
@@ -5490,51 +5235,9 @@
         "marketStatus": "researched",
         "marketEvidence": [
           {
-            "title": "Xometry: conflicting manufacturing instructions",
-            "url": "https://community.xometry.com/kb/articles/690-model-drawing-and-quote-discrepancies",
-            "excerpt": "your order may be placed on hold so our engineers can contact you to work out any discrepancies",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "CIM: reconstructing a vintage vehicle part",
-            "url": "https://cim.eu/en/case-studies/reverse-engineering-and-optimization-of-spare-parts-for-vintage-vehicles/",
-            "excerpt": "The company provided the original component and some of its technical drawings.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Zoo: AI design capabilities and limits",
-            "url": "https://zoo.dev/docs/faq",
-            "excerpt": "It can create and edit parametric CAD models from prompts, images, and sketches.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "SOLIDWORKS 2025: drawing-to-model workflow",
-            "url": "https://help.solidworks.com/2025/english/SolidWorks/sldworks/c_2D_to_3D_Conversion_Overview.htm",
-            "excerpt": "The 2D sketch can be an imported drawing, or it can be a sketch constructed in SOLIDWORKS.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "NIST: gaps in design-data cost evidence",
-            "url": "https://www.nist.gov/news-events/news/2020/02/inadequate-modeling-data-costs-billions-us-manufacturers",
-            "excerpt": "The frequency and impact of low-quality design data on product research and development is also not clear.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Xometry: part ordering and engineering review",
-            "url": "https://www.xometry.com/how-xometry-works/",
-            "excerpt": "You can also share your quote with a purchaser or team member using the \"Forward to Purchaser\" button below the checkout button.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "BLS · mechanical engineers",
-            "url": "https://www.bls.gov/ooh/architecture-and-engineering/mechanical-engineers.htm",
-            "excerpt": "298,500",
-            "accessedAt": "2026-10-16"
-          },
-          {
-            "title": "Onshape · CAD subscription prices",
-            "url": "https://www.onshape.com/en/pricing",
-            "excerpt": "Standard: $1,500 per user, per year",
+            "title": "Grand View Research · 3D CAD software",
+            "url": "https://www.grandviewresearch.com/industry-analysis/3d-cad-software-market",
+            "excerpt": "estimated at USD 13.4 billion for 2026",
             "accessedAt": "2026-10-16"
           }
         ],
@@ -5546,13 +5249,12 @@
           "On real customer parts, does adding this tool reduce total measurement, correction and checking work while producing equally acceptable parts—and will the buyer pay to keep using it?"
         ],
         "marketSize": {
-          "value": "$15M–$130M / year",
-          "market": "Part-design checking add-ons for mechanical engineers.",
+          "value": "$13.4B (2026) → $17.3B (2030 forecast)",
+          "market": "3D CAD software",
           "year": 2026,
-          "context": "Conditional estimate · United States. BLS projects 11% growth in US mechanical-engineering jobs from 2025 to 2035. Workforce growth does not establish paid demand for automated design checks. CAD vendors can bundle similar functions. Assumptions and calculation are available in the market details; demand is not verified.",
+          "context": "Global. 3D CAD software: 6.7% annual growth forecast, 2023–2030.",
           "sourceUrls": [
-            "https://www.bls.gov/ooh/architecture-and-engineering/mechanical-engineers.htm",
-            "https://www.onshape.com/en/pricing"
+            "https://www.grandviewresearch.com/industry-analysis/3d-cad-software-market"
           ]
         }
       }
@@ -5599,45 +5301,9 @@
         "marketStatus": "researched",
         "marketEvidence": [
           {
-            "title": "CCOHS: manual laundry work in a Canadian hotel",
-            "url": "https://www.ccohs.ca/oshanswers/occup_workplace/laundry.html",
-            "excerpt": "Folding towels puts workers at risk for neck and shoulder injuries. Bending and twisting pose the risk for back injuries.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "JENSEN: automatic towel handling",
-            "url": "https://www.jensen-group.com/products/flatwork-finishing-technology/handling-and-sorting/blizz",
-            "excerpt": "Automatic separation and feeding by BLIZZ.\nAutomatic folding, sorting and stacking by the Butterfly towel folder.\nAutomatic rejection of washcloths and pillow cases",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "JENSEN: garment folding with manual feeding",
-            "url": "https://www.jensen-group.com/nl/news/news-detail/perfectly-folded-bathrobes-and-towels-in-one-machine",
-            "excerpt": "the bathrobe is manually fed onto an almost vertically positioned feeding station at one end of the machine.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Weave: folding with remote assistance",
-            "url": "https://www.weaverobotics.com/isaac-0",
-            "excerpt": "Isaac 0 blends autonomy with teleoperation (remote assistance by a Weave specialist) to guarantee that we complete every fold.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Weave: business installation and support",
-            "url": "https://www.weaverobotics.com/business",
-            "excerpt": "Weave handles installation, support, and improvements over the air.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Census · linen and industrial laundry sites",
-            "url": "https://www2.census.gov/programs-surveys/cbp/datasets/2023/cbp23us.zip",
-            "excerpt": "\"est\": \"905\"",
-            "accessedAt": "2026-10-16"
-          },
-          {
-            "title": "Census / FRED · industrial laundry revenue",
-            "url": "https://fred.stlouisfed.org/series/AIES812332RCTTUS",
-            "excerpt": "13,861,352",
+            "title": "Global Market Insights · Commercial laundry machines",
+            "url": "https://www.gminsights.com/industry-analysis/commercial-laundry-machines-market",
+            "excerpt": "to USD 15.20 billion by 2035",
             "accessedAt": "2026-10-16"
           }
         ],
@@ -5649,13 +5315,12 @@
           "Across full laundry shifts, does this robot increase acceptable folds per paid staff-hour after loading, checking, packing, repairs and remote help—and will an operator pay for the improvement?"
         ],
         "marketSize": {
-          "value": "$2.3M–$21M / year",
-          "market": "Folding equipment at industrial laundry and linen-supply sites.",
+          "value": "$9.1B (2026) → $15.2B (2035 forecast)",
+          "market": "Commercial laundry machines",
           "year": 2026,
-          "context": "Conditional estimate · United States. US industrial-laundry revenue rose about 5.9% in 2024, in nominal dollars. Calculated from $13.091B to $13.861B. Industry sales include services, inflation and mix changes; this is not folding-machine growth or a $13.9B equipment market. Assumptions and calculation are available in the market details; demand is not verified.",
+          "context": "Global. Commercial laundry machines: 5.9% annual growth forecast, 2026–2035.",
           "sourceUrls": [
-            "https://www2.census.gov/programs-surveys/cbp/datasets/2023/cbp23us.zip",
-            "https://fred.stlouisfed.org/series/AIES812332RCTTUS"
+            "https://www.gminsights.com/industry-analysis/commercial-laundry-machines-market"
           ]
         }
       }
@@ -5798,69 +5463,9 @@
         "marketStatus": "researched",
         "marketEvidence": [
           {
-            "title": "Older-adult ankle study: inactive-device gains, uncertain benefit over normal shoes",
-            "url": "https://link.springer.com/article/10.1186/s12984-023-01287-5",
-            "excerpt": "Compared to walking in normal shoes, self-selected walking speed increased by 3.6 ± 5.2% (0.05 ± 0.07 m/s), metabolic cost decreased by 12.7 ± 16.0% (0.41 ± 0.69 W/kg), and cost of transport decreased by 15.6 ± 15.6% (0.41 ± 0.48 J/kg/m) with optimized torque",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "LIFE trial: preserving walking ability in older adults",
-            "url": "https://agingresearchbiobank.nia.nih.gov/studies/life/details",
-            "excerpt": "Incident major mobility disability occurred in 30.1% (246 participants) of the physical activity group and 35.5% (290 participants)",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "US older population growth: demographic context, not buyers",
-            "url": "https://cdn.www.census.gov/newsroom/press-releases/2025/older-adults-outnumber-children.html",
-            "excerpt": "The U.S. population age 65 and older rose by 3.1% (to 61.2 million)",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "MO/GO: refundable reservation for powered knee assistance",
-            "url": "https://www.skipwithjoy.com/reserve/p/style-01-ej5na-hbs9d",
-            "excerpt": "Ships to you in Summer 2027.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Hypershell: outdoor assistance requires independent walking and balance",
-            "url": "https://hypershell.tech/en-us/products/hypershell-x",
-            "excerpt": "Lifestyle power. Not a medical aid. Requires unassisted walking and balance.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Hypershell describes hip and knee assistance",
-            "url": "https://hypershell.tech/en-us/pages/exoskeleton-101-beginners-guide",
-            "excerpt": "Integrated Hip + Knee Assistance",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Osteoarthritis guidance: exercise and walking aids",
-            "url": "https://www.nice.org.uk/guidance/ng226/chapter/Recommendations",
-            "excerpt": "For all people with osteoarthritis, offer therapeutic exercise tailored to their needs",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Roam: knee osteoarthritis testing",
-            "url": "https://www.roamrobotics.com/",
-            "excerpt": "Currently being tested for reducing pain and increasing mobility for patients with advanced knee osteoarthritis.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "CDC · walking difficulty among older adults",
-            "url": "https://www.cdc.gov/mmwr/volumes/69/wr/mm6927a5.htm",
-            "excerpt": "6,218,999",
-            "accessedAt": "2026-10-16"
-          },
-          {
-            "title": "Hypershell · consumer exoskeleton prices",
-            "url": "https://hypershell.tech/en-us",
-            "excerpt": "US$999.00",
-            "accessedAt": "2026-10-16"
-          },
-          {
-            "title": "Census · US population aged 65+",
-            "url": "https://cdn.www.census.gov/newsroom/press-releases/2025/older-adults-outnumber-children.html",
-            "excerpt": "61.2 million",
+            "title": "Grand View Research · Exoskeletons",
+            "url": "https://www.grandviewresearch.com/industry-analysis/exoskeleton-market-report",
+            "excerpt": "at 14.5% CAGR from 2026 to 2033",
             "accessedAt": "2026-10-16"
           }
         ],
@@ -5872,14 +5477,12 @@
           "For a safely eligible group, does assistance add useful everyday walking beyond ordinary walking and appropriate current care, with sustained use and purchases at a price that covers fitting, returns and support?"
         ],
         "marketSize": {
-          "value": "$13M–$240M / year",
-          "market": "Consumer-priced walking assistance for a subset of older adults with mobility difficulty.",
+          "value": "$694.5M (2026) → $1.79B (2033 forecast)",
+          "market": "Exoskeletons",
           "year": 2026,
-          "context": "Conditional estimate · United States. The US population aged 65+ grew 3.1% in 2024 to 61.2 million. Demographic growth is broader context, not exoskeleton sales growth. The historical mobility subgroup is not scaled up to 2024 without matched data. Assumptions and calculation are available in the market details; demand is not verified.",
+          "context": "Global. Exoskeletons: 14.5% annual growth forecast, 2026–2033.",
           "sourceUrls": [
-            "https://www.cdc.gov/mmwr/volumes/69/wr/mm6927a5.htm",
-            "https://hypershell.tech/en-us",
-            "https://cdn.www.census.gov/newsroom/press-releases/2025/older-adults-outnumber-children.html"
+            "https://www.grandviewresearch.com/industry-analysis/exoskeleton-market-report"
           ]
         }
       }
@@ -5943,57 +5546,9 @@
         "marketStatus": "researched",
         "marketEvidence": [
           {
-            "title": "Too many approval requests can encourage careless consent",
-            "url": "https://www.nist.gov/blogs/cybersecurity-insights/back-future-why-agentic-ai-needs-strong-identity-foundation",
-            "excerpt": "relying too heavily on HITL mechanisms introduces a severe risk of consent fatigue.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Browser assistants remain vulnerable to hostile instructions",
-            "url": "https://www.anthropic.com/news/prompt-injection-defenses",
-            "excerpt": "No browser agent is immune to prompt injection",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "AWS: tool requests checked before execution",
-            "url": "https://aws.amazon.com/blogs/machine-learning/secure-ai-agents-with-policy-in-amazon-bedrock-agentcore/",
-            "excerpt": "evaluating every agent-to-tool request against the policies in the policy engine before granting or denying tool access.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Cerbos: action rules and business context across applications",
-            "url": "https://www.cerbos.dev/ecosystem/mcp",
-            "excerpt": "Policies are written in human-readable YAML and evaluated at request time.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Tines: pause security workflows for human input",
-            "url": "https://www.tines.com/blog/human-in-the-loop-workflows-where-intelligent-automation-meets-judgment/",
-            "excerpt": "Pages pause stories for human input",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Microsoft: multistage approvals are a preview",
-            "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/flows-advanced-approvals",
-            "excerpt": "Preview features aren't meant for production use and may have restricted functionality.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "AWS lists per-request authorization pricing",
-            "url": "https://aws.amazon.com/bedrock/agentcore/pricing/",
-            "excerpt": "$0.000025 per request",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Cerbos offers a free engine and paid management",
-            "url": "https://www.cerbos.dev/pricing",
-            "excerpt": "From $933/month",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Menlo · enterprise AI spending, 2025",
+            "title": "Menlo Ventures · Enterprise generative AI spending",
             "url": "https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/",
-            "excerpt": "Foundation model APIs",
+            "excerpt": "up from $11.5 billion",
             "accessedAt": "2026-10-16"
           }
         ],
@@ -6005,10 +5560,10 @@
           "In a real security workflow, does adding this layer prevent important mistakes or reduce setup and review work beyond existing controls, at a total cost a buyer will pay?"
         ],
         "marketSize": {
-          "value": "$7.5M–$56M / year",
-          "market": "Additional control software for agent-platform spending.",
-          "year": 2026,
-          "context": "Conditional estimate · Enterprise spending model; geography not delimited. The broader enterprise AI category grew 3.2× in 2025, according to Menlo. No comparable growth rate was established for paid action-control tools. Copilots dominate horizontal AI spending; platform growth need not create an independent control budget. Assumptions and calculation are available in the market details; demand is not verified.",
+          "value": "$11.5B (2024) → $37B (2025)",
+          "market": "Enterprise generative AI spending",
+          "year": 2024,
+          "context": "Modeled enterprise spending; survey of US buyers. Enterprise generative AI spending: 3.2× year-over-year growth, 2024–2025.",
           "sourceUrls": [
             "https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/"
           ]
@@ -6146,45 +5701,9 @@
         "marketStatus": "researched",
         "marketEvidence": [
           {
-            "title": "Protective clothing can trap body heat and moisture",
-            "url": "https://www.cdc.gov/niosh/heat-stress/recommendations/ppe.html",
-            "excerpt": "Holds excess heat and moisture inside, making the worker's body even hotter.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Separate laboratory study supports liquid cooling",
-            "url": "https://stacks.cdc.gov/view/cdc/126191/cdc_126191_DS1.pdf",
-            "excerpt": "Twelve males participated in this study.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Portable liquid cooling and heat-storage vests already exist",
-            "url": "https://www.dhs.gov/sites/default/files/publications/PCS-MSR_0514-508.pdf",
-            "excerpt": "The system requires periodic replenishment of the ice and batteries.",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Existing cooling packs and reservoir-connected vests",
-            "url": "https://polarproducts.com/pages/cooling-technology-comparison",
-            "excerpt": "Requires power and a connection to the Cooling Reservoir",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "Sterile drug manufacturing needs contamination-safe gowns",
-            "url": "https://www.fda.gov/media/71026/download?attachment=",
-            "excerpt": "The Agency recommends gowns that are sterilized and nonshedding, and cover the skin and hair",
-            "accessedAt": "2026-10-15"
-          },
-          {
-            "title": "BLS · firefighters",
-            "url": "https://www.bls.gov/ooh/protective-service/firefighters.htm",
-            "excerpt": "355,300",
-            "accessedAt": "2026-10-16"
-          },
-          {
-            "title": "Polar · fire-resistant cooling vest price",
-            "url": "https://polarproducts.com/collections/first-responders/products/nomex-fire-resistant-cooling-vest",
-            "excerpt": "$265.00",
+            "title": "Grand View Research · Cooling fabrics",
+            "url": "https://www.grandviewresearch.com/industry-analysis/cooling-fabrics-market",
+            "excerpt": "at a CAGR of 6.8% from 2026 to 2033",
             "accessedAt": "2026-10-16"
           }
         ],
@@ -6196,13 +5715,12 @@
           "At a workplace with a persistent heat problem, does this garment add useful cooling beyond the best existing vest and heat controls, while preserving protection at a total cost the employer will pay?"
         ],
         "marketSize": {
-          "value": "$3.1M–$19M / year",
-          "market": "Cooling equipment for a subset of paid firefighters.",
+          "value": "$2.1B (2026) → $3.4B (2033 forecast)",
+          "market": "Cooling fabrics",
           "year": 2026,
-          "context": "Conditional estimate · United States. BLS projects 4% growth in US paid firefighter jobs from 2025 to 2035. Modest workforce growth, not evidence of a fast-growing cooling market. Heat exposure alone does not establish purchasing growth. Assumptions and calculation are available in the market details; demand is not verified.",
+          "context": "Global. Cooling fabrics: 6.8% annual growth forecast, 2026–2033.",
           "sourceUrls": [
-            "https://www.bls.gov/ooh/protective-service/firefighters.htm",
-            "https://polarproducts.com/collections/first-responders/products/nomex-fire-resistant-cooling-vest"
+            "https://www.grandviewresearch.com/industry-analysis/cooling-fabrics-market"
           ]
         }
       }

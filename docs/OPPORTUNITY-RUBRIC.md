@@ -90,3 +90,7 @@ Growth needs dates, sources, geography, and observed-versus-forecast status. Spe
 An unresolved result lists sources attempted, usable inputs, exactly what is missing, why a meaningful range cannot yet be calculated, and the next evidence needed. Retain failures and original artifacts. Never silently omit sizing because precise data is unavailable.
 
 Publication requires arithmetic and source inspection plus a dated supplemental revision. Display the conditional range and defined segment concisely; disclose assumptions, growth relevance and sources. A modeled range does not automatically raise confidence, qualify Exploring or establish venture scale. Preserve historical criteria versions and review receipts.
+
+## Display named market figures (October 16 correction)
+
+For the app, use a relevant named market with publisher-reported size and growth. Show the geography, size years, growth period, source and estimate/forecast labels. Size and growth must describe the same market definition. A broader or adjacent market is acceptable when explicitly named; preserve its relationship to the opportunity in the source details. Never infer a startup revenue range by multiplying assumed eligibility, savings and fees. Retain older scenarios for provenance; do not display them as market size. These market figures do not establish reachable revenue or venture qualification.

@@ -1,10 +1,13 @@
 import { expect, test } from "bun:test";
 import { renderToStaticMarkup } from "react-dom/server";
 import { createElement } from "react";
-import { OpportunityMarket } from "../src/components/OpportunityStage";
+import {
+  OpportunityMarket,
+  OpportunityMarketSources,
+} from "../src/components/OpportunityStage";
 import {
   marketRange,
-  marketRangeLabel,
+  reportedMarketLabel,
   factorValue,
 } from "../src/lib/market-sizing";
 import { lifecycleViewSchema } from "../src/lib/opportunity-lifecycle";
@@ -24,7 +27,7 @@ const view = lifecycleViewSchema.parse(snapshot);
 const ai = view.opportunities.find((o) => o.id === "synthesis-o01")!.accepted;
 const models = view.opportunities.filter((o) => o.accepted.marketSizing);
 
-test("all 12 main opportunities have scoped, sourced models and growth, without promoting leads", () => {
+test("all 12 main opportunities display named reported markets without promoting leads", () => {
   const main = collection.records
     .filter((r) => r.placement === "opportunity")
     .map((r) => r.id)
@@ -40,17 +43,19 @@ test("all 12 main opportunities have scoped, sourced models and growth, without 
     expect(m.growth.sourceIds.length).toBeGreaterThan(0);
     expect(m.growth.limitation.length).toBeGreaterThan(20);
     expect(o.accepted.content.marketSize).toHaveLength(1);
-    const claim = o.accepted.claims.find(
-      (c) => c.id === o.accepted.content.marketSize[0],
-    )!;
-    expect(claim.kind).toBe("estimate");
-    if (claim.kind === "estimate") {
-      expect(claim.quantity?.low).toBeCloseTo(marketRange(m).low, 4);
-      expect(claim.quantity?.high).toBeCloseTo(marketRange(m).high, 4);
-    }
+    const reported = o.accepted.reportedMarket!;
+    expect(reported.name.length).toBeGreaterThan(0);
+    expect(reported.end.year).toBeGreaterThan(reported.start.year);
+    expect(
+      reported.sourceIds.every((id) =>
+        o.accepted.evidence.some(
+          (e) => e.id === id && e.checks.status === "passed",
+        ),
+      ),
+    ).toBe(true);
     expect(
       corpus.insights.find((c) => c.id === o.id)?.brief.marketSize?.value,
-    ).toBe(marketRangeLabel(m));
+    ).toBe(reportedMarketLabel(reported));
   }
 });
 
@@ -102,16 +107,74 @@ test("invalid ranges, zero denominators and unresolved evidence references fail 
   }
 });
 
-test("market display labels the scenario and discloses assumptions, growth scope and primary links", () => {
+test("market display names the market and shows dated estimates and matched growth", () => {
   const html = renderToStaticMarkup(
     createElement(OpportunityMarket, { revision: ai }),
   );
-  expect(html).toContain("Conditional estimate");
-  expect(html).toContain("Calculation, assumptions &amp; sources");
-  expect(html).toContain("Assumption");
-  expect(html).toContain("not measured demand");
-  expect(html).toContain("menlovc.com");
+  expect(html).not.toContain("Estimated annual spend");
+  expect(html).not.toContain("How it’s calculated");
+  expect(html).not.toContain("Assumption");
+  expect(html).not.toContain("Market momentum");
+  expect(html).toContain(">3.2×</p>");
+  expect(html).not.toContain("2024 estimate");
+  expect(html).toContain("2025 estimate");
+  expect(html).not.toContain("$11.5B");
+  expect(html).toContain("$37B");
+  expect(html).toContain("Enterprise generative AI spending");
+  expect(html).not.toContain("$25M");
+  expect(html).not.toContain("$375M");
+  expect(html).toContain("market-metrics");
+  expect(html).not.toContain("not measured demand");
+  expect(html).not.toContain("menlovc.com");
+  const sources = renderToStaticMarkup(
+    createElement(OpportunityMarketSources, { revision: ai }),
+  );
+  expect(sources).toContain("menlovc.com");
+  expect(sources).toContain("Market sources");
+  expect(sources).toContain(
+    ai.evidence
+      .find((source) => source.id === ai.reportedMarket!.sourceIds[0])!
+      .excerpt.replaceAll("&", "&amp;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#x27;"),
+  );
   expect(html).not.toContain('open=""');
+});
+
+test("reported markets require chronological years and inspected source references", () => {
+  for (const corrupt of [
+    (r: typeof ai) => {
+      r.reportedMarket!.end.year = r.reportedMarket!.start.year;
+    },
+    (r: typeof ai) => {
+      r.reportedMarket!.sourceIds = ["missing"];
+    },
+    (r: typeof ai) => {
+      r.evidence.find(
+        (e) => e.id === r.reportedMarket!.sourceIds[0],
+      )!.checks.status = "failed";
+    },
+  ]) {
+    const changed = structuredClone(snapshot);
+    corrupt(
+      changed.opportunities.find((o) => o.id === ai.opportunityId)!
+        .accepted as typeof ai,
+    );
+    expect(lifecycleViewSchema.safeParse(changed).success).toBe(false);
+  }
+  const forecast = models.find(
+    (o) => o.id === "everyday-leg-assistance",
+  )!.accepted;
+  const html = renderToStaticMarkup(
+    createElement(OpportunityMarket, { revision: forecast }),
+  );
+  expect(html).not.toContain("2033 forecast");
+  expect(html).toContain("2026 estimate");
+  expect(html).toContain("$694.5M");
+  expect(html).not.toContain("$1.79B");
+  expect(html).toContain("2026–2033");
+  expect(html).toContain("Annual growth forecast");
+  expect(html).toContain("Exoskeletons");
 });
 
 test("v4 market completion requires a model or explicit missing inputs; old reports retain compatibility", () => {

@@ -4,8 +4,8 @@
     {
       "schemaVersion": 1,
       "id": "generated-training-review",
-      "revision": 3,
-      "acceptedRevisionId": "generated-training-review:market-sizing-20261016",
+      "revision": 4,
+      "acceptedRevisionId": "generated-training-review:reported-market-20261016",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -13,19 +13,19 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T02:31:21.257Z",
-      "updatedAt": "2026-10-16T05:40:37.508Z",
+      "updatedAt": "2026-10-16T08:02:31.139Z",
       "verdict": null,
       "stage": "first-impressions",
       "qualificationError": "Research reviewed; reachable market and repeat profitable demand remain unproven.",
       "accepted": {
-        "id": "generated-training-review:market-sizing-20261016",
+        "id": "generated-training-review:reported-market-20261016",
         "opportunityId": "generated-training-review",
-        "parentRevisionId": "generated-training-review:rubric-v2-20261015",
-        "createdAt": "2026-10-16T05:40:37.508Z",
-        "producerId": "codex-market-evidence-inspector",
+        "parentRevisionId": "generated-training-review:market-sizing-20261016",
+        "createdAt": "2026-10-16T08:02:31.139Z",
+        "producerId": "codex-market-inspector",
         "origin": "inspection-correction",
-        "changeReason": "Add independently inspected market inputs, explicit conditional spending scenarios and dated growth evidence. Preserve historical reports and venture qualification.",
-        "contentHash": "16cb688ba50fd8ba564a51a3a4a88afcb3b21be0009b0fb7394001db34f9c2d9",
+        "changeReason": "Replace displayed hypothetical revenue scenario with a named publisher market and its dated size and growth. Historical scenario retained; not a TAM claim.",
+        "contentHash": "312425e64d68e17189581f5b989f19b8281ae60d0723ef9462739cbdc932db94",
         "title": "Cheaper robot training data",
         "classifications": [
           "Robot learning"
@@ -54,14 +54,14 @@
             "generated-training-review:application-2"
           ],
           "marketSize": [
-            "generated-training-review:market-20261016:range"
+            "generated-training-review:reported-market:size"
           ],
           "alternatives": [
             "generated-training-review:v2-comparison"
           ],
           "economics": [],
           "timing": [
-            "generated-training-review:market-20261016:growth"
+            "generated-training-review:reported-market:growth"
           ],
           "keyQuestion": "At matched real-robot success on unseen objects, compare full delivery and retraining cost with the buyer’s internal collection and current supplier."
         },
@@ -478,6 +478,48 @@
             "kind": "reported",
             "attribution": "International Federation of Robotics",
             "quantity": null
+          },
+          {
+            "id": "generated-training-review:reported-market:size",
+            "text": "Robotic software: $29.6B (2026) → $185.2B (2035 forecast). Global.",
+            "evidenceIds": [
+              "reported-market-20261016:robots"
+            ],
+            "derivedFromClaimIds": [],
+            "confidence": "moderate",
+            "limitations": [
+              "Includes simulation, navigation, vision and other robot software. Broader than testing, training data or factory setup alone; these opportunities overlap and must not be added together."
+            ],
+            "review": {
+              "status": "accepted",
+              "reviewerId": "codex-market-inspector",
+              "reviewedAt": "2026-10-16T08:02:31.139Z",
+              "reason": "Publisher market identity, size years, growth period and forecast labels inspected. Market context only; no venture qualification."
+            },
+            "kind": "reported",
+            "attribution": "Global Market Insights",
+            "quantity": null
+          },
+          {
+            "id": "generated-training-review:reported-market:growth",
+            "text": "Robotic software: 22.6% annual growth forecast, 2026–2035.",
+            "evidenceIds": [
+              "reported-market-20261016:robots"
+            ],
+            "derivedFromClaimIds": [],
+            "confidence": "moderate",
+            "limitations": [
+              "Includes simulation, navigation, vision and other robot software. Broader than testing, training data or factory setup alone; these opportunities overlap and must not be added together."
+            ],
+            "review": {
+              "status": "accepted",
+              "reviewerId": "codex-market-inspector",
+              "reviewedAt": "2026-10-16T08:02:31.139Z",
+              "reason": "Publisher market identity, size years, growth period and forecast labels inspected. Market context only; no venture qualification."
+            },
+            "kind": "reported",
+            "attribution": "Global Market Insights",
+            "quantity": null
           }
         ],
         "evidence": [
@@ -678,6 +720,28 @@
               "checkedAt": "2026-10-16T05:40:37.508Z",
               "failureIds": []
             }
+          },
+          {
+            "id": "reported-market-20261016:robots",
+            "sourceUrl": "https://www.gminsights.com/industry-analysis/robotic-software-market",
+            "finalUrl": "https://www.gminsights.com/industry-analysis/robotic-software-market",
+            "title": "Global Market Insights · Robotic software",
+            "publisher": "Global Market Insights",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "2026–2035; growth 2026–2035",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "2025 and $29.6 billion in 2026",
+            "pdfPage": null,
+            "locator": "Publisher market summary; dates and scope retained. Includes simulation, navigation, vision and other robot software. Broader than testing, training data or factory setup alone; these opportunities overlap and must not be added together.",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T08:02:31.139Z",
+              "failureIds": []
+            }
           }
         ],
         "assessment": {
@@ -763,9 +827,9 @@
             },
             "ventureScale": {
               "status": "plausible",
-              "reason": "Conditional initial segment: $5M–$50M / year. Eligibility, pricing and demand remain unverified; this does not establish a venture-scale business. This wedge alone is limited; a larger business needs separately evidenced expansion.",
+              "reason": "Published market context is available. The reachable share and venture-scale business case remain unproven.",
               "claimIds": [
-                "generated-training-review:market-20261016:range"
+                "generated-training-review:reported-market:size"
               ]
             },
             "businessCapital": {
@@ -788,9 +852,9 @@
             },
             "timing": {
               "status": "plausible",
-              "reason": "Professional service robot sales rose 24% in 2025 worldwide. Reported unit growth excludes medical robots. It is not measured growth in software or training-data spending; sample composition and spending per robot can differ.",
+              "reason": "Robotic software: 22.6% annual growth forecast, 2026–2035.",
               "claimIds": [
-                "generated-training-review:market-20261016:growth"
+                "generated-training-review:reported-market:growth"
               ]
             }
           },
@@ -858,6 +922,31 @@
           ],
           "confidence": "low",
           "nextEvidence": "Verify which teams buy data and what they pay per task or year, including validation costs."
+        },
+        "reportedMarket": {
+          "name": "Robotic software",
+          "geography": "Global",
+          "currency": "USD",
+          "start": {
+            "value": 29600000000,
+            "year": 2026,
+            "kind": "estimate"
+          },
+          "end": {
+            "value": 185200000000,
+            "year": 2035,
+            "kind": "forecast"
+          },
+          "growth": {
+            "value": 22.6,
+            "unit": "percent",
+            "kind": "forecast",
+            "period": "2026–2035"
+          },
+          "sourceIds": [
+            "reported-market-20261016:robots"
+          ],
+          "scopeNote": "Includes simulation, navigation, vision and other robot software. Broader than testing, training data or factory setup alone; these opportunities overlap and must not be added together."
         }
       },
       "research": null,
@@ -867,8 +956,8 @@
     {
       "schemaVersion": 1,
       "id": "factory-robot-setup",
-      "revision": 3,
-      "acceptedRevisionId": "factory-robot-setup:market-sizing-20261016",
+      "revision": 4,
+      "acceptedRevisionId": "factory-robot-setup:reported-market-20261016",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -876,19 +965,19 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T02:31:21.257Z",
-      "updatedAt": "2026-10-16T05:40:37.508Z",
+      "updatedAt": "2026-10-16T08:02:31.139Z",
       "verdict": null,
       "stage": "first-impressions",
       "qualificationError": "Evidence reviewed; additional customer value, reachable market and repeatable margins remain unproven.",
       "accepted": {
-        "id": "factory-robot-setup:market-sizing-20261016",
+        "id": "factory-robot-setup:reported-market-20261016",
         "opportunityId": "factory-robot-setup",
-        "parentRevisionId": "factory-robot-setup:evidence-review-v2-20261015",
-        "createdAt": "2026-10-16T05:40:37.508Z",
-        "producerId": "codex-market-evidence-inspector",
+        "parentRevisionId": "factory-robot-setup:market-sizing-20261016",
+        "createdAt": "2026-10-16T08:02:31.139Z",
+        "producerId": "codex-market-inspector",
         "origin": "inspection-correction",
-        "changeReason": "Add independently inspected market inputs, explicit conditional spending scenarios and dated growth evidence. Preserve historical reports and venture qualification.",
-        "contentHash": "c3144dcfca13f43af7b33cd8bb229329fe122dbff5c3e82db148acf3e54a1d65",
+        "changeReason": "Replace displayed hypothetical revenue scenario with a named publisher market and its dated size and growth. Historical scenario retained; not a TAM claim.",
+        "contentHash": "0a91937477878c47fafbf2a05d37e41a1978c1eaf3ee8ef447c7a0bee0cca316",
         "title": "Factory robots with less setup",
         "classifications": [
           "Manipulation"
@@ -917,14 +1006,14 @@
             "factory-robot-setup:application-2"
           ],
           "marketSize": [
-            "factory-robot-setup:market-20261016:range"
+            "factory-robot-setup:reported-market:size"
           ],
           "alternatives": [
             "factory-robot-setup:v2-comparison"
           ],
           "economics": [],
           "timing": [
-            "factory-robot-setup:market-20261016:growth"
+            "factory-robot-setup:reported-market:growth"
           ],
           "keyQuestion": "Compare technician hours, good output, defects and recovery for the same part changes against the best practical current setup."
         },
@@ -1365,6 +1454,48 @@
             "kind": "reported",
             "attribution": "International Federation of Robotics",
             "quantity": null
+          },
+          {
+            "id": "factory-robot-setup:reported-market:size",
+            "text": "Robotic software: $29.6B (2026) → $185.2B (2035 forecast). Global.",
+            "evidenceIds": [
+              "reported-market-20261016:robots"
+            ],
+            "derivedFromClaimIds": [],
+            "confidence": "moderate",
+            "limitations": [
+              "Includes simulation, navigation, vision and other robot software. Broader than testing, training data or factory setup alone; these opportunities overlap and must not be added together."
+            ],
+            "review": {
+              "status": "accepted",
+              "reviewerId": "codex-market-inspector",
+              "reviewedAt": "2026-10-16T08:02:31.139Z",
+              "reason": "Publisher market identity, size years, growth period and forecast labels inspected. Market context only; no venture qualification."
+            },
+            "kind": "reported",
+            "attribution": "Global Market Insights",
+            "quantity": null
+          },
+          {
+            "id": "factory-robot-setup:reported-market:growth",
+            "text": "Robotic software: 22.6% annual growth forecast, 2026–2035.",
+            "evidenceIds": [
+              "reported-market-20261016:robots"
+            ],
+            "derivedFromClaimIds": [],
+            "confidence": "moderate",
+            "limitations": [
+              "Includes simulation, navigation, vision and other robot software. Broader than testing, training data or factory setup alone; these opportunities overlap and must not be added together."
+            ],
+            "review": {
+              "status": "accepted",
+              "reviewerId": "codex-market-inspector",
+              "reviewedAt": "2026-10-16T08:02:31.139Z",
+              "reason": "Publisher market identity, size years, growth period and forecast labels inspected. Market context only; no venture qualification."
+            },
+            "kind": "reported",
+            "attribution": "Global Market Insights",
+            "quantity": null
           }
         ],
         "evidence": [
@@ -1565,6 +1696,28 @@
               "checkedAt": "2026-10-16T05:40:37.508Z",
               "failureIds": []
             }
+          },
+          {
+            "id": "reported-market-20261016:robots",
+            "sourceUrl": "https://www.gminsights.com/industry-analysis/robotic-software-market",
+            "finalUrl": "https://www.gminsights.com/industry-analysis/robotic-software-market",
+            "title": "Global Market Insights · Robotic software",
+            "publisher": "Global Market Insights",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "2026–2035; growth 2026–2035",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "2025 and $29.6 billion in 2026",
+            "pdfPage": null,
+            "locator": "Publisher market summary; dates and scope retained. Includes simulation, navigation, vision and other robot software. Broader than testing, training data or factory setup alone; these opportunities overlap and must not be added together.",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T08:02:31.139Z",
+              "failureIds": []
+            }
           }
         ],
         "assessment": {
@@ -1606,9 +1759,9 @@
             },
             "ventureScale": {
               "status": "missing",
-              "reason": "Conditional initial segment: $12M–$360M / year. Eligibility, pricing and demand remain unverified; this does not establish a venture-scale business.",
+              "reason": "Published market context is available. The reachable share and venture-scale business case remain unproven.",
               "claimIds": [
-                "factory-robot-setup:market-20261016:range"
+                "factory-robot-setup:reported-market:size"
               ]
             },
             "businessCapital": {
@@ -1620,9 +1773,9 @@
             },
             "timing": {
               "status": "plausible",
-              "reason": "Worldwide industrial robot installations rose 11% in 2025. Installed stock grew 9%, but new installations are the denominator here. Software attach rates and fee growth are unknown.",
+              "reason": "Robotic software: 22.6% annual growth forecast, 2026–2035.",
               "claimIds": [
-                "factory-robot-setup:market-20261016:growth"
+                "factory-robot-setup:reported-market:growth"
               ]
             }
           },
@@ -1700,6 +1853,31 @@
           ],
           "confidence": "low",
           "nextEvidence": "Find actual cells requiring repeated setup and test paid deployment against the current integrator workflow."
+        },
+        "reportedMarket": {
+          "name": "Robotic software",
+          "geography": "Global",
+          "currency": "USD",
+          "start": {
+            "value": 29600000000,
+            "year": 2026,
+            "kind": "estimate"
+          },
+          "end": {
+            "value": 185200000000,
+            "year": 2035,
+            "kind": "forecast"
+          },
+          "growth": {
+            "value": 22.6,
+            "unit": "percent",
+            "kind": "forecast",
+            "period": "2026–2035"
+          },
+          "sourceIds": [
+            "reported-market-20261016:robots"
+          ],
+          "scopeNote": "Includes simulation, navigation, vision and other robot software. Broader than testing, training data or factory setup alone; these opportunities overlap and must not be added together."
         }
       },
       "research": null,
@@ -1709,8 +1887,8 @@
     {
       "schemaVersion": 1,
       "id": "compact-survey-maps",
-      "revision": 4,
-      "acceptedRevisionId": "compact-survey-maps:market-sizing-20261016",
+      "revision": 6,
+      "acceptedRevisionId": "compact-survey-maps:latest-market-20261016",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -1718,19 +1896,19 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T02:31:21.257Z",
-      "updatedAt": "2026-10-16T05:40:37.508Z",
+      "updatedAt": "2026-10-16T08:39:04.148Z",
       "verdict": null,
       "stage": "first-impressions",
       "qualificationError": "Evidence reviewed; incremental savings, paid demand and venture scale remain unproven.",
       "accepted": {
-        "id": "compact-survey-maps:market-sizing-20261016",
+        "id": "compact-survey-maps:latest-market-20261016",
         "opportunityId": "compact-survey-maps",
-        "parentRevisionId": "compact-survey-maps:evidence-review-v2-20261015",
-        "createdAt": "2026-10-16T05:40:37.508Z",
-        "producerId": "codex-market-evidence-inspector",
+        "parentRevisionId": "compact-survey-maps:reported-market-20261016",
+        "createdAt": "2026-10-16T08:39:04.148Z",
+        "producerId": "codex-market-inspector",
         "origin": "inspection-correction",
-        "changeReason": "Add independently inspected market inputs, explicit conditional spending scenarios and dated growth evidence. Preserve historical reports and venture qualification.",
-        "contentHash": "1cd05a85844a791830896f4303b2a7aa755adfb530bb71e4ec3633d3d887a7fd",
+        "changeReason": "Use the latest explicitly dated publisher estimate; retain the publisher forecast growth period.",
+        "contentHash": "f88ed242019c75f26c67663217bd37b038f9d4bbb62b76e7c23b91a7bb3fa26d",
         "title": "Faster drone inspection maps",
         "classifications": [
           "Sensing"
@@ -1759,14 +1937,14 @@
             "compact-survey-maps:application-2"
           ],
           "marketSize": [
-            "compact-survey-maps:market-20261016:range"
+            "compact-survey-maps:reported-market:size"
           ],
           "alternatives": [
             "compact-survey-maps:v2-comparison"
           ],
           "economics": [],
           "timing": [
-            "compact-survey-maps:market-20261016:growth"
+            "compact-survey-maps:reported-market:growth"
           ],
           "keyQuestion": "Use the same complete survey with accepted defect locations and exports; compare processing, handover time and total cost on equal hardware."
         },
@@ -2190,6 +2368,48 @@
             "kind": "reported",
             "attribution": "Federal Aviation Administration",
             "quantity": null
+          },
+          {
+            "id": "compact-survey-maps:reported-market:size",
+            "text": "Drone analytics: $18.49B (2025) → $49.97B (2030 forecast). Global.",
+            "evidenceIds": [
+              "reported-market-20261016:drone"
+            ],
+            "derivedFromClaimIds": [],
+            "confidence": "moderate",
+            "limitations": [
+              "Includes mapping, inspection and other drone-data analysis. Broader market context, not a single mapping product’s revenue. The detailed FAQ and chart date $18.49B to 2025; the conflicting 2026 summary header is excluded."
+            ],
+            "review": {
+              "status": "accepted",
+              "reviewerId": "codex-market-inspector",
+              "reviewedAt": "2026-10-16T08:39:04.148Z",
+              "reason": "Publisher market identity, size years, growth period and forecast labels inspected. Market context only; no venture qualification."
+            },
+            "kind": "reported",
+            "attribution": "Grand View Research",
+            "quantity": null
+          },
+          {
+            "id": "compact-survey-maps:reported-market:growth",
+            "text": "Drone analytics: 22% annual growth forecast, 2025–2030.",
+            "evidenceIds": [
+              "reported-market-20261016:drone"
+            ],
+            "derivedFromClaimIds": [],
+            "confidence": "moderate",
+            "limitations": [
+              "Includes mapping, inspection and other drone-data analysis. Broader market context, not a single mapping product’s revenue. The detailed FAQ and chart date $18.49B to 2025; the conflicting 2026 summary header is excluded."
+            ],
+            "review": {
+              "status": "accepted",
+              "reviewerId": "codex-market-inspector",
+              "reviewedAt": "2026-10-16T08:02:31.139Z",
+              "reason": "Publisher market identity, size years, growth period and forecast labels inspected. Market context only; no venture qualification."
+            },
+            "kind": "reported",
+            "attribution": "Grand View Research",
+            "quantity": null
           }
         ],
         "evidence": [
@@ -2588,6 +2808,28 @@
               "checkedAt": "2026-10-16T05:40:37.508Z",
               "failureIds": []
             }
+          },
+          {
+            "id": "reported-market-20261016:drone",
+            "sourceUrl": "https://www.grandviewresearch.com/industry-analysis/drone-analytics-market-report",
+            "finalUrl": "https://www.grandviewresearch.com/industry-analysis/drone-analytics-market-report",
+            "title": "Grand View Research · Drone analytics",
+            "publisher": "Grand View Research",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "2025–2030; growth 2025–2030",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "reach USD 18.49 billion in 2025",
+            "pdfPage": null,
+            "locator": "Publisher market summary and detailed FAQ. Includes mapping, inspection and other drone-data analysis. Broader market context, not a single mapping product’s revenue. The detailed FAQ and chart date $18.49B to 2025; the conflicting 2026 summary header is excluded.",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T08:39:04.148Z",
+              "failureIds": []
+            }
           }
         ],
         "assessment": {
@@ -2629,9 +2871,9 @@
             },
             "ventureScale": {
               "status": "missing",
-              "reason": "Conditional initial segment: $8.5M–$210M / year. Eligibility, pricing and demand remain unverified; this does not establish a venture-scale business.",
+              "reason": "Published market context is available. The reachable share and venture-scale business case remain unproven.",
               "claimIds": [
-                "compact-survey-maps:market-20261016:range"
+                "compact-survey-maps:reported-market:size"
               ]
             },
             "businessCapital": {
@@ -2643,9 +2885,9 @@
             },
             "timing": {
               "status": "plausible",
-              "reason": "FAA forecasts about 5% annual growth in the active commercial drone fleet through 2030. Base fleet grows from 424,516 to 540,845. This is a fleet projection, not measured growth in mapping subscriptions. The high FAA series counts registrations differently and is not used.",
+              "reason": "Drone analytics: 22% annual growth forecast, 2025–2030.",
               "claimIds": [
-                "compact-survey-maps:market-20261016:growth"
+                "compact-survey-maps:reported-market:growth"
               ]
             }
           },
@@ -2724,6 +2966,31 @@
           ],
           "confidence": "low",
           "nextEvidence": "Measure mapping usage, analysts per fleet and willingness to replace current mapping software."
+        },
+        "reportedMarket": {
+          "name": "Drone analytics",
+          "geography": "Global",
+          "currency": "USD",
+          "start": {
+            "value": 18490000000,
+            "year": 2025,
+            "kind": "estimate"
+          },
+          "end": {
+            "value": 49970000000,
+            "year": 2030,
+            "kind": "forecast"
+          },
+          "growth": {
+            "value": 22,
+            "unit": "percent",
+            "kind": "forecast",
+            "period": "2025–2030"
+          },
+          "sourceIds": [
+            "reported-market-20261016:drone"
+          ],
+          "scopeNote": "Includes mapping, inspection and other drone-data analysis. Broader market context, not a single mapping product’s revenue. The detailed FAQ and chart date $18.49B to 2025; the conflicting 2026 summary header is excluded."
         }
       },
       "research": null,
@@ -4135,8 +4402,8 @@
     {
       "schemaVersion": 1,
       "id": "synthesis-o01",
-      "revision": 4,
-      "acceptedRevisionId": "synthesis-o01:market-sizing-20261016",
+      "revision": 5,
+      "acceptedRevisionId": "synthesis-o01:reported-market-20261016",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -4144,19 +4411,19 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T02:31:21.257Z",
-      "updatedAt": "2026-10-16T05:40:37.508Z",
+      "updatedAt": "2026-10-16T08:02:31.139Z",
       "verdict": null,
       "stage": "first-impressions",
       "qualificationError": "Research reviewed; a differentiated venture-scale business is not established.",
       "accepted": {
-        "id": "synthesis-o01:market-sizing-20261016",
+        "id": "synthesis-o01:reported-market-20261016",
         "opportunityId": "synthesis-o01",
-        "parentRevisionId": "synthesis-o01:rubric-v2-20261015",
-        "createdAt": "2026-10-16T05:40:37.508Z",
-        "producerId": "codex-market-evidence-inspector",
+        "parentRevisionId": "synthesis-o01:market-sizing-20261016",
+        "createdAt": "2026-10-16T08:02:31.139Z",
+        "producerId": "codex-market-inspector",
         "origin": "inspection-correction",
-        "changeReason": "Add independently inspected market inputs, explicit conditional spending scenarios and dated growth evidence. Preserve historical reports and venture qualification.",
-        "contentHash": "03937ddbaf0254292c4f14ae9f3d179c5e1580c3f1ad450632803700a69a9418",
+        "changeReason": "Replace displayed hypothetical revenue scenario with a named publisher market and its dated size and growth. Historical scenario retained; not a TAM claim.",
+        "contentHash": "3d3b460b79ca00779727fb59d5fdd3240b59f7fa7cd7ae36b7ed1a13c9ce99ec",
         "title": "Make AI tools cheaper to run",
         "classifications": [
           "Computing infrastructure"
@@ -4181,14 +4448,14 @@
             "synthesis-o01:application-2"
           ],
           "marketSize": [
-            "synthesis-o01:market-20261016:range"
+            "synthesis-o01:reported-market:size"
           ],
           "alternatives": [
             "synthesis-o01:v2-comparison"
           ],
           "economics": [],
           "timing": [
-            "synthesis-o01:market-20261016:growth"
+            "synthesis-o01:reported-market:growth"
           ],
           "keyQuestion": "Compare the best cached/indexed baseline with selection or memory added, including successful tasks, total bill, retries and maintenance."
         },
@@ -4731,6 +4998,48 @@
             "kind": "reported",
             "attribution": "Menlo Ventures",
             "quantity": null
+          },
+          {
+            "id": "synthesis-o01:reported-market:size",
+            "text": "Enterprise generative AI spending: $11.5B (2024) → $37B (2025). Modeled enterprise spending; survey of US buyers.",
+            "evidenceIds": [
+              "reported-market-20261016:menlo"
+            ],
+            "derivedFromClaimIds": [],
+            "confidence": "moderate",
+            "limitations": [
+              "Model APIs, infrastructure and applications. Broader market context, not revenue available to an optimization or control product. Menlo estimates spending; its survey covers US buyers, while revenue geography is not precisely delimited."
+            ],
+            "review": {
+              "status": "accepted",
+              "reviewerId": "codex-market-inspector",
+              "reviewedAt": "2026-10-16T08:02:31.139Z",
+              "reason": "Publisher market identity, size years, growth period and forecast labels inspected. Market context only; no venture qualification."
+            },
+            "kind": "reported",
+            "attribution": "Menlo Ventures",
+            "quantity": null
+          },
+          {
+            "id": "synthesis-o01:reported-market:growth",
+            "text": "Enterprise generative AI spending: 3.2× year-over-year growth, 2024–2025.",
+            "evidenceIds": [
+              "reported-market-20261016:menlo"
+            ],
+            "derivedFromClaimIds": [],
+            "confidence": "moderate",
+            "limitations": [
+              "Model APIs, infrastructure and applications. Broader market context, not revenue available to an optimization or control product. Menlo estimates spending; its survey covers US buyers, while revenue geography is not precisely delimited."
+            ],
+            "review": {
+              "status": "accepted",
+              "reviewerId": "codex-market-inspector",
+              "reviewedAt": "2026-10-16T08:02:31.139Z",
+              "reason": "Publisher market identity, size years, growth period and forecast labels inspected. Market context only; no venture qualification."
+            },
+            "kind": "reported",
+            "attribution": "Menlo Ventures",
+            "quantity": null
           }
         ],
         "evidence": [
@@ -5129,6 +5438,28 @@
               "checkedAt": "2026-10-16T05:40:37.508Z",
               "failureIds": []
             }
+          },
+          {
+            "id": "reported-market-20261016:menlo",
+            "sourceUrl": "https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/",
+            "finalUrl": "https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/",
+            "title": "Menlo Ventures · Enterprise generative AI spending",
+            "publisher": "Menlo Ventures",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2025-12-09",
+            "observationPeriod": "2024–2025; growth 2024–2025",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "up from $11.5 billion",
+            "pdfPage": null,
+            "locator": "Publisher market summary; dates and scope retained. Model APIs, infrastructure and applications. Broader market context, not revenue available to an optimization or control product. Menlo estimates spending; its survey covers US buyers, while revenue geography is not precisely delimited.",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T08:02:31.139Z",
+              "failureIds": []
+            }
           }
         ],
         "assessment": {
@@ -5214,9 +5545,9 @@
             },
             "ventureScale": {
               "status": "plausible",
-              "reason": "Conditional initial segment: $25M–$380M / year. Eligibility, pricing and demand remain unverified; this does not establish a venture-scale business.",
+              "reason": "Published market context is available. The reachable share and venture-scale business case remain unproven.",
               "claimIds": [
-                "synthesis-o01:market-20261016:range"
+                "synthesis-o01:reported-market:size"
               ]
             },
             "businessCapital": {
@@ -5239,9 +5570,9 @@
             },
             "timing": {
               "status": "plausible",
-              "reason": "Menlo estimates enterprise AI spending grew 3.2× in 2025. Broader category: $11.5B to $37B on the restated methodology, not growth of optimization tools. Menlo is an investor; estimates combine a 495-person US survey with modeling.",
+              "reason": "Enterprise generative AI spending: 3.2× year-over-year growth, 2024–2025.",
               "claimIds": [
-                "synthesis-o01:market-20261016:growth"
+                "synthesis-o01:reported-market:growth"
               ]
             }
           },
@@ -5317,6 +5648,31 @@
           ],
           "confidence": "low",
           "nextEvidence": "Measure net savings on representative paid workloads, then test the fee customers accept."
+        },
+        "reportedMarket": {
+          "name": "Enterprise generative AI spending",
+          "geography": "Modeled enterprise spending; survey of US buyers",
+          "currency": "USD",
+          "start": {
+            "value": 11500000000,
+            "year": 2024,
+            "kind": "estimate"
+          },
+          "end": {
+            "value": 37000000000,
+            "year": 2025,
+            "kind": "estimate"
+          },
+          "growth": {
+            "value": 3.2,
+            "unit": "multiple",
+            "kind": "historical",
+            "period": "2024–2025"
+          },
+          "sourceIds": [
+            "reported-market-20261016:menlo"
+          ],
+          "scopeNote": "Model APIs, infrastructure and applications. Broader market context, not revenue available to an optimization or control product. Menlo estimates spending; its survey covers US buyers, while revenue geography is not precisely delimited."
         }
       },
       "research": null,
@@ -5326,8 +5682,8 @@
     {
       "schemaVersion": 1,
       "id": "synthesis-o02",
-      "revision": 5,
-      "acceptedRevisionId": "synthesis-o02:market-sizing-20261016",
+      "revision": 6,
+      "acceptedRevisionId": "synthesis-o02:reported-market-20261016",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -5335,19 +5691,19 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T02:31:21.257Z",
-      "updatedAt": "2026-10-16T05:40:37.508Z",
+      "updatedAt": "2026-10-16T08:02:31.139Z",
       "verdict": null,
       "stage": "first-impressions",
       "qualificationError": "Evidence reviewed; reliable reusable tests are plausible, but incremental customer value, payment and venture scale remain unproven.",
       "accepted": {
-        "id": "synthesis-o02:market-sizing-20261016",
+        "id": "synthesis-o02:reported-market-20261016",
         "opportunityId": "synthesis-o02",
-        "parentRevisionId": "synthesis-o02:evidence-review-v2-20261015",
-        "createdAt": "2026-10-16T05:40:37.508Z",
-        "producerId": "codex-market-evidence-inspector",
+        "parentRevisionId": "synthesis-o02:market-sizing-20261016",
+        "createdAt": "2026-10-16T08:02:31.139Z",
+        "producerId": "codex-market-inspector",
         "origin": "inspection-correction",
-        "changeReason": "Add independently inspected market inputs, explicit conditional spending scenarios and dated growth evidence. Preserve historical reports and venture qualification.",
-        "contentHash": "2eede4241fbeee25ce255619f0f9ae5075544ca42875b6a07a43a2215846fa55",
+        "changeReason": "Replace displayed hypothetical revenue scenario with a named publisher market and its dated size and growth. Historical scenario retained; not a TAM claim.",
+        "contentHash": "f565bac5c36fdd28141ad0687b95cb5748177de7bfdcfbe12fa2ec9208efea58",
         "title": "A repeatable test suite for robot software",
         "classifications": [
           "Robotics and physical automation",
@@ -5372,14 +5728,14 @@
             "synthesis-o02:application-1"
           ],
           "marketSize": [
-            "synthesis-o02:market-20261016:range"
+            "synthesis-o02:reported-market:size"
           ],
           "alternatives": [
             "synthesis-o02:v2-comparison"
           ],
           "economics": [],
           "timing": [
-            "synthesis-o02:market-20261016:growth"
+            "synthesis-o02:reported-market:growth"
           ],
           "keyQuestion": "On a customer’s robot, does the test package catch meaningful failures or reduce setup time beyond their existing tools, with results that repeat?"
         },
@@ -5855,6 +6211,48 @@
             },
             "kind": "reported",
             "attribution": "International Federation of Robotics",
+            "quantity": null
+          },
+          {
+            "id": "synthesis-o02:reported-market:size",
+            "text": "Robotic software: $29.6B (2026) → $185.2B (2035 forecast). Global.",
+            "evidenceIds": [
+              "reported-market-20261016:robots"
+            ],
+            "derivedFromClaimIds": [],
+            "confidence": "moderate",
+            "limitations": [
+              "Includes simulation, navigation, vision and other robot software. Broader than testing, training data or factory setup alone; these opportunities overlap and must not be added together."
+            ],
+            "review": {
+              "status": "accepted",
+              "reviewerId": "codex-market-inspector",
+              "reviewedAt": "2026-10-16T08:02:31.139Z",
+              "reason": "Publisher market identity, size years, growth period and forecast labels inspected. Market context only; no venture qualification."
+            },
+            "kind": "reported",
+            "attribution": "Global Market Insights",
+            "quantity": null
+          },
+          {
+            "id": "synthesis-o02:reported-market:growth",
+            "text": "Robotic software: 22.6% annual growth forecast, 2026–2035.",
+            "evidenceIds": [
+              "reported-market-20261016:robots"
+            ],
+            "derivedFromClaimIds": [],
+            "confidence": "moderate",
+            "limitations": [
+              "Includes simulation, navigation, vision and other robot software. Broader than testing, training data or factory setup alone; these opportunities overlap and must not be added together."
+            ],
+            "review": {
+              "status": "accepted",
+              "reviewerId": "codex-market-inspector",
+              "reviewedAt": "2026-10-16T08:02:31.139Z",
+              "reason": "Publisher market identity, size years, growth period and forecast labels inspected. Market context only; no venture qualification."
+            },
+            "kind": "reported",
+            "attribution": "Global Market Insights",
             "quantity": null
           }
         ],
@@ -6496,6 +6894,28 @@
               "checkedAt": "2026-10-16T05:40:37.508Z",
               "failureIds": []
             }
+          },
+          {
+            "id": "reported-market-20261016:robots",
+            "sourceUrl": "https://www.gminsights.com/industry-analysis/robotic-software-market",
+            "finalUrl": "https://www.gminsights.com/industry-analysis/robotic-software-market",
+            "title": "Global Market Insights · Robotic software",
+            "publisher": "Global Market Insights",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "2026–2035; growth 2026–2035",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "2025 and $29.6 billion in 2026",
+            "pdfPage": null,
+            "locator": "Publisher market summary; dates and scope retained. Includes simulation, navigation, vision and other robot software. Broader than testing, training data or factory setup alone; these opportunities overlap and must not be added together.",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T08:02:31.139Z",
+              "failureIds": []
+            }
           }
         ],
         "assessment": {
@@ -6537,9 +6957,9 @@
             },
             "ventureScale": {
               "status": "missing",
-              "reason": "Conditional initial segment: $1.9M–$23M / year. Eligibility, pricing and demand remain unverified; this does not establish a venture-scale business. This wedge alone is limited; a larger business needs separately evidenced expansion.",
+              "reason": "Published market context is available. The reachable share and venture-scale business case remain unproven.",
               "claimIds": [
-                "synthesis-o02:market-20261016:range"
+                "synthesis-o02:reported-market:size"
               ]
             },
             "businessCapital": {
@@ -6551,9 +6971,9 @@
             },
             "timing": {
               "status": "plausible",
-              "reason": "Professional service robot sales rose 24% in 2025 worldwide. Reported unit growth excludes medical robots. It is not measured growth in software or training-data spending; sample composition and spending per robot can differ.",
+              "reason": "Robotic software: 22.6% annual growth forecast, 2026–2035.",
               "claimIds": [
-                "synthesis-o02:market-20261016:growth"
+                "synthesis-o02:reported-market:growth"
               ]
             }
           },
@@ -6631,6 +7051,31 @@
           ],
           "confidence": "low",
           "nextEvidence": "Count active development teams and obtain testing-budget and seat-count evidence from buyers."
+        },
+        "reportedMarket": {
+          "name": "Robotic software",
+          "geography": "Global",
+          "currency": "USD",
+          "start": {
+            "value": 29600000000,
+            "year": 2026,
+            "kind": "estimate"
+          },
+          "end": {
+            "value": 185200000000,
+            "year": 2035,
+            "kind": "forecast"
+          },
+          "growth": {
+            "value": 22.6,
+            "unit": "percent",
+            "kind": "forecast",
+            "period": "2026–2035"
+          },
+          "sourceIds": [
+            "reported-market-20261016:robots"
+          ],
+          "scopeNote": "Includes simulation, navigation, vision and other robot software. Broader than testing, training data or factory setup alone; these opportunities overlap and must not be added together."
         }
       },
       "research": null,
@@ -7897,8 +8342,8 @@
     {
       "schemaVersion": 1,
       "id": "automated-lab-experiments",
-      "revision": 3,
-      "acceptedRevisionId": "automated-lab-experiments:market-sizing-20261016",
+      "revision": 5,
+      "acceptedRevisionId": "automated-lab-experiments:latest-market-20261016",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -7906,21 +8351,21 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T16:51:48.275Z",
-      "updatedAt": "2026-10-16T05:40:37.508Z",
+      "updatedAt": "2026-10-16T08:39:04.148Z",
       "verdict": null,
       "stage": "first-impressions",
       "qualificationError": "Reviewed; useful coating-workflow hypothesis, but an unmet paid need, repeatable economics and venture qualification remain unestablished.",
       "accepted": {
         "content": {
           "marketSize": [
-            "automated-lab-experiments:market-20261016:range"
+            "automated-lab-experiments:reported-market:size"
           ],
           "alternatives": [
             "automated-lab-experiments:v2-comparison"
           ],
           "economics": [],
           "timing": [
-            "automated-lab-experiments:market-20261016:growth"
+            "automated-lab-experiments:reported-market:growth"
           ],
           "what": "automated-lab-experiments:what",
           "problem": "automated-lab-experiments:problem",
@@ -8405,6 +8850,48 @@
             "kind": "reported",
             "attribution": "US Bureau of Labor Statistics",
             "quantity": null
+          },
+          {
+            "id": "automated-lab-experiments:reported-market:size",
+            "text": "Lab automation: $10B (2026) → $18.4B (2033 forecast). Global.",
+            "evidenceIds": [
+              "reported-market-20261016:lab"
+            ],
+            "derivedFromClaimIds": [],
+            "confidence": "moderate",
+            "limitations": [
+              "Includes automated laboratory equipment and workflows, including clinical analysis. Broader than autonomous experiment software alone."
+            ],
+            "review": {
+              "status": "accepted",
+              "reviewerId": "codex-market-inspector",
+              "reviewedAt": "2026-10-16T08:39:04.148Z",
+              "reason": "Publisher market identity, size years, growth period and forecast labels inspected. Market context only; no venture qualification."
+            },
+            "kind": "reported",
+            "attribution": "Grand View Research",
+            "quantity": null
+          },
+          {
+            "id": "automated-lab-experiments:reported-market:growth",
+            "text": "Lab automation: 9.3% annual growth forecast, 2025–2033.",
+            "evidenceIds": [
+              "reported-market-20261016:lab"
+            ],
+            "derivedFromClaimIds": [],
+            "confidence": "moderate",
+            "limitations": [
+              "Includes automated laboratory equipment and workflows, including clinical analysis. Broader than autonomous experiment software alone."
+            ],
+            "review": {
+              "status": "accepted",
+              "reviewerId": "codex-market-inspector",
+              "reviewedAt": "2026-10-16T08:02:31.139Z",
+              "reason": "Publisher market identity, size years, growth period and forecast labels inspected. Market context only; no venture qualification."
+            },
+            "kind": "reported",
+            "attribution": "Grand View Research",
+            "quantity": null
           }
         ],
         "evidence": [
@@ -8759,17 +9246,39 @@
               "checkedAt": "2026-10-16T05:40:37.508Z",
               "failureIds": []
             }
+          },
+          {
+            "id": "reported-market-20261016:lab",
+            "sourceUrl": "https://www.grandviewresearch.com/industry-analysis/lab-automation-market",
+            "finalUrl": "https://www.grandviewresearch.com/industry-analysis/lab-automation-market",
+            "title": "Grand View Research · Lab automation",
+            "publisher": "Grand View Research",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "2026–2033; growth 2025–2033",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "estimated at USD 10.0 billion for 2026",
+            "pdfPage": null,
+            "locator": "Publisher market summary and detailed FAQ. Includes automated laboratory equipment and workflows, including clinical analysis. Broader than autonomous experiment software alone.",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T08:39:04.148Z",
+              "failureIds": []
+            }
           }
         ],
         "migrationGaps": [],
-        "id": "automated-lab-experiments:market-sizing-20261016",
+        "id": "automated-lab-experiments:latest-market-20261016",
         "opportunityId": "automated-lab-experiments",
-        "parentRevisionId": "automated-lab-experiments:evidence-review-v2-20261016",
-        "createdAt": "2026-10-16T05:40:37.508Z",
-        "producerId": "codex-market-evidence-inspector",
+        "parentRevisionId": "automated-lab-experiments:reported-market-20261016",
+        "createdAt": "2026-10-16T08:39:04.148Z",
+        "producerId": "codex-market-inspector",
         "origin": "inspection-correction",
-        "changeReason": "Add independently inspected market inputs, explicit conditional spending scenarios and dated growth evidence. Preserve historical reports and venture qualification.",
-        "contentHash": "0e1fd00e0d1ecd1a395f7ff3c24b942144c8e3c7903f38398a3eaf9c9c6c5790",
+        "changeReason": "Use the latest explicitly dated publisher estimate; retain the publisher forecast growth period.",
+        "contentHash": "2139772923f3cd6f85201a19b644e0c046fc308f0f989f4ac644204ea22a1171",
         "title": "Lab equipment that runs and adjusts repeated experiments",
         "classifications": [
           "Manufacturing",
@@ -8815,9 +9324,9 @@
             },
             "ventureScale": {
               "status": "plausible",
-              "reason": "Conditional initial segment: $19M–$120M / year. Eligibility, pricing and demand remain unverified; this does not establish a venture-scale business.",
+              "reason": "Published market context is available. The reachable share and venture-scale business case remain unproven.",
               "claimIds": [
-                "automated-lab-experiments:market-20261016:range"
+                "automated-lab-experiments:reported-market:size"
               ]
             },
             "businessCapital": {
@@ -8829,9 +9338,9 @@
             },
             "timing": {
               "status": "plausible",
-              "reason": "BLS projects 13% growth in US medical-scientist jobs from 2025 to 2035. Workforce growth is a demand proxy, not a lab-automation revenue forecast. Funding and purchasing cycles can move differently.",
+              "reason": "Lab automation: 9.3% annual growth forecast, 2025–2033.",
               "claimIds": [
-                "automated-lab-experiments:market-20261016:growth"
+                "automated-lab-experiments:reported-market:growth"
               ]
             }
           },
@@ -8918,6 +9427,31 @@
           ],
           "confidence": "low",
           "nextEvidence": "Count eligible labs and existing equipment, then verify incremental automation budgets and utilization."
+        },
+        "reportedMarket": {
+          "name": "Lab automation",
+          "geography": "Global",
+          "currency": "USD",
+          "start": {
+            "value": 10000000000,
+            "year": 2026,
+            "kind": "estimate"
+          },
+          "end": {
+            "value": 18400000000,
+            "year": 2033,
+            "kind": "forecast"
+          },
+          "growth": {
+            "value": 9.3,
+            "unit": "percent",
+            "kind": "forecast",
+            "period": "2025–2033"
+          },
+          "sourceIds": [
+            "reported-market-20261016:lab"
+          ],
+          "scopeNote": "Includes automated laboratory equipment and workflows, including clinical analysis. Broader than autonomous experiment software alone."
         }
       },
       "research": null,
@@ -8927,8 +9461,8 @@
     {
       "schemaVersion": 1,
       "id": "hardware-code-testing",
-      "revision": 3,
-      "acceptedRevisionId": "hardware-code-testing:market-sizing-20261016",
+      "revision": 4,
+      "acceptedRevisionId": "hardware-code-testing:reported-market-20261016",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -8936,21 +9470,21 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T18:55:13.081Z",
-      "updatedAt": "2026-10-16T05:40:37.508Z",
+      "updatedAt": "2026-10-16T08:02:31.139Z",
       "verdict": null,
       "stage": "first-impressions",
       "qualificationError": "Evidence reviewed; the task is supported, but additional diagnostic value, paid demand and venture-scale economics remain unproven.",
       "accepted": {
         "content": {
           "marketSize": [
-            "hardware-code-testing:market-20261016:range"
+            "hardware-code-testing:reported-market:size"
           ],
           "alternatives": [
             "hardware-code-testing:v2-comparison"
           ],
           "economics": [],
           "timing": [
-            "hardware-code-testing:market-20261016:growth"
+            "hardware-code-testing:reported-market:growth"
           ],
           "what": "hardware-code-testing:what",
           "problem": "hardware-code-testing:problem",
@@ -9398,6 +9932,48 @@
             "kind": "reported",
             "attribution": "US Bureau of Labor Statistics",
             "quantity": null
+          },
+          {
+            "id": "hardware-code-testing:reported-market:size",
+            "text": "Test and measurement equipment: $36.4B (2026) → $50.6B (2033 forecast). Global.",
+            "evidenceIds": [
+              "reported-market-20261016:hardware"
+            ],
+            "derivedFromClaimIds": [],
+            "confidence": "moderate",
+            "limitations": [
+              "Includes electronic and mechanical test equipment and services. Broader than hardware-code testing software. Summary and detailed forecast specify 2033; the inconsistent 2030 header is excluded."
+            ],
+            "review": {
+              "status": "accepted",
+              "reviewerId": "codex-market-inspector",
+              "reviewedAt": "2026-10-16T08:02:31.139Z",
+              "reason": "Publisher market identity, size years, growth period and forecast labels inspected. Market context only; no venture qualification."
+            },
+            "kind": "reported",
+            "attribution": "Grand View Research",
+            "quantity": null
+          },
+          {
+            "id": "hardware-code-testing:reported-market:growth",
+            "text": "Test and measurement equipment: 4.8% annual growth forecast, 2026–2033.",
+            "evidenceIds": [
+              "reported-market-20261016:hardware"
+            ],
+            "derivedFromClaimIds": [],
+            "confidence": "moderate",
+            "limitations": [
+              "Includes electronic and mechanical test equipment and services. Broader than hardware-code testing software. Summary and detailed forecast specify 2033; the inconsistent 2030 header is excluded."
+            ],
+            "review": {
+              "status": "accepted",
+              "reviewerId": "codex-market-inspector",
+              "reviewedAt": "2026-10-16T08:02:31.139Z",
+              "reason": "Publisher market identity, size years, growth period and forecast labels inspected. Market context only; no venture qualification."
+            },
+            "kind": "reported",
+            "attribution": "Grand View Research",
+            "quantity": null
           }
         ],
         "evidence": [
@@ -9686,17 +10262,39 @@
               "checkedAt": "2026-10-16T05:40:37.508Z",
               "failureIds": []
             }
+          },
+          {
+            "id": "reported-market-20261016:hardware",
+            "sourceUrl": "https://www.grandviewresearch.com/industry-analysis/test-measurement-equipment-market-report",
+            "finalUrl": "https://www.grandviewresearch.com/industry-analysis/test-measurement-equipment-market-report",
+            "title": "Grand View Research · Test and measurement equipment",
+            "publisher": "Grand View Research",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "2026–2033; growth 2026–2033",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "at a CAGR of 4.8% from 2026 to 2033",
+            "pdfPage": null,
+            "locator": "Publisher market summary; dates and scope retained. Includes electronic and mechanical test equipment and services. Broader than hardware-code testing software. Summary and detailed forecast specify 2033; the inconsistent 2030 header is excluded.",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T08:02:31.139Z",
+              "failureIds": []
+            }
           }
         ],
         "migrationGaps": [],
-        "id": "hardware-code-testing:market-sizing-20261016",
+        "id": "hardware-code-testing:reported-market-20261016",
         "opportunityId": "hardware-code-testing",
-        "parentRevisionId": "hardware-code-testing:evidence-review-v2-20261016",
-        "createdAt": "2026-10-16T05:40:37.508Z",
-        "producerId": "codex-market-evidence-inspector",
+        "parentRevisionId": "hardware-code-testing:market-sizing-20261016",
+        "createdAt": "2026-10-16T08:02:31.139Z",
+        "producerId": "codex-market-inspector",
         "origin": "inspection-correction",
-        "changeReason": "Add independently inspected market inputs, explicit conditional spending scenarios and dated growth evidence. Preserve historical reports and venture qualification.",
-        "contentHash": "edc5a68fd338a2a6a6de21bdd20fb76df7fb67d90c02dc0cc48304d84b200d33",
+        "changeReason": "Replace displayed hypothetical revenue scenario with a named publisher market and its dated size and growth. Historical scenario retained; not a TAM claim.",
+        "contentHash": "044ad0e7a595e80f87742ccdeef8975da818eb9014f4f8cd0e166a2dd3a29777",
         "title": "A test bench that lets AI write and check software on real electronics",
         "classifications": [
           "Manufacturing",
@@ -9741,9 +10339,9 @@
             },
             "ventureScale": {
               "status": "missing",
-              "reason": "Conditional initial segment: $30M–$360M / year. Eligibility, pricing and demand remain unverified; this does not establish a venture-scale business.",
+              "reason": "Published market context is available. The reachable share and venture-scale business case remain unproven.",
               "claimIds": [
-                "hardware-code-testing:market-20261016:range"
+                "hardware-code-testing:reported-market:size"
               ]
             },
             "businessCapital": {
@@ -9755,9 +10353,9 @@
             },
             "timing": {
               "status": "plausible",
-              "reason": "BLS projects 8% growth in US electrical and electronics engineering jobs by 2035. This is a ten-year workforce projection, not annual growth or measured test-software spending.",
+              "reason": "Test and measurement equipment: 4.8% annual growth forecast, 2026–2033.",
               "claimIds": [
-                "hardware-code-testing:market-20261016:growth"
+                "hardware-code-testing:reported-market:growth"
               ]
             }
           },
@@ -9834,6 +10432,31 @@
           ],
           "confidence": "low",
           "nextEvidence": "Measure eligible teams, avoidable testing effort and the incremental software budget after current tools."
+        },
+        "reportedMarket": {
+          "name": "Test and measurement equipment",
+          "geography": "Global",
+          "currency": "USD",
+          "start": {
+            "value": 36400000000,
+            "year": 2026,
+            "kind": "estimate"
+          },
+          "end": {
+            "value": 50600000000,
+            "year": 2033,
+            "kind": "forecast"
+          },
+          "growth": {
+            "value": 4.8,
+            "unit": "percent",
+            "kind": "forecast",
+            "period": "2026–2033"
+          },
+          "sourceIds": [
+            "reported-market-20261016:hardware"
+          ],
+          "scopeNote": "Includes electronic and mechanical test equipment and services. Broader than hardware-code testing software. Summary and detailed forecast specify 2033; the inconsistent 2030 header is excluded."
         }
       },
       "research": null,
@@ -9843,8 +10466,8 @@
     {
       "schemaVersion": 1,
       "id": "checked-part-designs",
-      "revision": 3,
-      "acceptedRevisionId": "checked-part-designs:market-sizing-20261016",
+      "revision": 5,
+      "acceptedRevisionId": "checked-part-designs:latest-market-20261016",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -9852,21 +10475,21 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T18:55:13.081Z",
-      "updatedAt": "2026-10-16T05:40:37.508Z",
+      "updatedAt": "2026-10-16T08:39:04.148Z",
       "verdict": null,
       "stage": "first-impressions",
       "qualificationError": "Reviewed; recurring correction work is supported, but net customer value, paid demand and venture-scale economics are not established.",
       "accepted": {
         "content": {
           "marketSize": [
-            "checked-part-designs:market-20261016:range"
+            "checked-part-designs:reported-market:size"
           ],
           "alternatives": [
             "checked-part-designs:v2-comparison"
           ],
           "economics": [],
           "timing": [
-            "checked-part-designs:market-20261016:growth"
+            "checked-part-designs:reported-market:growth"
           ],
           "what": "checked-part-designs:what",
           "problem": "checked-part-designs:problem",
@@ -10370,6 +10993,48 @@
             "kind": "reported",
             "attribution": "US Bureau of Labor Statistics",
             "quantity": null
+          },
+          {
+            "id": "checked-part-designs:reported-market:size",
+            "text": "3D CAD software: $13.4B (2026) → $17.3B (2030 forecast). Global.",
+            "evidenceIds": [
+              "reported-market-20261016:cad"
+            ],
+            "derivedFromClaimIds": [],
+            "confidence": "moderate",
+            "limitations": [
+              "Software for designing three-dimensional products and structures. Broader than automatic part-design checking."
+            ],
+            "review": {
+              "status": "accepted",
+              "reviewerId": "codex-market-inspector",
+              "reviewedAt": "2026-10-16T08:39:04.148Z",
+              "reason": "Publisher market identity, size years, growth period and forecast labels inspected. Market context only; no venture qualification."
+            },
+            "kind": "reported",
+            "attribution": "Grand View Research",
+            "quantity": null
+          },
+          {
+            "id": "checked-part-designs:reported-market:growth",
+            "text": "3D CAD software: 6.7% annual growth forecast, 2023–2030.",
+            "evidenceIds": [
+              "reported-market-20261016:cad"
+            ],
+            "derivedFromClaimIds": [],
+            "confidence": "moderate",
+            "limitations": [
+              "Software for designing three-dimensional products and structures. Broader than automatic part-design checking."
+            ],
+            "review": {
+              "status": "accepted",
+              "reviewerId": "codex-market-inspector",
+              "reviewedAt": "2026-10-16T08:02:31.139Z",
+              "reason": "Publisher market identity, size years, growth period and forecast labels inspected. Market context only; no venture qualification."
+            },
+            "kind": "reported",
+            "attribution": "Grand View Research",
+            "quantity": null
           }
         ],
         "evidence": [
@@ -10812,17 +11477,39 @@
               "checkedAt": "2026-10-16T05:40:37.508Z",
               "failureIds": []
             }
+          },
+          {
+            "id": "reported-market-20261016:cad",
+            "sourceUrl": "https://www.grandviewresearch.com/industry-analysis/3d-cad-software-market",
+            "finalUrl": "https://www.grandviewresearch.com/industry-analysis/3d-cad-software-market",
+            "title": "Grand View Research · 3D CAD software",
+            "publisher": "Grand View Research",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "2026–2030; growth 2023–2030",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "estimated at USD 13.4 billion for 2026",
+            "pdfPage": null,
+            "locator": "Publisher market summary and detailed FAQ. Software for designing three-dimensional products and structures. Broader than automatic part-design checking.",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T08:39:04.148Z",
+              "failureIds": []
+            }
           }
         ],
         "migrationGaps": [],
-        "id": "checked-part-designs:market-sizing-20261016",
+        "id": "checked-part-designs:latest-market-20261016",
         "opportunityId": "checked-part-designs",
-        "parentRevisionId": "checked-part-designs:evidence-review-v2-20261016",
-        "createdAt": "2026-10-16T05:40:37.508Z",
-        "producerId": "codex-market-evidence-inspector",
+        "parentRevisionId": "checked-part-designs:reported-market-20261016",
+        "createdAt": "2026-10-16T08:39:04.148Z",
+        "producerId": "codex-market-inspector",
         "origin": "inspection-correction",
-        "changeReason": "Add independently inspected market inputs, explicit conditional spending scenarios and dated growth evidence. Preserve historical reports and venture qualification.",
-        "contentHash": "de9f874493497ce3e2f438ed7a258341225345e37da1266a622014f76f4b47d2",
+        "changeReason": "Use the latest explicitly dated publisher estimate; retain the publisher forecast growth period.",
+        "contentHash": "a5bd3af259f9ef3f968d88faf564e95f9282c6ba906975ec9530c6f7f186f45d",
         "title": "Software that turns drawings and measurements into checked part designs",
         "classifications": [
           "Manufacturing",
@@ -10867,9 +11554,9 @@
             },
             "ventureScale": {
               "status": "missing",
-              "reason": "Conditional initial segment: $15M–$130M / year. Eligibility, pricing and demand remain unverified; this does not establish a venture-scale business.",
+              "reason": "Published market context is available. The reachable share and venture-scale business case remain unproven.",
               "claimIds": [
-                "checked-part-designs:market-20261016:range"
+                "checked-part-designs:reported-market:size"
               ]
             },
             "businessCapital": {
@@ -10881,9 +11568,9 @@
             },
             "timing": {
               "status": "plausible",
-              "reason": "BLS projects 11% growth in US mechanical-engineering jobs from 2025 to 2035. Workforce growth does not establish paid demand for automated design checks. CAD vendors can bundle similar functions.",
+              "reason": "3D CAD software: 6.7% annual growth forecast, 2023–2030.",
               "claimIds": [
-                "checked-part-designs:market-20261016:growth"
+                "checked-part-designs:reported-market:growth"
               ]
             }
           },
@@ -10950,6 +11637,31 @@
           ],
           "confidence": "low",
           "nextEvidence": "Establish task frequency and compatible seats, then test willingness to pay above the existing CAD subscription."
+        },
+        "reportedMarket": {
+          "name": "3D CAD software",
+          "geography": "Global",
+          "currency": "USD",
+          "start": {
+            "value": 13400000000,
+            "year": 2026,
+            "kind": "estimate"
+          },
+          "end": {
+            "value": 17300000000,
+            "year": 2030,
+            "kind": "forecast"
+          },
+          "growth": {
+            "value": 6.7,
+            "unit": "percent",
+            "kind": "forecast",
+            "period": "2023–2030"
+          },
+          "sourceIds": [
+            "reported-market-20261016:cad"
+          ],
+          "scopeNote": "Software for designing three-dimensional products and structures. Broader than automatic part-design checking."
         }
       },
       "research": null,
@@ -10959,8 +11671,8 @@
     {
       "schemaVersion": 1,
       "id": "laundry-folding",
-      "revision": 3,
-      "acceptedRevisionId": "laundry-folding:market-sizing-20261016",
+      "revision": 4,
+      "acceptedRevisionId": "laundry-folding:reported-market-20261016",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -10968,21 +11680,21 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T18:55:13.081Z",
-      "updatedAt": "2026-10-16T05:40:37.508Z",
+      "updatedAt": "2026-10-16T08:02:31.139Z",
       "verdict": null,
       "stage": "first-impressions",
       "qualificationError": "Reviewed; recurring manual work is supported, but added customer value, payment and venture-scale economics are not established.",
       "accepted": {
         "content": {
           "marketSize": [
-            "laundry-folding:market-20261016:range"
+            "laundry-folding:reported-market:size"
           ],
           "alternatives": [
             "laundry-folding:v2-comparison"
           ],
           "economics": [],
           "timing": [
-            "laundry-folding:market-20261016:growth"
+            "laundry-folding:reported-market:growth"
           ],
           "what": "laundry-folding:what",
           "problem": "laundry-folding:problem",
@@ -11353,6 +12065,48 @@
             "kind": "reported",
             "attribution": "US Census Bureau via Federal Reserve Bank of St. Louis",
             "quantity": null
+          },
+          {
+            "id": "laundry-folding:reported-market:size",
+            "text": "Commercial laundry machines: $9.1B (2026) → $15.2B (2035 forecast). Global.",
+            "evidenceIds": [
+              "reported-market-20261016:laundry"
+            ],
+            "derivedFromClaimIds": [],
+            "confidence": "moderate",
+            "limitations": [
+              "Includes commercial washers, dryers and finishing equipment. Broader than robotic folding; excludes residential appliances and standalone aftermarket services."
+            ],
+            "review": {
+              "status": "accepted",
+              "reviewerId": "codex-market-inspector",
+              "reviewedAt": "2026-10-16T08:02:31.139Z",
+              "reason": "Publisher market identity, size years, growth period and forecast labels inspected. Market context only; no venture qualification."
+            },
+            "kind": "reported",
+            "attribution": "Global Market Insights",
+            "quantity": null
+          },
+          {
+            "id": "laundry-folding:reported-market:growth",
+            "text": "Commercial laundry machines: 5.9% annual growth forecast, 2026–2035.",
+            "evidenceIds": [
+              "reported-market-20261016:laundry"
+            ],
+            "derivedFromClaimIds": [],
+            "confidence": "moderate",
+            "limitations": [
+              "Includes commercial washers, dryers and finishing equipment. Broader than robotic folding; excludes residential appliances and standalone aftermarket services."
+            ],
+            "review": {
+              "status": "accepted",
+              "reviewerId": "codex-market-inspector",
+              "reviewedAt": "2026-10-16T08:02:31.139Z",
+              "reason": "Publisher market identity, size years, growth period and forecast labels inspected. Market context only; no venture qualification."
+            },
+            "kind": "reported",
+            "attribution": "Global Market Insights",
+            "quantity": null
           }
         ],
         "evidence": [
@@ -11553,17 +12307,39 @@
               "checkedAt": "2026-10-16T05:40:37.508Z",
               "failureIds": []
             }
+          },
+          {
+            "id": "reported-market-20261016:laundry",
+            "sourceUrl": "https://www.gminsights.com/industry-analysis/commercial-laundry-machines-market",
+            "finalUrl": "https://www.gminsights.com/industry-analysis/commercial-laundry-machines-market",
+            "title": "Global Market Insights · Commercial laundry machines",
+            "publisher": "Global Market Insights",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "2026–2035; growth 2026–2035",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "to USD 15.20 billion by 2035",
+            "pdfPage": null,
+            "locator": "Publisher market summary; dates and scope retained. Includes commercial washers, dryers and finishing equipment. Broader than robotic folding; excludes residential appliances and standalone aftermarket services.",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T08:02:31.139Z",
+              "failureIds": []
+            }
           }
         ],
         "migrationGaps": [],
-        "id": "laundry-folding:market-sizing-20261016",
+        "id": "laundry-folding:reported-market-20261016",
         "opportunityId": "laundry-folding",
-        "parentRevisionId": "laundry-folding:evidence-review-v2-20261016",
-        "createdAt": "2026-10-16T05:40:37.508Z",
-        "producerId": "codex-market-evidence-inspector",
+        "parentRevisionId": "laundry-folding:market-sizing-20261016",
+        "createdAt": "2026-10-16T08:02:31.139Z",
+        "producerId": "codex-market-inspector",
         "origin": "inspection-correction",
-        "changeReason": "Add independently inspected market inputs, explicit conditional spending scenarios and dated growth evidence. Preserve historical reports and venture qualification.",
-        "contentHash": "22ee0f18c531c540cddb1f168c3393f3cb62d345f132a54a3ccfbacd45da132f",
+        "changeReason": "Replace displayed hypothetical revenue scenario with a named publisher market and its dated size and growth. Historical scenario retained; not a TAM claim.",
+        "contentHash": "d0e7c90c713a8d431e9d198f7dc510b883fcacf77ee209d63cad9906a075c75b",
         "title": "Laundry-folding robots that retry mistakes and ask for help",
         "classifications": [
           "Robotics"
@@ -11607,9 +12383,9 @@
             },
             "ventureScale": {
               "status": "missing",
-              "reason": "Conditional initial segment: $2.3M–$21M / year. Eligibility, pricing and demand remain unverified; this does not establish a venture-scale business. This wedge alone is limited; a larger business needs separately evidenced expansion.",
+              "reason": "Published market context is available. The reachable share and venture-scale business case remain unproven.",
               "claimIds": [
-                "laundry-folding:market-20261016:range"
+                "laundry-folding:reported-market:size"
               ]
             },
             "businessCapital": {
@@ -11621,9 +12397,9 @@
             },
             "timing": {
               "status": "plausible",
-              "reason": "US industrial-laundry revenue rose about 5.9% in 2024, in nominal dollars. Calculated from $13.091B to $13.861B. Industry sales include services, inflation and mix changes; this is not folding-machine growth or a $13.9B equipment market.",
+              "reason": "Commercial laundry machines: 5.9% annual growth forecast, 2026–2035.",
               "claimIds": [
-                "laundry-folding:market-20261016:growth"
+                "laundry-folding:reported-market:growth"
               ]
             }
           },
@@ -11700,6 +12476,31 @@
           ],
           "confidence": "low",
           "nextEvidence": "Count residual folding jobs and measure labor saved after handling exceptions, installation and upkeep."
+        },
+        "reportedMarket": {
+          "name": "Commercial laundry machines",
+          "geography": "Global",
+          "currency": "USD",
+          "start": {
+            "value": 9100000000,
+            "year": 2026,
+            "kind": "estimate"
+          },
+          "end": {
+            "value": 15200000000,
+            "year": 2035,
+            "kind": "forecast"
+          },
+          "growth": {
+            "value": 5.9,
+            "unit": "percent",
+            "kind": "forecast",
+            "period": "2026–2035"
+          },
+          "sourceIds": [
+            "reported-market-20261016:laundry"
+          ],
+          "scopeNote": "Includes commercial washers, dryers and finishing equipment. Broader than robotic folding; excludes residential appliances and standalone aftermarket services."
         }
       },
       "research": null,
@@ -12363,8 +13164,8 @@
     {
       "schemaVersion": 1,
       "id": "everyday-leg-assistance",
-      "revision": 3,
-      "acceptedRevisionId": "everyday-leg-assistance:market-sizing-20261016",
+      "revision": 4,
+      "acceptedRevisionId": "everyday-leg-assistance:reported-market-20261016",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -12372,33 +13173,33 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T21:24:18.427Z",
-      "updatedAt": "2026-10-16T05:40:37.508Z",
+      "updatedAt": "2026-10-16T08:02:31.139Z",
       "verdict": null,
       "stage": "first-impressions",
       "qualificationError": "Reviewed high-priority hypothesis; safe added activity, paying customers and venture-scale economics remain unproven.",
       "accepted": {
-        "id": "everyday-leg-assistance:market-sizing-20261016",
+        "id": "everyday-leg-assistance:reported-market-20261016",
         "opportunityId": "everyday-leg-assistance",
-        "parentRevisionId": "everyday-leg-assistance:evidence-review-v2-20261016",
-        "createdAt": "2026-10-16T05:40:37.508Z",
-        "producerId": "codex-market-evidence-inspector",
+        "parentRevisionId": "everyday-leg-assistance:market-sizing-20261016",
+        "createdAt": "2026-10-16T08:02:31.139Z",
+        "producerId": "codex-market-inspector",
         "origin": "inspection-correction",
-        "changeReason": "Add independently inspected market inputs, explicit conditional spending scenarios and dated growth evidence. Preserve historical reports and venture qualification.",
-        "contentHash": "57aab1889db5459a78981dcffcd4f84ecf8078a308930f3f2dc844162a6505e7",
+        "changeReason": "Replace displayed hypothetical revenue scenario with a named publisher market and its dated size and growth. Historical scenario retained; not a TAM claim.",
+        "contentHash": "20b375bbf468c64797f5baed95517ceb25f06b73602fff9845dbea9944af7db9",
         "title": "Lightweight powered assistance for everyday walking",
         "classifications": [
           "Robotics"
         ],
         "content": {
           "marketSize": [
-            "everyday-leg-assistance:market-20261016:range"
+            "everyday-leg-assistance:reported-market:size"
           ],
           "alternatives": [
             "everyday-leg-assistance:v2-comparison"
           ],
           "economics": [],
           "timing": [
-            "everyday-leg-assistance:market-20261016:growth"
+            "everyday-leg-assistance:reported-market:growth"
           ],
           "keyQuestion": "For a safely eligible group, does assistance add useful everyday walking beyond ordinary walking and appropriate current care, with sustained use and purchases at a price that covers fitting, returns and support?",
           "what": "everyday-leg-assistance:v2-what",
@@ -12821,6 +13622,48 @@
             "kind": "reported",
             "attribution": "US Census Bureau",
             "quantity": null
+          },
+          {
+            "id": "everyday-leg-assistance:reported-market:size",
+            "text": "Exoskeletons: $694.5M (2026) → $1.79B (2033 forecast). Global.",
+            "evidenceIds": [
+              "reported-market-20261016:exoskeleton"
+            ],
+            "derivedFromClaimIds": [],
+            "confidence": "moderate",
+            "limitations": [
+              "Includes powered and passive devices for healthcare, industry and military use. Broader than lightweight assistance for everyday mobility."
+            ],
+            "review": {
+              "status": "accepted",
+              "reviewerId": "codex-market-inspector",
+              "reviewedAt": "2026-10-16T08:02:31.139Z",
+              "reason": "Publisher market identity, size years, growth period and forecast labels inspected. Market context only; no venture qualification."
+            },
+            "kind": "reported",
+            "attribution": "Grand View Research",
+            "quantity": null
+          },
+          {
+            "id": "everyday-leg-assistance:reported-market:growth",
+            "text": "Exoskeletons: 14.5% annual growth forecast, 2026–2033.",
+            "evidenceIds": [
+              "reported-market-20261016:exoskeleton"
+            ],
+            "derivedFromClaimIds": [],
+            "confidence": "moderate",
+            "limitations": [
+              "Includes powered and passive devices for healthcare, industry and military use. Broader than lightweight assistance for everyday mobility."
+            ],
+            "review": {
+              "status": "accepted",
+              "reviewerId": "codex-market-inspector",
+              "reviewedAt": "2026-10-16T08:02:31.139Z",
+              "reason": "Publisher market identity, size years, growth period and forecast labels inspected. Market context only; no venture qualification."
+            },
+            "kind": "reported",
+            "attribution": "Grand View Research",
+            "quantity": null
           }
         ],
         "evidence": [
@@ -13087,6 +13930,28 @@
               "checkedAt": "2026-10-16T05:40:37.508Z",
               "failureIds": []
             }
+          },
+          {
+            "id": "reported-market-20261016:exoskeleton",
+            "sourceUrl": "https://www.grandviewresearch.com/industry-analysis/exoskeleton-market-report",
+            "finalUrl": "https://www.grandviewresearch.com/industry-analysis/exoskeleton-market-report",
+            "title": "Grand View Research · Exoskeletons",
+            "publisher": "Grand View Research",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "2026–2033; growth 2026–2033",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "at 14.5% CAGR from 2026 to 2033",
+            "pdfPage": null,
+            "locator": "Publisher market summary; dates and scope retained. Includes powered and passive devices for healthcare, industry and military use. Broader than lightweight assistance for everyday mobility.",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T08:02:31.139Z",
+              "failureIds": []
+            }
           }
         ],
         "migrationGaps": [],
@@ -13123,9 +13988,9 @@
             },
             "ventureScale": {
               "status": "plausible",
-              "reason": "Conditional initial segment: $13M–$240M / year. Eligibility, pricing and demand remain unverified; this does not establish a venture-scale business.",
+              "reason": "Published market context is available. The reachable share and venture-scale business case remain unproven.",
               "claimIds": [
-                "everyday-leg-assistance:market-20261016:range"
+                "everyday-leg-assistance:reported-market:size"
               ]
             },
             "businessCapital": {
@@ -13137,9 +14002,9 @@
             },
             "timing": {
               "status": "plausible",
-              "reason": "The US population aged 65+ grew 3.1% in 2024 to 61.2 million. Demographic growth is broader context, not exoskeleton sales growth. The historical mobility subgroup is not scaled up to 2024 without matched data.",
+              "reason": "Exoskeletons: 14.5% annual growth forecast, 2026–2033.",
               "claimIds": [
-                "everyday-leg-assistance:market-20261016:growth"
+                "everyday-leg-assistance:reported-market:growth"
               ]
             }
           },
@@ -13244,6 +14109,31 @@
           ],
           "confidence": "low",
           "nextEvidence": "Establish safe eligibility and sustained walking benefit, then test price and adoption with those users."
+        },
+        "reportedMarket": {
+          "name": "Exoskeletons",
+          "geography": "Global",
+          "currency": "USD",
+          "start": {
+            "value": 694500000,
+            "year": 2026,
+            "kind": "estimate"
+          },
+          "end": {
+            "value": 1790000000,
+            "year": 2033,
+            "kind": "forecast"
+          },
+          "growth": {
+            "value": 14.5,
+            "unit": "percent",
+            "kind": "forecast",
+            "period": "2026–2033"
+          },
+          "sourceIds": [
+            "reported-market-20261016:exoskeleton"
+          ],
+          "scopeNote": "Includes powered and passive devices for healthcare, industry and military use. Broader than lightweight assistance for everyday mobility."
         }
       },
       "research": null,
@@ -13253,8 +14143,8 @@
     {
       "schemaVersion": 1,
       "id": "ai-action-controls",
-      "revision": 2,
-      "acceptedRevisionId": "ai-action-controls:market-sizing-20261016",
+      "revision": 3,
+      "acceptedRevisionId": "ai-action-controls:reported-market-20261016",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -13262,33 +14152,33 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T21:24:18.427Z",
-      "updatedAt": "2026-10-16T05:40:37.508Z",
+      "updatedAt": "2026-10-16T08:02:31.139Z",
       "verdict": null,
       "stage": "first-impressions",
       "qualificationError": "Reviewed hypothesis; added value over existing controls, paying customers and venture-scale economics remain unproven.",
       "accepted": {
-        "id": "ai-action-controls:market-sizing-20261016",
+        "id": "ai-action-controls:reported-market-20261016",
         "opportunityId": "ai-action-controls",
-        "parentRevisionId": "ai-action-controls:evidence-review-v2-20261016",
-        "createdAt": "2026-10-16T05:40:37.508Z",
-        "producerId": "codex-market-evidence-inspector",
+        "parentRevisionId": "ai-action-controls:market-sizing-20261016",
+        "createdAt": "2026-10-16T08:02:31.139Z",
+        "producerId": "codex-market-inspector",
         "origin": "inspection-correction",
-        "changeReason": "Add independently inspected market inputs, explicit conditional spending scenarios and dated growth evidence. Preserve historical reports and venture qualification.",
-        "contentHash": "9c2154c23b0431134e3e49e95d8569db021591a3100d61f90810e5b9cdbb0670",
+        "changeReason": "Replace displayed hypothetical revenue scenario with a named publisher market and its dated size and growth. Historical scenario retained; not a TAM claim.",
+        "contentHash": "3cd802c0f8f2153221f1d2f35a5475ab558aa7a357376367ebac129118fe05e3",
         "title": "Controls that approve or block an AI assistant’s actions",
         "classifications": [
           "Enabling AI"
         ],
         "content": {
           "marketSize": [
-            "ai-action-controls:market-20261016:range"
+            "ai-action-controls:reported-market:size"
           ],
           "alternatives": [
             "ai-action-controls:v2-comparison"
           ],
           "economics": [],
           "timing": [
-            "ai-action-controls:market-20261016:growth"
+            "ai-action-controls:reported-market:growth"
           ],
           "keyQuestion": "In a real security workflow, does adding this layer prevent important mistakes or reduce setup and review work beyond existing controls, at a total cost a buyer will pay?",
           "what": "ai-action-controls:v2-what",
@@ -13723,6 +14613,48 @@
             "kind": "reported",
             "attribution": "Menlo Ventures",
             "quantity": null
+          },
+          {
+            "id": "ai-action-controls:reported-market:size",
+            "text": "Enterprise generative AI spending: $11.5B (2024) → $37B (2025). Modeled enterprise spending; survey of US buyers.",
+            "evidenceIds": [
+              "reported-market-20261016:menlo"
+            ],
+            "derivedFromClaimIds": [],
+            "confidence": "moderate",
+            "limitations": [
+              "Model APIs, infrastructure and applications. Broader market context, not revenue available to an optimization or control product. Menlo estimates spending; its survey covers US buyers, while revenue geography is not precisely delimited."
+            ],
+            "review": {
+              "status": "accepted",
+              "reviewerId": "codex-market-inspector",
+              "reviewedAt": "2026-10-16T08:02:31.139Z",
+              "reason": "Publisher market identity, size years, growth period and forecast labels inspected. Market context only; no venture qualification."
+            },
+            "kind": "reported",
+            "attribution": "Menlo Ventures",
+            "quantity": null
+          },
+          {
+            "id": "ai-action-controls:reported-market:growth",
+            "text": "Enterprise generative AI spending: 3.2× year-over-year growth, 2024–2025.",
+            "evidenceIds": [
+              "reported-market-20261016:menlo"
+            ],
+            "derivedFromClaimIds": [],
+            "confidence": "moderate",
+            "limitations": [
+              "Model APIs, infrastructure and applications. Broader market context, not revenue available to an optimization or control product. Menlo estimates spending; its survey covers US buyers, while revenue geography is not precisely delimited."
+            ],
+            "review": {
+              "status": "accepted",
+              "reviewerId": "codex-market-inspector",
+              "reviewedAt": "2026-10-16T08:02:31.139Z",
+              "reason": "Publisher market identity, size years, growth period and forecast labels inspected. Market context only; no venture qualification."
+            },
+            "kind": "reported",
+            "attribution": "Menlo Ventures",
+            "quantity": null
           }
         ],
         "evidence": [
@@ -13989,6 +14921,28 @@
               "checkedAt": "2026-10-16T05:40:37.508Z",
               "failureIds": []
             }
+          },
+          {
+            "id": "reported-market-20261016:menlo",
+            "sourceUrl": "https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/",
+            "finalUrl": "https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/",
+            "title": "Menlo Ventures · Enterprise generative AI spending",
+            "publisher": "Menlo Ventures",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2025-12-09",
+            "observationPeriod": "2024–2025; growth 2024–2025",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "up from $11.5 billion",
+            "pdfPage": null,
+            "locator": "Publisher market summary; dates and scope retained. Model APIs, infrastructure and applications. Broader market context, not revenue available to an optimization or control product. Menlo estimates spending; its survey covers US buyers, while revenue geography is not precisely delimited.",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T08:02:31.139Z",
+              "failureIds": []
+            }
           }
         ],
         "migrationGaps": [],
@@ -14025,9 +14979,9 @@
             },
             "ventureScale": {
               "status": "plausible",
-              "reason": "Conditional initial segment: $7.5M–$56M / year. Eligibility, pricing and demand remain unverified; this does not establish a venture-scale business.",
+              "reason": "Published market context is available. The reachable share and venture-scale business case remain unproven.",
               "claimIds": [
-                "ai-action-controls:market-20261016:range"
+                "ai-action-controls:reported-market:size"
               ]
             },
             "businessCapital": {
@@ -14039,9 +14993,9 @@
             },
             "timing": {
               "status": "plausible",
-              "reason": "The broader enterprise AI category grew 3.2× in 2025, according to Menlo. No comparable growth rate was established for paid action-control tools. Copilots dominate horizontal AI spending; platform growth need not create an independent control budget.",
+              "reason": "Enterprise generative AI spending: 3.2× year-over-year growth, 2024–2025.",
               "claimIds": [
-                "ai-action-controls:market-20261016:growth"
+                "ai-action-controls:reported-market:growth"
               ]
             }
           },
@@ -14112,6 +15066,31 @@
           ],
           "confidence": "low",
           "nextEvidence": "Find platform customers whose existing approvals fail and test a paid control layer against built-in options."
+        },
+        "reportedMarket": {
+          "name": "Enterprise generative AI spending",
+          "geography": "Modeled enterprise spending; survey of US buyers",
+          "currency": "USD",
+          "start": {
+            "value": 11500000000,
+            "year": 2024,
+            "kind": "estimate"
+          },
+          "end": {
+            "value": 37000000000,
+            "year": 2025,
+            "kind": "estimate"
+          },
+          "growth": {
+            "value": 3.2,
+            "unit": "multiple",
+            "kind": "historical",
+            "period": "2024–2025"
+          },
+          "sourceIds": [
+            "reported-market-20261016:menlo"
+          ],
+          "scopeNote": "Model APIs, infrastructure and applications. Broader market context, not revenue available to an optimization or control product. Menlo estimates spending; its survey covers US buyers, while revenue geography is not precisely delimited."
         }
       },
       "research": null,
@@ -14561,8 +15540,8 @@
     {
       "schemaVersion": 1,
       "id": "protective-clothing-cooling",
-      "revision": 2,
-      "acceptedRevisionId": "protective-clothing-cooling:market-sizing-20261016",
+      "revision": 3,
+      "acceptedRevisionId": "protective-clothing-cooling:reported-market-20261016",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -14570,33 +15549,33 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T21:24:18.427Z",
-      "updatedAt": "2026-10-16T05:40:37.508Z",
+      "updatedAt": "2026-10-16T08:02:31.139Z",
       "verdict": null,
       "stage": "first-impressions",
       "qualificationError": "Reviewed hypothesis; additional useful cooling, paying demand and venture-scale economics remain unproven.",
       "accepted": {
-        "id": "protective-clothing-cooling:market-sizing-20261016",
+        "id": "protective-clothing-cooling:reported-market-20261016",
         "opportunityId": "protective-clothing-cooling",
-        "parentRevisionId": "protective-clothing-cooling:evidence-review-v2-20261016",
-        "createdAt": "2026-10-16T05:40:37.508Z",
-        "producerId": "codex-market-evidence-inspector",
+        "parentRevisionId": "protective-clothing-cooling:market-sizing-20261016",
+        "createdAt": "2026-10-16T08:02:31.139Z",
+        "producerId": "codex-market-inspector",
         "origin": "inspection-correction",
-        "changeReason": "Add independently inspected market inputs, explicit conditional spending scenarios and dated growth evidence. Preserve historical reports and venture qualification.",
-        "contentHash": "1a50ed52f0e95ca8bb3583bd3a4375297709d9872d9d6813539e84cf1007d44e",
+        "changeReason": "Replace displayed hypothetical revenue scenario with a named publisher market and its dated size and growth. Historical scenario retained; not a TAM claim.",
+        "contentHash": "6b5768c0e42affb19ed576da8575bbf5b56a12df795c02c174aa34f0fd01edf7",
         "title": "Cooling built into protective work clothing",
         "classifications": [
           "Manufacturing"
         ],
         "content": {
           "marketSize": [
-            "protective-clothing-cooling:market-20261016:range"
+            "protective-clothing-cooling:reported-market:size"
           ],
           "alternatives": [
             "protective-clothing-cooling:v2-comparison"
           ],
           "economics": [],
           "timing": [
-            "protective-clothing-cooling:market-20261016:growth"
+            "protective-clothing-cooling:reported-market:growth"
           ],
           "keyQuestion": "At a workplace with a persistent heat problem, does this garment add useful cooling beyond the best existing vest and heat controls, while preserving protection at a total cost the employer will pay?",
           "what": "protective-clothing-cooling:v2-what",
@@ -14994,6 +15973,48 @@
             "kind": "reported",
             "attribution": "US Bureau of Labor Statistics",
             "quantity": null
+          },
+          {
+            "id": "protective-clothing-cooling:reported-market:size",
+            "text": "Cooling fabrics: $2.1B (2026) → $3.4B (2033 forecast). Global.",
+            "evidenceIds": [
+              "reported-market-20261016:cooling"
+            ],
+            "derivedFromClaimIds": [],
+            "confidence": "moderate",
+            "limitations": [
+              "Adjacent market covering protective wear, sportswear and lifestyle fabrics. This is not a measurement of active cooling devices or cooling beneath protective clothing."
+            ],
+            "review": {
+              "status": "accepted",
+              "reviewerId": "codex-market-inspector",
+              "reviewedAt": "2026-10-16T08:02:31.139Z",
+              "reason": "Publisher market identity, size years, growth period and forecast labels inspected. Market context only; no venture qualification."
+            },
+            "kind": "reported",
+            "attribution": "Grand View Research",
+            "quantity": null
+          },
+          {
+            "id": "protective-clothing-cooling:reported-market:growth",
+            "text": "Cooling fabrics: 6.8% annual growth forecast, 2026–2033.",
+            "evidenceIds": [
+              "reported-market-20261016:cooling"
+            ],
+            "derivedFromClaimIds": [],
+            "confidence": "moderate",
+            "limitations": [
+              "Adjacent market covering protective wear, sportswear and lifestyle fabrics. This is not a measurement of active cooling devices or cooling beneath protective clothing."
+            ],
+            "review": {
+              "status": "accepted",
+              "reviewerId": "codex-market-inspector",
+              "reviewedAt": "2026-10-16T08:02:31.139Z",
+              "reason": "Publisher market identity, size years, growth period and forecast labels inspected. Market context only; no venture qualification."
+            },
+            "kind": "reported",
+            "attribution": "Grand View Research",
+            "quantity": null
           }
         ],
         "evidence": [
@@ -15194,6 +16215,28 @@
               "checkedAt": "2026-10-16T05:40:37.508Z",
               "failureIds": []
             }
+          },
+          {
+            "id": "reported-market-20261016:cooling",
+            "sourceUrl": "https://www.grandviewresearch.com/industry-analysis/cooling-fabrics-market",
+            "finalUrl": "https://www.grandviewresearch.com/industry-analysis/cooling-fabrics-market",
+            "title": "Grand View Research · Cooling fabrics",
+            "publisher": "Grand View Research",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "2026–2033; growth 2026–2033",
+            "retrievedAt": "2026-10-16",
+            "excerpt": "at a CAGR of 6.8% from 2026 to 2033",
+            "pdfPage": null,
+            "locator": "Publisher market summary; dates and scope retained. Adjacent market covering protective wear, sportswear and lifestyle fabrics. This is not a measurement of active cooling devices or cooling beneath protective clothing.",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T08:02:31.139Z",
+              "failureIds": []
+            }
           }
         ],
         "migrationGaps": [],
@@ -15230,9 +16273,9 @@
             },
             "ventureScale": {
               "status": "missing",
-              "reason": "Conditional initial segment: $3.1M–$19M / year. Eligibility, pricing and demand remain unverified; this does not establish a venture-scale business. This wedge alone is limited; a larger business needs separately evidenced expansion.",
+              "reason": "Published market context is available. The reachable share and venture-scale business case remain unproven.",
               "claimIds": [
-                "protective-clothing-cooling:market-20261016:range"
+                "protective-clothing-cooling:reported-market:size"
               ]
             },
             "businessCapital": {
@@ -15244,9 +16287,9 @@
             },
             "timing": {
               "status": "plausible",
-              "reason": "BLS projects 4% growth in US paid firefighter jobs from 2025 to 2035. Modest workforce growth, not evidence of a fast-growing cooling market. Heat exposure alone does not establish purchasing growth.",
+              "reason": "Cooling fabrics: 6.8% annual growth forecast, 2026–2033.",
               "claimIds": [
-                "protective-clothing-cooling:market-20261016:growth"
+                "protective-clothing-cooling:reported-market:growth"
               ]
             }
           },
@@ -15329,6 +16372,31 @@
           ],
           "confidence": "low",
           "nextEvidence": "Verify task compatibility and added cooling benefit, then department purchase and replacement budgets."
+        },
+        "reportedMarket": {
+          "name": "Cooling fabrics",
+          "geography": "Global",
+          "currency": "USD",
+          "start": {
+            "value": 2100000000,
+            "year": 2026,
+            "kind": "estimate"
+          },
+          "end": {
+            "value": 3400000000,
+            "year": 2033,
+            "kind": "forecast"
+          },
+          "growth": {
+            "value": 6.8,
+            "unit": "percent",
+            "kind": "forecast",
+            "period": "2026–2033"
+          },
+          "sourceIds": [
+            "reported-market-20261016:cooling"
+          ],
+          "scopeNote": "Adjacent market covering protective wear, sportswear and lifestyle fabrics. This is not a measurement of active cooling devices or cooling beneath protective clothing."
         }
       },
       "research": null,

@@ -1,6 +1,50 @@
 import { z } from "zod";
 
 const text = z.string().min(1);
+const marketObservation = z
+  .object({
+    value: z.number().finite().positive(),
+    year: z.number().int().min(1900).max(2100),
+    kind: z.enum(["estimate", "forecast"]),
+  })
+  .strict();
+
+// Publisher estimates of a named market; never an assumed share of its revenue.
+export const reportedMarketSchema = z
+  .object({
+    name: text,
+    geography: text,
+    currency: z.literal("USD"),
+    start: marketObservation,
+    end: marketObservation,
+    growth: z
+      .object({
+        value: z.number().finite(),
+        unit: z.enum(["percent", "multiple"]),
+        kind: z.enum(["historical", "forecast"]),
+        period: text,
+      })
+      .strict(),
+    sourceIds: z.array(text).min(1),
+    scopeNote: text,
+  })
+  .strict()
+  .refine(
+    (m) => m.end.year > m.start.year,
+    "Market years must be chronological",
+  );
+export type ReportedMarket = z.infer<typeof reportedMarketSchema>;
+export function marketMoney(value: number) {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    notation: "compact",
+    maximumFractionDigits: 2,
+  }).format(value);
+}
+export function reportedMarketLabel(m: ReportedMarket) {
+  return `${marketMoney(m.start.value)} (${m.start.year}) → ${marketMoney(m.end.value)} (${m.end.year}${m.end.kind === "forecast" ? " forecast" : ""})`;
+}
 export const marketFactorSchema = z
   .object({
     label: text,
