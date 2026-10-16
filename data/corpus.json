@@ -5864,15 +5864,15 @@
     {
       "id": "protective-clothing-cooling",
       "title": "Cooling built into protective work clothing",
-      "summary": "Cooling garments aim to remove heat while a worker keeps protective clothing on. Cleanrooms and firefighting are separate settings with different requirements.",
+      "summary": "Cooling built into clothing that workers must keep on.",
       "topic": "Manufacturing",
-      "problem": "Workers may need protection that also traps heat. Removing the clothing or cooling the whole space may not suit the task.",
-      "statusQuo": "",
-      "gap": "Sustained useful cooling with acceptable weight, power, contamination control and protection.",
-      "opportunity": "Employers could buy personal cooling where room cooling and breaks do not adequately address the task. A viable product must preserve protection and deliver useful cooling without excessive weight or upkeep.",
-      "evidence": "Cooling at the wearer could address situations where changing the room or removing protection is impractical.",
-      "counterpoint": "Cooling may be short-lived, bulky or incompatible with protection. No demonstrated reduction in heat illness.",
-      "nextQuestion": "Choose one setting; compare sustained heat removal, worker burden, protection and full operating cost against its current controls.",
+      "problem": "Protective clothing can trap body heat and moisture while adding weight. Workers cannot always remove it without losing protection. Cooling the wearer could help during necessary work, but must preserve the clothing’s protection and fit the actual task.",
+      "statusQuo": "Reusable cooling-pack vests, liquid cooling systems, ventilation, work schedules and planned recovery breaks.",
+      "gap": "Useful sustained cooling with less burden and upkeep, compatible with the specific protective clothing; added benefit remains unmeasured.",
+      "opportunity": "Sell employers cooling that works during tasks where protective clothing must stay on. The opening is useful cooling with less carried weight, disruption and upkeep than existing vests—not simply adding a cooling system. It would supplement breaks, hydration and workplace heat controls. Paid demand, repeat purchases and a market large enough for venture investment remain unproven.",
+      "evidence": "A separate US laboratory study of 12 fit men found less heat strain with liquid cooling under firefighter clothing. Its powered water bath had low field practicality. This supports the mechanism, not either project’s performance.",
+      "counterpoint": "Existing cooling vests may already do enough. Pumps, coolant, cleaning and testing the combined clothing could add more cost and burden than the extra cooling is worth.",
+      "nextQuestion": "At a workplace with a persistent heat problem, does this garment add useful cooling beyond the best existing vest and heat controls, while preserving protection at a total cost the employer will pay?",
       "projectIds": [
         "synthesis-project-7b33ed671624b5c9b3780647",
         "synthesis-project-aaf7eecc74fe2dc7f3feb53e"
@@ -5883,8 +5883,8 @@
       ],
       "confidence": "Early signal",
       "brief": {
-        "whatItIs": "Cooling garments aim to remove heat while a worker keeps protective clothing on. Cleanrooms and firefighting are separate settings with different requirements.",
-        "problem": "Workers may need protection that also traps heat. Removing the clothing or cooling the whole space may not suit the task.",
+        "whatItIs": "Cooling built into clothing that workers must keep on. Cool-Aid embeds cooling in a cleanroom coverall; Therma’fyx proposes circulating liquid through a firefighter’s vest and into a chemical heat sink. Neither project reports measured cooling performance.",
+        "problem": "Protective clothing can trap body heat and moisture while adding weight. Workers cannot always remove it without losing protection. Cooling the wearer could help during necessary work, but must preserve the clothing’s protection and fit the actual task.",
         "breakthroughs": [
           {
             "text": "Georgia Tech reports that Cool-Aid created a cleanroom coverall with embedded cooling. It gives no cooling measurements.",
@@ -5899,23 +5899,54 @@
             ]
           }
         ],
-        "marketOpportunity": "Employers could buy personal cooling where room cooling and breaks do not adequately address the task. A viable product must preserve protection and deliver useful cooling without excessive weight or upkeep.",
-        "buyer": "Cleanroom operators; Fire departments",
+        "marketOpportunity": "Sell employers cooling that works during tasks where protective clothing must stay on. The opening is useful cooling with less carried weight, disruption and upkeep than existing vests—not simply adding a cooling system. It would supplement breaks, hydration and workplace heat controls. Paid demand, repeat purchases and a market large enough for venture investment remain unproven.",
+        "buyer": "Employers operating cleanrooms; Fire departments, with separate equipment requirements",
         "applications": [
-          "Cooling under protective clothing"
+          "Cooling during necessary protective work; recovery during planned breaks is a separate use to test"
         ],
         "targetCustomers": [
-          "Cleanroom operators",
-          "Fire departments"
+          "Employers operating cleanrooms",
+          "Fire departments, with separate equipment requirements"
         ],
-        "marketStatus": "hypothesis",
-        "marketEvidence": [],
+        "marketStatus": "researched",
+        "marketEvidence": [
+          {
+            "title": "Protective clothing can trap body heat and moisture",
+            "url": "https://www.cdc.gov/niosh/heat-stress/recommendations/ppe.html",
+            "excerpt": "Holds excess heat and moisture inside, making the worker's body even hotter.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Separate laboratory study supports liquid cooling",
+            "url": "https://stacks.cdc.gov/view/cdc/126191/cdc_126191_DS1.pdf",
+            "excerpt": "Twelve males participated in this study.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Portable liquid cooling and heat-storage vests already exist",
+            "url": "https://www.dhs.gov/sites/default/files/publications/PCS-MSR_0514-508.pdf",
+            "excerpt": "The system requires periodic replenishment of the ice and batteries.",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Existing cooling packs and reservoir-connected vests",
+            "url": "https://polarproducts.com/pages/cooling-technology-comparison",
+            "excerpt": "Requires power and a connection to the Cooling Reservoir",
+            "accessedAt": "2026-10-15"
+          },
+          {
+            "title": "Sterile drug manufacturing needs contamination-safe gowns",
+            "url": "https://www.fda.gov/media/71026/download?attachment=",
+            "excerpt": "The Agency recommends gowns that are sterilized and nonshedding, and cover the skin and hair",
+            "accessedAt": "2026-10-15"
+          }
+        ],
         "risks": [
-          "Cooling may be short-lived, bulky or incompatible with protection. No demonstrated reduction in heat illness.",
-          "Repeat employer purchases and consumables could support expansion across compatible work settings; do not sum unrelated heat-exposed populations."
+          "Existing cooling vests may already do enough. Pumps, coolant, cleaning and testing the combined clothing could add more cost and burden than the extra cooling is worth.",
+          "No measured project duration, total weight, field safety benefit, purchasing commitment or reachable market. Cleaning and contamination requirements differ between cleanrooms and firefighting."
         ],
         "nextQuestions": [
-          "Choose one setting; compare sustained heat removal, worker burden, protection and full operating cost against its current controls."
+          "At a workplace with a persistent heat problem, does this garment add useful cooling beyond the best existing vest and heat controls, while preserving protection at a total cost the employer will pay?"
         ]
       }
     },

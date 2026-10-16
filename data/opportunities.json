@@ -11553,8 +11553,8 @@
     {
       "schemaVersion": 1,
       "id": "protective-clothing-cooling",
-      "revision": 0,
-      "acceptedRevisionId": "protective-clothing-cooling:rubric-v2-20261015",
+      "revision": 1,
+      "acceptedRevisionId": "protective-clothing-cooling:evidence-review-v2-20261016",
       "maturity": "first-impressions",
       "qualificationReviewId": null,
       "disposition": "active",
@@ -11562,19 +11562,19 @@
       "researchEnabled": false,
       "currentResearchId": null,
       "createdAt": "2026-10-15T21:24:18.427Z",
-      "updatedAt": "2026-10-15T21:24:18.427Z",
+      "updatedAt": "2026-10-16T02:47:42.575Z",
       "verdict": null,
       "stage": "first-impressions",
-      "qualificationError": null,
+      "qualificationError": "Reviewed hypothesis; additional useful cooling, paying demand and venture-scale economics remain unproven.",
       "accepted": {
-        "id": "protective-clothing-cooling:rubric-v2-20261015",
+        "id": "protective-clothing-cooling:evidence-review-v2-20261016",
         "opportunityId": "protective-clothing-cooling",
-        "parentRevisionId": null,
-        "createdAt": "2026-10-15T21:24:18.427Z",
-        "producerId": "rubric-reassessment-v2",
-        "origin": "saved-data-synthesis",
-        "changeReason": "User-authorized preliminary opportunity from saved source evidence; adjacent uses and market demand remain hypotheses.",
-        "contentHash": "c991978bfff2eacba7423c53b2e50e367b79a45584ac82250e9463a66bf4c629",
+        "parentRevisionId": "protective-clothing-cooling:rubric-v2-20261015",
+        "createdAt": "2026-10-16T02:47:42.575Z",
+        "producerId": "codex-evidence-inspector",
+        "origin": "inspection-correction",
+        "changeReason": "Inspect original cooling project descriptions, independent laboratory study and existing alternatives; exclude inaccessible market sources, preserve scope and leave reachable market unknown.",
+        "contentHash": "d98b41608e3286d4e341f8fb3dce39970856903ed58a67d1278a1ce18f2995c3",
         "title": "Cooling built into protective work clothing",
         "classifications": [
           "Manufacturing"
@@ -11586,7 +11586,7 @@
           ],
           "economics": [],
           "timing": [],
-          "keyQuestion": "Choose one setting; compare sustained heat removal, worker burden, protection and full operating cost against its current controls.",
+          "keyQuestion": "At a workplace with a persistent heat problem, does this garment add useful cooling beyond the best existing vest and heat controls, while preserving protection at a total cost the employer will pay?",
           "what": "protective-clothing-cooling:v2-what",
           "problem": "protective-clothing-cooling:v2-problem",
           "opportunity": "protective-clothing-cooling:v2-opportunity",
@@ -11629,129 +11629,157 @@
         "claims": [
           {
             "id": "protective-clothing-cooling:v2-what",
-            "text": "Cooling garments aim to remove heat while a worker keeps protective clothing on. Cleanrooms and firefighting are separate settings with different requirements.",
+            "text": "Cooling built into clothing that workers must keep on. Cool-Aid embeds cooling in a cleanroom coverall; Therma’fyx proposes circulating liquid through a firefighter’s vest and into a chemical heat sink. Neither project reports measured cooling performance.",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "protective-clothing-cooling:synthesis-project-7b33ed671624b5c9b3780647:source-v2",
+              "protective-clothing-cooling:synthesis-project-aaf7eecc74fe2dc7f3feb53e:source-v2"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No project cooling duration, weight, qualified protection, paid demand or full delivery cost. Separate study and vendor claims do not establish project performance or reachable demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T02:47:42.575Z",
+              "reason": "Explicit customer/product/recovery hypothesis, not measured field benefit or buying commitment."
             },
-            "testQuestion": "Choose one setting; compare sustained heat removal, worker burden, protection and full operating cost against its current controls."
+            "testQuestion": "At a workplace with a persistent heat problem, does this garment add useful cooling beyond the best existing vest and heat controls, while preserving protection at a total cost the employer will pay?"
           },
           {
             "id": "protective-clothing-cooling:v2-problem",
-            "text": "Workers may need protection that also traps heat. Removing the clothing or cooling the whole space may not suit the task.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "Protective clothing can trap body heat and moisture while adding weight. Workers cannot always remove it without losing protection. Cooling the wearer could help during necessary work, but must preserve the clothing’s protection and fit the actual task.",
+            "kind": "inference",
+            "evidenceIds": [
+              "protective-clothing-cooling:review-niosh",
+              "protective-clothing-cooling:review-study"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No project cooling duration, weight, qualified protection, paid demand or full delivery cost. Separate study and vendor claims do not establish project performance or reachable demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T02:47:42.575Z",
+              "reason": "Bounded interpretation from original sources; competitor overlap and missing customer outcomes retained."
             },
-            "testQuestion": "Choose one setting; compare sustained heat removal, worker burden, protection and full operating cost against its current controls."
+            "reasoning": "NIOSH describes heat retention. Separate laboratory cooling supports the mechanism, not either project or workplace prevalence."
           },
           {
             "id": "protective-clothing-cooling:v2-opportunity",
-            "text": "Employers could buy personal cooling where room cooling and breaks do not adequately address the task. A viable product must preserve protection and deliver useful cooling without excessive weight or upkeep.",
+            "text": "Sell employers cooling that works during tasks where protective clothing must stay on. The opening is useful cooling with less carried weight, disruption and upkeep than existing vests—not simply adding a cooling system. It would supplement breaks, hydration and workplace heat controls. Paid demand, repeat purchases and a market large enough for venture investment remain unproven.",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "protective-clothing-cooling:synthesis-project-7b33ed671624b5c9b3780647:source-v2",
+              "protective-clothing-cooling:synthesis-project-aaf7eecc74fe2dc7f3feb53e:source-v2",
+              "protective-clothing-cooling:review-niosh",
+              "protective-clothing-cooling:review-dhs",
+              "protective-clothing-cooling:review-polar"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No project cooling duration, weight, qualified protection, paid demand or full delivery cost. Separate study and vendor claims do not establish project performance or reachable demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T02:47:42.575Z",
+              "reason": "Explicit customer/product/recovery hypothesis, not measured field benefit or buying commitment."
             },
-            "testQuestion": "Choose one setting; compare sustained heat removal, worker burden, protection and full operating cost against its current controls."
+            "testQuestion": "At a workplace with a persistent heat problem, does this garment add useful cooling beyond the best existing vest and heat controls, while preserving protection at a total cost the employer will pay?"
           },
           {
             "id": "protective-clothing-cooling:v2-customer-0",
-            "text": "Cleanroom operators",
+            "text": "Employers operating cleanrooms",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "protective-clothing-cooling:synthesis-project-7b33ed671624b5c9b3780647:source-v2",
+              "protective-clothing-cooling:synthesis-project-aaf7eecc74fe2dc7f3feb53e:source-v2",
+              "protective-clothing-cooling:review-niosh"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No project cooling duration, weight, qualified protection, paid demand or full delivery cost. Separate study and vendor claims do not establish project performance or reachable demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T02:47:42.575Z",
+              "reason": "Explicit customer/product/recovery hypothesis, not measured field benefit or buying commitment."
             },
-            "testQuestion": "Choose one setting; compare sustained heat removal, worker burden, protection and full operating cost against its current controls."
+            "testQuestion": "Which workplaces have persistent heat burden and a budget for useful additional cooling?"
           },
           {
             "id": "protective-clothing-cooling:v2-customer-1",
-            "text": "Fire departments",
+            "text": "Fire departments, with separate equipment requirements",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "protective-clothing-cooling:synthesis-project-7b33ed671624b5c9b3780647:source-v2",
+              "protective-clothing-cooling:synthesis-project-aaf7eecc74fe2dc7f3feb53e:source-v2",
+              "protective-clothing-cooling:review-niosh"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No project cooling duration, weight, qualified protection, paid demand or full delivery cost. Separate study and vendor claims do not establish project performance or reachable demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T02:47:42.575Z",
+              "reason": "Explicit customer/product/recovery hypothesis, not measured field benefit or buying commitment."
             },
-            "testQuestion": "Choose one setting; compare sustained heat removal, worker burden, protection and full operating cost against its current controls."
+            "testQuestion": "Which workplaces have persistent heat burden and a budget for useful additional cooling?"
           },
           {
             "id": "protective-clothing-cooling:v2-application-0",
-            "text": "Cooling under protective clothing",
+            "text": "Cooling during necessary protective work; recovery during planned breaks is a separate use to test",
             "kind": "hypothesis",
-            "evidenceIds": [],
+            "evidenceIds": [
+              "protective-clothing-cooling:synthesis-project-7b33ed671624b5c9b3780647:source-v2",
+              "protective-clothing-cooling:synthesis-project-aaf7eecc74fe2dc7f3feb53e:source-v2"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No project cooling duration, weight, qualified protection, paid demand or full delivery cost. Separate study and vendor claims do not establish project performance or reachable demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T02:47:42.575Z",
+              "reason": "Explicit customer/product/recovery hypothesis, not measured field benefit or buying commitment."
             },
-            "testQuestion": "Choose one setting; compare sustained heat removal, worker burden, protection and full operating cost against its current controls."
+            "testQuestion": "At a workplace with a persistent heat problem, does this garment add useful cooling beyond the best existing vest and heat controls, while preserving protection at a total cost the employer will pay?"
           },
           {
             "id": "protective-clothing-cooling:v2-comparison",
-            "text": "Potential supplement to ventilation, breaks and existing protective gear; alternative to other personal-cooling products. Cleanroom and firefighter requirements differ.",
-            "kind": "hypothesis",
-            "evidenceIds": [],
+            "text": "Reusable cooling packs already absorb heat without a pump. Liquid systems move heat into a reservoir; some are portable, while others tether the wearer. Integrated cooling could distribute heat removal or simplify dressing, but adds cleaning and maintenance. Cooling during breaks is another possible use, with simpler removable aids as competitors. None of these approaches replaces the workplace’s other heat protections.",
+            "kind": "inference",
+            "evidenceIds": [
+              "protective-clothing-cooling:review-dhs",
+              "protective-clothing-cooling:review-polar",
+              "protective-clothing-cooling:review-niosh",
+              "protective-clothing-cooling:review-fda"
+            ],
             "derivedFromClaimIds": [],
             "confidence": "low",
             "limitations": [
-              "Opportunity hypothesis; demand and commercial value remain unverified."
+              "No project cooling duration, weight, qualified protection, paid demand or full delivery cost. Separate study and vendor claims do not establish project performance or reachable demand."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T02:47:42.575Z",
+              "reason": "Bounded interpretation from original sources; competitor overlap and missing customer outcomes retained."
             },
-            "testQuestion": "Choose one setting; compare sustained heat removal, worker burden, protection and full operating cost against its current controls."
+            "reasoning": "Historical survey and current vendor descriptions show overlapping cooling mechanisms. Added value within the best existing workplace controls remains unmeasured."
           },
           {
             "id": "protective-clothing-cooling:project-v2-7b33ed671624b5c9b3780647",
@@ -11766,10 +11794,10 @@
               "The caption establishes creation, not a functioning performance demonstration or reduced heat illness. Source school and year identify the event collection, not confirmed author affiliation or project completion date."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T02:47:42.575Z",
+              "reason": "Original university project descriptions verified; creation/design intent, no measured cooling outcome."
             },
             "attribution": "Team Cool-Aid cleanroom coverall",
             "quantity": null
@@ -11787,10 +11815,10 @@
               "Temperature control is a design goal, not a reported wearer trial. The trailing humanoid-robot fragment in the extracted record belongs to another context and is excluded. Source school and year identify the event collection, not confirmed author affiliation or project completion date."
             ],
             "review": {
-              "status": "unreviewed",
-              "reviewerId": null,
-              "reviewedAt": null,
-              "reason": null
+              "status": "accepted",
+              "reviewerId": "codex-evidence-inspector",
+              "reviewedAt": "2026-10-16T02:47:42.575Z",
+              "reason": "Original university project descriptions verified; creation/design intent, no measured cooling outcome."
             },
             "attribution": "41. Therma’fyx",
             "quantity": null
@@ -11800,31 +11828,31 @@
           {
             "id": "protective-clothing-cooling:synthesis-project-7b33ed671624b5c9b3780647:source-v2",
             "sourceUrl": "https://coe.gatech.edu/news/2025/04/solutions-operating-room-and-cubesat-navigation-top-spring-2025-capstone-design-expo",
-            "finalUrl": null,
+            "finalUrl": "https://coe.gatech.edu/news/2025/04/solutions-operating-room-and-cubesat-navigation-top-spring-2025-capstone-design-expo",
             "title": "Team Cool-Aid cleanroom coverall",
-            "publisher": null,
+            "publisher": "Georgia Tech",
             "sourceRole": "primary",
             "independence": "project-originated",
-            "publishedAt": null,
+            "publishedAt": "2025-04-22",
             "observationPeriod": "2025 source event; completion date unverified",
             "retrievedAt": "2026-10-15T21:24:18.427Z",
             "excerpt": "Team Cool-Aid created a cleanroom coverall. The suit has an embedded cooling system to avoid heat stress.",
             "pdfPage": null,
-            "locator": "Original project page; exact retained excerpt",
+            "locator": "Original archived project page; team description and limitations inspected",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T21:24:18.427Z",
+              "checkedAt": "2026-10-16T02:47:42.575Z",
               "failureIds": []
             }
           },
           {
             "id": "protective-clothing-cooling:synthesis-project-aaf7eecc74fe2dc7f3feb53e:source-v2",
             "sourceUrl": "https://uwaterloo.ca/capstone-design/project-abstracts/2026-capstone-design-projects/2026-mechatronics-engineering-capstone-designs",
-            "finalUrl": null,
+            "finalUrl": "https://uwaterloo.ca/capstone-design/project-abstracts/2026-capstone-design-projects/2026-mechatronics-engineering-capstone-designs",
             "title": "41. Therma’fyx",
-            "publisher": null,
+            "publisher": "University of Waterloo",
             "sourceRole": "primary",
             "independence": "project-originated",
             "publishedAt": null,
@@ -11832,12 +11860,122 @@
             "retrievedAt": "2026-10-15T21:24:18.427Z",
             "excerpt": "This is a lightweight, actively regulated cooling vest designed specifically to mitigate heat stress in firefighters while they wear full bunker gear.",
             "pdfPage": null,
-            "locator": "Original project page; exact retained excerpt",
+            "locator": "Original archived project page; team description and limitations inspected",
             "relevance": "direct",
             "artifactId": null,
             "checks": {
               "status": "passed",
-              "checkedAt": "2026-10-15T21:24:18.427Z",
+              "checkedAt": "2026-10-16T02:47:42.575Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "protective-clothing-cooling:review-niosh",
+            "sourceUrl": "https://www.cdc.gov/niosh/heat-stress/recommendations/ppe.html",
+            "finalUrl": "https://www.cdc.gov/niosh/heat-stress/recommendations/ppe.html",
+            "title": "Protective clothing can trap body heat and moisture",
+            "publisher": "NIOSH",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2026-07-15",
+            "observationPeriod": "July15,2026 guidance; general mechanism, not cleanroom incidence or project performance. Rest, hydration, acclimatization and other controls remain necessary.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Holds excess heat and moisture inside, making the worker's body even hotter.",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T02:47:42.575Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "protective-clothing-cooling:review-study",
+            "sourceUrl": "https://stacks.cdc.gov/view/cdc/126191/cdc_126191_DS1.pdf",
+            "finalUrl": "https://stacks.cdc.gov/view/cdc/126191/cdc_126191_DS1.pdf",
+            "title": "Separate laboratory study supports liquid cooling",
+            "publisher": "Journal of Occupational and Environmental Hygiene / NIOSH",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2021",
+            "observationPeriod": "2021 publication;12 healthy fit men recruited from the general population, NIOSH Pittsburgh US;40minute treadmill conditions at30°C/70%RH, own controls. Experiment dates unspecified. Powered water bath limits field feasibility; no project or cleanroom benefit established.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Twelve males participated in this study.",
+            "pdfPage": 1,
+            "locator": "Original PDF physical page 1; study methods and limitations inspected",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T02:47:42.575Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "protective-clothing-cooling:review-dhs",
+            "sourceUrl": "https://www.dhs.gov/sites/default/files/publications/PCS-MSR_0514-508.pdf",
+            "finalUrl": "https://www.dhs.gov/sites/default/files/publications/PCS-MSR_0514-508.pdf",
+            "title": "Portable liquid cooling and heat-storage vests already exist",
+            "publisher": "US Department of Homeland Security",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2014-05",
+            "observationPeriod": "May2014 survey of2013vendor information; physical9 describes backpack ice/water replenishment. Historical product descriptions, not current availability or independent effectiveness.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "The system requires periodic replenishment of the ice and batteries.",
+            "pdfPage": 9,
+            "locator": "Original PDF physical page 9; study methods and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T02:47:42.575Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "protective-clothing-cooling:review-polar",
+            "sourceUrl": "https://polarproducts.com/pages/cooling-technology-comparison",
+            "finalUrl": "https://polarproducts.com/pages/cooling-technology-comparison",
+            "title": "Existing cooling packs and reservoir-connected vests",
+            "publisher": "Polar Products",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": null,
+            "observationPeriod": "October15,2026 retained supplier page; publication date unknown. Offered functions, not matched outcomes or cleanroom/fire qualification. Conflicting liquid-system starting prices750/795USD across two vendor pages are excluded from market calculations.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "Requires power and a connection to the Cooling Reservoir",
+            "pdfPage": null,
+            "locator": "Original HTML; surrounding body and limitations inspected",
+            "relevance": "direct",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T02:47:42.575Z",
+              "failureIds": []
+            }
+          },
+          {
+            "id": "protective-clothing-cooling:review-fda",
+            "sourceUrl": "https://www.fda.gov/media/71026/download?attachment=",
+            "finalUrl": "https://www.fda.gov/media/71026/download?attachment=",
+            "title": "Sterile drug manufacturing needs contamination-safe gowns",
+            "publisher": "FDA",
+            "sourceRole": "primary",
+            "independence": "external",
+            "publishedAt": "2004-09",
+            "observationPeriod": "September2004 nonbinding guidance, physical18/printed14. Conditional sterile-drug application only; not every cleanroom or approval of a cooling garment.",
+            "retrievedAt": "2026-10-15",
+            "excerpt": "The Agency recommends gowns that are sterilized and nonshedding, and cover the skin and hair",
+            "pdfPage": 18,
+            "locator": "Original PDF physical page 18; study methods and limitations inspected",
+            "relevance": "broader-context",
+            "artifactId": null,
+            "checks": {
+              "status": "passed",
+              "checkedAt": "2026-10-16T02:47:42.575Z",
               "failureIds": []
             }
           }
@@ -11847,119 +11985,63 @@
           "rubricVersion": "venture-screen-v2",
           "dimensions": {
             "problem": {
-              "status": "plausible",
-              "reason": "The sources identify heat burden under protective clothing; they do not quantify how many relevant workplaces need new equipment.",
+              "status": "supported",
+              "reason": "Heat retention and physiological strain supported; site frequency, cost and affected cleanroom fraction missing.",
               "claimIds": [
-                "protective-clothing-cooling:v2-what",
-                "protective-clothing-cooling:v2-problem",
-                "protective-clothing-cooling:v2-opportunity",
-                "protective-clothing-cooling:v2-customer-0",
-                "protective-clothing-cooling:v2-customer-1",
-                "protective-clothing-cooling:v2-application-0",
-                "protective-clothing-cooling:v2-comparison",
-                "protective-clothing-cooling:project-v2-7b33ed671624b5c9b3780647",
-                "protective-clothing-cooling:project-v2-aaf7eecc74fe2dc7f3feb53e"
+                "protective-clothing-cooling:v2-problem"
               ]
             },
             "customerPayment": {
               "status": "plausible",
-              "reason": "Employers operating cleanrooms or other hot work settings; fire departments are a separate segment. Willingness to pay for this offer is not established.",
+              "reason": "Employers and departments are credible payers; sponsorship is not a purchase or distribution agreement.",
               "claimIds": [
-                "protective-clothing-cooling:v2-what",
-                "protective-clothing-cooling:v2-problem",
-                "protective-clothing-cooling:v2-opportunity",
-                "protective-clothing-cooling:v2-customer-0",
-                "protective-clothing-cooling:v2-customer-1",
-                "protective-clothing-cooling:v2-application-0",
-                "protective-clothing-cooling:v2-comparison",
-                "protective-clothing-cooling:project-v2-7b33ed671624b5c9b3780647",
-                "protective-clothing-cooling:project-v2-aaf7eecc74fe2dc7f3feb53e"
+                "protective-clothing-cooling:v2-customer-0"
               ]
             },
             "productValue": {
               "status": "plausible",
-              "reason": "Cooling at the wearer could address situations where changing the room or removing protection is impractical.",
+              "reason": "Cooling mechanism supported by separate lab work; useful portable performance unmeasured for these projects.",
               "claimIds": [
-                "protective-clothing-cooling:v2-what",
-                "protective-clothing-cooling:v2-problem",
-                "protective-clothing-cooling:v2-opportunity",
-                "protective-clothing-cooling:v2-customer-0",
-                "protective-clothing-cooling:v2-customer-1",
-                "protective-clothing-cooling:v2-application-0",
-                "protective-clothing-cooling:v2-comparison",
-                "protective-clothing-cooling:project-v2-7b33ed671624b5c9b3780647",
-                "protective-clothing-cooling:project-v2-aaf7eecc74fe2dc7f3feb53e"
+                "protective-clothing-cooling:v2-what"
               ]
             },
             "commercialGap": {
               "status": "plausible",
-              "reason": "Potential supplement to ventilation, breaks and existing protective gear; alternative to other personal-cooling products. Cleanroom and firefighter requirements differ. Open gap: Sustained useful cooling with acceptable weight, power, contamination control and protection.",
+              "reason": "Integration may improve wearability or task fit; packs and portable liquid systems overlap and could suffice.",
               "claimIds": [
-                "protective-clothing-cooling:v2-what",
-                "protective-clothing-cooling:v2-problem",
-                "protective-clothing-cooling:v2-opportunity",
-                "protective-clothing-cooling:v2-customer-0",
-                "protective-clothing-cooling:v2-customer-1",
-                "protective-clothing-cooling:v2-application-0",
-                "protective-clothing-cooling:v2-comparison",
-                "protective-clothing-cooling:project-v2-7b33ed671624b5c9b3780647",
-                "protective-clothing-cooling:project-v2-aaf7eecc74fe2dc7f3feb53e"
+                "protective-clothing-cooling:v2-comparison"
               ]
             },
             "ventureScale": {
-              "status": "plausible",
-              "reason": "Repeat employer purchases and consumables could support expansion across compatible work settings; do not sum unrelated heat-exposed populations.",
+              "status": "missing",
+              "reason": "Qualifying sites, users needing new cooling, net price and repeat purchase rates unknown. Population totals are not reachable demand.",
               "claimIds": [
-                "protective-clothing-cooling:v2-what",
-                "protective-clothing-cooling:v2-problem",
-                "protective-clothing-cooling:v2-opportunity",
-                "protective-clothing-cooling:v2-customer-0",
-                "protective-clothing-cooling:v2-customer-1",
-                "protective-clothing-cooling:v2-application-0",
-                "protective-clothing-cooling:v2-comparison",
-                "protective-clothing-cooling:project-v2-7b33ed671624b5c9b3780647",
-                "protective-clothing-cooling:project-v2-aaf7eecc74fe2dc7f3feb53e"
+                "protective-clothing-cooling:v2-opportunity"
               ]
             },
             "businessCapital": {
               "status": "missing",
-              "reason": "Cooling may be short-lived, bulky or incompatible with protection. No demonstrated reduction in heat illness. Delivered costs, repeat economics and capital needs remain unresolved.",
+              "reason": "Cleaning, recharging, qualification, manufacturing, margins and capital needs unknown. Reusable alternatives weaken assumed consumable revenue.",
               "claimIds": [
-                "protective-clothing-cooling:v2-what",
-                "protective-clothing-cooling:v2-problem",
-                "protective-clothing-cooling:v2-opportunity",
-                "protective-clothing-cooling:v2-customer-0",
-                "protective-clothing-cooling:v2-customer-1",
-                "protective-clothing-cooling:v2-application-0",
-                "protective-clothing-cooling:v2-comparison",
-                "protective-clothing-cooling:project-v2-7b33ed671624b5c9b3780647",
-                "protective-clothing-cooling:project-v2-aaf7eecc74fe2dc7f3feb53e"
+                "protective-clothing-cooling:v2-opportunity"
               ]
             },
             "timing": {
               "status": "missing",
-              "reason": "The retained project dates do not establish adoption or market acceleration. Adjacent-use readiness has not been validated.",
+              "reason": "No verified buying acceleration or purchasing deadline. Heat guidance and historical surveys do not establish growth.",
               "claimIds": [
-                "protective-clothing-cooling:v2-what",
-                "protective-clothing-cooling:v2-problem",
-                "protective-clothing-cooling:v2-opportunity",
-                "protective-clothing-cooling:v2-customer-0",
-                "protective-clothing-cooling:v2-customer-1",
-                "protective-clothing-cooling:v2-application-0",
-                "protective-clothing-cooling:v2-comparison",
-                "protective-clothing-cooling:project-v2-7b33ed671624b5c9b3780647",
-                "protective-clothing-cooling:project-v2-aaf7eecc74fe2dc7f3feb53e"
+                "protective-clothing-cooling:v2-opportunity"
               ]
             }
           },
           "priority": "medium",
-          "priorityReason": "Cooling at the wearer could address situations where changing the room or removing protection is impractical. Repeat employer purchases and consumables could support expansion across compatible work settings; do not sum unrelated heat-exposed populations.",
+          "priorityReason": "Heat trapped by necessary clothing is a supported problem and cooling has a credible mechanism. First test added value at one workplace against its best current controls; neither project performance nor repeat demand is established.",
           "confidence": {
             "level": "low",
-            "reason": "Original project excerpts checked; commercial demand and adjacent-use benefit remain hypotheses."
+            "reason": "Heat burden and alternative mechanisms are supported. Project performance, paying demand and venture-scale economics remain unproven."
           },
-          "strongestObjection": "Cooling may be short-lived, bulky or incompatible with protection. No demonstrated reduction in heat illness.",
-          "decisiveQuestion": "Choose one setting; compare sustained heat removal, worker burden, protection and full operating cost against its current controls."
+          "strongestObjection": "Existing cooling vests may already do enough. Pumps, coolant, cleaning and testing the combined clothing could add more cost and burden than the extra cooling is worth.",
+          "decisiveQuestion": "At a workplace with a persistent heat problem, does this garment add useful cooling beyond the best existing vest and heat controls, while preserving protection at a total cost the employer will pay?"
         }
       },
       "research": null,
